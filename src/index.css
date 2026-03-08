@@ -1,0 +1,325 @@
+/* ── SpeakEasy — Calm & Safe design system ────────────────────── */
+/* Palette: soft sage greens, warm neutrals, gentle blues.         */
+/* Conveys trust, accessibility, and peace of mind.                 */
+
+:root,
+[data-theme="light"] {
+  /* Primary — calming sage teal */
+  --tint:        #3B9B8F;
+  --tint-light:  rgba(59,155,143,0.09);
+  --tint-soft:   #E4F3F1;
+  --tint-hover:  #339386;
+
+  /* Semantic */
+  --green:       #4CAF7D;
+  --green-soft:  #E8F5ED;
+  --orange:      #E8973F;
+  --red:         #D9534F;
+  --purple:      #8B72BE;
+
+  /* Surfaces — warm off-whites */
+  --bg:          #F5F3F0;
+  --surface:     #FFFFFF;
+  --elevated:    #FFFFFF;
+  --grouped-bg:  #F0EDEA;
+
+  /* Text — soft dark tones (not pure black) */
+  --text:        #2C2C2E;
+  --text-2:      #48484A;
+  --text-3:      #8A8A8E;
+  --text-4:      #C4C4C8;
+
+  /* Separators */
+  --sep:         rgba(60,60,67,0.10);
+  --sep-opaque:  #E5E2DE;
+
+  /* Header / Nav glass */
+  --glass-bg:    rgba(245,243,240,0.82);
+  --glass-border: 0.5px solid rgba(60,60,67,0.10);
+
+  /* Geometry */
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   18px;
+  --radius-xl:   26px;
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Dark theme ───────────────────────────────────────────────── */
+[data-theme="dark"] {
+  /* Primary — luminous teal on dark */
+  --tint:        #5BC4B5;
+  --tint-light:  rgba(91,196,181,0.12);
+  --tint-soft:   rgba(91,196,181,0.15);
+  --tint-hover:  #6DD0C3;
+
+  /* Semantic */
+  --green:       #66D992;
+  --green-soft:  rgba(102,217,146,0.15);
+  --orange:      #F0A54E;
+  --red:         #E8625E;
+  --purple:      #A68CD8;
+
+  /* Surfaces — deep warm grays */
+  --bg:          #1A1A1E;
+  --surface:     #2C2C30;
+  --elevated:    #363639;
+  --grouped-bg:  #222225;
+
+  /* Text — soft whites */
+  --text:        #F0EDEA;
+  --text-2:      #C8C5C0;
+  --text-3:      #8A8A8E;
+  --text-4:      #5A5A5E;
+
+  /* Separators */
+  --sep:         rgba(255,255,255,0.10);
+  --sep-opaque:  #3A3A3E;
+
+  /* Header / Nav glass */
+  --glass-bg:    rgba(26,26,30,0.85);
+  --glass-border: 0.5px solid rgba(255,255,255,0.08);
+
+  color-scheme: dark;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: 100svh;
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+  background: var(--bg);
+  color: var(--text);
+  /* System font stack — native look on every platform */
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+               'Helvetica Neue', 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+#root {
+  height: 100vh;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Button reset ─────────────────────────────────────────────── */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ── Scrollbar — hidden on mobile ─────────────────────────────── */
+::-webkit-scrollbar        { width: 0; height: 0; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: transparent; }
+
+/* ── Focus ring (switch-access / keyboard) ─────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--tint);
+  outline-offset: 2px;
+}
+
+/* ── Utility classes ──────────────────────────────────────────── */
+.safe-top    { padding-top:    var(--safe-top); }
+.safe-bottom { padding-bottom: var(--safe-bottom); }
+
+/* ── Keyframes ────────────────────────────────────────────────── */
+@keyframes waveBar {
+  0%, 100% { transform: scaleY(0.35); }
+  50%      { transform: scaleY(1); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes highlightEntry {
+  0%   { background: var(--tint-light); }
+  100% { background: var(--surface); }
+}
+@keyframes chipIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+/* ── Native-style transitions for views ───────────────────────── */
+.view-enter {
+  animation: fadeUp 0.2s ease both;
+}
+
+/* ── Listen Mode — Alexa-style border glow ────────────────────── */
+
+@property --glow-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes glowOrbit {
+  from { --glow-angle: 0deg; }
+  to   { --glow-angle: 360deg; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.7; }
+  50%      { opacity: 1; }
+}
+
+@keyframes glowBreath {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+
+@keyframes glowShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.listen-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* ── DOT mode — orbiting dot (passive listening) ───────────── */
+
+/* Crisp ring with conic-gradient dot */
+.listen-glow--dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0deg,
+    transparent 340deg,
+    #00d4ff 350deg,
+    #007AFF 355deg,
+    #00d4ff 360deg
+  );
+  animation: glowOrbit 2.2s linear infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Soft blurred trail behind the dot */
+.listen-glow--dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 8px;
+  background: conic-gradient(
+    from var(--glow-angle),
+    transparent 0deg,
+    transparent 310deg,
+    rgba(0,212,255,0.35) 340deg,
+    rgba(0,122,255,0.5) 355deg,
+    rgba(0,212,255,0.35) 360deg
+  );
+  animation: glowOrbit 2.2s linear infinite;
+  filter: blur(8px);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* ── FULL mode — full border glow (active transcript) ──────── */
+
+/* Crisp animated gradient ring */
+.listen-glow--full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  background: linear-gradient(135deg, #00d4ff, #007AFF, #5856D6, #007AFF, #00d4ff);
+  background-size: 300% 300%;
+  animation: glowShift 3s ease infinite, glowPulse 2s ease infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Wider blurred glow breathing effect */
+.listen-glow--full::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 10px;
+  background: linear-gradient(135deg, #00d4ff, #007AFF, #5856D6, #007AFF, #00d4ff);
+  background-size: 300% 300%;
+  animation: glowShift 3s ease infinite, glowBreath 2s ease infinite;
+  filter: blur(12px);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
