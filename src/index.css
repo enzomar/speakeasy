@@ -117,6 +117,7 @@ body {
 
 #root {
   height: 100vh;
+  height: -webkit-fill-available;
   height: 100svh;
   display: flex;
   flex-direction: column;

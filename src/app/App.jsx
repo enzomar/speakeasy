@@ -868,8 +868,9 @@ export default function App() {
         backdropFilter: "saturate(180%) blur(20px)",
         borderTop:     "var(--glass-border)",
         flexShrink:    0,
-        position:      "relative",
-        paddingBottom: "var(--safe-bottom, 0)",
+        position:      "sticky",
+        bottom:        0,
+        paddingBottom: "max(var(--safe-bottom, 0px), env(safe-area-inset-bottom, 0px))",
         zIndex:        20,
       }} aria-label="Main navigation">
         <NavItem id="board"     icon={Grid3X3}  label={ui.board       ?? "Board"}      active={tab === "board"}     onClick={setTab} />
