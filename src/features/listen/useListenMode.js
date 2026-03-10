@@ -442,6 +442,22 @@ export function useListenMode(opts = {}) {
     dismiss,
     dismissToBoard,
     continueListening,
+
+    /** Skip wake word detection and jump directly to full recording (Stage 2).
+     *  Used by the FAB long-press shortcut. */
+    quickRecord: useCallback(async () => {
+      if (stateRef.current !== LISTEN_STATES.IDLE) return;
+      setError(null);
+      setTranscript("");
+      setSuggestions([]);
+      setSelectedReply("");
+      setPartialText("");
+      setActive(true);
+      activeRef.current = true;
+      transition(LISTEN_STATES.WAKE_DETECTED);
+      await new Promise(r => setTimeout(r, WAKE_DETECTED_FLASH));
+      await startFullRecording("");
+    }, [transition, startFullRecording]),
   };
 }
 

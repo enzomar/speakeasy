@@ -31,6 +31,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { predictionEngine } from "./predictionEngine";
 import {
   generateCandidates,
+  applyPrefix,
   buildPrompt,
   detectQuestionIntent,
   getGenerationConfig,
@@ -332,7 +333,7 @@ export function useAIPrediction(modelKey = "fast") {
    * @param {string}   [gender]         - "male"|"female"|"neutral".
    * @param {string}   [emotionOverride] - Manual emotion override from EmotionStrip (null = auto-detect).
    */
-  const predict = useCallback(async (words, langCode = "en", categoryId, tapContext, transcript, messageHistory = [], gender = "male", emotionOverride = null) => {
+  const predict = useCallback(async (words, langCode = "en", categoryId, tapContext, transcript, messageHistory = [], gender = "male", emotionOverride = null, corePrefixWords = []) => {
     // ── Fast heuristic + n-gram baseline (always available, instant) ──────
     const keyword  = tapContext?.l2Label || words.join(" ") || "";
     const modifier = tapContext?.l3Label || null;
@@ -344,16 +345,30 @@ export function useAIPrediction(modelKey = "fast") {
     const intent  = detectIntent(pos, categoryId, !!transcript, l3Canon);
     const emotion = emotionOverride || detectEmotion(l2Canon, l3Canon, categoryId);
 
+    // Core+fringe integration (Beukelman & Light, 2020):
+    // corePrefixWords comes from App.jsx — only words tapped from CoreWordBar
+    // (tagged __core). Grid / fringe symbol labels are never included.
     const heuristicIntents = keyword
-      ? generateCandidates(keyword, modifier, langCode, gender, categoryId, intent, emotion)
-          .slice(0, 13)
-          .map(s => fixGender(s, langCode, gender))
+      ? applyPrefix(
+          generateCandidates(keyword, modifier, langCode, gender, l2Canon, categoryId, intent, emotion)
+            .slice(0, 13)
+            .map(s => fixGender(s, langCode, gender)),
+          corePrefixWords,
+        )
       : [];
     const ngramIntents = predictionEngine.predictIntents(words, 5, langCode);
     // Show heuristic templates immediately (better than raw n-gram)
     const instantSuggestions = heuristicIntents.length > 0
       ? dedupeAndMerge(heuristicIntents, ngramIntents, 13)
       : ngramIntents;
+    console.group("[SpeakEasy] Suggested sentences");
+    console.log("keyword:", keyword, "| modifier:", modifier, "| lang:", langCode, "| gender:", gender);
+    console.log("prefix words (core):", corePrefixWords);
+    console.log("intent:", intent, "| emotion:", emotion);
+    console.log("heuristic (%d):", heuristicIntents.length, heuristicIntents);
+    console.log("n-gram    (%d):", ngramIntents.length,     ngramIntents);
+    console.log("final     (%d):", instantSuggestions.length, instantSuggestions);
+    console.groupEnd();
     setSuggestions(instantSuggestions);
     setSource(heuristicIntents.length > 0 ? "heuristic" : "ngram");
 

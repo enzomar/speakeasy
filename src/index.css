@@ -223,6 +223,12 @@ input, select, textarea {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%      { transform: translateX(-4px); }
+  75%      { transform: translateX(4px); }
+}
+
 .listen-glow {
   position: absolute;
   inset: 0;

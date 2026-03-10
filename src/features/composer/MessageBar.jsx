@@ -5,7 +5,7 @@
  */
 
 import { memo, useRef, useEffect, useState, useCallback } from "react";
-import { Volume2, Delete, X, Star, Square } from "lucide-react";
+import { Volume2, Delete, X, Star, Square, RotateCcw } from "lucide-react";
 
 // ── WordChip ─────────────────────────────────────────────────────────────────
 
@@ -66,6 +66,8 @@ function MessageBar({
   onTyping,
   onStopSpeaking,
   onSaveFavorite,
+  lastSpoken = "",
+  onRepeat,
 }) {
   const scrollRef  = useRef(null);
   const inputRef   = useRef(null);
@@ -121,6 +123,40 @@ function MessageBar({
 
   const focusInput = useCallback(() => inputRef.current?.focus(), []);
   const hasSomething = wordTexts.length > 0 || draft.trim();
+  const showRepeat   = !hasSomething && !speaking && !!lastSpoken;
+
+  // ── Long-press state for protected Clear button ───────────────────────
+  const clearTimerRef = useRef(null);
+  const [clearHint, setClearHint]   = useState(false);  // brief "hold" hint
+  const [clearActive, setClearActive] = useState(false); // long-press achieved
+
+  const handleClearDown = useCallback(() => {
+    setClearActive(false);
+    clearTimerRef.current = setTimeout(() => {
+      setClearActive(true);
+      setDraft(""); onClear();
+      // haptic feedback if available
+      try { navigator.vibrate?.(30); } catch {}
+    }, 500);
+  }, [onClear]);
+
+  const handleClearUp = useCallback(() => {
+    if (clearTimerRef.current) {
+      clearTimeout(clearTimerRef.current);
+      clearTimerRef.current = null;
+    }
+    if (!clearActive && hasSomething) {
+      // Short tap — show brief "hold to clear" hint
+      setClearHint(true);
+      setTimeout(() => setClearHint(false), 1200);
+    }
+    setClearActive(false);
+  }, [clearActive, hasSomething]);
+
+  // Clean up on unmount
+  useEffect(() => {
+    return () => { if (clearTimerRef.current) clearTimeout(clearTimerRef.current); };
+  }, []);
 
   // Build the full sentence (including uncommitted draft) for speak
   const buildFullSentence = useCallback(() => {
@@ -131,7 +167,7 @@ function MessageBar({
     <div style={{
       background:   "var(--surface)",
       borderBottom: "0.5px solid var(--sep)",
-      padding:      "10px 14px 10px",
+      padding:      "8px 12px 8px",
     }}>
       {/* ── Chip row + inline input ── */}
       <div
@@ -151,7 +187,7 @@ function MessageBar({
           padding:    "4px 10px",
           scrollbarWidth: "none",
           WebkitOverflowScrolling: "touch",
-          marginBottom: 10,
+          marginBottom: 6,
           cursor:     "text",
           background: "var(--bg)",
           borderRadius: "var(--radius-md)",
@@ -195,8 +231,37 @@ function MessageBar({
         />
       </div>
 
+      {/* ── Repeat-last pill (visible when bar is empty & there's history) ── */}
+      {showRepeat && (
+        <button
+          aria-label="Repeat last spoken sentence"
+          onClick={onRepeat}
+          style={{
+            display: "flex", alignItems: "center", gap: 6,
+            width: "100%",
+            padding: "7px 14px",
+            marginBottom: 6,
+            borderRadius: "var(--radius-md)",
+            border: "0.5px solid var(--tint)",
+            background: "var(--tint-soft)",
+            color: "var(--tint)",
+            fontSize: 14, fontWeight: 600,
+            cursor: "pointer",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            transition: "all 0.15s",
+          }}
+        >
+          <RotateCcw size={15} strokeWidth={2.2} />
+          <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+            {ui?.repeatLast ?? "Repeat"}: {lastSpoken}
+          </span>
+        </button>
+      )}
+
       {/* ── Action buttons ── */}
-      {/* Layout: [Delete] [Clear] [★ Fav] ──── [SPEAK]                   */}
+      {/* Layout: [Delete] [Clear (hold)] [★ Fav] ──── [SPEAK]               */}
       <div style={{ display: "flex", gap: 8 }}>
 
         {/* Delete last */}
@@ -212,14 +277,33 @@ function MessageBar({
           <Delete size={18} strokeWidth={1.8} />
         </button>
 
-        {/* Clear all */}
+        {/* Clear all — requires long-press (500ms) to prevent accidental clears */}
         <button
-          aria-label="Clear message"
+          aria-label="Hold to clear message"
           disabled={!hasSomething}
-          onClick={() => { setDraft(""); onClear(); }}
-          style={iconBtn(!hasSomething)}
+          onPointerDown={hasSomething ? handleClearDown : undefined}
+          onPointerUp={handleClearUp}
+          onPointerLeave={handleClearUp}
+          style={{
+            ...iconBtn(!hasSomething),
+            position: "relative",
+            animation: clearHint ? "shake 0.3s ease" : "none",
+          }}
         >
           <X size={18} strokeWidth={2} />
+          {clearHint && (
+            <span style={{
+              position: "absolute", top: -28, left: "50%", transform: "translateX(-50%)",
+              background: "var(--text)", color: "var(--bg)",
+              fontSize: 11, fontWeight: 600,
+              padding: "3px 8px", borderRadius: 6,
+              whiteSpace: "nowrap",
+              pointerEvents: "none",
+              animation: "fadeIn 0.15s ease",
+            }}>
+              Hold to clear
+            </span>
+          )}
         </button>
 
         {/* Save to favourites */}
@@ -256,7 +340,7 @@ function MessageBar({
           }}
           style={{
             flex:           1,
-            padding:        "18px 0",
+            padding:        "10px 0",
             borderRadius:   "var(--radius-lg)",
             border:         "none",
             background:     speaking
@@ -269,7 +353,7 @@ function MessageBar({
               : !hasSomething
                 ? "var(--text-4)"
                 : "#fff",
-            fontSize:       20,
+            fontSize:       17,
             fontWeight:     800,
             letterSpacing:  "-0.01em",
             cursor:         (!hasSomething && !speaking) ? "default" : "pointer",
@@ -300,7 +384,7 @@ function MessageBar({
 
 function iconBtn(disabled) {
   return {
-    padding:      "18px 18px",
+    padding:      "10px 14px",
     borderRadius: "var(--radius-lg)",
     border:       "0.5px solid var(--sep)",
     background:   "var(--surface)",

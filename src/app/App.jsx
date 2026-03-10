@@ -5,7 +5,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
   Grid3X3, Clock, Settings, User,
-  Cpu, Ear, HelpCircle, ArrowLeft, Keyboard
+  Cpu, Ear, HelpCircle, ArrowLeft, Keyboard, Siren
 } from "lucide-react";
 
 // App-level
@@ -38,7 +38,7 @@ import ListenOverlay     from "../features/listen/ListenOverlay";
 import HelpModal         from "../shared/ui/HelpModal";
 import AIModelModal      from "../features/settings/AIModelModal";
 import SmartKeyboard     from "../features/board/SmartKeyboard";
-import EmotionStrip      from "../features/board/EmotionStrip";
+import CoreWordBar from "../features/board/CoreWordBar";
 import FavoritesSheet    from "../features/board/FavoritesSheet";
 
 // i18n
@@ -130,6 +130,72 @@ function SubViewHeader({ onBack, title, emoji, bg }) {
   );
 }
 
+// ── FAB with long-press support ───────────────────────────────────────────────
+const FAB_LONG_PRESS_MS = 500;
+
+function FabButton({ boardMode, onToggleMode, onLongPress }) {
+  const timerRef = useRef(null);
+  const firedRef = useRef(false);
+
+  const clear = useCallback(() => {
+    if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+  }, []);
+
+  const handleDown = useCallback(() => {
+    firedRef.current = false;
+    timerRef.current = setTimeout(() => {
+      firedRef.current = true;
+      onLongPress?.();
+    }, FAB_LONG_PRESS_MS);
+  }, [onLongPress]);
+
+  const handleUp = useCallback(() => { clear(); }, [clear]);
+  const handleLeave = useCallback(() => { clear(); }, [clear]);
+
+  const handleClick = useCallback((e) => {
+    if (firedRef.current) { e.preventDefault(); firedRef.current = false; return; }
+    onToggleMode();
+  }, [onToggleMode]);
+
+  const preventMenu = useCallback((e) => e.preventDefault(), []);
+
+  return (
+    <button
+      aria-label={boardMode === "symbols" ? "Switch to keyboard (long-press to listen)" : "Switch to symbol grid (long-press to listen)"}
+      onPointerDown={handleDown}
+      onPointerUp={handleUp}
+      onPointerLeave={handleLeave}
+      onPointerCancel={handleLeave}
+      onClick={handleClick}
+      onContextMenu={preventMenu}
+      style={{
+        position: "absolute",
+        bottom: 16,
+        right: 16,
+        zIndex: 20,
+        width: 52,
+        height: 52,
+        borderRadius: 26,
+        border: "none",
+        background: "var(--tint)",
+        color: "#fff",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        boxShadow: "0 3px 12px rgba(0,0,0,0.25)",
+        cursor: "pointer",
+        WebkitTapHighlightColor: "transparent",
+        touchAction: "manipulation",
+        userSelect: "none",
+      }}
+    >
+      {boardMode === "symbols"
+        ? <Keyboard size={24} strokeWidth={2} />
+        : <Grid3X3 size={24} strokeWidth={2} />}
+    </button>
+  );
+}
+
 // ── App ───────────────────────────────────────────────────────────────────────
 
 export default function App() {
@@ -142,6 +208,8 @@ export default function App() {
   const [showHelp, setShowHelp] = useState(false);
   const [boardMode, setBoardMode] = useState("symbols");              // "symbols" | "keyboard"
   const [quickSubTab, setQuickSubTab] = useState(null);               // null = show sub-cat grid, string = phrase tab id
+  const [lastSpoken, setLastSpoken] = useState("");                     // last spoken sentence for repeat
+  const [spokenToast, setSpokenToast] = useState("");                   // brief visual confirmation after speaking
 
   // ── Settings (persisted in localStorage) ──────────────────────────────────
   const {
@@ -210,8 +278,15 @@ export default function App() {
 
   const ui = getUI(uiLangCode);
 
-  // ── Normalise words (string | {text, __typed}) ───────────────────────────
+  // ── Normalise words (string | {text, __typed} | {text, __core}) ──────────
   const wordTexts = useMemo(() => words.map(w => (typeof w === "string" ? w : w.text)), [words]);
+
+  // Words typed from CoreWordBar — the grammatical prefix for the current symbol tap.
+  // Only core-tagged entries qualify; grid/fringe symbol labels are excluded.
+  const corePrefixWords = useMemo(
+    () => words.filter(w => w?.__core).map(w => w.text),
+    [words],
+  );
 
   // ── Recent message history (last 3 spoken sentences for LLM context) ─────
   const recentMessages = useMemo(
@@ -219,7 +294,7 @@ export default function App() {
     [history],
   );
 
-  // ── Auto-detected emotion (for EmotionStrip highlight when user hasn't overridden)
+  // ── Auto-detected emotion (for IntentBar emotion chips when user hasn't overridden)
   const detectedEmotion = useMemo(
     () => detectEmotion(tapContext?.l2Canon, tapContext?.l3Canon, activeCategory?.mapTo),
     [tapContext, activeCategory],
@@ -229,17 +304,26 @@ export default function App() {
   listenTranscriptRef.current = (transcript) => {
     if (!transcript?.trim()) return;
     console.log("[App] Listen transcript →", transcript);
-    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, transcript, recentMessages, gender, emotion);
+    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, transcript, recentMessages, gender, emotion, corePrefixWords);
   };
 
   // ── Prediction on word changes ───────────────────────────────────────────
   useEffect(() => {
     if (!ngramReady) return;
-    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender, emotion);
-  }, [wordTexts, ngramReady, aiPredict, typeLangCode, activeCategory, tapContext, recentMessages, gender, emotion]);
+    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender, emotion, corePrefixWords);
+  }, [wordTexts, ngramReady, aiPredict, typeLangCode, activeCategory, tapContext, recentMessages, gender, emotion, corePrefixWords]);
 
   // ── Handlers ─────────────────────────────────────────────────────────────
   const handleTap = useCallback((label) => { haptic(); setWords(prev => [...prev, label]); }, []);
+
+  /** Core word tap — adds a translated core-vocabulary word, tagged so the
+   *  prediction engine can distinguish it from fringe (grid) symbol labels. */
+  const handleCoreWordTap = useCallback((label) => {
+    haptic();
+    setWords(prev => [...prev, { text: label, __core: true }]);
+  }, []);
+
+
 
   const handleSuggestionSelect = useCallback((word) => {
     setWords(prev => appendSuggestionToWords(prev, word));
@@ -252,10 +336,9 @@ export default function App() {
 
   const handleTyping = useCallback((draft) => {
     if (!ngramReady) return;
-    const currentTexts = words.map(w => (typeof w === "string" ? w : w.text));
-    const all = [...currentTexts, draft].filter(Boolean);
-    aiPredict(all, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender);
-  }, [words, ngramReady, aiPredict, typeLangCode, activeCategory, tapContext, recentMessages, gender]);
+    const all = [...wordTexts, draft].filter(Boolean);
+    aiPredict(all, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender, undefined, corePrefixWords);
+  }, [wordTexts, ngramReady, aiPredict, typeLangCode, activeCategory, tapContext, recentMessages, gender, corePrefixWords]);
 
   const handleSpeak = useCallback((sentenceOverride) => {
     const sentence = sentenceOverride ?? wordTexts.join(" ");
@@ -269,6 +352,9 @@ export default function App() {
       onStart: () => {
         saveUtterance(sentence);
         learn(sentence);
+        setLastSpoken(sentence);
+        setSpokenToast(sentence);
+        setTimeout(() => setSpokenToast(""), 2500);
         setWords([]);
         setTapContext(null);
         setEmotion(null);
@@ -278,6 +364,19 @@ export default function App() {
     });
   }, [wordTexts, speaking, speak, saveUtterance, learn, ttsLang, voiceSpeed, voicePitch, voiceName, aiClearSuggestions]);
 
+  /** Repeat last spoken sentence */
+  const handleRepeat = useCallback(() => {
+    if (lastSpoken) handleSpeak(lastSpoken);
+  }, [lastSpoken, handleSpeak]);
+
+  /** SOS — jump to emergency from anywhere */
+  const handleSOS = useCallback(() => {
+    haptic();
+    setTab("board");
+    setBoardMode("symbols");
+    setActiveCategory({ id: "emergency", action: "emergency" });
+  }, []);
+
   const handleRemoveWord = useCallback((idx) => setWords(prev => prev.filter((_, i) => i !== idx)), []);
   const handleDeleteLast = useCallback(() => setWords(prev => prev.slice(0, -1)), []);
   const handleClear      = useCallback(() => { setWords([]); setTapContext(null); setEmotion(null); }, []);
@@ -285,8 +384,8 @@ export default function App() {
 
   const handleIntentSpeak  = useCallback((text) => handleSpeak(text), [handleSpeak]);
   const handleRefreshIntent = useCallback(() => {
-    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender, emotion);
-  }, [aiPredict, wordTexts, typeLangCode, activeCategory, tapContext, recentMessages, gender, emotion]);
+    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender, emotion, corePrefixWords);
+  }, [aiPredict, wordTexts, typeLangCode, activeCategory, tapContext, recentMessages, gender, emotion, corePrefixWords]);
   const handleResetAI      = useCallback(() => { resetModel(); }, [resetModel]);
 
   // ── Category navigation ──────────────────────────────────────────────────
@@ -415,6 +514,24 @@ export default function App() {
               <Cpu size={16} strokeWidth={2} style={{ color: aiDotColor, flexShrink: 0 }} />
             </button>
 
+            {/* ⚠️ SOS — always-visible emergency shortcut */}
+            <button
+              onClick={handleSOS}
+              aria-label="Emergency SOS"
+              style={{
+                width: 48, height: 48, borderRadius: 14,
+                background: "#FFF0F0",
+                border: "1.5px solid #E03131",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                cursor: "pointer", transition: "all 0.18s ease",
+                color: "#C92A2A",
+                touchAction: "manipulation",
+                flexShrink: 0,
+              }}
+            >
+              <Siren size={20} strokeWidth={2} />
+            </button>
+
             {/* Listen Mode toggle — activates like Alexa */}
             <button
               onClick={() => {
@@ -458,6 +575,28 @@ export default function App() {
           </div>
         </header>
 
+        {/* ─── Spoken-sentence confirmation toast ─── */}
+        {spokenToast && (
+          <div
+            role="status"
+            aria-live="polite"
+            style={{
+              position: "absolute", top: 68, left: 12, right: 12,
+              zIndex: 200,
+              background: "#2B8A3E", color: "#fff",
+              padding: "8px 14px", borderRadius: 12,
+              fontSize: 14, fontWeight: 600,
+              display: "flex", alignItems: "center", gap: 8,
+              boxShadow: "0 4px 16px rgba(0,0,0,0.18)",
+              animation: "fadeIn 0.2s ease",
+              pointerEvents: "none",
+            }}
+          >
+            <span style={{ fontSize: 18 }}>✓</span>
+            <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{spokenToast}</span>
+          </div>
+        )}
+
         {/* ─────────────────── SENTENCE BUILDER + INTENT BAR (board only) ─────────────────── */}
         {tab === "board" && <>
           <MessageBar
@@ -471,16 +610,13 @@ export default function App() {
             onTyping={handleTyping}
             onStopSpeaking={handleStopSpeaking}
             onSaveFavorite={addFavorite}
+            lastSpoken={lastSpoken}
+            onRepeat={handleRepeat}
             dir={typeLang.dir}
             ui={ui}
           />
           {boardMode === "symbols" && (
             <>
-            <EmotionStrip
-              emotion={emotion}
-              onChange={setEmotion}
-              detectedEmotion={detectedEmotion}
-            />
             <IntentBar
               suggestions={aiSuggestions}
               onSelect={handleSuggestionSelect}
@@ -488,6 +624,13 @@ export default function App() {
               onRefresh={handleRefreshIntent}
               source={aiSource}
               ui={ui}
+              emotion={emotion}
+              onEmotionChange={setEmotion}
+              detectedEmotion={detectedEmotion}
+            />
+            <CoreWordBar
+              langCode={typeLangCode}
+              onTapWord={handleCoreWordTap}
             />
             </>
           )}
@@ -624,34 +767,12 @@ export default function App() {
               </>
             )}
 
-            {/* ── FAB: toggle board mode ── */}
-            <button
-              onClick={() => setBoardMode(m => m === "symbols" ? "keyboard" : "symbols")}
-              aria-label={boardMode === "symbols" ? "Switch to keyboard" : "Switch to symbol grid"}
-              style={{
-                position: "absolute",
-                bottom: 16,
-                right: 16,
-                zIndex: 20,
-                width: 52,
-                height: 52,
-                borderRadius: 26,
-                border: "none",
-                background: "var(--tint)",
-                color: "#fff",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "0 3px 12px rgba(0,0,0,0.25)",
-                cursor: "pointer",
-                WebkitTapHighlightColor: "transparent",
-                touchAction: "manipulation",
-              }}
-            >
-              {boardMode === "symbols"
-                ? <Keyboard size={24} strokeWidth={2} />
-                : <Grid3X3 size={24} strokeWidth={2} />}
-            </button>
+            {/* ── FAB: tap = toggle board mode, long-press = direct listen ── */}
+            <FabButton
+              boardMode={boardMode}
+              onToggleMode={() => setBoardMode(m => m === "symbols" ? "keyboard" : "symbols")}
+              onLongPress={() => { haptic(); listenMode.quickRecord(); }}
+            />
 
             {/* Listen Mode overlay (lives on the board) */}
             <ListenOverlay

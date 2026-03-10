@@ -24,7 +24,6 @@ export const HOME_CATEGORIES = [
   { id: "question",  emoji: "❓",  label: "QUESTION",       color: "#5C940D", bg: "#F4FCE3", mapTo: "questions" },
   { id: "describe",  emoji: "🎨",  label: "DESCRIBE",       color: "#862E9C", bg: "#F8F0FC", mapTo: "descriptors" },
   { id: "quick",     emoji: "⭐",  label: "QUICK\nPHRASES", color: "#E67700", bg: "#FFF9DB", action: "quick" },
-  { id: "emergency", emoji: "🚨",  label: "EMERGENCY",      color: "#C92A2A", bg: "#FFE3E3", action: "emergency" },
   { id: "favorites", emoji: "💛",  label: "FAVORITES",      color: "#F59F00", bg: "#FFF9DB", action: "favorites" },
 ];
 
@@ -33,7 +32,7 @@ const CAT_LABEL_KEY = {
   feel: "catFeel", need: "catNeed", people: "catPeople",
   do: "catDo", talk: "catTalk", place: "catPlace",
   question: "catQuestion", describe: "catDescribe",
-  quick: "catQuick", emergency: "catEmergency", favorites: "catFavorites",
+  quick: "catQuick", favorites: "catFavorites",
 };
 
 export default memo(function CategoryGrid({ onSelect, ui }) {

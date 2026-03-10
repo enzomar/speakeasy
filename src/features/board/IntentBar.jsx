@@ -12,7 +12,7 @@
  *  • Sparkle icon indicates AI source
  */
 
-import { memo, useRef, useCallback, useState } from "react";
+import { memo, useRef, useCallback, useState, useEffect } from "react";
 import { Sparkles } from "lucide-react";
 
 const LONG_PRESS_MS = 500;
@@ -99,8 +99,124 @@ function IntentPill({ sentence, index, onSpeak, onSelect }) {
   );
 }
 
-export default memo(function IntentBar({ suggestions, onSelect, onSpeak, source, ui, onRefresh }) {
-  const emptyHint = ui?.intentHint ?? "Tap a word — AI will suggest full sentences";
+// ── Inline emotion chips (replaces the separate EmotionStrip) ──────────────
+
+const EMOTION_OPTIONS = [
+  { id: "neutral",   emoji: "😐" },
+  { id: "positive",  emoji: "😊" },
+  { id: "negative",  emoji: "😞" },
+  { id: "urgent",    emoji: "⚡" },
+  { id: "uncertain", emoji: "🤔" },
+];
+
+// ── Emotion picker: single icon button + dropdown modal ────────────────────
+
+function EmotionPicker({ emotion, detectedEmotion, onEmotionChange }) {
+  const [open, setOpen] = useState(false);
+  const btnRef = useRef(null);
+  const popRef = useRef(null);
+
+  // Close on outside click
+  useEffect(() => {
+    if (!open) return;
+    const handler = (e) => {
+      if (btnRef.current?.contains(e.target)) return;
+      if (popRef.current?.contains(e.target)) return;
+      setOpen(false);
+    };
+    document.addEventListener("pointerdown", handler);
+    return () => document.removeEventListener("pointerdown", handler);
+  }, [open]);
+
+  const current = EMOTION_OPTIONS.find(o => o.id === emotion)
+    ?? EMOTION_OPTIONS.find(o => o.id === detectedEmotion)
+    ?? EMOTION_OPTIONS[0]; // neutral fallback
+
+  const handleSelect = useCallback((id) => {
+    onEmotionChange?.(emotion === id ? null : id);
+    setOpen(false);
+  }, [emotion, onEmotionChange]);
+
+  return (
+    <div style={{ position: "relative", flexShrink: 0, marginLeft: 4 }}>
+      {/* Single emoji trigger */}
+      <button
+        ref={btnRef}
+        aria-label={`Mood: ${current.id}. Tap to change.`}
+        onClick={() => setOpen(o => !o)}
+        style={{
+          width: 36, height: 36,
+          borderRadius: 10,
+          border: open ? "1.5px solid var(--tint)" : "1.5px solid var(--sep)",
+          background: open ? "var(--tint-soft)" : "var(--elevated)",
+          fontSize: 18,
+          lineHeight: 1,
+          cursor: "pointer",
+          padding: 0,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          WebkitTapHighlightColor: "transparent",
+          touchAction: "manipulation",
+          transition: "all 0.12s",
+        }}
+      >
+        {current.emoji}
+      </button>
+
+      {/* Dropdown popover */}
+      {open && (
+        <div
+          ref={popRef}
+          style={{
+            position: "absolute",
+            top: "calc(100% + 6px)",
+            right: 0,
+            zIndex: 100,
+            background: "var(--surface)",
+            border: "0.5px solid var(--sep)",
+            borderRadius: 14,
+            padding: 6,
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+            boxShadow: "0 8px 28px rgba(0,0,0,0.18)",
+            minWidth: 44,
+          }}
+        >
+          {EMOTION_OPTIONS.map(({ id, emoji }) => (
+            <button
+              key={id}
+              aria-label={id}
+              onClick={() => handleSelect(id)}
+              style={{
+                width: 40, height: 40,
+                borderRadius: 10,
+                border: emotion === id ? "1.5px solid var(--tint)" : "1.5px solid transparent",
+                background: emotion === id ? "var(--tint-soft)" : "transparent",
+                fontSize: 20,
+                lineHeight: 1,
+                cursor: "pointer",
+                padding: 0,
+                display: "flex", alignItems: "center", justifyContent: "center",
+                WebkitTapHighlightColor: "transparent",
+                touchAction: "manipulation",
+                transition: "all 0.1s",
+                opacity: emotion === id ? 1 : 0.65,
+              }}
+            >
+              {emoji}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default memo(function IntentBar({
+  suggestions, onSelect, onSpeak, source, ui, onRefresh,
+  emotion, onEmotionChange, detectedEmotion,
+}) {
+  const emptyHint = ui?.intentHint ?? "Tap a word — AI completes the sentence";
   const [spinning, setSpinning] = useState(false);
 
   const handleRefresh = useCallback(() => {
@@ -114,14 +230,14 @@ export default memo(function IntentBar({ suggestions, onSelect, onSpeak, source,
     <div style={{
       background: "var(--surface)",
       borderBottom: "0.5px solid var(--sep)",
-      padding: "6px 10px 8px",
+      padding: "5px 10px 6px",
       display: "flex",
       alignItems: "center",
       gap: 6,
-      minHeight: 56,
+      minHeight: 44,
       flexShrink: 0,
     }}>
-      {/* AI indicator — tap to recompute */}
+      {/* AI sparkle + refresh */}
       <button
         aria-label="Refresh AI suggestions"
         onClick={handleRefresh}
@@ -152,20 +268,21 @@ export default memo(function IntentBar({ suggestions, onSelect, onSpeak, source,
         />
       </button>
 
-      {/* Intent pills */}
+      {/* Intent pills (scrollable) */}
       {suggestions.length > 0 ? (
         <div
           role="status"
           aria-live="polite"
           aria-label="AI suggestions"
           style={{
-          display: "flex",
-          gap: 6,
-          overflowX: "auto",
-          flex: 1,
-          scrollbarWidth: "none",
-          WebkitOverflowScrolling: "touch",
-        }}>
+            display: "flex",
+            gap: 6,
+            overflowX: "auto",
+            flex: 1,
+            scrollbarWidth: "none",
+            WebkitOverflowScrolling: "touch",
+          }}
+        >
           {suggestions.map((sentence, i) => (
             <IntentPill
               key={sentence + i}
@@ -178,11 +295,20 @@ export default memo(function IntentBar({ suggestions, onSelect, onSpeak, source,
         </div>
       ) : (
         <p style={{
-          margin: 0, fontSize: 13, color: "var(--text-4)",
-          fontStyle: "italic", flex: 1,
+          margin: 0, fontSize: 12, color: "var(--text-4)",
+          fontStyle: "italic", flex: 1, lineHeight: 1.3,
         }}>
           {emptyHint}
         </p>
+      )}
+
+      {/* Single-icon emotion picker (replaces inline chips) */}
+      {onEmotionChange && (
+        <EmotionPicker
+          emotion={emotion}
+          detectedEmotion={detectedEmotion}
+          onEmotionChange={onEmotionChange}
+        />
       )}
     </div>
   );

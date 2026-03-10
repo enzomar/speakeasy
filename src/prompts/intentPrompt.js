@@ -102,21 +102,28 @@ function resolveVerbForms(canonicalLabel, langCode) {
  * @param {object|string} modSymbol       - Modifier symbol or null
  * @param {string}        langCode        - "it"|"en"|"fr"|"es"|"pt"
  * @param {string}        gender          - "male"|"female"
- * @param {string}        canonicalLabel  - English base label or categoryId for POS lookup
+ * @param {string}        canonicalLabel  - English base label for grammar lookup
+ * @param {string}        categoryId      - Category mapTo value for POS lookup (e.g. "places")
  * @param {string}        intent          - One of INTENTS (default "statement")
  * @param {string}        emotion         - One of EMOTIONS (default "neutral")
  * @returns {string[]}
  */
 export function generateCandidates(
   symbol, modSymbol, langCode = "it", gender = "male", canonicalLabel,
-  intent = "statement", emotion = "neutral"
+  categoryId, intent = "statement", emotion = "neutral"
 ) {
   const rawKw = resolveKeyword(symbol, langCode);
   const mod   = modSymbol ? resolveKeyword(modSymbol, langCode) : "";
   const canon = canonicalLabel
     ?? (typeof symbol === "string" ? symbol : symbol?.labels?.en ?? "");
 
-  const { pos }       = getPOS(canon);
+  // Word-level POS overrides category POS for specialized template types
+  // (e.g. "color" and "number" have their own template sets where {mod} is primary)
+  const SPECIALIZED_POS = new Set(["color", "number"]);
+  const wordEntry = POS_DICT[canon?.toLowerCase()];
+  const { pos } = (wordEntry && SPECIALIZED_POS.has(wordEntry.pos))
+    ? wordEntry
+    : getPOS(categoryId || canon);
   const langTemplates = TEMPLATES[langCode] ?? TEMPLATES.en;
   const posTemplates  = langTemplates[pos]  ?? langTemplates.noun;
 
@@ -127,12 +134,13 @@ export function generateCandidates(
   const kw = adjForm ?? rawKw;
 
   // Resolve article-prefixed noun phrases from grammar dictionary
-  const nounData = (pos === "noun")
+  const nounData = (pos === "noun" || pos === "place")
     ? resolveNounArticle(canon, langCode)
     : null;
   const art  = nounData?.indef ?? rawKw;     // indefinite by default: "un libro", "dell'acqua"
   const part = nounData?.part  ?? rawKw;     // partitive: "del pane", "du pain"
   const def  = nounData?.def   ?? rawKw;     // definite: "il libro", "l'acqua"
+  const loc  = nounData?.loc ?? nounData?.part ?? rawKw;  // locative: "a scuola", "to school"
 
   // Resolve conjugated verb forms from dictionary
   const verbData = (pos === "verb")
@@ -182,6 +190,7 @@ export function generateCandidates(
       .replace("{art}", art)
       .replace("{part}", part)
       .replace("{def}", def)
+      .replace("{loc}", loc)
       .replace("{v1s}", v1s)
       .replace("{ger}", ger)
       .replace("{mod}", mod)
@@ -220,6 +229,60 @@ export function fixGender(sentence, langCode, gender) {
   return result;
 }
 
+
+// ── Core+Fringe Prefix Enforcement ───────────────────────────────────────────
+// Based on core+fringe AAC vocabulary model (Beukelman & Light, 2020):
+// core vocabulary (~50 high-frequency words) combine with fringe vocabulary
+// (grid symbols) to build grammatical sentences. When core words are already
+// in the message bar, ALL generated candidates must respect that prefix.
+//
+// Grammar note: the prefix also determines grammatical person for conjugation.
+//   "I …"    → 1st-person present (already encoded via {v1s} in templates)
+//   "you …"  → 2nd-person (templates handle this via imperative intent)
+//   "help …" → imperative
+// The prefix filter reinforces those person-agreement constraints at sentence level.
+
+/**
+ * Filter and/or prepend a core-word prefix onto heuristic candidates.
+ *
+ * Algorithm:
+ *  1. Keep candidates that already start with the prefix (word-by-word match).
+ *     If ≥ 3 candidates are compatible, return only those — they're already correct.
+ *  2. Otherwise prepend the prefix to every candidate, handling word overlap
+ *     (e.g. prefix="I want", candidate="want food" → "I want food", no duplication).
+ *
+ * @param {string[]} candidates  - Heuristic sentence strings from generateCandidates()
+ * @param {string[]} prefixWords - Core/grid words already in the message bar
+ * @returns {string[]}
+ */
+export function applyPrefix(candidates, prefixWords) {
+  if (!prefixWords?.length || !candidates?.length) return candidates;
+
+  const prefixStr = prefixWords.join(" ");
+  const prefixLow = prefixStr.toLowerCase();
+
+  // 1. Prefer candidates that already start with the prefix
+  const compatible = candidates.filter(c => c.toLowerCase().startsWith(prefixLow));
+  if (compatible.length >= 3) return compatible;
+
+  // 2. Prepend prefix to each candidate, merging word-level overlap
+  //    e.g. prefix=["I","want"], cand="want food" → overlap=1 → "I want food"
+  //    e.g. prefix=["I","want"], cand="go home"   → overlap=0 → "I want go home"
+  return candidates.map(c => {
+    const prefixParts = prefixWords.map(w => w.toLowerCase());
+    const cParts      = c.split(/\s+/).filter(Boolean);
+
+    // Find longest suffix of prefix that matches a prefix-slice of candidate
+    let overlap = 0;
+    for (let size = Math.min(prefixParts.length, cParts.length); size > 0; size--) {
+      const tail = prefixParts.slice(-size).join(" ");
+      const head = cParts.slice(0, size).map(w => w.toLowerCase()).join(" ");
+      if (tail === head) { overlap = size; break; }
+    }
+
+    return [prefixStr, ...cParts.slice(overlap)].join(" ");
+  });
+}
 
 // ── Gender Instruction for LLM ─────────────────────────────────────────────────
 
@@ -508,6 +571,7 @@ export function buildSystemPrompt(langCode = "en", keyword = "") {
 export function buildUserPrompt(currentWords, langCode = "en", tapContext, categoryId) {
   const keyword  = tapContext?.l2Label || currentWords || "…";
   const modifier = tapContext?.l3Label || null;
-  const candidates = generateCandidates(keyword, modifier, langCode, "male", categoryId);
+  const l2Canon  = tapContext?.l2Canon || keyword;
+  const candidates = generateCandidates(keyword, modifier, langCode, "male", l2Canon, categoryId);
   return candidates.slice(0, 5).join("\n");
 }
