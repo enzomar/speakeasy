@@ -5,8 +5,10 @@
 
 import { memo, useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { Plus, Trash2, Check, X, Eye, EyeOff, Search as SearchIcon } from "lucide-react";
+import { getArasaacPictogram, getArasaacPictogramDescription, getArasaacPictogramUrl } from "../../data/arasaac";
 import { SYMBOLS, CATEGORIES } from "../../data/symbols";
 import { getSymbolLabel, getCategoryName } from "../../i18n/translations";
+import SymbolGlyph from "../../shared/ui/SymbolGlyph";
 import ConfirmSheet from "../../shared/ui/ConfirmSheet";
 
 // ── Add / Edit sheet ──────────────────────────────────────────────────────────
@@ -172,9 +174,14 @@ function SymbolRow({ symbol, isCustom, isHidden, displayLabel, catColor, onHide,
       transition: "opacity 0.15s",
     }}>
       {/* Emoji */}
-      <span style={{ fontSize: 22, lineHeight: 1, flexShrink: 0, width: 30, textAlign: "center" }}>
-        {symbol.emoji}
-      </span>
+      <div style={{ flexShrink: 0, width: 30, display: "flex", justifyContent: "center" }}>
+        <SymbolGlyph
+          emoji={symbol.emoji}
+          imageUrl={getArasaacPictogramUrl(symbol)}
+          title={getArasaacPictogramDescription(symbol) || displayLabel}
+          size={22}
+        />
+      </div>
 
       {/* Label */}
       <span style={{
@@ -274,8 +281,10 @@ export default memo(function SymbolsPage({
       const q = search.trim().toLowerCase();
       list = list.filter(s =>
         s.label.toLowerCase().includes(q) ||
-        s.emoji.includes(q) ||
-        getSymbolLabel(s, langCode).toLowerCase().includes(q)
+        (s.emoji || "").includes(q) ||
+        getSymbolLabel(s, langCode).toLowerCase().includes(q) ||
+        (getArasaacPictogram(s)?.description || "").toLowerCase().includes(q) ||
+        (getArasaacPictogram(s)?.keywords || []).some(keyword => keyword.toLowerCase().includes(q))
       );
     }
     return list;

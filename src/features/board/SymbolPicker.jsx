@@ -17,12 +17,14 @@
 import { memo, useMemo, useState, useCallback } from "react";
 import { ArrowLeft } from "lucide-react";
 import { SYMBOLS } from "../../data/symbols";
+import { getArasaacPictogramDescription, getArasaacPictogramUrl } from "../../data/arasaac";
 import { getSymbolLabel, getHierarchyLabel } from "../../i18n/translations";
-import { getHierarchy } from "../../data/hierarchy";
+import { getHierarchy, getHierarchyModifierType } from "../../data/hierarchy";
+import SymbolGlyph from "../../shared/ui/SymbolGlyph";
 
 // ── Shared header ─────────────────────────────────────────────────────────────
 
-function PickerHeader({ onBack, emoji, label, color, bg, sublabel }) {
+function PickerHeader({ onBack, emoji, imageUrl, label, color, bg, sublabel, pictogramTitle }) {
   return (
     <div style={{
       display: "flex",
@@ -51,7 +53,13 @@ function PickerHeader({ onBack, emoji, label, color, bg, sublabel }) {
       >
         <ArrowLeft size={24} strokeWidth={2.2} />
       </button>
-      <span style={{ fontSize: 30, lineHeight: 1 }} aria-hidden="true">{emoji}</span>
+      <SymbolGlyph
+        emoji={emoji}
+        imageUrl={imageUrl}
+        title={pictogramTitle || label}
+        size={30}
+        style={{ lineHeight: 1 }}
+      />
       <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
         <span style={{
           fontSize: sublabel ? 16 : 22,
@@ -81,7 +89,7 @@ function PickerHeader({ onBack, emoji, label, color, bg, sublabel }) {
 
 // ── Shared symbol tile ────────────────────────────────────────────────────────
 
-function SymbolTile({ emoji, label, color, onClick, highlight = false }) {
+function SymbolTile({ emoji, imageUrl, pictogramTitle, label, color, onClick, highlight = false }) {
   return (
     <button
       onClick={onClick}
@@ -106,7 +114,13 @@ function SymbolTile({ emoji, label, color, onClick, highlight = false }) {
       onPointerUp={e    => (e.currentTarget.style.transform = "scale(1)")}
       onPointerLeave={e => (e.currentTarget.style.transform = "scale(1)")}
     >
-      <span style={{ fontSize: 32, lineHeight: 1 }} aria-hidden="true">{emoji}</span>
+      <SymbolGlyph
+        emoji={emoji}
+        imageUrl={imageUrl}
+        title={pictogramTitle || label}
+        size={32}
+        style={{ lineHeight: 1 }}
+      />
       <span style={{
         fontSize: 13,
         fontWeight: 700,
@@ -144,20 +158,12 @@ function TileGrid({ children }) {
 }
 
 // ── L3 type classifier ────────────────────────────────────────────────────────
-// Determine the semantic role of an L3 modifier from its id prefix.
+// Determine the semantic role of an L3 modifier.
+// Prefer explicit metadata from the hierarchy and fall back to legacy id prefixes.
 // This is passed to the LLM so it understands *how* to use the modifier.
 
-function classifyL3(id) {
-  if (!id) return "detail";
-  if (id.startsWith("t_"))   return "time";
-  if (id.startsWith("p_"))   return "person";
-  if (id.startsWith("pl_"))  return "place";
-  if (id.startsWith("x_"))   return "intensity";  // polarity: not, very, a little, more…
-  if (id.startsWith("o_"))   return "object";
-  if (id.startsWith("b_"))   return "body";
-  if (id.startsWith("n3_"))  return "specific-item"; // food/drink/clothing sub-items
-  if (id.startsWith("lc3_")) return "sub-place";     // room, playground, etc.
-  return "detail";
+function classifyL3(modifier) {
+  return getHierarchyModifierType(modifier);
 }
 
 // ── Main component ────────────────────────────────────────────────────────────
@@ -215,7 +221,7 @@ export default memo(function SymbolPicker({
       l2Canon: activeL2?.label || null,
       l3Label: label,
       l3Canon: modifier.label,
-      l3Type:  classifyL3(modifier.id),
+      l3Type:  classifyL3(modifier),
     });
     setActiveL2(null);        // return to L2
   }, [onTap, onTapContext, category, activeL2, langCode]);
@@ -230,6 +236,8 @@ export default memo(function SymbolPicker({
           <PickerHeader
             onBack={handleL3Back}
             emoji={activeL2.emoji}
+            imageUrl={getArasaacPictogramUrl(activeL2)}
+            pictogramTitle={getArasaacPictogramDescription(activeL2)}
             label={getHierarchyLabel(category, langCode)}
             sublabel={getHierarchyLabel(activeL2, langCode)}
             color={category.color}
@@ -240,6 +248,8 @@ export default memo(function SymbolPicker({
               <SymbolTile
                 key={mod.id}
                 emoji={mod.emoji}
+                imageUrl={getArasaacPictogramUrl(mod)}
+                pictogramTitle={getArasaacPictogramDescription(mod)}
                 label={getHierarchyLabel(mod, langCode)}
                 color={category.color}
                 onClick={() => handleL3Tap(mod)}
@@ -256,6 +266,8 @@ export default memo(function SymbolPicker({
         <PickerHeader
           onBack={onBack}
           emoji={category.emoji}
+          imageUrl={getArasaacPictogramUrl(category)}
+          pictogramTitle={getArasaacPictogramDescription(category)}
           label={getHierarchyLabel(category, langCode)}
           color={category.color}
           bg={category.bg}
@@ -265,6 +277,8 @@ export default memo(function SymbolPicker({
             <SymbolTile
               key={item.id}
               emoji={item.emoji}
+              imageUrl={getArasaacPictogramUrl(item)}
+              pictogramTitle={getArasaacPictogramDescription(item)}
               label={getHierarchyLabel(item, langCode)}
               color={category.color}
               onClick={() => handleL2Tap(item)}
@@ -283,6 +297,8 @@ export default memo(function SymbolPicker({
       <PickerHeader
         onBack={onBack}
         emoji={category.emoji}
+        imageUrl={getArasaacPictogramUrl(category)}
+        pictogramTitle={getArasaacPictogramDescription(category)}
         label={getHierarchyLabel(category, langCode)}
         color={category.color}
         bg={category.bg}
@@ -306,6 +322,8 @@ export default memo(function SymbolPicker({
               <SymbolTile
                 key={s.id}
                 emoji={s.emoji}
+                imageUrl={getArasaacPictogramUrl(s)}
+                pictogramTitle={getArasaacPictogramDescription(s)}
                 label={label}
                 color={category.color}
                 onClick={() => onTap(label)}

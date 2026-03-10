@@ -10,6 +10,8 @@
  */
 
 import { memo } from "react";
+import { getArasaacPictogramDescription, getArasaacPictogramUrl } from "../../data/arasaac";
+import SymbolGlyph from "../../shared/ui/SymbolGlyph";
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const HOME_CATEGORIES = [
@@ -72,12 +74,13 @@ export default memo(function CategoryGrid({ onSelect, ui }) {
             boxShadow: `0 1px 4px ${cat.color}15`,
           }}
         >
-          <span
-            style={{ fontSize: "clamp(30px, 7vw, 48px)", lineHeight: 1 }}
-            aria-hidden="true"
-          >
-            {cat.emoji}
-          </span>
+          <SymbolGlyph
+            emoji={cat.emoji}
+            imageUrl={getArasaacPictogramUrl(cat)}
+            title={getArasaacPictogramDescription(cat) || cat.label}
+            size="clamp(30px, 7vw, 48px)"
+            style={{ lineHeight: 1 }}
+          />
           <span style={{
             fontSize: "clamp(12px, 2.8vw, 17px)",
             fontWeight: 800,

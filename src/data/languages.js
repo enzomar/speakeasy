@@ -257,7 +257,9 @@ export const HIERARCHY_TRANSLATIONS = {
     question:"PREGUNTA",
     q_what:"qué", q_where:"dónde", q_when:"cuándo", q_who:"quién",
     q_why:"por qué", q_how:"cómo", q_howmuch:"cuánto", q_howmany:"cuántos",
-    q_canI:"puedo", q_doYou:"tú", q_isIt:"es", q_whatTime:"qué hora",
+    q_which:"cuál", q_whatTime:"qué hora", q_canI:"puedo", q_canYou:"puedes",
+    q3_this:"esto", q3_that:"eso", q3_happened:"pasó", q3_name:"nombre", q3_problem:"problema", q3_next:"siguiente",
+    q3_do:"hacer", q3_say:"decir", q3_spell:"deletrear", q3_use:"usar", q3_get:"conseguir", q3_feel:"sentir", q3_fix:"arreglar",
     // ── DESCRIBE L2 ──
     describe:"DESCRIBIR",
     dc_big:"grande", dc_small:"pequeño", dc_fast:"rápido", dc_slow:"lento",
@@ -338,7 +340,9 @@ export const HIERARCHY_TRANSLATIONS = {
     question:"QUESTION",
     q_what:"quoi", q_where:"où", q_when:"quand", q_who:"qui",
     q_why:"pourquoi", q_how:"comment", q_howmuch:"combien", q_howmany:"combien",
-    q_canI:"est-ce que je peux", q_doYou:"est-ce que tu", q_isIt:"est-ce que c'est", q_whatTime:"quelle heure",
+    q_which:"quel", q_whatTime:"quelle heure", q_canI:"est-ce que je peux", q_canYou:"est-ce que tu peux",
+    q3_this:"ceci", q3_that:"cela", q3_happened:"s'est passé", q3_name:"nom", q3_problem:"problème", q3_next:"ensuite",
+    q3_do:"faire", q3_say:"dire", q3_spell:"épeler", q3_use:"utiliser", q3_get:"obtenir", q3_feel:"sentir", q3_fix:"réparer",
     // ── DESCRIBE L2 ──
     describe:"DÉCRIRE",
     dc_big:"grand", dc_small:"petit", dc_fast:"rapide", dc_slow:"lent",
@@ -419,7 +423,9 @@ export const HIERARCHY_TRANSLATIONS = {
     question:"DOMANDA",
     q_what:"cosa", q_where:"dove", q_when:"quando", q_who:"chi",
     q_why:"perché", q_how:"come", q_howmuch:"quanto", q_howmany:"quanti",
-    q_canI:"posso", q_doYou:"tu", q_isIt:"è", q_whatTime:"che ora",
+    q_which:"quale", q_whatTime:"che ora", q_canI:"posso", q_canYou:"puoi",
+    q3_this:"questo", q3_that:"quello", q3_happened:"successo", q3_name:"nome", q3_problem:"problema", q3_next:"dopo",
+    q3_do:"fare", q3_say:"dire", q3_spell:"si scrive", q3_use:"usare", q3_get:"ottenere", q3_feel:"sentire", q3_fix:"riparare",
     // ── DESCRIBE L2 ──
     describe:"DESCRIVERE",
     dc_big:"grande", dc_small:"piccolo", dc_fast:"veloce", dc_slow:"lento",
@@ -500,7 +506,9 @@ export const HIERARCHY_TRANSLATIONS = {
     question:"PERGUNTA",
     q_what:"o quê", q_where:"onde", q_when:"quando", q_who:"quem",
     q_why:"por quê", q_how:"como", q_howmuch:"quanto", q_howmany:"quantos",
-    q_canI:"posso", q_doYou:"você", q_isIt:"é", q_whatTime:"que horas",
+    q_which:"qual", q_whatTime:"que horas", q_canI:"posso", q_canYou:"você pode",
+    q3_this:"isto", q3_that:"isso", q3_happened:"aconteceu", q3_name:"nome", q3_problem:"problema", q3_next:"depois",
+    q3_do:"fazer", q3_say:"dizer", q3_spell:"soletrar", q3_use:"usar", q3_get:"conseguir", q3_feel:"sentir", q3_fix:"consertar",
     // ── DESCRIBE L2 ──
     describe:"DESCREVER",
     dc_big:"grande", dc_small:"pequeno", dc_fast:"rápido", dc_slow:"lento",
