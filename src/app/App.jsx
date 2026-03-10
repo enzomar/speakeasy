@@ -37,6 +37,8 @@ import HistoryPanel      from "../features/history/HistoryPanel";
 import ListenOverlay     from "../features/listen/ListenOverlay";
 import HelpModal         from "../shared/ui/HelpModal";
 import AIModelModal      from "../features/settings/AIModelModal";
+import InstallPrompt     from "../shared/ui/InstallPrompt";
+import Onboarding, { ONBOARDING_KEY } from "../features/onboarding/Onboarding";
 import SmartKeyboard     from "../features/board/SmartKeyboard";
 import CoreWordBar from "../features/board/CoreWordBar";
 import FavoritesSheet    from "../features/board/FavoritesSheet";
@@ -210,6 +212,11 @@ export default function App() {
   const [quickSubTab, setQuickSubTab] = useState(null);               // null = show sub-cat grid, string = phrase tab id
   const [lastSpoken, setLastSpoken] = useState("");                     // last spoken sentence for repeat
   const [spokenToast, setSpokenToast] = useState("");                   // brief visual confirmation after speaking
+
+  // ── First-run onboarding ─────────────────────────────────────────────────
+  const [onboardingDone, setOnboardingDone] = useState(
+    () => !!localStorage.getItem(ONBOARDING_KEY)
+  );
 
   // ── Settings (persisted in localStorage) ──────────────────────────────────
   const {
@@ -444,6 +451,27 @@ export default function App() {
     }
     return "dot";
   })();
+
+  // ── Onboarding complete ─────────────────────────────────────────────────
+  const handleOnboardingComplete = useCallback(({ langCode, name, avatar, gender: g, hand: h }) => {
+    try {
+      localStorage.setItem("speakeasy_name_v1",   name);
+      localStorage.setItem("speakeasy_avatar_v1", avatar);
+    } catch { /* ignore */ }
+    setGender(g);
+    setHand(h);
+    setUiLang(langCode);
+    setOnboardingDone(true);
+  }, [setGender, setHand, setUiLang]);
+
+  const resetOnboarding = useCallback(() => {
+    try { localStorage.removeItem(ONBOARDING_KEY); } catch { /* ignore */ }
+    setOnboardingDone(false);
+  }, []);
+
+  if (!onboardingDone) {
+    return <Onboarding onComplete={handleOnboardingComplete} />;
+  }
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
@@ -881,8 +909,15 @@ export default function App() {
 
       {/* Help modal */}
       {showHelp && (
-        <HelpModal onClose={() => setShowHelp(false)} langCode={uiLangCode} />
+        <HelpModal
+          onClose={() => setShowHelp(false)}
+          langCode={uiLangCode}
+          onResetOnboarding={resetOnboarding}
+        />
       )}
+
+      {/* PWA install prompt */}
+      <InstallPrompt />
 
       {/* AI Model modal */}
       <AIModelModal

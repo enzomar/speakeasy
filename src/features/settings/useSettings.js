@@ -60,7 +60,7 @@ export function useSettings() {
 
   // AI model
   const [aiModel, setAiModelState] = useState(
-    () => normalizeAiModel(localStorage.getItem(AI_MODEL_KEY) ?? "fast")
+    () => normalizeAiModel(localStorage.getItem(AI_MODEL_KEY) ?? "none")
   );
   const setAiModel = useCallback((model) => {
     const next = normalizeAiModel(model);

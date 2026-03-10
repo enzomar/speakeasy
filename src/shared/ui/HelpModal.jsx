@@ -48,6 +48,7 @@ export const HELP = {
     contactSending: "Sending…",
     contactSuccess: "Message sent — thank you!",
     contactError: "Failed to send. Please try again.",
+    restartOnboarding: "Restart setup wizard",
   },
   es: {
     title: "Ayuda y soporte",
@@ -64,6 +65,7 @@ export const HELP = {
     contactName: "Tu nombre", contactEmail: "Tu correo", contactMessage: "Tu mensaje…",
     contactSend: "Enviar mensaje", contactSending: "Enviando…",
     contactSuccess: "¡Mensaje enviado, gracias!", contactError: "Error al enviar. Inténtalo de nuevo.",
+    restartOnboarding: "Reiniciar asistente de configuración",
   },
   fr: {
     title: "Aide et support",
@@ -80,6 +82,7 @@ export const HELP = {
     contactName: "Votre nom", contactEmail: "Votre e-mail", contactMessage: "Votre message…",
     contactSend: "Envoyer", contactSending: "Envoi…",
     contactSuccess: "Message envoyé — merci !", contactError: "Échec de l'envoi. Réessayez.",
+    restartOnboarding: "Relancer l'assistant de configuration",
   },
   de: {
     title: "Hilfe & Support",
@@ -96,6 +99,7 @@ export const HELP = {
     contactName: "Dein Name", contactEmail: "Deine E-Mail", contactMessage: "Deine Nachricht…",
     contactSend: "Nachricht senden", contactSending: "Sende…",
     contactSuccess: "Nachricht gesendet – danke!", contactError: "Fehler beim Senden. Bitte erneut versuchen.",
+    restartOnboarding: "Einrichtungsassistenten neu starten",
   },
   it: {
     title: "Aiuto e supporto",
@@ -112,6 +116,7 @@ export const HELP = {
     contactName: "Il tuo nome", contactEmail: "La tua e-mail", contactMessage: "Il tuo messaggio…",
     contactSend: "Invia messaggio", contactSending: "Invio…",
     contactSuccess: "Messaggio inviato — grazie!", contactError: "Invio fallito. Riprova.",
+    restartOnboarding: "Riavvia procedura guidata",
   },
   pt: {
     title: "Ajuda e suporte",
@@ -128,6 +133,7 @@ export const HELP = {
     contactName: "Seu nome", contactEmail: "Seu e-mail", contactMessage: "Sua mensagem…",
     contactSend: "Enviar mensagem", contactSending: "Enviando…",
     contactSuccess: "Mensagem enviada — obrigado!", contactError: "Falha ao enviar. Tente novamente.",
+    restartOnboarding: "Reiniciar assistente de configuração",
   },
   ar: {
     title: "المساعدة والدعم",
@@ -144,6 +150,7 @@ export const HELP = {
     contactName: "اسمك", contactEmail: "بريدك الإلكتروني", contactMessage: "رسالتك…",
     contactSend: "إرسال الرسالة", contactSending: "جارٍ الإرسال…",
     contactSuccess: "تم إرسال الرسالة — شكرًا!", contactError: "فشل الإرسال. حاول مجددًا.",
+    restartOnboarding: "إعادة تشغيل معالج الإعداد",
   },
   zh: {
     title: "帮助与支持",
@@ -160,6 +167,7 @@ export const HELP = {
     contactName: "您的姓名", contactEmail: "您的邮箱", contactMessage: "您的留言…",
     contactSend: "发送消息", contactSending: "发送中…",
     contactSuccess: "消息已发送——谢谢！", contactError: "发送失败，请重试。",
+    restartOnboarding: "重新启动设置向导",
   },
   ja: {
     title: "ヘルプとサポート",
@@ -176,6 +184,7 @@ export const HELP = {
     contactName: "お名前", contactEmail: "メールアドレス", contactMessage: "メッセージ…",
     contactSend: "メッセージを送る", contactSending: "送信中…",
     contactSuccess: "送信しました。ありがとうございます！", contactError: "送信に失敗しました。再試行してください。",
+    restartOnboarding: "セットアップウィザードを再起動",
   },
   ko: {
     title: "도움말 및 지원",
@@ -192,6 +201,7 @@ export const HELP = {
     contactName: "이름", contactEmail: "이메일", contactMessage: "메시지…",
     contactSend: "메시지 보내기", contactSending: "전송 중…",
     contactSuccess: "메시지가 전송되었습니다. 감사합니다!", contactError: "전송 실패. 다시 시도하세요.",
+    restartOnboarding: "설정 마법사 다시 시작",
   },
 };
 
@@ -235,7 +245,7 @@ function Section({ heading, body }) {
 }
 
 // ── HelpModal ─────────────────────────────────────────────────────────────────
-export default memo(function HelpModal({ onClose, langCode = "en" }) {
+export default memo(function HelpModal({ onClose, langCode = "en", onResetOnboarding }) {
   const t = HELP[langCode] ?? HELP.en;
   const isRtl = langCode === "ar";
   const sheetRef = useRef(null);
@@ -339,6 +349,29 @@ export default memo(function HelpModal({ onClose, langCode = "en" }) {
           {t.sections.map((s, i) => (
             <Section key={i} heading={s.heading} body={s.body} />
           ))}
+
+          {/* Restart onboarding */}
+          {onResetOnboarding && (
+            <button
+              onClick={() => { onResetOnboarding(); onClose(); }}
+              style={{
+                width: "100%", marginTop: 8,
+                padding: "14px 16px",
+                borderRadius: "var(--radius-md)",
+                border: "1.5px solid var(--sep)",
+                background: "var(--surface)",
+                color: "var(--tint, #3B9B8F)",
+                fontSize: 15, fontWeight: 600,
+                fontFamily: "inherit",
+                cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                WebkitTapHighlightColor: "transparent",
+              }}
+            >
+              <span style={{ fontSize: 18 }}>🧭</span>
+              {t.restartOnboarding ?? "Restart setup wizard"}
+            </button>
+          )}
 
           {/* Version note */}
           <p style={{
