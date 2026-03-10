@@ -13,24 +13,104 @@ export const BOARD_TABS = [
   { id: "emergency", icon: "AlertTriangle", labelKey: "tabEmergency" },
 ];
 
+// ── Quick-phrase sub-categories (shown when tapping QUICK PHRASES on home) ──
+
+export const QUICK_SUBCATEGORIES = [
+  { id: "doctor",       emoji: "🩺", labelKey: "qcDoctor",       color: "#E03131", bg: "#FFF5F5" },
+  { id: "daily",        emoji: "☀️", labelKey: "qcDaily",        color: "#2F9E44", bg: "#EBFBEE" },
+  { id: "direction",    emoji: "🧭", labelKey: "qcDirection",    color: "#1971C2", bg: "#E7F5FF" },
+  { id: "conversation", emoji: "💬", labelKey: "qcConversation", color: "#E67700", bg: "#FFF9DB" },
+];
+
 // ── Default phrases per tab ────────────────────────────────────────────────
 
 export const DEFAULT_PHRASES = {
+  // ── Generic quick replies (kept for backward compat) ────────────────────
   replies: [
-    { id: "r1",  emoji: "👍", label: "yes",           translations: { en: "Yes", es: "Sí", fr: "Oui", de: "Ja", it: "Sì", pt: "Sim", ar: "نعم", zh: "是的", ja: "はい", ko: "네" } },
-    { id: "r2",  emoji: "👎", label: "no",            translations: { en: "No", es: "No", fr: "Non", de: "Nein", it: "No", pt: "Não", ar: "لا", zh: "不是", ja: "いいえ", ko: "아니요" } },
-    { id: "r3",  emoji: "🤔", label: "maybe",         translations: { en: "Maybe", es: "Quizás", fr: "Peut-être", de: "Vielleicht", it: "Forse", pt: "Talvez", ar: "ربما", zh: "也许", ja: "多分", ko: "아마도" } },
-    { id: "r4",  emoji: "👌", label: "ok",             translations: { en: "OK, got it", es: "Vale, entendido", fr: "D'accord, compris", de: "OK, verstanden", it: "OK, capito", pt: "OK, entendi", ar: "حسناً، فهمت", zh: "好的，明白了", ja: "わかりました", ko: "알겠습니다" } },
-    { id: "r5",  emoji: "🙏", label: "thanks",        translations: { en: "Thank you", es: "Gracias", fr: "Merci", de: "Danke", it: "Grazie", pt: "Obrigado", ar: "شكراً", zh: "谢谢", ja: "ありがとう", ko: "감사합니다" } },
-    { id: "r6",  emoji: "😊", label: "agree",         translations: { en: "I agree", es: "Estoy de acuerdo", fr: "Je suis d'accord", de: "Einverstanden", it: "Sono d'accordo", pt: "Concordo", ar: "أوافق", zh: "我同意", ja: "同意です", ko: "동의합니다" } },
-    { id: "r7",  emoji: "🤷", label: "dontKnow",      translations: { en: "I don't know", es: "No lo sé", fr: "Je ne sais pas", de: "Ich weiß nicht", it: "Non lo so", pt: "Não sei", ar: "لا أعرف", zh: "我不知道", ja: "わかりません", ko: "모르겠어요" } },
-    { id: "r8",  emoji: "🔄", label: "repeat",        translations: { en: "Can you repeat?", es: "¿Puedes repetir?", fr: "Tu peux répéter?", de: "Kannst du wiederholen?", it: "Puoi ripetere?", pt: "Pode repetir?", ar: "هل يمكنك التكرار؟", zh: "能再说一遍吗？", ja: "もう一度言ってください", ko: "다시 말해주세요" } },
-    { id: "r9",  emoji: "⏳", label: "wait",          translations: { en: "Give me a moment", es: "Dame un momento", fr: "Un instant", de: "Einen Moment bitte", it: "Un momento", pt: "Um momento", ar: "لحظة من فضلك", zh: "请稍等", ja: "少々お待ちください", ko: "잠시만요" } },
-    { id: "r10", emoji: "⛔", label: "stop",          translations: { en: "Please stop", es: "Por favor para", fr: "Arrête s'il te plaît", de: "Bitte aufhören", it: "Per favore fermati", pt: "Por favor pare", ar: "توقف من فضلك", zh: "请停下", ja: "やめてください", ko: "멈춰주세요" } },
-    { id: "r11", emoji: "😢", label: "sorry",         translations: { en: "I'm sorry", es: "Lo siento", fr: "Désolé", de: "Es tut mir leid", it: "Mi dispiace", pt: "Desculpe", ar: "أنا آسف", zh: "对不起", ja: "すみません", ko: "죄송합니다" } },
-    { id: "r12", emoji: "💬", label: "tellMore",      translations: { en: "Tell me more", es: "Cuéntame más", fr: "Dis-moi plus", de: "Erzähl mir mehr", it: "Dimmi di più", pt: "Conte-me mais", ar: "أخبرني المزيد", zh: "告诉我更多", ja: "もっと教えて", ko: "더 말해주세요" } },
-    { id: "r13", emoji: "📝", label: "writeIt",       translations: { en: "Can you write it down?", es: "¿Puedes escribirlo?", fr: "Tu peux l'écrire?", de: "Kannst du es aufschreiben?", it: "Puoi scriverlo?", pt: "Pode escrever?", ar: "هل يمكنك كتابة ذلك؟", zh: "能写下来吗？", ja: "書いてもらえますか？", ko: "적어줄 수 있나요?" } },
-    { id: "r14", emoji: "🐢", label: "slower",        translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus doucement", de: "Sprich bitte langsamer", it: "Parla più lentamente", pt: "Fale mais devagar", ar: "تكلم ببطء من فضلك", zh: "请说慢一点", ja: "ゆっくり話してください", ko: "천천히 말해주세요" } },
+    { id: "r1",  emoji: "👍", label: "yes",           translations: { en: "Yes", es: "Sí", fr: "Oui", it: "Sì", pt: "Sim" } },
+    { id: "r2",  emoji: "👎", label: "no",            translations: { en: "No", es: "No", fr: "Non", it: "No", pt: "Não" } },
+    { id: "r3",  emoji: "🤔", label: "maybe",         translations: { en: "Maybe", es: "Quizás", fr: "Peut-être", it: "Forse", pt: "Talvez" } },
+    { id: "r4",  emoji: "👌", label: "ok",             translations: { en: "OK, got it", es: "Vale, entendido", fr: "D'accord, compris", it: "OK, capito", pt: "OK, entendi" } },
+    { id: "r5",  emoji: "🙏", label: "thanks",        translations: { en: "Thank you", es: "Gracias", fr: "Merci", it: "Grazie", pt: "Obrigado" } },
+    { id: "r6",  emoji: "😊", label: "agree",         translations: { en: "I agree", es: "Estoy de acuerdo", fr: "Je suis d'accord", it: "Sono d'accordo", pt: "Concordo" } },
+    { id: "r7",  emoji: "🤷", label: "dontKnow",      translations: { en: "I don't know", es: "No lo sé", fr: "Je ne sais pas", it: "Non lo so", pt: "Não sei" } },
+    { id: "r8",  emoji: "🔄", label: "repeat",        translations: { en: "Can you repeat?", es: "¿Puedes repetir?", fr: "Tu peux répéter?", it: "Puoi ripetere?", pt: "Pode repetir?" } },
+    { id: "r9",  emoji: "⏳", label: "wait",          translations: { en: "Give me a moment", es: "Dame un momento", fr: "Un instant", it: "Un momento", pt: "Um momento" } },
+    { id: "r10", emoji: "⛔", label: "stop",          translations: { en: "Please stop", es: "Por favor para", fr: "Arrête s'il te plaît", it: "Per favore fermati", pt: "Por favor pare" } },
+    { id: "r11", emoji: "😢", label: "sorry",         translations: { en: "I'm sorry", es: "Lo siento", fr: "Désolé", it: "Mi dispiace", pt: "Desculpe" } },
+    { id: "r12", emoji: "💬", label: "tellMore",      translations: { en: "Tell me more", es: "Cuéntame más", fr: "Dis-moi plus", it: "Dimmi di più", pt: "Conte-me mais" } },
+    { id: "r13", emoji: "📝", label: "writeIt",       translations: { en: "Can you write it down?", es: "¿Puedes escribirlo?", fr: "Tu peux l'écrire?", it: "Puoi scriverlo?", pt: "Pode escrever?" } },
+    { id: "r14", emoji: "🐢", label: "slower",        translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus doucement", it: "Parla più lentamente", pt: "Fale mais devagar" } },
+  ],
+
+  // ── Doctor / Medical ────────────────────────────────────────────────────
+  doctor: [
+    { id: "d1",  emoji: "🩺", label: "seeDoctor",     translations: { en: "I need to see a doctor", es: "Necesito ver a un doctor", fr: "J'ai besoin de voir un médecin", it: "Ho bisogno di vedere un dottore", pt: "Preciso ver um médico" } },
+    { id: "d2",  emoji: "🩹", label: "pain",          translations: { en: "I'm in pain", es: "Tengo dolor", fr: "J'ai mal", it: "Ho dolore", pt: "Estou com dor" } },
+    { id: "d3",  emoji: "🤕", label: "headHurts",     translations: { en: "My head hurts", es: "Me duele la cabeza", fr: "J'ai mal à la tête", it: "Mi fa male la testa", pt: "Minha cabeça dói" } },
+    { id: "d4",  emoji: "🤢", label: "stomachHurts",  translations: { en: "My stomach hurts", es: "Me duele el estómago", fr: "J'ai mal au ventre", it: "Mi fa male lo stomaco", pt: "Meu estômago dói" } },
+    { id: "d5",  emoji: "😮‍💨", label: "breathe",       translations: { en: "I can't breathe well", es: "No puedo respirar bien", fr: "J'ai du mal à respirer", it: "Non respiro bene", pt: "Não consigo respirar bem" } },
+    { id: "d6",  emoji: "💊", label: "medication",    translations: { en: "I need my medication", es: "Necesito mi medicación", fr: "J'ai besoin de mes médicaments", it: "Ho bisogno della mia medicina", pt: "Preciso da minha medicação" } },
+    { id: "d7",  emoji: "💉", label: "allergic",      translations: { en: "I'm allergic", es: "Soy alérgico", fr: "Je suis allergique", it: "Sono allergico", pt: "Sou alérgico" } },
+    { id: "d8",  emoji: "🤒", label: "fever",         translations: { en: "I have a fever", es: "Tengo fiebre", fr: "J'ai de la fièvre", it: "Ho la febbre", pt: "Estou com febre" } },
+    { id: "d9",  emoji: "🤮", label: "nausea",        translations: { en: "I feel nauseous", es: "Tengo náuseas", fr: "J'ai la nausée", it: "Ho la nausea", pt: "Estou com náusea" } },
+    { id: "d10", emoji: "😵‍💫", label: "dizzy",         translations: { en: "I feel dizzy", es: "Estoy mareado", fr: "J'ai des vertiges", it: "Mi gira la testa", pt: "Estou tonto" } },
+    { id: "d11", emoji: "📋", label: "medCard",       translations: { en: "Please read my medical card", es: "Lee mi tarjeta médica", fr: "Lisez ma carte médicale", it: "Leggete la mia tessera sanitaria", pt: "Leia meu cartão médico" } },
+    { id: "d12", emoji: "🗓️", label: "appointment",   translations: { en: "I have an appointment", es: "Tengo una cita", fr: "J'ai un rendez-vous", it: "Ho un appuntamento", pt: "Tenho uma consulta" } },
+    { id: "d13", emoji: "💤", label: "cantSleep",     translations: { en: "I can't sleep", es: "No puedo dormir", fr: "Je n'arrive pas à dormir", it: "Non riesco a dormire", pt: "Não consigo dormir" } },
+    { id: "d14", emoji: "🦷", label: "toothache",     translations: { en: "I have a toothache", es: "Me duele un diente", fr: "J'ai mal aux dents", it: "Ho mal di denti", pt: "Estou com dor de dente" } },
+  ],
+
+  // ── Daily / Routine ─────────────────────────────────────────────────────
+  daily: [
+    { id: "dy1",  emoji: "🌅", label: "goodMorning",  translations: { en: "Good morning", es: "Buenos días", fr: "Bonjour", it: "Buongiorno", pt: "Bom dia" } },
+    { id: "dy2",  emoji: "🌙", label: "goodNight",    translations: { en: "Good night", es: "Buenas noches", fr: "Bonne nuit", it: "Buonanotte", pt: "Boa noite" } },
+    { id: "dy3",  emoji: "🍽️", label: "hungry",       translations: { en: "I'm hungry", es: "Tengo hambre", fr: "J'ai faim", it: "Ho fame", pt: "Estou com fome" } },
+    { id: "dy4",  emoji: "💧", label: "thirsty",      translations: { en: "I'm thirsty", es: "Tengo sed", fr: "J'ai soif", it: "Ho sete", pt: "Estou com sede" } },
+    { id: "dy5",  emoji: "🚻", label: "bathroom",     translations: { en: "I need the bathroom", es: "Necesito el baño", fr: "J'ai besoin d'aller aux toilettes", it: "Ho bisogno del bagno", pt: "Preciso ir ao banheiro" } },
+    { id: "dy6",  emoji: "🍳", label: "breakfast",    translations: { en: "Time for breakfast", es: "Hora de desayunar", fr: "C'est l'heure du petit-déjeuner", it: "È ora di colazione", pt: "Hora do café da manhã" } },
+    { id: "dy7",  emoji: "🍝", label: "lunch",        translations: { en: "Time for lunch", es: "Hora de almorzar", fr: "C'est l'heure du déjeuner", it: "È ora di pranzo", pt: "Hora do almoço" } },
+    { id: "dy8",  emoji: "🍽️", label: "dinner",       translations: { en: "Time for dinner", es: "Hora de cenar", fr: "C'est l'heure du dîner", it: "È ora di cena", pt: "Hora do jantar" } },
+    { id: "dy9",  emoji: "😴", label: "tired",        translations: { en: "I'm tired", es: "Estoy cansado", fr: "Je suis fatigué", it: "Sono stanco", pt: "Estou cansado" } },
+    { id: "dy10", emoji: "✅", label: "ready",        translations: { en: "I'm ready", es: "Estoy listo", fr: "Je suis prêt", it: "Sono pronto", pt: "Estou pronto" } },
+    { id: "dy11", emoji: "🚿", label: "shower",       translations: { en: "I want to take a shower", es: "Quiero ducharme", fr: "Je veux prendre une douche", it: "Voglio fare la doccia", pt: "Quero tomar banho" } },
+    { id: "dy12", emoji: "👕", label: "getChanged",   translations: { en: "I need to get changed", es: "Necesito cambiarme", fr: "Je dois me changer", it: "Devo cambiarmi", pt: "Preciso me trocar" } },
+    { id: "dy13", emoji: "📺", label: "watchTV",      translations: { en: "I want to watch TV", es: "Quiero ver la tele", fr: "Je veux regarder la télé", it: "Voglio guardare la TV", pt: "Quero ver TV" } },
+    { id: "dy14", emoji: "🚶", label: "goOut",        translations: { en: "I want to go outside", es: "Quiero salir", fr: "Je veux sortir", it: "Voglio uscire", pt: "Quero sair" } },
+  ],
+
+  // ── Direction / Navigation ──────────────────────────────────────────────
+  direction: [
+    { id: "dr1",  emoji: "📍", label: "whereAreWe",   translations: { en: "Where are we?", es: "¿Dónde estamos?", fr: "Où sommes-nous?", it: "Dove siamo?", pt: "Onde estamos?" } },
+    { id: "dr2",  emoji: "⬅️", label: "turnLeft",     translations: { en: "Turn left", es: "Gira a la izquierda", fr: "Tournez à gauche", it: "Gira a sinistra", pt: "Vire à esquerda" } },
+    { id: "dr3",  emoji: "➡️", label: "turnRight",    translations: { en: "Turn right", es: "Gira a la derecha", fr: "Tournez à droite", it: "Gira a destra", pt: "Vire à direita" } },
+    { id: "dr4",  emoji: "⬆️", label: "goStraight",   translations: { en: "Go straight", es: "Sigue recto", fr: "Allez tout droit", it: "Vai dritto", pt: "Siga em frente" } },
+    { id: "dr5",  emoji: "🛑", label: "stopHere",     translations: { en: "Stop here", es: "Para aquí", fr: "Arrêtez-vous ici", it: "Fermati qui", pt: "Pare aqui" } },
+    { id: "dr6",  emoji: "😰", label: "imLost",       translations: { en: "I'm lost", es: "Estoy perdido", fr: "Je suis perdu", it: "Mi sono perso", pt: "Estou perdido" } },
+    { id: "dr7",  emoji: "🏠", label: "takeHome",     translations: { en: "Take me home", es: "Llévame a casa", fr: "Ramenez-moi à la maison", it: "Portami a casa", pt: "Me leve para casa" } },
+    { id: "dr8",  emoji: "📏", label: "howFar",       translations: { en: "How far is it?", es: "¿A qué distancia está?", fr: "C'est loin?", it: "Quanto è lontano?", pt: "Quão longe fica?" } },
+    { id: "dr9",  emoji: "🚕", label: "needTaxi",     translations: { en: "I need a taxi", es: "Necesito un taxi", fr: "J'ai besoin d'un taxi", it: "Ho bisogno di un taxi", pt: "Preciso de um táxi" } },
+    { id: "dr10", emoji: "🚻", label: "whereBathroom",translations: { en: "Where is the bathroom?", es: "¿Dónde está el baño?", fr: "Où sont les toilettes?", it: "Dov'è il bagno?", pt: "Onde fica o banheiro?" } },
+    { id: "dr11", emoji: "🔙", label: "goBack",       translations: { en: "Let's go back", es: "Volvamos", fr: "Revenons en arrière", it: "Torniamo indietro", pt: "Vamos voltar" } },
+    { id: "dr12", emoji: "🚌", label: "takeBus",      translations: { en: "Which bus do I take?", es: "¿Qué autobús tomo?", fr: "Quel bus je prends?", it: "Quale autobus prendo?", pt: "Qual ônibus eu pego?" } },
+  ],
+
+  // ── Conversation / Social ───────────────────────────────────────────────
+  conversation: [
+    { id: "cv1",  emoji: "👋", label: "howAreYou",    translations: { en: "How are you?", es: "¿Cómo estás?", fr: "Comment allez-vous?", it: "Come stai?", pt: "Como vai?" } },
+    { id: "cv2",  emoji: "😊", label: "imFine",       translations: { en: "I'm fine, thank you", es: "Estoy bien, gracias", fr: "Je vais bien, merci", it: "Sto bene, grazie", pt: "Estou bem, obrigado" } },
+    { id: "cv3",  emoji: "🤝", label: "niceToMeet",   translations: { en: "Nice to meet you", es: "Mucho gusto", fr: "Enchanté", it: "Piacere di conoscerti", pt: "Prazer em conhecer" } },
+    { id: "cv4",  emoji: "👤", label: "yourName",     translations: { en: "What's your name?", es: "¿Cómo te llamas?", fr: "Comment tu t'appelles?", it: "Come ti chiami?", pt: "Qual é o seu nome?" } },
+    { id: "cv5",  emoji: "💬", label: "tellMore",     translations: { en: "Tell me more", es: "Cuéntame más", fr: "Dis-moi plus", it: "Dimmi di più", pt: "Conte-me mais" } },
+    { id: "cv6",  emoji: "😂", label: "thatsFunny",   translations: { en: "That's funny!", es: "¡Eso es gracioso!", fr: "C'est drôle!", it: "È divertente!", pt: "Isso é engraçado!" } },
+    { id: "cv7",  emoji: "😊", label: "agree",        translations: { en: "I agree", es: "Estoy de acuerdo", fr: "Je suis d'accord", it: "Sono d'accordo", pt: "Concordo" } },
+    { id: "cv8",  emoji: "🙅", label: "disagree",     translations: { en: "I don't agree", es: "No estoy de acuerdo", fr: "Je ne suis pas d'accord", it: "Non sono d'accordo", pt: "Não concordo" } },
+    { id: "cv9",  emoji: "🐢", label: "speakSlower",  translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus doucement", it: "Parla più lentamente", pt: "Fale mais devagar" } },
+    { id: "cv10", emoji: "🤔", label: "dontUnderstand",translations: { en: "I don't understand", es: "No entiendo", fr: "Je ne comprends pas", it: "Non capisco", pt: "Não entendo" } },
+    { id: "cv11", emoji: "🔄", label: "repeat",       translations: { en: "Can you repeat?", es: "¿Puedes repetir?", fr: "Tu peux répéter?", it: "Puoi ripetere?", pt: "Pode repetir?" } },
+    { id: "cv12", emoji: "🕐", label: "talkLater",    translations: { en: "Let's talk later", es: "Hablemos luego", fr: "Parlons plus tard", it: "Parliamo dopo", pt: "Vamos conversar depois" } },
+    { id: "cv13", emoji: "😢", label: "sorry",        translations: { en: "I'm sorry", es: "Lo siento", fr: "Désolé", it: "Mi dispiace", pt: "Desculpe" } },
+    { id: "cv14", emoji: "👋", label: "goodbye",      translations: { en: "Goodbye, see you soon", es: "Adiós, nos vemos", fr: "Au revoir, à bientôt", it: "Arrivederci, a presto", pt: "Tchau, até logo" } },
   ],
 
   questions: [

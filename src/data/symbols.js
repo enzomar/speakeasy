@@ -8,15 +8,18 @@
  */
 
 export const CATEGORIES = [
-  { id: "all",      label: "All",      color: "#4F6EF7", bg: "#EEF2FF" },
-  { id: "social",   label: "Social",   color: "#06B6D4", bg: "#ECFEFF" },
-  { id: "people",   label: "People",   color: "#4F6EF7", bg: "#EEF2FF" },
-  { id: "feelings", label: "Feelings", color: "#F97316", bg: "#FFF7ED" },
-  { id: "actions",  label: "Actions",  color: "#16A34A", bg: "#F0FDF4" },
-  { id: "food",     label: "Food",     color: "#EC4899", bg: "#FDF2F8" },
-  { id: "places",   label: "Places",   color: "#8B5CF6", bg: "#FAF5FF" },
-  { id: "things",   label: "Things",   color: "#F59E0B", bg: "#FFFBEB" },
-  { id: "describe", label: "Describe", color: "#64748B", bg: "#F8FAFC" },
+  { id: "all",         label: "All",         color: "#4F6EF7", bg: "#EEF2FF" },
+  { id: "social",      label: "Social",      color: "#06B6D4", bg: "#ECFEFF" },
+  { id: "people",      label: "People",      color: "#4F6EF7", bg: "#EEF2FF" },
+  { id: "feelings",    label: "Feelings",    color: "#F97316", bg: "#FFF7ED" },
+  { id: "actions",     label: "Actions",     color: "#16A34A", bg: "#F0FDF4" },
+  { id: "food",        label: "Food",        color: "#EC4899", bg: "#FDF2F8" },
+  { id: "needs",       label: "Needs",       color: "#2F9E44", bg: "#EBFBEE" },
+  { id: "places",      label: "Places",      color: "#8B5CF6", bg: "#FAF5FF" },
+  { id: "things",      label: "Things",      color: "#F59E0B", bg: "#FFFBEB" },
+  { id: "questions",   label: "Questions",   color: "#5C940D", bg: "#F4FCE3" },
+  { id: "descriptors", label: "Descriptors", color: "#862E9C", bg: "#F8F0FC" },
+  { id: "describe",    label: "Describe",    color: "#64748B", bg: "#F8FAFC" },
 ];
 
 export const CATEGORY_MAP = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));

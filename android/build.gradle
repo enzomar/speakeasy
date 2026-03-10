@@ -24,6 +24,18 @@ allprojects {
     }
 }
 
+subprojects {
+    configurations.configureEach {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'org.jetbrains.kotlin' &&
+                ['kotlin-stdlib', 'kotlin-stdlib-common', 'kotlin-stdlib-jdk7', 'kotlin-stdlib-jdk8'].contains(details.requested.name)) {
+                details.useVersion rootProject.ext.kotlinVersion
+                details.because('Kotlin 1.8+ merges jdk7/jdk8 stdlib classes into kotlin-stdlib, so all stdlib artifacts must stay aligned')
+            }
+        }
+    }
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
-import ErrorBoundary from './components/ErrorBoundary.jsx'
+import App from './app/App.jsx'
+import ErrorBoundary from './shared/ui/ErrorBoundary.jsx'
 
 // Ensure the viewport meta is set correctly for Capacitor on all platforms
 if (!document.querySelector('meta[name="viewport"]')) {

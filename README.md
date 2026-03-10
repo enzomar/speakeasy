@@ -2,7 +2,7 @@
 
 **An Augmentative and Alternative Communication (AAC) app with on-device AI, built for people who need a voice.**
 
-SpeakEasy runs entirely in the browser or as a native iOS/Android app — no server, no cloud,  account is required. Tap symbols to build sentences, and the app speaks them aloud using high-quality text-to-speech. An on-device language model learns your patterns and suggests what you might say next.
+SpeakEasy runs entirely in the browser or as a native iOS/Android app — no server, no cloud, no account required. Tap symbols to build sentences, and the app speaks them aloud using high-quality text-to-speech. An on-device language model provides contextual reply suggestions when someone speaks to you.
 
 ---
 
@@ -12,13 +12,30 @@ SpeakEasy runs entirely in the browser or as a native iOS/Android app — no ser
 - **100+ built-in symbols** organised across 8 categories: Social, People, Feelings, Actions, Food, Places, Things, and Descriptors
 - Each symbol shows an emoji and a localised label
 - Tap symbols to compose messages; freely mix tapping and typing
-- Category filter with collapsible panel for quick navigation
+- Category grid with drill-down navigation and quick-phrase / emergency tabs
 
-### On-Device AI Prediction
-- **WebLLM** runs a 4-bit quantised [Qwen2.5-0.5B](https://huggingface.co/Qwen) model directly in the browser via WebGPU
-- **RAG Memory** powered by [MiniLM-L6-v2](https://huggingface.co/Xenova/all-MiniLM-L6-v2) (~23 MB) — embeds your past utterances into vectors stored in `localStorage` and retrieves the most relevant context to improve predictions
-- **N-gram fallback** — bigram/trigram prediction engine provides instant suggestions while the LLM loads
+### Intelligent Prediction Pipeline
+SpeakEasy uses a **three-tier prediction system**, all running 100% on-device:
+
+| Tier | Trigger | Latency | What it does |
+|------|---------|---------|-------------|
+| **Heuristic templates** | Every symbol tap | 0 ms | POS-aware sentence candidates from per-language templates |
+| **Gender agreement fixer** | Post-heuristic | 0 ms | Rule-based suffix correction (IT/FR/ES) — no LLM needed |
+| **N-gram engine** | Background | < 1 ms | Bigram/trigram predictions learned from your speech history |
+| **On-device LLM** | Listen Mode only | 1-3 s | Contextual reply generation when someone speaks to you |
+
+The LLM (Qwen3 0.6B–1.7B via WebGPU) is **reserved for Mode B** — generating contextual replies to overheard speech. Simple symbol-tap predictions use instant heuristics, making the app responsive even on low-end devices.
+
+### RAG Memory
+- Powered by [MiniLM-L6-v2](https://huggingface.co/Xenova/all-MiniLM-L6-v2) (~23 MB) — embeds your past utterances into 384-d vectors stored in `localStorage`
+- Retrieves the most relevant context to improve LLM reply suggestions
 - All inference runs 100% offline with zero data leaving the device
+
+### Listen Mode (Two-Stage)
+- **Stage 1 – Wake word detection**: Mic open with energy VAD → short Whisper transcription → keyword match
+- **Stage 2 – Full transcription**: Records full utterance → Whisper STT → LLM generates 5 contextual replies
+- User can **tap a reply** (speaks it via TTS), **type their own reply** using the board, or **listen again**
+- Runs entirely on-device using [@xenova/transformers](https://github.com/xenova/transformers.js) (Whisper ONNX WASM)
 
 ### Multilingual Support
 10 languages with full UI translation, localised symbol labels, and per-language TTS voices:
@@ -36,20 +53,21 @@ SpeakEasy runs entirely in the browser or as a native iOS/Android app — no ser
 | 🇯🇵 日本語 | `ja` | `ja-JP` |
 | 🇰🇷 한국어 | `ko` | `ko-KR` |
 
-Separate **typing language** and **TTS language** settings so you can type in one language and hear output in another.
+Separate **UI language**, **typing language**, **TTS language**, and **listening language** settings for bilingual users.
 
 ### Text-to-Speech
 - **Native TTS** on iOS/Android via `@capacitor-community/text-to-speech`
 - **Web Speech API** on desktop/mobile browsers with smart voice selection — automatically prefers premium, enhanced, natural, and neural voices
 - Adjustable **speed** and **pitch**, selectable **voice name**, and a **Try Voice** button to preview settings
 - Haptic feedback on native platforms when speaking
+- Gender-aware voice preferences
 
 ### Accessibility & UX
 - **Left/right-handed mode** — flips action button layout for comfortable one-handed use
 - iOS-inspired native design: translucent blur headers, system font stack, smooth animations
-- Mobile-first responsive layout — full-width, no artificial constraints
+- Mobile-first responsive layout — full-width, optimised for one-thumb use
+- 60+ avatar emoji options including skin-tone variants, roles, animals, and accessibility symbols
 - History panel with phrase frequency tracking, export, and one-tap replay
-- User profile with customisable display name and avatar emoji
 
 ---
 
@@ -59,11 +77,12 @@ Separate **typing language** and **TTS language** settings so you can type in on
 |-------|-----------|
 | Framework | [React 19](https://react.dev) + [Vite 7](https://vite.dev) |
 | Native | [Capacitor 8](https://capacitorjs.com) (iOS + Android) |
-| AI / LLM | [@mlc-ai/web-llm](https://github.com/AlibabaGroup/MLC-LLM) (WebGPU) |
-| Embeddings | [@xenova/transformers](https://github.com/xenova/transformers.js) (MiniLM-L6-v2) |
+| AI / LLM | [@mlc-ai/web-llm](https://github.com/AlibabaGroup/MLC-LLM) (Qwen3, 4-bit, WebGPU) |
+| STT | [@xenova/transformers](https://github.com/xenova/transformers.js) (Whisper ONNX WASM) |
+| Embeddings | [@xenova/transformers](https://github.com/xenova/transformers.js) (MiniLM-L6-v2, 384-d) |
 | Icons | [Lucide React](https://lucide.dev) |
 | TTS | Web Speech API / Capacitor TTS plugin |
-| Storage | `localStorage` (settings, history, RAG vectors) |
+| Storage | `localStorage` (settings, history, RAG vectors, n-gram model) |
 
 ---
 
@@ -71,35 +90,50 @@ Separate **typing language** and **TTS language** settings so you can type in on
 
 ```
 speakeasy/
-├── public/                     # Static assets
+├── public/                          # Static assets (logo, icons)
 ├── src/
-│   ├── main.jsx                # Entry point
-│   ├── App.jsx                 # Root component, state management
-│   ├── index.css               # Design system (CSS variables, animations)
-│   ├── App.css                 # App-specific styles
-│   ├── components/
-│   │   ├── CategoryFilter.jsx  # Collapsible category selector
-│   │   ├── HistoryPanel.jsx    # Past utterances list
-│   │   ├── MessageBar.jsx      # Sentence builder + action buttons
-│   │   ├── PredictionBar.jsx   # AI-powered next-word suggestions
-│   │   ├── ProfilePanel.jsx    # Settings & preferences
-│   │   ├── SymbolBoard.jsx     # Grid of tappable symbols
-│   │   └── SymbolButton.jsx    # Individual symbol tile
+│   ├── main.jsx                     # React root mount + ErrorBoundary
+│   ├── index.css                    # Design system (CSS variables, light/dark)
+│   ├── app/
+│   │   ├── App.jsx                  # Root orchestrator (~690 lines)
+│   │   ├── App.css                  # App-specific styles
+│   │   └── native.js                # Capacitor bootstrap + haptic()
+│   ├── features/
+│   │   ├── board/                   # CategoryGrid, SymbolPicker, PhraseGrid,
+│   │   │                            #   SmartKeyboard, IntentBar, SymbolButton, etc.
+│   │   ├── composer/                # MessageBar (sentence builder + speak)
+│   │   ├── prediction/              # useAIPrediction, usePrediction,
+│   │   │                            #   predictionEngine, ragMemory
+│   │   ├── listen/                  # useListenMode, useWhisper, ListenOverlay,
+│   │   │                            #   audioCapture, wakeWordDetector
+│   │   ├── history/                 # HistoryPanel, useStorage
+│   │   ├── settings/                # SettingsPanel, AIModelModal, useSettings
+│   │   ├── profile/                 # ProfilePanel
+│   │   └── symbols/                 # SymbolsPage, useCustomSymbols
+│   ├── i18n/
+│   │   ├── languages.js             # LANGUAGES, LANG_MAP, ACTIVATION_KEYWORDS
+│   │   ├── translations.js          # Symbol / category / hierarchy translations
+│   │   ├── ui-strings.js            # UI_STRINGS + getUI() for 6 languages
+│   │   └── useLanguage.js           # 4-dimension language state hook
 │   ├── data/
-│   │   ├── languages.js        # Language definitions, i18n strings
-│   │   └── symbols.js          # Symbol/category definitions, seed phrases
-│   ├── hooks/
-│   │   ├── useAIPrediction.js  # WebLLM + RAG prediction hook
-│   │   ├── useLanguage.js      # Language state management
-│   │   ├── usePrediction.js    # Combined prediction (AI + n-gram)
-│   │   ├── useStorage.js       # History persistence
-│   │   └── useTTS.js           # Text-to-speech (native + web)
-│   └── utils/
-│       ├── platform.js         # Capacitor/web platform detection
-│       ├── predictionEngine.js # N-gram bigram/trigram engine
-│       └── ragMemory.js        # Vector store + cosine similarity search
-├── capacitor.config.ts         # Capacitor configuration
-├── vite.config.js              # Vite build configuration
+│   │   ├── symbols.js               # AAC symbol definitions (9 categories)
+│   │   ├── hierarchy.js             # Category → subcategory → symbol tree
+│   │   ├── boardTabs.js             # Board tabs + default phrases
+│   │   ├── wordFrequency.js         # Word frequency data
+│   │   └── posLookup.js             # POS lookup table
+│   ├── shared/
+│   │   ├── platform.js              # Capacitor platform detection
+│   │   ├── ui/                      # ConfirmSheet, HelpModal, settingsUI,
+│   │   │                            #   ErrorBoundary
+│   │   └── hooks/                   # useFavorites, useQuickPhrases, useTTS
+│   └── prompts/
+│       └── intentPrompt.js          # Heuristic templates, gender fixer,
+│                                    #   LLM prompt builders, parsers
+├── docs/
+│   └── ARCHITECTURE.md              # Detailed architecture document
+├── claude.md                        # AI assistant rules for this project
+├── capacitor.config.json            # Capacitor configuration
+├── vite.config.js                   # Vite build config (COOP/COEP, WASM)
 └── package.json
 ```
 
@@ -115,14 +149,9 @@ speakeasy/
 ### Install & Run (Web)
 
 ```bash
-# Clone the repository
 git clone https://github.com/your-username/speakeasy.git
 cd speakeasy
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
@@ -140,57 +169,43 @@ npm run preview
 Requires [Xcode](https://developer.apple.com/xcode/) (iOS) or [Android Studio](https://developer.android.com/studio) (Android).
 
 ```bash
-# Build + sync to native platforms
-npm run cap:sync
-
-# Open in Xcode
-npm run cap:ios
-
-# Open in Android Studio
-npm run cap:android
-
-# Build + run on connected device
-npm run cap:run:ios
-npm run cap:run:android
+npm run cap:sync          # Build + sync to native platforms
+npm run cap:ios           # Build, sync, open in Xcode
+npm run cap:android       # Build, sync, open in Android Studio
+npm run cap:run:ios       # Build, sync, run on iOS device
+npm run cap:run:android   # Build, sync, run on Android device
 ```
-
----
-
-## Configuration
-
-All user preferences are stored in `localStorage` and can be changed from the **Profile** panel within the app:
-
-| Setting | Description | Default |
-|---------|-------------|---------|
-| Display name | Shown in the profile header | — |
-| Avatar emoji | Profile icon | 😊 |
-| Typing language | Language for symbol labels and UI | English |
-| TTS language | Voice output language | English |
-| Voice name | Specific TTS voice | Auto (best available) |
-| Voice speed | Speech rate (0.5–2×) | 1.0 |
-| Voice pitch | Voice pitch (0–2) | 1.0 |
-| AI model | `fast` (0.5B) or `default` (1.7B) | fast |
-| Handedness | Left or right-handed layout | Right |
 
 ---
 
 ## AI Models
 
-SpeakEasy ships with two model options:
+SpeakEasy ships with four model options (used for **Mode B — Listen Mode replies only**):
 
-| Model | Size | VRAM | Speed | Compatibility |
-|-------|------|------|-------|---------------|
-| **Qwen2.5-0.5B** (fast) | ~300 MB | ~400 MB | ~25 tok/s | Most WebGPU devices |
-| **Qwen3-1.7B** (default) | ~900 MB | ~1 GB | ~15 tok/s | Desktop + high-end mobile |
+| Model | Size | VRAM | Speed | Use case |
+|-------|------|------|-------|----------|
+| **Qwen3 0.6B** (fast) | ~400 MB | ~500 MB | ~25 tok/s | Most WebGPU devices |
+| **Qwen3 1.7B** (quality) | ~900 MB | ~1 GB | ~15 tok/s | Desktop + high-end mobile |
+| **Gemma 3 1B** | ~600 MB | ~700 MB | ~20 tok/s | Balanced speed & quality |
+| **Qwen2.5 0.5B** | ~300 MB | ~400 MB | ~30 tok/s | Smallest + fastest download |
 
-The model is downloaded once and cached by the browser. Switch between models in **Profile → AI Engine**.
+The model is downloaded once and cached by the browser. Switch between models in **Settings → AI Engine**.
 
 ### How Prediction Works
 
-1. **N-gram engine** provides instant bigram/trigram suggestions from your history (< 1 ms)
-2. **RAG memory** retrieves the 5 most similar past utterances via cosine similarity over MiniLM embeddings
-3. **LLM** generates context-aware next-word/phrase predictions using the RAG context
-4. Results are merged and ranked — n-gram fills in while the LLM processes
+```
+Symbol tap ──► Heuristic templates (0ms) ──► Gender fixer (0ms) ──► Display
+                                                                       │
+Listen Mode ──► Whisper STT ──► LLM Mode B (1-3s) ──► Reply pills ────┘
+                                                                       │
+Background ────► N-gram engine learns from spoken phrases ─────────────┘
+```
+
+1. **Heuristic templates** generate 5 POS-aware sentences instantly per symbol tap
+2. **Gender agreement fixer** applies rule-based suffix correction (IT: `-ato → -ata`, FR: `-é → -ée`, ES: `-ado → -ada`)
+3. **N-gram engine** provides bigram/trigram suggestions from your history (< 1 ms)
+4. **LLM** generates contextual replies only in Listen Mode when someone speaks to you
+5. **RAG memory** retrieves your most similar past utterances to improve LLM context
 
 ---
 
@@ -199,7 +214,7 @@ The model is downloaded once and cached by the browser. Switch between models in
 - **Zero cloud dependency** — all data stays on your device
 - No accounts, no analytics, no telemetry
 - AI models run locally via WebGPU/WASM
-- History and RAG vectors stored in `localStorage` — clear them anytime from **Profile → Data & Privacy**
+- History and RAG vectors stored in `localStorage` — clear them anytime from **Settings → Data & Privacy**
 - Export your phrase history as a file at any time
 
 ---
@@ -229,7 +244,7 @@ The model is downloaded once and cached by the browser. Switch between models in
 | WebGPU (AI) | ✅ | ✅ | ❌ | ✅ (Android) |
 | WASM fallback | ✅ | ✅ | ✅ | ✅ |
 
-> **Note:** On browsers without WebGPU, the AI prediction gracefully degrades to n-gram suggestions only. The core AAC functionality works everywhere.
+> **Note:** On browsers without WebGPU, the AI prediction gracefully degrades to heuristic + n-gram suggestions only. The core AAC functionality works everywhere.
 
 ---
 
