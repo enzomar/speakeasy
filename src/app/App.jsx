@@ -41,7 +41,8 @@ import AIModelModal      from "../features/settings/AIModelModal";
 import InstallPrompt     from "../shared/ui/InstallPrompt";
 import Onboarding, { ONBOARDING_KEY } from "../features/onboarding/Onboarding";
 import SmartKeyboard     from "../features/board/SmartKeyboard";
-import CoreWordBar from "../features/board/CoreWordBar";
+import VocabToolbar, { VOCAB_DATA, VOCAB_TABS } from "../features/board/VocabToolbar";
+import VocabGrid from "../features/board/VocabGrid";
 import FavoritesSheet    from "../features/board/FavoritesSheet";
 
 // i18n
@@ -211,6 +212,7 @@ export default function App() {
   const [showHelp, setShowHelp] = useState(false);
   const [showSignGuide, setShowSignGuide] = useState(false);
   const [boardMode, setBoardMode] = useState("symbols");              // "symbols" | "keyboard"
+  const [vocabTab, setVocabTab] = useState("grid");                    // "grid" | vocab category id
   const [quickSubTab, setQuickSubTab] = useState(null);               // null = show sub-cat grid, string = phrase tab id
   const [lastSpoken, setLastSpoken] = useState("");                     // last spoken sentence for repeat
   const [spokenToast, setSpokenToast] = useState("");                   // brief visual confirmation after speaking
@@ -364,6 +366,12 @@ export default function App() {
     haptic();
     setWords(prev => [...prev, { text: label, __core: true }]);
   }, []);
+
+  /** Vocab grid tap — speaks the tapped vocabulary word via TTS */
+  const handleVocabSpeak = useCallback((word) => {
+    haptic();
+    speak(word, { lang: ttsLang.ttsLang, rate: voiceSpeed, pitch: voicePitch, voiceName });
+  }, [speak, ttsLang.ttsLang, voiceSpeed, voicePitch, voiceName]);
 
 
 
@@ -691,9 +699,10 @@ export default function App() {
               onEmotionChange={setEmotion}
               detectedEmotion={detectedEmotion}
             />
-            <CoreWordBar
+            <VocabToolbar
+              activeTab={vocabTab}
+              onTabChange={(id) => { setVocabTab(id); if (id !== "grid") setActiveCategory(null); }}
               langCode={typeLangCode}
-              onTapWord={handleCoreWordTap}
             />
             </>
           )}
@@ -847,6 +856,13 @@ export default function App() {
                   ui={ui}
                 />
               )
+            ) : vocabTab !== "grid" ? (
+              <VocabGrid
+                items={VOCAB_DATA[vocabTab] || []}
+                langCode={typeLangCode}
+                onSpeak={handleVocabSpeak}
+                color={VOCAB_TABS.find(t => t.id === vocabTab)?.color}
+              />
             ) : (
               <>
                 <CategoryGrid onSelect={handleCategorySelect} ui={ui} />
