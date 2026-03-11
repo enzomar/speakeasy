@@ -335,7 +335,7 @@ export default memo(function SymbolPicker({
               gridColumn: "1 / -1", textAlign: "center",
               padding: 40, color: "var(--text-3)", fontSize: 15, fontWeight: 500,
             }}>
-              No symbols in this category
+              {ui?.noSymbolsInCat ?? "No symbols in this category"}
             </div>
           )}
         </div>

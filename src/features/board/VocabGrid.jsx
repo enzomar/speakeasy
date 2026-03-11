@@ -21,6 +21,9 @@ function VocabCell({ item, langCode, color, onSpeak }) {
     onSpeak?.(label);
   }, [label, onSpeak]);
 
+  // Detect plain-text number icons (no emoji) — style them as bold badges
+  const isNumeric = /^\d+$/.test(item.emoji);
+
   return (
     <button
       onClick={handleTap}
@@ -46,7 +49,10 @@ function VocabCell({ item, langCode, color, onSpeak }) {
       onPointerLeave={e => { e.currentTarget.style.transform = "scale(1)"; }}
     >
       <span
-        style={{ fontSize: "clamp(24px, 6vw, 36px)", lineHeight: 1 }}
+        style={isNumeric
+          ? { fontSize: "clamp(22px, 5.5vw, 32px)", fontWeight: 800, lineHeight: 1, color: color || "#1971C2", fontVariantNumeric: "tabular-nums" }
+          : { fontSize: "clamp(24px, 6vw, 36px)", lineHeight: 1 }
+        }
         aria-hidden="true"
       >
         {item.emoji}

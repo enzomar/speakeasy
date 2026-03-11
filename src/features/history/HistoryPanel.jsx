@@ -4,13 +4,13 @@
  */
 
 import { memo, useState } from "react";
-import { Play, Pencil, Trash2, MessageCircle } from "lucide-react";
+import { Play, Pencil, Trash2, MessageCircle, Heart } from "lucide-react";
 import ConfirmSheet from "../../shared/ui/ConfirmSheet";
 
-function HistoryEntry({ item, isRecent, onReuse, onSpeak, onDeleteRequest, leftHanded = false }) {
+function HistoryEntry({ item, isRecent, isFavorited, onReuse, onSpeak, onDeleteRequest, onToggleFavorite, leftHanded = false, ui }) {
   const timeLabel = item.updatedAt
     ? new Date(item.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
-    : "Earlier";
+    : (ui?.earlier ?? "Earlier");
 
   return (
     <div style={{
@@ -28,6 +28,9 @@ function HistoryEntry({ item, isRecent, onReuse, onSpeak, onDeleteRequest, leftH
     }}>
       {/* Actions */}
       <div style={{ display: "flex", gap: 6, flexShrink: 0 }}>
+        <button onClick={() => onToggleFavorite(item)} style={favBtn(isFavorited)} aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}>
+          <Heart size={15} strokeWidth={1.8} fill={isFavorited ? "currentColor" : "none"} />
+        </button>
         <button onClick={() => onReuse(item.text)} style={actionBtn(false)} aria-label="Edit">
           <Pencil size={15} strokeWidth={1.8} />
         </button>
@@ -71,6 +74,18 @@ function HistoryEntry({ item, isRecent, onReuse, onSpeak, onDeleteRequest, leftH
   );
 }
 
+function favBtn(active) {
+  return {
+    width: 44, height: 44, borderRadius: "var(--radius-sm)",
+    border: "none",
+    background: active ? "rgba(255,59,48,0.10)" : "var(--bg)",
+    color: active ? "#FF3B30" : "var(--text-3)",
+    display: "flex", alignItems: "center", justifyContent: "center",
+    cursor: "pointer", flexShrink: 0, transition: "all 0.15s",
+    WebkitTapHighlightColor: "transparent",
+  };
+}
+
 function actionBtn(primary = false, danger = false) {
   return {
     width: 44, height: 44, borderRadius: "var(--radius-sm)",
@@ -83,7 +98,7 @@ function actionBtn(primary = false, danger = false) {
   };
 }
 
-function HistoryPanel({ history, recentId, onReuse, onSpeak, onDelete, onClearAll, leftHanded = false, ui }) {
+function HistoryPanel({ history, recentId, onReuse, onSpeak, onDelete, onClearAll, favorites = [], onToggleFavorite, leftHanded = false, ui }) {
   const [confirm, setConfirm] = useState(null);
   const emptyTitle    = ui?.noHistory    ?? "No history yet";
   const emptySubtitle = ui?.noHistoryHint ?? "Every message you speak is saved here";
@@ -136,15 +151,18 @@ function HistoryPanel({ history, recentId, onReuse, onSpeak, onDelete, onClearAl
               <HistoryEntry
                 item={item}
                 isRecent={item.id === recentId}
+                isFavorited={favorites.some(f => f.text.toLowerCase() === item.text.toLowerCase())}
                 onReuse={onReuse}
                 onSpeak={onSpeak}
+                onToggleFavorite={onToggleFavorite}
                 onDeleteRequest={(entry) => setConfirm({
                   action: () => onDelete(entry.id),
                   title: ui?.confirmDeleteHistoryTitle ?? "Delete this phrase?",
-                  message: ui?.confirmDeleteHistoryMsg ?? `Remove "${entry.text}" from history?`,
+                  message: typeof ui?.confirmDeleteHistoryMsg === "function" ? ui.confirmDeleteHistoryMsg(entry.text) : `Remove "${entry.text}" from history?`,
                   label: ui?.confirmYes ?? "Delete",
                 })}
                 leftHanded={leftHanded}
+                ui={ui}
               />
             </div>
           ))

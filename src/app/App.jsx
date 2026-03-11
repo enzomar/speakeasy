@@ -888,6 +888,12 @@ export default function App() {
               onSpeak={handleHistorySpeak}
               onDelete={deleteUtterance}
               onClearAll={clearHistory}
+              favorites={favorites}
+              onToggleFavorite={(item) => {
+                const exists = favorites.find(f => f.text.toLowerCase() === item.text.toLowerCase());
+                if (exists) removeFavorite(exists.id);
+                else addFavorite(item.text);
+              }}
               leftHanded={hand === "left"}
               ui={ui}
             />

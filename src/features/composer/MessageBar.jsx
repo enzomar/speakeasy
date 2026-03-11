@@ -301,7 +301,7 @@ function MessageBar({
               pointerEvents: "none",
               animation: "fadeIn 0.15s ease",
             }}>
-              Hold to clear
+              {ui?.holdToClear ?? "Hold to clear"}
             </span>
           )}
         </button>

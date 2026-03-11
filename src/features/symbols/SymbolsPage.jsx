@@ -418,7 +418,7 @@ export default memo(function SymbolsPage({
               onDelete={(id) => setConfirm({
                 action: () => onRemoveSymbol(id),
                 title: ui?.confirmDeleteSymbolTitle ?? "Delete custom symbol?",
-                message: ui?.confirmDeleteSymbolMsg ?? `Remove "${s.label}" from your symbols?`,
+                message: typeof ui?.confirmDeleteSymbolMsg === "function" ? ui.confirmDeleteSymbolMsg(s.label) : `Remove "${s.label}" from your symbols?`,
                 label: ui?.confirmYes ?? "Delete",
               })}
             />
