@@ -79,9 +79,17 @@ export function useWhisper(opts = {}) {
 
     try {
       const { pipeline, env } = await import("@xenova/transformers");
-      // Force CDN downloads — prevents Vite SPA fallback serving index.html
-      env.allowLocalModels = false;
-      env.useBrowserCache = true;
+      // Force all model fetches to HuggingFace CDN.
+      // Must be set here (not just in ragMemory.js) in case listen mode
+      // activates before the RAG embedder has been loaded.  Without explicit
+      // remoteHost/remotePathTemplate, bundlers or Capacitor WebViews can
+      // resolve model paths relative to the app origin, causing the Vite SPA
+      // fallback to return index.html → JSON.parse crash ("Unexpected token '<'").
+      env.allowLocalModels   = false;
+      env.allowRemoteModels  = true;
+      env.useBrowserCache    = true;
+      env.remoteHost         = "https://huggingface.co/";
+      env.remotePathTemplate = "{model}/resolve/{revision}/";
 
       const pipe = await pipeline("automatic-speech-recognition", modelId, {
         progress_callback: (p) => {

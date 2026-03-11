@@ -85,6 +85,32 @@ export default defineConfig({
       "Cross-Origin-Opener-Policy":   "same-origin",
       "Cross-Origin-Embedder-Policy": "credentialless",
     },
+    // Prevent Vite's SPA history-api fallback from returning index.html for
+    // requests targeting ONNX / model asset URLs.  Without this, @xenova/transformers
+    // fetching a missing local model path (e.g. /models/Xenova/whisper-tiny/config.json)
+    // gets a 200 HTML page which JSON.parse() rejects with
+    //   "Unexpected token '<', \"<!doctype \"..."
+    // Returning a real 404 lets the library immediately fall back to the CDN.
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        // Strip query string for extension matching
+        const path = req.url?.split('?')[0] ?? '';
+        // These are never served by the local Vite dev server — return 404
+        // immediately so @xenova/transformers falls back to HuggingFace CDN.
+        if (/\.(wasm|onnx|bin|gguf)$/.test(path)) {
+          _res.statusCode = 404;
+          _res.end();
+          return;
+        }
+        // Model JSON config files requested from the local /models/ prefix
+        if (path.startsWith('/models/') && path.endsWith('.json')) {
+          _res.statusCode = 404;
+          _res.end();
+          return;
+        }
+        next();
+      });
+    },
   },
 
   // Allow large WASM/model chunks without warnings
