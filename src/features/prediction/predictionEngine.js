@@ -202,7 +202,6 @@ export class PredictionEngine {
    * @returns {string[]}
    */
   predictIntents(words, n = 4, langCode = "en") {
-    console.log("Predicting intents for:", words);
     if (!words.length) return [];
 
     const currentText = words.map(w => w.toLowerCase()).join(" ");

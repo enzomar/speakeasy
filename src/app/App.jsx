@@ -18,7 +18,7 @@ import { usePrediction }   from "../features/prediction/usePrediction";
 import { useStorage }      from "../features/history/useStorage";
 import { useAIPrediction } from "../features/prediction/useAIPrediction";
 import { useLanguage }     from "../i18n/useLanguage";
-import { useListenMode }     from "../features/listen/useListenMode";
+import { useListenMode, LISTEN_STATES } from "../features/listen/useListenMode";
 import { useFavorites }      from "../shared/hooks/useFavorites";
 import { useCustomSymbols }  from "../features/symbols/useCustomSymbols";
 import { useQuickPhrases }   from "../shared/hooks/useQuickPhrases";
@@ -34,7 +34,7 @@ import PhraseGrid        from "../features/board/PhraseGrid";
 import ProfilePanel      from "../features/profile/ProfilePanel";
 import SettingsPanel     from "../features/settings/SettingsPanel";
 import HistoryPanel      from "../features/history/HistoryPanel";
-import ListenOverlay     from "../features/listen/ListenOverlay";
+import ConversationPanel from "../features/listen/ConversationPanel";
 import HelpModal         from "../shared/ui/HelpModal";
 import AIModelModal      from "../features/settings/AIModelModal";
 import InstallPrompt     from "../shared/ui/InstallPrompt";
@@ -206,7 +206,7 @@ export default function App() {
   const [tab,            setTab]            = useState("board");   // "board"|"history"|"settings"|"profile"
   const [activeCategory, setActiveCategory] = useState(null);       // null = category grid, object = symbol picker
   const [tapContext, setTapContext] = useState(null);                // { l1Label, l2Label, l3Label, l3Type } — hierarchy path
-  const [emotion, setEmotion] = useState(null);                     // null = auto-detect, or one of EMOTIONS
+  const [emotion, setEmotion] = useState("neutral");               // null = auto-detect, or one of EMOTIONS; default neutral
   const [showHelp, setShowHelp] = useState(false);
   const [boardMode, setBoardMode] = useState("symbols");              // "symbols" | "keyboard"
   const [quickSubTab, setQuickSubTab] = useState(null);               // null = show sub-cat grid, string = phrase tab id
@@ -228,6 +228,7 @@ export default function App() {
     hand, setHand,
     gender, setGender,
     wakeKeywords, setWakeKeywords,
+    geminiApiKey, setGeminiApiKey,
   } = useSettings();
 
   // ── Hooks ─────────────────────────────────────────────────────────────────
@@ -245,7 +246,7 @@ export default function App() {
     resumeDownload: aiResume,
     deleteModel: aiDeleteModel,
     modelKey: aiModelKey,
-  } = useAIPrediction(aiModel);
+  } = useAIPrediction(aiModel, geminiApiKey);
   const { favorites, addFavorite, removeFavorite } = useFavorites();
   const { custom: customSymbols, hidden: hiddenSymbols, addSymbol, removeSymbol, hideSymbol, unhideSymbol } = useCustomSymbols();
   const { getTab: getQuickTab } = useQuickPhrases();
@@ -282,6 +283,38 @@ export default function App() {
     whisperModel: "tiny",
     onTranscript: (...args) => listenTranscriptRef.current?.(...args),
   });
+
+  // ── Conversation history for the inline ConversationPanel ───────────────
+  const [chatHistory, setChatHistory]   = useState([]);
+  const lastHeardRef   = useRef("");
+  const lastRepliedRef = useRef("");
+
+  // Push a "heard" bubble each time a new transcript arrives
+  useEffect(() => {
+    const t = listenMode.transcript;
+    if (t && t !== lastHeardRef.current) {
+      lastHeardRef.current = t;
+      setChatHistory(prev => [...prev, { type: "heard", text: t }]);
+    }
+  }, [listenMode.transcript]);
+
+  // Push a "replied" bubble when the app transitions into SPEAKING state
+  useEffect(() => {
+    const r = listenMode.selectedReply;
+    if (r && r !== lastRepliedRef.current && listenMode.state === LISTEN_STATES.SPEAKING) {
+      lastRepliedRef.current = r;
+      setChatHistory(prev => [...prev, { type: "replied", text: r }]);
+    }
+  }, [listenMode.selectedReply, listenMode.state]);
+
+  // Clear history when listen mode is fully deactivated
+  useEffect(() => {
+    if (!listenMode.active) {
+      setChatHistory([]);
+      lastHeardRef.current   = "";
+      lastRepliedRef.current = "";
+    }
+  }, [listenMode.active]);
 
   const ui = getUI(uiLangCode);
 
@@ -364,7 +397,7 @@ export default function App() {
         setTimeout(() => setSpokenToast(""), 2500);
         setWords([]);
         setTapContext(null);
-        setEmotion(null);
+        setEmotion("neutral");
         setActiveCategory(null);
         aiClearSuggestions();
       },
@@ -386,7 +419,7 @@ export default function App() {
 
   const handleRemoveWord = useCallback((idx) => setWords(prev => prev.filter((_, i) => i !== idx)), []);
   const handleDeleteLast = useCallback(() => setWords(prev => prev.slice(0, -1)), []);
-  const handleClear      = useCallback(() => { setWords([]); setTapContext(null); setEmotion(null); }, []);
+  const handleClear      = useCallback(() => { setWords([]); setTapContext(null); setEmotion("neutral"); }, []);
   const handleStopSpeaking = useCallback(() => cancel(), [cancel]);
 
   const handleIntentSpeak  = useCallback((text) => handleSpeak(text), [handleSpeak]);
@@ -667,6 +700,30 @@ export default function App() {
         {/* ─────────────────── MAIN CONTENT ─────────────────── */}
         <div style={{ flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }}>
 
+          {/* ── Inline conversation panel — replaces old bottom-sheet overlay ── */}
+          {tab === "board" && (
+            <ConversationPanel
+              state={listenMode.state}
+              energy={listenMode.energy}
+              transcript={listenMode.transcript}
+              partialText={listenMode.partialText}
+              suggestions={listenMode.suggestions}
+              selectedReply={listenMode.selectedReply}
+              error={listenMode.error}
+              wakeWord={wakeWord || wakeKeywordsList[0] || "Hey"}
+              whisperLoading={listenMode.whisperLoading}
+              whisperProgress={listenMode.whisperProgress}
+              chatHistory={chatHistory}
+              onStopRecording={listenMode.stopRecording}
+              onSelectReply={listenMode.selectReply}
+              onDismiss={listenMode.dismiss}
+              onTypeReply={listenMode.dismissToBoard}
+              onContinue={listenMode.continueListening}
+              onStopSpeaking={handleStopSpeaking}
+              ui={ui}
+            />
+          )}
+
           {/* Board — category grid (home) or symbol picker (drilled-in) */}
           <div style={{
             display: tab === "board" ? "flex" : "none",
@@ -802,26 +859,7 @@ export default function App() {
               onLongPress={() => { haptic(); listenMode.quickRecord(); }}
             />
 
-            {/* Listen Mode overlay (lives on the board) */}
-            <ListenOverlay
-              state={listenMode.state}
-              energy={listenMode.energy}
-              transcript={listenMode.transcript}
-              partialText={listenMode.partialText}
-              suggestions={listenMode.suggestions}
-              selectedReply={listenMode.selectedReply}
-              error={listenMode.error}
-              wakeWord={wakeWord || wakeKeywordsList[0] || "Hey"}
-              whisperLoading={listenMode.whisperLoading}
-              whisperProgress={listenMode.whisperProgress}
-              onStopRecording={listenMode.stopRecording}
-              onSelectReply={listenMode.selectReply}
-              onDismiss={listenMode.dismiss}
-              onTypeReply={listenMode.dismissToBoard}
-              onContinue={listenMode.continueListening}
-              onStopSpeaking={handleStopSpeaking}
-              ui={ui}
-            />
+            {/* ConversationPanel is now rendered inline above the board */}
           </div>
 
           {tab === "history" && (
@@ -935,6 +973,8 @@ export default function App() {
         onResume={aiResume}
         onDelete={aiDeleteModel}
         onSwitchModel={handleChangeAiModel}
+        geminiApiKey={geminiApiKey}
+        setGeminiApiKey={setGeminiApiKey}
       />
     </div>
   );

@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "version": 1,
+    "description": "Concept lexicon for the AAC language engine. Each concept is a semantic unit with type, grammatical metadata, and per-language surface forms.",
+    "languages": ["en", "it", "fr", "es", "pt"]
+  },
+
+  "concepts": {
+    "I":        { "type": "pronoun", "person": 1, "number": "sg", "labels": { "en": "I",    "it": "io",  "fr": "je",  "es": "yo",  "pt": "eu"  }},
+    "YOU":      { "type": "pronoun", "person": 2, "number": "sg", "labels": { "en": "you",  "it": "tu",  "fr": "tu",  "es": "tú",  "pt": "tu"  }},
+    "HE":       { "type": "pronoun", "person": 3, "number": "sg", "gender": "m", "labels": { "en": "he",   "it": "lui", "fr": "il",  "es": "él",  "pt": "ele" }},
+    "SHE":      { "type": "pronoun", "person": 3, "number": "sg", "gender": "f", "labels": { "en": "she",  "it": "lei", "fr": "elle","es": "ella","pt": "ela" }},
+    "WE":       { "type": "pronoun", "person": 1, "number": "pl", "labels": { "en": "we",   "it": "noi", "fr": "nous","es": "nosotros","pt": "nós" }},
+    "THEY":     { "type": "pronoun", "person": 3, "number": "pl", "labels": { "en": "they", "it": "loro","fr": "ils", "es": "ellos","pt": "eles"}},
+
+    "MOM":      { "type": "noun", "gender": "f", "labels": { "en": "mom",     "it": "mamma",   "fr": "maman",  "es": "mamá",   "pt": "mãe"    }, "articles": { "it": { "def": "la mamma",   "indef": "una mamma"   }, "fr": { "def": "la maman",  "indef": "une maman"  }, "es": { "def": "la mamá",   "indef": "una mamá"  }, "pt": { "def": "a mãe",    "indef": "uma mãe"   }}},
+    "DAD":      { "type": "noun", "gender": "m", "labels": { "en": "dad",     "it": "papà",    "fr": "papa",   "es": "papá",   "pt": "pai"    }, "articles": { "it": { "def": "il papà",    "indef": "un papà"    }, "fr": { "def": "le papa",   "indef": "un papa"   }, "es": { "def": "el papá",   "indef": "un papá"  }, "pt": { "def": "o pai",    "indef": "um pai"   }}},
+    "FRIEND":   { "type": "noun", "gender": "m", "labels": { "en": "friend",  "it": "amico",   "fr": "ami",    "es": "amigo",  "pt": "amigo"  }, "articles": { "it": { "def": "l'amico",   "indef": "un amico"   }, "fr": { "def": "l'ami",     "indef": "un ami"    }, "es": { "def": "el amigo",  "indef": "un amigo" }, "pt": { "def": "o amigo",  "indef": "um amigo" }}},
+    "DOCTOR":   { "type": "noun", "gender": "m", "labels": { "en": "doctor",  "it": "dottore", "fr": "docteur","es": "doctor", "pt": "médico" }, "articles": { "it": { "def": "il dottore", "indef": "un dottore" }, "fr": { "def": "le docteur","indef": "un docteur"}, "es": { "def": "el doctor", "indef": "un doctor"}, "pt": { "def": "o médico", "indef": "um médico"}}},
+    "TEACHER":  { "type": "noun", "gender": "m", "labels": { "en": "teacher", "it": "maestro", "fr": "professeur","es": "profesor","pt": "professor"}, "articles": { "it": { "def": "il maestro","indef": "un maestro"}, "fr": { "def": "le professeur","indef": "un professeur"}, "es": { "def": "el profesor","indef": "un profesor"}, "pt": { "def": "o professor","indef": "um professor"}}},
+    "EVERYONE": { "type": "noun", "gender": "m", "labels": { "en": "everyone","it": "tutti",   "fr": "tout le monde","es": "todos","pt": "todos"}, "articles": {}},
+
+    "GO":       { "type": "verb", "lemma": { "en": "go",    "it": "andare",  "fr": "aller",   "es": "ir",      "pt": "ir"     }},
+    "COME":     { "type": "verb", "lemma": { "en": "come",  "it": "venire",  "fr": "venir",   "es": "venir",   "pt": "vir"    }},
+    "EAT":      { "type": "verb", "lemma": { "en": "eat",   "it": "mangiare","fr": "manger",  "es": "comer",   "pt": "comer"  }},
+    "DRINK":    { "type": "verb", "lemma": { "en": "drink", "it": "bere",    "fr": "boire",   "es": "beber",   "pt": "beber"  }},
+    "SLEEP":    { "type": "verb", "lemma": { "en": "sleep", "it": "dormire", "fr": "dormir",  "es": "dormir",  "pt": "dormir" }},
+    "PLAY":     { "type": "verb", "lemma": { "en": "play",  "it": "giocare", "fr": "jouer",   "es": "jugar",   "pt": "jogar"  }},
+    "WANT":     { "type": "verb", "lemma": { "en": "want",  "it": "volere",  "fr": "vouloir", "es": "querer",  "pt": "querer" }, "auxiliary": true},
+    "LIKE":     { "type": "verb", "lemma": { "en": "like",  "it": "piacere", "fr": "aimer",   "es": "gustar",  "pt": "gostar" }},
+    "NEED":     { "type": "verb", "lemma": { "en": "need",  "it": "avere bisogno di","fr": "avoir besoin de","es": "necesitar","pt": "precisar"}},
+    "GIVE":     { "type": "verb", "lemma": { "en": "give",  "it": "dare",    "fr": "donner",  "es": "dar",     "pt": "dar"    }},
+    "HELP":     { "type": "verb", "lemma": { "en": "help",  "it": "aiutare", "fr": "aider",   "es": "ayudar",  "pt": "ajudar" }},
+    "LOOK":     { "type": "verb", "lemma": { "en": "look",  "it": "guardare","fr": "regarder","es": "mirar",   "pt": "olhar"  }},
+    "LISTEN":   { "type": "verb", "lemma": { "en": "listen","it": "ascoltare","fr": "écouter","es": "escuchar","pt": "ouvir"  }},
+    "READ":     { "type": "verb", "lemma": { "en": "read",  "it": "leggere", "fr": "lire",    "es": "leer",    "pt": "ler"    }},
+    "OPEN":     { "type": "verb", "lemma": { "en": "open",  "it": "aprire",  "fr": "ouvrir",  "es": "abrir",   "pt": "abrir"  }},
+    "STOP":     { "type": "verb", "lemma": { "en": "stop",  "it": "smettere","fr": "arrêter", "es": "parar",   "pt": "parar"  }},
+    "WAIT":     { "type": "verb", "lemma": { "en": "wait",  "it": "aspettare","fr": "attendre","es": "esperar","pt": "esperar"}},
+    "FEEL":     { "type": "verb", "lemma": { "en": "feel",  "it": "sentire", "fr": "sentir",  "es": "sentir",  "pt": "sentir" }},
+
+    "WATER":    { "type": "noun", "gender": "f", "labels": { "en": "water",   "it": "acqua",    "fr": "eau",       "es": "agua",    "pt": "água"   }, "articles": { "it": { "def": "l'acqua",    "indef": "dell'acqua",  "part": "dell'acqua"   }, "fr": { "def": "l'eau",      "indef": "de l'eau",   "part": "de l'eau"    }, "es": { "def": "el agua",   "indef": "agua",      "part": "agua"       }, "pt": { "def": "a água",    "indef": "água",      "part": "água"       }}},
+    "FOOD":     { "type": "noun", "gender": "m", "labels": { "en": "food",    "it": "cibo",     "fr": "nourriture","es": "comida",  "pt": "comida" }, "articles": { "it": { "def": "il cibo",     "indef": "del cibo",    "part": "del cibo"     }, "fr": { "def": "la nourriture","indef": "de la nourriture","part": "de la nourriture"}, "es": { "def": "la comida", "indef": "comida",    "part": "comida"     }, "pt": { "def": "a comida",  "indef": "comida",    "part": "comida"     }}},
+    "MILK":     { "type": "noun", "gender": "m", "labels": { "en": "milk",    "it": "latte",    "fr": "lait",      "es": "leche",   "pt": "leite"  }, "articles": { "it": { "def": "il latte",    "indef": "del latte",   "part": "del latte"    }, "fr": { "def": "le lait",    "indef": "du lait",    "part": "du lait"     }, "es": { "def": "la leche",  "indef": "leche",     "part": "leche"      }, "pt": { "def": "o leite",   "indef": "leite",     "part": "leite"      }}},
+    "JUICE":    { "type": "noun", "gender": "m", "labels": { "en": "juice",   "it": "succo",    "fr": "jus",       "es": "jugo",    "pt": "suco"   }, "articles": { "it": { "def": "il succo",    "indef": "del succo",   "part": "del succo"    }, "fr": { "def": "le jus",     "indef": "du jus",     "part": "du jus"      }, "es": { "def": "el jugo",   "indef": "jugo",      "part": "jugo"       }, "pt": { "def": "o suco",    "indef": "suco",      "part": "suco"       }}},
+    "BREAD":    { "type": "noun", "gender": "m", "labels": { "en": "bread",   "it": "pane",     "fr": "pain",      "es": "pan",     "pt": "pão"    }, "articles": { "it": { "def": "il pane",     "indef": "del pane",    "part": "del pane"     }, "fr": { "def": "le pain",    "indef": "du pain",    "part": "du pain"     }, "es": { "def": "el pan",    "indef": "pan",       "part": "pan"        }, "pt": { "def": "o pão",     "indef": "pão",       "part": "pão"        }}},
+    "MEDICINE": { "type": "noun", "gender": "f", "labels": { "en": "medicine","it": "medicina", "fr": "médicament","es": "medicina","pt": "remédio"}, "articles": { "it": { "def": "la medicina", "indef": "una medicina", "part": "della medicina"}, "fr": { "def": "le médicament","indef": "un médicament","part": "du médicament"}, "es": { "def": "la medicina","indef": "una medicina","part": "medicina"   }, "pt": { "def": "o remédio", "indef": "um remédio", "part": "remédio"    }}},
+    "BOOK":     { "type": "noun", "gender": "m", "labels": { "en": "book",    "it": "libro",    "fr": "livre",     "es": "libro",   "pt": "livro"  }, "articles": { "it": { "def": "il libro",    "indef": "un libro",    "part": "un libro"     }, "fr": { "def": "le livre",   "indef": "un livre",   "part": "un livre"    }, "es": { "def": "el libro",  "indef": "un libro",  "part": "un libro"   }, "pt": { "def": "o livro",   "indef": "um livro",  "part": "um livro"   }}},
+    "PHONE":    { "type": "noun", "gender": "m", "labels": { "en": "phone",   "it": "telefono", "fr": "téléphone", "es": "teléfono","pt": "telefone"}, "articles": { "it": { "def": "il telefono","indef": "un telefono", "part": "il telefono"  }, "fr": { "def": "le téléphone","indef": "un téléphone","part": "le téléphone"}, "es": { "def": "el teléfono","indef": "un teléfono","part": "el teléfono"}, "pt": { "def": "o telefone","indef": "um telefone","part": "o telefone" }}},
+
+    "HOME":     { "type": "noun", "role": "place", "gender": "f", "labels": { "en": "home",    "it": "casa",     "fr": "maison",  "es": "casa",   "pt": "casa"   }, "locative": { "en": "home",        "it": "a casa",       "fr": "à la maison",  "es": "a casa",     "pt": "em casa"    }},
+    "SCHOOL":   { "type": "noun", "role": "place", "gender": "f", "labels": { "en": "school",  "it": "scuola",   "fr": "école",   "es": "escuela","pt": "escola" }, "locative": { "en": "to school",   "it": "a scuola",     "fr": "à l'école",    "es": "a la escuela","pt": "à escola"  }},
+    "HOSPITAL": { "type": "noun", "role": "place", "gender": "m", "labels": { "en": "hospital","it": "ospedale", "fr": "hôpital", "es": "hospital","pt": "hospital"}, "locative": { "en": "to hospital", "it": "all'ospedale", "fr": "à l'hôpital",  "es": "al hospital","pt": "ao hospital"}},
+    "PARK":     { "type": "noun", "role": "place", "gender": "m", "labels": { "en": "park",    "it": "parco",    "fr": "parc",    "es": "parque", "pt": "parque" }, "locative": { "en": "to the park", "it": "al parco",     "fr": "au parc",      "es": "al parque",  "pt": "ao parque"  }},
+    "OUTSIDE":  { "type": "noun", "role": "place", "gender": "m", "labels": { "en": "outside", "it": "fuori",    "fr": "dehors",  "es": "afuera", "pt": "fora"   }, "locative": { "en": "outside",     "it": "fuori",        "fr": "dehors",       "es": "afuera",     "pt": "lá fora"    }},
+
+    "HAPPY":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "happy",   "it": { "m": "felice",     "f": "felice"     }, "fr": { "m": "heureux",    "f": "heureuse"   }, "es": { "m": "feliz",      "f": "feliz"      }, "pt": { "m": "feliz",      "f": "feliz"      }}},
+    "SAD":      { "type": "adjective", "genderSensitive": true, "labels": { "en": "sad",     "it": { "m": "triste",     "f": "triste"     }, "fr": { "m": "triste",     "f": "triste"     }, "es": { "m": "triste",     "f": "triste"     }, "pt": { "m": "triste",     "f": "triste"     }}},
+    "ANGRY":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "angry",   "it": { "m": "arrabbiato", "f": "arrabbiata" }, "fr": { "m": "fâché",      "f": "fâchée"     }, "es": { "m": "enojado",    "f": "enojada"    }, "pt": { "m": "bravo",      "f": "brava"      }}},
+    "SCARED":   { "type": "adjective", "genderSensitive": true, "labels": { "en": "scared",  "it": { "m": "spaventato", "f": "spaventata" }, "fr": { "m": "effrayé",    "f": "effrayée"   }, "es": { "m": "asustado",   "f": "asustada"   }, "pt": { "m": "assustado",  "f": "assustada"  }}},
+    "TIRED":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "tired",   "it": { "m": "stanco",     "f": "stanca"     }, "fr": { "m": "fatigué",    "f": "fatiguée"   }, "es": { "m": "cansado",    "f": "cansada"    }, "pt": { "m": "cansado",    "f": "cansada"    }}},
+    "SICK":     { "type": "adjective", "genderSensitive": true, "labels": { "en": "sick",    "it": { "m": "malato",     "f": "malata"     }, "fr": { "m": "malade",     "f": "malade"     }, "es": { "m": "enfermo",    "f": "enferma"    }, "pt": { "m": "doente",     "f": "doente"     }}},
+    "HURT":     { "type": "adjective", "genderSensitive": true, "labels": { "en": "hurt",    "it": { "m": "ferito",     "f": "ferita"     }, "fr": { "m": "blessé",     "f": "blessée"    }, "es": { "m": "herido",     "f": "herida"     }, "pt": { "m": "ferido",     "f": "ferida"     }}},
+    "GOOD":     { "type": "adjective", "genderSensitive": true, "labels": { "en": "good",    "it": { "m": "buono",      "f": "buona"      }, "fr": { "m": "bon",        "f": "bonne"      }, "es": { "m": "bueno",      "f": "buena"      }, "pt": { "m": "bom",        "f": "boa"        }}},
+    "BAD":      { "type": "adjective", "genderSensitive": true, "labels": { "en": "bad",     "it": { "m": "cattivo",    "f": "cattiva"    }, "fr": { "m": "mauvais",    "f": "mauvaise"   }, "es": { "m": "malo",       "f": "mala"       }, "pt": { "m": "mau",        "f": "má"         }}},
+    "BIG":      { "type": "adjective", "genderSensitive": true, "labels": { "en": "big",     "it": { "m": "grande",     "f": "grande"     }, "fr": { "m": "grand",      "f": "grande"     }, "es": { "m": "grande",     "f": "grande"     }, "pt": { "m": "grande",     "f": "grande"     }}},
+    "SMALL":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "small",   "it": { "m": "piccolo",    "f": "piccola"    }, "fr": { "m": "petit",      "f": "petite"     }, "es": { "m": "pequeño",    "f": "pequeña"    }, "pt": { "m": "pequeno",    "f": "pequena"    }}},
+
+    "YES":      { "type": "interjection", "labels": { "en": "yes",       "it": "sì",         "fr": "oui",        "es": "sí",        "pt": "sim"       }},
+    "NO":       { "type": "interjection", "labels": { "en": "no",        "it": "no",          "fr": "non",        "es": "no",        "pt": "não"       }},
+    "PLEASE":   { "type": "interjection", "labels": { "en": "please",    "it": "per favore",  "fr": "s'il te plaît","es": "por favor","pt": "por favor" }},
+    "THANKS":   { "type": "interjection", "labels": { "en": "thank you", "it": "grazie",      "fr": "merci",      "es": "gracias",   "pt": "obrigado"  }},
+    "SORRY":    { "type": "interjection", "labels": { "en": "sorry",     "it": "scusa",       "fr": "pardon",     "es": "perdón",    "pt": "desculpa"  }},
+    "HELLO":    { "type": "interjection", "labels": { "en": "hello",     "it": "ciao",        "fr": "bonjour",    "es": "hola",      "pt": "olá"       }},
+    "BYE":      { "type": "interjection", "labels": { "en": "goodbye",   "it": "arrivederci", "fr": "au revoir",  "es": "adiós",     "pt": "tchau"     }}
+  },
+
+  "operators": {
+    "PAST":     { "type": "tense",     "value": "past",       "labels": { "en": "past",     "it": "passato",   "fr": "passé",     "es": "pasado",   "pt": "passado"  }},
+    "FUTURE":   { "type": "tense",     "value": "future",     "labels": { "en": "future",   "it": "futuro",    "fr": "futur",     "es": "futuro",   "pt": "futuro"   }},
+    "NOW":      { "type": "tense",     "value": "present",    "labels": { "en": "now",      "it": "adesso",    "fr": "maintenant","es": "ahora",    "pt": "agora"    }},
+    "NOT":      { "type": "polarity",  "value": "negative",   "labels": { "en": "not",      "it": "non",       "fr": "ne…pas",    "es": "no",       "pt": "não"      }},
+    "WANT":     { "type": "modal",     "value": "volitive",   "labels": { "en": "want",     "it": "volere",    "fr": "vouloir",   "es": "querer",   "pt": "querer"   }},
+    "CAN":      { "type": "modal",     "value": "ability",    "labels": { "en": "can",      "it": "potere",    "fr": "pouvoir",   "es": "poder",    "pt": "poder"    }},
+    "MUST":     { "type": "modal",     "value": "obligation", "labels": { "en": "must",     "it": "dovere",    "fr": "devoir",    "es": "deber",    "pt": "dever"    }},
+    "VERY":     { "type": "intensity", "value": "augment",    "labels": { "en": "very",     "it": "molto",     "fr": "très",      "es": "muy",      "pt": "muito"    }},
+    "A_LITTLE": { "type": "intensity", "value": "diminish",   "labels": { "en": "a little", "it": "un po'",    "fr": "un peu",    "es": "un poco",  "pt": "um pouco" }},
+    "AGAIN":    { "type": "aspect",    "value": "repetitive", "labels": { "en": "again",    "it": "ancora",    "fr": "encore",    "es": "otra vez", "pt": "de novo"  }},
+    "QUESTION": { "type": "mood",      "value": "interrogative","labels": { "en": "?",      "it": "?",         "fr": "?",         "es": "?",        "pt": "?"        }}
+  }
+}

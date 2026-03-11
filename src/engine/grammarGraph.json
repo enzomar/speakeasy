@@ -1,0 +1,89 @@
+{
+  "_meta": {
+    "version": 1,
+    "description": "Grammar graph: defines valid sentence structures as a directed graph. Nodes are grammatical roles; edges define valid transitions with the concept types that may fill each role."
+  },
+
+  "nodes": {
+    "START":    { "terminal": false, "description": "Entry point" },
+    "SUBJECT":  { "terminal": false, "accepts": ["pronoun", "noun"],               "description": "Who is performing the action" },
+    "NEGATION": { "terminal": false, "accepts": ["operator:polarity"],              "description": "Negation particle" },
+    "MODAL":    { "terminal": false, "accepts": ["operator:modal"],                 "description": "Modal verb (want, can, must)" },
+    "VERB":     { "terminal": false, "accepts": ["verb"],                           "description": "Main action" },
+    "OBJECT":   { "terminal": false, "accepts": ["noun", "adjective"],              "description": "What the action applies to" },
+    "PLACE":    { "terminal": false, "accepts": ["noun:place"],                     "description": "Location / destination" },
+    "INTENSITY":{ "terminal": false, "accepts": ["operator:intensity"],              "description": "Degree modifier (very, a little)" },
+    "TENSE":    { "terminal": false, "accepts": ["operator:tense"],                 "description": "Time marker (past, future, now)" },
+    "ASPECT":   { "terminal": false, "accepts": ["operator:aspect"],                "description": "Aspect (again, still)" },
+    "COURTESY": { "terminal": false, "accepts": ["interjection:please"],            "description": "Politeness marker" },
+    "STATE":    { "terminal": false, "accepts": ["adjective"],                      "description": "State/feeling (I am HAPPY)" },
+    "INTERJ":   { "terminal": true,  "accepts": ["interjection"],                   "description": "Standalone interjection" },
+    "END":      { "terminal": true,  "description": "Sentence complete" }
+  },
+
+  "edges": [
+    { "from": "START",     "to": "SUBJECT",   "weight": 1.0 },
+    { "from": "START",     "to": "INTERJ",    "weight": 0.5, "note": "Standalone: Hello, Yes, Thanks" },
+    { "from": "START",     "to": "VERB",      "weight": 0.6, "note": "Imperative: Help! Stop!" },
+
+    { "from": "SUBJECT",   "to": "NEGATION",  "weight": 0.8 },
+    { "from": "SUBJECT",   "to": "MODAL",     "weight": 0.9 },
+    { "from": "SUBJECT",   "to": "VERB",      "weight": 1.0 },
+    { "from": "SUBJECT",   "to": "STATE",     "weight": 0.9, "note": "I am happy (copula implied)" },
+
+    { "from": "NEGATION",  "to": "MODAL",     "weight": 0.9 },
+    { "from": "NEGATION",  "to": "VERB",      "weight": 1.0 },
+    { "from": "NEGATION",  "to": "STATE",     "weight": 0.9 },
+
+    { "from": "MODAL",     "to": "VERB",      "weight": 1.0 },
+    { "from": "MODAL",     "to": "STATE",     "weight": 0.5, "note": "I want to be happy" },
+
+    { "from": "VERB",      "to": "OBJECT",    "weight": 1.0 },
+    { "from": "VERB",      "to": "PLACE",     "weight": 0.8 },
+    { "from": "VERB",      "to": "TENSE",     "weight": 0.6 },
+    { "from": "VERB",      "to": "ASPECT",    "weight": 0.5 },
+    { "from": "VERB",      "to": "COURTESY",  "weight": 0.4 },
+    { "from": "VERB",      "to": "END",       "weight": 0.3 },
+
+    { "from": "OBJECT",    "to": "PLACE",     "weight": 0.6 },
+    { "from": "OBJECT",    "to": "TENSE",     "weight": 0.5 },
+    { "from": "OBJECT",    "to": "COURTESY",  "weight": 0.4 },
+    { "from": "OBJECT",    "to": "END",       "weight": 1.0 },
+
+    { "from": "STATE",     "to": "INTENSITY",  "weight": 0.7 },
+    { "from": "STATE",     "to": "TENSE",      "weight": 0.5 },
+    { "from": "STATE",     "to": "COURTESY",   "weight": 0.3 },
+    { "from": "STATE",     "to": "END",        "weight": 1.0 },
+
+    { "from": "INTENSITY", "to": "TENSE",     "weight": 0.4 },
+    { "from": "INTENSITY", "to": "END",       "weight": 1.0 },
+
+    { "from": "PLACE",     "to": "TENSE",     "weight": 0.5 },
+    { "from": "PLACE",     "to": "COURTESY",  "weight": 0.3 },
+    { "from": "PLACE",     "to": "END",       "weight": 1.0 },
+
+    { "from": "TENSE",     "to": "COURTESY",  "weight": 0.3 },
+    { "from": "TENSE",     "to": "ASPECT",    "weight": 0.3 },
+    { "from": "TENSE",     "to": "END",       "weight": 1.0 },
+
+    { "from": "ASPECT",    "to": "COURTESY",  "weight": 0.3 },
+    { "from": "ASPECT",    "to": "END",       "weight": 1.0 },
+
+    { "from": "COURTESY",  "to": "END",       "weight": 1.0 },
+
+    { "from": "INTERJ",    "to": "END",       "weight": 1.0 }
+  ],
+
+  "patterns": {
+    "_meta": "Common AAC sentence patterns (shorthand references for the builder)",
+    "SVO":           ["SUBJECT", "VERB", "OBJECT"],
+    "SVP":           ["SUBJECT", "VERB", "PLACE"],
+    "S_STATE":       ["SUBJECT", "STATE"],
+    "S_MODAL_V_O":   ["SUBJECT", "MODAL", "VERB", "OBJECT"],
+    "S_NEG_V_O":     ["SUBJECT", "NEGATION", "VERB", "OBJECT"],
+    "S_MODAL_V_P":   ["SUBJECT", "MODAL", "VERB", "PLACE"],
+    "IMPERATIVE":    ["VERB", "OBJECT"],
+    "IMP_PLACE":     ["VERB", "PLACE"],
+    "GREETING":      ["INTERJ"]
+  }
+}

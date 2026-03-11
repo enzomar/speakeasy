@@ -1,0 +1,194 @@
+{
+  "_meta": {
+    "version": 1,
+    "description": "Conjugation tables for the AAC morphology engine. Verbs keyed by concept id. Each form: present-1s, past-1s, future-1s, gerund, infinitive, pastParticiple.",
+    "persons": { "1": "I", "2": "you", "3": "he/she/it" },
+    "auxiliaries": {
+      "note": "Italian uses 'essere' for motion/state verbs, 'avere' for transitive. Marked via 'aux' field.",
+      "it": { "avere": ["ho","hai","ha"], "essere": ["sono","sei","è"] }
+    }
+  },
+
+  "verbs": {
+    "GO": {
+      "en": { "pres1s": "go",      "past1s": "went",     "fut1s": "will go",       "ger": "going",     "inf": "go",      "pp": "gone"     },
+      "it": { "pres1s": "vado",    "past1s": "sono andato","fut1s": "andrò",        "ger": "andando",   "inf": "andare",  "pp": "andato",  "aux": "essere" },
+      "fr": { "pres1s": "vais",    "past1s": "suis allé", "fut1s": "irai",          "ger": "allant",    "inf": "aller",   "pp": "allé",    "aux": "être"   },
+      "es": { "pres1s": "voy",     "past1s": "fui",       "fut1s": "iré",           "ger": "yendo",     "inf": "ir",      "pp": "ido"      },
+      "pt": { "pres1s": "vou",     "past1s": "fui",       "fut1s": "irei",          "ger": "indo",      "inf": "ir",      "pp": "ido"      }
+    },
+    "COME": {
+      "en": { "pres1s": "come",    "past1s": "came",      "fut1s": "will come",     "ger": "coming",    "inf": "come",    "pp": "come"     },
+      "it": { "pres1s": "vengo",   "past1s": "sono venuto","fut1s": "verrò",        "ger": "venendo",   "inf": "venire",  "pp": "venuto",  "aux": "essere" },
+      "fr": { "pres1s": "viens",   "past1s": "suis venu", "fut1s": "viendrai",      "ger": "venant",    "inf": "venir",   "pp": "venu",    "aux": "être"   },
+      "es": { "pres1s": "vengo",   "past1s": "vine",      "fut1s": "vendré",        "ger": "viniendo",  "inf": "venir",   "pp": "venido"   },
+      "pt": { "pres1s": "venho",   "past1s": "vim",       "fut1s": "virei",         "ger": "vindo",     "inf": "vir",     "pp": "vindo"    }
+    },
+    "EAT": {
+      "en": { "pres1s": "eat",     "past1s": "ate",       "fut1s": "will eat",      "ger": "eating",    "inf": "eat",     "pp": "eaten"    },
+      "it": { "pres1s": "mangio",  "past1s": "ho mangiato","fut1s": "mangerò",      "ger": "mangiando", "inf": "mangiare","pp": "mangiato","aux": "avere"  },
+      "fr": { "pres1s": "mange",   "past1s": "ai mangé",  "fut1s": "mangerai",      "ger": "mangeant",  "inf": "manger",  "pp": "mangé",   "aux": "avoir"  },
+      "es": { "pres1s": "como",    "past1s": "comí",      "fut1s": "comeré",        "ger": "comiendo",  "inf": "comer",   "pp": "comido"   },
+      "pt": { "pres1s": "como",    "past1s": "comi",      "fut1s": "comerei",       "ger": "comendo",   "inf": "comer",   "pp": "comido"   }
+    },
+    "DRINK": {
+      "en": { "pres1s": "drink",   "past1s": "drank",     "fut1s": "will drink",    "ger": "drinking",  "inf": "drink",   "pp": "drunk"    },
+      "it": { "pres1s": "bevo",    "past1s": "ho bevuto", "fut1s": "berrò",         "ger": "bevendo",   "inf": "bere",    "pp": "bevuto",  "aux": "avere"  },
+      "fr": { "pres1s": "bois",    "past1s": "ai bu",     "fut1s": "boirai",        "ger": "buvant",    "inf": "boire",   "pp": "bu",      "aux": "avoir"  },
+      "es": { "pres1s": "bebo",    "past1s": "bebí",      "fut1s": "beberé",        "ger": "bebiendo",  "inf": "beber",   "pp": "bebido"   },
+      "pt": { "pres1s": "bebo",    "past1s": "bebi",      "fut1s": "beberei",       "ger": "bebendo",   "inf": "beber",   "pp": "bebido"   }
+    },
+    "SLEEP": {
+      "en": { "pres1s": "sleep",   "past1s": "slept",     "fut1s": "will sleep",    "ger": "sleeping",  "inf": "sleep",   "pp": "slept"    },
+      "it": { "pres1s": "dormo",   "past1s": "ho dormito","fut1s": "dormirò",       "ger": "dormendo",  "inf": "dormire", "pp": "dormito", "aux": "avere"  },
+      "fr": { "pres1s": "dors",    "past1s": "ai dormi",  "fut1s": "dormirai",      "ger": "dormant",   "inf": "dormir",  "pp": "dormi",   "aux": "avoir"  },
+      "es": { "pres1s": "duermo",  "past1s": "dormí",     "fut1s": "dormiré",       "ger": "durmiendo", "inf": "dormir",  "pp": "dormido"  },
+      "pt": { "pres1s": "durmo",   "past1s": "dormi",     "fut1s": "dormirei",      "ger": "dormindo",  "inf": "dormir",  "pp": "dormido"  }
+    },
+    "PLAY": {
+      "en": { "pres1s": "play",    "past1s": "played",    "fut1s": "will play",     "ger": "playing",   "inf": "play",    "pp": "played"   },
+      "it": { "pres1s": "gioco",   "past1s": "ho giocato","fut1s": "giocherò",      "ger": "giocando",  "inf": "giocare", "pp": "giocato", "aux": "avere"  },
+      "fr": { "pres1s": "joue",    "past1s": "ai joué",   "fut1s": "jouerai",       "ger": "jouant",    "inf": "jouer",   "pp": "joué",    "aux": "avoir"  },
+      "es": { "pres1s": "juego",   "past1s": "jugué",     "fut1s": "jugaré",        "ger": "jugando",   "inf": "jugar",   "pp": "jugado"   },
+      "pt": { "pres1s": "jogo",    "past1s": "joguei",    "fut1s": "jogarei",       "ger": "jogando",   "inf": "jogar",   "pp": "jogado"   }
+    },
+    "WANT": {
+      "en": { "pres1s": "want",    "past1s": "wanted",    "fut1s": "will want",     "ger": "wanting",   "inf": "want",    "pp": "wanted"   },
+      "it": { "pres1s": "voglio",  "past1s": "ho voluto", "fut1s": "vorrò",         "ger": "volendo",   "inf": "volere",  "pp": "voluto",  "aux": "avere"  },
+      "fr": { "pres1s": "veux",    "past1s": "ai voulu",  "fut1s": "voudrai",       "ger": "voulant",   "inf": "vouloir", "pp": "voulu",   "aux": "avoir"  },
+      "es": { "pres1s": "quiero",  "past1s": "quise",     "fut1s": "querré",        "ger": "queriendo", "inf": "querer",  "pp": "querido"  },
+      "pt": { "pres1s": "quero",   "past1s": "quis",      "fut1s": "quererei",      "ger": "querendo",  "inf": "querer",  "pp": "querido"  }
+    },
+    "LIKE": {
+      "en": { "pres1s": "like",    "past1s": "liked",     "fut1s": "will like",     "ger": "liking",    "inf": "like",    "pp": "liked"    },
+      "it": { "pres1s": "mi piace","past1s": "mi è piaciuto","fut1s": "mi piacerà", "ger": "piacendo",  "inf": "piacere", "pp": "piaciuto","aux": "essere" },
+      "fr": { "pres1s": "aime",    "past1s": "ai aimé",   "fut1s": "aimerai",       "ger": "aimant",    "inf": "aimer",   "pp": "aimé",    "aux": "avoir"  },
+      "es": { "pres1s": "me gusta","past1s": "me gustó",  "fut1s": "me gustará",    "ger": "gustando",  "inf": "gustar",  "pp": "gustado"  },
+      "pt": { "pres1s": "gosto",   "past1s": "gostei",    "fut1s": "gostarei",      "ger": "gostando",  "inf": "gostar",  "pp": "gostado"  }
+    },
+    "NEED": {
+      "en": { "pres1s": "need",    "past1s": "needed",    "fut1s": "will need",     "ger": "needing",   "inf": "need",    "pp": "needed"   },
+      "it": { "pres1s": "ho bisogno di","past1s": "avevo bisogno di","fut1s": "avrò bisogno di","ger": "avendo bisogno","inf": "aver bisogno","pp": "avuto bisogno","aux": "avere" },
+      "fr": { "pres1s": "ai besoin de","past1s": "avais besoin de","fut1s": "aurai besoin de","ger": "ayant besoin","inf": "avoir besoin","pp": "eu besoin","aux": "avoir" },
+      "es": { "pres1s": "necesito","past1s": "necesité",  "fut1s": "necesitaré",    "ger": "necesitando","inf": "necesitar","pp": "necesitado"},
+      "pt": { "pres1s": "preciso", "past1s": "precisei",  "fut1s": "precisarei",    "ger": "precisando","inf": "precisar", "pp": "precisado"}
+    },
+    "GIVE": {
+      "en": { "pres1s": "give",    "past1s": "gave",      "fut1s": "will give",     "ger": "giving",    "inf": "give",    "pp": "given"    },
+      "it": { "pres1s": "do",      "past1s": "ho dato",   "fut1s": "darò",          "ger": "dando",     "inf": "dare",    "pp": "dato",    "aux": "avere"  },
+      "fr": { "pres1s": "donne",   "past1s": "ai donné",  "fut1s": "donnerai",      "ger": "donnant",   "inf": "donner",  "pp": "donné",   "aux": "avoir"  },
+      "es": { "pres1s": "doy",     "past1s": "di",        "fut1s": "daré",          "ger": "dando",     "inf": "dar",     "pp": "dado"     },
+      "pt": { "pres1s": "dou",     "past1s": "dei",       "fut1s": "darei",         "ger": "dando",     "inf": "dar",     "pp": "dado"     }
+    },
+    "HELP": {
+      "en": { "pres1s": "help",    "past1s": "helped",    "fut1s": "will help",     "ger": "helping",   "inf": "help",    "pp": "helped"   },
+      "it": { "pres1s": "aiuto",   "past1s": "ho aiutato","fut1s": "aiuterò",       "ger": "aiutando",  "inf": "aiutare", "pp": "aiutato", "aux": "avere"  },
+      "fr": { "pres1s": "aide",    "past1s": "ai aidé",   "fut1s": "aiderai",       "ger": "aidant",    "inf": "aider",   "pp": "aidé",    "aux": "avoir"  },
+      "es": { "pres1s": "ayudo",   "past1s": "ayudé",     "fut1s": "ayudaré",       "ger": "ayudando",  "inf": "ayudar",  "pp": "ayudado"  },
+      "pt": { "pres1s": "ajudo",   "past1s": "ajudei",    "fut1s": "ajudarei",      "ger": "ajudando",  "inf": "ajudar",  "pp": "ajudado"  }
+    },
+    "LOOK": {
+      "en": { "pres1s": "look",    "past1s": "looked",    "fut1s": "will look",     "ger": "looking",   "inf": "look",    "pp": "looked"   },
+      "it": { "pres1s": "guardo",  "past1s": "ho guardato","fut1s": "guarderò",     "ger": "guardando", "inf": "guardare","pp": "guardato","aux": "avere"  },
+      "fr": { "pres1s": "regarde", "past1s": "ai regardé","fut1s": "regarderai",    "ger": "regardant", "inf": "regarder","pp": "regardé", "aux": "avoir"  },
+      "es": { "pres1s": "miro",    "past1s": "miré",      "fut1s": "miraré",        "ger": "mirando",   "inf": "mirar",   "pp": "mirado"   },
+      "pt": { "pres1s": "olho",    "past1s": "olhei",     "fut1s": "olharei",       "ger": "olhando",   "inf": "olhar",   "pp": "olhado"   }
+    },
+    "LISTEN": {
+      "en": { "pres1s": "listen",  "past1s": "listened",  "fut1s": "will listen",   "ger": "listening", "inf": "listen",  "pp": "listened" },
+      "it": { "pres1s": "ascolto", "past1s": "ho ascoltato","fut1s": "ascolterò",   "ger": "ascoltando","inf": "ascoltare","pp": "ascoltato","aux": "avere" },
+      "fr": { "pres1s": "écoute",  "past1s": "ai écouté", "fut1s": "écouterai",     "ger": "écoutant",  "inf": "écouter", "pp": "écouté",  "aux": "avoir"  },
+      "es": { "pres1s": "escucho", "past1s": "escuché",   "fut1s": "escucharé",     "ger": "escuchando","inf": "escuchar","pp": "escuchado" },
+      "pt": { "pres1s": "ouço",    "past1s": "ouvi",      "fut1s": "ouvirei",       "ger": "ouvindo",   "inf": "ouvir",   "pp": "ouvido"   }
+    },
+    "READ": {
+      "en": { "pres1s": "read",    "past1s": "read",      "fut1s": "will read",     "ger": "reading",   "inf": "read",    "pp": "read"     },
+      "it": { "pres1s": "leggo",   "past1s": "ho letto",  "fut1s": "leggerò",       "ger": "leggendo",  "inf": "leggere", "pp": "letto",   "aux": "avere"  },
+      "fr": { "pres1s": "lis",     "past1s": "ai lu",     "fut1s": "lirai",         "ger": "lisant",    "inf": "lire",    "pp": "lu",      "aux": "avoir"  },
+      "es": { "pres1s": "leo",     "past1s": "leí",       "fut1s": "leeré",         "ger": "leyendo",   "inf": "leer",    "pp": "leído"    },
+      "pt": { "pres1s": "leio",    "past1s": "li",        "fut1s": "lerei",         "ger": "lendo",     "inf": "ler",     "pp": "lido"     }
+    },
+    "OPEN": {
+      "en": { "pres1s": "open",    "past1s": "opened",    "fut1s": "will open",     "ger": "opening",   "inf": "open",    "pp": "opened"   },
+      "it": { "pres1s": "apro",    "past1s": "ho aperto", "fut1s": "aprirò",        "ger": "aprendo",   "inf": "aprire",  "pp": "aperto",  "aux": "avere"  },
+      "fr": { "pres1s": "ouvre",   "past1s": "ai ouvert", "fut1s": "ouvrirai",      "ger": "ouvrant",   "inf": "ouvrir",  "pp": "ouvert",  "aux": "avoir"  },
+      "es": { "pres1s": "abro",    "past1s": "abrí",      "fut1s": "abriré",        "ger": "abriendo",  "inf": "abrir",   "pp": "abierto"  },
+      "pt": { "pres1s": "abro",    "past1s": "abri",      "fut1s": "abrirei",       "ger": "abrindo",   "inf": "abrir",   "pp": "aberto"   }
+    },
+    "STOP": {
+      "en": { "pres1s": "stop",    "past1s": "stopped",   "fut1s": "will stop",     "ger": "stopping",  "inf": "stop",    "pp": "stopped"  },
+      "it": { "pres1s": "smetto",  "past1s": "ho smesso", "fut1s": "smetterò",      "ger": "smettendo", "inf": "smettere","pp": "smesso",  "aux": "avere"  },
+      "fr": { "pres1s": "arrête",  "past1s": "ai arrêté", "fut1s": "arrêterai",     "ger": "arrêtant",  "inf": "arrêter", "pp": "arrêté",  "aux": "avoir"  },
+      "es": { "pres1s": "paro",    "past1s": "paré",      "fut1s": "pararé",        "ger": "parando",   "inf": "parar",   "pp": "parado"   },
+      "pt": { "pres1s": "paro",    "past1s": "parei",     "fut1s": "pararei",       "ger": "parando",   "inf": "parar",   "pp": "parado"   }
+    },
+    "WAIT": {
+      "en": { "pres1s": "wait",    "past1s": "waited",    "fut1s": "will wait",     "ger": "waiting",   "inf": "wait",    "pp": "waited"   },
+      "it": { "pres1s": "aspetto", "past1s": "ho aspettato","fut1s": "aspetterò",   "ger": "aspettando","inf": "aspettare","pp": "aspettato","aux": "avere" },
+      "fr": { "pres1s": "attends", "past1s": "ai attendu","fut1s": "attendrai",     "ger": "attendant", "inf": "attendre","pp": "attendu",  "aux": "avoir"  },
+      "es": { "pres1s": "espero",  "past1s": "esperé",    "fut1s": "esperaré",      "ger": "esperando", "inf": "esperar", "pp": "esperado" },
+      "pt": { "pres1s": "espero",  "past1s": "esperei",   "fut1s": "esperarei",     "ger": "esperando", "inf": "esperar", "pp": "esperado" }
+    },
+    "FEEL": {
+      "en": { "pres1s": "feel",    "past1s": "felt",      "fut1s": "will feel",     "ger": "feeling",   "inf": "feel",    "pp": "felt"     },
+      "it": { "pres1s": "mi sento","past1s": "mi sono sentito","fut1s": "mi sentirò","ger": "sentendo",  "inf": "sentire", "pp": "sentito", "aux": "essere" },
+      "fr": { "pres1s": "me sens", "past1s": "me suis senti","fut1s": "me sentirai","ger": "sentant",   "inf": "sentir",  "pp": "senti",   "aux": "être"   },
+      "es": { "pres1s": "me siento","past1s": "me sentí", "fut1s": "me sentiré",    "ger": "sintiéndome","inf": "sentirse","pp": "sentido" },
+      "pt": { "pres1s": "me sinto","past1s": "me senti",  "fut1s": "me sentirei",   "ger": "sentindo",  "inf": "sentir",  "pp": "sentido"  }
+    }
+  },
+
+  "copulas": {
+    "_note": "To be: used for state sentences (I am happy)",
+    "en": { "pres1s": "am",     "past1s": "was",        "fut1s": "will be"    },
+    "it": { "pres1s": "sono",   "past1s": "sono stato", "fut1s": "sarò"       },
+    "fr": { "pres1s": "suis",   "past1s": "étais",      "fut1s": "serai"      },
+    "es": { "pres1s": "estoy",  "past1s": "estaba",     "fut1s": "estaré"     },
+    "pt": { "pres1s": "estou",  "past1s": "estava",     "fut1s": "estarei"    }
+  },
+
+  "modals": {
+    "_note": "Modal auxiliary forms per language used when WANT/CAN/MUST operators precede a main verb",
+    "WANT": {
+      "en": { "pres": "want to",   "past": "wanted to",  "fut": "will want to"  },
+      "it": { "pres": "voglio",    "past": "volevo",     "fut": "vorrò"         },
+      "fr": { "pres": "veux",      "past": "voulais",    "fut": "voudrai"       },
+      "es": { "pres": "quiero",    "past": "quería",     "fut": "querré"        },
+      "pt": { "pres": "quero",     "past": "queria",     "fut": "quererei"      }
+    },
+    "CAN": {
+      "en": { "pres": "can",       "past": "could",      "fut": "will be able to" },
+      "it": { "pres": "posso",     "past": "potevo",     "fut": "potrò"          },
+      "fr": { "pres": "peux",      "past": "pouvais",    "fut": "pourrai"        },
+      "es": { "pres": "puedo",     "past": "podía",      "fut": "podré"          },
+      "pt": { "pres": "posso",     "past": "podia",      "fut": "poderei"        }
+    },
+    "MUST": {
+      "en": { "pres": "must",      "past": "had to",     "fut": "will have to"   },
+      "it": { "pres": "devo",      "past": "dovevo",     "fut": "dovrò"          },
+      "fr": { "pres": "dois",      "past": "devais",     "fut": "devrai"         },
+      "es": { "pres": "debo",      "past": "debía",      "fut": "deberé"         },
+      "pt": { "pres": "devo",      "past": "devia",      "fut": "deverei"        }
+    }
+  },
+
+  "negation": {
+    "_note": "How to negate a verb phrase per language",
+    "en": { "pre": "",     "post": "not",    "example": "I do not eat" },
+    "it": { "pre": "non",  "post": "",       "example": "non mangio"   },
+    "fr": { "pre": "ne",   "post": "pas",    "example": "je ne mange pas" },
+    "es": { "pre": "no",   "post": "",       "example": "no como"       },
+    "pt": { "pre": "não",  "post": "",       "example": "não como"      }
+  },
+
+  "subjectOmissionLanguages": ["it", "es", "pt"],
+
+  "pronouns": {
+    "I":   { "en": "I",    "it": "io",  "fr": "je",  "es": "yo",  "pt": "eu"  },
+    "YOU": { "en": "you",  "it": "tu",  "fr": "tu",  "es": "tú",  "pt": "tu"  },
+    "HE":  { "en": "he",   "it": "lui", "fr": "il",  "es": "él",  "pt": "ele" },
+    "SHE": { "en": "she",  "it": "lei", "fr": "elle","es": "ella","pt": "ela" },
+    "WE":  { "en": "we",   "it": "noi", "fr": "nous","es": "nosotros","pt": "nós" },
+    "THEY":{ "en": "they", "it": "loro","fr": "ils", "es": "ellos","pt": "eles" }
+  }
+}

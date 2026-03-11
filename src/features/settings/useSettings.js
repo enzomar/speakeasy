@@ -10,19 +10,21 @@
 import { useState, useCallback, useEffect } from "react";
 
 // ── Storage keys ──────────────────────────────────────────────────────────────
-const VOICE_SPEED_KEY = "speakeasy_voice_speed_v1";
-const VOICE_PITCH_KEY = "speakeasy_voice_pitch_v1";
-const VOICE_NAME_KEY  = "speakeasy_voice_name_v1";
-const HAND_KEY        = "speakeasy_hand_v1";
-const WAKE_KEYS_KEY   = "speakeasy_wake_keywords_v1";
-const AI_MODEL_KEY    = "speakeasy_ai_model_v1";
-const THEME_KEY       = "speakeasy_theme_v1";
-const GENDER_KEY      = "speakeasy_gender_v1";
+const VOICE_SPEED_KEY  = "speakeasy_voice_speed_v1";
+const VOICE_PITCH_KEY  = "speakeasy_voice_pitch_v1";
+const VOICE_NAME_KEY   = "speakeasy_voice_name_v1";
+const HAND_KEY         = "speakeasy_hand_v1";
+const WAKE_KEYS_KEY    = "speakeasy_wake_keywords_v1";
+const AI_MODEL_KEY     = "speakeasy_ai_model_v1";
+const THEME_KEY        = "speakeasy_theme_v1";
+const GENDER_KEY       = "speakeasy_gender_v1";
+const GEMINI_KEY       = "speakeasy_gemini_key_v1";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function normalizeAiModel(model) {
   if (model === "none") return "none";
+  if (model === "gemini") return "gemini";
   if (["gemma", "qwen25"].includes(model)) return model;
   return model === "quality" || model === "default" ? "quality" : "fast";
 }
@@ -87,6 +89,12 @@ export function useSettings() {
   });
   const setWakeKeywords = useCallback((v) => { saveItem(WAKE_KEYS_KEY, v); setWakeKeywordsState(v); }, []);
 
+  // Gemini API key
+  const [geminiApiKey, setGeminiApiKeyState] = useState(() => {
+    try { return localStorage.getItem(GEMINI_KEY) ?? ""; } catch { return ""; }
+  });
+  const setGeminiApiKey = useCallback((v) => { saveItem(GEMINI_KEY, v); setGeminiApiKeyState(v); }, []);
+
   return {
     theme, setTheme,
     voiceSpeed, setVoiceSpeed,
@@ -96,5 +104,6 @@ export function useSettings() {
     hand, setHand,
     gender, setGender,
     wakeKeywords, setWakeKeywords,
+    geminiApiKey, setGeminiApiKey,
   };
 }

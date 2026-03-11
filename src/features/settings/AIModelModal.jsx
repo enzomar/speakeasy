@@ -5,7 +5,7 @@
  */
 
 import { memo, useState, useEffect, useCallback, useRef } from "react";
-import { X, Cpu, Download, Trash2, Pause, Play, Wifi, Zap, Brain, AlertCircle, SlidersHorizontal, Ban } from "lucide-react";
+import { X, Cpu, Download, Trash2, Pause, Play, Wifi, Zap, Brain, AlertCircle, SlidersHorizontal, Ban, Cloud, KeyRound, ExternalLink } from "lucide-react";
 import { MODEL_INFO, isModelCached, deleteModelCache } from "../prediction/useAIPrediction";
 import { GENERATION_CONFIG } from "../../prompts/intentPrompt";
 
@@ -19,6 +19,7 @@ const STATUS_LABEL = {
   unsupported:   "WebGPU not available",
   paused:        "Paused",
   wifi_blocked:  "Waiting for Wi-Fi",
+  needs_key:     "API key required",
 };
 
 const STATUS_COLOR = {
@@ -29,6 +30,7 @@ const STATUS_COLOR = {
   unsupported:  "var(--text-4)",
   paused:       "var(--orange, #F76707)",
   wifi_blocked: "var(--tint)",
+  needs_key:    "var(--orange, #F76707)",
 };
 
 // ── sub-components ─────────────────────────────────────────────────────────────
@@ -63,6 +65,186 @@ function Badge({ label, color = "var(--tint-soft)", textColor = "var(--tint)" })
     }}>
       {label}
     </span>
+  );
+}
+
+// ── GeminiCard — cloud API option ────────────────────────────────────────────
+
+function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, onSelect }) {
+  const [showKey, setShowKey] = useState(false);
+  const [draft, setDraft]     = useState(geminiApiKey ?? "");
+
+  // Sync draft if key changes externally
+  useEffect(() => { setDraft(geminiApiKey ?? ""); }, [geminiApiKey]);
+
+  const hasKey   = (geminiApiKey ?? "").trim().length > 0;
+  const statusLabel = isActive
+    ? (STATUS_LABEL[llmStatus] ?? llmStatus)
+    : (hasKey ? "Custom key" : "Built-in key");
+  const statusColor = isActive
+    ? (STATUS_COLOR[llmStatus] ?? "var(--text-4)")
+    : "var(--green, #2F9E44)"; // always green — built-in or custom key always present
+
+  function saveKey() {
+    setGeminiApiKey(draft.trim());
+  }
+
+  const maskedKey = hasKey
+    ? `${geminiApiKey.slice(0, 6)}…${geminiApiKey.slice(-4)}`
+    : "";
+
+  return (
+    <div style={{
+      background:   "var(--bg)",
+      borderRadius: "var(--radius-md)",
+      padding:      "14px 16px",
+      border:       isActive ? "1.5px solid var(--tint)" : "0.5px solid var(--sep)",
+      position:     "relative",
+    }}>
+      {/* Active badge */}
+      {isActive && (
+        <div style={{ position: "absolute", top: 12, right: 12 }}>
+          <Badge label="Active" />
+        </div>
+      )}
+
+      {/* Header row */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
+        <div style={{
+          width: 32, height: 32, borderRadius: 8,
+          background: isActive ? "var(--tint)" : "var(--sep)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          flexShrink: 0, color: isActive ? "#fff" : "var(--text-3)",
+        }}>
+          <Cloud size={16} strokeWidth={1.8} />
+        </div>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ fontSize: 15, fontWeight: 700, color: "var(--text)" }}>
+            {info.label}
+          </div>
+          <div style={{ fontSize: 12, color: "var(--text-3)", marginTop: 1 }}>
+            {info.description}
+          </div>
+        </div>
+      </div>
+
+      {/* Status row */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
+        <span style={{ fontSize: 12, color: "var(--text-3)", fontWeight: 500 }}>Cloud</span>
+        <span style={{ color: "var(--sep)" }}>·</span>
+        <span style={{ fontSize: 12, fontWeight: 600, color: statusColor }}>{statusLabel}</span>
+      </div>
+
+      {/* API key field (shown when active or editing) */}
+      {(isActive || showKey) && (
+        <div style={{ marginBottom: 12 }}>
+          <div style={{
+            fontSize: 12, fontWeight: 600, color: "var(--text-2)",
+            marginBottom: 6, display: "flex", alignItems: "center", gap: 5,
+          }}>
+            <KeyRound size={12} strokeWidth={2.5} style={{ color: "var(--tint)" }} />
+            Gemini API Key
+          </div>
+          <div style={{ display: "flex", gap: 6 }}>
+            <input
+              type="password"
+              value={draft}
+              placeholder="AIza…"
+              onChange={e => setDraft(e.target.value)}
+              onBlur={saveKey}
+              aria-label="Gemini API key"
+              style={{
+                flex: 1, padding: "9px 11px",
+                borderRadius: 8, border: "1px solid var(--sep)",
+                background: "var(--elevated)", color: "var(--text)",
+                fontSize: 13, fontFamily: "monospace",
+                outline: "none", minWidth: 0,
+              }}
+            />
+            <button
+              onClick={saveKey}
+              style={{
+                padding: "9px 14px", borderRadius: 8, border: "none",
+                background: "var(--tint)", color: "#fff",
+                fontSize: 13, fontWeight: 700, cursor: "pointer",
+                flexShrink: 0,
+                WebkitTapHighlightColor: "transparent",
+              }}
+            >
+              Save
+            </button>
+          </div>
+          {hasKey && (
+            <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 5 }}>
+              Saved: <code style={{ fontFamily: "monospace" }}>{maskedKey}</code>
+              {" · "}
+              <button
+                onClick={() => { setDraft(""); setGeminiApiKey(""); }}
+                style={{
+                  background: "none", border: "none",
+                  color: "var(--red)", fontSize: 11,
+                  cursor: "pointer", padding: 0, fontWeight: 600,
+                }}
+              >
+                Remove
+              </button>
+            </div>
+          )}
+          <a
+            href="https://aistudio.google.com/app/apikey"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 4,
+              marginTop: 8, fontSize: 11, color: "var(--tint)",
+              textDecoration: "none", fontWeight: 600,
+            }}
+          >
+            <ExternalLink size={11} strokeWidth={2.5} />
+            Get a free API key from Google AI Studio
+          </a>
+          {!hasKey && (
+            <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 4 }}>
+              A built-in key is already active. Enter your own key above to override it.
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Privacy note */}
+      {isActive && (
+        <div style={{
+          display: "flex", alignItems: "flex-start", gap: 6,
+          padding: "8px 10px", borderRadius: 8,
+          background: "rgba(255,149,0,0.08)", marginBottom: 10,
+        }}>
+          <AlertCircle size={13} style={{ color: "var(--orange, #F76707)", marginTop: 1, flexShrink: 0 }} />
+          <span style={{ fontSize: 11, color: "var(--text-3)", lineHeight: 1.5 }}>
+            Transcripts are sent to Google’s servers for reply generation.
+            Your key is stored locally and never shared.
+          </span>
+        </div>
+      )}
+
+      {/* Action buttons */}
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        {!isActive && (
+          <ActionBtn
+            label="Use Gemini Flash"
+            icon={<Zap size={13} strokeWidth={2.2} />}
+            primary
+            onClick={onSelect}
+          />
+        )}
+        {!isActive && !showKey && (
+          <ActionBtn
+            label={hasKey ? "Edit key" : "Add API key"}
+            icon={<KeyRound size={13} strokeWidth={2.2} />}
+            onClick={() => setShowKey(s => !s)}
+          />
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -340,6 +522,8 @@ export default memo(function AIModelModal({
   onResume,
   onDelete,
   onSwitchModel,
+  geminiApiKey,
+  setGeminiApiKey,
 }) {
   const sheetRef = useRef(null);
 
@@ -364,7 +548,7 @@ export default memo(function AIModelModal({
 
   if (!open) return null;
 
-  const models = Object.values(MODEL_INFO); // [fast, quality]
+  const models = Object.values(MODEL_INFO).filter(m => !m.cloud); // local models only
 
   return (
     /* Backdrop */
@@ -449,7 +633,17 @@ export default memo(function AIModelModal({
           gap:      12,
           WebkitOverflowScrolling: "touch",
         }}>
-          {/* Model cards */}
+          {/* Gemini cloud model card */}
+          <GeminiCard
+            info={MODEL_INFO.gemini}
+            isActive={activeModelKey === "gemini"}
+            llmStatus={llmStatus}
+            geminiApiKey={geminiApiKey}
+            setGeminiApiKey={setGeminiApiKey}
+            onSelect={() => onSwitchModel("gemini")}
+          />
+
+          {/* Local model cards */}
           {models.map(info => (
             <ModelCard
               key={info.key}

@@ -1,0 +1,592 @@
+You are a senior software architect and accessibility engineer.
+
+Design and implement a lightweight language engine for an AAC (Augmentative and Alternative Communication) application.
+
+The system converts concept tokens selected from a grid UI into short natural sentences suitable for text-to-speech.
+
+The design must prioritize:
+
+* deterministic grammar
+* very low latency
+* offline capability
+* accessibility
+* extensibility to multiple languages
+
+Architecture requirements:
+
+1. Concept Layer
+
+Represent concepts as semantic units rather than words.
+
+Example concepts:
+
+I
+YOU
+GO
+DRINK
+EAT
+WATER
+FOOD
+HOME
+HELP
+
+Concepts should be stored in JSON with metadata:
+
+{
+"GO": {
+"type": "verb",
+"lemma": "andare"
+}
+}
+
+2. Semantic Operators
+
+Implement operators that modify concepts.
+
+Examples:
+
+PAST
+FUTURE
+NOT
+WANT
+CAN
+NOW
+
+Operators should combine with concepts to produce meaning.
+
+Example:
+
+GO + PAST → past tense of GO
+
+Example token sequence:
+
+[I, GO, PAST, HOME]
+
+3. Grammar Graph
+
+Define valid sentence structures using a grammar graph.
+
+Example structure:
+
+subject → verb → object → place → time → end
+
+Represent the grammar graph as JSON.
+
+4. Morphology Engine
+
+Create a morphology module that converts lemmas and grammatical features into correct surface forms.
+
+Example:
+
+lemma: andare
+tense: past
+person: 1
+
+Output:
+
+sono andato
+
+The morphology system must support conjugation rules.
+
+5. Sentence Builder
+
+Implement a deterministic sentence builder that:
+
+* interprets tokens
+* applies operators
+* constructs a grammatical structure
+* generates a sentence string
+
+Example:
+
+Input tokens:
+
+[I, WANT, DRINK, WATER]
+
+Output:
+
+Voglio bere acqua
+
+6. Heuristic Naturalization
+
+Add rules to improve naturalness while preserving meaning.
+
+Examples:
+
+"Io voglio acqua" → "Voglio acqua"
+
+Keep sentences short (3–6 words).
+
+7. Concept Prediction Engine
+
+Implement a prediction engine that suggests the next likely concepts.
+
+Use a simple n-gram model based on concept sequences.
+
+Example:
+
+History:
+
+[I, WANT]
+
+Predicted next concepts:
+
+WATER
+FOOD
+HELP
+
+Prediction must be filtered using the grammar graph so only valid concepts are suggested.
+
+8. Optional LLM Correction
+
+Provide an optional module that sends generated sentences to an LLM API to correct grammar and naturalness.
+
+Example prompt:
+
+"Fix grammar and naturalness. Do not change meaning. Keep sentences short."
+
+The system must still work without the LLM.
+
+9. UI Integration
+
+Explain how the engine integrates with a grid-based AAC UI.
+
+Features:
+
+* concept buttons
+* dynamic prediction highlighting
+* minimal number of taps
+* accessibility-friendly navigation
+
+10. Implementation
+
+Use TypeScript.
+
+Provide:
+
+* modular architecture
+* JSON configuration files
+* example dataset of ~30 concepts
+* example prediction dataset
+* unit tests
+* example sentences
+
+The final system should be able to generate thousands of sentences from a small set of concepts and operators.
+
+
+( multi languge )
+
+========
+
+You are a senior software architect and accessibility engineer.
+
+Design and implement a lightweight multi-language language engine for an AAC (Augmentative and Alternative Communication) application.
+
+The engine converts concept tokens selected from a grid-based UI into short natural sentences suitable for text-to-speech.
+
+The system must support the following languages:
+
+* English (en)
+* French (fr)
+* Spanish (es)
+* Portuguese (pt)
+* Italian (it)
+
+The design must prioritize:
+
+* deterministic grammar
+* low latency
+* offline capability
+* accessibility
+* modular multi-language support
+* predictable behavior for assistive communication
+
+The architecture should separate language-independent semantics from language-specific grammar.
+
+---
+
+1. Semantic Concept Layer
+
+Concepts must be language-independent.
+
+Each concept represents a semantic unit rather than a word.
+
+Example concepts:
+
+I
+YOU
+GO
+WANT
+DRINK
+EAT
+HELP
+WATER
+FOOD
+HOME
+SCHOOL
+
+Concepts must be stored in JSON.
+
+Example:
+
+{
+"WATER": {
+"type": "object",
+"translations": {
+"en": "water",
+"fr": "eau",
+"es": "agua",
+"pt": "água",
+"it": "acqua"
+}
+}
+}
+
+Concepts should include metadata:
+
+* type (subject, verb, object, place, time)
+* lemma (per language)
+* grammatical features
+
+---
+
+2. Semantic Operators
+
+Implement operators that modify meaning.
+
+Examples:
+
+PAST
+FUTURE
+NOT
+CAN
+WANT
+NOW
+
+Operators combine with concepts.
+
+Example:
+
+[I, GO, PAST, HOME]
+
+Meaning:
+
+subject = I
+verb = GO
+tense = past
+place = HOME
+
+---
+
+3. Grammar Graph
+
+Define valid concept sequences using a grammar graph.
+
+Example structure:
+
+subject → verb → object → place → time → end
+
+Represent the grammar graph as JSON.
+
+The grammar graph should be language-independent.
+
+---
+
+4. Language Modules
+
+Each language must have its own language module.
+
+Languages supported:
+
+en
+fr
+es
+pt
+it
+
+Each module must contain:
+
+* verb morphology rules
+* preposition rules
+* contraction rules
+* word order adjustments
+
+Example issues to handle:
+
+French contractions:
+de + eau → de l'eau
+
+Italian prepositions:
+andare a casa
+
+Portuguese contractions:
+de + o → do
+
+English simplified morphology.
+
+---
+
+5. Morphology Engine
+
+Create a morphology system that converts lemmas and grammatical features into surface forms.
+
+Example:
+
+lemma: andare
+person: 1
+tense: present
+
+Output (Italian):
+
+vado
+
+Example:
+
+lemma: querer
+person: 1
+tense: present
+
+Output (Spanish):
+
+quiero
+
+Morphology should be implemented using JSON conjugation tables and simple rules.
+
+---
+
+6. Sentence Builder
+
+Implement a deterministic sentence generator.
+
+Steps:
+
+1. interpret tokens
+2. apply semantic operators
+3. map concepts to language lemmas
+4. apply morphology
+5. assemble sentence
+6. apply language-specific cleanup rules
+
+Example input tokens:
+
+[I, WANT, DRINK, WATER]
+
+Example outputs:
+
+English:
+I want water
+
+Italian:
+Voglio acqua
+
+French:
+Je veux de l'eau
+
+Spanish:
+Quiero agua
+
+Portuguese:
+Quero água
+
+Sentences should remain short (3–6 words).
+
+---
+
+7. Naturalization Rules
+
+Implement heuristic rules to improve naturalness while preserving meaning.
+
+Examples:
+
+remove unnecessary pronouns
+fix missing prepositions
+apply contractions
+
+Example:
+
+"Io voglio acqua" → "Voglio acqua"
+
+---
+
+8. Concept Prediction Engine
+
+Implement a simple next-concept prediction engine.
+
+Use an n-gram model trained on concept sequences.
+
+Example:
+
+History:
+[I, WANT]
+
+Predicted next concepts:
+
+WATER
+FOOD
+HELP
+
+Prediction must be filtered using the grammar graph to ensure valid sequences.
+
+---
+
+9. Optional LLM Grammar Correction
+
+Provide an optional module that sends the generated sentence to an LLM API to improve grammar and naturalness.
+
+Example prompt:
+
+"Fix grammar and naturalness. Do not change meaning. Keep sentences short."
+
+The system must still work correctly without an LLM.
+
+---
+
+10. UI Integration
+
+Explain how the language engine integrates with a grid-based AAC UI.
+
+Features:
+
+* concept buttons
+* dynamic prediction highlighting
+* minimal number of taps
+* accessible navigation
+
+---
+
+11. Implementation Requirements
+
+Use TypeScript.
+
+Provide:
+
+* modular architecture
+* JSON configuration files
+* concept dataset (30–50 concepts)
+* conjugation examples
+* prediction dataset
+* unit tests
+* example sentences for all languages
+
+The system should be able to generate thousands of sentences from a small concept set.
+
+Explain the architecture clearly.
+
+
+=================
+
+You are a senior software architect and accessibility engineer.
+
+Design and implement a **confidence-based grammar and naturalness correction system** for an AAC application. The system should:
+
+1. Take **concept tokens** and generate a deterministic sentence using:
+
+   * Grammar graph validation
+   * Morphology engine
+   * Prediction engine (n-gram / probability-based)
+
+2. Compute a **confidence score (0–1)** for the generated sentence based on:
+
+   * **Grammar score**: 1 if sentence follows grammar graph rules, <1 if minor deviations
+
+   * **Morphology score**: 1 if verb conjugations, gender agreement, prepositions are correct, <1 if minor issues
+
+   * **Prediction score**: probability of the concept sequence according to the prediction engine
+
+   * Combine scores into overall confidence:
+
+     ```
+     confidence = w1*grammar_score + w2*morphology_score + w3*prediction_score
+     ```
+
+   * Weights can be tuned; default: `w1=0.4`, `w2=0.4`, `w3=0.2`
+
+3. **Use AI correction only if confidence < threshold**
+
+   * Threshold default: 0.8
+   * If confidence ≥ threshold → return sentence as-is
+   * If confidence < threshold → call LLM to correct grammar and naturalness
+
+4. **Implement caching**
+
+   * Store every sentence that has been AI-corrected along with input concept tokens and output sentence
+   * Before sending a new sentence to AI:
+
+     * Check if the **same concept token sequence** exists in cache
+     * If yes → return cached corrected sentence
+     * If no → send to AI, store result in cache
+
+5. **System requirements**
+
+   * Must support multiple languages (en, fr, es, pt, it)
+   * Sentence length: 3–6 words
+   * Output: corrected natural sentence
+   * Fallback: if AI fails, return deterministic sentence
+   * Cache should persist between app sessions
+
+6. **Expected input/output example**
+
+```json
+{
+  "concept_tokens": ["I", "WANT", "DRINK", "WATER"],
+  "language": "it"
+}
+```
+
+* Deterministic sentence: `"Voglio acqua"`
+* Confidence: `0.95` → return as-is
+
+```json
+{
+  "concept_tokens": ["I", "GO", "HOME"],
+  "language": "fr"
+}
+```
+
+* Deterministic sentence: `"Je vais maison"`
+* Confidence: `0.65` → AI correction → `"Je vais à la maison"`
+* Store in cache
+
+---
+
+7. **Implementation suggestions**
+
+   * TypeScript or Python
+   * Use lightweight JSON cache (e.g., key = joined concept tokens + language)
+   * Modular design:
+
+     ```
+     Concept tokens → Grammar/Morphology → Confidence → [Cache → AI] → Sentence
+     ```
+   * AI correction should only be triggered for **low-confidence sentences**
+-----
+
+
+User taps → Concept Tokens
+       │
+       ▼
+Grammar Graph Validator
+       │
+       ▼
+Morphology Engine
+       │
+       ▼
+Deterministic Sentence
+       │
+       ▼
+Confidence Scorer
+       │
+ ┌─────┴─────┐
+High Conf     Low Conf
+ (>0.8)       (≤0.8)
+ │             │
+ ▼             ▼
+Return       Check Cache
+Sentence       │
+               ▼
+        Cached? ──No──> AI Correction
+               │         │
+               Yes        ▼
+               │      Store in Cache
+               ▼         │
+          Return Sentence
