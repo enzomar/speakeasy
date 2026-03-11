@@ -26,7 +26,7 @@ import {
 } from './morphologyEngine.js';
 
 /**
- * @typedef {'en'|'it'|'fr'|'es'|'pt'} LangCode
+ * @typedef {'en'|'it'|'fr'|'es'|'pt'|'de'|'ar'|'zh'|'ja'|'ko'} LangCode
  *
  * @typedef {Object} SentenceResult
  * @property {string}   text         - The final rendered sentence
@@ -151,7 +151,7 @@ function _parseTokenStream(ids, lang) {
       continue;
     }
 
-    if (type === 'place') {
+    if (type === 'place' || (type === 'noun' && entry?.role === 'place')) {
       result.places.push(id);
       continue;
     }
@@ -177,39 +177,85 @@ function _parseTokenStream(ids, lang) {
 function _render(parsed, lang) {
   const parts = [];
 
+  // Determine language family for word order
+  const isSOV = (lang === 'ja' || lang === 'ko');   // Subject-Object-Verb
+  const isCJK = (lang === 'zh' || lang === 'ja' || lang === 'ko');
+
   // Subject
   const subjectForm = inflectPronoun(parsed.subject, lang, /* omitFirstPerson */ true);
   if (subjectForm) parts.push(subjectForm);
 
   if (parsed.isCopula && !parsed.verb) {
     // S + BE + ADJ  (e.g. "I am happy")
-    parts.push(getCopula(lang, parsed.tense));
-    for (const adj of parsed.adjectives) {
-      parts.push(inflectNoun(adj, lang)); // adjectives fall through to inflectNoun for now
+    if (lang === 'zh') {
+      // Chinese: S + 很 + ADJ (or just S + ADJ)
+      const copula = getCopula(lang, parsed.tense);
+      if (parsed.tense === 'future') {
+        parts.push('会');
+      }
+      for (const adj of parsed.adjectives) {
+        const word = inflectNoun(adj, lang);
+        if (parsed.tense === 'present') parts.push('很' + word);
+        else if (parsed.tense === 'past') parts.push(word + '了');
+        else parts.push(word);
+      }
+    } else if (lang === 'ja') {
+      // Japanese: S + ADJ + です (copula after adjective)
+      for (const adj of parsed.adjectives) {
+        parts.push(inflectNoun(adj, lang));
+      }
+      const copula = getCopula(lang, parsed.tense);
+      if (copula) parts.push(copula);
+    } else if (lang === 'ko') {
+      // Korean: S + ADJ (adjective-verb, self-contained predicate)
+      for (const adj of parsed.adjectives) {
+        parts.push(inflectNoun(adj, lang));
+      }
+    } else {
+      // SVO languages: S + copula + ADJ
+      parts.push(getCopula(lang, parsed.tense));
+      for (const adj of parsed.adjectives) {
+        parts.push(inflectNoun(adj, lang));
+      }
     }
   } else if (parsed.verb) {
-    // S + (MODAL) + V + (OBJ) + (PLACE)
-    const verbForm = inflectVerb(
-      parsed.verb,
-      lang,
-      parsed.tense,
-      parsed.negated,
-      parsed.modal,
-    );
-    parts.push(verbForm);
-
-    for (const obj of parsed.objects) {
-      parts.push(inflectNoun(obj, lang));
-    }
-
-    for (const place of parsed.places) {
-      const placeWord = inflectNoun(place, lang);
-      const prep = _getPreposition('at', lang);
-      parts.push(`${prep} ${placeWord}`);
-    }
-
-    for (const adv of parsed.adverbs) {
-      parts.push(inflectNoun(adv, lang));
+    if (isSOV) {
+      // SOV: S + OBJ + PLACE + V
+      for (const obj of parsed.objects) {
+        const word = inflectNoun(obj, lang);
+        if (lang === 'ja') parts.push(word + 'を');
+        else if (lang === 'ko') parts.push(word + '을');
+        else parts.push(word);
+      }
+      for (const place of parsed.places) {
+        const placeEntry = _lookup(place);
+        const placeWord = placeEntry?.locative?.[lang] ?? inflectNoun(place, lang);
+        parts.push(placeWord);
+      }
+      const verbForm = inflectVerb(
+        parsed.verb, lang, parsed.tense, parsed.negated, parsed.modal,
+      );
+      parts.push(verbForm);
+      for (const adv of parsed.adverbs) {
+        parts.push(inflectNoun(adv, lang));
+      }
+    } else {
+      // SVO: S + V + OBJ + PLACE (en, it, fr, es, pt, de, ar, zh)
+      const verbForm = inflectVerb(
+        parsed.verb, lang, parsed.tense, parsed.negated, parsed.modal,
+      );
+      parts.push(verbForm);
+      for (const obj of parsed.objects) {
+        parts.push(inflectNoun(obj, lang));
+      }
+      for (const place of parsed.places) {
+        const placeEntry = _lookup(place);
+        const placeWord = placeEntry?.locative?.[lang] ?? inflectNoun(place, lang);
+        parts.push(placeWord);
+      }
+      for (const adv of parsed.adverbs) {
+        parts.push(inflectNoun(adv, lang));
+      }
     }
   } else {
     // Fallback: just output first object concept as noun phrase
@@ -236,18 +282,36 @@ function _naturalize(parts, lang, parsed) {
   // French: je + vowel → j'
   if (lang === 'fr') {
     joined = joined.replace(/^je ([aeéèêiouàâ])/i, "j'$1");
-    // ne ... → n' before vowel
     joined = joined.replace(/\bne ([aeéèêiouàâ])/gi, "n'$1");
   }
 
-  // Italian: "mi sono sentito" etc. — reflexive already in verb form, no extra work
-  // Italian: ensure "non mi" stays together
+  // Italian: reflexive handling
   if (lang === 'it') {
     joined = joined.replace(/non mi /, 'non mi ');
   }
 
-  // Spanish: "me gusta" + noun — remove any duplicate subject marker
-  // All handled by inflectVerb returning full form
+  // German: verb-second (V2) — in simple declarative main clauses
+  // The verb should be in second position. If subject is present,
+  // the order is already S-V which satisfies V2.
+  // For future tense with "werde", it's already handled in verb forms.
+
+  // Chinese: remove spaces between characters for more natural output
+  if (lang === 'zh') {
+    // Keep spaces around Latin characters but remove between CJK
+    joined = joined.replace(/([\u4e00-\u9fff\u3000-\u303f])\s+([\u4e00-\u9fff\u3000-\u303f])/g, '$1$2');
+    // Apply again for consecutive CJK groups
+    joined = joined.replace(/([\u4e00-\u9fff\u3000-\u303f])\s+([\u4e00-\u9fff\u3000-\u303f])/g, '$1$2');
+  }
+
+  // Japanese: remove spaces for natural output (Japanese doesn't use spaces)
+  if (lang === 'ja') {
+    joined = joined.replace(/\s+/g, '');
+  }
+
+  // Korean: keep spaces (Korean uses spaces between words)
+  // No special naturalization needed.
+
+  // Arabic: no special naturalization needed for basic sentences
 
   return joined;
 }
@@ -255,10 +319,14 @@ function _naturalize(parts, lang, parsed) {
 // ─── Finalize ─────────────────────────────────────────────────────────────────
 function _finalize(text) {
   if (!text) return '';
-  // Capitalise first letter
-  const cap = text.charAt(0).toUpperCase() + text.slice(1);
+  // Capitalise first letter (skip for CJK scripts which don't have case)
+  const firstChar = text.charAt(0);
+  const isCJK = /[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]/.test(firstChar);
+  const isArabic = /[\u0600-\u06ff]/.test(firstChar);
+  const cap = (isCJK || isArabic) ? text : (firstChar.toUpperCase() + text.slice(1));
   // Add period if not already punctuated
-  if (/[.!?]$/.test(cap)) return cap;
+  if (/[.!?。！？]$/.test(cap)) return cap;
+  // Use language-appropriate period
   return cap + '.';
 }
 
@@ -273,9 +341,9 @@ function _scoreConfidence(parsed) {
 
 // ─── Prepositions helper ──────────────────────────────────────────────────────
 const PREPOSITIONS = {
-  at: { en: 'at', it: 'a', fr: 'à', es: 'en', pt: 'em' },
-  to: { en: 'to', it: 'a', fr: 'à', es: 'a',  pt: 'a'  },
-  in: { en: 'in', it: 'in', fr: 'dans', es: 'en', pt: 'em' },
+  at: { en:'at', it:'a',  fr:'à',    es:'en', pt:'em',  de:'bei',  ar:'في',   zh:'在', ja:'で', ko:'에서' },
+  to: { en:'to', it:'a',  fr:'à',    es:'a',  pt:'a',   de:'zu',   ar:'إلى',  zh:'去', ja:'に', ko:'에'   },
+  in: { en:'in', it:'in', fr:'dans', es:'en', pt:'em',  de:'in',   ar:'في',   zh:'在', ja:'で', ko:'에서' },
 };
 
 function _getPreposition(prep, lang) {

@@ -12,6 +12,15 @@ if (!document.querySelector('meta[name="viewport"]')) {
   document.head.appendChild(meta);
 }
 
+// PWA / Capacitor: window.innerHeight is the true usable height, unlike
+// 100svh / 100vh which can mismatch in standalone PWA mode (especially iOS).
+// We expose it as --app-height so the layout uses the real viewport size.
+function _setAppHeight() {
+  document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+}
+_setAppHeight();
+window.addEventListener('resize', _setAppHeight);
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>

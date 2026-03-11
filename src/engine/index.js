@@ -75,6 +75,7 @@ export {
   labelsToConceptIds,
   tapContextToConceptIds,
   isKnownConcept,
+  l1CategoryToConceptId,
 } from './hierarchyBridge.js';
 
 // Re-export the raw data for external inspection if needed

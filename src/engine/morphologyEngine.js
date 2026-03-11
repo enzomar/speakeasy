@@ -2,7 +2,7 @@
  * morphologyEngine.js
  *
  * Converts concept-level tokens into surface-form words for a given language.
- * Supports 5 languages: en, it, fr, es, pt.
+ * Supports 10 languages: en, it, fr, es, pt, de, ar, zh, ja, ko.
  *
  * @module morphologyEngine
  */
@@ -11,7 +11,7 @@ import TABLES from './morphologyTables.json' assert { type: 'json' };
 import LEXICON from './lexicon.json' assert { type: 'json' };
 
 /**
- * @typedef {'en'|'it'|'fr'|'es'|'pt'} LangCode
+ * @typedef {'en'|'it'|'fr'|'es'|'pt'|'de'|'ar'|'zh'|'ja'|'ko'} LangCode
  * @typedef {'present'|'past'|'future'} Tense
  * @typedef {'WANT'|'CAN'|'MUST'|null} Modal
  */
@@ -29,8 +29,9 @@ import LEXICON from './lexicon.json' assert { type: 'json' };
 export function inflectVerb(conceptId, lang, tense = 'present', negated = false, modal = null) {
   const verbEntry = TABLES.verbs[conceptId];
   if (!verbEntry) {
-    // Fallback: use label from lexicon
+    // Fallback: use lemma or label from lexicon
     const lex = LEXICON.concepts[conceptId];
+    if (lex?.lemma?.[lang]) return lex.lemma[lang];
     if (lex?.labels?.[lang]) return lex.labels[lang];
     return conceptId.toLowerCase();
   }
@@ -144,8 +145,8 @@ function _getCouplaTense(copula, tense) {
 function _buildModalPhrase(modalForm, infinitive, lang, modal) {
   switch (lang) {
     case 'en':
-      // "want to go", "can go", "must go"
-      if (modal === 'WANT') return `${modalForm} ${infinitive}`;
+    case 'de':
+      // "want to go", "can go" / "will gehen", "kann gehen"
       return `${modalForm} ${infinitive}`;
     case 'it':
     case 'es':
@@ -154,6 +155,18 @@ function _buildModalPhrase(modalForm, infinitive, lang, modal) {
       return `${modalForm} ${infinitive}`;
     case 'fr':
       // "veux aller"
+      return `${modalForm} ${infinitive}`;
+    case 'ar':
+      // "أريد الذهاب" — modal + infinitive (masdar)
+      return `${modalForm} ${infinitive}`;
+    case 'zh':
+      // "想 去" — modal + verb
+      return `${modalForm}${infinitive}`;
+    case 'ja':
+      // "行きたい" — verb stem + tai (handled differently; modal form IS the suffix)
+      return `${infinitive}${modalForm}`;
+    case 'ko':
+      // "가고 싶어요" — Korean modal phrase
       return `${modalForm} ${infinitive}`;
     default:
       return `${modalForm} ${infinitive}`;
@@ -175,15 +188,12 @@ function _negate(verbPhrase, lang) {
       if (verbPhrase.startsWith('will ')) {
         return verbPhrase.replace('will ', 'will not ');
       }
-      // For simple present/past, prepend "do not" as simplification
       return `do not ${verbPhrase}`;
     }
     case 'it':
-      // "vado" → "non vado"
       return `non ${verbPhrase}`;
     case 'fr': {
       // "mange" → "ne mange pas"
-      // "vais manger" → "ne vais pas manger"
       const words = verbPhrase.split(' ');
       if (words.length >= 2) {
         return `ne ${words[0]} pas ${words.slice(1).join(' ')}`;
@@ -194,6 +204,32 @@ function _negate(verbPhrase, lang) {
       return `no ${verbPhrase}`;
     case 'pt':
       return `não ${verbPhrase}`;
+    case 'de': {
+      // "gehe" → "gehe nicht" | "werde gehen" → "werde nicht gehen"
+      if (verbPhrase.startsWith('werde ')) {
+        return verbPhrase.replace('werde ', 'werde nicht ');
+      }
+      return `${verbPhrase} nicht`;
+    }
+    case 'ar':
+      // "آكل" → "لا آكل"
+      return `لا ${verbPhrase}`;
+    case 'zh':
+      // "吃" → "不吃" (present/future) — past uses 没 but simplified to 不
+      return `不${verbPhrase}`;
+    case 'ja': {
+      // "食べます" → "食べません" | replace ます with ません
+      if (verbPhrase.endsWith('ます')) {
+        return verbPhrase.slice(0, -2) + 'ません';
+      }
+      if (verbPhrase.endsWith('です')) {
+        return verbPhrase.slice(0, -2) + 'ではありません';
+      }
+      return verbPhrase + 'ない';
+    }
+    case 'ko':
+      // "먹어요" → "안 먹어요"
+      return `안 ${verbPhrase}`;
     default:
       return `not ${verbPhrase}`;
   }

@@ -1,13 +1,12 @@
 /**
  * ProfilePanel — Profile / Identity page.
- * Contains: Identity (avatar + name + gender), Contact the Author, About.
+ * Contains: Identity (avatar + name + gender), About.
  */
 
 import { memo, useState, useCallback } from "react";
 import { MessageSquare, Search } from "lucide-react";
-import { HELP } from "../../shared/ui/HelpModal";
 import {
-  Section, Row, AvatarPicker, ContactForm, store, load,
+  Section, Row, AvatarPicker, store, load,
 } from "../../shared/ui/settingsUI";
 
 export default memo(function ProfilePanel({
@@ -128,15 +127,6 @@ export default memo(function ProfilePanel({
                 </button>
               ))}
             </div>
-          </div>
-        </Section>
-        )}
-
-        {/* ── Contact the Author ── */}
-        {show("contact", "author", "message", "email", ui?.sectionContact ?? "contact") && (
-        <Section title={ui?.sectionContact ?? "Contact the Author"}>
-          <div style={{ padding: "16px" }}>
-            <ContactForm t={HELP[uiLangCode] ?? HELP.en} />
           </div>
         </Section>
         )}

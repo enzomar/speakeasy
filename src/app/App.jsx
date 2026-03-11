@@ -5,7 +5,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
   Grid3X3, Clock, Settings, User,
-  Cpu, Ear, HelpCircle, ArrowLeft, Keyboard, Siren
+  Cpu, Ear, HelpCircle, ArrowLeft, Keyboard, Siren, Hand
 } from "lucide-react";
 
 // App-level
@@ -36,6 +36,7 @@ import SettingsPanel     from "../features/settings/SettingsPanel";
 import HistoryPanel      from "../features/history/HistoryPanel";
 import ConversationPanel from "../features/listen/ConversationPanel";
 import HelpModal         from "../shared/ui/HelpModal";
+import SignLanguageModal from "../shared/ui/SignLanguageModal";
 import AIModelModal      from "../features/settings/AIModelModal";
 import InstallPrompt     from "../shared/ui/InstallPrompt";
 import Onboarding, { ONBOARDING_KEY } from "../features/onboarding/Onboarding";
@@ -208,6 +209,7 @@ export default function App() {
   const [tapContext, setTapContext] = useState(null);                // { l1Label, l2Label, l3Label, l3Type } — hierarchy path
   const [emotion, setEmotion] = useState("neutral");               // null = auto-detect, or one of EMOTIONS; default neutral
   const [showHelp, setShowHelp] = useState(false);
+  const [showSignGuide, setShowSignGuide] = useState(false);
   const [boardMode, setBoardMode] = useState("symbols");              // "symbols" | "keyboard"
   const [quickSubTab, setQuickSubTab] = useState(null);               // null = show sub-cat grid, string = phrase tab id
   const [lastSpoken, setLastSpoken] = useState("");                     // last spoken sentence for repeat
@@ -510,7 +512,7 @@ export default function App() {
   return (
     <div style={{
       minHeight:     "100vh",
-      height:        "100svh",
+      height:        "var(--app-height, 100svh)",
       display:       "flex",
       flexDirection: "column",
       background:    "var(--bg)",
@@ -533,33 +535,16 @@ export default function App() {
           WebkitBackdropFilter: "saturate(180%) blur(20px)",
           backdropFilter: "saturate(180%) blur(20px)",
           borderBottom:   "var(--glass-border)",
-          padding:        "var(--safe-top, 0) 16px 8px",
+          padding:        "var(--safe-top, 0) 8px 8px",
           display:        "flex",
           alignItems:     "center",
-          justifyContent: "space-between",
+          justifyContent: "center",
           flexShrink:     0,
           zIndex:         20,
           minHeight:      64,
         }}>
-          {/* Logo */}
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <img
-              src="/se.png"
-              alt="SpeakEasy"
-              width={34}
-              height={34}
-              style={{ borderRadius: 10, flexShrink: 0 }}
-            />
-            <div>
-              <div style={{ fontWeight: 700, fontSize: 17, color: "var(--text)",
-                letterSpacing: "-0.02em", lineHeight: 1.2 }}>
-                SpeakEasy
-              </div>
-            </div>
-          </div>
-
-          {/* Right: AI status + Listen toggle + Settings icon */}
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          {/* Icons — distributed evenly across full width */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-evenly", width: "100%" }}>
             <button
               onClick={() => setShowAIModal(true)}
               style={{
@@ -614,6 +599,23 @@ export default function App() {
               }}
             >
               <Ear size={20} strokeWidth={1.8} />
+            </button>
+
+            {/* Sign Language Guide button */}
+            <button
+              onClick={() => setShowSignGuide(true)}
+              aria-label="Sign Language Guide"
+              style={{
+                width: 48, height: 48, borderRadius: 14,
+                background: "var(--elevated)",
+                border: "0.5px solid var(--sep)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                cursor: "pointer", transition: "all 0.18s ease",
+                color: "var(--text-3)",
+                touchAction: "manipulation",
+              }}
+            >
+              <Hand size={20} strokeWidth={1.8} />
             </button>
 
             {/* Help button */}
@@ -698,6 +700,7 @@ export default function App() {
         </>}
 
         {/* ─────────────────── MAIN CONTENT ─────────────────── */}
+        {/* flex:1 — nav is a natural flex sibling below, no padding compensation needed */}
         <div style={{ flex: 1, overflow: "hidden", display: "flex", flexDirection: "column" }}>
 
           {/* ── Inline conversation panel — replaces old bottom-sheet overlay ── */}
@@ -927,6 +930,10 @@ export default function App() {
         </div>
 
       {/* ─────────────────── BOTTOM NAV ─────────────────── */}
+      {/* Natural flex child — avoids position:fixed PWA bugs on iOS/Android where
+           fixed elements inside overflow:hidden ancestors can be clipped or pushed
+           off-screen in standalone mode. The root div already fills --app-height
+           as a flex column, so the nav always anchors to the real bottom. */}
       <nav style={{
         display:       "flex",
         background:    "var(--glass-bg)",
@@ -934,9 +941,7 @@ export default function App() {
         backdropFilter: "saturate(180%) blur(20px)",
         borderTop:     "var(--glass-border)",
         flexShrink:    0,
-        position:      "sticky",
-        bottom:        0,
-        paddingBottom: "max(var(--safe-bottom, 0px), env(safe-area-inset-bottom, 0px))",
+        paddingBottom: "env(safe-area-inset-bottom, 0px)",
         zIndex:        20,
       }} aria-label="Main navigation">
         <NavItem id="board"     icon={Grid3X3}  label={ui.board       ?? "Board"}      active={tab === "board"}     onClick={setTab} />
@@ -944,6 +949,17 @@ export default function App() {
         <NavItem id="settings"  icon={Settings} label={ui.settings   ?? "Settings"}   active={tab === "settings"} onClick={setTab} />
         <NavItem id="profile"   icon={User}     label={ui.profile     ?? "Profile"}    active={tab === "profile"}  onClick={setTab} />
       </nav>
+
+      {/* Sign Language Guide modal */}
+      {showSignGuide && (
+        <SignLanguageModal
+          open={showSignGuide}
+          onClose={() => setShowSignGuide(false)}
+          langCode={uiLangCode}
+          typeLangCode={typeLangCode}
+          onSpeak={(word) => speak(word, { lang: ttsLang.ttsLang, rate: voiceSpeed, pitch: voicePitch, voiceName })}
+        />
+      )}
 
       {/* Help modal */}
       {showHelp && (

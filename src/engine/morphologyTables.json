@@ -2,193 +2,1887 @@
   "_meta": {
     "version": 1,
     "description": "Conjugation tables for the AAC morphology engine. Verbs keyed by concept id. Each form: present-1s, past-1s, future-1s, gerund, infinitive, pastParticiple.",
-    "persons": { "1": "I", "2": "you", "3": "he/she/it" },
+    "persons": {
+      "1": "I",
+      "2": "you",
+      "3": "he/she/it"
+    },
     "auxiliaries": {
       "note": "Italian uses 'essere' for motion/state verbs, 'avere' for transitive. Marked via 'aux' field.",
-      "it": { "avere": ["ho","hai","ha"], "essere": ["sono","sei","è"] }
+      "it": {
+        "avere": [
+          "ho",
+          "hai",
+          "ha"
+        ],
+        "essere": [
+          "sono",
+          "sei",
+          "è"
+        ]
+      }
     }
   },
-
   "verbs": {
     "GO": {
-      "en": { "pres1s": "go",      "past1s": "went",     "fut1s": "will go",       "ger": "going",     "inf": "go",      "pp": "gone"     },
-      "it": { "pres1s": "vado",    "past1s": "sono andato","fut1s": "andrò",        "ger": "andando",   "inf": "andare",  "pp": "andato",  "aux": "essere" },
-      "fr": { "pres1s": "vais",    "past1s": "suis allé", "fut1s": "irai",          "ger": "allant",    "inf": "aller",   "pp": "allé",    "aux": "être"   },
-      "es": { "pres1s": "voy",     "past1s": "fui",       "fut1s": "iré",           "ger": "yendo",     "inf": "ir",      "pp": "ido"      },
-      "pt": { "pres1s": "vou",     "past1s": "fui",       "fut1s": "irei",          "ger": "indo",      "inf": "ir",      "pp": "ido"      }
+      "en": {
+        "pres1s": "go",
+        "past1s": "went",
+        "fut1s": "will go",
+        "ger": "going",
+        "inf": "go",
+        "pp": "gone"
+      },
+      "it": {
+        "pres1s": "vado",
+        "past1s": "sono andato",
+        "fut1s": "andrò",
+        "ger": "andando",
+        "inf": "andare",
+        "pp": "andato",
+        "aux": "essere"
+      },
+      "fr": {
+        "pres1s": "vais",
+        "past1s": "suis allé",
+        "fut1s": "irai",
+        "ger": "allant",
+        "inf": "aller",
+        "pp": "allé",
+        "aux": "être"
+      },
+      "es": {
+        "pres1s": "voy",
+        "past1s": "fui",
+        "fut1s": "iré",
+        "ger": "yendo",
+        "inf": "ir",
+        "pp": "ido"
+      },
+      "pt": {
+        "pres1s": "vou",
+        "past1s": "fui",
+        "fut1s": "irei",
+        "ger": "indo",
+        "inf": "ir",
+        "pp": "ido"
+      },
+      "de": {
+        "pres1s": "gehe",
+        "past1s": "ging",
+        "fut1s": "werde gehen",
+        "ger": "gehend",
+        "inf": "gehen",
+        "pp": "gegangen"
+      },
+      "ar": {
+        "pres1s": "أذهب",
+        "past1s": "ذهبت",
+        "fut1s": "سأذهب",
+        "ger": "ذاهب",
+        "inf": "الذهاب",
+        "pp": "ذهبت"
+      },
+      "zh": {
+        "pres1s": "去",
+        "past1s": "去了",
+        "fut1s": "会去",
+        "ger": "在去",
+        "inf": "去",
+        "pp": "去了"
+      },
+      "ja": {
+        "pres1s": "行きます",
+        "past1s": "行きました",
+        "fut1s": "行きます",
+        "ger": "行っている",
+        "inf": "行く",
+        "pp": "行った"
+      },
+      "ko": {
+        "pres1s": "가요",
+        "past1s": "갔어요",
+        "fut1s": "갈 거예요",
+        "ger": "가고 있어요",
+        "inf": "가다",
+        "pp": "갔어요"
+      }
     },
     "COME": {
-      "en": { "pres1s": "come",    "past1s": "came",      "fut1s": "will come",     "ger": "coming",    "inf": "come",    "pp": "come"     },
-      "it": { "pres1s": "vengo",   "past1s": "sono venuto","fut1s": "verrò",        "ger": "venendo",   "inf": "venire",  "pp": "venuto",  "aux": "essere" },
-      "fr": { "pres1s": "viens",   "past1s": "suis venu", "fut1s": "viendrai",      "ger": "venant",    "inf": "venir",   "pp": "venu",    "aux": "être"   },
-      "es": { "pres1s": "vengo",   "past1s": "vine",      "fut1s": "vendré",        "ger": "viniendo",  "inf": "venir",   "pp": "venido"   },
-      "pt": { "pres1s": "venho",   "past1s": "vim",       "fut1s": "virei",         "ger": "vindo",     "inf": "vir",     "pp": "vindo"    }
+      "en": {
+        "pres1s": "come",
+        "past1s": "came",
+        "fut1s": "will come",
+        "ger": "coming",
+        "inf": "come",
+        "pp": "come"
+      },
+      "it": {
+        "pres1s": "vengo",
+        "past1s": "sono venuto",
+        "fut1s": "verrò",
+        "ger": "venendo",
+        "inf": "venire",
+        "pp": "venuto",
+        "aux": "essere"
+      },
+      "fr": {
+        "pres1s": "viens",
+        "past1s": "suis venu",
+        "fut1s": "viendrai",
+        "ger": "venant",
+        "inf": "venir",
+        "pp": "venu",
+        "aux": "être"
+      },
+      "es": {
+        "pres1s": "vengo",
+        "past1s": "vine",
+        "fut1s": "vendré",
+        "ger": "viniendo",
+        "inf": "venir",
+        "pp": "venido"
+      },
+      "pt": {
+        "pres1s": "venho",
+        "past1s": "vim",
+        "fut1s": "virei",
+        "ger": "vindo",
+        "inf": "vir",
+        "pp": "vindo"
+      },
+      "de": {
+        "pres1s": "komme",
+        "past1s": "kam",
+        "fut1s": "werde kommen",
+        "ger": "kommend",
+        "inf": "kommen",
+        "pp": "gekommen"
+      },
+      "ar": {
+        "pres1s": "آتي",
+        "past1s": "أتيت",
+        "fut1s": "سآتي",
+        "ger": "آتٍ",
+        "inf": "المجيء",
+        "pp": "أتيت"
+      },
+      "zh": {
+        "pres1s": "来",
+        "past1s": "来了",
+        "fut1s": "会来",
+        "ger": "在来",
+        "inf": "来",
+        "pp": "来了"
+      },
+      "ja": {
+        "pres1s": "来ます",
+        "past1s": "来ました",
+        "fut1s": "来ます",
+        "ger": "来ている",
+        "inf": "来る",
+        "pp": "来た"
+      },
+      "ko": {
+        "pres1s": "와요",
+        "past1s": "왔어요",
+        "fut1s": "올 거예요",
+        "ger": "오고 있어요",
+        "inf": "오다",
+        "pp": "왔어요"
+      }
     },
     "EAT": {
-      "en": { "pres1s": "eat",     "past1s": "ate",       "fut1s": "will eat",      "ger": "eating",    "inf": "eat",     "pp": "eaten"    },
-      "it": { "pres1s": "mangio",  "past1s": "ho mangiato","fut1s": "mangerò",      "ger": "mangiando", "inf": "mangiare","pp": "mangiato","aux": "avere"  },
-      "fr": { "pres1s": "mange",   "past1s": "ai mangé",  "fut1s": "mangerai",      "ger": "mangeant",  "inf": "manger",  "pp": "mangé",   "aux": "avoir"  },
-      "es": { "pres1s": "como",    "past1s": "comí",      "fut1s": "comeré",        "ger": "comiendo",  "inf": "comer",   "pp": "comido"   },
-      "pt": { "pres1s": "como",    "past1s": "comi",      "fut1s": "comerei",       "ger": "comendo",   "inf": "comer",   "pp": "comido"   }
+      "en": {
+        "pres1s": "eat",
+        "past1s": "ate",
+        "fut1s": "will eat",
+        "ger": "eating",
+        "inf": "eat",
+        "pp": "eaten"
+      },
+      "it": {
+        "pres1s": "mangio",
+        "past1s": "ho mangiato",
+        "fut1s": "mangerò",
+        "ger": "mangiando",
+        "inf": "mangiare",
+        "pp": "mangiato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "mange",
+        "past1s": "ai mangé",
+        "fut1s": "mangerai",
+        "ger": "mangeant",
+        "inf": "manger",
+        "pp": "mangé",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "como",
+        "past1s": "comí",
+        "fut1s": "comeré",
+        "ger": "comiendo",
+        "inf": "comer",
+        "pp": "comido"
+      },
+      "pt": {
+        "pres1s": "como",
+        "past1s": "comi",
+        "fut1s": "comerei",
+        "ger": "comendo",
+        "inf": "comer",
+        "pp": "comido"
+      },
+      "de": {
+        "pres1s": "esse",
+        "past1s": "aß",
+        "fut1s": "werde essen",
+        "ger": "essend",
+        "inf": "essen",
+        "pp": "gegessen"
+      },
+      "ar": {
+        "pres1s": "آكل",
+        "past1s": "أكلت",
+        "fut1s": "سآكل",
+        "ger": "آكل",
+        "inf": "الأكل",
+        "pp": "أكلت"
+      },
+      "zh": {
+        "pres1s": "吃",
+        "past1s": "吃了",
+        "fut1s": "会吃",
+        "ger": "在吃",
+        "inf": "吃",
+        "pp": "吃了"
+      },
+      "ja": {
+        "pres1s": "食べます",
+        "past1s": "食べました",
+        "fut1s": "食べます",
+        "ger": "食べている",
+        "inf": "食べる",
+        "pp": "食べた"
+      },
+      "ko": {
+        "pres1s": "먹어요",
+        "past1s": "먹었어요",
+        "fut1s": "먹을 거예요",
+        "ger": "먹고 있어요",
+        "inf": "먹다",
+        "pp": "먹었어요"
+      }
     },
     "DRINK": {
-      "en": { "pres1s": "drink",   "past1s": "drank",     "fut1s": "will drink",    "ger": "drinking",  "inf": "drink",   "pp": "drunk"    },
-      "it": { "pres1s": "bevo",    "past1s": "ho bevuto", "fut1s": "berrò",         "ger": "bevendo",   "inf": "bere",    "pp": "bevuto",  "aux": "avere"  },
-      "fr": { "pres1s": "bois",    "past1s": "ai bu",     "fut1s": "boirai",        "ger": "buvant",    "inf": "boire",   "pp": "bu",      "aux": "avoir"  },
-      "es": { "pres1s": "bebo",    "past1s": "bebí",      "fut1s": "beberé",        "ger": "bebiendo",  "inf": "beber",   "pp": "bebido"   },
-      "pt": { "pres1s": "bebo",    "past1s": "bebi",      "fut1s": "beberei",       "ger": "bebendo",   "inf": "beber",   "pp": "bebido"   }
+      "en": {
+        "pres1s": "drink",
+        "past1s": "drank",
+        "fut1s": "will drink",
+        "ger": "drinking",
+        "inf": "drink",
+        "pp": "drunk"
+      },
+      "it": {
+        "pres1s": "bevo",
+        "past1s": "ho bevuto",
+        "fut1s": "berrò",
+        "ger": "bevendo",
+        "inf": "bere",
+        "pp": "bevuto",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "bois",
+        "past1s": "ai bu",
+        "fut1s": "boirai",
+        "ger": "buvant",
+        "inf": "boire",
+        "pp": "bu",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "bebo",
+        "past1s": "bebí",
+        "fut1s": "beberé",
+        "ger": "bebiendo",
+        "inf": "beber",
+        "pp": "bebido"
+      },
+      "pt": {
+        "pres1s": "bebo",
+        "past1s": "bebi",
+        "fut1s": "beberei",
+        "ger": "bebendo",
+        "inf": "beber",
+        "pp": "bebido"
+      },
+      "de": {
+        "pres1s": "trinke",
+        "past1s": "trank",
+        "fut1s": "werde trinken",
+        "ger": "trinkend",
+        "inf": "trinken",
+        "pp": "getrunken"
+      },
+      "ar": {
+        "pres1s": "أشرب",
+        "past1s": "شربت",
+        "fut1s": "سأشرب",
+        "ger": "شارب",
+        "inf": "الشرب",
+        "pp": "شربت"
+      },
+      "zh": {
+        "pres1s": "喝",
+        "past1s": "喝了",
+        "fut1s": "会喝",
+        "ger": "在喝",
+        "inf": "喝",
+        "pp": "喝了"
+      },
+      "ja": {
+        "pres1s": "飲みます",
+        "past1s": "飲みました",
+        "fut1s": "飲みます",
+        "ger": "飲んでいる",
+        "inf": "飲む",
+        "pp": "飲んだ"
+      },
+      "ko": {
+        "pres1s": "마셔요",
+        "past1s": "마셨어요",
+        "fut1s": "마실 거예요",
+        "ger": "마시고 있어요",
+        "inf": "마시다",
+        "pp": "마셨어요"
+      }
     },
     "SLEEP": {
-      "en": { "pres1s": "sleep",   "past1s": "slept",     "fut1s": "will sleep",    "ger": "sleeping",  "inf": "sleep",   "pp": "slept"    },
-      "it": { "pres1s": "dormo",   "past1s": "ho dormito","fut1s": "dormirò",       "ger": "dormendo",  "inf": "dormire", "pp": "dormito", "aux": "avere"  },
-      "fr": { "pres1s": "dors",    "past1s": "ai dormi",  "fut1s": "dormirai",      "ger": "dormant",   "inf": "dormir",  "pp": "dormi",   "aux": "avoir"  },
-      "es": { "pres1s": "duermo",  "past1s": "dormí",     "fut1s": "dormiré",       "ger": "durmiendo", "inf": "dormir",  "pp": "dormido"  },
-      "pt": { "pres1s": "durmo",   "past1s": "dormi",     "fut1s": "dormirei",      "ger": "dormindo",  "inf": "dormir",  "pp": "dormido"  }
+      "en": {
+        "pres1s": "sleep",
+        "past1s": "slept",
+        "fut1s": "will sleep",
+        "ger": "sleeping",
+        "inf": "sleep",
+        "pp": "slept"
+      },
+      "it": {
+        "pres1s": "dormo",
+        "past1s": "ho dormito",
+        "fut1s": "dormirò",
+        "ger": "dormendo",
+        "inf": "dormire",
+        "pp": "dormito",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "dors",
+        "past1s": "ai dormi",
+        "fut1s": "dormirai",
+        "ger": "dormant",
+        "inf": "dormir",
+        "pp": "dormi",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "duermo",
+        "past1s": "dormí",
+        "fut1s": "dormiré",
+        "ger": "durmiendo",
+        "inf": "dormir",
+        "pp": "dormido"
+      },
+      "pt": {
+        "pres1s": "durmo",
+        "past1s": "dormi",
+        "fut1s": "dormirei",
+        "ger": "dormindo",
+        "inf": "dormir",
+        "pp": "dormido"
+      },
+      "de": {
+        "pres1s": "schlafe",
+        "past1s": "schlief",
+        "fut1s": "werde schlafen",
+        "ger": "schlafend",
+        "inf": "schlafen",
+        "pp": "geschlafen"
+      },
+      "ar": {
+        "pres1s": "أنام",
+        "past1s": "نمت",
+        "fut1s": "سأنام",
+        "ger": "نائم",
+        "inf": "النوم",
+        "pp": "نمت"
+      },
+      "zh": {
+        "pres1s": "睡",
+        "past1s": "睡了",
+        "fut1s": "会睡",
+        "ger": "在睡",
+        "inf": "睡觉",
+        "pp": "睡了"
+      },
+      "ja": {
+        "pres1s": "寝ます",
+        "past1s": "寝ました",
+        "fut1s": "寝ます",
+        "ger": "寝ている",
+        "inf": "寝る",
+        "pp": "寝た"
+      },
+      "ko": {
+        "pres1s": "자요",
+        "past1s": "잤어요",
+        "fut1s": "잘 거예요",
+        "ger": "자고 있어요",
+        "inf": "자다",
+        "pp": "잤어요"
+      }
     },
     "PLAY": {
-      "en": { "pres1s": "play",    "past1s": "played",    "fut1s": "will play",     "ger": "playing",   "inf": "play",    "pp": "played"   },
-      "it": { "pres1s": "gioco",   "past1s": "ho giocato","fut1s": "giocherò",      "ger": "giocando",  "inf": "giocare", "pp": "giocato", "aux": "avere"  },
-      "fr": { "pres1s": "joue",    "past1s": "ai joué",   "fut1s": "jouerai",       "ger": "jouant",    "inf": "jouer",   "pp": "joué",    "aux": "avoir"  },
-      "es": { "pres1s": "juego",   "past1s": "jugué",     "fut1s": "jugaré",        "ger": "jugando",   "inf": "jugar",   "pp": "jugado"   },
-      "pt": { "pres1s": "jogo",    "past1s": "joguei",    "fut1s": "jogarei",       "ger": "jogando",   "inf": "jogar",   "pp": "jogado"   }
+      "en": {
+        "pres1s": "play",
+        "past1s": "played",
+        "fut1s": "will play",
+        "ger": "playing",
+        "inf": "play",
+        "pp": "played"
+      },
+      "it": {
+        "pres1s": "gioco",
+        "past1s": "ho giocato",
+        "fut1s": "giocherò",
+        "ger": "giocando",
+        "inf": "giocare",
+        "pp": "giocato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "joue",
+        "past1s": "ai joué",
+        "fut1s": "jouerai",
+        "ger": "jouant",
+        "inf": "jouer",
+        "pp": "joué",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "juego",
+        "past1s": "jugué",
+        "fut1s": "jugaré",
+        "ger": "jugando",
+        "inf": "jugar",
+        "pp": "jugado"
+      },
+      "pt": {
+        "pres1s": "jogo",
+        "past1s": "joguei",
+        "fut1s": "jogarei",
+        "ger": "jogando",
+        "inf": "jogar",
+        "pp": "jogado"
+      },
+      "de": {
+        "pres1s": "spiele",
+        "past1s": "spielte",
+        "fut1s": "werde spielen",
+        "ger": "spielend",
+        "inf": "spielen",
+        "pp": "gespielt"
+      },
+      "ar": {
+        "pres1s": "ألعب",
+        "past1s": "لعبت",
+        "fut1s": "سألعب",
+        "ger": "لاعب",
+        "inf": "اللعب",
+        "pp": "لعبت"
+      },
+      "zh": {
+        "pres1s": "玩",
+        "past1s": "玩了",
+        "fut1s": "会玩",
+        "ger": "在玩",
+        "inf": "玩",
+        "pp": "玩了"
+      },
+      "ja": {
+        "pres1s": "遊びます",
+        "past1s": "遊びました",
+        "fut1s": "遊びます",
+        "ger": "遊んでいる",
+        "inf": "遊ぶ",
+        "pp": "遊んだ"
+      },
+      "ko": {
+        "pres1s": "놀아요",
+        "past1s": "놀았어요",
+        "fut1s": "놀 거예요",
+        "ger": "놀고 있어요",
+        "inf": "놀다",
+        "pp": "놀았어요"
+      }
     },
     "WANT": {
-      "en": { "pres1s": "want",    "past1s": "wanted",    "fut1s": "will want",     "ger": "wanting",   "inf": "want",    "pp": "wanted"   },
-      "it": { "pres1s": "voglio",  "past1s": "ho voluto", "fut1s": "vorrò",         "ger": "volendo",   "inf": "volere",  "pp": "voluto",  "aux": "avere"  },
-      "fr": { "pres1s": "veux",    "past1s": "ai voulu",  "fut1s": "voudrai",       "ger": "voulant",   "inf": "vouloir", "pp": "voulu",   "aux": "avoir"  },
-      "es": { "pres1s": "quiero",  "past1s": "quise",     "fut1s": "querré",        "ger": "queriendo", "inf": "querer",  "pp": "querido"  },
-      "pt": { "pres1s": "quero",   "past1s": "quis",      "fut1s": "quererei",      "ger": "querendo",  "inf": "querer",  "pp": "querido"  }
+      "en": {
+        "pres1s": "want",
+        "past1s": "wanted",
+        "fut1s": "will want",
+        "ger": "wanting",
+        "inf": "want",
+        "pp": "wanted"
+      },
+      "it": {
+        "pres1s": "voglio",
+        "past1s": "ho voluto",
+        "fut1s": "vorrò",
+        "ger": "volendo",
+        "inf": "volere",
+        "pp": "voluto",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "veux",
+        "past1s": "ai voulu",
+        "fut1s": "voudrai",
+        "ger": "voulant",
+        "inf": "vouloir",
+        "pp": "voulu",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "quiero",
+        "past1s": "quise",
+        "fut1s": "querré",
+        "ger": "queriendo",
+        "inf": "querer",
+        "pp": "querido"
+      },
+      "pt": {
+        "pres1s": "quero",
+        "past1s": "quis",
+        "fut1s": "quererei",
+        "ger": "querendo",
+        "inf": "querer",
+        "pp": "querido"
+      },
+      "de": {
+        "pres1s": "will",
+        "past1s": "wollte",
+        "fut1s": "werde wollen",
+        "ger": "wollend",
+        "inf": "wollen",
+        "pp": "gewollt"
+      },
+      "ar": {
+        "pres1s": "أريد",
+        "past1s": "أردت",
+        "fut1s": "سأريد",
+        "ger": "مريد",
+        "inf": "الإرادة",
+        "pp": "أردت"
+      },
+      "zh": {
+        "pres1s": "想要",
+        "past1s": "想要了",
+        "fut1s": "会想要",
+        "ger": "在想",
+        "inf": "想要",
+        "pp": "想要了"
+      },
+      "ja": {
+        "pres1s": "欲しいです",
+        "past1s": "欲しかったです",
+        "fut1s": "欲しいです",
+        "ger": "欲しい",
+        "inf": "欲しい",
+        "pp": "欲しかった"
+      },
+      "ko": {
+        "pres1s": "원해요",
+        "past1s": "원했어요",
+        "fut1s": "원할 거예요",
+        "ger": "원하고 있어요",
+        "inf": "원하다",
+        "pp": "원했어요"
+      }
     },
     "LIKE": {
-      "en": { "pres1s": "like",    "past1s": "liked",     "fut1s": "will like",     "ger": "liking",    "inf": "like",    "pp": "liked"    },
-      "it": { "pres1s": "mi piace","past1s": "mi è piaciuto","fut1s": "mi piacerà", "ger": "piacendo",  "inf": "piacere", "pp": "piaciuto","aux": "essere" },
-      "fr": { "pres1s": "aime",    "past1s": "ai aimé",   "fut1s": "aimerai",       "ger": "aimant",    "inf": "aimer",   "pp": "aimé",    "aux": "avoir"  },
-      "es": { "pres1s": "me gusta","past1s": "me gustó",  "fut1s": "me gustará",    "ger": "gustando",  "inf": "gustar",  "pp": "gustado"  },
-      "pt": { "pres1s": "gosto",   "past1s": "gostei",    "fut1s": "gostarei",      "ger": "gostando",  "inf": "gostar",  "pp": "gostado"  }
+      "en": {
+        "pres1s": "like",
+        "past1s": "liked",
+        "fut1s": "will like",
+        "ger": "liking",
+        "inf": "like",
+        "pp": "liked"
+      },
+      "it": {
+        "pres1s": "mi piace",
+        "past1s": "mi è piaciuto",
+        "fut1s": "mi piacerà",
+        "ger": "piacendo",
+        "inf": "piacere",
+        "pp": "piaciuto",
+        "aux": "essere"
+      },
+      "fr": {
+        "pres1s": "aime",
+        "past1s": "ai aimé",
+        "fut1s": "aimerai",
+        "ger": "aimant",
+        "inf": "aimer",
+        "pp": "aimé",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "me gusta",
+        "past1s": "me gustó",
+        "fut1s": "me gustará",
+        "ger": "gustando",
+        "inf": "gustar",
+        "pp": "gustado"
+      },
+      "pt": {
+        "pres1s": "gosto",
+        "past1s": "gostei",
+        "fut1s": "gostarei",
+        "ger": "gostando",
+        "inf": "gostar",
+        "pp": "gostado"
+      },
+      "de": {
+        "pres1s": "mag",
+        "past1s": "mochte",
+        "fut1s": "werde mögen",
+        "ger": "mögend",
+        "inf": "mögen",
+        "pp": "gemocht"
+      },
+      "ar": {
+        "pres1s": "أحب",
+        "past1s": "أحببت",
+        "fut1s": "سأحب",
+        "ger": "محب",
+        "inf": "الحب",
+        "pp": "أحببت"
+      },
+      "zh": {
+        "pres1s": "喜欢",
+        "past1s": "喜欢了",
+        "fut1s": "会喜欢",
+        "ger": "在喜欢",
+        "inf": "喜欢",
+        "pp": "喜欢了"
+      },
+      "ja": {
+        "pres1s": "好きです",
+        "past1s": "好きでした",
+        "fut1s": "好きです",
+        "ger": "好き",
+        "inf": "好き",
+        "pp": "好きだった"
+      },
+      "ko": {
+        "pres1s": "좋아해요",
+        "past1s": "좋아했어요",
+        "fut1s": "좋아할 거예요",
+        "ger": "좋아하고 있어요",
+        "inf": "좋아하다",
+        "pp": "좋아했어요"
+      }
     },
     "NEED": {
-      "en": { "pres1s": "need",    "past1s": "needed",    "fut1s": "will need",     "ger": "needing",   "inf": "need",    "pp": "needed"   },
-      "it": { "pres1s": "ho bisogno di","past1s": "avevo bisogno di","fut1s": "avrò bisogno di","ger": "avendo bisogno","inf": "aver bisogno","pp": "avuto bisogno","aux": "avere" },
-      "fr": { "pres1s": "ai besoin de","past1s": "avais besoin de","fut1s": "aurai besoin de","ger": "ayant besoin","inf": "avoir besoin","pp": "eu besoin","aux": "avoir" },
-      "es": { "pres1s": "necesito","past1s": "necesité",  "fut1s": "necesitaré",    "ger": "necesitando","inf": "necesitar","pp": "necesitado"},
-      "pt": { "pres1s": "preciso", "past1s": "precisei",  "fut1s": "precisarei",    "ger": "precisando","inf": "precisar", "pp": "precisado"}
+      "en": {
+        "pres1s": "need",
+        "past1s": "needed",
+        "fut1s": "will need",
+        "ger": "needing",
+        "inf": "need",
+        "pp": "needed"
+      },
+      "it": {
+        "pres1s": "ho bisogno di",
+        "past1s": "avevo bisogno di",
+        "fut1s": "avrò bisogno di",
+        "ger": "avendo bisogno",
+        "inf": "aver bisogno",
+        "pp": "avuto bisogno",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "ai besoin de",
+        "past1s": "avais besoin de",
+        "fut1s": "aurai besoin de",
+        "ger": "ayant besoin",
+        "inf": "avoir besoin",
+        "pp": "eu besoin",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "necesito",
+        "past1s": "necesité",
+        "fut1s": "necesitaré",
+        "ger": "necesitando",
+        "inf": "necesitar",
+        "pp": "necesitado"
+      },
+      "pt": {
+        "pres1s": "preciso",
+        "past1s": "precisei",
+        "fut1s": "precisarei",
+        "ger": "precisando",
+        "inf": "precisar",
+        "pp": "precisado"
+      },
+      "de": {
+        "pres1s": "brauche",
+        "past1s": "brauchte",
+        "fut1s": "werde brauchen",
+        "ger": "brauchend",
+        "inf": "brauchen",
+        "pp": "gebraucht"
+      },
+      "ar": {
+        "pres1s": "أحتاج",
+        "past1s": "احتجت",
+        "fut1s": "سأحتاج",
+        "ger": "محتاج",
+        "inf": "الاحتياج",
+        "pp": "احتجت"
+      },
+      "zh": {
+        "pres1s": "需要",
+        "past1s": "需要了",
+        "fut1s": "会需要",
+        "ger": "在需要",
+        "inf": "需要",
+        "pp": "需要了"
+      },
+      "ja": {
+        "pres1s": "必要です",
+        "past1s": "必要でした",
+        "fut1s": "必要です",
+        "ger": "必要",
+        "inf": "必要",
+        "pp": "必要だった"
+      },
+      "ko": {
+        "pres1s": "필요해요",
+        "past1s": "필요했어요",
+        "fut1s": "필요할 거예요",
+        "ger": "필요하고 있어요",
+        "inf": "필요하다",
+        "pp": "필요했어요"
+      }
     },
     "GIVE": {
-      "en": { "pres1s": "give",    "past1s": "gave",      "fut1s": "will give",     "ger": "giving",    "inf": "give",    "pp": "given"    },
-      "it": { "pres1s": "do",      "past1s": "ho dato",   "fut1s": "darò",          "ger": "dando",     "inf": "dare",    "pp": "dato",    "aux": "avere"  },
-      "fr": { "pres1s": "donne",   "past1s": "ai donné",  "fut1s": "donnerai",      "ger": "donnant",   "inf": "donner",  "pp": "donné",   "aux": "avoir"  },
-      "es": { "pres1s": "doy",     "past1s": "di",        "fut1s": "daré",          "ger": "dando",     "inf": "dar",     "pp": "dado"     },
-      "pt": { "pres1s": "dou",     "past1s": "dei",       "fut1s": "darei",         "ger": "dando",     "inf": "dar",     "pp": "dado"     }
+      "en": {
+        "pres1s": "give",
+        "past1s": "gave",
+        "fut1s": "will give",
+        "ger": "giving",
+        "inf": "give",
+        "pp": "given"
+      },
+      "it": {
+        "pres1s": "do",
+        "past1s": "ho dato",
+        "fut1s": "darò",
+        "ger": "dando",
+        "inf": "dare",
+        "pp": "dato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "donne",
+        "past1s": "ai donné",
+        "fut1s": "donnerai",
+        "ger": "donnant",
+        "inf": "donner",
+        "pp": "donné",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "doy",
+        "past1s": "di",
+        "fut1s": "daré",
+        "ger": "dando",
+        "inf": "dar",
+        "pp": "dado"
+      },
+      "pt": {
+        "pres1s": "dou",
+        "past1s": "dei",
+        "fut1s": "darei",
+        "ger": "dando",
+        "inf": "dar",
+        "pp": "dado"
+      },
+      "de": {
+        "pres1s": "gebe",
+        "past1s": "gab",
+        "fut1s": "werde geben",
+        "ger": "gebend",
+        "inf": "geben",
+        "pp": "gegeben"
+      },
+      "ar": {
+        "pres1s": "أعطي",
+        "past1s": "أعطيت",
+        "fut1s": "سأعطي",
+        "ger": "معطٍ",
+        "inf": "الإعطاء",
+        "pp": "أعطيت"
+      },
+      "zh": {
+        "pres1s": "给",
+        "past1s": "给了",
+        "fut1s": "会给",
+        "ger": "在给",
+        "inf": "给",
+        "pp": "给了"
+      },
+      "ja": {
+        "pres1s": "あげます",
+        "past1s": "あげました",
+        "fut1s": "あげます",
+        "ger": "あげている",
+        "inf": "あげる",
+        "pp": "あげた"
+      },
+      "ko": {
+        "pres1s": "줘요",
+        "past1s": "줬어요",
+        "fut1s": "줄 거예요",
+        "ger": "주고 있어요",
+        "inf": "주다",
+        "pp": "줬어요"
+      }
     },
     "HELP": {
-      "en": { "pres1s": "help",    "past1s": "helped",    "fut1s": "will help",     "ger": "helping",   "inf": "help",    "pp": "helped"   },
-      "it": { "pres1s": "aiuto",   "past1s": "ho aiutato","fut1s": "aiuterò",       "ger": "aiutando",  "inf": "aiutare", "pp": "aiutato", "aux": "avere"  },
-      "fr": { "pres1s": "aide",    "past1s": "ai aidé",   "fut1s": "aiderai",       "ger": "aidant",    "inf": "aider",   "pp": "aidé",    "aux": "avoir"  },
-      "es": { "pres1s": "ayudo",   "past1s": "ayudé",     "fut1s": "ayudaré",       "ger": "ayudando",  "inf": "ayudar",  "pp": "ayudado"  },
-      "pt": { "pres1s": "ajudo",   "past1s": "ajudei",    "fut1s": "ajudarei",      "ger": "ajudando",  "inf": "ajudar",  "pp": "ajudado"  }
+      "en": {
+        "pres1s": "help",
+        "past1s": "helped",
+        "fut1s": "will help",
+        "ger": "helping",
+        "inf": "help",
+        "pp": "helped"
+      },
+      "it": {
+        "pres1s": "aiuto",
+        "past1s": "ho aiutato",
+        "fut1s": "aiuterò",
+        "ger": "aiutando",
+        "inf": "aiutare",
+        "pp": "aiutato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "aide",
+        "past1s": "ai aidé",
+        "fut1s": "aiderai",
+        "ger": "aidant",
+        "inf": "aider",
+        "pp": "aidé",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "ayudo",
+        "past1s": "ayudé",
+        "fut1s": "ayudaré",
+        "ger": "ayudando",
+        "inf": "ayudar",
+        "pp": "ayudado"
+      },
+      "pt": {
+        "pres1s": "ajudo",
+        "past1s": "ajudei",
+        "fut1s": "ajudarei",
+        "ger": "ajudando",
+        "inf": "ajudar",
+        "pp": "ajudado"
+      },
+      "de": {
+        "pres1s": "helfe",
+        "past1s": "half",
+        "fut1s": "werde helfen",
+        "ger": "helfend",
+        "inf": "helfen",
+        "pp": "geholfen"
+      },
+      "ar": {
+        "pres1s": "أساعد",
+        "past1s": "ساعدت",
+        "fut1s": "سأساعد",
+        "ger": "مساعد",
+        "inf": "المساعدة",
+        "pp": "ساعدت"
+      },
+      "zh": {
+        "pres1s": "帮助",
+        "past1s": "帮助了",
+        "fut1s": "会帮助",
+        "ger": "在帮助",
+        "inf": "帮助",
+        "pp": "帮助了"
+      },
+      "ja": {
+        "pres1s": "助けます",
+        "past1s": "助けました",
+        "fut1s": "助けます",
+        "ger": "助けている",
+        "inf": "助ける",
+        "pp": "助けた"
+      },
+      "ko": {
+        "pres1s": "도와요",
+        "past1s": "도왔어요",
+        "fut1s": "도울 거예요",
+        "ger": "돕고 있어요",
+        "inf": "돕다",
+        "pp": "도왔어요"
+      }
     },
     "LOOK": {
-      "en": { "pres1s": "look",    "past1s": "looked",    "fut1s": "will look",     "ger": "looking",   "inf": "look",    "pp": "looked"   },
-      "it": { "pres1s": "guardo",  "past1s": "ho guardato","fut1s": "guarderò",     "ger": "guardando", "inf": "guardare","pp": "guardato","aux": "avere"  },
-      "fr": { "pres1s": "regarde", "past1s": "ai regardé","fut1s": "regarderai",    "ger": "regardant", "inf": "regarder","pp": "regardé", "aux": "avoir"  },
-      "es": { "pres1s": "miro",    "past1s": "miré",      "fut1s": "miraré",        "ger": "mirando",   "inf": "mirar",   "pp": "mirado"   },
-      "pt": { "pres1s": "olho",    "past1s": "olhei",     "fut1s": "olharei",       "ger": "olhando",   "inf": "olhar",   "pp": "olhado"   }
+      "en": {
+        "pres1s": "look",
+        "past1s": "looked",
+        "fut1s": "will look",
+        "ger": "looking",
+        "inf": "look",
+        "pp": "looked"
+      },
+      "it": {
+        "pres1s": "guardo",
+        "past1s": "ho guardato",
+        "fut1s": "guarderò",
+        "ger": "guardando",
+        "inf": "guardare",
+        "pp": "guardato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "regarde",
+        "past1s": "ai regardé",
+        "fut1s": "regarderai",
+        "ger": "regardant",
+        "inf": "regarder",
+        "pp": "regardé",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "miro",
+        "past1s": "miré",
+        "fut1s": "miraré",
+        "ger": "mirando",
+        "inf": "mirar",
+        "pp": "mirado"
+      },
+      "pt": {
+        "pres1s": "olho",
+        "past1s": "olhei",
+        "fut1s": "olharei",
+        "ger": "olhando",
+        "inf": "olhar",
+        "pp": "olhado"
+      },
+      "de": {
+        "pres1s": "schaue",
+        "past1s": "schaute",
+        "fut1s": "werde schauen",
+        "ger": "schauend",
+        "inf": "schauen",
+        "pp": "geschaut"
+      },
+      "ar": {
+        "pres1s": "أنظر",
+        "past1s": "نظرت",
+        "fut1s": "سأنظر",
+        "ger": "ناظر",
+        "inf": "النظر",
+        "pp": "نظرت"
+      },
+      "zh": {
+        "pres1s": "看",
+        "past1s": "看了",
+        "fut1s": "会看",
+        "ger": "在看",
+        "inf": "看",
+        "pp": "看了"
+      },
+      "ja": {
+        "pres1s": "見ます",
+        "past1s": "見ました",
+        "fut1s": "見ます",
+        "ger": "見ている",
+        "inf": "見る",
+        "pp": "見た"
+      },
+      "ko": {
+        "pres1s": "봐요",
+        "past1s": "봤어요",
+        "fut1s": "볼 거예요",
+        "ger": "보고 있어요",
+        "inf": "보다",
+        "pp": "봤어요"
+      }
     },
     "LISTEN": {
-      "en": { "pres1s": "listen",  "past1s": "listened",  "fut1s": "will listen",   "ger": "listening", "inf": "listen",  "pp": "listened" },
-      "it": { "pres1s": "ascolto", "past1s": "ho ascoltato","fut1s": "ascolterò",   "ger": "ascoltando","inf": "ascoltare","pp": "ascoltato","aux": "avere" },
-      "fr": { "pres1s": "écoute",  "past1s": "ai écouté", "fut1s": "écouterai",     "ger": "écoutant",  "inf": "écouter", "pp": "écouté",  "aux": "avoir"  },
-      "es": { "pres1s": "escucho", "past1s": "escuché",   "fut1s": "escucharé",     "ger": "escuchando","inf": "escuchar","pp": "escuchado" },
-      "pt": { "pres1s": "ouço",    "past1s": "ouvi",      "fut1s": "ouvirei",       "ger": "ouvindo",   "inf": "ouvir",   "pp": "ouvido"   }
+      "en": {
+        "pres1s": "listen",
+        "past1s": "listened",
+        "fut1s": "will listen",
+        "ger": "listening",
+        "inf": "listen",
+        "pp": "listened"
+      },
+      "it": {
+        "pres1s": "ascolto",
+        "past1s": "ho ascoltato",
+        "fut1s": "ascolterò",
+        "ger": "ascoltando",
+        "inf": "ascoltare",
+        "pp": "ascoltato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "écoute",
+        "past1s": "ai écouté",
+        "fut1s": "écouterai",
+        "ger": "écoutant",
+        "inf": "écouter",
+        "pp": "écouté",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "escucho",
+        "past1s": "escuché",
+        "fut1s": "escucharé",
+        "ger": "escuchando",
+        "inf": "escuchar",
+        "pp": "escuchado"
+      },
+      "pt": {
+        "pres1s": "ouço",
+        "past1s": "ouvi",
+        "fut1s": "ouvirei",
+        "ger": "ouvindo",
+        "inf": "ouvir",
+        "pp": "ouvido"
+      },
+      "de": {
+        "pres1s": "höre",
+        "past1s": "hörte",
+        "fut1s": "werde hören",
+        "ger": "hörend",
+        "inf": "hören",
+        "pp": "gehört"
+      },
+      "ar": {
+        "pres1s": "أستمع",
+        "past1s": "استمعت",
+        "fut1s": "سأستمع",
+        "ger": "مستمع",
+        "inf": "الاستماع",
+        "pp": "استمعت"
+      },
+      "zh": {
+        "pres1s": "听",
+        "past1s": "听了",
+        "fut1s": "会听",
+        "ger": "在听",
+        "inf": "听",
+        "pp": "听了"
+      },
+      "ja": {
+        "pres1s": "聞きます",
+        "past1s": "聞きました",
+        "fut1s": "聞きます",
+        "ger": "聞いている",
+        "inf": "聞く",
+        "pp": "聞いた"
+      },
+      "ko": {
+        "pres1s": "들어요",
+        "past1s": "들었어요",
+        "fut1s": "들을 거예요",
+        "ger": "듣고 있어요",
+        "inf": "듣다",
+        "pp": "들었어요"
+      }
     },
     "READ": {
-      "en": { "pres1s": "read",    "past1s": "read",      "fut1s": "will read",     "ger": "reading",   "inf": "read",    "pp": "read"     },
-      "it": { "pres1s": "leggo",   "past1s": "ho letto",  "fut1s": "leggerò",       "ger": "leggendo",  "inf": "leggere", "pp": "letto",   "aux": "avere"  },
-      "fr": { "pres1s": "lis",     "past1s": "ai lu",     "fut1s": "lirai",         "ger": "lisant",    "inf": "lire",    "pp": "lu",      "aux": "avoir"  },
-      "es": { "pres1s": "leo",     "past1s": "leí",       "fut1s": "leeré",         "ger": "leyendo",   "inf": "leer",    "pp": "leído"    },
-      "pt": { "pres1s": "leio",    "past1s": "li",        "fut1s": "lerei",         "ger": "lendo",     "inf": "ler",     "pp": "lido"     }
+      "en": {
+        "pres1s": "read",
+        "past1s": "read",
+        "fut1s": "will read",
+        "ger": "reading",
+        "inf": "read",
+        "pp": "read"
+      },
+      "it": {
+        "pres1s": "leggo",
+        "past1s": "ho letto",
+        "fut1s": "leggerò",
+        "ger": "leggendo",
+        "inf": "leggere",
+        "pp": "letto",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "lis",
+        "past1s": "ai lu",
+        "fut1s": "lirai",
+        "ger": "lisant",
+        "inf": "lire",
+        "pp": "lu",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "leo",
+        "past1s": "leí",
+        "fut1s": "leeré",
+        "ger": "leyendo",
+        "inf": "leer",
+        "pp": "leído"
+      },
+      "pt": {
+        "pres1s": "leio",
+        "past1s": "li",
+        "fut1s": "lerei",
+        "ger": "lendo",
+        "inf": "ler",
+        "pp": "lido"
+      },
+      "de": {
+        "pres1s": "lese",
+        "past1s": "las",
+        "fut1s": "werde lesen",
+        "ger": "lesend",
+        "inf": "lesen",
+        "pp": "gelesen"
+      },
+      "ar": {
+        "pres1s": "أقرأ",
+        "past1s": "قرأت",
+        "fut1s": "سأقرأ",
+        "ger": "قارئ",
+        "inf": "القراءة",
+        "pp": "قرأت"
+      },
+      "zh": {
+        "pres1s": "读",
+        "past1s": "读了",
+        "fut1s": "会读",
+        "ger": "在读",
+        "inf": "读",
+        "pp": "读了"
+      },
+      "ja": {
+        "pres1s": "読みます",
+        "past1s": "読みました",
+        "fut1s": "読みます",
+        "ger": "読んでいる",
+        "inf": "読む",
+        "pp": "読んだ"
+      },
+      "ko": {
+        "pres1s": "읽어요",
+        "past1s": "읽었어요",
+        "fut1s": "읽을 거예요",
+        "ger": "읽고 있어요",
+        "inf": "읽다",
+        "pp": "읽었어요"
+      }
     },
     "OPEN": {
-      "en": { "pres1s": "open",    "past1s": "opened",    "fut1s": "will open",     "ger": "opening",   "inf": "open",    "pp": "opened"   },
-      "it": { "pres1s": "apro",    "past1s": "ho aperto", "fut1s": "aprirò",        "ger": "aprendo",   "inf": "aprire",  "pp": "aperto",  "aux": "avere"  },
-      "fr": { "pres1s": "ouvre",   "past1s": "ai ouvert", "fut1s": "ouvrirai",      "ger": "ouvrant",   "inf": "ouvrir",  "pp": "ouvert",  "aux": "avoir"  },
-      "es": { "pres1s": "abro",    "past1s": "abrí",      "fut1s": "abriré",        "ger": "abriendo",  "inf": "abrir",   "pp": "abierto"  },
-      "pt": { "pres1s": "abro",    "past1s": "abri",      "fut1s": "abrirei",       "ger": "abrindo",   "inf": "abrir",   "pp": "aberto"   }
+      "en": {
+        "pres1s": "open",
+        "past1s": "opened",
+        "fut1s": "will open",
+        "ger": "opening",
+        "inf": "open",
+        "pp": "opened"
+      },
+      "it": {
+        "pres1s": "apro",
+        "past1s": "ho aperto",
+        "fut1s": "aprirò",
+        "ger": "aprendo",
+        "inf": "aprire",
+        "pp": "aperto",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "ouvre",
+        "past1s": "ai ouvert",
+        "fut1s": "ouvrirai",
+        "ger": "ouvrant",
+        "inf": "ouvrir",
+        "pp": "ouvert",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "abro",
+        "past1s": "abrí",
+        "fut1s": "abriré",
+        "ger": "abriendo",
+        "inf": "abrir",
+        "pp": "abierto"
+      },
+      "pt": {
+        "pres1s": "abro",
+        "past1s": "abri",
+        "fut1s": "abrirei",
+        "ger": "abrindo",
+        "inf": "abrir",
+        "pp": "aberto"
+      },
+      "de": {
+        "pres1s": "öffne",
+        "past1s": "öffnete",
+        "fut1s": "werde öffnen",
+        "ger": "öffnend",
+        "inf": "öffnen",
+        "pp": "geöffnet"
+      },
+      "ar": {
+        "pres1s": "أفتح",
+        "past1s": "فتحت",
+        "fut1s": "سأفتح",
+        "ger": "فاتح",
+        "inf": "الفتح",
+        "pp": "فتحت"
+      },
+      "zh": {
+        "pres1s": "开",
+        "past1s": "开了",
+        "fut1s": "会开",
+        "ger": "在开",
+        "inf": "开",
+        "pp": "开了"
+      },
+      "ja": {
+        "pres1s": "開けます",
+        "past1s": "開けました",
+        "fut1s": "開けます",
+        "ger": "開けている",
+        "inf": "開ける",
+        "pp": "開けた"
+      },
+      "ko": {
+        "pres1s": "열어요",
+        "past1s": "열었어요",
+        "fut1s": "열 거예요",
+        "ger": "열고 있어요",
+        "inf": "열다",
+        "pp": "열었어요"
+      }
     },
     "STOP": {
-      "en": { "pres1s": "stop",    "past1s": "stopped",   "fut1s": "will stop",     "ger": "stopping",  "inf": "stop",    "pp": "stopped"  },
-      "it": { "pres1s": "smetto",  "past1s": "ho smesso", "fut1s": "smetterò",      "ger": "smettendo", "inf": "smettere","pp": "smesso",  "aux": "avere"  },
-      "fr": { "pres1s": "arrête",  "past1s": "ai arrêté", "fut1s": "arrêterai",     "ger": "arrêtant",  "inf": "arrêter", "pp": "arrêté",  "aux": "avoir"  },
-      "es": { "pres1s": "paro",    "past1s": "paré",      "fut1s": "pararé",        "ger": "parando",   "inf": "parar",   "pp": "parado"   },
-      "pt": { "pres1s": "paro",    "past1s": "parei",     "fut1s": "pararei",       "ger": "parando",   "inf": "parar",   "pp": "parado"   }
+      "en": {
+        "pres1s": "stop",
+        "past1s": "stopped",
+        "fut1s": "will stop",
+        "ger": "stopping",
+        "inf": "stop",
+        "pp": "stopped"
+      },
+      "it": {
+        "pres1s": "smetto",
+        "past1s": "ho smesso",
+        "fut1s": "smetterò",
+        "ger": "smettendo",
+        "inf": "smettere",
+        "pp": "smesso",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "arrête",
+        "past1s": "ai arrêté",
+        "fut1s": "arrêterai",
+        "ger": "arrêtant",
+        "inf": "arrêter",
+        "pp": "arrêté",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "paro",
+        "past1s": "paré",
+        "fut1s": "pararé",
+        "ger": "parando",
+        "inf": "parar",
+        "pp": "parado"
+      },
+      "pt": {
+        "pres1s": "paro",
+        "past1s": "parei",
+        "fut1s": "pararei",
+        "ger": "parando",
+        "inf": "parar",
+        "pp": "parado"
+      },
+      "de": {
+        "pres1s": "stoppe",
+        "past1s": "stoppte",
+        "fut1s": "werde stoppen",
+        "ger": "stoppend",
+        "inf": "stoppen",
+        "pp": "gestoppt"
+      },
+      "ar": {
+        "pres1s": "أتوقف",
+        "past1s": "توقفت",
+        "fut1s": "سأتوقف",
+        "ger": "متوقف",
+        "inf": "التوقف",
+        "pp": "توقفت"
+      },
+      "zh": {
+        "pres1s": "停",
+        "past1s": "停了",
+        "fut1s": "会停",
+        "ger": "在停",
+        "inf": "停",
+        "pp": "停了"
+      },
+      "ja": {
+        "pres1s": "止めます",
+        "past1s": "止めました",
+        "fut1s": "止めます",
+        "ger": "止めている",
+        "inf": "止める",
+        "pp": "止めた"
+      },
+      "ko": {
+        "pres1s": "멈춰요",
+        "past1s": "멈췄어요",
+        "fut1s": "멈출 거예요",
+        "ger": "멈추고 있어요",
+        "inf": "멈추다",
+        "pp": "멈췄어요"
+      }
     },
     "WAIT": {
-      "en": { "pres1s": "wait",    "past1s": "waited",    "fut1s": "will wait",     "ger": "waiting",   "inf": "wait",    "pp": "waited"   },
-      "it": { "pres1s": "aspetto", "past1s": "ho aspettato","fut1s": "aspetterò",   "ger": "aspettando","inf": "aspettare","pp": "aspettato","aux": "avere" },
-      "fr": { "pres1s": "attends", "past1s": "ai attendu","fut1s": "attendrai",     "ger": "attendant", "inf": "attendre","pp": "attendu",  "aux": "avoir"  },
-      "es": { "pres1s": "espero",  "past1s": "esperé",    "fut1s": "esperaré",      "ger": "esperando", "inf": "esperar", "pp": "esperado" },
-      "pt": { "pres1s": "espero",  "past1s": "esperei",   "fut1s": "esperarei",     "ger": "esperando", "inf": "esperar", "pp": "esperado" }
+      "en": {
+        "pres1s": "wait",
+        "past1s": "waited",
+        "fut1s": "will wait",
+        "ger": "waiting",
+        "inf": "wait",
+        "pp": "waited"
+      },
+      "it": {
+        "pres1s": "aspetto",
+        "past1s": "ho aspettato",
+        "fut1s": "aspetterò",
+        "ger": "aspettando",
+        "inf": "aspettare",
+        "pp": "aspettato",
+        "aux": "avere"
+      },
+      "fr": {
+        "pres1s": "attends",
+        "past1s": "ai attendu",
+        "fut1s": "attendrai",
+        "ger": "attendant",
+        "inf": "attendre",
+        "pp": "attendu",
+        "aux": "avoir"
+      },
+      "es": {
+        "pres1s": "espero",
+        "past1s": "esperé",
+        "fut1s": "esperaré",
+        "ger": "esperando",
+        "inf": "esperar",
+        "pp": "esperado"
+      },
+      "pt": {
+        "pres1s": "espero",
+        "past1s": "esperei",
+        "fut1s": "esperarei",
+        "ger": "esperando",
+        "inf": "esperar",
+        "pp": "esperado"
+      },
+      "de": {
+        "pres1s": "warte",
+        "past1s": "wartete",
+        "fut1s": "werde warten",
+        "ger": "wartend",
+        "inf": "warten",
+        "pp": "gewartet"
+      },
+      "ar": {
+        "pres1s": "أنتظر",
+        "past1s": "انتظرت",
+        "fut1s": "سأنتظر",
+        "ger": "منتظر",
+        "inf": "الانتظار",
+        "pp": "انتظرت"
+      },
+      "zh": {
+        "pres1s": "等",
+        "past1s": "等了",
+        "fut1s": "会等",
+        "ger": "在等",
+        "inf": "等",
+        "pp": "等了"
+      },
+      "ja": {
+        "pres1s": "待ちます",
+        "past1s": "待ちました",
+        "fut1s": "待ちます",
+        "ger": "待っている",
+        "inf": "待つ",
+        "pp": "待った"
+      },
+      "ko": {
+        "pres1s": "기다려요",
+        "past1s": "기다렸어요",
+        "fut1s": "기다릴 거예요",
+        "ger": "기다리고 있어요",
+        "inf": "기다리다",
+        "pp": "기다렸어요"
+      }
     },
     "FEEL": {
-      "en": { "pres1s": "feel",    "past1s": "felt",      "fut1s": "will feel",     "ger": "feeling",   "inf": "feel",    "pp": "felt"     },
-      "it": { "pres1s": "mi sento","past1s": "mi sono sentito","fut1s": "mi sentirò","ger": "sentendo",  "inf": "sentire", "pp": "sentito", "aux": "essere" },
-      "fr": { "pres1s": "me sens", "past1s": "me suis senti","fut1s": "me sentirai","ger": "sentant",   "inf": "sentir",  "pp": "senti",   "aux": "être"   },
-      "es": { "pres1s": "me siento","past1s": "me sentí", "fut1s": "me sentiré",    "ger": "sintiéndome","inf": "sentirse","pp": "sentido" },
-      "pt": { "pres1s": "me sinto","past1s": "me senti",  "fut1s": "me sentirei",   "ger": "sentindo",  "inf": "sentir",  "pp": "sentido"  }
+      "en": {
+        "pres1s": "feel",
+        "past1s": "felt",
+        "fut1s": "will feel",
+        "ger": "feeling",
+        "inf": "feel",
+        "pp": "felt"
+      },
+      "it": {
+        "pres1s": "mi sento",
+        "past1s": "mi sono sentito",
+        "fut1s": "mi sentirò",
+        "ger": "sentendo",
+        "inf": "sentire",
+        "pp": "sentito",
+        "aux": "essere"
+      },
+      "fr": {
+        "pres1s": "me sens",
+        "past1s": "me suis senti",
+        "fut1s": "me sentirai",
+        "ger": "sentant",
+        "inf": "sentir",
+        "pp": "senti",
+        "aux": "être"
+      },
+      "es": {
+        "pres1s": "me siento",
+        "past1s": "me sentí",
+        "fut1s": "me sentiré",
+        "ger": "sintiéndome",
+        "inf": "sentirse",
+        "pp": "sentido"
+      },
+      "pt": {
+        "pres1s": "me sinto",
+        "past1s": "me senti",
+        "fut1s": "me sentirei",
+        "ger": "sentindo",
+        "inf": "sentir",
+        "pp": "sentido"
+      },
+      "de": {
+        "pres1s": "fühle",
+        "past1s": "fühlte",
+        "fut1s": "werde fühlen",
+        "ger": "fühlend",
+        "inf": "fühlen",
+        "pp": "gefühlt"
+      },
+      "ar": {
+        "pres1s": "أشعر",
+        "past1s": "شعرت",
+        "fut1s": "سأشعر",
+        "ger": "شاعر",
+        "inf": "الشعور",
+        "pp": "شعرت"
+      },
+      "zh": {
+        "pres1s": "感觉",
+        "past1s": "感觉了",
+        "fut1s": "会感觉",
+        "ger": "在感觉",
+        "inf": "感觉",
+        "pp": "感觉了"
+      },
+      "ja": {
+        "pres1s": "感じます",
+        "past1s": "感じました",
+        "fut1s": "感じます",
+        "ger": "感じている",
+        "inf": "感じる",
+        "pp": "感じた"
+      },
+      "ko": {
+        "pres1s": "느껴요",
+        "past1s": "느꼈어요",
+        "fut1s": "느낄 거예요",
+        "ger": "느끼고 있어요",
+        "inf": "느끼다",
+        "pp": "느꼈어요"
+      }
     }
   },
-
   "copulas": {
     "_note": "To be: used for state sentences (I am happy)",
-    "en": { "pres1s": "am",     "past1s": "was",        "fut1s": "will be"    },
-    "it": { "pres1s": "sono",   "past1s": "sono stato", "fut1s": "sarò"       },
-    "fr": { "pres1s": "suis",   "past1s": "étais",      "fut1s": "serai"      },
-    "es": { "pres1s": "estoy",  "past1s": "estaba",     "fut1s": "estaré"     },
-    "pt": { "pres1s": "estou",  "past1s": "estava",     "fut1s": "estarei"    }
+    "en": {
+      "pres1s": "am",
+      "past1s": "was",
+      "fut1s": "will be"
+    },
+    "it": {
+      "pres1s": "sono",
+      "past1s": "sono stato",
+      "fut1s": "sarò"
+    },
+    "fr": {
+      "pres1s": "suis",
+      "past1s": "étais",
+      "fut1s": "serai"
+    },
+    "es": {
+      "pres1s": "estoy",
+      "past1s": "estaba",
+      "fut1s": "estaré"
+    },
+    "pt": {
+      "pres1s": "estou",
+      "past1s": "estava",
+      "fut1s": "estarei"
+    },
+    "de": {
+      "pres1s": "bin",
+      "past1s": "war",
+      "fut1s": "werde sein"
+    },
+    "ar": {
+      "pres1s": "",
+      "past1s": "كنت",
+      "fut1s": "سأكون"
+    },
+    "zh": {
+      "pres1s": "",
+      "past1s": "",
+      "fut1s": ""
+    },
+    "ja": {
+      "pres1s": "です",
+      "past1s": "でした",
+      "fut1s": "でしょう"
+    },
+    "ko": {
+      "pres1s": "",
+      "past1s": "",
+      "fut1s": ""
+    }
   },
-
   "modals": {
     "_note": "Modal auxiliary forms per language used when WANT/CAN/MUST operators precede a main verb",
     "WANT": {
-      "en": { "pres": "want to",   "past": "wanted to",  "fut": "will want to"  },
-      "it": { "pres": "voglio",    "past": "volevo",     "fut": "vorrò"         },
-      "fr": { "pres": "veux",      "past": "voulais",    "fut": "voudrai"       },
-      "es": { "pres": "quiero",    "past": "quería",     "fut": "querré"        },
-      "pt": { "pres": "quero",     "past": "queria",     "fut": "quererei"      }
+      "en": {
+        "pres": "want to",
+        "past": "wanted to",
+        "fut": "will want to"
+      },
+      "it": {
+        "pres": "voglio",
+        "past": "volevo",
+        "fut": "vorrò"
+      },
+      "fr": {
+        "pres": "veux",
+        "past": "voulais",
+        "fut": "voudrai"
+      },
+      "es": {
+        "pres": "quiero",
+        "past": "quería",
+        "fut": "querré"
+      },
+      "pt": {
+        "pres": "quero",
+        "past": "queria",
+        "fut": "quererei"
+      },
+      "de": {
+        "pres": "will",
+        "past": "wollte",
+        "fut": "werde wollen"
+      },
+      "ar": {
+        "pres": "أريد",
+        "past": "أردت",
+        "fut": "سأريد"
+      },
+      "zh": {
+        "pres": "想",
+        "past": "想了",
+        "fut": "会想"
+      },
+      "ja": {
+        "pres": "たい",
+        "past": "たかった",
+        "fut": "たい"
+      },
+      "ko": {
+        "pres": "원해요",
+        "past": "원했어요",
+        "fut": "원할 거예요"
+      }
     },
     "CAN": {
-      "en": { "pres": "can",       "past": "could",      "fut": "will be able to" },
-      "it": { "pres": "posso",     "past": "potevo",     "fut": "potrò"          },
-      "fr": { "pres": "peux",      "past": "pouvais",    "fut": "pourrai"        },
-      "es": { "pres": "puedo",     "past": "podía",      "fut": "podré"          },
-      "pt": { "pres": "posso",     "past": "podia",      "fut": "poderei"        }
+      "en": {
+        "pres": "can",
+        "past": "could",
+        "fut": "will be able to"
+      },
+      "it": {
+        "pres": "posso",
+        "past": "potevo",
+        "fut": "potrò"
+      },
+      "fr": {
+        "pres": "peux",
+        "past": "pouvais",
+        "fut": "pourrai"
+      },
+      "es": {
+        "pres": "puedo",
+        "past": "podía",
+        "fut": "podré"
+      },
+      "pt": {
+        "pres": "posso",
+        "past": "podia",
+        "fut": "poderei"
+      },
+      "de": {
+        "pres": "kann",
+        "past": "konnte",
+        "fut": "werde können"
+      },
+      "ar": {
+        "pres": "أستطيع",
+        "past": "استطعت",
+        "fut": "سأستطيع"
+      },
+      "zh": {
+        "pres": "能",
+        "past": "能了",
+        "fut": "会能"
+      },
+      "ja": {
+        "pres": "できます",
+        "past": "できました",
+        "fut": "できます"
+      },
+      "ko": {
+        "pres": "할 수 있어요",
+        "past": "할 수 있었어요",
+        "fut": "할 수 있을 거예요"
+      }
     },
     "MUST": {
-      "en": { "pres": "must",      "past": "had to",     "fut": "will have to"   },
-      "it": { "pres": "devo",      "past": "dovevo",     "fut": "dovrò"          },
-      "fr": { "pres": "dois",      "past": "devais",     "fut": "devrai"         },
-      "es": { "pres": "debo",      "past": "debía",      "fut": "deberé"         },
-      "pt": { "pres": "devo",      "past": "devia",      "fut": "deverei"        }
+      "en": {
+        "pres": "must",
+        "past": "had to",
+        "fut": "will have to"
+      },
+      "it": {
+        "pres": "devo",
+        "past": "dovevo",
+        "fut": "dovrò"
+      },
+      "fr": {
+        "pres": "dois",
+        "past": "devais",
+        "fut": "devrai"
+      },
+      "es": {
+        "pres": "debo",
+        "past": "debía",
+        "fut": "deberé"
+      },
+      "pt": {
+        "pres": "devo",
+        "past": "devia",
+        "fut": "deverei"
+      },
+      "de": {
+        "pres": "muss",
+        "past": "musste",
+        "fut": "werde müssen"
+      },
+      "ar": {
+        "pres": "يجب",
+        "past": "كان يجب",
+        "fut": "سيجب"
+      },
+      "zh": {
+        "pres": "必须",
+        "past": "必须了",
+        "fut": "会必须"
+      },
+      "ja": {
+        "pres": "なければなりません",
+        "past": "なければなりませんでした",
+        "fut": "なければなりません"
+      },
+      "ko": {
+        "pres": "해야 해요",
+        "past": "해야 했어요",
+        "fut": "해야 할 거예요"
+      }
     }
   },
-
   "negation": {
     "_note": "How to negate a verb phrase per language",
-    "en": { "pre": "",     "post": "not",    "example": "I do not eat" },
-    "it": { "pre": "non",  "post": "",       "example": "non mangio"   },
-    "fr": { "pre": "ne",   "post": "pas",    "example": "je ne mange pas" },
-    "es": { "pre": "no",   "post": "",       "example": "no como"       },
-    "pt": { "pre": "não",  "post": "",       "example": "não como"      }
+    "en": {
+      "pre": "",
+      "post": "not",
+      "example": "I do not eat"
+    },
+    "it": {
+      "pre": "non",
+      "post": "",
+      "example": "non mangio"
+    },
+    "fr": {
+      "pre": "ne",
+      "post": "pas",
+      "example": "je ne mange pas"
+    },
+    "es": {
+      "pre": "no",
+      "post": "",
+      "example": "no como"
+    },
+    "pt": {
+      "pre": "não",
+      "post": "",
+      "example": "não como"
+    },
+    "de": {
+      "pre": "",
+      "post": "nicht",
+      "example": "Ich gehe nicht"
+    },
+    "ar": {
+      "pre": "لا",
+      "post": "",
+      "example": "لا آكل"
+    },
+    "zh": {
+      "pre": "不",
+      "post": "",
+      "example": "我不吃"
+    },
+    "ja": {
+      "pre": "",
+      "post": "ません",
+      "example": "食べません"
+    },
+    "ko": {
+      "pre": "안",
+      "post": "",
+      "example": "안 먹어요"
+    }
   },
-
-  "subjectOmissionLanguages": ["it", "es", "pt"],
-
+  "subjectOmissionLanguages": [
+    "it",
+    "es",
+    "pt",
+    "ja",
+    "ko",
+    "ar",
+    "zh"
+  ],
   "pronouns": {
-    "I":   { "en": "I",    "it": "io",  "fr": "je",  "es": "yo",  "pt": "eu"  },
-    "YOU": { "en": "you",  "it": "tu",  "fr": "tu",  "es": "tú",  "pt": "tu"  },
-    "HE":  { "en": "he",   "it": "lui", "fr": "il",  "es": "él",  "pt": "ele" },
-    "SHE": { "en": "she",  "it": "lei", "fr": "elle","es": "ella","pt": "ela" },
-    "WE":  { "en": "we",   "it": "noi", "fr": "nous","es": "nosotros","pt": "nós" },
-    "THEY":{ "en": "they", "it": "loro","fr": "ils", "es": "ellos","pt": "eles" }
+    "I": {
+      "en": "I",
+      "it": "io",
+      "fr": "je",
+      "es": "yo",
+      "pt": "eu",
+      "de": "ich",
+      "ar": "أنا",
+      "zh": "我",
+      "ja": "私",
+      "ko": "나"
+    },
+    "YOU": {
+      "en": "you",
+      "it": "tu",
+      "fr": "tu",
+      "es": "tú",
+      "pt": "tu",
+      "de": "du",
+      "ar": "أنت",
+      "zh": "你",
+      "ja": "あなた",
+      "ko": "너"
+    },
+    "HE": {
+      "en": "he",
+      "it": "lui",
+      "fr": "il",
+      "es": "él",
+      "pt": "ele",
+      "de": "er",
+      "ar": "هو",
+      "zh": "他",
+      "ja": "彼",
+      "ko": "그"
+    },
+    "SHE": {
+      "en": "she",
+      "it": "lei",
+      "fr": "elle",
+      "es": "ella",
+      "pt": "ela",
+      "de": "sie",
+      "ar": "هي",
+      "zh": "她",
+      "ja": "彼女",
+      "ko": "그녀"
+    },
+    "WE": {
+      "en": "we",
+      "it": "noi",
+      "fr": "nous",
+      "es": "nosotros",
+      "pt": "nós",
+      "de": "wir",
+      "ar": "نحن",
+      "zh": "我们",
+      "ja": "私たち",
+      "ko": "우리"
+    },
+    "THEY": {
+      "en": "they",
+      "it": "loro",
+      "fr": "ils",
+      "es": "ellos",
+      "pt": "eles",
+      "de": "sie",
+      "ar": "هم",
+      "zh": "他们",
+      "ja": "彼ら",
+      "ko": "그들"
+    }
   }
 }

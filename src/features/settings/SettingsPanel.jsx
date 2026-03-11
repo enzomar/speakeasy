@@ -48,6 +48,28 @@ export default memo(function SettingsPanel({
     })),
   ];
 
+  // When the user picks a specific voice, also sync the TTS language to that
+  // voice's language tag so both settings stay consistent.
+  const handleVoiceChange = useCallback((name) => {
+    setVoiceName(name);
+    if (!name) return; // "Auto" — leave ttsLang alone
+    const picked = (voices || []).find(v => v.name === name);
+    if (!picked) return;
+    // picked.lang is a BCP-47 tag like "it-IT" — match on 2-char ISO prefix
+    const voiceLangPrefix = picked.lang.slice(0, 2).toLowerCase();
+    const match = LANGUAGES.find(l => l.code === voiceLangPrefix);
+    if (match && match.code !== ttsLangCode) {
+      setTtsLang(match.code);
+    }
+  }, [setVoiceName, setTtsLang, voices, ttsLangCode]);
+
+  // When the TTS language changes from the language picker, clear any pinned
+  // voice name so the auto-scoring logic picks the best voice for the new lang.
+  const handleTtsLangChange = useCallback((code) => {
+    setTtsLang(code);
+    if (voiceName) setVoiceName(""); // reset to "Auto"
+  }, [setTtsLang, setVoiceName, voiceName]);
+
   const aiOptions = [
     { value: "fast",    label: "Fast (0.5B, low RAM)" },
     { value: "quality", label: "Quality (1.7B, GPU)" },
@@ -106,7 +128,7 @@ export default memo(function SettingsPanel({
             iconBg="var(--orange)"
             label={ui?.rowSpeakLang ?? "Speak language"}
             sublabel={ui?.subSpeakLang ?? "Text-to-speech voice"}
-            action={<NativeSelect value={ttsLangCode} options={langOptions} onChange={setTtsLang} />}
+            action={<NativeSelect value={ttsLangCode} options={langOptions} onChange={handleTtsLangChange} />}
           />
           <Row
             Icon={Headphones}
@@ -127,7 +149,7 @@ export default memo(function SettingsPanel({
             iconBg="var(--tint)"
             label={ui?.sectionVoice ?? "Voice"}
             sublabel={voiceName || (ui?.autoVoice ?? "Auto (best available)")}
-            action={<NativeSelect value={voiceName} options={voiceOptions} onChange={setVoiceName} />}
+            action={<NativeSelect value={voiceName} options={voiceOptions} onChange={handleVoiceChange} />}
           />
           <Row
             Icon={Gauge}

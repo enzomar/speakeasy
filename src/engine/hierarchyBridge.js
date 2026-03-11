@@ -66,9 +66,25 @@ const LABEL_OVERRIDES = {
   'yesterday':   'PAST',
   'tomorrow':    'FUTURE',
 
+  // Standalone interjections / social words
+  'goodbye':     'BYE',
+  'thank you':   'THANKS',
+  'ok':          'OK',
+  "i don't know": null,
+
+  // Question compound labels → no engine concept (form interrogative type)
+  'what time':   null,
+  'how much':    null,
+  'how many':    null,
+  'can i':       null,
+  'can you':     null,
+
+  // Operators that ARE in the lexicon — map explicitly
+  'very':        'VERY',
+  'a little':    'A_LITTLE',
+  'again':       'AGAIN',
+
   // Common AAC phrases/words that aren't in lexicon → skip cleanly
-  'a little':    null,
-  'very':        null,
   'always':      null,
   'every day':   null,
   'in a minute': null,
@@ -81,13 +97,12 @@ const LABEL_OVERRIDES = {
   'here':        null,
   'there':       null,
   'different':   null,
-  'again':       null,
   'maybe':       null,
 
   // Sub-place labels (L3) — no direct concept equivalent
+  // Note: 'bathroom' now maps to BATHROOM concept (L2 place)
   'kitchen':     null,
   'bedroom':     null,
-  'bathroom':    null,
   'living room': null,
   'garden':      null,
   'classroom':   null,
@@ -203,4 +218,47 @@ export function tapContextToConceptIds(corePrefixLabels = [], tapContext = null)
  */
 export function isKnownConcept(label) {
   return labelToConceptId(label) !== null;
+}
+
+// ── L1 category → implicit concept ID ────────────────────────────────────────
+// Maps a hierarchy L1 category ID to the engine concept that should be
+// auto-injected as the implicit verb/operator for that category.
+//
+// Examples:
+//   'need'  → 'NEED'   → "I need water."   (subject + NEED + object)
+//   'feel'  → 'FEEL'   → "I feel sad."     (subject + FEEL + adjective)
+//   'do'    → null     → verb is the L2 item itself – no injection needed
+//   'talk'  → null     → interjection / social – no injection needed
+//
+// Usage (in board component):
+//   const prefix = l1CategoryToConceptId(activeCategoryId);
+//   const ids = tapContextToConceptIds(
+//     prefix ? ['I', prefix] : corePrefixLabels,
+//     tapContext
+//   );
+
+const L1_CATEGORY_CONCEPT = {
+  need:     'NEED',   // "I need [water/toilet/help]"
+  feel:     'FEEL',   // "I feel [sad/happy/hurt]"  → sentenceBuilder uses copula when adj follows
+  do:       null,     // L2 IS the verb
+  people:   null,     // L2 IS the subject
+  talk:     null,     // pragmatic/social — standalone
+  place:    'GO',     // "go [home/school]" — default motion verb
+  question: null,     // interrogative — no implicit concept
+  describe: null,     // L2 IS the adjective; subject picks from PEOPLE
+};
+
+/**
+ * Return the implicit concept ID that should be prepended for a given
+ * L1 hierarchy category, or null if no injection is needed.
+ *
+ * @param {string} categoryId - e.g. 'need', 'feel', 'do', 'place'
+ * @returns {string|null}
+ */
+export function l1CategoryToConceptId(categoryId) {
+  if (!categoryId) return null;
+  const key = categoryId.toLowerCase();
+  return Object.prototype.hasOwnProperty.call(L1_CATEGORY_CONCEPT, key)
+    ? L1_CATEGORY_CONCEPT[key]
+    : null;
 }

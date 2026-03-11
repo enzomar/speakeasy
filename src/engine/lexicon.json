@@ -2,90 +2,2824 @@
   "_meta": {
     "version": 1,
     "description": "Concept lexicon for the AAC language engine. Each concept is a semantic unit with type, grammatical metadata, and per-language surface forms.",
-    "languages": ["en", "it", "fr", "es", "pt"]
+    "languages": [
+      "en",
+      "it",
+      "fr",
+      "es",
+      "pt",
+      "de",
+      "ar",
+      "zh",
+      "ja",
+      "ko"
+    ]
   },
-
   "concepts": {
-    "I":        { "type": "pronoun", "person": 1, "number": "sg", "labels": { "en": "I",    "it": "io",  "fr": "je",  "es": "yo",  "pt": "eu"  }},
-    "YOU":      { "type": "pronoun", "person": 2, "number": "sg", "labels": { "en": "you",  "it": "tu",  "fr": "tu",  "es": "tú",  "pt": "tu"  }},
-    "HE":       { "type": "pronoun", "person": 3, "number": "sg", "gender": "m", "labels": { "en": "he",   "it": "lui", "fr": "il",  "es": "él",  "pt": "ele" }},
-    "SHE":      { "type": "pronoun", "person": 3, "number": "sg", "gender": "f", "labels": { "en": "she",  "it": "lei", "fr": "elle","es": "ella","pt": "ela" }},
-    "WE":       { "type": "pronoun", "person": 1, "number": "pl", "labels": { "en": "we",   "it": "noi", "fr": "nous","es": "nosotros","pt": "nós" }},
-    "THEY":     { "type": "pronoun", "person": 3, "number": "pl", "labels": { "en": "they", "it": "loro","fr": "ils", "es": "ellos","pt": "eles"}},
-
-    "MOM":      { "type": "noun", "gender": "f", "labels": { "en": "mom",     "it": "mamma",   "fr": "maman",  "es": "mamá",   "pt": "mãe"    }, "articles": { "it": { "def": "la mamma",   "indef": "una mamma"   }, "fr": { "def": "la maman",  "indef": "une maman"  }, "es": { "def": "la mamá",   "indef": "una mamá"  }, "pt": { "def": "a mãe",    "indef": "uma mãe"   }}},
-    "DAD":      { "type": "noun", "gender": "m", "labels": { "en": "dad",     "it": "papà",    "fr": "papa",   "es": "papá",   "pt": "pai"    }, "articles": { "it": { "def": "il papà",    "indef": "un papà"    }, "fr": { "def": "le papa",   "indef": "un papa"   }, "es": { "def": "el papá",   "indef": "un papá"  }, "pt": { "def": "o pai",    "indef": "um pai"   }}},
-    "FRIEND":   { "type": "noun", "gender": "m", "labels": { "en": "friend",  "it": "amico",   "fr": "ami",    "es": "amigo",  "pt": "amigo"  }, "articles": { "it": { "def": "l'amico",   "indef": "un amico"   }, "fr": { "def": "l'ami",     "indef": "un ami"    }, "es": { "def": "el amigo",  "indef": "un amigo" }, "pt": { "def": "o amigo",  "indef": "um amigo" }}},
-    "DOCTOR":   { "type": "noun", "gender": "m", "labels": { "en": "doctor",  "it": "dottore", "fr": "docteur","es": "doctor", "pt": "médico" }, "articles": { "it": { "def": "il dottore", "indef": "un dottore" }, "fr": { "def": "le docteur","indef": "un docteur"}, "es": { "def": "el doctor", "indef": "un doctor"}, "pt": { "def": "o médico", "indef": "um médico"}}},
-    "TEACHER":  { "type": "noun", "gender": "m", "labels": { "en": "teacher", "it": "maestro", "fr": "professeur","es": "profesor","pt": "professor"}, "articles": { "it": { "def": "il maestro","indef": "un maestro"}, "fr": { "def": "le professeur","indef": "un professeur"}, "es": { "def": "el profesor","indef": "un profesor"}, "pt": { "def": "o professor","indef": "um professor"}}},
-    "EVERYONE": { "type": "noun", "gender": "m", "labels": { "en": "everyone","it": "tutti",   "fr": "tout le monde","es": "todos","pt": "todos"}, "articles": {}},
-
-    "GO":       { "type": "verb", "lemma": { "en": "go",    "it": "andare",  "fr": "aller",   "es": "ir",      "pt": "ir"     }},
-    "COME":     { "type": "verb", "lemma": { "en": "come",  "it": "venire",  "fr": "venir",   "es": "venir",   "pt": "vir"    }},
-    "EAT":      { "type": "verb", "lemma": { "en": "eat",   "it": "mangiare","fr": "manger",  "es": "comer",   "pt": "comer"  }},
-    "DRINK":    { "type": "verb", "lemma": { "en": "drink", "it": "bere",    "fr": "boire",   "es": "beber",   "pt": "beber"  }},
-    "SLEEP":    { "type": "verb", "lemma": { "en": "sleep", "it": "dormire", "fr": "dormir",  "es": "dormir",  "pt": "dormir" }},
-    "PLAY":     { "type": "verb", "lemma": { "en": "play",  "it": "giocare", "fr": "jouer",   "es": "jugar",   "pt": "jogar"  }},
-    "WANT":     { "type": "verb", "lemma": { "en": "want",  "it": "volere",  "fr": "vouloir", "es": "querer",  "pt": "querer" }, "auxiliary": true},
-    "LIKE":     { "type": "verb", "lemma": { "en": "like",  "it": "piacere", "fr": "aimer",   "es": "gustar",  "pt": "gostar" }},
-    "NEED":     { "type": "verb", "lemma": { "en": "need",  "it": "avere bisogno di","fr": "avoir besoin de","es": "necesitar","pt": "precisar"}},
-    "GIVE":     { "type": "verb", "lemma": { "en": "give",  "it": "dare",    "fr": "donner",  "es": "dar",     "pt": "dar"    }},
-    "HELP":     { "type": "verb", "lemma": { "en": "help",  "it": "aiutare", "fr": "aider",   "es": "ayudar",  "pt": "ajudar" }},
-    "LOOK":     { "type": "verb", "lemma": { "en": "look",  "it": "guardare","fr": "regarder","es": "mirar",   "pt": "olhar"  }},
-    "LISTEN":   { "type": "verb", "lemma": { "en": "listen","it": "ascoltare","fr": "écouter","es": "escuchar","pt": "ouvir"  }},
-    "READ":     { "type": "verb", "lemma": { "en": "read",  "it": "leggere", "fr": "lire",    "es": "leer",    "pt": "ler"    }},
-    "OPEN":     { "type": "verb", "lemma": { "en": "open",  "it": "aprire",  "fr": "ouvrir",  "es": "abrir",   "pt": "abrir"  }},
-    "STOP":     { "type": "verb", "lemma": { "en": "stop",  "it": "smettere","fr": "arrêter", "es": "parar",   "pt": "parar"  }},
-    "WAIT":     { "type": "verb", "lemma": { "en": "wait",  "it": "aspettare","fr": "attendre","es": "esperar","pt": "esperar"}},
-    "FEEL":     { "type": "verb", "lemma": { "en": "feel",  "it": "sentire", "fr": "sentir",  "es": "sentir",  "pt": "sentir" }},
-
-    "WATER":    { "type": "noun", "gender": "f", "labels": { "en": "water",   "it": "acqua",    "fr": "eau",       "es": "agua",    "pt": "água"   }, "articles": { "it": { "def": "l'acqua",    "indef": "dell'acqua",  "part": "dell'acqua"   }, "fr": { "def": "l'eau",      "indef": "de l'eau",   "part": "de l'eau"    }, "es": { "def": "el agua",   "indef": "agua",      "part": "agua"       }, "pt": { "def": "a água",    "indef": "água",      "part": "água"       }}},
-    "FOOD":     { "type": "noun", "gender": "m", "labels": { "en": "food",    "it": "cibo",     "fr": "nourriture","es": "comida",  "pt": "comida" }, "articles": { "it": { "def": "il cibo",     "indef": "del cibo",    "part": "del cibo"     }, "fr": { "def": "la nourriture","indef": "de la nourriture","part": "de la nourriture"}, "es": { "def": "la comida", "indef": "comida",    "part": "comida"     }, "pt": { "def": "a comida",  "indef": "comida",    "part": "comida"     }}},
-    "MILK":     { "type": "noun", "gender": "m", "labels": { "en": "milk",    "it": "latte",    "fr": "lait",      "es": "leche",   "pt": "leite"  }, "articles": { "it": { "def": "il latte",    "indef": "del latte",   "part": "del latte"    }, "fr": { "def": "le lait",    "indef": "du lait",    "part": "du lait"     }, "es": { "def": "la leche",  "indef": "leche",     "part": "leche"      }, "pt": { "def": "o leite",   "indef": "leite",     "part": "leite"      }}},
-    "JUICE":    { "type": "noun", "gender": "m", "labels": { "en": "juice",   "it": "succo",    "fr": "jus",       "es": "jugo",    "pt": "suco"   }, "articles": { "it": { "def": "il succo",    "indef": "del succo",   "part": "del succo"    }, "fr": { "def": "le jus",     "indef": "du jus",     "part": "du jus"      }, "es": { "def": "el jugo",   "indef": "jugo",      "part": "jugo"       }, "pt": { "def": "o suco",    "indef": "suco",      "part": "suco"       }}},
-    "BREAD":    { "type": "noun", "gender": "m", "labels": { "en": "bread",   "it": "pane",     "fr": "pain",      "es": "pan",     "pt": "pão"    }, "articles": { "it": { "def": "il pane",     "indef": "del pane",    "part": "del pane"     }, "fr": { "def": "le pain",    "indef": "du pain",    "part": "du pain"     }, "es": { "def": "el pan",    "indef": "pan",       "part": "pan"        }, "pt": { "def": "o pão",     "indef": "pão",       "part": "pão"        }}},
-    "MEDICINE": { "type": "noun", "gender": "f", "labels": { "en": "medicine","it": "medicina", "fr": "médicament","es": "medicina","pt": "remédio"}, "articles": { "it": { "def": "la medicina", "indef": "una medicina", "part": "della medicina"}, "fr": { "def": "le médicament","indef": "un médicament","part": "du médicament"}, "es": { "def": "la medicina","indef": "una medicina","part": "medicina"   }, "pt": { "def": "o remédio", "indef": "um remédio", "part": "remédio"    }}},
-    "BOOK":     { "type": "noun", "gender": "m", "labels": { "en": "book",    "it": "libro",    "fr": "livre",     "es": "libro",   "pt": "livro"  }, "articles": { "it": { "def": "il libro",    "indef": "un libro",    "part": "un libro"     }, "fr": { "def": "le livre",   "indef": "un livre",   "part": "un livre"    }, "es": { "def": "el libro",  "indef": "un libro",  "part": "un libro"   }, "pt": { "def": "o livro",   "indef": "um livro",  "part": "um livro"   }}},
-    "PHONE":    { "type": "noun", "gender": "m", "labels": { "en": "phone",   "it": "telefono", "fr": "téléphone", "es": "teléfono","pt": "telefone"}, "articles": { "it": { "def": "il telefono","indef": "un telefono", "part": "il telefono"  }, "fr": { "def": "le téléphone","indef": "un téléphone","part": "le téléphone"}, "es": { "def": "el teléfono","indef": "un teléfono","part": "el teléfono"}, "pt": { "def": "o telefone","indef": "um telefone","part": "o telefone" }}},
-
-    "HOME":     { "type": "noun", "role": "place", "gender": "f", "labels": { "en": "home",    "it": "casa",     "fr": "maison",  "es": "casa",   "pt": "casa"   }, "locative": { "en": "home",        "it": "a casa",       "fr": "à la maison",  "es": "a casa",     "pt": "em casa"    }},
-    "SCHOOL":   { "type": "noun", "role": "place", "gender": "f", "labels": { "en": "school",  "it": "scuola",   "fr": "école",   "es": "escuela","pt": "escola" }, "locative": { "en": "to school",   "it": "a scuola",     "fr": "à l'école",    "es": "a la escuela","pt": "à escola"  }},
-    "HOSPITAL": { "type": "noun", "role": "place", "gender": "m", "labels": { "en": "hospital","it": "ospedale", "fr": "hôpital", "es": "hospital","pt": "hospital"}, "locative": { "en": "to hospital", "it": "all'ospedale", "fr": "à l'hôpital",  "es": "al hospital","pt": "ao hospital"}},
-    "PARK":     { "type": "noun", "role": "place", "gender": "m", "labels": { "en": "park",    "it": "parco",    "fr": "parc",    "es": "parque", "pt": "parque" }, "locative": { "en": "to the park", "it": "al parco",     "fr": "au parc",      "es": "al parque",  "pt": "ao parque"  }},
-    "OUTSIDE":  { "type": "noun", "role": "place", "gender": "m", "labels": { "en": "outside", "it": "fuori",    "fr": "dehors",  "es": "afuera", "pt": "fora"   }, "locative": { "en": "outside",     "it": "fuori",        "fr": "dehors",       "es": "afuera",     "pt": "lá fora"    }},
-
-    "HAPPY":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "happy",   "it": { "m": "felice",     "f": "felice"     }, "fr": { "m": "heureux",    "f": "heureuse"   }, "es": { "m": "feliz",      "f": "feliz"      }, "pt": { "m": "feliz",      "f": "feliz"      }}},
-    "SAD":      { "type": "adjective", "genderSensitive": true, "labels": { "en": "sad",     "it": { "m": "triste",     "f": "triste"     }, "fr": { "m": "triste",     "f": "triste"     }, "es": { "m": "triste",     "f": "triste"     }, "pt": { "m": "triste",     "f": "triste"     }}},
-    "ANGRY":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "angry",   "it": { "m": "arrabbiato", "f": "arrabbiata" }, "fr": { "m": "fâché",      "f": "fâchée"     }, "es": { "m": "enojado",    "f": "enojada"    }, "pt": { "m": "bravo",      "f": "brava"      }}},
-    "SCARED":   { "type": "adjective", "genderSensitive": true, "labels": { "en": "scared",  "it": { "m": "spaventato", "f": "spaventata" }, "fr": { "m": "effrayé",    "f": "effrayée"   }, "es": { "m": "asustado",   "f": "asustada"   }, "pt": { "m": "assustado",  "f": "assustada"  }}},
-    "TIRED":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "tired",   "it": { "m": "stanco",     "f": "stanca"     }, "fr": { "m": "fatigué",    "f": "fatiguée"   }, "es": { "m": "cansado",    "f": "cansada"    }, "pt": { "m": "cansado",    "f": "cansada"    }}},
-    "SICK":     { "type": "adjective", "genderSensitive": true, "labels": { "en": "sick",    "it": { "m": "malato",     "f": "malata"     }, "fr": { "m": "malade",     "f": "malade"     }, "es": { "m": "enfermo",    "f": "enferma"    }, "pt": { "m": "doente",     "f": "doente"     }}},
-    "HURT":     { "type": "adjective", "genderSensitive": true, "labels": { "en": "hurt",    "it": { "m": "ferito",     "f": "ferita"     }, "fr": { "m": "blessé",     "f": "blessée"    }, "es": { "m": "herido",     "f": "herida"     }, "pt": { "m": "ferido",     "f": "ferida"     }}},
-    "GOOD":     { "type": "adjective", "genderSensitive": true, "labels": { "en": "good",    "it": { "m": "buono",      "f": "buona"      }, "fr": { "m": "bon",        "f": "bonne"      }, "es": { "m": "bueno",      "f": "buena"      }, "pt": { "m": "bom",        "f": "boa"        }}},
-    "BAD":      { "type": "adjective", "genderSensitive": true, "labels": { "en": "bad",     "it": { "m": "cattivo",    "f": "cattiva"    }, "fr": { "m": "mauvais",    "f": "mauvaise"   }, "es": { "m": "malo",       "f": "mala"       }, "pt": { "m": "mau",        "f": "má"         }}},
-    "BIG":      { "type": "adjective", "genderSensitive": true, "labels": { "en": "big",     "it": { "m": "grande",     "f": "grande"     }, "fr": { "m": "grand",      "f": "grande"     }, "es": { "m": "grande",     "f": "grande"     }, "pt": { "m": "grande",     "f": "grande"     }}},
-    "SMALL":    { "type": "adjective", "genderSensitive": true, "labels": { "en": "small",   "it": { "m": "piccolo",    "f": "piccola"    }, "fr": { "m": "petit",      "f": "petite"     }, "es": { "m": "pequeño",    "f": "pequeña"    }, "pt": { "m": "pequeno",    "f": "pequena"    }}},
-
-    "YES":      { "type": "interjection", "labels": { "en": "yes",       "it": "sì",         "fr": "oui",        "es": "sí",        "pt": "sim"       }},
-    "NO":       { "type": "interjection", "labels": { "en": "no",        "it": "no",          "fr": "non",        "es": "no",        "pt": "não"       }},
-    "PLEASE":   { "type": "interjection", "labels": { "en": "please",    "it": "per favore",  "fr": "s'il te plaît","es": "por favor","pt": "por favor" }},
-    "THANKS":   { "type": "interjection", "labels": { "en": "thank you", "it": "grazie",      "fr": "merci",      "es": "gracias",   "pt": "obrigado"  }},
-    "SORRY":    { "type": "interjection", "labels": { "en": "sorry",     "it": "scusa",       "fr": "pardon",     "es": "perdón",    "pt": "desculpa"  }},
-    "HELLO":    { "type": "interjection", "labels": { "en": "hello",     "it": "ciao",        "fr": "bonjour",    "es": "hola",      "pt": "olá"       }},
-    "BYE":      { "type": "interjection", "labels": { "en": "goodbye",   "it": "arrivederci", "fr": "au revoir",  "es": "adiós",     "pt": "tchau"     }}
+    "I": {
+      "type": "pronoun",
+      "person": 1,
+      "number": "sg",
+      "labels": {
+        "en": "I",
+        "it": "io",
+        "fr": "je",
+        "es": "yo",
+        "pt": "eu",
+        "de": "ich",
+        "ar": "أنا",
+        "zh": "我",
+        "ja": "私",
+        "ko": "나"
+      }
+    },
+    "YOU": {
+      "type": "pronoun",
+      "person": 2,
+      "number": "sg",
+      "labels": {
+        "en": "you",
+        "it": "tu",
+        "fr": "tu",
+        "es": "tú",
+        "pt": "tu",
+        "de": "du",
+        "ar": "أنت",
+        "zh": "你",
+        "ja": "あなた",
+        "ko": "너"
+      }
+    },
+    "HE": {
+      "type": "pronoun",
+      "person": 3,
+      "number": "sg",
+      "gender": "m",
+      "labels": {
+        "en": "he",
+        "it": "lui",
+        "fr": "il",
+        "es": "él",
+        "pt": "ele",
+        "de": "er",
+        "ar": "هو",
+        "zh": "他",
+        "ja": "彼",
+        "ko": "그"
+      }
+    },
+    "SHE": {
+      "type": "pronoun",
+      "person": 3,
+      "number": "sg",
+      "gender": "f",
+      "labels": {
+        "en": "she",
+        "it": "lei",
+        "fr": "elle",
+        "es": "ella",
+        "pt": "ela",
+        "de": "sie",
+        "ar": "هي",
+        "zh": "她",
+        "ja": "彼女",
+        "ko": "그녀"
+      }
+    },
+    "WE": {
+      "type": "pronoun",
+      "person": 1,
+      "number": "pl",
+      "labels": {
+        "en": "we",
+        "it": "noi",
+        "fr": "nous",
+        "es": "nosotros",
+        "pt": "nós",
+        "de": "wir",
+        "ar": "نحن",
+        "zh": "我们",
+        "ja": "私たち",
+        "ko": "우리"
+      }
+    },
+    "THEY": {
+      "type": "pronoun",
+      "person": 3,
+      "number": "pl",
+      "labels": {
+        "en": "they",
+        "it": "loro",
+        "fr": "ils",
+        "es": "ellos",
+        "pt": "eles",
+        "de": "sie",
+        "ar": "هم",
+        "zh": "他们",
+        "ja": "彼ら",
+        "ko": "그들"
+      }
+    },
+    "MOM": {
+      "type": "noun",
+      "gender": "f",
+      "labels": {
+        "en": "mom",
+        "it": "mamma",
+        "fr": "maman",
+        "es": "mamá",
+        "pt": "mãe",
+        "de": "Mama",
+        "ar": "أمي",
+        "zh": "妈妈",
+        "ja": "お母さん",
+        "ko": "엄마"
+      },
+      "articles": {
+        "it": {
+          "def": "la mamma",
+          "indef": "una mamma"
+        },
+        "fr": {
+          "def": "la maman",
+          "indef": "une maman"
+        },
+        "es": {
+          "def": "la mamá",
+          "indef": "una mamá"
+        },
+        "pt": {
+          "def": "a mãe",
+          "indef": "uma mãe"
+        },
+        "de": {
+          "def": "die Mama",
+          "indef": "eine Mama"
+        }
+      }
+    },
+    "DAD": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "dad",
+        "it": "papà",
+        "fr": "papa",
+        "es": "papá",
+        "pt": "pai",
+        "de": "Papa",
+        "ar": "أبي",
+        "zh": "爸爸",
+        "ja": "お父さん",
+        "ko": "아빠"
+      },
+      "articles": {
+        "it": {
+          "def": "il papà",
+          "indef": "un papà"
+        },
+        "fr": {
+          "def": "le papa",
+          "indef": "un papa"
+        },
+        "es": {
+          "def": "el papá",
+          "indef": "un papá"
+        },
+        "pt": {
+          "def": "o pai",
+          "indef": "um pai"
+        },
+        "de": {
+          "def": "der Papa",
+          "indef": "ein Papa"
+        }
+      }
+    },
+    "FRIEND": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "friend",
+        "it": "amico",
+        "fr": "ami",
+        "es": "amigo",
+        "pt": "amigo",
+        "de": "Freund",
+        "ar": "صديق",
+        "zh": "朋友",
+        "ja": "友達",
+        "ko": "친구"
+      },
+      "articles": {
+        "it": {
+          "def": "l'amico",
+          "indef": "un amico"
+        },
+        "fr": {
+          "def": "l'ami",
+          "indef": "un ami"
+        },
+        "es": {
+          "def": "el amigo",
+          "indef": "un amigo"
+        },
+        "pt": {
+          "def": "o amigo",
+          "indef": "um amigo"
+        },
+        "de": {
+          "def": "der Freund",
+          "indef": "ein Freund"
+        }
+      }
+    },
+    "DOCTOR": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "doctor",
+        "it": "dottore",
+        "fr": "docteur",
+        "es": "doctor",
+        "pt": "médico",
+        "de": "Arzt",
+        "ar": "طبيب",
+        "zh": "医生",
+        "ja": "医者",
+        "ko": "의사"
+      },
+      "articles": {
+        "it": {
+          "def": "il dottore",
+          "indef": "un dottore"
+        },
+        "fr": {
+          "def": "le docteur",
+          "indef": "un docteur"
+        },
+        "es": {
+          "def": "el doctor",
+          "indef": "un doctor"
+        },
+        "pt": {
+          "def": "o médico",
+          "indef": "um médico"
+        },
+        "de": {
+          "def": "der Arzt",
+          "indef": "ein Arzt"
+        }
+      }
+    },
+    "TEACHER": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "teacher",
+        "it": "maestro",
+        "fr": "professeur",
+        "es": "profesor",
+        "pt": "professor",
+        "de": "Lehrer",
+        "ar": "معلم",
+        "zh": "老师",
+        "ja": "先生",
+        "ko": "선생님"
+      },
+      "articles": {
+        "it": {
+          "def": "il maestro",
+          "indef": "un maestro"
+        },
+        "fr": {
+          "def": "le professeur",
+          "indef": "un professeur"
+        },
+        "es": {
+          "def": "el profesor",
+          "indef": "un profesor"
+        },
+        "pt": {
+          "def": "o professor",
+          "indef": "um professor"
+        },
+        "de": {
+          "def": "der Lehrer",
+          "indef": "ein Lehrer"
+        }
+      }
+    },
+    "EVERYONE": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "everyone",
+        "it": "tutti",
+        "fr": "tout le monde",
+        "es": "todos",
+        "pt": "todos",
+        "de": "alle",
+        "ar": "الجميع",
+        "zh": "所有人",
+        "ja": "みんな",
+        "ko": "모두"
+      },
+      "articles": {}
+    },
+    "GO": {
+      "type": "verb",
+      "lemma": {
+        "en": "go",
+        "it": "andare",
+        "fr": "aller",
+        "es": "ir",
+        "pt": "ir",
+        "de": "gehen",
+        "ar": "ذهب",
+        "zh": "去",
+        "ja": "行く",
+        "ko": "가다"
+      }
+    },
+    "COME": {
+      "type": "verb",
+      "lemma": {
+        "en": "come",
+        "it": "venire",
+        "fr": "venir",
+        "es": "venir",
+        "pt": "vir",
+        "de": "kommen",
+        "ar": "جاء",
+        "zh": "来",
+        "ja": "来る",
+        "ko": "오다"
+      }
+    },
+    "EAT": {
+      "type": "verb",
+      "lemma": {
+        "en": "eat",
+        "it": "mangiare",
+        "fr": "manger",
+        "es": "comer",
+        "pt": "comer",
+        "de": "essen",
+        "ar": "أكل",
+        "zh": "吃",
+        "ja": "食べる",
+        "ko": "먹다"
+      }
+    },
+    "DRINK": {
+      "type": "verb",
+      "lemma": {
+        "en": "drink",
+        "it": "bere",
+        "fr": "boire",
+        "es": "beber",
+        "pt": "beber",
+        "de": "trinken",
+        "ar": "شرب",
+        "zh": "喝",
+        "ja": "飲む",
+        "ko": "마시다"
+      }
+    },
+    "SLEEP": {
+      "type": "verb",
+      "lemma": {
+        "en": "sleep",
+        "it": "dormire",
+        "fr": "dormir",
+        "es": "dormir",
+        "pt": "dormir",
+        "de": "schlafen",
+        "ar": "نام",
+        "zh": "睡觉",
+        "ja": "寝る",
+        "ko": "자다"
+      }
+    },
+    "PLAY": {
+      "type": "verb",
+      "lemma": {
+        "en": "play",
+        "it": "giocare",
+        "fr": "jouer",
+        "es": "jugar",
+        "pt": "jogar",
+        "de": "spielen",
+        "ar": "لعب",
+        "zh": "玩",
+        "ja": "遊ぶ",
+        "ko": "놀다"
+      }
+    },
+    "WANT": {
+      "type": "verb",
+      "lemma": {
+        "en": "want",
+        "it": "volere",
+        "fr": "vouloir",
+        "es": "querer",
+        "pt": "querer",
+        "de": "wollen",
+        "ar": "أراد",
+        "zh": "想要",
+        "ja": "欲しい",
+        "ko": "원하다"
+      },
+      "auxiliary": true
+    },
+    "LIKE": {
+      "type": "verb",
+      "lemma": {
+        "en": "like",
+        "it": "piacere",
+        "fr": "aimer",
+        "es": "gustar",
+        "pt": "gostar",
+        "de": "mögen",
+        "ar": "أحب",
+        "zh": "喜欢",
+        "ja": "好き",
+        "ko": "좋아하다"
+      }
+    },
+    "NEED": {
+      "type": "verb",
+      "lemma": {
+        "en": "need",
+        "it": "avere bisogno di",
+        "fr": "avoir besoin de",
+        "es": "necesitar",
+        "pt": "precisar",
+        "de": "brauchen",
+        "ar": "احتاج",
+        "zh": "需要",
+        "ja": "必要",
+        "ko": "필요하다"
+      }
+    },
+    "GIVE": {
+      "type": "verb",
+      "lemma": {
+        "en": "give",
+        "it": "dare",
+        "fr": "donner",
+        "es": "dar",
+        "pt": "dar",
+        "de": "geben",
+        "ar": "أعطى",
+        "zh": "给",
+        "ja": "あげる",
+        "ko": "주다"
+      }
+    },
+    "HELP": {
+      "type": "verb",
+      "lemma": {
+        "en": "help",
+        "it": "aiutare",
+        "fr": "aider",
+        "es": "ayudar",
+        "pt": "ajudar",
+        "de": "helfen",
+        "ar": "ساعد",
+        "zh": "帮助",
+        "ja": "助ける",
+        "ko": "돕다"
+      }
+    },
+    "LOOK": {
+      "type": "verb",
+      "lemma": {
+        "en": "look",
+        "it": "guardare",
+        "fr": "regarder",
+        "es": "mirar",
+        "pt": "olhar",
+        "de": "schauen",
+        "ar": "نظر",
+        "zh": "看",
+        "ja": "見る",
+        "ko": "보다"
+      }
+    },
+    "LISTEN": {
+      "type": "verb",
+      "lemma": {
+        "en": "listen",
+        "it": "ascoltare",
+        "fr": "écouter",
+        "es": "escuchar",
+        "pt": "ouvir",
+        "de": "hören",
+        "ar": "استمع",
+        "zh": "听",
+        "ja": "聞く",
+        "ko": "듣다"
+      }
+    },
+    "READ": {
+      "type": "verb",
+      "lemma": {
+        "en": "read",
+        "it": "leggere",
+        "fr": "lire",
+        "es": "leer",
+        "pt": "ler",
+        "de": "lesen",
+        "ar": "قرأ",
+        "zh": "读",
+        "ja": "読む",
+        "ko": "읽다"
+      }
+    },
+    "OPEN": {
+      "type": "verb",
+      "lemma": {
+        "en": "open",
+        "it": "aprire",
+        "fr": "ouvrir",
+        "es": "abrir",
+        "pt": "abrir",
+        "de": "öffnen",
+        "ar": "فتح",
+        "zh": "开",
+        "ja": "開ける",
+        "ko": "열다"
+      }
+    },
+    "STOP": {
+      "type": "verb",
+      "lemma": {
+        "en": "stop",
+        "it": "smettere",
+        "fr": "arrêter",
+        "es": "parar",
+        "pt": "parar",
+        "de": "aufhören",
+        "ar": "توقف",
+        "zh": "停",
+        "ja": "止める",
+        "ko": "멈추다"
+      }
+    },
+    "WAIT": {
+      "type": "verb",
+      "lemma": {
+        "en": "wait",
+        "it": "aspettare",
+        "fr": "attendre",
+        "es": "esperar",
+        "pt": "esperar",
+        "de": "warten",
+        "ar": "انتظر",
+        "zh": "等",
+        "ja": "待つ",
+        "ko": "기다리다"
+      }
+    },
+    "FEEL": {
+      "type": "verb",
+      "lemma": {
+        "en": "feel",
+        "it": "sentire",
+        "fr": "sentir",
+        "es": "sentir",
+        "pt": "sentir",
+        "de": "fühlen",
+        "ar": "شعر",
+        "zh": "感觉",
+        "ja": "感じる",
+        "ko": "느끼다"
+      }
+    },
+    "WATER": {
+      "type": "noun",
+      "gender": "f",
+      "labels": {
+        "en": "water",
+        "it": "acqua",
+        "fr": "eau",
+        "es": "agua",
+        "pt": "água",
+        "de": "Wasser",
+        "ar": "ماء",
+        "zh": "水",
+        "ja": "水",
+        "ko": "물"
+      },
+      "articles": {
+        "it": {
+          "def": "l'acqua",
+          "indef": "dell'acqua",
+          "part": "dell'acqua"
+        },
+        "fr": {
+          "def": "l'eau",
+          "indef": "de l'eau",
+          "part": "de l'eau"
+        },
+        "es": {
+          "def": "el agua",
+          "indef": "agua",
+          "part": "agua"
+        },
+        "pt": {
+          "def": "a água",
+          "indef": "água",
+          "part": "água"
+        },
+        "de": {
+          "def": "das Wasser",
+          "indef": "Wasser",
+          "part": "Wasser"
+        }
+      }
+    },
+    "FOOD": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "food",
+        "it": "cibo",
+        "fr": "nourriture",
+        "es": "comida",
+        "pt": "comida",
+        "de": "Essen",
+        "ar": "طعام",
+        "zh": "食物",
+        "ja": "食べ物",
+        "ko": "음식"
+      },
+      "articles": {
+        "it": {
+          "def": "il cibo",
+          "indef": "del cibo",
+          "part": "del cibo"
+        },
+        "fr": {
+          "def": "la nourriture",
+          "indef": "de la nourriture",
+          "part": "de la nourriture"
+        },
+        "es": {
+          "def": "la comida",
+          "indef": "comida",
+          "part": "comida"
+        },
+        "pt": {
+          "def": "a comida",
+          "indef": "comida",
+          "part": "comida"
+        },
+        "de": {
+          "def": "das Essen",
+          "indef": "Essen",
+          "part": "Essen"
+        }
+      }
+    },
+    "MILK": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "milk",
+        "it": "latte",
+        "fr": "lait",
+        "es": "leche",
+        "pt": "leite",
+        "de": "Milch",
+        "ar": "حليب",
+        "zh": "牛奶",
+        "ja": "牛乳",
+        "ko": "우유"
+      },
+      "articles": {
+        "it": {
+          "def": "il latte",
+          "indef": "del latte",
+          "part": "del latte"
+        },
+        "fr": {
+          "def": "le lait",
+          "indef": "du lait",
+          "part": "du lait"
+        },
+        "es": {
+          "def": "la leche",
+          "indef": "leche",
+          "part": "leche"
+        },
+        "pt": {
+          "def": "o leite",
+          "indef": "leite",
+          "part": "leite"
+        },
+        "de": {
+          "def": "die Milch",
+          "indef": "Milch",
+          "part": "Milch"
+        }
+      }
+    },
+    "JUICE": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "juice",
+        "it": "succo",
+        "fr": "jus",
+        "es": "jugo",
+        "pt": "suco",
+        "de": "Saft",
+        "ar": "عصير",
+        "zh": "果汁",
+        "ja": "ジュース",
+        "ko": "주스"
+      },
+      "articles": {
+        "it": {
+          "def": "il succo",
+          "indef": "del succo",
+          "part": "del succo"
+        },
+        "fr": {
+          "def": "le jus",
+          "indef": "du jus",
+          "part": "du jus"
+        },
+        "es": {
+          "def": "el jugo",
+          "indef": "jugo",
+          "part": "jugo"
+        },
+        "pt": {
+          "def": "o suco",
+          "indef": "suco",
+          "part": "suco"
+        },
+        "de": {
+          "def": "der Saft",
+          "indef": "Saft",
+          "part": "Saft"
+        }
+      }
+    },
+    "BREAD": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "bread",
+        "it": "pane",
+        "fr": "pain",
+        "es": "pan",
+        "pt": "pão",
+        "de": "Brot",
+        "ar": "خبز",
+        "zh": "面包",
+        "ja": "パン",
+        "ko": "빵"
+      },
+      "articles": {
+        "it": {
+          "def": "il pane",
+          "indef": "del pane",
+          "part": "del pane"
+        },
+        "fr": {
+          "def": "le pain",
+          "indef": "du pain",
+          "part": "du pain"
+        },
+        "es": {
+          "def": "el pan",
+          "indef": "pan",
+          "part": "pan"
+        },
+        "pt": {
+          "def": "o pão",
+          "indef": "pão",
+          "part": "pão"
+        },
+        "de": {
+          "def": "das Brot",
+          "indef": "Brot",
+          "part": "Brot"
+        }
+      }
+    },
+    "MEDICINE": {
+      "type": "noun",
+      "gender": "f",
+      "labels": {
+        "en": "medicine",
+        "it": "medicina",
+        "fr": "médicament",
+        "es": "medicina",
+        "pt": "remédio",
+        "de": "Medikament",
+        "ar": "دواء",
+        "zh": "药",
+        "ja": "薬",
+        "ko": "약"
+      },
+      "articles": {
+        "it": {
+          "def": "la medicina",
+          "indef": "una medicina",
+          "part": "della medicina"
+        },
+        "fr": {
+          "def": "le médicament",
+          "indef": "un médicament",
+          "part": "du médicament"
+        },
+        "es": {
+          "def": "la medicina",
+          "indef": "una medicina",
+          "part": "medicina"
+        },
+        "pt": {
+          "def": "o remédio",
+          "indef": "um remédio",
+          "part": "remédio"
+        },
+        "de": {
+          "def": "das Medikament",
+          "indef": "ein Medikament"
+        }
+      }
+    },
+    "BOOK": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "book",
+        "it": "libro",
+        "fr": "livre",
+        "es": "libro",
+        "pt": "livro",
+        "de": "Buch",
+        "ar": "كتاب",
+        "zh": "书",
+        "ja": "本",
+        "ko": "책"
+      },
+      "articles": {
+        "it": {
+          "def": "il libro",
+          "indef": "un libro",
+          "part": "un libro"
+        },
+        "fr": {
+          "def": "le livre",
+          "indef": "un livre",
+          "part": "un livre"
+        },
+        "es": {
+          "def": "el libro",
+          "indef": "un libro",
+          "part": "un libro"
+        },
+        "pt": {
+          "def": "o livro",
+          "indef": "um livro",
+          "part": "um livro"
+        },
+        "de": {
+          "def": "das Buch",
+          "indef": "ein Buch"
+        }
+      }
+    },
+    "PHONE": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "phone",
+        "it": "telefono",
+        "fr": "téléphone",
+        "es": "teléfono",
+        "pt": "telefone",
+        "de": "Telefon",
+        "ar": "هاتف",
+        "zh": "手机",
+        "ja": "電話",
+        "ko": "전화기"
+      },
+      "articles": {
+        "it": {
+          "def": "il telefono",
+          "indef": "un telefono",
+          "part": "il telefono"
+        },
+        "fr": {
+          "def": "le téléphone",
+          "indef": "un téléphone",
+          "part": "le téléphone"
+        },
+        "es": {
+          "def": "el teléfono",
+          "indef": "un teléfono",
+          "part": "el teléfono"
+        },
+        "pt": {
+          "def": "o telefone",
+          "indef": "um telefone",
+          "part": "o telefone"
+        },
+        "de": {
+          "def": "das Telefon",
+          "indef": "ein Telefon"
+        }
+      }
+    },
+    "HOME": {
+      "type": "place",
+      "role": "place",
+      "gender": "f",
+      "labels": {
+        "en": "home",
+        "it": "casa",
+        "fr": "maison",
+        "es": "casa",
+        "pt": "casa",
+        "de": "Zuhause",
+        "ar": "بيت",
+        "zh": "家",
+        "ja": "家",
+        "ko": "집"
+      },
+      "locative": {
+        "en": "home",
+        "it": "a casa",
+        "fr": "à la maison",
+        "es": "a casa",
+        "pt": "em casa",
+        "de": "nach Hause",
+        "ar": "إلى البيت",
+        "zh": "回家",
+        "ja": "家に",
+        "ko": "집에"
+      }
+    },
+    "SCHOOL": {
+      "type": "place",
+      "role": "place",
+      "gender": "f",
+      "labels": {
+        "en": "school",
+        "it": "scuola",
+        "fr": "école",
+        "es": "escuela",
+        "pt": "escola",
+        "de": "Schule",
+        "ar": "مدرسة",
+        "zh": "学校",
+        "ja": "学校",
+        "ko": "학교"
+      },
+      "locative": {
+        "en": "to school",
+        "it": "a scuola",
+        "fr": "à l'école",
+        "es": "a la escuela",
+        "pt": "à escola",
+        "de": "zur Schule",
+        "ar": "إلى المدرسة",
+        "zh": "去学校",
+        "ja": "学校に",
+        "ko": "학교에"
+      }
+    },
+    "HOSPITAL": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "hospital",
+        "it": "ospedale",
+        "fr": "hôpital",
+        "es": "hospital",
+        "pt": "hospital",
+        "de": "Krankenhaus",
+        "ar": "مستشفى",
+        "zh": "医院",
+        "ja": "病院",
+        "ko": "병원"
+      },
+      "locative": {
+        "en": "to hospital",
+        "it": "all'ospedale",
+        "fr": "à l'hôpital",
+        "es": "al hospital",
+        "pt": "ao hospital",
+        "de": "ins Krankenhaus",
+        "ar": "إلى المستشفى",
+        "zh": "去医院",
+        "ja": "病院に",
+        "ko": "병원에"
+      }
+    },
+    "PARK": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "park",
+        "it": "parco",
+        "fr": "parc",
+        "es": "parque",
+        "pt": "parque",
+        "de": "Park",
+        "ar": "حديقة",
+        "zh": "公园",
+        "ja": "公園",
+        "ko": "공원"
+      },
+      "locative": {
+        "en": "to the park",
+        "it": "al parco",
+        "fr": "au parc",
+        "es": "al parque",
+        "pt": "ao parque",
+        "de": "in den Park",
+        "ar": "إلى الحديقة",
+        "zh": "去公园",
+        "ja": "公園に",
+        "ko": "공원에"
+      }
+    },
+    "OUTSIDE": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "outside",
+        "it": "fuori",
+        "fr": "dehors",
+        "es": "afuera",
+        "pt": "fora",
+        "de": "draußen",
+        "ar": "خارج",
+        "zh": "外面",
+        "ja": "外",
+        "ko": "밖"
+      },
+      "locative": {
+        "en": "outside",
+        "it": "fuori",
+        "fr": "dehors",
+        "es": "afuera",
+        "pt": "lá fora",
+        "de": "nach draußen",
+        "ar": "إلى الخارج",
+        "zh": "去外面",
+        "ja": "外に",
+        "ko": "밖에"
+      }
+    },
+    "HAPPY": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "happy",
+        "it": {
+          "m": "felice",
+          "f": "felice"
+        },
+        "fr": {
+          "m": "heureux",
+          "f": "heureuse"
+        },
+        "es": {
+          "m": "feliz",
+          "f": "feliz"
+        },
+        "pt": {
+          "m": "feliz",
+          "f": "feliz"
+        },
+        "de": "glücklich",
+        "ar": {
+          "m": "سعيد",
+          "f": "سعيدة"
+        },
+        "zh": "高兴",
+        "ja": "嬉しい",
+        "ko": "행복한"
+      }
+    },
+    "SAD": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "sad",
+        "it": {
+          "m": "triste",
+          "f": "triste"
+        },
+        "fr": {
+          "m": "triste",
+          "f": "triste"
+        },
+        "es": {
+          "m": "triste",
+          "f": "triste"
+        },
+        "pt": {
+          "m": "triste",
+          "f": "triste"
+        },
+        "de": "traurig",
+        "ar": {
+          "m": "حزين",
+          "f": "حزينة"
+        },
+        "zh": "难过",
+        "ja": "悲しい",
+        "ko": "슬픈"
+      }
+    },
+    "ANGRY": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "angry",
+        "it": {
+          "m": "arrabbiato",
+          "f": "arrabbiata"
+        },
+        "fr": {
+          "m": "fâché",
+          "f": "fâchée"
+        },
+        "es": {
+          "m": "enojado",
+          "f": "enojada"
+        },
+        "pt": {
+          "m": "bravo",
+          "f": "brava"
+        },
+        "de": "wütend",
+        "ar": {
+          "m": "غاضب",
+          "f": "غاضبة"
+        },
+        "zh": "生气",
+        "ja": "怒った",
+        "ko": "화난"
+      }
+    },
+    "SCARED": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "scared",
+        "it": {
+          "m": "spaventato",
+          "f": "spaventata"
+        },
+        "fr": {
+          "m": "effrayé",
+          "f": "effrayée"
+        },
+        "es": {
+          "m": "asustado",
+          "f": "asustada"
+        },
+        "pt": {
+          "m": "assustado",
+          "f": "assustada"
+        },
+        "de": "ängstlich",
+        "ar": {
+          "m": "خائف",
+          "f": "خائفة"
+        },
+        "zh": "害怕",
+        "ja": "怖い",
+        "ko": "무서운"
+      }
+    },
+    "TIRED": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "tired",
+        "it": {
+          "m": "stanco",
+          "f": "stanca"
+        },
+        "fr": {
+          "m": "fatigué",
+          "f": "fatiguée"
+        },
+        "es": {
+          "m": "cansado",
+          "f": "cansada"
+        },
+        "pt": {
+          "m": "cansado",
+          "f": "cansada"
+        },
+        "de": "müde",
+        "ar": {
+          "m": "متعب",
+          "f": "متعبة"
+        },
+        "zh": "累",
+        "ja": "疲れた",
+        "ko": "피곤한"
+      }
+    },
+    "SICK": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "sick",
+        "it": {
+          "m": "malato",
+          "f": "malata"
+        },
+        "fr": {
+          "m": "malade",
+          "f": "malade"
+        },
+        "es": {
+          "m": "enfermo",
+          "f": "enferma"
+        },
+        "pt": {
+          "m": "doente",
+          "f": "doente"
+        },
+        "de": "krank",
+        "ar": {
+          "m": "مريض",
+          "f": "مريضة"
+        },
+        "zh": "病",
+        "ja": "病気",
+        "ko": "아픈"
+      }
+    },
+    "HURT": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "hurt",
+        "it": {
+          "m": "ferito",
+          "f": "ferita"
+        },
+        "fr": {
+          "m": "blessé",
+          "f": "blessée"
+        },
+        "es": {
+          "m": "herido",
+          "f": "herida"
+        },
+        "pt": {
+          "m": "ferido",
+          "f": "ferida"
+        },
+        "de": "verletzt",
+        "ar": {
+          "m": "مصاب",
+          "f": "مصابة"
+        },
+        "zh": "疼",
+        "ja": "痛い",
+        "ko": "다친"
+      }
+    },
+    "GOOD": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "good",
+        "it": {
+          "m": "buono",
+          "f": "buona"
+        },
+        "fr": {
+          "m": "bon",
+          "f": "bonne"
+        },
+        "es": {
+          "m": "bueno",
+          "f": "buena"
+        },
+        "pt": {
+          "m": "bom",
+          "f": "boa"
+        },
+        "de": "gut",
+        "ar": {
+          "m": "جيد",
+          "f": "جيدة"
+        },
+        "zh": "好",
+        "ja": "良い",
+        "ko": "좋은"
+      }
+    },
+    "BAD": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "bad",
+        "it": {
+          "m": "cattivo",
+          "f": "cattiva"
+        },
+        "fr": {
+          "m": "mauvais",
+          "f": "mauvaise"
+        },
+        "es": {
+          "m": "malo",
+          "f": "mala"
+        },
+        "pt": {
+          "m": "mau",
+          "f": "má"
+        },
+        "de": "schlecht",
+        "ar": {
+          "m": "سيئ",
+          "f": "سيئة"
+        },
+        "zh": "坏",
+        "ja": "悪い",
+        "ko": "나쁜"
+      }
+    },
+    "BIG": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "big",
+        "it": {
+          "m": "grande",
+          "f": "grande"
+        },
+        "fr": {
+          "m": "grand",
+          "f": "grande"
+        },
+        "es": {
+          "m": "grande",
+          "f": "grande"
+        },
+        "pt": {
+          "m": "grande",
+          "f": "grande"
+        },
+        "de": "groß",
+        "ar": {
+          "m": "كبير",
+          "f": "كبيرة"
+        },
+        "zh": "大",
+        "ja": "大きい",
+        "ko": "큰"
+      }
+    },
+    "SMALL": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "small",
+        "it": {
+          "m": "piccolo",
+          "f": "piccola"
+        },
+        "fr": {
+          "m": "petit",
+          "f": "petite"
+        },
+        "es": {
+          "m": "pequeño",
+          "f": "pequeña"
+        },
+        "pt": {
+          "m": "pequeno",
+          "f": "pequena"
+        },
+        "de": "klein",
+        "ar": {
+          "m": "صغير",
+          "f": "صغيرة"
+        },
+        "zh": "小",
+        "ja": "小さい",
+        "ko": "작은"
+      }
+    },
+    "YES": {
+      "type": "interjection",
+      "labels": {
+        "en": "yes",
+        "it": "sì",
+        "fr": "oui",
+        "es": "sí",
+        "pt": "sim",
+        "de": "ja",
+        "ar": "نعم",
+        "zh": "是",
+        "ja": "はい",
+        "ko": "네"
+      }
+    },
+    "NO": {
+      "type": "interjection",
+      "labels": {
+        "en": "no",
+        "it": "no",
+        "fr": "non",
+        "es": "no",
+        "pt": "não",
+        "de": "nein",
+        "ar": "لا",
+        "zh": "不",
+        "ja": "いいえ",
+        "ko": "아니요"
+      }
+    },
+    "PLEASE": {
+      "type": "interjection",
+      "labels": {
+        "en": "please",
+        "it": "per favore",
+        "fr": "s'il te plaît",
+        "es": "por favor",
+        "pt": "por favor",
+        "de": "bitte",
+        "ar": "من فضلك",
+        "zh": "请",
+        "ja": "お願い",
+        "ko": "제발"
+      }
+    },
+    "THANKS": {
+      "type": "interjection",
+      "labels": {
+        "en": "thank you",
+        "it": "grazie",
+        "fr": "merci",
+        "es": "gracias",
+        "pt": "obrigado",
+        "de": "danke",
+        "ar": "شكراً",
+        "zh": "谢谢",
+        "ja": "ありがとう",
+        "ko": "감사합니다"
+      }
+    },
+    "SORRY": {
+      "type": "interjection",
+      "labels": {
+        "en": "sorry",
+        "it": "scusa",
+        "fr": "pardon",
+        "es": "perdón",
+        "pt": "desculpa",
+        "de": "entschuldigung",
+        "ar": "آسف",
+        "zh": "对不起",
+        "ja": "ごめんなさい",
+        "ko": "미안해요"
+      }
+    },
+    "HELLO": {
+      "type": "interjection",
+      "labels": {
+        "en": "hello",
+        "it": "ciao",
+        "fr": "bonjour",
+        "es": "hola",
+        "pt": "olá",
+        "de": "hallo",
+        "ar": "مرحبا",
+        "zh": "你好",
+        "ja": "こんにちは",
+        "ko": "안녕"
+      }
+    },
+    "BYE": {
+      "type": "interjection",
+      "labels": {
+        "en": "goodbye",
+        "it": "arrivederci",
+        "fr": "au revoir",
+        "es": "adiós",
+        "pt": "tchau",
+        "de": "tschüss",
+        "ar": "مع السلامة",
+        "zh": "再见",
+        "ja": "さようなら",
+        "ko": "안녕히"
+      }
+    },
+    "OK": {
+      "type": "interjection",
+      "labels": {
+        "en": "ok",
+        "it": "ok",
+        "fr": "d'accord",
+        "es": "de acuerdo",
+        "pt": "tudo bem",
+        "de": "ok",
+        "ar": "حسناً",
+        "zh": "好的",
+        "ja": "わかった",
+        "ko": "알겠어요"
+      }
+    },
+    "FRUSTRATED": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "frustrated",
+        "it": {
+          "m": "frustrato",
+          "f": "frustrata"
+        },
+        "fr": {
+          "m": "frustré",
+          "f": "frustrée"
+        },
+        "es": {
+          "m": "frustrado",
+          "f": "frustrada"
+        },
+        "pt": {
+          "m": "frustrado",
+          "f": "frustrada"
+        },
+        "de": "frustriert",
+        "ar": {
+          "m": "محبط",
+          "f": "محبطة"
+        },
+        "zh": "沮丧",
+        "ja": "苛立った",
+        "ko": "답답한"
+      }
+    },
+    "CONFUSED": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "confused",
+        "it": {
+          "m": "confuso",
+          "f": "confusa"
+        },
+        "fr": {
+          "m": "confus",
+          "f": "confuse"
+        },
+        "es": {
+          "m": "confundido",
+          "f": "confundida"
+        },
+        "pt": {
+          "m": "confuso",
+          "f": "confusa"
+        },
+        "de": "verwirrt",
+        "ar": {
+          "m": "مرتبك",
+          "f": "مرتبكة"
+        },
+        "zh": "困惑",
+        "ja": "混乱した",
+        "ko": "혼란스러운"
+      }
+    },
+    "NERVOUS": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "nervous",
+        "it": {
+          "m": "nervoso",
+          "f": "nervosa"
+        },
+        "fr": {
+          "m": "nerveux",
+          "f": "nerveuse"
+        },
+        "es": {
+          "m": "nervioso",
+          "f": "nerviosa"
+        },
+        "pt": {
+          "m": "nervoso",
+          "f": "nervosa"
+        },
+        "de": "nervös",
+        "ar": {
+          "m": "متوتر",
+          "f": "متوترة"
+        },
+        "zh": "紧张",
+        "ja": "緊張した",
+        "ko": "긴장한"
+      }
+    },
+    "BORED": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "bored",
+        "it": {
+          "m": "annoiato",
+          "f": "annoiata"
+        },
+        "fr": {
+          "m": "ennuyé",
+          "f": "ennuyée"
+        },
+        "es": {
+          "m": "aburrido",
+          "f": "aburrida"
+        },
+        "pt": {
+          "m": "entediado",
+          "f": "entediada"
+        },
+        "de": "gelangweilt",
+        "ar": {
+          "m": "ملول",
+          "f": "ملولة"
+        },
+        "zh": "无聊",
+        "ja": "退屈な",
+        "ko": "지루한"
+      }
+    },
+    "LONELY": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "lonely",
+        "it": {
+          "m": "solo",
+          "f": "sola"
+        },
+        "fr": {
+          "m": "seul",
+          "f": "seule"
+        },
+        "es": {
+          "m": "solo",
+          "f": "sola"
+        },
+        "pt": {
+          "m": "sozinho",
+          "f": "sozinha"
+        },
+        "de": "einsam",
+        "ar": {
+          "m": "وحيد",
+          "f": "وحيدة"
+        },
+        "zh": "孤独",
+        "ja": "寂しい",
+        "ko": "외로운"
+      }
+    },
+    "EXCITED": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "excited",
+        "it": {
+          "m": "eccitato",
+          "f": "eccitata"
+        },
+        "fr": {
+          "m": "enthousiaste",
+          "f": "enthousiaste"
+        },
+        "es": {
+          "m": "emocionado",
+          "f": "emocionada"
+        },
+        "pt": {
+          "m": "animado",
+          "f": "animada"
+        },
+        "de": "aufgeregt",
+        "ar": {
+          "m": "متحمس",
+          "f": "متحمسة"
+        },
+        "zh": "兴奋",
+        "ja": "わくわく",
+        "ko": "신나는"
+      }
+    },
+    "CALM": {
+      "type": "adjective",
+      "genderSensitive": true,
+      "labels": {
+        "en": "calm",
+        "it": {
+          "m": "calmo",
+          "f": "calma"
+        },
+        "fr": {
+          "m": "calme",
+          "f": "calme"
+        },
+        "es": {
+          "m": "tranquilo",
+          "f": "tranquila"
+        },
+        "pt": {
+          "m": "calmo",
+          "f": "calma"
+        },
+        "de": "ruhig",
+        "ar": {
+          "m": "هادئ",
+          "f": "هادئة"
+        },
+        "zh": "平静",
+        "ja": "穏やか",
+        "ko": "차분한"
+      }
+    },
+    "HOT": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "hot",
+        "it": "caldo",
+        "fr": "chaud",
+        "es": "caliente",
+        "pt": "quente",
+        "de": "heiß",
+        "ar": "حار",
+        "zh": "热",
+        "ja": "暑い",
+        "ko": "뜨거운"
+      }
+    },
+    "COLD": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "cold",
+        "it": "freddo",
+        "fr": "froid",
+        "es": "frío",
+        "pt": "frio",
+        "de": "kalt",
+        "ar": "بارد",
+        "zh": "冷",
+        "ja": "寒い",
+        "ko": "차가운"
+      }
+    },
+    "CLEAN": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "clean",
+        "it": "pulito",
+        "fr": "propre",
+        "es": "limpio",
+        "pt": "limpo",
+        "de": "sauber",
+        "ar": "نظيف",
+        "zh": "干净",
+        "ja": "きれい",
+        "ko": "깨끗한"
+      }
+    },
+    "DIRTY": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "dirty",
+        "it": "sporco",
+        "fr": "sale",
+        "es": "sucio",
+        "pt": "sujo",
+        "de": "schmutzig",
+        "ar": "وسخ",
+        "zh": "脏",
+        "ja": "汚い",
+        "ko": "더러운"
+      }
+    },
+    "LOUD": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "loud",
+        "it": "rumoroso",
+        "fr": "bruyant",
+        "es": "ruidoso",
+        "pt": "barulhento",
+        "de": "laut",
+        "ar": "صاخب",
+        "zh": "吵",
+        "ja": "うるさい",
+        "ko": "시끄러운"
+      }
+    },
+    "QUIET": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "quiet",
+        "it": "silenzioso",
+        "fr": "calme",
+        "es": "silencioso",
+        "pt": "silencioso",
+        "de": "leise",
+        "ar": "هادئ",
+        "zh": "安静",
+        "ja": "静か",
+        "ko": "조용한"
+      }
+    },
+    "FAST": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "fast",
+        "it": "veloce",
+        "fr": "rapide",
+        "es": "rápido",
+        "pt": "rápido",
+        "de": "schnell",
+        "ar": "سريع",
+        "zh": "快",
+        "ja": "速い",
+        "ko": "빠른"
+      }
+    },
+    "SLOW": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "slow",
+        "it": "lento",
+        "fr": "lent",
+        "es": "lento",
+        "pt": "lento",
+        "de": "langsam",
+        "ar": "بطيء",
+        "zh": "慢",
+        "ja": "遅い",
+        "ko": "느린"
+      }
+    },
+    "BROKEN": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "broken",
+        "it": "rotto",
+        "fr": "cassé",
+        "es": "roto",
+        "pt": "quebrado",
+        "de": "kaputt",
+        "ar": "مكسور",
+        "zh": "坏了",
+        "ja": "壊れた",
+        "ko": "고장난"
+      }
+    },
+    "READY": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "ready",
+        "it": "pronto",
+        "fr": "prêt",
+        "es": "listo",
+        "pt": "pronto",
+        "de": "bereit",
+        "ar": "جاهز",
+        "zh": "准备好",
+        "ja": "準備できた",
+        "ko": "준비된"
+      }
+    },
+    "SAME": {
+      "type": "adjective",
+      "genderSensitive": false,
+      "labels": {
+        "en": "same",
+        "it": "uguale",
+        "fr": "pareil",
+        "es": "igual",
+        "pt": "igual",
+        "de": "gleich",
+        "ar": "نفس",
+        "zh": "相同",
+        "ja": "同じ",
+        "ko": "같은"
+      }
+    },
+    "WATCH": {
+      "type": "verb",
+      "lemma": {
+        "en": "watch",
+        "it": "guardare",
+        "fr": "regarder",
+        "es": "ver",
+        "pt": "assistir",
+        "de": "anschauen",
+        "ar": "شاهد",
+        "zh": "看",
+        "ja": "見る",
+        "ko": "보다"
+      }
+    },
+    "FINISH": {
+      "type": "verb",
+      "lemma": {
+        "en": "finish",
+        "it": "finire",
+        "fr": "terminer",
+        "es": "terminar",
+        "pt": "terminar",
+        "de": "beenden",
+        "ar": "أنهى",
+        "zh": "完成",
+        "ja": "終わる",
+        "ko": "끝내다"
+      }
+    },
+    "TURN": {
+      "type": "verb",
+      "lemma": {
+        "en": "turn",
+        "it": "girare",
+        "fr": "tourner",
+        "es": "girar",
+        "pt": "girar",
+        "de": "drehen",
+        "ar": "دار",
+        "zh": "转",
+        "ja": "回す",
+        "ko": "돌리다"
+      }
+    },
+    "SHOW": {
+      "type": "verb",
+      "lemma": {
+        "en": "show",
+        "it": "mostrare",
+        "fr": "montrer",
+        "es": "mostrar",
+        "pt": "mostrar",
+        "de": "zeigen",
+        "ar": "أظهر",
+        "zh": "给看",
+        "ja": "見せる",
+        "ko": "보여주다"
+      }
+    },
+    "CHOOSE": {
+      "type": "verb",
+      "lemma": {
+        "en": "choose",
+        "it": "scegliere",
+        "fr": "choisir",
+        "es": "elegir",
+        "pt": "escolher",
+        "de": "wählen",
+        "ar": "اختار",
+        "zh": "选择",
+        "ja": "選ぶ",
+        "ko": "고르다"
+      }
+    },
+    "UNDERSTAND": {
+      "type": "verb",
+      "lemma": {
+        "en": "understand",
+        "it": "capire",
+        "fr": "comprendre",
+        "es": "entender",
+        "pt": "entender",
+        "de": "verstehen",
+        "ar": "فهم",
+        "zh": "理解",
+        "ja": "分かる",
+        "ko": "이해하다"
+      }
+    },
+    "TELL": {
+      "type": "verb",
+      "lemma": {
+        "en": "tell",
+        "it": "dire",
+        "fr": "dire",
+        "es": "decir",
+        "pt": "dizer",
+        "de": "sagen",
+        "ar": "قال",
+        "zh": "告诉",
+        "ja": "言う",
+        "ko": "말하다"
+      }
+    },
+    "ASK": {
+      "type": "verb",
+      "lemma": {
+        "en": "ask",
+        "it": "chiedere",
+        "fr": "demander",
+        "es": "preguntar",
+        "pt": "perguntar",
+        "de": "fragen",
+        "ar": "سأل",
+        "zh": "问",
+        "ja": "聞く",
+        "ko": "묻다"
+      }
+    },
+    "REPEAT": {
+      "type": "verb",
+      "lemma": {
+        "en": "repeat",
+        "it": "ripetere",
+        "fr": "répéter",
+        "es": "repetir",
+        "pt": "repetir",
+        "de": "wiederholen",
+        "ar": "كرر",
+        "zh": "重复",
+        "ja": "繰り返す",
+        "ko": "반복하다"
+      }
+    },
+    "HUG": {
+      "type": "verb",
+      "lemma": {
+        "en": "hug",
+        "it": "abbracciare",
+        "fr": "câliner",
+        "es": "abrazar",
+        "pt": "abraçar",
+        "de": "umarmen",
+        "ar": "عانق",
+        "zh": "拥抱",
+        "ja": "抱きしめる",
+        "ko": "안다"
+      }
+    },
+    "CHANGE": {
+      "type": "verb",
+      "lemma": {
+        "en": "change",
+        "it": "cambiare",
+        "fr": "changer",
+        "es": "cambiar",
+        "pt": "mudar",
+        "de": "ändern",
+        "ar": "غيّر",
+        "zh": "改变",
+        "ja": "変える",
+        "ko": "바꾸다"
+      }
+    },
+    "REST": {
+      "type": "verb",
+      "lemma": {
+        "en": "rest",
+        "it": "riposare",
+        "fr": "se reposer",
+        "es": "descansar",
+        "pt": "descansar",
+        "de": "ausruhen",
+        "ar": "استراح",
+        "zh": "休息",
+        "ja": "休む",
+        "ko": "쉬다"
+      }
+    },
+    "TOILET": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "toilet",
+        "it": "bagno",
+        "fr": "toilettes",
+        "es": "baño",
+        "pt": "banheiro",
+        "de": "Toilette",
+        "ar": "حمام",
+        "zh": "厕所",
+        "ja": "トイレ",
+        "ko": "화장실"
+      },
+      "articles": {
+        "it": {
+          "def": "il bagno",
+          "indef": "un bagno"
+        },
+        "fr": {
+          "def": "les toilettes",
+          "indef": "des toilettes"
+        },
+        "es": {
+          "def": "el baño",
+          "indef": "un baño"
+        },
+        "pt": {
+          "def": "o banheiro",
+          "indef": "um banheiro"
+        },
+        "de": {
+          "def": "die Toilette",
+          "indef": "eine Toilette"
+        }
+      }
+    },
+    "SPACE": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "space",
+        "it": "spazio",
+        "fr": "espace",
+        "es": "espacio",
+        "pt": "espaço",
+        "de": "Platz",
+        "ar": "مساحة",
+        "zh": "空间",
+        "ja": "場所",
+        "ko": "공간"
+      },
+      "articles": {
+        "it": {
+          "def": "lo spazio",
+          "indef": "uno spazio"
+        },
+        "fr": {
+          "def": "l'espace",
+          "indef": "un espace"
+        },
+        "es": {
+          "def": "el espacio",
+          "indef": "un espacio"
+        },
+        "pt": {
+          "def": "o espaço",
+          "indef": "um espaço"
+        },
+        "de": {
+          "def": "der Platz",
+          "indef": "ein Platz"
+        }
+      }
+    },
+    "BREAK": {
+      "type": "noun",
+      "gender": "f",
+      "labels": {
+        "en": "break",
+        "it": "pausa",
+        "fr": "pause",
+        "es": "pausa",
+        "pt": "pausa",
+        "de": "Pause",
+        "ar": "استراحة",
+        "zh": "休息",
+        "ja": "休憩",
+        "ko": "휴식"
+      },
+      "articles": {
+        "it": {
+          "def": "la pausa",
+          "indef": "una pausa"
+        },
+        "fr": {
+          "def": "la pause",
+          "indef": "une pause"
+        },
+        "es": {
+          "def": "la pausa",
+          "indef": "una pausa"
+        },
+        "pt": {
+          "def": "a pausa",
+          "indef": "uma pausa"
+        },
+        "de": {
+          "def": "die Pause",
+          "indef": "eine Pause"
+        }
+      }
+    },
+    "BROTHER": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "brother",
+        "it": "fratello",
+        "fr": "frère",
+        "es": "hermano",
+        "pt": "irmão",
+        "de": "Bruder",
+        "ar": "أخ",
+        "zh": "哥哥",
+        "ja": "兄",
+        "ko": "형"
+      },
+      "articles": {
+        "it": {
+          "def": "il fratello",
+          "indef": "un fratello"
+        },
+        "fr": {
+          "def": "le frère",
+          "indef": "un frère"
+        },
+        "es": {
+          "def": "el hermano",
+          "indef": "un hermano"
+        },
+        "pt": {
+          "def": "o irmão",
+          "indef": "um irmão"
+        },
+        "de": {
+          "def": "der Bruder",
+          "indef": "ein Bruder"
+        }
+      }
+    },
+    "SISTER": {
+      "type": "noun",
+      "gender": "f",
+      "labels": {
+        "en": "sister",
+        "it": "sorella",
+        "fr": "sœur",
+        "es": "hermana",
+        "pt": "irmã",
+        "de": "Schwester",
+        "ar": "أخت",
+        "zh": "姐姐",
+        "ja": "姉",
+        "ko": "언니"
+      },
+      "articles": {
+        "it": {
+          "def": "la sorella",
+          "indef": "una sorella"
+        },
+        "fr": {
+          "def": "la sœur",
+          "indef": "une sœur"
+        },
+        "es": {
+          "def": "la hermana",
+          "indef": "una hermana"
+        },
+        "pt": {
+          "def": "a irmã",
+          "indef": "uma irmã"
+        },
+        "de": {
+          "def": "die Schwester",
+          "indef": "eine Schwester"
+        }
+      }
+    },
+    "GRANDMA": {
+      "type": "noun",
+      "gender": "f",
+      "labels": {
+        "en": "grandma",
+        "it": "nonna",
+        "fr": "mamie",
+        "es": "abuela",
+        "pt": "avó",
+        "de": "Oma",
+        "ar": "جدة",
+        "zh": "奶奶",
+        "ja": "おばあさん",
+        "ko": "할머니"
+      },
+      "articles": {
+        "it": {
+          "def": "la nonna",
+          "indef": "una nonna"
+        },
+        "fr": {
+          "def": "la mamie",
+          "indef": "une mamie"
+        },
+        "es": {
+          "def": "la abuela",
+          "indef": "una abuela"
+        },
+        "pt": {
+          "def": "a avó",
+          "indef": "uma avó"
+        },
+        "de": {
+          "def": "die Oma",
+          "indef": "eine Oma"
+        }
+      }
+    },
+    "GRANDPA": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "grandpa",
+        "it": "nonno",
+        "fr": "papi",
+        "es": "abuelo",
+        "pt": "avô",
+        "de": "Opa",
+        "ar": "جد",
+        "zh": "爷爷",
+        "ja": "おじいさん",
+        "ko": "할아버지"
+      },
+      "articles": {
+        "it": {
+          "def": "il nonno",
+          "indef": "un nonno"
+        },
+        "fr": {
+          "def": "le papi",
+          "indef": "un papi"
+        },
+        "es": {
+          "def": "el abuelo",
+          "indef": "un abuelo"
+        },
+        "pt": {
+          "def": "o avô",
+          "indef": "um avô"
+        },
+        "de": {
+          "def": "der Opa",
+          "indef": "ein Opa"
+        }
+      }
+    },
+    "NURSE": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "nurse",
+        "it": "infermiere",
+        "fr": "infirmier",
+        "es": "enfermero",
+        "pt": "enfermeiro",
+        "de": "Pfleger",
+        "ar": "ممرض",
+        "zh": "护士",
+        "ja": "看護師",
+        "ko": "간호사"
+      },
+      "articles": {
+        "it": {
+          "def": "l'infermiere",
+          "indef": "un infermiere"
+        },
+        "fr": {
+          "def": "l'infirmier",
+          "indef": "un infirmier"
+        },
+        "es": {
+          "def": "el enfermero",
+          "indef": "un enfermero"
+        },
+        "pt": {
+          "def": "o enfermeiro",
+          "indef": "um enfermeiro"
+        },
+        "de": {
+          "def": "der Pfleger",
+          "indef": "ein Pfleger"
+        }
+      }
+    },
+    "THERAPIST": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "therapist",
+        "it": "terapista",
+        "fr": "thérapeute",
+        "es": "terapeuta",
+        "pt": "terapeuta",
+        "de": "Therapeut",
+        "ar": "معالج",
+        "zh": "治疗师",
+        "ja": "セラピスト",
+        "ko": "치료사"
+      },
+      "articles": {
+        "it": {
+          "def": "il terapista",
+          "indef": "un terapista"
+        },
+        "fr": {
+          "def": "le thérapeute",
+          "indef": "un thérapeute"
+        },
+        "es": {
+          "def": "el terapeuta",
+          "indef": "un terapeuta"
+        },
+        "pt": {
+          "def": "o terapeuta",
+          "indef": "um terapeuta"
+        },
+        "de": {
+          "def": "der Therapeut",
+          "indef": "ein Therapeut"
+        }
+      }
+    },
+    "CAREGIVER": {
+      "type": "noun",
+      "gender": "m",
+      "labels": {
+        "en": "caregiver",
+        "it": "assistente",
+        "fr": "soignant",
+        "es": "cuidador",
+        "pt": "cuidador",
+        "de": "Betreuer",
+        "ar": "مقدم رعاية",
+        "zh": "护理员",
+        "ja": "介護者",
+        "ko": "돌보미"
+      },
+      "articles": {
+        "it": {
+          "def": "l'assistente",
+          "indef": "un assistente"
+        },
+        "fr": {
+          "def": "le soignant",
+          "indef": "un soignant"
+        },
+        "es": {
+          "def": "el cuidador",
+          "indef": "un cuidador"
+        },
+        "pt": {
+          "def": "o cuidador",
+          "indef": "um cuidador"
+        },
+        "de": {
+          "def": "der Betreuer",
+          "indef": "ein Betreuer"
+        }
+      }
+    },
+    "STORE": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "store",
+        "it": "negozio",
+        "fr": "magasin",
+        "es": "tienda",
+        "pt": "loja",
+        "de": "Laden",
+        "ar": "متجر",
+        "zh": "商店",
+        "ja": "お店",
+        "ko": "가게"
+      },
+      "locative": {
+        "en": "to the store",
+        "it": "al negozio",
+        "fr": "au magasin",
+        "es": "a la tienda",
+        "pt": "à loja",
+        "de": "zum Laden",
+        "ar": "إلى المتجر",
+        "zh": "去商店",
+        "ja": "お店に",
+        "ko": "가게에"
+      }
+    },
+    "RESTAURANT": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "restaurant",
+        "it": "ristorante",
+        "fr": "restaurant",
+        "es": "restaurante",
+        "pt": "restaurante",
+        "de": "Restaurant",
+        "ar": "مطعم",
+        "zh": "餐厅",
+        "ja": "レストラン",
+        "ko": "식당"
+      },
+      "locative": {
+        "en": "to the restaurant",
+        "it": "al ristorante",
+        "fr": "au restaurant",
+        "es": "al restaurante",
+        "pt": "ao restaurante",
+        "de": "ins Restaurant",
+        "ar": "إلى المطعم",
+        "zh": "去餐厅",
+        "ja": "レストランに",
+        "ko": "식당에"
+      }
+    },
+    "CAR": {
+      "type": "place",
+      "role": "place",
+      "gender": "f",
+      "labels": {
+        "en": "car",
+        "it": "macchina",
+        "fr": "voiture",
+        "es": "coche",
+        "pt": "carro",
+        "de": "Auto",
+        "ar": "سيارة",
+        "zh": "汽车",
+        "ja": "車",
+        "ko": "차"
+      },
+      "locative": {
+        "en": "in the car",
+        "it": "in macchina",
+        "fr": "en voiture",
+        "es": "en el coche",
+        "pt": "no carro",
+        "de": "ins Auto",
+        "ar": "في السيارة",
+        "zh": "上车",
+        "ja": "車に",
+        "ko": "차에"
+      }
+    },
+    "BUS": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "bus",
+        "it": "autobus",
+        "fr": "bus",
+        "es": "autobús",
+        "pt": "ônibus",
+        "de": "Bus",
+        "ar": "حافلة",
+        "zh": "公交车",
+        "ja": "バス",
+        "ko": "버스"
+      },
+      "locative": {
+        "en": "on the bus",
+        "it": "sull'autobus",
+        "fr": "dans le bus",
+        "es": "en el autobús",
+        "pt": "no ônibus",
+        "de": "in den Bus",
+        "ar": "في الحافلة",
+        "zh": "上公交车",
+        "ja": "バスに",
+        "ko": "버스에"
+      }
+    },
+    "BATHROOM": {
+      "type": "place",
+      "role": "place",
+      "gender": "m",
+      "labels": {
+        "en": "bathroom",
+        "it": "bagno",
+        "fr": "toilettes",
+        "es": "baño",
+        "pt": "banheiro",
+        "de": "Badezimmer",
+        "ar": "حمام",
+        "zh": "卫生间",
+        "ja": "トイレ",
+        "ko": "화장실"
+      },
+      "locative": {
+        "en": "in the bathroom",
+        "it": "in bagno",
+        "fr": "aux toilettes",
+        "es": "al baño",
+        "pt": "no banheiro",
+        "de": "ins Badezimmer",
+        "ar": "إلى الحمام",
+        "zh": "去卫生间",
+        "ja": "トイレに",
+        "ko": "화장실에"
+      }
+    }
   },
-
   "operators": {
-    "PAST":     { "type": "tense",     "value": "past",       "labels": { "en": "past",     "it": "passato",   "fr": "passé",     "es": "pasado",   "pt": "passado"  }},
-    "FUTURE":   { "type": "tense",     "value": "future",     "labels": { "en": "future",   "it": "futuro",    "fr": "futur",     "es": "futuro",   "pt": "futuro"   }},
-    "NOW":      { "type": "tense",     "value": "present",    "labels": { "en": "now",      "it": "adesso",    "fr": "maintenant","es": "ahora",    "pt": "agora"    }},
-    "NOT":      { "type": "polarity",  "value": "negative",   "labels": { "en": "not",      "it": "non",       "fr": "ne…pas",    "es": "no",       "pt": "não"      }},
-    "WANT":     { "type": "modal",     "value": "volitive",   "labels": { "en": "want",     "it": "volere",    "fr": "vouloir",   "es": "querer",   "pt": "querer"   }},
-    "CAN":      { "type": "modal",     "value": "ability",    "labels": { "en": "can",      "it": "potere",    "fr": "pouvoir",   "es": "poder",    "pt": "poder"    }},
-    "MUST":     { "type": "modal",     "value": "obligation", "labels": { "en": "must",     "it": "dovere",    "fr": "devoir",    "es": "deber",    "pt": "dever"    }},
-    "VERY":     { "type": "intensity", "value": "augment",    "labels": { "en": "very",     "it": "molto",     "fr": "très",      "es": "muy",      "pt": "muito"    }},
-    "A_LITTLE": { "type": "intensity", "value": "diminish",   "labels": { "en": "a little", "it": "un po'",    "fr": "un peu",    "es": "un poco",  "pt": "um pouco" }},
-    "AGAIN":    { "type": "aspect",    "value": "repetitive", "labels": { "en": "again",    "it": "ancora",    "fr": "encore",    "es": "otra vez", "pt": "de novo"  }},
-    "QUESTION": { "type": "mood",      "value": "interrogative","labels": { "en": "?",      "it": "?",         "fr": "?",         "es": "?",        "pt": "?"        }}
+    "PAST": {
+      "type": "tense",
+      "value": "past",
+      "labels": {
+        "en": "past",
+        "it": "passato",
+        "fr": "passé",
+        "es": "pasado",
+        "pt": "passado",
+        "de": "Vergangenheit",
+        "ar": "ماضي",
+        "zh": "过去",
+        "ja": "過去",
+        "ko": "과거"
+      }
+    },
+    "FUTURE": {
+      "type": "tense",
+      "value": "future",
+      "labels": {
+        "en": "future",
+        "it": "futuro",
+        "fr": "futur",
+        "es": "futuro",
+        "pt": "futuro",
+        "de": "Zukunft",
+        "ar": "مستقبل",
+        "zh": "将来",
+        "ja": "未来",
+        "ko": "미래"
+      }
+    },
+    "NOW": {
+      "type": "tense",
+      "value": "present",
+      "labels": {
+        "en": "now",
+        "it": "adesso",
+        "fr": "maintenant",
+        "es": "ahora",
+        "pt": "agora",
+        "de": "jetzt",
+        "ar": "الآن",
+        "zh": "现在",
+        "ja": "今",
+        "ko": "지금"
+      }
+    },
+    "NOT": {
+      "type": "polarity",
+      "value": "negative",
+      "labels": {
+        "en": "not",
+        "it": "non",
+        "fr": "ne…pas",
+        "es": "no",
+        "pt": "não",
+        "de": "nicht",
+        "ar": "لا",
+        "zh": "不",
+        "ja": "ない",
+        "ko": "안"
+      }
+    },
+    "WANT": {
+      "type": "modal",
+      "value": "volitive",
+      "labels": {
+        "en": "want",
+        "it": "volere",
+        "fr": "vouloir",
+        "es": "querer",
+        "pt": "querer",
+        "de": "wollen",
+        "ar": "أريد",
+        "zh": "想要",
+        "ja": "たい",
+        "ko": "원하다"
+      }
+    },
+    "CAN": {
+      "type": "modal",
+      "value": "ability",
+      "labels": {
+        "en": "can",
+        "it": "potere",
+        "fr": "pouvoir",
+        "es": "poder",
+        "pt": "poder",
+        "de": "können",
+        "ar": "يستطيع",
+        "zh": "能",
+        "ja": "できる",
+        "ko": "할 수 있다"
+      }
+    },
+    "MUST": {
+      "type": "modal",
+      "value": "obligation",
+      "labels": {
+        "en": "must",
+        "it": "dovere",
+        "fr": "devoir",
+        "es": "deber",
+        "pt": "dever",
+        "de": "müssen",
+        "ar": "يجب",
+        "zh": "必须",
+        "ja": "なければ",
+        "ko": "해야 하다"
+      }
+    },
+    "VERY": {
+      "type": "intensity",
+      "value": "augment",
+      "labels": {
+        "en": "very",
+        "it": "molto",
+        "fr": "très",
+        "es": "muy",
+        "pt": "muito",
+        "de": "sehr",
+        "ar": "جداً",
+        "zh": "很",
+        "ja": "とても",
+        "ko": "매우"
+      }
+    },
+    "A_LITTLE": {
+      "type": "intensity",
+      "value": "diminish",
+      "labels": {
+        "en": "a little",
+        "it": "un po'",
+        "fr": "un peu",
+        "es": "un poco",
+        "pt": "um pouco",
+        "de": "ein wenig",
+        "ar": "قليلاً",
+        "zh": "一点",
+        "ja": "少し",
+        "ko": "조금"
+      }
+    },
+    "AGAIN": {
+      "type": "aspect",
+      "value": "repetitive",
+      "labels": {
+        "en": "again",
+        "it": "ancora",
+        "fr": "encore",
+        "es": "otra vez",
+        "pt": "de novo",
+        "de": "wieder",
+        "ar": "مرة أخرى",
+        "zh": "再次",
+        "ja": "また",
+        "ko": "다시"
+      }
+    },
+    "QUESTION": {
+      "type": "mood",
+      "value": "interrogative",
+      "labels": {
+        "en": "?",
+        "it": "?",
+        "fr": "?",
+        "es": "?",
+        "pt": "?",
+        "de": "?",
+        "ar": "؟",
+        "zh": "？",
+        "ja": "？",
+        "ko": "?"
+      }
+    }
   }
 }
