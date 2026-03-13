@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Test output
+scripts/output-test-grid/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -43,6 +43,7 @@ export const LISTEN_STATES = {
 const FULL_RECORD_TIMEOUT   = 15000;  // Max recording for full utterance
 const FULL_SILENCE_MS       = 2000;   // Silence to end full recording
 const WAKE_DETECTED_FLASH   = 600;    // Brief visual pause on wake detection
+const CONV_IDLE_TIMEOUT     = 20000;  // 20 s of silence in conversational mode → exit
 
 // ── Hook ──────────────────────────────────────────────────────────────────────
 
@@ -79,14 +80,18 @@ export function useListenMode(opts = {}) {
   const [error, setError]             = useState(null);
   const [selectedReply, setSelectedReply] = useState("");
   const [active, setActive]           = useState(false);
+  const [conversational, setConversational] = useState(false);
 
-  const captureRef   = useRef(null);   // Stage 2 audio capture
-  const detectorRef  = useRef(null);   // Stage 1 wake word detector
-  const stateRef     = useRef(state);
-  const activeRef    = useRef(false);
+  const captureRef          = useRef(null);   // Stage 2 audio capture
+  const detectorRef         = useRef(null);   // Stage 1 wake word detector
+  const stateRef            = useRef(state);
+  const activeRef           = useRef(false);
+  const conversationalRef   = useRef(false);
+  const convIdleRef         = useRef(null);
 
   useEffect(() => { stateRef.current = state; }, [state]);
   useEffect(() => { activeRef.current = active; }, [active]);
+  useEffect(() => { conversationalRef.current = conversational; }, [conversational]);
 
   // ── Whisper hook (Stage 2 high-fidelity STT) ────────────────────────────
 
@@ -213,9 +218,11 @@ export function useListenMode(opts = {}) {
       lang:     bcp47,
 
       onWake: async (stripped, rawText) => {
-        // Wake word found!
+        // Wake word found — enter conversational mode
         console.log("[useListenMode] Wake word detected:", rawText);
         detector.stop(); // pause Stage 1
+        conversationalRef.current = true;
+        setConversational(true);
 
         transition(LISTEN_STATES.WAKE_DETECTED);
 
@@ -299,6 +306,8 @@ export function useListenMode(opts = {}) {
   // ── Stop listen mode ──────────────────────────────────────────────────
 
   const stopListening = useCallback(() => {
+    conversationalRef.current = false;
+    setConversational(false);
     detectorRef.current?.stop();
     detectorRef.current = null;
     captureRef.current?.stop();
@@ -335,10 +344,14 @@ export function useListenMode(opts = {}) {
   useEffect(() => {
     if (stateRef.current === LISTEN_STATES.SPEAKING && !speaking) {
       const timer = setTimeout(() => {
-        if (activeRef.current) {
-          setTranscript("");
-          setSuggestions([]);
-          setSelectedReply("");
+        setTranscript("");
+        setSuggestions([]);
+        setSelectedReply("");
+
+        if (conversationalRef.current && activeRef.current) {
+          // Conversational mode — skip wake word, go straight to recording
+          startFullRecording("");
+        } else if (activeRef.current) {
           transition(LISTEN_STATES.IDLE);
           setTimeout(() => startListening(), 100);
         } else {
@@ -347,11 +360,38 @@ export function useListenMode(opts = {}) {
       }, 400);
       return () => clearTimeout(timer);
     }
-  }, [speaking, transition, startListening]);
+  }, [speaking, transition, startListening, startFullRecording]);
+
+  // ── Conversational idle timeout ─────────────────────────────────────────
+  // If in conversational mode + recording and nobody speaks for 20 s, exit.
+
+  useEffect(() => {
+    if (conversational && state === LISTEN_STATES.RECORDING) {
+      convIdleRef.current = setTimeout(() => {
+        console.log("[ListenMode] Conversation idle timeout — ending conversation");
+        conversationalRef.current = false;
+        setConversational(false);
+        captureRef.current?.stop();
+        captureRef.current = null;
+        setEnergy(0);
+        if (activeRef.current) {
+          resumeWakeDetection();
+        } else {
+          transition(LISTEN_STATES.IDLE);
+        }
+      }, CONV_IDLE_TIMEOUT);
+    }
+    return () => {
+      clearTimeout(convIdleRef.current);
+      convIdleRef.current = null;
+    };
+  }, [conversational, state, transition, resumeWakeDetection]);
 
   // ── Dismiss / Continue ────────────────────────────────────────────────
 
   const dismiss = useCallback(() => {
+    conversationalRef.current = false;
+    setConversational(false);
     detectorRef.current?.stop();
     detectorRef.current = null;
     captureRef.current?.stop();
@@ -369,6 +409,8 @@ export function useListenMode(opts = {}) {
 
   // Dismiss overlay but keep transcript so Mode B predictions stay active on the board
   const dismissToBoard = useCallback(() => {
+    conversationalRef.current = false;
+    setConversational(false);
     detectorRef.current?.stop();
     detectorRef.current = null;
     captureRef.current?.stop();
@@ -390,9 +432,14 @@ export function useListenMode(opts = {}) {
     setSuggestions([]);
     setSelectedReply("");
     setPartialText("");
-    transition(LISTEN_STATES.IDLE);
-    setTimeout(() => startListening(), 100);
-  }, [startListening, transition]);
+    if (conversationalRef.current) {
+      // Stay in conversation — go straight to recording
+      startFullRecording("");
+    } else {
+      transition(LISTEN_STATES.IDLE);
+      setTimeout(() => startListening(), 100);
+    }
+  }, [startFullRecording, startListening, transition]);
 
   // ── Cleanup on unmount ────────────────────────────────────────────────
 
@@ -428,11 +475,31 @@ export function useListenMode(opts = {}) {
       activeRef.current = started;
     }, [startListening]),
     deactivate: useCallback(() => {
+      conversationalRef.current = false;
+      setConversational(false);
       setActive(false);
       activeRef.current = false;
       setError(null);
       stopListening();
     }, [stopListening]),
+
+    // Conversational mode
+    conversational,
+    endConversation: useCallback(() => {
+      conversationalRef.current = false;
+      setConversational(false);
+      captureRef.current?.stop();
+      captureRef.current = null;
+      setTranscript("");
+      setSuggestions([]);
+      setSelectedReply("");
+      setEnergy(0);
+      if (activeRef.current) {
+        resumeWakeDetection();
+      } else {
+        transition(LISTEN_STATES.IDLE);
+      }
+    }, [resumeWakeDetection, transition]),
 
     // Actions
     startListening,
@@ -454,6 +521,8 @@ export function useListenMode(opts = {}) {
       setPartialText("");
       setActive(true);
       activeRef.current = true;
+      conversationalRef.current = true;
+      setConversational(true);
       transition(LISTEN_STATES.WAKE_DETECTED);
       await new Promise(r => setTimeout(r, WAKE_DETECTED_FLASH));
       await startFullRecording("");

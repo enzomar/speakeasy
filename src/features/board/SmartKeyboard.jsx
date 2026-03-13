@@ -28,7 +28,8 @@
  */
 
 import { memo, useState, useCallback, useRef, useEffect, useMemo } from "react";
-import { Delete, CornerDownLeft, Volume2, Type } from "lucide-react";
+import { Delete, CornerDownLeft, Volume2, Type, Check } from "lucide-react";
+import { haptic } from "../../app/native";
 import { getWordList, getStarters } from "../../data/wordFrequency";
 
 // ── Cluster layouts per language (same groupings, optimised for T9) ──────────
@@ -142,11 +143,18 @@ export default memo(function SmartKeyboard({
   const [spellingMode, setSpellingMode]  = useState(false);
   const [spellingIdx, setSpellingIdx]    = useState(null);
   const [numMode, setNumMode]            = useState(false);  // numbers + punctuation
+  const [numBuffer, setNumBuffer]        = useState("");      // accumulates digits
   const longPressTimerRef                = useRef(null);
   const predictScrollRef                 = useRef(null);
 
-  // Number pad: 12 keys matching the 3×4 grid positions
-  const NUM_KEYS = ["1","2","3","4","5","6","7","8","9","0",".",","];
+  // Standard phone numpad layout: 3 cols × 4 rows
+  // [ 1 2 3 ]  [ 4 5 6 ]  [ 7 8 9 ]  [ . 0 , ]
+  const NUM_PAD = [
+    ["1","2","3"],
+    ["4","5","6"],
+    ["7","8","9"],
+    [".","0",","],
+  ];
 
   const layout   = useMemo(() => getLayout(langCode), [langCode]);
   const charMap  = useMemo(() => buildCharMap(layout), [layout]);
@@ -211,13 +219,40 @@ export default memo(function SmartKeyboard({
     setSpellingIdx(null);
   }, [onAcceptWord]);
 
-  // ── Number key tap ───────────────────────────────────────────────────────
-  const handleNumTap = useCallback((num) => {
-    onAcceptWord?.(num);
-  }, [onAcceptWord]);
+  // ── Number pad digit tap — append to buffer ───────────────────────────────
+  const handleNumDigit = useCallback((digit) => {
+    setNumBuffer(prev => {
+      // Prevent double decimal/comma: only allow one . or , total
+      if ((digit === "." || digit === ",") && (prev.includes(".") || prev.includes(","))) return prev;
+      // Limit to 15 chars to avoid absurd numbers
+      if (prev.length >= 15) return prev;
+      return prev + digit;
+    });
+  }, []);
+
+  // ── Confirm number — commit the buffer as a single word ──────────────────
+  const handleNumConfirm = useCallback(() => {
+    const val = numBuffer.trim();
+    if (val) onAcceptWord?.(val);
+    setNumBuffer("");
+  }, [numBuffer, onAcceptWord]);
+
+  // ── Number backspace — remove last digit, or exit numMode if empty ───────
+  const handleNumBackspace = useCallback(() => {
+    setNumBuffer(prev => {
+      if (prev.length > 0) return prev.slice(0, -1);
+      // Buffer already empty → exit num mode
+      setNumMode(false);
+      return "";
+    });
+  }, []);
 
   // ── Backspace ────────────────────────────────────────────────────────────
   const handleBackspace = useCallback(() => {
+    if (numMode) {
+      handleNumBackspace();
+      return;
+    }
     if (keySeq.length > 0) {
       setKeySeq(prev => prev.slice(0, -1));
     } else if (spellingMode) {
@@ -226,17 +261,23 @@ export default memo(function SmartKeyboard({
     } else {
       onBackspace?.();
     }
-  }, [keySeq, spellingMode, onBackspace]);
+  }, [numMode, handleNumBackspace, keySeq, spellingMode, onBackspace]);
 
   // ── Submit ───────────────────────────────────────────────────────────────
   const handleSubmit = useCallback(() => {
+    // Commit any pending number before speaking
+    if (numMode && numBuffer.trim()) {
+      onAcceptWord?.(numBuffer.trim());
+      setNumBuffer("");
+    }
     if (keySeq.length > 0 && t9Candidates.length > 0) {
       handleAccept(t9Candidates[0]);
     }
     onSubmit?.();
     setKeySeq([]);
     setNumMode(false);
-  }, [keySeq, t9Candidates, handleAccept, onSubmit]);
+    setNumBuffer("");
+  }, [numMode, numBuffer, onAcceptWord, keySeq, t9Candidates, handleAccept, onSubmit]);
 
   // ── Toggle spelling mode ─────────────────────────────────────────────────
   const toggleSpelling = useCallback(() => {
@@ -291,11 +332,15 @@ export default memo(function SmartKeyboard({
   }, [words, starters, hasKeys]);
 
   return (
-    <div style={{
-      display: "flex", flexDirection: "column",
-      flex: 1, overflow: "hidden",
-      background: "var(--bg)",
-    }}>
+    <div
+      role="toolbar"
+      aria-label="Smart keyboard"
+      style={{
+        display: "flex", flexDirection: "column",
+        flex: 1, overflow: "hidden",
+        background: "var(--bg)",
+      }}
+    >
 
       {/* ── Sentence starters (empty sentence) ──────────────────────────── */}
       {showStarters && (
@@ -307,16 +352,21 @@ export default memo(function SmartKeyboard({
           {starters.slice(0, 8).map(([head]) => (
             <button
               key={head}
-              onClick={() => handleStarter(head)}
+              className="sk-starter"
+              onClick={() => { haptic(); handleStarter(head); }}
+              aria-label={`Say "${head}"`}
               style={{
-                padding: "7px 14px", borderRadius: 18,
+                padding: "9px 16px", borderRadius: 20,
                 border: "none",
+                minHeight: 44,
                 background: "var(--tint)",
                 color: "#fff",
-                fontSize: 14, fontWeight: 700,
+                fontSize: 15, fontWeight: 700,
                 cursor: "pointer", whiteSpace: "nowrap",
                 WebkitTapHighlightColor: "transparent",
-                boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
+                touchAction: "manipulation",
+                boxShadow: "0 2px 6px rgba(59,155,143,0.3)",
+                transition: "transform 0.1s",
               }}
             >
               {head}
@@ -340,15 +390,20 @@ export default memo(function SmartKeyboard({
           {activeStarter.map(cont => (
             <button
               key={cont}
-              onClick={() => handleAccept(cont)}
+              className="sk-pred"
+              onClick={() => { haptic(); handleAccept(cont); }}
+              aria-label={`Add "${cont}"`}
               style={{
-                padding: "6px 14px", borderRadius: 16,
+                padding: "8px 16px", borderRadius: 18,
                 border: "2px solid var(--tint)",
+                minHeight: 44,
                 background: "var(--tint-soft)",
                 color: "var(--tint)",
-                fontSize: 14, fontWeight: 700,
+                fontSize: 15, fontWeight: 700,
                 cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
                 WebkitTapHighlightColor: "transparent",
+                touchAction: "manipulation",
+                transition: "transform 0.1s",
               }}
             >
               {cont}
@@ -360,13 +415,15 @@ export default memo(function SmartKeyboard({
       {/* ── Prediction / T9 candidate strip ─────────────────────────── */}
       <div
         ref={predictScrollRef}
+        role="listbox"
+        aria-label="Word suggestions"
         style={{
           display: "flex", gap: 6, padding: "8px 10px",
           overflowX: "auto", flexShrink: 0,
           scrollbarWidth: "none",
           WebkitOverflowScrolling: "touch",
           borderBottom: "0.5px solid var(--sep)",
-          minHeight: 42,
+          minHeight: 44,
         }}
       >
         {hasKeys && (
@@ -380,30 +437,40 @@ export default memo(function SmartKeyboard({
           </span>
         )}
         {stripItems.length === 0 && hasKeys && (
-          <span style={{
-            fontSize: 13, color: "var(--text-3)", alignSelf: "center",
-            fontStyle: "italic",
-          }}>
+          <span
+            role="status"
+            aria-live="polite"
+            style={{
+              fontSize: 14, color: "var(--text-3)", alignSelf: "center",
+              fontStyle: "italic",
+            }}
+          >
             No matches — try ABC mode
           </span>
         )}
         {stripItems.map((word, i) => (
           <button
             key={`${word}-${i}`}
-            onClick={() => handleAccept(word)}
+            className="sk-pred"
+            role="option"
+            onClick={() => { haptic(); handleAccept(word); }}
+            aria-label={`${hasKeys ? "Select" : "Add"} ${word}`}
             style={{
-              padding: "6px 14px", borderRadius: 16,
-              border: "none",
+              padding: "8px 16px", borderRadius: 18,
+              border: hasKeys && i === 0 ? "none" : "1.5px solid var(--sep-opaque)",
+              minHeight: 44,
               background: hasKeys
                 ? (i === 0 ? "var(--tint)" : "var(--tint-soft)")
                 : "var(--surface)",
               color: hasKeys
                 ? (i === 0 ? "#fff" : "var(--tint)")
                 : "var(--tint)",
-              fontSize: 14, fontWeight: hasKeys && i === 0 ? 800 : 600,
+              fontSize: 15, fontWeight: hasKeys && i === 0 ? 800 : 600,
               cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
               WebkitTapHighlightColor: "transparent",
+              touchAction: "manipulation",
               boxShadow: hasKeys && i === 0 ? "0 2px 8px rgba(0,0,0,0.15)" : "none",
+              transition: "transform 0.1s",
             }}
           >
             {word}
@@ -415,32 +482,78 @@ export default memo(function SmartKeyboard({
       <div style={{
         flex: 1, display: "flex", flexDirection: "column",
         justifyContent: "center",
-        gap: 5, padding: "6px 5px",
+        gap: 6, padding: "6px 5px",
       }}>
         {numMode ? (
-          /* ── Number pad mode ── */
+          /* ── Number pad mode — accumulate digits, confirm to commit ── */
           <>
-            {[0, 4, 8].map(start => (
-              <div key={start} style={{ display: "flex", gap: 4, justifyContent: "center" }}>
-                {start === 0 && (
+            {/* Number display bar */}
+            <div style={{
+              display: "flex", alignItems: "center", gap: 6,
+              padding: "4px 8px", marginBottom: 2,
+              minHeight: 44,
+            }}>
+              {/* Back to ABC */}
+              <KeyBtn
+                label="ABC"
+                isAccent
+                small
+                ariaLabel="Back to letters"
+                onClick={() => { if (numBuffer.trim()) handleNumConfirm(); setNumMode(false); setNumBuffer(""); }}
+              />
+
+              {/* Number display */}
+              <div style={{
+                flex: 1, textAlign: "center",
+                fontSize: numBuffer.length > 8 ? 22 : 28,
+                fontWeight: 800, fontVariantNumeric: "tabular-nums",
+                color: numBuffer ? "var(--text)" : "var(--text-3)",
+                letterSpacing: "0.04em",
+                minHeight: 36, lineHeight: "36px",
+                background: "var(--surface)",
+                borderRadius: 10,
+                padding: "4px 12px",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}>
+                {numBuffer || "0"}
+              </div>
+
+              {/* Confirm (✓) button — sends number to sentence */}
+              <KeyBtn
+                label={<Check size={20} strokeWidth={2.5} />}
+                isAccent={!!numBuffer}
+                small
+                ariaLabel="Confirm number"
+                onClick={handleNumConfirm}
+              />
+            </div>
+
+            {/* Numpad grid — 4 rows × 3 cols */}
+            {NUM_PAD.map((row, ri) => (
+              <div key={ri} style={{ display: "flex", gap: 6, justifyContent: "center" }}>
+                {row.map(digit => (
                   <KeyBtn
-                    label="ABC"
-                    isAccent
-                    small
-                    onClick={() => setNumMode(false)}
+                    key={digit}
+                    label={digit}
+                    onClick={() => handleNumDigit(digit)}
                   />
-                )}
-                {NUM_KEYS.slice(start, start + 4).map(n => (
-                  <KeyBtn key={n} label={n} onClick={() => handleNumTap(n)} />
                 ))}
-                {start === 8 && (
+                {/* Backspace on the last row */}
+                {ri === NUM_PAD.length - 1 && (
                   <KeyBtn
                     label={<Delete size={18} strokeWidth={2} />}
                     small
-                    onClick={handleBackspace}
+                    ariaLabel="Delete digit"
+                    onClick={handleNumBackspace}
                     onPointerDown={handleBsDown}
                     onPointerUpCapture={handleBsUp}
                   />
+                )}
+                {/* Empty spacer on other rows to keep alignment */}
+                {ri < NUM_PAD.length - 1 && (
+                  <div style={{ width: 48, flexShrink: 0 }} />
                 )}
               </div>
             ))}
@@ -448,14 +561,15 @@ export default memo(function SmartKeyboard({
         ) : (
           /* ── Letter T9 / spelling mode ── */
           rows.map((row, ri) => (
-            <div key={ri} style={{ display: "flex", gap: 4, justifyContent: "center" }}>
+            <div key={ri} style={{ display: "flex", gap: 6, justifyContent: "center" }}>
 
               {ri === 0 && (
                 <KeyBtn
                   label={spellingMode ? <Type size={17} /> : "123"}
                   isAccent={spellingMode}
                   small
-                  onClick={spellingMode ? toggleSpelling : () => setNumMode(true)}
+                  ariaLabel={spellingMode ? "Exit spelling mode" : "Number pad"}
+                  onClick={spellingMode ? toggleSpelling : () => { setNumMode(true); setNumBuffer(""); }}
                 />
               )}
 
@@ -475,6 +589,7 @@ export default memo(function SmartKeyboard({
                           key={ch}
                           label={ch.toLowerCase()}
                           isAccent
+                          ariaLabel={`Letter ${ch}`}
                           onClick={() => handleSpellChar(ch)}
                         />
                       ))}
@@ -491,6 +606,7 @@ export default memo(function SmartKeyboard({
                     key={clusterIdx}
                     label={label}
                     isHighlighted={isActive}
+                    ariaLabel={cluster.join(" ")}
                     onClick={() => handleKeyTap(clusterIdx)}
                     onPointerDown={() => handleKeyDown(clusterIdx)}
                     onPointerUpCapture={handleKeyUp}
@@ -502,6 +618,7 @@ export default memo(function SmartKeyboard({
                 <KeyBtn
                   label={<Delete size={18} strokeWidth={2} />}
                   small
+                  ariaLabel="Backspace"
                   onClick={handleBackspace}
                   onPointerDown={handleBsDown}
                   onPointerUpCapture={handleBsUp}
@@ -512,28 +629,33 @@ export default memo(function SmartKeyboard({
         )}
 
         {/* ── Bottom row ─────────────────────────────────────────────── */}
-        <div style={{ display: "flex", gap: 4, justifyContent: "center", padding: "0 4px" }}>
+        <div style={{ display: "flex", gap: 6, justifyContent: "center", padding: "0 4px" }}>
           <KeyBtn
             label={spellingMode ? "T9" : "ABC"}
             small
             isAccent={spellingMode}
+            ariaLabel={spellingMode ? "Switch to T9 mode" : "Switch to spelling mode"}
             onClick={toggleSpelling}
           />
 
           <button
+            className="sk-key"
             onClick={() => {
+              haptic();
               if (hasKeys && t9Candidates.length > 0) {
                 handleAccept(t9Candidates[0]);
               }
-              // Space after accepting — next predictions will appear
             }}
+            aria-label={hasKeys && t9Candidates.length > 0
+              ? `Accept ${t9Candidates[0]}`
+              : "Space"}
             style={{
               flex: 1, maxWidth: 240,
-              height: 46, borderRadius: 10,
-              border: "none",
+              height: 52, borderRadius: 12,
+              border: "1.5px solid var(--sep-opaque)",
               background: "var(--surface)",
               color: hasKeys ? "var(--tint)" : "var(--text-3)",
-              fontSize: hasKeys ? 15 : 13,
+              fontSize: hasKeys ? 16 : 14,
               fontWeight: hasKeys ? 700 : 600,
               cursor: "pointer",
               WebkitTapHighlightColor: "transparent",
@@ -551,6 +673,7 @@ export default memo(function SmartKeyboard({
               : <CornerDownLeft size={18} strokeWidth={2} />}
             isAccent
             small
+            ariaLabel={words.length > 0 ? "Speak sentence" : "Submit"}
             onClick={handleSubmit}
           />
         </div>
@@ -561,6 +684,32 @@ export default memo(function SmartKeyboard({
           from { opacity: 0; transform: scale(0.92); }
           to   { opacity: 1; transform: scale(1); }
         }
+        .sk-key:active {
+          transform: scale(0.90) !important;
+          filter: brightness(0.85);
+          transition: transform 0.04s, filter 0.04s !important;
+        }
+        .sk-key:focus-visible {
+          outline: 3px solid var(--tint);
+          outline-offset: 2px;
+          z-index: 1;
+        }
+        .sk-pred:active {
+          transform: scale(0.93);
+          filter: brightness(0.9);
+        }
+        .sk-pred:focus-visible {
+          outline: 3px solid var(--tint);
+          outline-offset: 2px;
+        }
+        .sk-starter:active {
+          transform: scale(0.93);
+          filter: brightness(0.88);
+        }
+        .sk-starter:focus-visible {
+          outline: 3px solid var(--tint);
+          outline-offset: 2px;
+        }
       `}</style>
     </div>
   );
@@ -568,33 +717,44 @@ export default memo(function SmartKeyboard({
 
 // ── Key button ────────────────────────────────────────────────────────────────
 
-function KeyBtn({ label, isAccent, isHighlighted, small, onClick, onPointerDown, onPointerUpCapture }) {
+function KeyBtn({ label, isAccent, isHighlighted, small, onClick, onPointerDown, onPointerUpCapture, ariaLabel }) {
+  const handleClick = (e) => {
+    haptic();
+    onClick?.(e);
+  };
   return (
     <button
-      onClick={onClick}
+      className="sk-key"
+      onClick={handleClick}
       onPointerDown={onPointerDown}
       onPointerUp={onPointerUpCapture}
       onPointerLeave={onPointerUpCapture}
+      aria-label={ariaLabel || (typeof label === "string" ? label : undefined)}
       style={{
-        width: small ? 48 : undefined,
-        minWidth: small ? 48 : 56,
+        width: small ? 52 : undefined,
+        minWidth: small ? 52 : 64,
         flex: small ? "0 0 auto" : 1,
-        height: 48,
-        borderRadius: 10,
-        border: isHighlighted ? "2px solid var(--tint)" : "none",
+        height: 56,
+        borderRadius: 12,
+        border: isHighlighted
+          ? "2.5px solid var(--tint)"
+          : "1.5px solid var(--sep-opaque)",
         background: isAccent
           ? "var(--tint)"
           : isHighlighted
             ? "var(--tint-soft)"
             : "var(--surface)",
         color: isAccent ? "#fff" : "var(--text)",
-        fontSize: typeof label === "string" ? 17 : 14,
+        fontSize: typeof label === "string" ? 18 : 15,
         fontWeight: 700,
         cursor: "pointer",
         display: "flex", alignItems: "center", justifyContent: "center",
         WebkitTapHighlightColor: "transparent",
         touchAction: "manipulation",
-        transition: "transform 0.08s, background 0.1s",
+        transition: "transform 0.1s, background 0.12s, box-shadow 0.12s",
+        boxShadow: isAccent
+          ? "0 2px 6px rgba(59,155,143,0.3)"
+          : "0 1px 3px rgba(0,0,0,0.06)",
         letterSpacing: typeof label === "string" && label.includes("·") ? "0.04em" : 0,
       }}
     >

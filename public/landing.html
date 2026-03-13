@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./se.png" />
+    <link rel="apple-touch-icon" href="./se.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f58a5b" />
+    <!-- DEMO: pricing/trial commented out
+    <meta
+      name="description"
+      id="meta-description"
+      data-i18n-attr="content:metaDescription"
+      content="SpeakEasy is a calm AAC experience with symbols, text-to-speech, and on-device AI. Start with a full 14-day free trial, then continue for the special offer price of €14,99/month instead of €19,99/month."
+    />
+    -->
+    <meta
+      name="description"
+      id="meta-description"
+      content="SpeakEasy is a calm AAC experience with symbols, text-to-speech, and on-device AI."
+    />
+    <script>
+      (() => {
+        const STORAGE_KEY = "speakeasy_landing_lang_v1";
+        const SUPPORTED = {
+          en: "ltr",
+          es: "ltr",
+          fr: "ltr",
+          de: "ltr",
+          it: "ltr",
+          pt: "ltr",
+          ar: "rtl",
+          zh: "ltr",
+          ja: "ltr",
+          ko: "ltr",
+        };
+
+        const normalize = (value) => {
+          if (!value) return null;
+          const code = String(value).toLowerCase().split(/[-_]/)[0];
+          return Object.prototype.hasOwnProperty.call(SUPPORTED, code) ? code : null;
+        };
+
+        const queryLang = normalize(new URLSearchParams(window.location.search).get("lang"));
+
+        let storedLang = null;
+        try {
+          storedLang = normalize(window.localStorage.getItem(STORAGE_KEY));
+        } catch {
+          storedLang = null;
+        }
+
+        const browserLang = [...(navigator.languages || []), navigator.language]
+          .map(normalize)
+          .find(Boolean);
+
+        const initialLang = queryLang || storedLang || browserLang || "en";
+        document.documentElement.lang = initialLang;
+        document.documentElement.dir = SUPPORTED[initialLang] || "ltr";
+      })();
+    </script>
+    <title data-i18n="pageTitle">SpeakEasy — A calmer, private AAC experience</title>
+    <link rel="stylesheet" href="./landing.css" />
+    <script src="./landing.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="./landing.html" aria-label="SpeakEasy landing page" data-i18n-attr="aria-label:brandAria">
+          <img src="./se.png" alt="" width="44" height="44" />
+          <span class="brand-copy">
+            <strong>SpeakEasy</strong>
+            <span data-i18n="brandTagline">Private AAC with on-device AI</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-i18n-attr="aria-label:primaryNavAria">
+          <a href="#how-it-works" data-i18n="navHowItWorks">How it works</a>
+          <a href="#features" data-i18n="navFeatures">Features</a>
+          <a href="#privacy" data-i18n="navPrivacy">Privacy</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="language-switcher">
+            <label class="language-switcher__label" for="landing-language-select" data-i18n="languageLabel">Language</label>
+            <select
+              id="landing-language-select"
+              class="language-switcher__select"
+              name="landing-language"
+              aria-label="Landing page language"
+              data-i18n-attr="aria-label:languageSelectAria"
+            >
+              <option value="en" lang="en">🇬🇧 English</option>
+              <option value="es" lang="es">🇪🇸 Español</option>
+              <option value="fr" lang="fr">🇫🇷 Français</option>
+              <option value="de" lang="de">🇩🇪 Deutsch</option>
+              <option value="it" lang="it">🇮🇹 Italiano</option>
+              <option value="pt" lang="pt">🇧🇷 Português</option>
+              <option value="ar" lang="ar">🇸🇦 العربية</option>
+              <option value="zh" lang="zh">🇨🇳 中文</option>
+              <option value="ja" lang="ja">🇯🇵 日本語</option>
+              <option value="ko" lang="ko">🇰🇷 한국어</option>
+            </select>
+          </div>
+
+          <!-- DEMO: trial CTA changed -->
+          <a class="button button--primary header-cta" href="/app" data-i18n="startFreeTrial">Try SpeakEasy</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <div class="container hero__inner">
+          <div class="hero-copy">
+            <span class="eyebrow" data-i18n="heroEyebrow">AAC that feels calm, modern, and private</span>
+            <h1 data-i18n="heroTitle">A friendlier way to communicate every day.</h1>
+            <p class="hero-text" data-i18n="heroText">
+              SpeakEasy helps people build messages with symbols, typing, text-to-speech,
+              and on-device AI. It works in the browser or as a native iOS and Android app.
+              <!-- DEMO: pricing/trial commented out
+              Create your account, enjoy a full 14-day free trial, then continue for the special offer price
+              of €14,99/month instead of €19,99/month.
+              -->
+            </p>
+
+            <!-- DEMO: offer banner commented out
+            <div class="offer-banner" aria-label="Special offer pricing" data-i18n-attr="aria-label:offerBannerAria">
+              <span class="offer-badge" data-i18n="offerBadge">Special offer</span>
+              <div class="offer-pricing">
+                <span class="offer-trial" data-i18n="offerTrial">Enjoy every feature free for 14 full days.</span>
+                <div class="offer-price-row">
+                  <span class="offer-was" data-i18n="offerWas">€19,99/month</span>
+                  <span class="offer-now" data-i18n="offerNow">€14,99/month</span>
+                </div>
+                <span class="offer-note" data-i18n="offerNote">Save €5 every month after your free trial.</span>
+              </div>
+            </div>
+            -->
+
+            <div class="hero-actions">
+              <a class="button button--primary" href="/app" data-i18n="heroPrimaryCta">Try SpeakEasy</a>
+              <a class="button button--ghost" href="#how-it-works" data-i18n="seeHowItWorks">See how it works</a>
+            </div>
+
+            <ul class="hero-points">
+              <li data-i18n="heroPoint1">100+ built-in symbols and quick phrases for everyday needs</li>
+              <li data-i18n="heroPoint2">10 supported languages with separate UI, typing, voice, and listening settings</li>
+              <!-- DEMO: pricing commented out
+              <li data-i18n="heroPoint3">14 days free, then a special offer of €14,99/month instead of €19,99/month</li>
+              -->
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="orb orb--sun"></div>
+            <div class="orb orb--mint"></div>
+            <div class="orb orb--lavender"></div>
+
+            <div class="phone-card">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="screen-top">
+                  <span class="status-pill" data-i18n="statusPill">AAC • Private by default</span>
+                  <span class="status-chip" data-i18n="statusChip">10 languages</span>
+                </div>
+
+                <div class="message-preview">
+                  <span class="section-label" data-i18n="todayMessageLabel">Today’s message</span>
+                  <p data-i18n="todayMessageText">I need water, please.</p>
+                </div>
+
+                <div class="symbol-grid">
+                  <span class="symbol-pill"><span>💧</span><span data-i18n="symbolWater">Water</span></span>
+                  <span class="symbol-pill"><span>🙏</span><span data-i18n="symbolPlease">Please</span></span>
+                  <span class="symbol-pill"><span>🆘</span><span data-i18n="symbolHelp">Help</span></span>
+                  <span class="symbol-pill"><span>🙂</span><span data-i18n="symbolOkay">I’m okay</span></span>
+                </div>
+
+                <div class="assistant-card">
+                  <span class="section-label" data-i18n="smartSuggestionsLabel">Smart suggestions</span>
+                  <div class="assistant-list">
+                    <span class="assistant-chip" data-i18n="suggestion1">Can you help me?</span>
+                    <span class="assistant-chip" data-i18n="suggestion2">I need a short break.</span>
+                    <span class="assistant-chip" data-i18n="suggestion3">Please repeat that.</span>
+                  </div>
+                </div>
+
+                <div class="footer-chip-row">
+                  <span class="footer-chip" data-i18n="heroChip1">14 days free</span>
+                  <span class="footer-chip" data-i18n="heroChip2">Special offer</span>
+                  <span class="footer-chip" data-i18n="heroChip3">€14,99/month</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card--top">
+              <strong data-i18n="floatingPrivacyValue">100%</strong>
+              <span data-i18n="floatingPrivacyText">on-device privacy</span>
+            </div>
+
+            <div class="floating-card floating-card--left">
+              <strong data-i18n="floatingListenTitle">Listen Mode</strong>
+              <span data-i18n="floatingListenText">Contextual replies when someone speaks</span>
+            </div>
+
+            <div class="floating-card floating-card--bottom">
+              <strong data-i18n="floatingPlatformsTitle">Web + iOS + Android</strong>
+              <span data-i18n="floatingPlatformsText">Use it where communication happens</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div class="stats-grid" aria-label="Product highlights" data-i18n-attr="aria-label:statsAria">
+            <article class="stat-panel">
+              <strong data-i18n="stat1Value">100+</strong>
+              <span data-i18n="stat1Text">symbols and quick phrases</span>
+            </article>
+            <article class="stat-panel">
+              <strong data-i18n="stat2Value">10</strong>
+              <span data-i18n="stat2Text">languages for UI, voice, and listening</span>
+            </article>
+            <article class="stat-panel">
+              <strong data-i18n="stat3Value">€14,99/mo</strong>
+              <span data-i18n="stat3Text">special offer after 14 days free — regularly €19,99/month</span>
+            </article>
+            <article class="stat-panel">
+              <strong data-i18n="stat4Value">1 tap</strong>
+              <span data-i18n="stat4Text">to replay saved favourites from history</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="howEyebrow">How it works</span>
+            <h2 data-i18n="howTitle">Built to make communication feel lighter.</h2>
+            <p data-i18n="howText">
+              Start with symbols, add text when you want, and let SpeakEasy say it out loud.
+              When conversation moves quickly, Listen Mode can help suggest a reply — still on device.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3 data-i18n="step1Title">Tap symbols or type</h3>
+              <p data-i18n="step1Text">
+                Build a sentence with pictograms, words, or both. The interface stays simple,
+                thumb-friendly, and easy to scan.
+              </p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3 data-i18n="step2Title">Get gentle support</h3>
+              <p data-i18n="step2Text">
+                Instant heuristics and optional AI suggestions help complete common phrases without
+                taking control away from the person using it.
+              </p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3 data-i18n="step3Title">Speak clearly</h3>
+              <p data-i18n="step3Text">
+                Use text-to-speech with adjustable voice settings, language choices, and saved phrases
+                for the requests you make most often.
+              </p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">04</span>
+              <h3 data-i18n="step4Title">Stay private</h3>
+              <p data-i18n="step4Text">
+                History, preferences, and AI context stay local where it matters most.
+                An account unlocks your 14-day free trial and a special €14,99/month offer,
+                down from €19,99/month,
+                while everyday communication stays focused on speed, privacy, and ease of use.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow" data-i18n="featuresEyebrow">What makes it feel different</span>
+            <h2 data-i18n="featuresTitle">Designed for real-life AAC, not a crowded dashboard.</h2>
+            <p data-i18n="featuresText">
+              SpeakEasy combines a calm interface with practical tools for daily communication,
+              whether the goal is a quick request, a repeated routine, or a more natural conversation.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="icon-badge icon-badge--mint" aria-hidden="true">💬</span>
+              <h3 data-i18n="feature1Title">Calm symbol board</h3>
+              <p data-i18n="feature1Text">
+                Organised categories, quick-reply tabs, and a mobile-first layout make it easy to reach
+                common phrases without extra friction.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="icon-badge icon-badge--peach" aria-hidden="true">🧠</span>
+              <h3 data-i18n="feature2Title">On-device reply support</h3>
+              <p data-i18n="feature2Text">
+                Suggestions come from instant heuristics, history-aware predictions, and optional local AI
+                rather than a remote server.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="icon-badge icon-badge--sky" aria-hidden="true">👂</span>
+              <h3 data-i18n="feature3Title">Listen Mode</h3>
+              <p data-i18n="feature3Text">
+                Hear what someone said, review contextual reply ideas, and choose a response when a live
+                conversation needs extra support.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="icon-badge icon-badge--lavender" aria-hidden="true">🌍</span>
+              <h3 data-i18n="feature4Title">Flexible multilingual setup</h3>
+              <p data-i18n="feature4Text">
+                Keep interface language, typing language, listening language, and text-to-speech language
+                separate for bilingual or multilingual communication.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="icon-badge icon-badge--gold" aria-hidden="true">⭐</span>
+              <h3 data-i18n="feature5Title">History and favourites</h3>
+              <p data-i18n="feature5Text">
+                Save the phrases that matter, replay them quickly, and keep a local memory of routines,
+                requests, and personal communication patterns.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <span class="icon-badge icon-badge--teal" aria-hidden="true">📱</span>
+              <h3 data-i18n="feature6Title">Made for web and mobile</h3>
+              <p data-i18n="feature6Text">
+                Use it in the browser, add it to the home screen, or run it through Capacitor on iOS and
+                Android for a more native feel.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="audience-panel">
+            <div class="audience-copy">
+              <span class="eyebrow" data-i18n="audienceEyebrow">Built for real-life moments</span>
+              <h2 data-i18n="audienceTitle">Support for daily needs, conversation, and routine communication.</h2>
+              <p data-i18n="audienceText1">
+                SpeakEasy is designed for people with ALS, autism, aphasia, stroke, cerebral palsy,
+                and anyone who needs an alternative or augmented voice.
+              </p>
+              <p data-i18n="audienceText2">
+                It works well for quick requests, care settings, home use, repeated routines, and live
+                conversations where a calm interface matters.
+              </p>
+            </div>
+
+            <div class="use-case-grid">
+              <article class="use-case-card">
+                <h3 data-i18n="useCase1Title">At home</h3>
+                <p data-i18n="useCase1Text">Ask for food, water, medication, help, rest, comfort, or familiar routine phrases.</p>
+              </article>
+
+              <article class="use-case-card">
+                <h3 data-i18n="useCase2Title">In care</h3>
+                <p data-i18n="useCase2Text">Share needs clearly, save common requests, and keep communication consistent across caregivers.</p>
+              </article>
+
+              <article class="use-case-card">
+                <h3 data-i18n="useCase3Title">In community</h3>
+                <p data-i18n="useCase3Text">Use multilingual voices, fast replies, and listen support for school, work, or public spaces.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="section section--privacy">
+        <div class="container">
+          <div class="privacy-panel">
+            <div class="privacy-copy">
+              <span class="eyebrow eyebrow--light" data-i18n="privacyEyebrow">Privacy promise</span>
+              <h2 data-i18n="privacyTitle">Private by design.</h2>
+              <p data-i18n="privacyText">
+                SpeakEasy is built so the important parts stay close to the person using it.
+                Text-to-speech settings, saved phrases, n-gram learning, and on-device AI stay local.
+                <!-- DEMO: pricing/trial commented out
+                while account access handles your 14-day free trial and a special offer of
+                €14,99/month instead of €19,99/month.
+                -->
+              </p>
+            </div>
+
+            <ul class="privacy-list">
+              <li>
+                <strong data-i18n="privacy1Title">Local by default</strong>
+                <span data-i18n="privacy1Text">Settings, history, and favourites stay on the device.</span>
+              </li>
+              <li>
+                <strong data-i18n="privacy2Title">Offline-friendly</strong>
+                <span data-i18n="privacy2Text">Core AAC communication works without needing a constant connection.</span>
+              </li>
+              <li>
+                <strong data-i18n="privacy3Title">On-device AI</strong>
+                <span data-i18n="privacy3Text">Contextual support is designed to run locally instead of sending every request away.</span>
+              </li>
+              <!-- DEMO: pricing commented out
+              <li>
+                <strong data-i18n="privacy4Title">Special offer access</strong>
+                <span data-i18n="privacy4Text">Create an account, enjoy 14 days free, then continue at €14,99/month instead of €19,99/month.</span>
+              </li>
+              -->
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-card">
+            <div>
+              <span class="eyebrow" data-i18n="ctaEyebrow">Ready to try it?</span>
+              <!-- DEMO: pricing commented out
+              <h2 data-i18n="ctaTitle">Start free today, then keep SpeakEasy for just €14,99/month.</h2>
+              <p data-i18n="ctaText">
+                Create your account, enjoy 14 days free, then continue with the special offer price of
+                €14,99/month, down from €19,99/month.
+              </p>
+              -->
+              <h2 data-i18n="ctaTitle">Start using SpeakEasy today.</h2>
+            </div>
+
+            <div class="cta-actions">
+              <a class="button button--primary" href="/app" data-i18n="startFreeTrial">Try SpeakEasy</a>
+              <a class="button button--ghost" href="#top" data-i18n="backToTop">Back to top</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <strong>SpeakEasy</strong>
+          <p data-i18n="footerTagline">Everyone deserves a voice.</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation" data-i18n-attr="aria-label:footerNavAria">
+          <a href="#how-it-works" data-i18n="navHowItWorks">How it works</a>
+          <a href="#features" data-i18n="navFeatures">Features</a>
+          <a href="#privacy" data-i18n="navPrivacy">Privacy</a>
+          <a href="/app" data-i18n="startFreeTrial">Try SpeakEasy</a>
+        </nav>
+        <nav class="footer-nav" aria-label="Legal" style="margin-top:2px">
+          <a href="./privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+          <a href="./terms.html" data-i18n="footerTerms">Terms of Service</a>
+          <a href="./refund.html" data-i18n="footerRefund">Refund Policy</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

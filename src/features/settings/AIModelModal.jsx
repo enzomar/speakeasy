@@ -11,16 +11,19 @@ import { GENERATION_CONFIG } from "../../prompts/intentPrompt";
 
 // ── status helpers ─────────────────────────────────────────────────────────────
 
-const STATUS_LABEL = {
-  idle:          "Not loaded",
-  loading:       "Downloading…",
-  ready:         "Ready",
-  error:         "Error",
-  unsupported:   "WebGPU not available",
-  paused:        "Paused",
-  wifi_blocked:  "Waiting for Wi-Fi",
-  needs_key:     "API key required",
-};
+function statusLabel(key, ui) {
+  const labels = {
+    idle:          ui?.aiStatusNotLoaded ?? "Not loaded",
+    loading:       ui?.aiStatusDownloading ?? "Downloading…",
+    ready:         ui?.aiStatusReady ?? "Ready",
+    error:         ui?.aiStatusError ?? "Error",
+    unsupported:   ui?.aiStatusNoWebGPU ?? "WebGPU not available",
+    paused:        ui?.aiStatusPaused ?? "Paused",
+    wifi_blocked:  ui?.aiStatusWifiBlocked ?? "Waiting for Wi-Fi",
+    needs_key:     ui?.aiStatusNeedsKey ?? "API key required",
+  };
+  return labels[key] ?? key;
+}
 
 const STATUS_COLOR = {
   idle:         "var(--text-4)",
@@ -70,7 +73,7 @@ function Badge({ label, color = "var(--tint-soft)", textColor = "var(--tint)" })
 
 // ── GeminiCard — cloud API option ────────────────────────────────────────────
 
-function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, onSelect }) {
+function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, onSelect, ui }) {
   const [showKey, setShowKey] = useState(false);
   const [draft, setDraft]     = useState(geminiApiKey ?? "");
 
@@ -78,9 +81,9 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
   useEffect(() => { setDraft(geminiApiKey ?? ""); }, [geminiApiKey]);
 
   const hasKey   = (geminiApiKey ?? "").trim().length > 0;
-  const statusLabel = isActive
-    ? (STATUS_LABEL[llmStatus] ?? llmStatus)
-    : (hasKey ? "Custom key" : "Built-in key");
+  const statusLbl = isActive
+    ? (statusLabel(llmStatus, ui))
+    : (hasKey ? (ui?.aiCustomKey ?? "Custom key") : (ui?.aiBuiltInKey ?? "Built-in key"));
   const statusColor = isActive
     ? (STATUS_COLOR[llmStatus] ?? "var(--text-4)")
     : "var(--green, #2F9E44)"; // always green — built-in or custom key always present
@@ -104,7 +107,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
       {/* Active badge */}
       {isActive && (
         <div style={{ position: "absolute", top: 12, right: 12 }}>
-          <Badge label="Active" />
+          <Badge label={ui?.aiActive ?? "Active"} />
         </div>
       )}
 
@@ -130,9 +133,9 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
 
       {/* Status row */}
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-        <span style={{ fontSize: 12, color: "var(--text-3)", fontWeight: 500 }}>Cloud</span>
+        <span style={{ fontSize: 12, color: "var(--text-3)", fontWeight: 500 }}>{ui?.aiCloud ?? "Cloud"}</span>
         <span style={{ color: "var(--sep)" }}>·</span>
-        <span style={{ fontSize: 12, fontWeight: 600, color: statusColor }}>{statusLabel}</span>
+        <span style={{ fontSize: 12, fontWeight: 600, color: statusColor }}>{statusLbl}</span>
       </div>
 
       {/* API key field (shown when active or editing) */}
@@ -143,7 +146,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
             marginBottom: 6, display: "flex", alignItems: "center", gap: 5,
           }}>
             <KeyRound size={12} strokeWidth={2.5} style={{ color: "var(--tint)" }} />
-            Gemini API Key
+            {ui?.aiGeminiApiKey ?? "Gemini API Key"}
           </div>
           <div style={{ display: "flex", gap: 6 }}>
             <input
@@ -152,7 +155,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
               placeholder="AIza…"
               onChange={e => setDraft(e.target.value)}
               onBlur={saveKey}
-              aria-label="Gemini API key"
+              aria-label={ui?.aiGeminiApiKey ?? "Gemini API key"}
               style={{
                 flex: 1, padding: "9px 11px",
                 borderRadius: 8, border: "1px solid var(--sep)",
@@ -171,12 +174,12 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
                 WebkitTapHighlightColor: "transparent",
               }}
             >
-              Save
+              {ui?.aiSave ?? "Save"}
             </button>
           </div>
           {hasKey && (
             <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 5 }}>
-              Saved: <code style={{ fontFamily: "monospace" }}>{maskedKey}</code>
+              {ui?.aiSavedLabel ?? "Saved:"} <code style={{ fontFamily: "monospace" }}>{maskedKey}</code>
               {" · "}
               <button
                 onClick={() => { setDraft(""); setGeminiApiKey(""); }}
@@ -186,7 +189,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
                   cursor: "pointer", padding: 0, fontWeight: 600,
                 }}
               >
-                Remove
+                {ui?.aiRemove ?? "Remove"}
               </button>
             </div>
           )}
@@ -201,11 +204,11 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
             }}
           >
             <ExternalLink size={11} strokeWidth={2.5} />
-            Get a free API key from Google AI Studio
+            {ui?.aiGetApiKey ?? "Get a free API key from Google AI Studio"}
           </a>
           {!hasKey && (
             <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 4 }}>
-              A built-in key is already active. Enter your own key above to override it.
+              {ui?.aiBuiltInHint ?? "A built-in key is already active. Enter your own key above to override it."}
             </div>
           )}
         </div>
@@ -220,8 +223,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
         }}>
           <AlertCircle size={13} style={{ color: "var(--orange, #F76707)", marginTop: 1, flexShrink: 0 }} />
           <span style={{ fontSize: 11, color: "var(--text-3)", lineHeight: 1.5 }}>
-            Transcripts are sent to Google’s servers for reply generation.
-            Your key is stored locally and never shared.
+            {ui?.aiPrivacyNote ?? "Transcripts are sent to Google's servers for reply generation. Your key is stored locally and never shared."}
           </span>
         </div>
       )}
@@ -230,7 +232,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         {!isActive && (
           <ActionBtn
-            label="Use Gemini Flash"
+            label={ui?.aiUseGemini ?? "Use Gemini Flash"}
             icon={<Zap size={13} strokeWidth={2.2} />}
             primary
             onClick={onSelect}
@@ -238,7 +240,7 @@ function GeminiCard({ info, isActive, llmStatus, geminiApiKey, setGeminiApiKey, 
         )}
         {!isActive && !showKey && (
           <ActionBtn
-            label={hasKey ? "Edit key" : "Add API key"}
+            label={hasKey ? (ui?.aiEditKey ?? "Edit key") : (ui?.aiAddKey ?? "Add API key")}
             icon={<KeyRound size={13} strokeWidth={2.2} />}
             onClick={() => setShowKey(s => !s)}
           />
@@ -263,6 +265,7 @@ function ModelCard({
   onResume,
   onDelete,
   onSelect,       // switch to this model
+  ui,
 }) {
   const isNone = info.key === "none";
   const [cached, setCached] = useState(isNone ? false : null); // null=checking, true/false
@@ -284,7 +287,7 @@ function ModelCard({
   }, [isActive, llmStatus, recheckCache, isNone]);
 
   const effectiveStatus = isNone ? "idle" : isActive ? llmStatus : (cached ? "idle" : "idle");
-  const statusLabel     = isNone ? (isActive ? "Active" : "") : isActive ? (STATUS_LABEL[llmStatus] ?? llmStatus) : (cached ? "Cached" : "Not downloaded");
+  const statusLbl       = isNone ? (isActive ? (ui?.aiActive ?? "Active") : "") : isActive ? statusLabel(llmStatus, ui) : (cached ? (ui?.aiCached ?? "Cached") : (ui?.aiNotDownloaded ?? "Not downloaded"));
   const statusColor     = isNone ? "var(--green)" : isActive ? (STATUS_COLOR[llmStatus] ?? "var(--text-4)") : (cached ? "var(--green)" : "var(--text-4)");
 
   const isLoading = !isNone && isActive && llmStatus === "loading";
@@ -294,7 +297,7 @@ function ModelCard({
   const canDelete = !isNone && ((isActive && llmStatus === "ready") || (cached === true));
 
   async function handleDelete() {
-    if (!window.confirm(`Delete cached weights for ${info.label}? You'll need to re-download to use AI.`)) return;
+    if (!window.confirm(typeof ui?.aiConfirmDelete === "function" ? ui.aiConfirmDelete(info.label) : `Delete cached weights for ${info.label}? You'll need to re-download to use AI.`)) return;
     if (isActive) {
       await onDelete(info.id);
     } else {
@@ -314,7 +317,7 @@ function ModelCard({
       {/* Active badge */}
       {isActive && (
         <div style={{ position: "absolute", top: 12, right: 12 }}>
-          <Badge label="Active" />
+          <Badge label={ui?.aiActive ?? "Active"} />
         </div>
       )}
 
@@ -345,7 +348,7 @@ function ModelCard({
         </span>
         <span style={{ color: "var(--sep)" }}>·</span>
         <span style={{ fontSize: 12, fontWeight: 600, color: statusColor }}>
-          {statusLabel}
+          {statusLbl}
         </span>
       </div>
 
@@ -354,7 +357,7 @@ function ModelCard({
         <div>
           <ProgressBar value={loadProgress} />
           <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: 8 }}>
-            {loadProgress}% downloaded
+            {typeof ui?.aiDownloaded === "function" ? ui.aiDownloaded(loadProgress) : `${loadProgress}% downloaded`}
           </div>
         </div>
       )}
@@ -368,7 +371,7 @@ function ModelCard({
         }}>
           <Wifi size={14} strokeWidth={2} style={{ color: "var(--tint)", flexShrink: 0 }} />
           <span style={{ fontSize: 12, color: "var(--tint)", fontWeight: 500 }}>
-            Wi-Fi only mode is on. Connect to Wi-Fi or tap Download anyway.
+            {ui?.aiWifiHint ?? "Wi-Fi only mode is on. Connect to Wi-Fi or tap Download anyway."}
           </span>
         </div>
       )}
@@ -379,7 +382,7 @@ function ModelCard({
         {/* Switch to this model */}
         {!isActive && (
           <ActionBtn
-            label="Use this model"
+            label={ui?.aiUseModel ?? "Use this model"}
             icon={<Zap size={13} strokeWidth={2.2} />}
             primary
             onClick={onSelect}
@@ -389,7 +392,7 @@ function ModelCard({
         {/* Download / Resume */}
         {isActive && (llmStatus === "idle" || isPausedNow || isBlocked) && (
           <ActionBtn
-            label={isPausedNow || llmStatus === "paused" ? "Resume" : isBlocked ? "Download anyway" : "Download"}
+            label={isPausedNow || llmStatus === "paused" ? (ui?.aiResume ?? "Resume") : isBlocked ? (ui?.aiDownloadAnyway ?? "Download anyway") : (ui?.aiDownload ?? "Download")}
             icon={<Download size={13} strokeWidth={2.2} />}
             primary={!isReady}
             onClick={isPausedNow ? onResume : onDownload}
@@ -400,7 +403,7 @@ function ModelCard({
         {/* Pause */}
         {isLoading && (
           <ActionBtn
-            label="Pause"
+            label={ui?.aiPause ?? "Pause"}
             icon={<Pause size={13} strokeWidth={2.2} />}
             onClick={onPause}
           />
@@ -409,7 +412,7 @@ function ModelCard({
         {/* Delete */}
         {canDelete && (
           <ActionBtn
-            label="Delete"
+            label={ui?.aiDelete ?? "Delete"}
             icon={<Trash2 size={13} strokeWidth={2.2} />}
             danger
             onClick={handleDelete}
@@ -422,7 +425,7 @@ function ModelCard({
         <div style={{ display: "flex", alignItems: "flex-start", gap: 6, marginTop: 8 }}>
           <AlertCircle size={13} style={{ color: "var(--text-4)", marginTop: 1, flexShrink: 0 }} />
           <span style={{ fontSize: 11, color: "var(--text-4)", lineHeight: 1.4 }}>
-            This browser/device does not support WebGPU. The n-gram engine is used as fallback.
+            {ui?.aiNoWebGPUHint ?? "This browser/device does not support WebGPU. The n-gram engine is used as fallback."}
           </span>
         </div>
       )}
@@ -524,6 +527,7 @@ export default memo(function AIModelModal({
   onSwitchModel,
   geminiApiKey,
   setGeminiApiKey,
+  ui,
 }) {
   const sheetRef = useRef(null);
 
@@ -566,14 +570,14 @@ export default memo(function AIModelModal({
         ref={sheetRef}
         role="dialog"
         aria-modal="true"
-        aria-label="AI Model Settings"
+        aria-label={ui?.aiSettingsLabel ?? "AI Model Settings"}
         tabIndex={-1}
         onClick={e => e.stopPropagation()}
         style={{
           width: "100%",
           background:   "var(--surface)",
           borderRadius: "20px 20px 0 0",
-          maxHeight:    "85vh",
+          maxHeight:    "92vh",
           display:      "flex",
           flexDirection: "column",
           overflow:     "hidden",
@@ -601,16 +605,16 @@ export default memo(function AIModelModal({
             </div>
             <div>
               <div style={{ fontWeight: 700, fontSize: 16, color: "var(--text)" }}>
-                On-device AI
+                {ui?.aiModalTitle ?? "On-device AI"}
               </div>
               <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 1 }}>
-                Runs entirely on your device — no cloud
+                {ui?.aiModalSubtitle ?? "Runs entirely on your device — no cloud"}
               </div>
             </div>
           </div>
           <button
             onClick={onClose}
-            aria-label="Close"
+            aria-label={ui?.listenClose ?? "Close"}
             style={{
               width: 44, height: 44, borderRadius: "50%",
               background: "var(--elevated)", border: "none",
@@ -641,6 +645,7 @@ export default memo(function AIModelModal({
             geminiApiKey={geminiApiKey}
             setGeminiApiKey={setGeminiApiKey}
             onSelect={() => onSwitchModel("gemini")}
+            ui={ui}
           />
 
           {/* Local model cards */}
@@ -659,6 +664,7 @@ export default memo(function AIModelModal({
               onResume={onResume}
               onDelete={onDelete}
               onSelect={() => { onSwitchModel(info.key); }}
+              ui={ui}
             />
           ))}
 
@@ -685,10 +691,10 @@ export default memo(function AIModelModal({
               </div>
               <div style={{ flex: 1 }}>
                 <div style={{ fontSize: 15, fontWeight: 600, color: "var(--text)" }}>
-                  Download on Wi-Fi only
+                  {ui?.aiWifiOnly ?? "Download on Wi-Fi only"}
                 </div>
                 <div style={{ fontSize: 12, color: "var(--text-3)", marginTop: 1 }}>
-                  Prevents large downloads on cellular data
+                  {ui?.aiWifiDesc ?? "Prevents large downloads on cellular data"}
                 </div>
               </div>
               {/* Toggle */}
@@ -732,23 +738,23 @@ export default memo(function AIModelModal({
               </div>
               <div>
                 <div style={{ fontSize: 15, fontWeight: 600, color: "var(--text)" }}>
-                  Generation penalties
+                  {ui?.aiPenalties ?? "Generation penalties"}
                 </div>
                 <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 1 }}>
-                  Higher values reduce repetitive output
+                  {ui?.aiPenaltiesDesc ?? "Higher values reduce repetitive output"}
                 </div>
               </div>
             </div>
             <div style={{ display: "flex", gap: 12 }}>
               <PenaltyInput
-                label="Presence"
-                hint="0 – 3 · curbs overthinking"
+                label={ui?.aiPresence ?? "Presence"}
+                hint={ui?.aiPresenceHint ?? "0 – 3 · curbs overthinking"}
                 storageKey="speakeasy_presence_penalty"
                 defaultValue={GENERATION_CONFIG.presence_penalty}
               />
               <PenaltyInput
-                label="Repetition"
-                hint="0.5 – 2 · HF-style repeat"
+                label={ui?.aiRepetition ?? "Repetition"}
+                hint={ui?.aiRepetitionHint ?? "0.5 – 2 · HF-style repeat"}
                 storageKey="speakeasy_repetition_penalty"
                 defaultValue={GENERATION_CONFIG.repetition_penalty}
               />
@@ -757,7 +763,7 @@ export default memo(function AIModelModal({
 
           {/* Footnote */}
           <p style={{ margin: 0, fontSize: 11, color: "var(--text-4)", textAlign: "center", lineHeight: 1.5 }}>
-            Models are stored in your browser's cache. Clearing browser data will remove them.
+            {ui?.aiFootnote ?? "Models are stored in your browser's cache. Clearing browser data will remove them."}
           </p>
         </div>
       </div>

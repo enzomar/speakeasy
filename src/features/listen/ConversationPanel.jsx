@@ -134,6 +134,7 @@ export default function ConversationPanel({
   whisperLoading   = false,
   whisperProgress  = 0,
   chatHistory  = [],           // [{ type: "heard"|"replied", text }]
+  conversational = false,
   onStopRecording,
   onSelectReply,
   onDismiss,
@@ -186,7 +187,9 @@ export default function ConversationPanel({
     : state === LISTEN_STATES.WAKE_CHECKING
       ? (ui?.listenChecking   ?? "Checking…")
     : isRecording
-      ? (ui?.listenRecording  ?? "Recording – speak now")
+      ? conversational
+        ? (ui?.listenWaitingReply ?? "Listening…")
+        : (ui?.listenRecording  ?? "Recording – speak now")
     : isTranscribing
       ? (ui?.listenTranscribing ?? "Transcribing speech…")
     : isGenerating

@@ -104,7 +104,6 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
   min-height: 100svh;
-  overscroll-behavior: none;
   -webkit-text-size-adjust: 100%;
   background: var(--bg);
   color: var(--text);
@@ -115,13 +114,24 @@ body {
   line-height: 1.4;
 }
 
-#root {
+/* Applied only when the AAC app is active (not the landing page) */
+body.app-active {
+  overscroll-behavior: none;
+}
+
+body.app-active #root {
   height: 100vh;
   height: -webkit-fill-available;
   height: 100svh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+#root {
+  /* Default: plain flex column — lets landing page scroll freely */
+  display: flex;
+  flex-direction: column;
 }
 
 /* ── Button reset ─────────────────────────────────────────────── */

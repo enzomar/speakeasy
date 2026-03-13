@@ -110,12 +110,26 @@ function resolveVerbForms(canonicalLabel, langCode) {
  */
 export function generateCandidates(
   symbol, modSymbol, langCode = "it", gender = "male", canonicalLabel,
-  categoryId, intent = "statement", emotion = "neutral"
+  categoryId, intent = "statement", emotion = "neutral", modCanonicalLabel = null
 ) {
   const rawKw = resolveKeyword(symbol, langCode);
   const mod   = modSymbol ? resolveKeyword(modSymbol, langCode) : "";
   const canon = canonicalLabel
     ?? (typeof symbol === "string" ? symbol : symbol?.labels?.en ?? "");
+  const modCanon = modCanonicalLabel
+    ?? (modSymbol
+      ? (typeof modSymbol === "string" ? modSymbol : modSymbol?.labels?.en ?? "")
+      : "");
+
+  // ── Specific-item promotion ────────────────────────────────────────────
+  // When the modifier is a specific noun (e.g. "bread" under "food"), promote
+  // it to the primary keyword so templates say "I want bread", not "I want food bread".
+  // Polarity words (yes/no/more/less), numbers, and colors stay as {mod}.
+  const MODIFIER_KEEP_POS = new Set(["polarity", "color", "number", "adverb"]);
+  const modPosEntry = modCanon ? POS_DICT[modCanon.toLowerCase()] : null;
+  const modIsSpecificNoun = mod
+    && !MODIFIER_KEEP_POS.has(modPosEntry?.pos)
+    && !/^\d+$/.test(modCanon);  // pure digits stay as modifier
 
   // Word-level POS overrides category POS for specialized template types
   // (e.g. "color" and "number" have their own template sets where {mod} is primary)
@@ -131,16 +145,22 @@ export function generateCandidates(
   const adjForm = (pos === "adjective")
     ? resolveAdj(canon, langCode, gender)
     : null;
-  const kw = adjForm ?? rawKw;
+
+  // If modifier is a specific noun, use it as the primary keyword
+  const effectiveKw    = modIsSpecificNoun ? mod : (adjForm ?? rawKw);
+  const effectiveCanon = modIsSpecificNoun ? modCanon : canon;
+  const effectiveMod   = modIsSpecificNoun ? "" : mod;  // avoid duplication
+
+  const kw = effectiveKw;
 
   // Resolve article-prefixed noun phrases from grammar dictionary
   const nounData = (pos === "noun" || pos === "place")
-    ? resolveNounArticle(canon, langCode)
+    ? resolveNounArticle(effectiveCanon, langCode) ?? resolveNounArticle(canon, langCode)
     : null;
-  const art  = nounData?.indef ?? rawKw;     // indefinite by default: "un libro", "dell'acqua"
-  const part = nounData?.part  ?? rawKw;     // partitive: "del pane", "du pain"
-  const def  = nounData?.def   ?? rawKw;     // definite: "il libro", "l'acqua"
-  const loc  = nounData?.loc ?? nounData?.part ?? rawKw;  // locative: "a scuola", "to school"
+  const art  = nounData?.indef ?? effectiveKw;
+  const part = nounData?.part  ?? effectiveKw;
+  const def  = nounData?.def   ?? effectiveKw;
+  const loc  = nounData?.loc ?? nounData?.part ?? effectiveKw;
 
   // Resolve conjugated verb forms from dictionary
   const verbData = (pos === "verb")
@@ -193,7 +213,7 @@ export function generateCandidates(
       .replace("{loc}", loc)
       .replace("{v1s}", v1s)
       .replace("{ger}", ger)
-      .replace("{mod}", mod)
+      .replace("{mod}", effectiveMod)
       .replace(/\s{2,}/g, " ")
       .trim()
   );

@@ -11,6 +11,7 @@ import {
 // App-level
 import { haptic }           from "./native";
 import { detectEmotion }    from "../prompts/intentEmotionEngine";
+import { IS_DEMO }          from "../shared/demoMode";
 
 // Hooks
 import { useTTS }          from "../shared/hooks/useTTS";
@@ -44,6 +45,14 @@ import SmartKeyboard     from "../features/board/SmartKeyboard";
 import VocabToolbar, { VOCAB_DATA, VOCAB_TABS } from "../features/board/VocabToolbar";
 import VocabGrid from "../features/board/VocabGrid";
 import FavoritesSheet    from "../features/board/FavoritesSheet";
+
+// Auth + Subscription
+import { useAuth }           from "../features/auth/useAuth";
+import AuthModal             from "../features/auth/AuthModal";
+import { useSubscription }   from "../features/subscription/useSubscription";
+import { useFreeTier }       from "../features/subscription/useFreeTier";
+import Paywall               from "../features/subscription/Paywall";
+import SubscriptionBanner    from "../features/subscription/SubscriptionBanner";
 
 // i18n
 import { getUI }             from "../i18n/ui-strings";
@@ -203,6 +212,12 @@ function FabButton({ boardMode, onToggleMode, onLongPress }) {
 // ── App ───────────────────────────────────────────────────────────────────────
 
 export default function App() {
+  // ── Lock scroll on body while the AAC app is mounted ─────────────────────
+  useEffect(() => {
+    document.body.classList.add("app-active");
+    return () => document.body.classList.remove("app-active");
+  }, []);
+
   // ── UI state ─────────────────────────────────────────────────────────────
   const [words,          setWords]          = useState([]);
   const [tab,            setTab]            = useState("board");   // "board"|"history"|"settings"|"profile"
@@ -221,6 +236,9 @@ export default function App() {
   const [onboardingDone, setOnboardingDone] = useState(
     () => !!localStorage.getItem(ONBOARDING_KEY)
   );
+  // Track whether the user JUST finished onboarding in this session, so we
+  // can open the auth modal on the "signup" tab (they're new — don't ask to log in).
+  const [justCompletedOnboarding, setJustCompletedOnboarding] = useState(false);
 
   // ── Settings (persisted in localStorage) ──────────────────────────────────
   const {
@@ -233,7 +251,30 @@ export default function App() {
     gender, setGender,
     wakeKeywords, setWakeKeywords,
     geminiApiKey, setGeminiApiKey,
+    vocabMode, setVocabMode,
+    aiAutoCorrect, setAiAutoCorrect,
   } = useSettings();
+
+  // ── Auth + Subscription ─────────────────────────────────────────────────
+  const {
+    user, isAuthenticated, isLoading,
+    signOut: authSignOut,
+    changePassword: authChangePassword,
+    resetPassword: authResetPassword,
+    deleteAccount: authDeleteAccount,
+  } = useAuth();
+  const {
+    isPremium, isLoading: subLoading, offering, refresh: refreshSub, restore,
+  } = useSubscription(user);
+  const {
+    canSpeak, consumeVoice,
+    canUseAI, consumeAI,
+    remainingAI, remainingVoice,
+    aiLimit, voiceLimit,
+    showPaywall, openPaywall, closePaywall,
+    isInTrial, trialDaysLeft,
+  } = useFreeTier(isPremium, user?.metadata?.creationTime ?? null);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   // ── Hooks ─────────────────────────────────────────────────────────────────
   const { speaking, speak, cancel, voices }                         = useTTS();
@@ -250,7 +291,7 @@ export default function App() {
     resumeDownload: aiResume,
     deleteModel: aiDeleteModel,
     modelKey: aiModelKey,
-  } = useAIPrediction(aiModel, geminiApiKey);
+  } = useAIPrediction(aiModel, geminiApiKey, aiAutoCorrect);
   const { favorites, addFavorite, removeFavorite } = useFavorites();
   const { custom: customSymbols, hidden: hiddenSymbols, addSymbol, removeSymbol, hideSymbol, unhideSymbol } = useCustomSymbols();
   const { getTab: getQuickTab } = useQuickPhrases();
@@ -292,6 +333,16 @@ export default function App() {
   const [chatHistory, setChatHistory]   = useState([]);
   const lastHeardRef   = useRef("");
   const lastRepliedRef = useRef("");
+
+  // ── Tap deduplication — prevent accidental rapid double-taps ────────────
+  const lastTapRef = useRef({ word: null, ts: 0 });
+  const isDuplicateTap = useCallback((word) => {
+    const now = Date.now();
+    const last = lastTapRef.current;
+    const dup = last.word === word && now - last.ts < 300;
+    lastTapRef.current = { word, ts: now };
+    return dup;
+  }, []);
 
   // Push a "heard" bubble each time a new transcript arrives
   useEffect(() => {
@@ -346,6 +397,7 @@ export default function App() {
 
   // Update ref after wordTexts is available
   listenTranscriptRef.current = (transcript) => {
+    if (IS_DEMO) return; // demo: listen mode disabled
     if (!transcript?.trim()) return;
     console.log("[App] Listen transcript →", transcript);
     aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, transcript, recentMessages, gender, emotion, corePrefixWords);
@@ -358,20 +410,29 @@ export default function App() {
   }, [wordTexts, ngramReady, aiPredict, typeLangCode, activeCategory, tapContext, recentMessages, gender, emotion, corePrefixWords]);
 
   // ── Handlers ─────────────────────────────────────────────────────────────
-  const handleTap = useCallback((label) => { haptic(); setWords(prev => [...prev, label]); }, []);
+  const handleTap = useCallback((label) => {
+    if (isDuplicateTap(label)) return;
+    haptic(); setWords(prev => [...prev, label]);
+  }, [isDuplicateTap]);
 
   /** Core word tap — adds a translated core-vocabulary word, tagged so the
    *  prediction engine can distinguish it from fringe (grid) symbol labels. */
   const handleCoreWordTap = useCallback((label) => {
+    if (isDuplicateTap(label)) return;
     haptic();
     setWords(prev => [...prev, { text: label, __core: true }]);
-  }, []);
+  }, [isDuplicateTap]);
 
-  /** Vocab grid tap — speaks the tapped vocabulary word via TTS */
+  /** Vocab grid tap — speaks or composes depending on vocabMode setting */
   const handleVocabSpeak = useCallback((word) => {
+    if (vocabMode === "compose" && isDuplicateTap(word)) return;
     haptic();
-    speak(word, { lang: ttsLang.ttsLang, rate: voiceSpeed, pitch: voicePitch, voiceName });
-  }, [speak, ttsLang.ttsLang, voiceSpeed, voicePitch, voiceName]);
+    if (vocabMode === "compose") {
+      setWords(prev => [...prev, word]);
+    } else {
+      speak(word, { lang: ttsLang.ttsLang, rate: voiceSpeed, pitch: voicePitch, voiceName });
+    }
+  }, [vocabMode, speak, ttsLang.ttsLang, voiceSpeed, voicePitch, voiceName, isDuplicateTap]);
 
 
 
@@ -393,6 +454,8 @@ export default function App() {
   const handleSpeak = useCallback((sentenceOverride) => {
     const sentence = sentenceOverride ?? wordTexts.join(" ");
     if (!sentence.trim() || speaking) return;
+    // ── Free-tier voice limit check (skipped in demo) ──────────────────────
+    if (!IS_DEMO && !consumeVoice()) return; // limit reached → paywall is shown by consumeVoice
     haptic();
     speak(sentence, {
       lang: ttsLang.ttsLang,
@@ -412,7 +475,7 @@ export default function App() {
         aiClearSuggestions();
       },
     });
-  }, [wordTexts, speaking, speak, saveUtterance, learn, ttsLang, voiceSpeed, voicePitch, voiceName, aiClearSuggestions]);
+  }, [wordTexts, speaking, speak, saveUtterance, learn, ttsLang, voiceSpeed, voicePitch, voiceName, aiClearSuggestions, consumeVoice]);
 
   /** Repeat last spoken sentence */
   const handleRepeat = useCallback(() => {
@@ -469,12 +532,14 @@ export default function App() {
 
   const aiIsNone = aiModel === "none";
   const aiDotColor =
+    IS_DEMO                      ? "var(--orange)" :
     aiIsNone                     ? "var(--text-4)" :
     llmStatus === "ready"        ? "var(--green)" :
     llmStatus === "loading"      ? "var(--orange)" :
     llmStatus === "paused"       ? "var(--orange)" :
     llmStatus === "wifi_blocked" ? "var(--tint)" : "var(--text-4)";
   const aiStatusLabel =
+    IS_DEMO                      ? "n-gram" :
     aiIsNone                     ? "AI off" :
     llmStatus === "ready"        ? "AI ready" :
     llmStatus === "loading"      ? `AI ${loadProgress}%` :
@@ -504,6 +569,7 @@ export default function App() {
     setGender(g);
     setHand(h);
     setUiLang(langCode);
+    setJustCompletedOnboarding(true); // new user → show signup tab
     setOnboardingDone(true);
   }, [setGender, setHand, setUiLang]);
 
@@ -514,6 +580,41 @@ export default function App() {
 
   if (!onboardingDone) {
     return <Onboarding onComplete={handleOnboardingComplete} />;
+  }
+
+  // ── Mandatory auth gate (skipped in demo mode) ─────────────────────────
+  if (!IS_DEMO) {
+    // Show a spinner while Firebase resolves the persisted session.
+    if (isLoading) {
+      return (
+        <div style={{
+          minHeight: "100vh", display: "flex", alignItems: "center",
+          justifyContent: "center", background: "var(--bg)",
+        }}>
+          <div style={{
+            width: 44, height: 44, borderRadius: "50%",
+            border: "3px solid var(--sep)",
+            borderTopColor: "var(--tint)",
+            animation: "spin 0.7s linear infinite",
+          }} />
+          <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
+        </div>
+      );
+    }
+
+    // No account → block the entire app and force sign-in.
+    if (!isAuthenticated) {
+      return (
+        <AuthModal
+          isOpen
+          required
+          lang={uiLangCode}
+          initialMode={justCompletedOnboarding ? "signup" : "login"}
+          onClose={null}
+          onSuccess={() => { /* auth state listener updates isAuthenticated automatically */ }}
+        />
+      );
+    }
   }
 
   // ── Render ────────────────────────────────────────────────────────────────
@@ -554,18 +655,32 @@ export default function App() {
           {/* Icons — distributed evenly across full width */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-evenly", width: "100%" }}>
             <button
-              onClick={() => setShowAIModal(true)}
+              onClick={() => { if (!IS_DEMO) setShowAIModal(true); }}
               style={{
-                width: 48, height: 48, borderRadius: 14,
+                width: 48, height: 54, borderRadius: 14,
                 background: "var(--elevated)", border: "0.5px solid var(--sep)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                cursor: "pointer",
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
+                cursor: IS_DEMO ? "default" : "pointer",
                 WebkitTapHighlightColor: "transparent",
                 touchAction: "manipulation",
+                position: "relative",
+                overflow: "hidden",
+                opacity: IS_DEMO ? 0.65 : 1,
               }}
               aria-label={`AI model status: ${aiStatusLabel}`}
             >
+              {IS_DEMO && (
+                <div style={{
+                  position: "absolute", top: 0, left: 0,
+                  width: "100%", height: "100%",
+                  pointerEvents: "none",
+                  background: "linear-gradient(135deg, transparent 42%, rgba(220,53,69,0.55) 42%, rgba(220,53,69,0.55) 58%, transparent 58%)",
+                  borderRadius: 14,
+                  zIndex: 2,
+                }} />
+              )}
               <Cpu size={16} strokeWidth={2} style={{ color: aiDotColor, flexShrink: 0 }} />
+              <span style={{ fontSize: 8, fontWeight: 700, color: aiDotColor, lineHeight: 1 }}>AI</span>
             </button>
 
             {/* ⚠️ SOS — always-visible emergency shortcut */}
@@ -573,10 +688,10 @@ export default function App() {
               onClick={handleSOS}
               aria-label="Emergency SOS"
               style={{
-                width: 48, height: 48, borderRadius: 14,
+                width: 48, height: 54, borderRadius: 14,
                 background: "#FFF0F0",
                 border: "1.5px solid #E03131",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
                 cursor: "pointer", transition: "all 0.18s ease",
                 color: "#C92A2A",
                 touchAction: "manipulation",
@@ -584,63 +699,80 @@ export default function App() {
               }}
             >
               <Siren size={20} strokeWidth={2} />
+              <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>SOS</span>
             </button>
 
             {/* Listen Mode toggle — activates like Alexa */}
             <button
               onClick={() => {
+                if (IS_DEMO) return;
                 haptic();
                 if (listenMode.active) listenMode.deactivate();
                 else void listenMode.activate();
               }}
-              aria-label={listenMode.active ? (ui.listenStop ?? "Stop Listening") : (ui.listenStart ?? "Start Listening")}
+              aria-label={IS_DEMO ? "Listen disabled (demo)" : listenMode.active ? (ui.listenStop ?? "Stop Listening") : (ui.listenStart ?? "Start Listening")}
               style={{
-                width: 48, height: 48, borderRadius: 14,
-                background: listenMode.active ? "var(--tint)" : "var(--elevated)",
-                border: `0.5px solid ${listenMode.active ? "var(--tint)" : "var(--sep)"}`,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                cursor: "pointer", transition: "all 0.18s ease",
-                color: listenMode.active ? "#fff" : "var(--text-3)",
+                width: 48, height: 54, borderRadius: 14,
+                background: IS_DEMO ? "var(--elevated)" : listenMode.active ? "var(--tint)" : "var(--elevated)",
+                border: `0.5px solid ${!IS_DEMO && listenMode.active ? "var(--tint)" : "var(--sep)"}`,
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
+                cursor: IS_DEMO ? "default" : "pointer", transition: "all 0.18s ease",
+                color: IS_DEMO ? "var(--text-3)" : listenMode.active ? "#fff" : "var(--text-3)",
                 position: "relative",
                 touchAction: "manipulation",
-                animation: listenMode.state === "listening" ? "pulse 2s ease infinite" : "none",
+                overflow: "hidden",
+                opacity: IS_DEMO ? 0.65 : 1,
+                animation: !IS_DEMO && listenMode.state === "listening" ? "pulse 2s ease infinite" : "none",
               }}
             >
+              {IS_DEMO && (
+                <div style={{
+                  position: "absolute", top: 0, left: 0,
+                  width: "100%", height: "100%",
+                  pointerEvents: "none",
+                  background: "linear-gradient(135deg, transparent 42%, rgba(220,53,69,0.55) 42%, rgba(220,53,69,0.55) 58%, transparent 58%)",
+                  borderRadius: 14,
+                  zIndex: 2,
+                }} />
+              )}
               <Ear size={20} strokeWidth={1.8} />
+              <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>{ui.headerListen ?? "Listen"}</span>
             </button>
 
             {/* Sign Language Guide button */}
             <button
               onClick={() => setShowSignGuide(true)}
-              aria-label="Sign Language Guide"
+              aria-label={ui.headerSign ?? "Sign"}
               style={{
-                width: 48, height: 48, borderRadius: 14,
+                width: 48, height: 54, borderRadius: 14,
                 background: "var(--elevated)",
                 border: "0.5px solid var(--sep)",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
                 cursor: "pointer", transition: "all 0.18s ease",
                 color: "var(--text-3)",
                 touchAction: "manipulation",
               }}
             >
               <Hand size={20} strokeWidth={1.8} />
+              <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>{ui.headerSign ?? "Sign"}</span>
             </button>
 
             {/* Help button */}
             <button
               onClick={() => setShowHelp(true)}
-              aria-label="Help"
+              aria-label={ui.headerHelp ?? "Help"}
               style={{
-                width: 48, height: 48, borderRadius: 14,
+                width: 48, height: 54, borderRadius: 14,
                 background: "var(--elevated)",
                 border: "0.5px solid var(--sep)",
-                display: "flex", alignItems: "center", justifyContent: "center",
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
                 cursor: "pointer", transition: "all 0.18s ease",
                 color: "var(--text-3)",
                 touchAction: "manipulation",
               }}
             >
               <HelpCircle size={20} strokeWidth={1.8} />
+              <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>{ui.headerHelp ?? "Help"}</span>
             </button>
 
           </div>
@@ -726,6 +858,7 @@ export default function App() {
               whisperLoading={listenMode.whisperLoading}
               whisperProgress={listenMode.whisperProgress}
               chatHistory={chatHistory}
+              conversational={listenMode.conversational}
               onStopRecording={listenMode.stopRecording}
               onSelectReply={listenMode.selectReply}
               onDismiss={listenMode.dismiss}
@@ -864,9 +997,7 @@ export default function App() {
                 color={VOCAB_TABS.find(t => t.id === vocabTab)?.color}
               />
             ) : (
-              <>
                 <CategoryGrid onSelect={handleCategorySelect} ui={ui} />
-              </>
             )}
               </>
             )}
@@ -875,7 +1006,7 @@ export default function App() {
             <FabButton
               boardMode={boardMode}
               onToggleMode={() => setBoardMode(m => m === "symbols" ? "keyboard" : "symbols")}
-              onLongPress={() => { haptic(); listenMode.quickRecord(); }}
+              onLongPress={IS_DEMO ? undefined : () => { haptic(); listenMode.quickRecord(); }}
             />
 
             {/* ConversationPanel is now rendered inline above the board */}
@@ -935,19 +1066,49 @@ export default function App() {
               onResetAI={handleResetAI}
               theme={theme}
               setTheme={setTheme}
+              vocabMode={vocabMode}
+              setVocabMode={setVocabMode}
+              aiAutoCorrect={aiAutoCorrect}
+              setAiAutoCorrect={setAiAutoCorrect}
               ui={ui}
             />
           )}
 
           {/* ─────────────────── PROFILE ─────────────────── */}
           {tab === "profile" && (
-            <ProfilePanel
-              uiLangCode={uiLangCode}
-              onNameChange={setWakeWord}
-              gender={gender}
-              setGender={setGender}
-              ui={ui}
-            />
+            <div style={{ display: "flex", flexDirection: "column", flex: 1, overflow: "hidden" }}>
+              {/* ── Subscription banner (hidden in demo) ── */}
+              {!IS_DEMO && (
+                <SubscriptionBanner
+                  remainingAI={remainingAI}
+                  remainingVoice={remainingVoice}
+                  aiLimit={aiLimit}
+                  voiceLimit={voiceLimit}
+                  isPremium={isPremium}
+                  onUpgrade={openPaywall}
+                />
+              )}
+              <ProfilePanel
+                uiLangCode={uiLangCode}
+                onNameChange={setWakeWord}
+                gender={gender}
+                setGender={setGender}
+                ui={ui}
+                isPremium={IS_DEMO ? true : isPremium}
+                isInTrial={IS_DEMO ? false : isInTrial}
+                trialDaysLeft={IS_DEMO ? 0 : trialDaysLeft}
+                isAuthenticated={IS_DEMO ? false : isAuthenticated}
+                userEmail={IS_DEMO ? undefined : user?.email}
+                userProvider={IS_DEMO ? undefined : user?.providerData?.[0]?.providerId}
+                onOpenAuth={IS_DEMO ? () => {} : () => setShowAuthModal(true)}
+                onSignOut={IS_DEMO ? () => {} : authSignOut}
+                onChangePassword={IS_DEMO ? () => {} : authChangePassword}
+                onResetPassword={IS_DEMO ? () => {} : authResetPassword}
+                onDeleteAccount={IS_DEMO ? () => {} : authDeleteAccount}
+                onUpgrade={IS_DEMO ? () => {} : openPaywall}
+                isDemo={IS_DEMO}
+              />
+            </div>
           )}
         </div>
 
@@ -993,7 +1154,28 @@ export default function App() {
       )}
 
       {/* PWA install prompt */}
-      <InstallPrompt />
+      <InstallPrompt ui={ui} />
+
+      {/* Auth modal (hidden in demo) */}
+      {!IS_DEMO && (
+        <AuthModal
+          isOpen={showAuthModal}
+          lang={uiLangCode}
+          onClose={() => setShowAuthModal(false)}
+          onSuccess={() => setShowAuthModal(false)}
+        />
+      )}
+
+      {/* Subscription paywall (hidden in demo) */}
+      {!IS_DEMO && (
+        <Paywall
+          isOpen={showPaywall}
+          onClose={closePaywall}
+          onPurchased={() => { closePaywall(); refreshSub(); }}
+          offering={offering}
+          restore={restore}
+        />
+      )}
 
       {/* AI Model modal */}
       <AIModelModal
@@ -1013,6 +1195,7 @@ export default function App() {
         onSwitchModel={handleChangeAiModel}
         geminiApiKey={geminiApiKey}
         setGeminiApiKey={setGeminiApiKey}
+        ui={ui}
       />
     </div>
   );

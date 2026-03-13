@@ -61,16 +61,25 @@ export function Section({ title, children }) {
   );
 }
 
-export function Row({ Icon, iconBg, label, sublabel, action, border = true }) {
+export function Row({ Icon, iconBg, label, sublabel, action, onClick, border = true }) {
+  const interactive = !!onClick;
   return (
-    <div style={{
-      display:    "flex",
-      alignItems: "center",
-      gap:        12,
-      padding:    "12px 16px",
-      borderBottom: border ? "0.5px solid var(--sep)" : "none",
-      minHeight:  48,
-    }}>
+    <div
+      role={interactive ? "button" : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onClick={onClick}
+      onKeyDown={interactive ? (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onClick(); } } : undefined}
+      style={{
+        display:    "flex",
+        alignItems: "center",
+        gap:        12,
+        padding:    "12px 16px",
+        borderBottom: border ? "0.5px solid var(--sep)" : "none",
+        minHeight:  48,
+        cursor:     interactive ? "pointer" : undefined,
+        WebkitTapHighlightColor: interactive ? "rgba(0,0,0,0.05)" : undefined,
+      }}
+    >
       {Icon && (
         <div style={{
           width: 30, height: 30, borderRadius: 7,
@@ -93,6 +102,11 @@ export function Row({ Icon, iconBg, label, sublabel, action, border = true }) {
         )}
       </div>
       {action}
+      {interactive && !action && (
+        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" style={{ flexShrink: 0, opacity: 0.3 }}>
+          <path d="M1 1l5 5-5 5" stroke="var(--text)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )}
     </div>
   );
 }

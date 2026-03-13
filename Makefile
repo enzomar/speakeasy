@@ -162,6 +162,18 @@ ios-run: sync-ios
 	npx cap run ios
 
 # ─────────────────────────────────────────────────────────────────────────────
+#  Testing
+# ─────────────────────────────────────────────────────────────────────────────
+
+.PHONY: test-grid
+
+## Run all grid combinations → scripts/output-test-grid/<category>.txt
+test-grid:
+	@echo "$(C_CYAN)▸ Testing all grid combinations…$(C_RESET)"
+	node scripts/test-grid-combinations.mjs
+	@echo "$(C_GREEN)✔ Reports: scripts/output-test-grid/$(C_RESET)"
+
+# ─────────────────────────────────────────────────────────────────────────────
 #  Shortcuts
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -209,8 +221,9 @@ help:
 	@echo "$(C_CYAN)iOS$(C_RESET)"
 	@echo "  make ios              Build + sync + open Xcode"
 	@echo "  make ios-run          Build + run on device/sim"
-	@echo ""
-	@echo "$(C_CYAN)Shortcuts$(C_RESET)"
+	@echo ""	@echo "$(C_CYAN)Testing$(C_RESET)"
+	@echo "  make test-grid        Test all grid combinations → output-test-grid/<cat>.txt"
+	@echo ""	@echo "$(C_CYAN)Shortcuts$(C_RESET)"
 	@echo "  make all              Full pipeline: install → APK → device"
 	@echo "  make fresh            Clean + full rebuild"
 	@echo ""

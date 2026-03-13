@@ -50,7 +50,7 @@ function VocabCell({ item, langCode, color, onSpeak }) {
     >
       <span
         style={isNumeric
-          ? { fontSize: "clamp(22px, 5.5vw, 32px)", fontWeight: 800, lineHeight: 1, color: color || "#1971C2", fontVariantNumeric: "tabular-nums" }
+          ? { fontSize: "clamp(28px, 7vw, 40px)", fontWeight: 900, lineHeight: 1, color: color || "#1971C2", fontVariantNumeric: "tabular-nums", letterSpacing: "-0.02em" }
           : { fontSize: "clamp(24px, 6vw, 36px)", lineHeight: 1 }
         }
         aria-hidden="true"
@@ -58,7 +58,7 @@ function VocabCell({ item, langCode, color, onSpeak }) {
         {item.emoji}
       </span>
       <span style={{
-        fontSize: "clamp(11px, 2.5vw, 15px)",
+        fontSize: isNumeric ? "clamp(9px, 2vw, 12px)" : "clamp(11px, 2.5vw, 15px)",
         fontWeight: 700,
         color: color || "var(--text)",
         textAlign: "center",
@@ -68,6 +68,7 @@ function VocabCell({ item, langCode, color, onSpeak }) {
         whiteSpace: "nowrap",
         maxWidth: "100%",
         padding: "0 2px",
+        opacity: isNumeric ? 0.65 : 1,
       }}>
         {label}
       </span>

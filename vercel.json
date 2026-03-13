@@ -9,6 +9,13 @@
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/",            "destination": "/landing.html" },
+    { "source": "/landing.html","destination": "/landing.html" },
+    { "source": "/privacy",     "destination": "/privacy.html" },
+    { "source": "/terms",       "destination": "/terms.html" },
+    { "source": "/refund",      "destination": "/refund.html" },
+    { "source": "/app",         "destination": "/index.html" },
+    { "source": "/app/(.*)",    "destination": "/index.html" },
+    { "source": "/(.*)",        "destination": "/index.html" }
   ]
 }

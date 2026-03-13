@@ -1,8 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './app/App.jsx'
 import ErrorBoundary from './shared/ui/ErrorBoundary.jsx'
+import { isNative } from './shared/platform.js'
+
+// Redirect any non-/app path back to the static landing page (web only).
+// On native the entire shell is the app so we never need this.
+function LandingRedirect() {
+  if (!isNative) window.location.replace('/landing.html');
+  return null;
+}
 
 // Ensure the viewport meta is set correctly for Capacitor on all platforms
 if (!document.querySelector('meta[name="viewport"]')) {
@@ -24,7 +33,20 @@ window.addEventListener('resize', _setAppHeight);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
-      <App />
+      <BrowserRouter>
+        <Routes>
+          {isNative ? (
+            // Native shell: every path is the app
+            <Route path="*" element={<App />} />
+          ) : (
+            <>
+              <Route path="/app" element={<App />} />
+              {/* Every other path → back to the static landing page */}
+              <Route path="*" element={<LandingRedirect />} />
+            </>
+          )}
+        </Routes>
+      </BrowserRouter>
     </ErrorBoundary>
   </StrictMode>,
 )

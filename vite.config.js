@@ -1,5 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 // VitePWA is optional — dev works without it; only needed for production builds.
 let VitePWA = null
@@ -8,6 +10,41 @@ try { ({ VitePWA } = await import('vite-plugin-pwa')) } catch { /* not installed
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
+    // Dev-only: serve public/landing.html at / as a raw static file.
+    // We send the file directly instead of URL-rewriting so that Vite does NOT
+    // inject its HMR client into the static landing page.
+    // IMPORTANT: We must set the same COOP/COEP headers as the app so that
+    // navigating from landing → /app doesn't trigger a browsing-context-group
+    // switch (which would break WebSocket/HMR and module loading).
+    {
+      name: 'landing-at-root',
+      configureServer(server) {
+        server.middlewares.use((req, res, next) => {
+          const isNavigation =
+            !req.headers.upgrade &&
+            req.headers.accept?.includes('text/html');
+          if (isNavigation && (req.url === '/' || req.url?.startsWith('/?'))) {
+            let html = readFileSync(
+              resolve(process.cwd(), 'public/landing.html'),
+              'utf-8',
+            );
+            // In dev, unregister any stale service worker from previous prod
+            // builds so it doesn't intercept module requests with cached HTML.
+            const swCleanup = `<script>if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(function(r){r.forEach(function(sw){sw.unregister()})})}</script>`;
+            html = html.replace('</body>', swCleanup + '\n</body>');
+
+            res.setHeader('Content-Type', 'text/html');
+            // Match the same COOP / COEP headers Vite applies to /app so the
+            // browser keeps the same browsing-context-group across navigation.
+            res.setHeader('Cross-Origin-Opener-Policy', 'same-origin');
+            res.setHeader('Cross-Origin-Embedder-Policy', 'credentialless');
+            res.end(html);
+            return;
+          }
+          next();
+        });
+      },
+    },
     react(),
     VitePWA && VitePWA({
       registerType: 'autoUpdate',
@@ -23,7 +60,7 @@ export default defineConfig({
         display: 'standalone',
         orientation: 'portrait-primary',
         scope: '/',
-        start_url: '/?source=pwa',
+        start_url: '/app?source=pwa',
         categories: ['health', 'medical', 'education', 'accessibility'],
         icons: [
           { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },

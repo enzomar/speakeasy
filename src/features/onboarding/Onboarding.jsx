@@ -46,6 +46,7 @@ const T = {
     handRight:     "Right hand",
     readyTitle:    "You're all set!",
     readySubtitle:   "SpeakEasy is ready. Let's start communicating.",
+    dontShowAgain:   "Don't show this again",
     introStepTitle: "What is SpeakEasy?",
     introSubtitle:  "AAC for everyone — no cloud, no limits.",
     feat1Title:     "Who it's for",
@@ -83,6 +84,7 @@ const T = {
     handRight:     "Mano derecha",
     readyTitle:    "¡Todo listo!",
     readySubtitle:  "SpeakEasy está listo. Empecemos a comunicarnos.",
+    dontShowAgain:  "No mostrar de nuevo",
     introStepTitle: "¿Qué es SpeakEasy?",
     introSubtitle:  "CAA para todos — sin nube, sin límites.",
     feat1Title:     "¿Para quién es?",
@@ -118,6 +120,7 @@ const T = {
     handRight:     "Main droite",
     readyTitle:    "Tout est prêt !",
     readySubtitle:  "SpeakEasy est prêt. Commençons à communiquer.",
+    dontShowAgain:  "Ne plus afficher",
     introStepTitle: "Qu'est-ce que SpeakEasy ?",
     introSubtitle:  "CAA pour tous — sans cloud, sans limites.",
     feat1Title:     "À qui ça s'adresse ?",
@@ -153,6 +156,7 @@ const T = {
     handRight:     "Rechte Hand",
     readyTitle:    "Alles bereit!",
     readySubtitle:  "SpeakEasy ist bereit. Fangen wir an zu kommunizieren.",
+    dontShowAgain:  "Nicht erneut anzeigen",
     introStepTitle: "Was ist SpeakEasy?",
     introSubtitle:  "UK für alle — keine Cloud, keine Grenzen.",
     feat1Title:     "Für wen ist es?",
@@ -188,6 +192,7 @@ const T = {
     handRight:     "Mano destra",
     readyTitle:    "Tutto pronto!",
     readySubtitle:  "SpeakEasy è pronto. Iniziamo a comunicare.",
+    dontShowAgain:  "Non mostrare di nuovo",
     introStepTitle: "Cos'è SpeakEasy?",
     introSubtitle:  "CAA per tutti — nessun cloud, nessun limite.",
     feat1Title:     "A chi è destinato",
@@ -223,6 +228,7 @@ const T = {
     handRight:     "Mão direita",
     readyTitle:    "Tudo pronto!",
     readySubtitle:  "O SpeakEasy está pronto. Vamos nos comunicar.",
+    dontShowAgain:  "Não mostrar novamente",
     introStepTitle: "O que é o SpeakEasy?",
     introSubtitle:  "CAA para todos — sem nuvem, sem limites.",
     feat1Title:     "Para quem é",
@@ -258,6 +264,7 @@ const T = {
     handRight:     "اليد اليمنى",
     readyTitle:    "كل شيء جاهز!",
     readySubtitle:  "SpeakEasy جاهز. لنبدأ التواصل.",
+    dontShowAgain:  "لا تظهر هذا مجدداً",
     introStepTitle: "ما هو SpeakEasy؟",
     introSubtitle:  "التواصل المعزَّز للجميع — بدون سحابة، بلا حدود.",
     feat1Title:     "لمن هو مخصص؟",
@@ -293,6 +300,7 @@ const T = {
     handRight:     "右手",
     readyTitle:    "一切准备就绪！",
     readySubtitle:  "SpeakEasy 已准备好。让我们开始沟通。",
+    dontShowAgain:  "不再显示",
     introStepTitle: "什么是 SpeakEasy？",
     introSubtitle:  "人人可用的辅助交流工具 — 无云端，无限制。",
     feat1Title:     "适合哪些人",
@@ -328,6 +336,7 @@ const T = {
     handRight:     "右手",
     readyTitle:    "準備完了！",
     readySubtitle:  "SpeakEasy の準備ができました。コミュニケーションを始めましょう。",
+    dontShowAgain:  "次回から表示しない",
     introStepTitle: "SpeakEasy とは？",
     introSubtitle:  "すべての人のための AAC — クラウド不要、制限なし。",
     feat1Title:     "対象となる方",
@@ -363,6 +372,7 @@ const T = {
     handRight:     "오른손",
     readyTitle:    "모든 준비 완료!",
     readySubtitle:  "SpeakEasy가 준비되었습니다. 소통을 시작해 봅시다.",
+    dontShowAgain:  "다시 표시하지 않기",
     introStepTitle: "SpeakEasy 란 무엇인가요?",
     introSubtitle:  "모두를 위한 AAC — 클라우드 없이, 제한 없이.",
     feat1Title:     "누구를 위한 앱인가요?",
@@ -730,7 +740,7 @@ function StepIntro({ langCode }) {
   );
 }
 
-function StepReady({ langCode, name, avatar }) {
+function StepReady({ langCode, name, avatar, dontShowAgain, setDontShowAgain }) {
   return (
     <div style={{
       flex: 1, display: "flex", flexDirection: "column",
@@ -754,6 +764,23 @@ function StepReady({ langCode, name, avatar }) {
       <p style={{ fontSize: 15, color: "var(--text-3, #888)", maxWidth: 300 }}>
         {t(langCode, "readySubtitle")}
       </p>
+      <label style={{
+        display: "flex", alignItems: "center", gap: 10,
+        marginTop: 24, cursor: "pointer",
+        fontSize: 14, color: "var(--text-2, #555)",
+        WebkitTapHighlightColor: "transparent",
+      }}>
+        <input
+          type="checkbox"
+          checked={dontShowAgain}
+          onChange={(e) => setDontShowAgain(e.target.checked)}
+          style={{
+            width: 20, height: 20, accentColor: tint,
+            cursor: "pointer", margin: 0,
+          }}
+        />
+        {t(langCode, "dontShowAgain")}
+      </label>
     </div>
   );
 }
@@ -775,6 +802,7 @@ export default function Onboarding({ onComplete }) {
   const [avatar,   setAvatar]   = useState("🧑");
   const [gender,   setGender]   = useState("neutral");
   const [hand,     setHand]     = useState("right");
+  const [dontShowAgain, setDontShowAgain] = useState(true);
 
   const lang = LANGUAGES.find(l => l.code === langCode) ?? LANGUAGES[0];
   const isRtl = lang.dir === "rtl";
@@ -792,9 +820,11 @@ export default function Onboarding({ onComplete }) {
   }, [step]);
 
   const handleComplete = useCallback(() => {
-    try { localStorage.setItem(ONBOARDING_KEY, "1"); } catch { /* ignore */ }
+    if (dontShowAgain) {
+      try { localStorage.setItem(ONBOARDING_KEY, "1"); } catch { /* ignore */ }
+    }
     onComplete({ langCode, name: name.trim(), avatar, gender, hand });
-  }, [onComplete, langCode, name, avatar, gender, hand]);
+  }, [onComplete, langCode, name, avatar, gender, hand, dontShowAgain]);
 
   const isLast = step === STEPS.length - 1;
   const isFirst = step === 0;
@@ -942,7 +972,7 @@ export default function Onboarding({ onComplete }) {
           {stepName === "nameAvatar" && <StepNameAvatar langCode={langCode} name={name} setName={setName} avatar={avatar} setAvatar={setAvatar} />}
           {stepName === "voice"      && <StepVoice      langCode={langCode} gender={gender} setGender={setGender} ttsLang={lang.ttsLang} />}
           {stepName === "handedness" && <StepHandedness langCode={langCode} hand={hand} setHand={setHand} />}
-          {stepName === "ready"      && <StepReady      langCode={langCode} name={name} avatar={avatar} />}
+          {stepName === "ready"      && <StepReady      langCode={langCode} name={name} avatar={avatar} dontShowAgain={dontShowAgain} setDontShowAgain={setDontShowAgain} />}
         </div>
 
         {/* ── Footer / Next button ── */}

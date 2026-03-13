@@ -24,7 +24,7 @@ function isInStandaloneMode() {
     window.navigator.standalone === true;
 }
 
-export default function InstallPrompt() {
+export default function InstallPrompt({ ui }) {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [showIos, setShowIos]               = useState(false);
   const [visible, setVisible]               = useState(false);
@@ -89,7 +89,7 @@ export default function InstallPrompt() {
       <div
         role="dialog"
         aria-modal="true"
-        aria-label="Install SpeakEasy"
+        aria-label={ui?.installTitle ?? "Install SpeakEasy"}
         style={{
           position: "fixed",
           ...(showIos
@@ -116,15 +116,15 @@ export default function InstallPrompt() {
           />
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontWeight: 700, fontSize: 17, color: "var(--text)" }}>
-              SpeakEasy
+              {ui?.installTitle ?? "SpeakEasy"}
             </div>
             <div style={{ fontSize: 14, color: "var(--text-3)", marginTop: 2 }}>
-              Install for offline access
+              {ui?.installSubtitle ?? "Install for offline access"}
             </div>
           </div>
           <button
             onClick={dismiss}
-            aria-label="Dismiss"
+            aria-label={ui?.installDismiss ?? "Dismiss"}
             style={{
               width: 32, height: 32, borderRadius: 16,
               background: "var(--grouped-bg)",
@@ -140,12 +140,12 @@ export default function InstallPrompt() {
           /* iOS instructions */
           <>
             <p style={{ fontSize: 15, color: "var(--text-2)", lineHeight: 1.55, margin: 0 }}>
-              Add SpeakEasy to your home screen for the full-screen experience — works even when offline.
+              {ui?.installIosDesc ?? "Add SpeakEasy to your home screen for the full-screen experience \u2014 works even when offline."}
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <Step n={1} icon={<Share size={18} />} text='Tap the Share button in Safari' />
-              <Step n={2} icon={<PlusSquare size={18} />} text='Scroll down and tap "Add to Home Screen"' />
-              <Step n={3} icon="✅" text='Tap "Add" in the top-right corner' />
+              <Step n={1} icon={<Share size={18} />} text={ui?.installStep1 ?? 'Tap the Share button in Safari'} />
+              <Step n={2} icon={<PlusSquare size={18} />} text={ui?.installStep2 ?? 'Scroll down and tap \u201cAdd to Home Screen\u201d'} />
+              <Step n={3} icon="\u2705" text={ui?.installStep3 ?? 'Tap \u201cAdd\u201d in the top-right corner'} />
             </div>
             <button
               onClick={dismiss}
@@ -156,14 +156,14 @@ export default function InstallPrompt() {
                 fontSize: 16, fontWeight: 700, width: "100%",
               }}
             >
-              Got it
+              {ui?.installGotIt ?? "Got it"}
             </button>
           </>
         ) : (
           /* Android / Chrome install */
           <>
             <p style={{ fontSize: 14, color: "var(--text-2)", lineHeight: 1.5, margin: 0 }}>
-              Add SpeakEasy to your home screen for instant access and offline support.
+              {ui?.installAndroidDesc ?? "Add SpeakEasy to your home screen for instant access and offline support."}
             </p>
             <div style={{ display: "flex", gap: 10 }}>
               <button
@@ -174,7 +174,7 @@ export default function InstallPrompt() {
                   fontSize: 15, fontWeight: 600,
                 }}
               >
-                Not now
+                {ui?.installNotNow ?? "Not now"}
               </button>
               <button
                 onClick={install}
@@ -184,7 +184,7 @@ export default function InstallPrompt() {
                   fontSize: 15, fontWeight: 700,
                 }}
               >
-                Install
+                {ui?.installBtn ?? "Install"}
               </button>
             </div>
           </>

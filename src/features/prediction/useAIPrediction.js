@@ -43,6 +43,7 @@ import {
 import { detectIntent, detectEmotion } from "../../prompts/intentEmotionEngine";
 import { tapContextToConceptIds } from "../../engine/hierarchyBridge.js";
 import { generateSync, generate as generateAsync } from "../../engine/sentenceOrchestrator.js";
+import { IS_DEMO } from "../../shared/demoMode";
 
 // ── Model config ──────────────────────────────────────────────────────────────
 
@@ -191,7 +192,7 @@ function onWifi() {
 
 // ── Hook ──────────────────────────────────────────────────────────────────────
 
-export function useAIPrediction(modelKey = "fast", geminiApiKey = "") {
+export function useAIPrediction(modelKey = "fast", geminiApiKey = "", aiAutoCorrect = "off") {
   const engineRef    = useRef(null);
   const abortRef     = useRef(null);
   const loadingRef   = useRef(false);
@@ -431,7 +432,7 @@ export function useAIPrediction(modelKey = "fast", geminiApiKey = "") {
     // (tagged __core). Grid / fringe symbol labels are never included.
     const heuristicIntents = keyword
       ? applyPrefix(
-          generateCandidates(keyword, modifier, langCode, gender, l2Canon, categoryId, intent, emotion)
+          generateCandidates(keyword, modifier, langCode, gender, l2Canon, categoryId, intent, emotion, l3Canon)
             .slice(0, 13)
             .map(s => fixGender(s, langCode, gender)),
           corePrefixWords,
@@ -506,7 +507,9 @@ export function useAIPrediction(modelKey = "fast", geminiApiKey = "") {
     // generateSync already gave the instant result. If confidence is low, kick
     // off the full pipeline (cache lookup → LLM) and update suggestions when
     // it resolves — without blocking the UI.
-    if (engineResult && engineResult.confidence.overall < 0.8 && conceptIds.length >= 2) {
+    // Gated by aiAutoCorrect setting: when "off", user's exact words are preserved.
+    // Skipped in demo mode — no AI/LLM calls.
+    if (!IS_DEMO && aiAutoCorrect === "on" && engineResult && engineResult.confidence.overall < 0.8 && conceptIds.length >= 2) {
       const _conceptIds = conceptIds;
       const _langCode   = langCode;
       const _syncText   = engineResult.text;
@@ -528,6 +531,9 @@ export function useAIPrediction(modelKey = "fast", geminiApiKey = "") {
     }
 
     if (!words.length && !transcript) return;
+
+    // Demo mode: heuristic + n-gram predictions are set above; skip all LLM calls.
+    if (IS_DEMO) return;
 
     // Kick off LLM engine load on first real interaction (local models only)
     if (!geminiModeRef.current) {

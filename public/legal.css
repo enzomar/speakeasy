@@ -1,0 +1,96 @@
+/* ── Shared legal page styles ─────────────────────────────────────────────── */
+/* Reuses landing.css variables via the HTML link order.                       */
+
+.legal-body {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.legal-body h1 {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.legal-body .legal-date {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 32px;
+}
+
+.legal-body h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 36px 0 10px;
+}
+
+.legal-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 24px 0 8px;
+}
+
+.legal-body p {
+  margin: 0 0 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.legal-body ul,
+.legal-body ol {
+  margin: 0 0 14px;
+  padding-left: 1.4em;
+  line-height: 1.7;
+}
+
+.legal-body li {
+  margin-bottom: 6px;
+}
+
+.legal-body a {
+  color: var(--teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-body a:hover {
+  color: var(--teal-dark);
+}
+
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.legal-back:hover {
+  color: var(--teal-dark);
+}
+
+.legal-footer-links {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+.legal-footer-links a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-footer-links a:hover {
+  color: var(--teal);
+}

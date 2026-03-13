@@ -19,6 +19,8 @@ const AI_MODEL_KEY     = "speakeasy_ai_model_v1";
 const THEME_KEY        = "speakeasy_theme_v1";
 const GENDER_KEY       = "speakeasy_gender_v1";
 const GEMINI_KEY       = "speakeasy_gemini_key_v1";
+const VOCAB_MODE_KEY   = "speakeasy_vocab_mode_v1";
+const AI_CORRECT_KEY   = "speakeasy_ai_correct_v1";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -95,6 +97,18 @@ export function useSettings() {
   });
   const setGeminiApiKey = useCallback((v) => { saveItem(GEMINI_KEY, v); setGeminiApiKeyState(v); }, []);
 
+  // Vocab tap mode: "speak" (immediate TTS) or "compose" (add to message bar)
+  const [vocabMode, setVocabModeState] = useState(() => {
+    try { return localStorage.getItem(VOCAB_MODE_KEY) ?? "speak"; } catch { return "speak"; }
+  });
+  const setVocabMode = useCallback((v) => { saveItem(VOCAB_MODE_KEY, v); setVocabModeState(v); }, []);
+
+  // AI auto-correction: on or off (opt-in)
+  const [aiAutoCorrect, setAiAutoCorrectState] = useState(() => {
+    try { return localStorage.getItem(AI_CORRECT_KEY) ?? "off"; } catch { return "off"; }
+  });
+  const setAiAutoCorrect = useCallback((v) => { saveItem(AI_CORRECT_KEY, v); setAiAutoCorrectState(v); }, []);
+
   return {
     theme, setTheme,
     voiceSpeed, setVoiceSpeed,
@@ -105,5 +119,7 @@ export function useSettings() {
     gender, setGender,
     wakeKeywords, setWakeKeywords,
     geminiApiKey, setGeminiApiKey,
+    vocabMode, setVocabMode,
+    aiAutoCorrect, setAiAutoCorrect,
   };
 }

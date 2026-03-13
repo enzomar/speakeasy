@@ -55,6 +55,9 @@ export default function ConfirmSheet({
         onClick={e => e.stopPropagation()}
         style={{
           width: "100%",
+          maxHeight: "90vh",
+          overflowY: "auto",
+          WebkitOverflowScrolling: "touch",
           background: "var(--surface)",
           borderRadius: "16px 16px 0 0",
           padding: "24px 20px",

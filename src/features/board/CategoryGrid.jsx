@@ -46,7 +46,7 @@ export default memo(function CategoryGrid({ onSelect, ui }) {
         gridTemplateColumns: "repeat(3, 1fr)",
         gridAutoRows: "1fr",
         gap: 10,
-        padding: "10px 12px 16px",
+        padding: "10px 12px 72px",
         overflow: "hidden",
       }}
     >

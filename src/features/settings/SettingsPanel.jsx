@@ -8,7 +8,7 @@ import {
   Languages, Volume2, Gauge, Music, Mic, Play,
   Brain, Zap, Download, Trash2, RotateCcw,
   Hand, Ear, Search, Globe, Headphones,
-  Sun, Moon,
+  Sun, Moon, MousePointerClick, Wand2,
 } from "lucide-react";
 import { LANGUAGES, ACTIVATION_KEYWORDS } from "../../i18n/languages";
 import ConfirmSheet from "../../shared/ui/ConfirmSheet";
@@ -28,6 +28,8 @@ export default memo(function SettingsPanel({
   wakeKeywords, setWakeKeywords,
   onExport, onClearHistory, onResetAI,
   theme, setTheme,
+  vocabMode, setVocabMode,
+  aiAutoCorrect, setAiAutoCorrect,
   ui,
 }) {
   const [confirm, setConfirm] = useState(null);
@@ -301,6 +303,68 @@ export default memo(function SettingsPanel({
                     }}
                   >
                     {h === "left" ? (ui?.handLeft ?? "Left") : (ui?.handRight ?? "Right")}
+                  </button>
+                ))}
+              </div>
+            }
+          />
+          <Row
+            Icon={MousePointerClick}
+            iconBg="#E8590C"
+            label={ui?.rowVocabMode ?? "Vocab tap action"}
+            sublabel={vocabMode === "compose"
+              ? (ui?.subVocabCompose ?? "Adds word to message bar")
+              : (ui?.subVocabSpeak ?? "Speaks word immediately")}
+            action={
+              <div style={{ display: "flex", borderRadius: "var(--radius-sm)", overflow: "hidden", border: "1px solid var(--sep)" }}>
+                {["speak", "compose"].map(m => (
+                  <button
+                    key={m}
+                    onClick={() => setVocabMode?.(m)}
+                    style={{
+                      padding: "6px 14px",
+                      border: "none",
+                      background: vocabMode === m ? "var(--tint)" : "var(--bg)",
+                      color: vocabMode === m ? "#fff" : "var(--text-2)",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
+                    {m === "speak" ? (ui?.vocabSpeak ?? "Speak") : (ui?.vocabCompose ?? "Compose")}
+                  </button>
+                ))}
+              </div>
+            }
+          />
+          <Row
+            Icon={Wand2}
+            iconBg="#7048E8"
+            label={ui?.rowAiCorrect ?? "AI auto-correction"}
+            sublabel={aiAutoCorrect === "on"
+              ? (ui?.subAiCorrectOn ?? "AI may rephrase your sentence")
+              : (ui?.subAiCorrectOff ?? "Your exact words are always spoken")}
+            action={
+              <div style={{ display: "flex", borderRadius: "var(--radius-sm)", overflow: "hidden", border: "1px solid var(--sep)" }}>
+                {["off", "on"].map(v => (
+                  <button
+                    key={v}
+                    onClick={() => setAiAutoCorrect?.(v)}
+                    style={{
+                      padding: "6px 14px",
+                      border: "none",
+                      background: aiAutoCorrect === v ? "var(--tint)" : "var(--bg)",
+                      color: aiAutoCorrect === v ? "#fff" : "var(--text-2)",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
+                    {v === "off" ? (ui?.aiCorrectOff ?? "Off") : (ui?.aiCorrectOn ?? "On")}
                   </button>
                 ))}
               </div>
