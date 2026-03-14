@@ -29,6 +29,12 @@ function _setAppHeight() {
   document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
 }
 _setAppHeight();
+// On initial load, window.innerHeight may not be settled yet (especially in
+// PWA standalone mode on iOS/Android).  Re-measure after the first paint and
+// once the window has fully loaded — both events happen after the viewport
+// dimensions have stabilised, which prevents the bottom nav from being hidden.
+requestAnimationFrame(() => requestAnimationFrame(_setAppHeight));
+window.addEventListener('load', _setAppHeight);
 window.addEventListener('resize', _setAppHeight);
 // On mobile, resuming from background fires visibilitychange / pageshow but
 // NOT resize, so --app-height stays stale and the layout collapses.

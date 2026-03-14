@@ -4,7 +4,7 @@
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
-  Grid3X3, Clock, Settings, User,
+  Grid3X3, Clock, User, Shapes,
   Cpu, Ear, HelpCircle, ArrowLeft, Keyboard, Siren, Hand, MessageSquarePlus
 } from "lucide-react";
 
@@ -33,7 +33,6 @@ import CategoryGrid      from "../features/board/CategoryGrid";
 import SymbolPicker      from "../features/board/SymbolPicker";
 import PhraseGrid        from "../features/board/PhraseGrid";
 import ProfilePanel      from "../features/profile/ProfilePanel";
-import SettingsPanel     from "../features/settings/SettingsPanel";
 import HistoryPanel      from "../features/history/HistoryPanel";
 import ConversationPanel from "../features/listen/ConversationPanel";
 import HelpModal         from "../shared/ui/HelpModal";
@@ -43,8 +42,7 @@ import InstallPrompt     from "../shared/ui/InstallPrompt";
 import { FeedbackForm }  from "../shared/ui/settingsUI";
 import Onboarding, { ONBOARDING_KEY } from "../features/onboarding/Onboarding";
 import SmartKeyboard     from "../features/board/SmartKeyboard";
-import VocabToolbar, { VOCAB_DATA, VOCAB_TABS } from "../features/board/VocabToolbar";
-import VocabGrid from "../features/board/VocabGrid";
+import SymbolsPanel from "../features/symbols/SymbolsPanel";
 import FavoritesSheet    from "../features/board/FavoritesSheet";
 
 // Auth + Subscription
@@ -216,19 +214,25 @@ export default function App() {
   // ── Lock scroll on body while the AAC app is mounted ─────────────────────
   useEffect(() => {
     document.body.classList.add("app-active");
+    // Adding 'app-active' changes #root height via CSS — re-measure --app-height
+    // so the flex layout settles with the correct viewport dimensions.
+    requestAnimationFrame(() => {
+      document.documentElement.style.setProperty(
+        '--app-height', `${window.innerHeight}px`
+      );
+    });
     return () => document.body.classList.remove("app-active");
   }, []);
 
   // ── UI state ─────────────────────────────────────────────────────────────
   const [words,          setWords]          = useState([]);
-  const [tab,            setTab]            = useState("board");   // "board"|"history"|"settings"|"profile"
+  const [tab,            setTab]            = useState("board");   // "board"|"symbols"|"history"|"profile"
   const [activeCategory, setActiveCategory] = useState(null);       // null = category grid, object = symbol picker
   const [tapContext, setTapContext] = useState(null);                // { l1Label, l2Label, l3Label, l3Type } — hierarchy path
   const [emotion, setEmotion] = useState("neutral");               // null = auto-detect, or one of EMOTIONS; default neutral
   const [showHelp, setShowHelp] = useState(false);
   const [showSignGuide, setShowSignGuide] = useState(false);
   const [boardMode, setBoardMode] = useState("symbols");              // "symbols" | "keyboard"
-  const [vocabTab, setVocabTab] = useState("grid");                    // "grid" | vocab category id
   const [quickSubTab, setQuickSubTab] = useState(null);               // null = show sub-cat grid, string = phrase tab id
   const [lastSpoken, setLastSpoken] = useState("");                     // last spoken sentence for repeat
   const [spokenToast, setSpokenToast] = useState("");                   // brief visual confirmation after speaking
@@ -650,7 +654,7 @@ export default function App() {
           WebkitBackdropFilter: "saturate(180%) blur(20px)",
           backdropFilter: "saturate(180%) blur(20px)",
           borderBottom:   "var(--glass-border)",
-          padding:        "var(--safe-top, 0) 8px 8px",
+          padding:        "var(--safe-top, 4px) 8px 8px",
           display:        "flex",
           position:       "relative",
           overflow:       "hidden",
@@ -870,11 +874,6 @@ export default function App() {
               onEmotionChange={setEmotion}
               detectedEmotion={detectedEmotion}
             />
-            <VocabToolbar
-              activeTab={vocabTab}
-              onTabChange={(id) => { setVocabTab(id); if (id !== "grid") setActiveCategory(null); }}
-              langCode={typeLangCode}
-            />
             </>
           )}
         </>}
@@ -1028,13 +1027,6 @@ export default function App() {
                   ui={ui}
                 />
               )
-            ) : vocabTab !== "grid" ? (
-              <VocabGrid
-                items={VOCAB_DATA[vocabTab] || []}
-                langCode={typeLangCode}
-                onSpeak={handleVocabSpeak}
-                color={VOCAB_TABS.find(t => t.id === vocabTab)?.color}
-              />
             ) : (
                 <CategoryGrid onSelect={handleCategorySelect} ui={ui} />
             )}
@@ -1051,6 +1043,16 @@ export default function App() {
             {/* ConversationPanel is now rendered inline above the board */}
           </div>
 
+          {/* ─────────────────── SYMBOLS ─────────────────── */}
+          {tab === "symbols" && (
+            <SymbolsPanel
+              langCode={typeLangCode}
+              onSpeak={handleVocabSpeak}
+              vocabMode={vocabMode}
+              ui={ui}
+            />
+          )}
+
           {tab === "history" && (
             <HistoryPanel
               history={history}
@@ -1065,50 +1067,6 @@ export default function App() {
                 else addFavorite(item.text);
               }}
               leftHanded={hand === "left"}
-              ui={ui}
-            />
-          )}
-
-          {/* ─────────────────── SETTINGS ─────────────────── */}
-          {tab === "settings" && (
-            <SettingsPanel
-              uiLangCode={uiLangCode}
-              setUiLang={setUiLang}
-              typeLangCode={typeLangCode}
-              ttsLangCode={ttsLangCode}
-              listenLangCode={listenLangCode}
-              setListenLang={setListenLang}
-              setTypeLang={setTypeLang}
-              setTtsLang={setTtsLang}
-              voiceSpeed={voiceSpeed}
-              voicePitch={voicePitch}
-              setVoiceSpeed={setVoiceSpeed}
-              setVoicePitch={setVoicePitch}
-              voiceName={voiceName}
-              setVoiceName={setVoiceName}
-              voices={voices}
-              onTryVoice={() => speak(
-                ui.tryVoiceSentence ?? "Hello! This is how I sound with your current settings.",
-                { lang: ttsLang.ttsLang, rate: voiceSpeed, pitch: voicePitch, voiceName }
-              )}
-              speaking={speaking}
-              hand={hand}
-              setHand={setHand}
-              wakeKeywords={wakeKeywords}
-              setWakeKeywords={setWakeKeywords}
-              llmStatus={llmStatus}
-              loadProgress={loadProgress}
-              aiModel={aiModel}
-              onChangeAiModel={handleChangeAiModel}
-              onExport={exportHistory}
-              onClearHistory={clearHistory}
-              onResetAI={handleResetAI}
-              theme={theme}
-              setTheme={setTheme}
-              vocabMode={vocabMode}
-              setVocabMode={setVocabMode}
-              aiAutoCorrect={aiAutoCorrect}
-              setAiAutoCorrect={setAiAutoCorrect}
               ui={ui}
             />
           )}
@@ -1146,6 +1104,38 @@ export default function App() {
                 onDeleteAccount={IS_DEMO ? () => {} : authDeleteAccount}
                 onUpgrade={IS_DEMO ? () => {} : openPaywall}
                 isDemo={IS_DEMO}
+                setUiLang={setUiLang}
+                typeLangCode={typeLangCode}
+                ttsLangCode={ttsLangCode}
+                listenLangCode={listenLangCode}
+                setListenLang={setListenLang}
+                setTypeLang={setTypeLang}
+                setTtsLang={setTtsLang}
+                voiceSpeed={voiceSpeed}
+                voicePitch={voicePitch}
+                setVoiceSpeed={setVoiceSpeed}
+                setVoicePitch={setVoicePitch}
+                voiceName={voiceName}
+                setVoiceName={setVoiceName}
+                voices={voices}
+                onTryVoice={() => speak(
+                  ui.tryVoiceSentence ?? "Hello! This is how I sound with your current settings.",
+                  { lang: ttsLang.ttsLang, rate: voiceSpeed, pitch: voicePitch, voiceName }
+                )}
+                speaking={speaking}
+                hand={hand}
+                setHand={setHand}
+                wakeKeywords={wakeKeywords}
+                setWakeKeywords={setWakeKeywords}
+                onExport={exportHistory}
+                onClearHistory={clearHistory}
+                onResetAI={handleResetAI}
+                theme={theme}
+                setTheme={setTheme}
+                vocabMode={vocabMode}
+                setVocabMode={setVocabMode}
+                aiAutoCorrect={aiAutoCorrect}
+                setAiAutoCorrect={setAiAutoCorrect}
               />
             </div>
           )}
@@ -1167,8 +1157,8 @@ export default function App() {
         zIndex:        20,
       }} aria-label="Main navigation">
         <NavItem id="board"     icon={Grid3X3}  label={ui.board       ?? "Board"}      active={tab === "board"}     onClick={setTab} />
+        <NavItem id="symbols"   icon={Shapes}   label={ui.symbols     ?? "Symbols"}   active={tab === "symbols"}   onClick={setTab} />
         <NavItem id="history"   icon={Clock}    label={ui.history     ?? "History"}    active={tab === "history"}   onClick={setTab} />
-        <NavItem id="settings"  icon={Settings} label={ui.settings   ?? "Settings"}   active={tab === "settings"} onClick={setTab} />
         <NavItem id="profile"   icon={User}     label={ui.profile     ?? "Profile"}    active={tab === "profile"}  onClick={setTab} />
       </nav>
 

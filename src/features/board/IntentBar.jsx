@@ -13,7 +13,7 @@
  */
 
 import { memo, useRef, useCallback, useState, useEffect } from "react";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Volume2 } from "lucide-react";
 
 const LONG_PRESS_MS = 500;
 
@@ -77,6 +77,8 @@ function IntentPill({ sentence, index, onSpeak, onSelect }) {
       onClick={handleClick}
       onContextMenu={preventMenu}
       style={{
+        display: "flex",
+        alignItems: "center",
         padding: "10px 16px",
         borderRadius: 20,
         border: "none",
@@ -95,6 +97,11 @@ function IntentPill({ sentence, index, onSpeak, onSelect }) {
       }}
     >
       {sentence}
+      <Volume2
+        size={12}
+        strokeWidth={2.5}
+        style={{ marginLeft: 6, flexShrink: 0, opacity: 0.7 }}
+      />
     </button>
   );
 }

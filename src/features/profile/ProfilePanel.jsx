@@ -1,15 +1,22 @@
 /**
- * ProfilePanel — Profile / Identity / Account / Subscription page.
- * Contains: Identity, Subscription, Account.
+ * ProfilePanel — Unified Profile & Settings page.
+ * Contains: Identity, Languages, Voice, Listen Mode, Accessibility,
+ *           Data & Privacy, About, Subscription, Account.
  */
 
 import { memo, useState, useCallback } from "react";
 import {
   Search, LogOut, KeyRound, Trash2,
   Crown, Clock, ShieldCheck, Mail,
+  Volume2, Gauge, Music, Mic, Play,
+  Download, RotateCcw,
+  Hand, Ear, Globe, Headphones,
+  Sun, Moon, MousePointerClick, Wand2, Info,
 } from "lucide-react";
+import { LANGUAGES, ACTIVATION_KEYWORDS } from "../../i18n/languages";
+import ConfirmSheet from "../../shared/ui/ConfirmSheet";
 import {
-  Section, Row, AvatarPicker, ActionButton, store, load,
+  Section, Row, AvatarPicker, NativeSelect, Slider, ActionButton, store, load,
 } from "../../shared/ui/settingsUI";
 
 // ── Tiny modal for password input / confirmation dialogs ──────────────────────
@@ -81,10 +88,24 @@ export default memo(function ProfilePanel({
   onUpgrade,
   // Demo
   isDemo,
+  // Settings (merged from SettingsPanel)
+  setUiLang,
+  typeLangCode, ttsLangCode, listenLangCode, setListenLang,
+  setTypeLang, setTtsLang,
+  voiceSpeed, voicePitch, setVoiceSpeed, setVoicePitch,
+  voiceName, setVoiceName, voices,
+  onTryVoice, speaking,
+  hand, setHand,
+  wakeKeywords, setWakeKeywords,
+  onExport, onClearHistory, onResetAI,
+  theme, setTheme,
+  vocabMode, setVocabMode,
+  aiAutoCorrect, setAiAutoCorrect,
 }) {
   const [avatar, setAvatar] = useState(() => load("speakeasy_avatar_v1", "🧑"));
   const [name,   setName]   = useState(() => load("speakeasy_name_v1",   ""));
   const [searchQuery, setSearchQuery] = useState("");
+  const [confirm, setConfirm] = useState(null);
 
   // Password change modal
   const [showPwModal,  setShowPwModal]  = useState(false);
@@ -119,6 +140,39 @@ export default memo(function ProfilePanel({
   ];
 
   const isEmailProvider = userProvider === "password";
+
+  // ── Language options ──────────────────────────────────────────────────────
+  const langOptions = LANGUAGES.map(l => ({ value: l.code, label: `${l.flag} ${l.name}` }));
+
+  // Filter voices for the current TTS language
+  const ttsPrefix = (ttsLangCode || "en").slice(0, 2);
+  const filteredVoices = (voices || []).filter(
+    v => v.lang === ttsLangCode || v.lang.startsWith(ttsPrefix)
+  );
+  const voiceOptions = [
+    { value: "", label: ui?.autoVoice ?? "Auto (best available)" },
+    ...filteredVoices.map(v => ({
+      value: v.name,
+      label: v.name.replace(/\s*\(.*\)$/, ""),
+    })),
+  ];
+
+  const handleVoiceChange = useCallback((name) => {
+    setVoiceName(name);
+    if (!name) return;
+    const picked = (voices || []).find(v => v.name === name);
+    if (!picked) return;
+    const voiceLangPrefix = picked.lang.slice(0, 2).toLowerCase();
+    const match = LANGUAGES.find(l => l.code === voiceLangPrefix);
+    if (match && match.code !== ttsLangCode) {
+      setTtsLang(match.code);
+    }
+  }, [setVoiceName, setTtsLang, voices, ttsLangCode]);
+
+  const handleTtsLangChange = useCallback((code) => {
+    setTtsLang(code);
+    if (voiceName) setVoiceName("");
+  }, [setTtsLang, setVoiceName, voiceName]);
 
   // ── Password change handler ───────────────────────────────────────────────
   const handleChangePassword = useCallback(async () => {
@@ -173,7 +227,7 @@ export default memo(function ProfilePanel({
             type="search"
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
-            placeholder={ui?.searchProfile ?? "Search profile…"}
+            placeholder={ui?.searchSettings ?? "Search settings…"}
             style={{
               width: "100%", boxSizing: "border-box",
               padding: "10px 12px 10px 36px",
@@ -252,6 +306,318 @@ export default memo(function ProfilePanel({
               ))}
             </div>
           </div>
+        </Section>
+        )}
+
+        {/* ── Languages ── */}
+        {show("language", "interface", "speak", "type", "listen", "recognition", "tts", ui?.sectionLanguages ?? "languages") && (
+        <Section title={ui?.sectionLanguages ?? "Languages"}>
+          <Row
+            Icon={Globe}
+            iconBg="#5856D6"
+            label={ui?.rowLanguage ?? "Language"}
+            sublabel={ui?.subLanguage ?? "Interface, symbols and AI suggestions"}
+            action={<NativeSelect value={uiLangCode} options={langOptions} onChange={setUiLang} />}
+          />
+          <Row
+            Icon={Volume2}
+            iconBg="var(--orange)"
+            label={ui?.rowSpeakLang ?? "Speak language"}
+            sublabel={ui?.subSpeakLang ?? "Text-to-speech voice"}
+            action={<NativeSelect value={ttsLangCode} options={langOptions} onChange={handleTtsLangChange} />}
+          />
+          <Row
+            Icon={Headphones}
+            iconBg="#FF2D55"
+            label={ui?.rowListenLang ?? "Listening language"}
+            sublabel={ui?.subListenLang ?? "Speech recognition in Listen Mode"}
+            action={<NativeSelect value={listenLangCode} options={langOptions} onChange={setListenLang} />}
+            border={false}
+          />
+        </Section>
+        )}
+
+        {/* ── Voice ── */}
+        {show("voice", "speed", "pitch", "rate", "sound", ui?.sectionVoice ?? "voice") && (
+        <Section title={ui?.sectionVoice ?? "Voice"}>
+          <Row
+            Icon={Mic}
+            iconBg="var(--tint)"
+            label={ui?.sectionVoice ?? "Voice"}
+            sublabel={voiceName || (ui?.autoVoice ?? "Auto (best available)")}
+            action={<NativeSelect value={voiceName} options={voiceOptions} onChange={handleVoiceChange} />}
+          />
+          <Row
+            Icon={Gauge}
+            iconBg="var(--purple)"
+            label={ui?.rowSpeed ?? "Speed"}
+            action={
+              <Slider value={voiceSpeed} min={0.5} max={1.5} step={0.05}
+                onChange={setVoiceSpeed} format={v => `${v.toFixed(2)}×`} />
+            }
+          />
+          <Row
+            Icon={Music}
+            iconBg="#FF2D55"
+            label={ui?.rowPitch ?? "Pitch"}
+            action={
+              <Slider value={voicePitch} min={0.5} max={1.5} step={0.05}
+                onChange={setVoicePitch} format={v => `${v.toFixed(2)}×`} />
+            }
+          />
+          <Row
+            Icon={Play}
+            iconBg="var(--green)"
+            label={ui?.rowTryVoice ?? "Try voice"}
+            sublabel={ui?.subTryVoice ?? "Listen to current settings"}
+            action={
+              <button
+                onClick={onTryVoice}
+                disabled={speaking}
+                style={{
+                  padding: "8px 18px",
+                  borderRadius: "var(--radius-xl)",
+                  border: "none",
+                  background: speaking ? "var(--sep)" : "var(--tint)",
+                  color: speaking ? "var(--text-4)" : "#fff",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  cursor: speaking ? "default" : "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  transition: "all 0.15s",
+                  WebkitTapHighlightColor: "transparent",
+                }}
+              >
+                <Play size={14} strokeWidth={2.2} fill="currentColor" />
+                {speaking ? (ui?.trying ?? "Playing…") : (ui?.tryVoice ?? "Try")}
+              </button>
+            }
+            border={false}
+          />
+        </Section>
+        )}
+
+        {/* ── Listen Mode ── */}
+        {import.meta.env.VITE_DEMO !== "true" && show("listen", "wake", "keyword", "activation", "ear", ui?.sectionListen ?? "listen mode") && (
+        <Section title={ui?.sectionListen ?? "Listen Mode"}>
+          <Row
+            Icon={Ear}
+            iconBg="var(--tint)"
+            label={ui?.listenKeywords ?? "Activation keyword"}
+            sublabel={ui?.listenKeywordsHint ?? "Your name is also added automatically."}
+            border={false}
+          />
+          <div style={{
+            display: "flex", gap: 8, padding: "4px 16px 14px",
+            flexWrap: "wrap",
+          }}>
+            {(ACTIVATION_KEYWORDS[typeLangCode] ?? ACTIVATION_KEYWORDS.en).map(kw => {
+              const selected = wakeKeywords === kw;
+              return (
+                <button
+                  key={kw}
+                  onClick={() => setWakeKeywords?.(kw)}
+                  style={{
+                    padding:      "8px 16px",
+                    borderRadius: "var(--radius-xl)",
+                    border:       selected ? "2px solid var(--tint)" : "1.5px solid var(--sep)",
+                    background:   selected ? "var(--tint-soft)" : "var(--bg)",
+                    color:        selected ? "var(--tint)" : "var(--text-2)",
+                    fontSize:     14,
+                    fontWeight:   600,
+                    cursor:       "pointer",
+                    whiteSpace:   "nowrap",
+                    transition:   "all 0.15s ease",
+                    WebkitTapHighlightColor: "transparent",
+                  }}
+                >
+                  {kw}
+                </button>
+              );
+            })}
+          </div>
+        </Section>
+        )}
+
+        {/* ── Accessibility ── */}
+        {show("accessibility", "hand", "left", "right", "theme", "dark", "light", "appearance", ui?.sectionAccessibility ?? "accessibility") && (
+        <Section title={ui?.sectionAccessibility ?? "Accessibility"}>
+          <Row
+            Icon={theme === "dark" ? Moon : Sun}
+            iconBg={theme === "dark" ? "#5856D6" : "#F0A54E"}
+            label={ui?.rowTheme ?? "Appearance"}
+            sublabel={theme === "dark" ? (ui?.subThemeDark ?? "Dark mode — easier on the eyes") : (ui?.subThemeLight ?? "Light mode — bright and clear")}
+            action={
+              <div style={{ display: "flex", borderRadius: "var(--radius-sm)", overflow: "hidden", border: "1px solid var(--sep)" }}>
+                {["light", "dark"].map(t => (
+                  <button
+                    key={t}
+                    onClick={() => setTheme?.(t)}
+                    style={{
+                      padding: "6px 14px",
+                      border: "none",
+                      background: theme === t ? "var(--tint)" : "var(--bg)",
+                      color: theme === t ? "#fff" : "var(--text-2)",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
+                    {t === "light" ? (ui?.themeLight ?? "Light") : (ui?.themeDark ?? "Dark")}
+                  </button>
+                ))}
+              </div>
+            }
+          />
+          <Row
+            Icon={Hand}
+            iconBg="var(--tint)"
+            label={ui?.rowHandedness ?? "Handedness"}
+            sublabel={hand === "left" ? (ui?.subHandLeft ?? "Optimised for left hand") : (ui?.subHandRight ?? "Optimised for right hand")}
+            action={
+              <div style={{ display: "flex", borderRadius: "var(--radius-sm)", overflow: "hidden", border: "1px solid var(--sep)" }}>
+                {["left", "right"].map(h => (
+                  <button
+                    key={h}
+                    onClick={() => setHand?.(h)}
+                    style={{
+                      padding: "6px 14px",
+                      border: "none",
+                      background: hand === h ? "var(--tint)" : "var(--bg)",
+                      color: hand === h ? "#fff" : "var(--text-2)",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
+                    {h === "left" ? (ui?.handLeft ?? "Left") : (ui?.handRight ?? "Right")}
+                  </button>
+                ))}
+              </div>
+            }
+          />
+          <Row
+            Icon={MousePointerClick}
+            iconBg="#E8590C"
+            label={ui?.rowVocabMode ?? "Vocab tap action"}
+            sublabel={vocabMode === "compose"
+              ? (ui?.subVocabCompose ?? "Adds word to message bar")
+              : (ui?.subVocabSpeak ?? "Speaks word immediately")}
+            action={
+              <div style={{ display: "flex", borderRadius: "var(--radius-sm)", overflow: "hidden", border: "1px solid var(--sep)" }}>
+                {["speak", "compose"].map(m => (
+                  <button
+                    key={m}
+                    onClick={() => setVocabMode?.(m)}
+                    style={{
+                      padding: "6px 14px",
+                      border: "none",
+                      background: vocabMode === m ? "var(--tint)" : "var(--bg)",
+                      color: vocabMode === m ? "#fff" : "var(--text-2)",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
+                    {m === "speak" ? (ui?.vocabSpeak ?? "Speak") : (ui?.vocabCompose ?? "Compose")}
+                  </button>
+                ))}
+              </div>
+            }
+          />
+          <Row
+            Icon={Wand2}
+            iconBg="#7048E8"
+            label={ui?.rowAiCorrect ?? "AI auto-correction"}
+            sublabel={aiAutoCorrect === "on"
+              ? (ui?.subAiCorrectOn ?? "AI may rephrase your sentence")
+              : (ui?.subAiCorrectOff ?? "Your exact words are always spoken")}
+            action={
+              <div style={{ display: "flex", borderRadius: "var(--radius-sm)", overflow: "hidden", border: "1px solid var(--sep)" }}>
+                {["off", "on"].map(v => (
+                  <button
+                    key={v}
+                    onClick={() => setAiAutoCorrect?.(v)}
+                    style={{
+                      padding: "6px 14px",
+                      border: "none",
+                      background: aiAutoCorrect === v ? "var(--tint)" : "var(--bg)",
+                      color: aiAutoCorrect === v ? "#fff" : "var(--text-2)",
+                      fontSize: 13,
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      transition: "all 0.15s",
+                      WebkitTapHighlightColor: "transparent",
+                    }}
+                  >
+                    {v === "off" ? (ui?.aiCorrectOff ?? "Off") : (ui?.aiCorrectOn ?? "On")}
+                  </button>
+                ))}
+              </div>
+            }
+            border={false}
+          />
+        </Section>
+        )}
+
+        {/* ── Data & Privacy ── */}
+        {show("data", "privacy", "export", "history", "clear", "reset", ui?.sectionData ?? "data privacy") && (
+        <Section title={ui?.sectionData ?? "Data & Privacy"}>
+          <Row
+            Icon={Download}
+            iconBg="var(--tint)"
+            label={ui?.rowExportHistory ?? "Export history"}
+            sublabel={ui?.subExportHistory ?? "Download all utterances as JSON"}
+            action={<ActionButton onClick={onExport}>Export</ActionButton>}
+          />
+          <Row
+            Icon={Trash2}
+            iconBg="var(--red)"
+            label={ui?.rowClearHistory ?? "Clear history"}
+            sublabel={ui?.subClearHistory ?? "Delete all saved phrases"}
+            action={
+              <ActionButton
+                variant="destructive"
+                onClick={() => setConfirm({
+                  action: onClearHistory,
+                  title: ui?.confirmClearTitle ?? "Clear all history?",
+                  msg: ui?.confirmClearMsg ?? "This will permanently delete all your saved phrases.",
+                  label: ui?.confirmYes ?? "Delete",
+                })}
+              >
+                {ui?.clear ?? "Clear"}
+              </ActionButton>
+            }
+          />
+          <Row
+            Icon={RotateCcw}
+            iconBg="var(--orange)"
+            label={ui?.rowResetAI ?? "Reset AI memory"}
+            sublabel={ui?.subResetAI ?? "Wipes n-gram model + RAG vectors"}
+            action={
+              <ActionButton
+                variant="warning"
+                onClick={() => setConfirm({
+                  action: onResetAI,
+                  title: ui?.confirmResetTitle ?? "Reset AI memory?",
+                  msg: ui?.confirmResetMsg ?? "This wipes the n-gram model and RAG vectors.",
+                  label: ui?.confirmResetYes ?? "Reset",
+                  variant: "warning",
+                })}
+              >
+                {ui?.resetAction ?? "Reset"}
+              </ActionButton>
+            }
+            border={false}
+          />
         </Section>
         )}
 
@@ -368,9 +734,37 @@ export default memo(function ProfilePanel({
         </Section>
         )}
 
-        {/* About & Help section removed — available via Help modal in header */}
+        {/* ── About ── */}
+        {show("about", "version", "app", "info", ui?.sectionAbout ?? "about") && (
+        <Section title={ui?.sectionAbout ?? "About"}>
+          <Row
+            Icon={Info}
+            iconBg="var(--tint)"
+            label={ui?.rowAppName ?? "SpeakEasy AAC"}
+            sublabel={`v${typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev"}${
+              import.meta.env.VITE_DEMO === "true" ? " · Demo" : ""
+            }${
+              import.meta.env.DEV ? " · Development" : ""
+            }`}
+            border={false}
+          />
+        </Section>
+        )}
 
       </div>
+
+      {/* Confirm sheet for destructive actions */}
+      {confirm && (
+        <ConfirmSheet
+          title={confirm.title}
+          message={confirm.msg}
+          confirmLabel={confirm.label}
+          cancelLabel={ui?.confirmCancel ?? "Cancel"}
+          variant={confirm.variant}
+          onConfirm={() => { confirm.action(); setConfirm(null); }}
+          onCancel={() => setConfirm(null)}
+        />
+      )}
 
       {/* ── Change Password Modal ── */}
       {showPwModal && (
