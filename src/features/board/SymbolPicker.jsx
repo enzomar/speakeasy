@@ -20,6 +20,7 @@ import { SYMBOLS } from "../../data/symbols";
 import { getArasaacPictogramDescription, getArasaacPictogramUrl } from "../../data/arasaac";
 import { getSymbolLabel, getHierarchyLabel } from "../../i18n/translations";
 import { getHierarchy, getHierarchyModifierType } from "../../data/hierarchy";
+import { getContextualHierarchy } from "../../data/boards/index.js";
 import SymbolGlyph from "../../shared/ui/SymbolGlyph";
 
 // ── Shared header ─────────────────────────────────────────────────────────────
@@ -179,12 +180,13 @@ export default memo(function SymbolPicker({
   onTapContext,
   onBack,
   langCode = "en",
+  boardId,
   customSymbols = [],
   hiddenSymbols = [],
   displayMode = "both",
   ui,
 }) {
-  const hierarchy = useMemo(() => getHierarchy(category.id), [category.id]);
+  const hierarchy = useMemo(() => getContextualHierarchy(category.id, boardId), [category.id, boardId]);
   const [activeL2, setActiveL2] = useState(null); // currently selected L2 item
   // Brief lock after an L3 tap to prevent accidental pass-through double-taps
   const l3LockRef = useRef(false);

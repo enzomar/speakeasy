@@ -7,9 +7,15 @@
  *  • Minimal cognitive load — 9 clearly-distinct categories
  *  • Flat, rounded cards with soft category-tinted backgrounds
  *  • Works on phone and tablet via CSS grid scaling
+ *
+ * Props:
+ *   onSelect      — (category) => void
+ *   ui            — UI string translations
+ *   categoryIds   — optional ordered array of category ids to show
+ *                    (if omitted, shows all HOME_CATEGORIES — backwards compatible)
  */
 
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { getArasaacPictogramDescription, getArasaacPictogramUrl } from "../../data/arasaac";
 import SymbolGlyph from "../../shared/ui/SymbolGlyph";
 
@@ -35,7 +41,18 @@ const CAT_LABEL_KEY = {
   quick: "catQuick", favorites: "catFavorites",
 };
 
-export default memo(function CategoryGrid({ onSelect, ui }) {
+// Fast lookup by id
+const HOME_CATEGORY_MAP = Object.fromEntries(HOME_CATEGORIES.map(c => [c.id, c]));
+
+export default memo(function CategoryGrid({ onSelect, ui, categoryIds }) {
+  // If categoryIds is provided, filter + reorder; otherwise show all
+  const visibleCategories = useMemo(() => {
+    if (!categoryIds || !categoryIds.length) return HOME_CATEGORIES;
+    return categoryIds
+      .map(id => HOME_CATEGORY_MAP[id])
+      .filter(Boolean);
+  }, [categoryIds]);
+
   return (
     <div
       role="grid"
@@ -50,7 +67,7 @@ export default memo(function CategoryGrid({ onSelect, ui }) {
         overflow: "hidden",
       }}
     >
-      {HOME_CATEGORIES.map(cat => (
+      {visibleCategories.map(cat => (
         <button
           key={cat.id}
           role="gridcell"

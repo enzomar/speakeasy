@@ -44,6 +44,8 @@ import Onboarding, { ONBOARDING_KEY } from "../features/onboarding/Onboarding";
 import SmartKeyboard     from "../features/board/SmartKeyboard";
 import SymbolsPanel from "../features/symbols/SymbolsPanel";
 import FavoritesSheet    from "../features/board/FavoritesSheet";
+import { useBoard }      from "../features/board/useBoardManager";
+import BoardSelector     from "../features/board/BoardSelector";
 
 // Auth + Subscription
 import { useAuth }           from "../features/auth/useAuth";
@@ -227,6 +229,7 @@ export default function App() {
   // ── UI state ─────────────────────────────────────────────────────────────
   const [words,          setWords]          = useState([]);
   const [tab,            setTab]            = useState("board");   // "board"|"symbols"|"history"|"profile"
+  const { boards, currentBoard, setBoardId } = useBoard();
   const [activeCategory, setActiveCategory] = useState(null);       // null = category grid, object = symbol picker
   const [tapContext, setTapContext] = useState(null);                // { l1Label, l2Label, l3Label, l3Type } — hierarchy path
   const [emotion, setEmotion] = useState("neutral");               // null = auto-detect, or one of EMOTIONS; default neutral
@@ -1018,6 +1021,7 @@ export default function App() {
               ) : (
                 <SymbolPicker
                   category={activeCategory}
+                  boardId={currentBoard.id}
                   onTap={handleTap}
                   onTapContext={handleTapContext}
                   onBack={handleCategoryBack}
@@ -1028,7 +1032,10 @@ export default function App() {
                 />
               )
             ) : (
-                <CategoryGrid onSelect={handleCategorySelect} ui={ui} />
+              <>
+                <BoardSelector boards={boards} currentBoard={currentBoard} onSelect={setBoardId} ui={ui} />
+                <CategoryGrid onSelect={handleCategorySelect} ui={ui} categoryIds={currentBoard.categories} />
+              </>
             )}
               </>
             )}
