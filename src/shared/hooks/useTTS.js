@@ -107,15 +107,18 @@ export function useTTS() {
     }
 
     if (!chosen) {
-      // Score voices: prefer premium/natural/enhanced voices for the right language
+      // Score voices: prefer Google, then premium/natural/enhanced voices for the right language
       const PREMIUM_KEYWORDS = ["premium", "enhanced", "natural", "neural", "wavenet"];
       const candidates = voices.filter(v => v.lang === lang || v.lang.startsWith(langPrefix));
 
       if (candidates.length) {
-        // Sort: premium first, then exact lang match, then local service
+        // Sort: Google first, then premium, then exact lang match, then local service
         candidates.sort((a, b) => {
           const aName = a.name.toLowerCase();
           const bName = b.name.toLowerCase();
+          const aGoogle = aName.includes("google") ? 1 : 0;
+          const bGoogle = bName.includes("google") ? 1 : 0;
+          if (bGoogle !== aGoogle) return bGoogle - aGoogle;
           const aPremium = PREMIUM_KEYWORDS.some(k => aName.includes(k)) ? 1 : 0;
           const bPremium = PREMIUM_KEYWORDS.some(k => bName.includes(k)) ? 1 : 0;
           if (bPremium !== aPremium) return bPremium - aPremium;

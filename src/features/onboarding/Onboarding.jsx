@@ -415,12 +415,12 @@ function speakDemo(text, ttsLang, onStart, onEnd) {
   const utter = new SpeechSynthesisUtterance(text);
   utter.lang  = ttsLang;
 
-  // Pick best available voice for the target language
+  // Pick best available voice for the target language (prefer Google)
   const voices = synth.getVoices();
-  const preferred = voices.find(v =>
-    v.lang.startsWith(ttsLang.slice(0, 2)) &&
-    /premium|enhanced|natural|neural/i.test(v.name)
-  ) ?? voices.find(v => v.lang.startsWith(ttsLang.slice(0, 2)));
+  const langVoices = voices.filter(v => v.lang.startsWith(ttsLang.slice(0, 2)));
+  const preferred = langVoices.find(v => /google/i.test(v.name))
+    ?? langVoices.find(v => /premium|enhanced|natural|neural/i.test(v.name))
+    ?? langVoices[0];
   if (preferred) utter.voice = preferred;
 
   utter.onstart = () => onStart();
