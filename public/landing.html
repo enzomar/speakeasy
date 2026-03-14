@@ -6,19 +6,43 @@
     <link rel="apple-touch-icon" href="./se.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f58a5b" />
-    <!-- DEMO: pricing/trial commented out
     <meta
       name="description"
       id="meta-description"
       data-i18n-attr="content:metaDescription"
-      content="SpeakEasy is a calm AAC experience with symbols, text-to-speech, and on-device AI. Start with a full 14-day free trial, then continue for the special offer price of €YY,YY/month instead of €XX,XX/month."
+      content="SpeakEasy is a calm AAC app for people with speech difficulties. Symbols, text-to-speech, and on-device AI — private by default. Try the free preview now."
     />
-    -->
-    <meta
-      name="description"
-      id="meta-description"
-      content="SpeakEasy is a calm AAC experience with symbols, text-to-speech, and on-device AI."
-    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SpeakEasy — Calm, private AAC for people who need a voice" />
+    <meta property="og:description" content="Symbols, text-to-speech, and on-device AI. Designed for ALS, autism, aphasia, stroke, cerebral palsy, and anyone who needs an alternative voice. Free preview available now." />
+    <meta property="og:image" content="./se.png" />
+    <meta property="og:url" content="https://speakeasy-aac.com" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="SpeakEasy — Calm, private AAC" />
+    <meta name="twitter:description" content="Symbols, text-to-speech, and on-device AI for people with speech difficulties. Free preview." />
+    <meta name="twitter:image" content="./se.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SpeakEasy",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "description": "A calm AAC app for people with speech and communication difficulties. Symbols, text-to-speech, and on-device AI — private by default.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Free preview — full launch coming soon"
+      }
+    }
+    </script>
     <script>
       (() => {
         const STORAGE_KEY = "speakeasy_landing_lang_v1";
@@ -105,8 +129,7 @@
             </select>
           </div>
 
-          <!-- DEMO: trial CTA changed -->
-          <a class="button button--primary header-cta" href="/app" data-i18n="startFreeTrial">Try SpeakEasy</a>
+          <a class="button button--primary header-cta" href="/app" data-i18n="startFreeTrial">Try the preview</a>
         </div>
       </div>
     </header>
@@ -115,42 +138,30 @@
       <section class="hero section">
         <div class="container hero__inner">
           <div class="hero-copy">
-            <span class="eyebrow" data-i18n="heroEyebrow">AAC that feels calm, modern, and private</span>
-            <h1 data-i18n="heroTitle">A friendlier way to communicate every day.</h1>
+            <span class="eyebrow" data-i18n="heroEyebrow">AAC for people with speech and communication difficulties</span>
+            <h1 data-i18n="heroTitle">A calmer way to communicate for people who need an alternative voice.</h1>
             <p class="hero-text" data-i18n="heroText">
-              SpeakEasy helps people build messages with symbols, typing, text-to-speech,
-              and on-device AI. It works in the browser or as a native iOS and Android app.
-              <!-- DEMO: pricing/trial commented out
-              Create your account, enjoy a full 14-day free trial, then continue for the special offer price
-              of €YY,YY/month instead of €XX,XX/month.
-              -->
+              SpeakEasy is designed for people living with ALS, autism, aphasia, stroke, cerebral palsy,
+              or any speech and communication challenge. Build messages with symbols, typing,
+              text-to-speech, and on-device AI. Works in the browser or as a native iOS and Android app.
             </p>
 
-            <!-- DEMO: offer banner commented out
-            <div class="offer-banner" aria-label="Special offer pricing" data-i18n-attr="aria-label:offerBannerAria">
-              <span class="offer-badge" data-i18n="offerBadge">Special offer</span>
+            <div class="offer-banner" aria-label="Early access" data-i18n-attr="aria-label:offerBannerAria">
+              <span class="offer-badge" data-i18n="offerBadge">Early access</span>
               <div class="offer-pricing">
-                <span class="offer-trial" data-i18n="offerTrial">Enjoy every feature free for 14 full days.</span>
-                <div class="offer-price-row">
-                  <span class="offer-was" data-i18n="offerWas">€XX,XX/month</span>
-                  <span class="offer-now" data-i18n="offerNow">€YY,YY/month</span>
-                </div>
-                <span class="offer-note" data-i18n="offerNote">Save €5 every month after your free trial.</span>
+                <span class="offer-trial" data-i18n="offerTrial">The app is in active development. Try the free preview today and help shape the final product.</span>
               </div>
             </div>
-            -->
 
             <div class="hero-actions">
-              <a class="button button--primary" href="/app" data-i18n="heroPrimaryCta">Try SpeakEasy</a>
+              <a class="button button--primary" href="/app" data-i18n="heroPrimaryCta">Try the free preview</a>
               <a class="button button--ghost" href="#how-it-works" data-i18n="seeHowItWorks">See how it works</a>
             </div>
 
             <ul class="hero-points">
               <li data-i18n="heroPoint1">100+ built-in symbols and quick phrases for everyday needs</li>
               <li data-i18n="heroPoint2">10 supported languages with separate UI, typing, voice, and listening settings</li>
-              <!-- DEMO: pricing commented out
-              <li data-i18n="heroPoint3">14 days free, then a special offer of €YY,YY/month instead of €XX,XX/month</li>
-              -->
+              <li data-i18n="heroPoint3">Free preview available now — no account required</li>
             </ul>
           </div>
 
@@ -396,10 +407,6 @@
               <p data-i18n="privacyText">
                 SpeakEasy is built so the important parts stay close to the person using it.
                 Text-to-speech settings, saved phrases, n-gram learning, and on-device AI stay local.
-                <!-- DEMO: pricing/trial commented out
-                while account access handles your 14-day free trial and a special offer of
-                €YY,YY/month instead of €XX,XX/month.
-                -->
               </p>
             </div>
 
@@ -416,12 +423,10 @@
                 <strong data-i18n="privacy3Title">On-device AI</strong>
                 <span data-i18n="privacy3Text">Contextual support is designed to run locally instead of sending every request away.</span>
               </li>
-              <!-- DEMO: pricing commented out
               <li>
-                <strong data-i18n="privacy4Title">Special offer access</strong>
-                <span data-i18n="privacy4Text">Create an account, enjoy 14 days free, then continue at €YY,YY/month instead of €XX,XX/month.</span>
+                <strong data-i18n="privacy4Title">No account needed</strong>
+                <span data-i18n="privacy4Text">Try the preview without signing up. Your data stays on your device.</span>
               </li>
-              -->
             </ul>
           </div>
         </div>
@@ -432,18 +437,15 @@
           <div class="cta-card">
             <div>
               <span class="eyebrow" data-i18n="ctaEyebrow">Ready to try it?</span>
-              <!-- DEMO: pricing commented out
-              <h2 data-i18n="ctaTitle">Start free today, then keep SpeakEasy for just €YY,YY/month.</h2>
+              <h2 data-i18n="ctaTitle">Try the free preview now.</h2>
               <p data-i18n="ctaText">
-                Create your account, enjoy 14 days free, then continue with the special offer price of
-                €YY,YY/month, down from €XX,XX/month.
+                SpeakEasy is in active development. The preview is free, no account required.
+                Try it in your browser and help shape the product before launch.
               </p>
-              -->
-              <h2 data-i18n="ctaTitle">Start using SpeakEasy today.</h2>
             </div>
 
             <div class="cta-actions">
-              <a class="button button--primary" href="/app" data-i18n="startFreeTrial">Try SpeakEasy</a>
+              <a class="button button--primary" href="/app" data-i18n="startFreeTrial">Try the preview</a>
               <a class="button button--ghost" href="#top" data-i18n="backToTop">Back to top</a>
             </div>
           </div>
@@ -462,7 +464,7 @@
           <a href="#how-it-works" data-i18n="navHowItWorks">How it works</a>
           <a href="#features" data-i18n="navFeatures">Features</a>
           <a href="#privacy" data-i18n="navPrivacy">Privacy</a>
-          <a href="/app" data-i18n="startFreeTrial">Try SpeakEasy</a>
+          <a href="/app" data-i18n="startFreeTrial">Try the preview</a>
         </nav>
         <nav class="footer-nav" aria-label="Legal" style="margin-top:2px">
           <a href="./privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
