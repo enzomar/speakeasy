@@ -123,17 +123,20 @@ function MessageBar({
 
   const focusInput = useCallback(() => inputRef.current?.focus(), []);
   const hasSomething = wordTexts.length > 0 || draft.trim();
-  const showRepeat   = !hasSomething && !speaking && !!lastSpoken;
+  const repeatEnabled = !hasSomething && !speaking && !!lastSpoken;
 
   // ── Long-press state for protected Clear button ───────────────────────
   const clearTimerRef = useRef(null);
-  const [clearHint, setClearHint]   = useState(false);  // brief "hold" hint
-  const [clearActive, setClearActive] = useState(false); // long-press achieved
+  const [clearHint, setClearHint]     = useState(false);  // brief "hold" hint
+  const [clearActive, setClearActive]   = useState(false); // long-press achieved
+  const [clearPressing, setClearPressing] = useState(false); // fill animation active
 
   const handleClearDown = useCallback(() => {
     setClearActive(false);
+    setClearPressing(true);
     clearTimerRef.current = setTimeout(() => {
       setClearActive(true);
+      setClearPressing(false);
       setDraft(""); onClear();
       // haptic feedback if available
       try { navigator.vibrate?.(30); } catch {}
@@ -145,6 +148,7 @@ function MessageBar({
       clearTimeout(clearTimerRef.current);
       clearTimerRef.current = null;
     }
+    setClearPressing(false);
     if (!clearActive && hasSomething) {
       // Short tap — show brief "hold to clear" hint
       setClearHint(true);
@@ -168,6 +172,9 @@ function MessageBar({
       background:   "var(--surface)",
       borderBottom: "0.5px solid var(--sep)",
       padding:      "8px 12px 8px",
+      flexShrink:   0,          // never shrink — the grid absorbs any excess
+      minHeight:    "136px",    // chips-row ~42 + repeat-pill ~38 + action-row ~46 + gaps+padding
+      boxSizing:    "border-box",
     }}>
       {/* ── Chip row + inline input ── */}
       <div
@@ -182,7 +189,8 @@ function MessageBar({
           flexWrap:   "nowrap",
           gap:        6,
           overflowX:  "auto",
-          minHeight:  42,
+          overflowY:  "hidden",
+          height:     42,
           alignItems: "center",
           padding:    "4px 10px",
           scrollbarWidth: "none",
@@ -231,34 +239,36 @@ function MessageBar({
         />
       </div>
 
-      {/* ── Repeat-last pill (visible when bar is empty & there's history) ── */}
-      {showRepeat && (
-        <button
-          aria-label="Repeat last spoken sentence"
-          onClick={onRepeat}
-          style={{
-            display: "flex", alignItems: "center", gap: 6,
-            width: "100%",
-            padding: "7px 14px",
-            marginBottom: 6,
-            borderRadius: "var(--radius-md)",
-            border: "0.5px solid var(--tint)",
-            background: "var(--tint-soft)",
-            color: "var(--tint)",
-            fontSize: 14, fontWeight: 600,
-            cursor: "pointer",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-            transition: "all 0.15s",
-          }}
-        >
-          <RotateCcw size={15} strokeWidth={2.2} />
-          <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
-            {ui?.repeatLast ?? "Repeat"}: {lastSpoken}
-          </span>
-        </button>
-      )}
+      {/* ── Repeat-last pill (always visible; grayed out when disabled) ── */}
+      <button
+        aria-label="Repeat last spoken sentence"
+        onClick={repeatEnabled ? onRepeat : undefined}
+        disabled={!repeatEnabled}
+        style={{
+          display: "flex", alignItems: "center", gap: 6,
+          width: "100%",
+          padding: "7px 14px",
+          marginBottom: 6,
+          borderRadius: "var(--radius-md)",
+          border: repeatEnabled ? "0.5px solid var(--tint)" : "0.5px solid var(--sep)",
+          background: repeatEnabled ? "var(--tint-soft)" : "var(--bg)",
+          color: repeatEnabled ? "var(--tint)" : "var(--text-secondary, #999)",
+          fontSize: 14, fontWeight: 600,
+          cursor: repeatEnabled ? "pointer" : "default",
+          opacity: repeatEnabled ? 1 : 0.45,
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          transition: "all 0.15s",
+        }}
+      >
+        <RotateCcw size={15} strokeWidth={2.2} />
+        <span style={{ overflow: "hidden", textOverflow: "ellipsis" }}>
+          {lastSpoken
+            ? `${ui?.repeatLast ?? "Repeat"}: ${lastSpoken}`
+            : (ui?.repeatLast ?? "Repeat")}
+        </span>
+      </button>
 
       {/* ── Action buttons ── */}
       {/* Layout: [Delete] [Clear (hold)] [★ Fav] ──── [SPEAK]               */}
@@ -287,10 +297,27 @@ function MessageBar({
           style={{
             ...iconBtn(!hasSomething),
             position: "relative",
+            overflow: "hidden",
             animation: clearHint ? "shake 0.3s ease" : "none",
           }}
         >
           <X size={18} strokeWidth={2} />
+          {/* Long-press fill indicator */}
+          {clearPressing && (
+            <span
+              aria-hidden="true"
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "var(--red, #FF3B30)",
+                opacity: 0.22,
+                borderRadius: "inherit",
+                transformOrigin: "left center",
+                animation: "clearFill 0.5s linear forwards",
+                pointerEvents: "none",
+              }}
+            />
+          )}
           {clearHint && (
             <span style={{
               position: "absolute", top: -28, left: "50%", transform: "translateX(-50%)",

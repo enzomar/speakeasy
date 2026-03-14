@@ -1,0 +1,4338 @@
+========================================================================
+  SpeakEasy — Grid Combination Report: 💬  TALK
+========================================================================
+  Category : talk  (mapTo=social)
+  Language : en
+  Gender   : male
+  Top N    : 8 heuristic sentences per cell
+  Engine   : unavailable (heuristic only)
+  Generated: 2026-03-14T09:35:09.977Z
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  L1 CATEGORY: 💬  TALK  (talk)
+  14 items, color=#0C8599
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  L2: 👋  hello  (s_hello)
+      pos=phrase  intent=social  emotion=neutral
+       1. hello
+       2. hello!
+       3. not hello
+       4. hello please
+       5. hello?
+       6. Yes, hello
+       7. Not hello
+       8. Maybe hello
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=neutral
+         1. hello mom
+         2. hello mom!
+         3. not hello
+         4. hello please
+         5. hello mom?
+         6. hello mom please
+         7. Yes, hello mom
+         8. Not hello mom
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=neutral
+         1. hello dad
+         2. hello dad!
+         3. not hello
+         4. hello please
+         5. hello dad?
+         6. hello dad please
+         7. Yes, hello dad
+         8. Not hello dad
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=neutral
+         1. hello friend
+         2. hello friend!
+         3. not hello
+         4. hello please
+         5. hello friend?
+         6. hello friend please
+         7. Yes, hello friend
+         8. Not hello friend
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=neutral
+         1. hello teacher
+         2. hello teacher!
+         3. not hello
+         4. hello please
+         5. hello teacher?
+         6. hello teacher please
+         7. Yes, hello teacher
+         8. Not hello teacher
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. hello doctor!
+         2. hello doctor
+         3. not hello
+         4. hello please
+         5. but hello?
+         6. hello now!
+         7. Yes, hello now!
+         8. hello doctor?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=neutral
+         1. hello nurse
+         2. hello nurse!
+         3. not hello
+         4. hello please
+         5. hello nurse?
+         6. hello nurse please
+         7. Yes, hello nurse
+         8. Not hello nurse
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=neutral
+         1. hello therapist
+         2. hello therapist!
+         3. not hello
+         4. hello please
+         5. hello therapist?
+         6. hello therapist please
+         7. Yes, hello therapist
+         8. Not hello therapist
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=neutral
+         1. hello caregiver
+         2. hello caregiver!
+         3. not hello
+         4. hello please
+         5. hello caregiver?
+         6. hello caregiver please
+         7. Yes, hello caregiver
+         8. Not hello caregiver
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=neutral
+         1. hello brother
+         2. hello brother!
+         3. not hello
+         4. hello please
+         5. hello brother?
+         6. hello brother please
+         7. Yes, hello brother
+         8. Not hello brother
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=neutral
+         1. hello sister
+         2. hello sister!
+         3. not hello
+         4. hello please
+         5. hello sister?
+         6. hello sister please
+         7. Yes, hello sister
+         8. Not hello sister
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=neutral
+         1. hello everyone
+         2. hello everyone!
+         3. not hello
+         4. hello please
+         5. hello everyone?
+         6. hello everyone please
+         7. Yes, hello everyone
+         8. Not hello everyone
+
+  L2: 🫡  goodbye  (s_bye)
+      pos=phrase  intent=social  emotion=neutral
+       1. goodbye
+       2. goodbye!
+       3. not goodbye
+       4. goodbye please
+       5. goodbye?
+       6. Yes, goodbye
+       7. Not goodbye
+       8. Maybe goodbye
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=neutral
+         1. goodbye mom
+         2. goodbye mom!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye mom?
+         6. goodbye mom please
+         7. Yes, goodbye mom
+         8. Not goodbye mom
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=neutral
+         1. goodbye dad
+         2. goodbye dad!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye dad?
+         6. goodbye dad please
+         7. Yes, goodbye dad
+         8. Not goodbye dad
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=neutral
+         1. goodbye friend
+         2. goodbye friend!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye friend?
+         6. goodbye friend please
+         7. Yes, goodbye friend
+         8. Not goodbye friend
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=neutral
+         1. goodbye teacher
+         2. goodbye teacher!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye teacher?
+         6. goodbye teacher please
+         7. Yes, goodbye teacher
+         8. Not goodbye teacher
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. goodbye doctor!
+         2. goodbye doctor
+         3. not goodbye
+         4. goodbye please
+         5. but goodbye?
+         6. goodbye now!
+         7. Yes, goodbye now!
+         8. goodbye doctor?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=neutral
+         1. goodbye nurse
+         2. goodbye nurse!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye nurse?
+         6. goodbye nurse please
+         7. Yes, goodbye nurse
+         8. Not goodbye nurse
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=neutral
+         1. goodbye therapist
+         2. goodbye therapist!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye therapist?
+         6. goodbye therapist please
+         7. Yes, goodbye therapist
+         8. Not goodbye therapist
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=neutral
+         1. goodbye caregiver
+         2. goodbye caregiver!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye caregiver?
+         6. goodbye caregiver please
+         7. Yes, goodbye caregiver
+         8. Not goodbye caregiver
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=neutral
+         1. goodbye brother
+         2. goodbye brother!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye brother?
+         6. goodbye brother please
+         7. Yes, goodbye brother
+         8. Not goodbye brother
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=neutral
+         1. goodbye sister
+         2. goodbye sister!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye sister?
+         6. goodbye sister please
+         7. Yes, goodbye sister
+         8. Not goodbye sister
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=neutral
+         1. goodbye everyone
+         2. goodbye everyone!
+         3. not goodbye
+         4. goodbye please
+         5. goodbye everyone?
+         6. goodbye everyone please
+         7. Yes, goodbye everyone
+         8. Not goodbye everyone
+
+  L2: ✅  yes  (s_yes)
+      pos=phrase  intent=social  emotion=positive
+       1. yes!
+       2. yes
+       3. not yes
+       4. yes please
+       5. yes ?!
+       6. yes, thanks!
+       7. Yes, yes!
+       8. yes?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. not yes
+         2. yes
+         3. yes!
+         4. yes please
+         5. Not yes
+         6. yes?
+         7. Not yes please
+         8. No, not yes
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. yes!
+         2. yes
+         3. not yes
+         4. yes please
+         5. yes ?!
+         6. yes, thanks!
+         7. Yes, yes!
+         8. yes?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. yes please
+         2. yes
+         3. yes!
+         4. not yes
+         5. Maybe yes
+         6. Maybe yes?
+         7. If possible, yes
+         8. Maybe, yes
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. yes!
+         2. yes
+         3. not yes
+         4. yes please
+         5. but yes?
+         6. yes now!
+         7. Yes, yes now!
+         8. yes?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. yes!
+         2. yes
+         3. not yes
+         4. yes please
+         5. yes ?!
+         6. yes, thanks!
+         7. Yes, yes!
+         8. yes?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. not yes
+         2. yes
+         3. yes!
+         4. yes please
+         5. Not yes
+         6. yes?
+         7. Not yes please
+         8. No, not yes
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=positive
+         1. yes!
+         2. yes
+         3. not yes
+         4. yes please
+         5. yes ?!
+         6. yes, thanks!
+         7. Yes, yes!
+         8. yes?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. yes please
+         2. yes
+         3. yes!
+         4. not yes
+         5. Maybe yes
+         6. Maybe yes?
+         7. If possible, yes
+         8. Maybe, yes
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=positive
+         1. yes!
+         2. yes
+         3. not yes
+         4. yes please
+         5. yes ?!
+         6. yes, thanks!
+         7. Yes, yes!
+         8. yes?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=positive
+         1. yes!
+         2. yes
+         3. not yes
+         4. yes please
+         5. yes ?!
+         6. yes, thanks!
+         7. Yes, yes!
+         8. yes?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. yes now!
+         2. yes now
+         3. not yes
+         4. yes please
+         5. but yes?
+         6. Yes, yes now!
+         7. yes now?
+         8. yes now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=positive
+         1. yes soon!
+         2. yes soon
+         3. not yes
+         4. yes please
+         5. yes soon?!
+         6. yes, thanks soon!
+         7. Yes, yes!
+         8. yes soon?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=positive
+         1. yes later!
+         2. yes later
+         3. not yes
+         4. yes please
+         5. yes later?!
+         6. yes, thanks later!
+         7. Yes, yes!
+         8. yes later?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=positive
+         1. yes today!
+         2. yes today
+         3. not yes
+         4. yes please
+         5. yes today?!
+         6. yes, thanks today!
+         7. Yes, yes!
+         8. yes today?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=positive
+         1. yes tomorrow!
+         2. yes tomorrow
+         3. not yes
+         4. yes please
+         5. yes tomorrow?!
+         6. yes, thanks tomorrow!
+         7. Yes, yes!
+         8. yes tomorrow?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=positive
+         1. yes yesterday!
+         2. yes yesterday
+         3. not yes
+         4. yes please
+         5. yes yesterday?!
+         6. yes, thanks yesterday!
+         7. Yes, yes!
+         8. yes yesterday?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=positive
+         1. yes in the morning!
+         2. yes in the morning
+         3. not yes
+         4. yes please
+         5. yes in the morning?!
+         6. yes, thanks in the morning!
+         7. Yes, yes!
+         8. yes in the morning?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=positive
+         1. yes in the afternoon!
+         2. yes in the afternoon
+         3. not yes
+         4. yes please
+         5. yes in the afternoon?!
+         6. yes, thanks in the afternoon!
+         7. Yes, yes!
+         8. yes in the afternoon?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=positive
+         1. yes at night!
+         2. yes at night
+         3. not yes
+         4. yes please
+         5. yes at night?!
+         6. yes, thanks at night!
+         7. Yes, yes!
+         8. yes at night?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=positive
+         1. yes always!
+         2. yes always
+         3. not yes
+         4. yes please
+         5. yes always?!
+         6. yes, thanks always!
+         7. Yes, yes!
+         8. yes always?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=positive
+         1. yes every day!
+         2. yes every day
+         3. not yes
+         4. yes please
+         5. yes every day?!
+         6. yes, thanks every day!
+         7. Yes, yes!
+         8. yes every day?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=positive
+         1. yes in a minute!
+         2. yes in a minute
+         3. not yes
+         4. yes please
+         5. yes in a minute?!
+         6. yes, thanks in a minute!
+         7. Yes, yes!
+         8. yes in a minute?
+
+  L2: ❌  no  (s_no)
+      pos=phrase  intent=social  emotion=negative
+       1. no
+       2. no!
+       3. no please
+       4. no?
+       5. Yes, no
+       6. Maybe no
+       7. no ?!
+       8. but no?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. no
+         2. no!
+         3. no please
+         4. no?
+         5. Yes, no
+         6. Maybe no
+         7. no ?!
+         8. but no?
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. no!
+         2. no
+         3. not no
+         4. no please
+         5. no ?!
+         6. no, thanks!
+         7. Yes, no!
+         8. no?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. no please
+         2. no
+         3. no!
+         4. not no
+         5. Maybe no
+         6. Maybe no?
+         7. If possible, no
+         8. Maybe, no
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. no!
+         2. no
+         3. not no
+         4. no please
+         5. but no?
+         6. no now!
+         7. Yes, no now!
+         8. no?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. no!
+         2. no
+         3. not no
+         4. no please
+         5. no ?!
+         6. no, thanks!
+         7. Yes, no!
+         8. no?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. no
+         2. no!
+         3. no please
+         4. no?
+         5. Yes, no
+         6. Maybe no
+         7. no ?!
+         8. but no?
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=negative
+         1. no
+         2. no!
+         3. no please
+         4. no?
+         5. Yes, no
+         6. Maybe no
+         7. no ?!
+         8. but no?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. no please
+         2. no
+         3. no!
+         4. not no
+         5. Maybe no
+         6. Maybe no?
+         7. If possible, no
+         8. Maybe, no
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=negative
+         1. no
+         2. no!
+         3. no please
+         4. no?
+         5. Yes, no
+         6. Maybe no
+         7. no ?!
+         8. but no?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=negative
+         1. no
+         2. no!
+         3. no please
+         4. no?
+         5. Yes, no
+         6. Maybe no
+         7. no ?!
+         8. but no?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. no now!
+         2. no now
+         3. not no
+         4. no please
+         5. but no?
+         6. Yes, no now!
+         7. no now?
+         8. no now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=negative
+         1. no soon
+         2. no soon!
+         3. no please
+         4. no soon?
+         5. no soon please
+         6. Yes, no soon
+         7. Maybe no
+         8. no soon?!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=negative
+         1. no later
+         2. no later!
+         3. no please
+         4. no later?
+         5. no later please
+         6. Yes, no later
+         7. Maybe no
+         8. no later?!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=negative
+         1. no today
+         2. no today!
+         3. no please
+         4. no today?
+         5. no today please
+         6. Yes, no today
+         7. Maybe no
+         8. no today?!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=negative
+         1. no tomorrow
+         2. no tomorrow!
+         3. no please
+         4. no tomorrow?
+         5. no tomorrow please
+         6. Yes, no tomorrow
+         7. Maybe no
+         8. no tomorrow?!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=negative
+         1. no yesterday
+         2. no yesterday!
+         3. no please
+         4. no yesterday?
+         5. no yesterday please
+         6. Yes, no yesterday
+         7. Maybe no
+         8. no yesterday?!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=negative
+         1. no in the morning
+         2. no in the morning!
+         3. no please
+         4. no in the morning?
+         5. no in the morning please
+         6. Yes, no in the morning
+         7. Maybe no
+         8. no in the morning?!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=negative
+         1. no in the afternoon
+         2. no in the afternoon!
+         3. no please
+         4. no in the afternoon?
+         5. no in the afternoon please
+         6. Yes, no in the afternoon
+         7. Maybe no
+         8. no in the afternoon?!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=negative
+         1. no at night
+         2. no at night!
+         3. no please
+         4. no at night?
+         5. no at night please
+         6. Yes, no at night
+         7. Maybe no
+         8. no at night?!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=negative
+         1. no always
+         2. no always!
+         3. no please
+         4. no always?
+         5. no always please
+         6. Yes, no always
+         7. Maybe no
+         8. no always?!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=negative
+         1. no every day
+         2. no every day!
+         3. no please
+         4. no every day?
+         5. no every day please
+         6. Yes, no every day
+         7. Maybe no
+         8. no every day?!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=negative
+         1. no in a minute
+         2. no in a minute!
+         3. no please
+         4. no in a minute?
+         5. no in a minute please
+         6. Yes, no in a minute
+         7. Maybe no
+         8. no in a minute?!
+
+  L2: 🙏  please  (s_please)
+      pos=phrase  intent=social  emotion=urgent
+       1. please!
+       2. please
+       3. not please
+       4. please please
+       5. but please?
+       6. please now!
+       7. Yes, please now!
+       8. please?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=social  emotion=urgent
+         1. food please
+         2. food please!
+         3. No food
+         4. food now please!
+         5. Maybe food
+
+    L3: 💧  water  (o_water)  type=object
+        intent=social  emotion=urgent
+         1. water please
+         2. water please!
+         3. No water
+         4. water now please!
+         5. Maybe water
+
+    L3: 📖  book  (o_book)  type=object
+        intent=social  emotion=urgent
+         1. book please
+         2. book please!
+         3. No book
+         4. book now please!
+         5. Maybe book
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=social  emotion=urgent
+         1. phone please
+         2. phone please!
+         3. No phone
+         4. phone now please!
+         5. Maybe phone
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=social  emotion=urgent
+         1. toy please
+         2. toy please!
+         3. No toy
+         4. toy now please!
+         5. Maybe toy
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=social  emotion=urgent
+         1. TV please
+         2. TV please!
+         3. No TV
+         4. TV now please!
+         5. Maybe TV
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=social  emotion=urgent
+         1. music please
+         2. music please!
+         3. No music
+         4. music now please!
+         5. Maybe music
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=social  emotion=urgent
+         1. game please
+         2. game please!
+         3. No game
+         4. game now please!
+         5. Maybe game
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=social  emotion=urgent
+         1. picture please
+         2. picture please!
+         3. No picture
+         4. picture now please!
+         5. Maybe picture
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=social  emotion=urgent
+         1. homework please
+         2. homework please!
+         3. No homework
+         4. homework now please!
+         5. Maybe homework
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=social  emotion=urgent
+         1. door please
+         2. door please!
+         3. No door
+         4. door now please!
+         5. Maybe door
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=social  emotion=urgent
+         1. window please
+         2. window please!
+         3. No window
+         4. window now please!
+         5. Maybe window
+
+    L3: 💡  light  (o_light)  type=object
+        intent=social  emotion=urgent
+         1. light please
+         2. light please!
+         3. No light
+         4. light now please!
+         5. Maybe light
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=social  emotion=urgent
+         1. bag please
+         2. bag please!
+         3. No bag
+         4. bag now please!
+         5. Maybe bag
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=social  emotion=urgent
+         1. clothes please
+         2. clothes please!
+         3. No clothes
+         4. clothes now please!
+         5. Maybe clothes
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=social  emotion=urgent
+         1. blanket please
+         2. blanket please!
+         3. No blanket
+         4. blanket now please!
+         5. Maybe blanket
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=social  emotion=urgent
+         1. ball please
+         2. ball please!
+         3. No ball
+         4. ball now please!
+         5. Maybe ball
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=social  emotion=urgent
+         1. medicine please
+         2. medicine please!
+         3. No medicine
+         4. medicine now please!
+         5. Maybe medicine
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=urgent
+         1. mom please
+         2. mom please!
+         3. No mom
+         4. mom now please!
+         5. Maybe mom
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=urgent
+         1. dad please
+         2. dad please!
+         3. No dad
+         4. dad now please!
+         5. Maybe dad
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=urgent
+         1. friend please
+         2. friend please!
+         3. No friend
+         4. friend now please!
+         5. Maybe friend
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=urgent
+         1. teacher please
+         2. teacher please!
+         3. No teacher
+         4. teacher now please!
+         5. Maybe teacher
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. doctor please
+         2. doctor please!
+         3. No doctor
+         4. doctor now please!
+         5. Maybe doctor
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=urgent
+         1. nurse please
+         2. nurse please!
+         3. No nurse
+         4. nurse now please!
+         5. Maybe nurse
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=urgent
+         1. therapist please
+         2. therapist please!
+         3. No therapist
+         4. therapist now please!
+         5. Maybe therapist
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=urgent
+         1. caregiver please
+         2. caregiver please!
+         3. No caregiver
+         4. caregiver now please!
+         5. Maybe caregiver
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=urgent
+         1. brother please
+         2. brother please!
+         3. No brother
+         4. brother now please!
+         5. Maybe brother
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=urgent
+         1. sister please
+         2. sister please!
+         3. No sister
+         4. sister now please!
+         5. Maybe sister
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=urgent
+         1. everyone please
+         2. everyone please!
+         3. No everyone
+         4. everyone now please!
+         5. Maybe everyone
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. please now!
+         2. please now
+         3. not please
+         4. please please
+         5. but please?
+         6. Yes, please now!
+         7. please now?
+         8. please now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=urgent
+         1. please soon!
+         2. please soon
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please soon?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=urgent
+         1. please later!
+         2. please later
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please later?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=urgent
+         1. please today!
+         2. please today
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please today?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=urgent
+         1. please tomorrow!
+         2. please tomorrow
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please tomorrow?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=urgent
+         1. please yesterday!
+         2. please yesterday
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please yesterday?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=urgent
+         1. please in the morning!
+         2. please in the morning
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please in the morning?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=urgent
+         1. please in the afternoon!
+         2. please in the afternoon
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please in the afternoon?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=urgent
+         1. please at night!
+         2. please at night
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please at night?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=urgent
+         1. please always!
+         2. please always
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please always?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=urgent
+         1. please every day!
+         2. please every day
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please every day?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=urgent
+         1. please in a minute!
+         2. please in a minute
+         3. not please
+         4. please please
+         5. but please?
+         6. please now!
+         7. Yes, please now!
+         8. please in a minute?
+
+  L2: 💛  thank you  (s_thanks)
+      pos=phrase  intent=social  emotion=positive
+       1. thank you!
+       2. thank you
+       3. not thank you
+       4. thank you please
+       5. thank you ?!
+       6. thank you, thanks!
+       7. Yes, thank you!
+       8. thank you?
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=positive
+         1. thank you mom!
+         2. thank you mom
+         3. not thank you
+         4. thank you please
+         5. thank you mom?!
+         6. thank you, thanks mom!
+         7. Yes, thank you!
+         8. thank you mom?
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=positive
+         1. thank you dad!
+         2. thank you dad
+         3. not thank you
+         4. thank you please
+         5. thank you dad?!
+         6. thank you, thanks dad!
+         7. Yes, thank you!
+         8. thank you dad?
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=positive
+         1. thank you friend!
+         2. thank you friend
+         3. not thank you
+         4. thank you please
+         5. thank you friend?!
+         6. thank you, thanks friend!
+         7. Yes, thank you!
+         8. thank you friend?
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=positive
+         1. thank you teacher!
+         2. thank you teacher
+         3. not thank you
+         4. thank you please
+         5. thank you teacher?!
+         6. thank you, thanks teacher!
+         7. Yes, thank you!
+         8. thank you teacher?
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. thank you doctor!
+         2. thank you doctor
+         3. not thank you
+         4. thank you please
+         5. but thank you?
+         6. thank you now!
+         7. Yes, thank you now!
+         8. thank you doctor?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=positive
+         1. thank you nurse!
+         2. thank you nurse
+         3. not thank you
+         4. thank you please
+         5. thank you nurse?!
+         6. thank you, thanks nurse!
+         7. Yes, thank you!
+         8. thank you nurse?
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=positive
+         1. thank you therapist!
+         2. thank you therapist
+         3. not thank you
+         4. thank you please
+         5. thank you therapist?!
+         6. thank you, thanks therapist!
+         7. Yes, thank you!
+         8. thank you therapist?
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=positive
+         1. thank you caregiver!
+         2. thank you caregiver
+         3. not thank you
+         4. thank you please
+         5. thank you caregiver?!
+         6. thank you, thanks caregiver!
+         7. Yes, thank you!
+         8. thank you caregiver?
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=positive
+         1. thank you brother!
+         2. thank you brother
+         3. not thank you
+         4. thank you please
+         5. thank you brother?!
+         6. thank you, thanks brother!
+         7. Yes, thank you!
+         8. thank you brother?
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=positive
+         1. thank you sister!
+         2. thank you sister
+         3. not thank you
+         4. thank you please
+         5. thank you sister?!
+         6. thank you, thanks sister!
+         7. Yes, thank you!
+         8. thank you sister?
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=positive
+         1. thank you everyone!
+         2. thank you everyone
+         3. not thank you
+         4. thank you please
+         5. thank you everyone?!
+         6. thank you, thanks everyone!
+         7. Yes, thank you!
+         8. thank you everyone?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. not thank you
+         2. thank you
+         3. thank you!
+         4. thank you please
+         5. Not thank you
+         6. thank you?
+         7. Not thank you please
+         8. No, not thank you
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. thank you!
+         2. thank you
+         3. not thank you
+         4. thank you please
+         5. thank you ?!
+         6. thank you, thanks!
+         7. Yes, thank you!
+         8. thank you?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. thank you please
+         2. thank you
+         3. thank you!
+         4. not thank you
+         5. Maybe thank you
+         6. Maybe thank you?
+         7. If possible, thank you
+         8. Maybe, thank you
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. thank you!
+         2. thank you
+         3. not thank you
+         4. thank you please
+         5. but thank you?
+         6. thank you now!
+         7. Yes, thank you now!
+         8. thank you?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. thank you!
+         2. thank you
+         3. not thank you
+         4. thank you please
+         5. thank you ?!
+         6. thank you, thanks!
+         7. Yes, thank you!
+         8. thank you?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. not thank you
+         2. thank you
+         3. thank you!
+         4. thank you please
+         5. Not thank you
+         6. thank you?
+         7. Not thank you please
+         8. No, not thank you
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=positive
+         1. thank you!
+         2. thank you
+         3. not thank you
+         4. thank you please
+         5. thank you ?!
+         6. thank you, thanks!
+         7. Yes, thank you!
+         8. thank you?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. thank you please
+         2. thank you
+         3. thank you!
+         4. not thank you
+         5. Maybe thank you
+         6. Maybe thank you?
+         7. If possible, thank you
+         8. Maybe, thank you
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=positive
+         1. thank you!
+         2. thank you
+         3. not thank you
+         4. thank you please
+         5. thank you ?!
+         6. thank you, thanks!
+         7. Yes, thank you!
+         8. thank you?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=positive
+         1. thank you!
+         2. thank you
+         3. not thank you
+         4. thank you please
+         5. thank you ?!
+         6. thank you, thanks!
+         7. Yes, thank you!
+         8. thank you?
+
+  L2: 😔  sorry  (s_sorry)
+      pos=phrase  intent=social  emotion=negative
+       1. not sorry
+       2. sorry
+       3. sorry!
+       4. sorry please
+       5. Not sorry
+       6. sorry?
+       7. Not sorry please
+       8. No, not sorry
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry mom
+         3. sorry mom!
+         4. sorry please
+         5. Not sorry mom
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry dad
+         3. sorry dad!
+         4. sorry please
+         5. Not sorry dad
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry friend
+         3. sorry friend!
+         4. sorry please
+         5. Not sorry friend
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry teacher
+         3. sorry teacher!
+         4. sorry please
+         5. Not sorry teacher
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. sorry doctor!
+         2. sorry doctor
+         3. not sorry
+         4. sorry please
+         5. but sorry?
+         6. sorry now!
+         7. Yes, sorry now!
+         8. sorry doctor?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry nurse
+         3. sorry nurse!
+         4. sorry please
+         5. Not sorry nurse
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry therapist
+         3. sorry therapist!
+         4. sorry please
+         5. Not sorry therapist
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry caregiver
+         3. sorry caregiver!
+         4. sorry please
+         5. Not sorry caregiver
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry brother
+         3. sorry brother!
+         4. sorry please
+         5. Not sorry brother
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry sister
+         3. sorry sister!
+         4. sorry please
+         5. Not sorry sister
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry everyone
+         3. sorry everyone!
+         4. sorry please
+         5. Not sorry everyone
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry
+         3. sorry!
+         4. sorry please
+         5. Not sorry
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. sorry!
+         2. sorry
+         3. not sorry
+         4. sorry please
+         5. sorry ?!
+         6. sorry, thanks!
+         7. Yes, sorry!
+         8. sorry?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. sorry please
+         2. sorry
+         3. sorry!
+         4. not sorry
+         5. Maybe sorry
+         6. Maybe sorry?
+         7. If possible, sorry
+         8. Maybe, sorry
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. sorry!
+         2. sorry
+         3. not sorry
+         4. sorry please
+         5. but sorry?
+         6. sorry now!
+         7. Yes, sorry now!
+         8. sorry?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. sorry!
+         2. sorry
+         3. not sorry
+         4. sorry please
+         5. sorry ?!
+         6. sorry, thanks!
+         7. Yes, sorry!
+         8. sorry?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry
+         3. sorry!
+         4. sorry please
+         5. Not sorry
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry
+         3. sorry!
+         4. sorry please
+         5. Not sorry
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. sorry please
+         2. sorry
+         3. sorry!
+         4. not sorry
+         5. Maybe sorry
+         6. Maybe sorry?
+         7. If possible, sorry
+         8. Maybe, sorry
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry
+         3. sorry!
+         4. sorry please
+         5. Not sorry
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=negative
+         1. not sorry
+         2. sorry
+         3. sorry!
+         4. sorry please
+         5. Not sorry
+         6. sorry?
+         7. Not sorry please
+         8. No, not sorry
+
+  L2: 👌  ok  (s_ok)
+      pos=phrase  intent=social  emotion=positive
+       1. ok!
+       2. ok
+       3. not ok
+       4. ok please
+       5. ok ?!
+       6. ok, thanks!
+       7. Yes, ok!
+       8. ok?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. ok now!
+         2. ok now
+         3. not ok
+         4. ok please
+         5. but ok?
+         6. Yes, ok now!
+         7. ok now?
+         8. ok now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=positive
+         1. ok soon!
+         2. ok soon
+         3. not ok
+         4. ok please
+         5. ok soon?!
+         6. ok, thanks soon!
+         7. Yes, ok!
+         8. ok soon?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=positive
+         1. ok later!
+         2. ok later
+         3. not ok
+         4. ok please
+         5. ok later?!
+         6. ok, thanks later!
+         7. Yes, ok!
+         8. ok later?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=positive
+         1. ok today!
+         2. ok today
+         3. not ok
+         4. ok please
+         5. ok today?!
+         6. ok, thanks today!
+         7. Yes, ok!
+         8. ok today?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=positive
+         1. ok tomorrow!
+         2. ok tomorrow
+         3. not ok
+         4. ok please
+         5. ok tomorrow?!
+         6. ok, thanks tomorrow!
+         7. Yes, ok!
+         8. ok tomorrow?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=positive
+         1. ok yesterday!
+         2. ok yesterday
+         3. not ok
+         4. ok please
+         5. ok yesterday?!
+         6. ok, thanks yesterday!
+         7. Yes, ok!
+         8. ok yesterday?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=positive
+         1. ok in the morning!
+         2. ok in the morning
+         3. not ok
+         4. ok please
+         5. ok in the morning?!
+         6. ok, thanks in the morning!
+         7. Yes, ok!
+         8. ok in the morning?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=positive
+         1. ok in the afternoon!
+         2. ok in the afternoon
+         3. not ok
+         4. ok please
+         5. ok in the afternoon?!
+         6. ok, thanks in the afternoon!
+         7. Yes, ok!
+         8. ok in the afternoon?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=positive
+         1. ok at night!
+         2. ok at night
+         3. not ok
+         4. ok please
+         5. ok at night?!
+         6. ok, thanks at night!
+         7. Yes, ok!
+         8. ok at night?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=positive
+         1. ok always!
+         2. ok always
+         3. not ok
+         4. ok please
+         5. ok always?!
+         6. ok, thanks always!
+         7. Yes, ok!
+         8. ok always?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=positive
+         1. ok every day!
+         2. ok every day
+         3. not ok
+         4. ok please
+         5. ok every day?!
+         6. ok, thanks every day!
+         7. Yes, ok!
+         8. ok every day?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=positive
+         1. ok in a minute!
+         2. ok in a minute
+         3. not ok
+         4. ok please
+         5. ok in a minute?!
+         6. ok, thanks in a minute!
+         7. Yes, ok!
+         8. ok in a minute?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. not ok
+         2. ok
+         3. ok!
+         4. ok please
+         5. Not ok
+         6. ok?
+         7. Not ok please
+         8. No, not ok
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. ok!
+         2. ok
+         3. not ok
+         4. ok please
+         5. ok ?!
+         6. ok, thanks!
+         7. Yes, ok!
+         8. ok?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. ok please
+         2. ok
+         3. ok!
+         4. not ok
+         5. Maybe ok
+         6. Maybe ok?
+         7. If possible, ok
+         8. Maybe, ok
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. ok!
+         2. ok
+         3. not ok
+         4. ok please
+         5. but ok?
+         6. ok now!
+         7. Yes, ok now!
+         8. ok?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. ok!
+         2. ok
+         3. not ok
+         4. ok please
+         5. ok ?!
+         6. ok, thanks!
+         7. Yes, ok!
+         8. ok?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. not ok
+         2. ok
+         3. ok!
+         4. ok please
+         5. Not ok
+         6. ok?
+         7. Not ok please
+         8. No, not ok
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=positive
+         1. ok!
+         2. ok
+         3. not ok
+         4. ok please
+         5. ok ?!
+         6. ok, thanks!
+         7. Yes, ok!
+         8. ok?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. ok please
+         2. ok
+         3. ok!
+         4. not ok
+         5. Maybe ok
+         6. Maybe ok?
+         7. If possible, ok
+         8. Maybe, ok
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=positive
+         1. ok!
+         2. ok
+         3. not ok
+         4. ok please
+         5. ok ?!
+         6. ok, thanks!
+         7. Yes, ok!
+         8. ok?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=positive
+         1. ok!
+         2. ok
+         3. not ok
+         4. ok please
+         5. ok ?!
+         6. ok, thanks!
+         7. Yes, ok!
+         8. ok?
+
+  L2: 🤷  I don't know  (s_idk)
+      pos=phrase  intent=social  emotion=neutral
+       1. I don't know
+       2. I don't know!
+       3. not I don't know
+       4. I don't know please
+       5. I don't know?
+       6. Yes, I don't know
+       7. Not I don't know
+       8. Maybe I don't know
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. I don't know
+         2. I don't know!
+         3. I don't know please
+         4. I don't know?
+         5. Yes, I don't know
+         6. Maybe I don't know
+         7. I don't know ?!
+         8. but I don't know?
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. I don't know!
+         2. I don't know
+         3. not I don't know
+         4. I don't know please
+         5. I don't know ?!
+         6. I don't know, thanks!
+         7. Yes, I don't know!
+         8. I don't know?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. I don't know please
+         2. I don't know
+         3. I don't know!
+         4. not I don't know
+         5. Maybe I don't know
+         6. Maybe I don't know?
+         7. If possible, I don't know
+         8. Maybe, I don't know
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. I don't know!
+         2. I don't know
+         3. not I don't know
+         4. I don't know please
+         5. but I don't know?
+         6. I don't know now!
+         7. Yes, I don't know now!
+         8. I don't know?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. I don't know!
+         2. I don't know
+         3. not I don't know
+         4. I don't know please
+         5. I don't know ?!
+         6. I don't know, thanks!
+         7. Yes, I don't know!
+         8. I don't know?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. I don't know
+         2. I don't know!
+         3. I don't know please
+         4. I don't know?
+         5. Yes, I don't know
+         6. Maybe I don't know
+         7. I don't know ?!
+         8. but I don't know?
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=neutral
+         1. I don't know
+         2. I don't know!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know?
+         6. Yes, I don't know
+         7. Not I don't know
+         8. Maybe I don't know
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. I don't know please
+         2. I don't know
+         3. I don't know!
+         4. not I don't know
+         5. Maybe I don't know
+         6. Maybe I don't know?
+         7. If possible, I don't know
+         8. Maybe, I don't know
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=neutral
+         1. I don't know
+         2. I don't know!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know?
+         6. Yes, I don't know
+         7. Not I don't know
+         8. Maybe I don't know
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=neutral
+         1. I don't know
+         2. I don't know!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know?
+         6. Yes, I don't know
+         7. Not I don't know
+         8. Maybe I don't know
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=social  emotion=neutral
+         1. I don't know food
+         2. I don't know food!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know food?
+         6. I don't know food please
+         7. Yes, I don't know food
+         8. Not I don't know food
+
+    L3: 💧  water  (o_water)  type=object
+        intent=social  emotion=neutral
+         1. I don't know water
+         2. I don't know water!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know water?
+         6. I don't know water please
+         7. Yes, I don't know water
+         8. Not I don't know water
+
+    L3: 📖  book  (o_book)  type=object
+        intent=social  emotion=neutral
+         1. I don't know book
+         2. I don't know book!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know book?
+         6. I don't know book please
+         7. Yes, I don't know book
+         8. Not I don't know book
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=social  emotion=neutral
+         1. I don't know phone
+         2. I don't know phone!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know phone?
+         6. I don't know phone please
+         7. Yes, I don't know phone
+         8. Not I don't know phone
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=social  emotion=neutral
+         1. I don't know toy
+         2. I don't know toy!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know toy?
+         6. I don't know toy please
+         7. Yes, I don't know toy
+         8. Not I don't know toy
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=social  emotion=neutral
+         1. I don't know TV
+         2. I don't know TV!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know TV?
+         6. I don't know TV please
+         7. Yes, I don't know TV
+         8. Not I don't know TV
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=social  emotion=neutral
+         1. I don't know music
+         2. I don't know music!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know music?
+         6. I don't know music please
+         7. Yes, I don't know music
+         8. Not I don't know music
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=social  emotion=neutral
+         1. I don't know game
+         2. I don't know game!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know game?
+         6. I don't know game please
+         7. Yes, I don't know game
+         8. Not I don't know game
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=social  emotion=neutral
+         1. I don't know picture
+         2. I don't know picture!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know picture?
+         6. I don't know picture please
+         7. Yes, I don't know picture
+         8. Not I don't know picture
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=social  emotion=neutral
+         1. I don't know homework
+         2. I don't know homework!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know homework?
+         6. I don't know homework please
+         7. Yes, I don't know homework
+         8. Not I don't know homework
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=social  emotion=neutral
+         1. I don't know door
+         2. I don't know door!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know door?
+         6. I don't know door please
+         7. Yes, I don't know door
+         8. Not I don't know door
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=social  emotion=neutral
+         1. I don't know window
+         2. I don't know window!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know window?
+         6. I don't know window please
+         7. Yes, I don't know window
+         8. Not I don't know window
+
+    L3: 💡  light  (o_light)  type=object
+        intent=social  emotion=neutral
+         1. I don't know light
+         2. I don't know light!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know light?
+         6. I don't know light please
+         7. Yes, I don't know light
+         8. Not I don't know light
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=social  emotion=neutral
+         1. I don't know bag
+         2. I don't know bag!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know bag?
+         6. I don't know bag please
+         7. Yes, I don't know bag
+         8. Not I don't know bag
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=social  emotion=neutral
+         1. I don't know clothes
+         2. I don't know clothes!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know clothes?
+         6. I don't know clothes please
+         7. Yes, I don't know clothes
+         8. Not I don't know clothes
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=social  emotion=neutral
+         1. I don't know blanket
+         2. I don't know blanket!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know blanket?
+         6. I don't know blanket please
+         7. Yes, I don't know blanket
+         8. Not I don't know blanket
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=social  emotion=neutral
+         1. I don't know ball
+         2. I don't know ball!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know ball?
+         6. I don't know ball please
+         7. Yes, I don't know ball
+         8. Not I don't know ball
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=social  emotion=urgent
+         1. I don't know medicine!
+         2. I don't know medicine
+         3. not I don't know
+         4. I don't know please
+         5. but I don't know?
+         6. I don't know now!
+         7. Yes, I don't know now!
+         8. I don't know medicine?
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=neutral
+         1. I don't know mom
+         2. I don't know mom!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know mom?
+         6. I don't know mom please
+         7. Yes, I don't know mom
+         8. Not I don't know mom
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=neutral
+         1. I don't know dad
+         2. I don't know dad!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know dad?
+         6. I don't know dad please
+         7. Yes, I don't know dad
+         8. Not I don't know dad
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=neutral
+         1. I don't know friend
+         2. I don't know friend!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know friend?
+         6. I don't know friend please
+         7. Yes, I don't know friend
+         8. Not I don't know friend
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=neutral
+         1. I don't know teacher
+         2. I don't know teacher!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know teacher?
+         6. I don't know teacher please
+         7. Yes, I don't know teacher
+         8. Not I don't know teacher
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. I don't know doctor!
+         2. I don't know doctor
+         3. not I don't know
+         4. I don't know please
+         5. but I don't know?
+         6. I don't know now!
+         7. Yes, I don't know now!
+         8. I don't know doctor?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=neutral
+         1. I don't know nurse
+         2. I don't know nurse!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know nurse?
+         6. I don't know nurse please
+         7. Yes, I don't know nurse
+         8. Not I don't know nurse
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=neutral
+         1. I don't know therapist
+         2. I don't know therapist!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know therapist?
+         6. I don't know therapist please
+         7. Yes, I don't know therapist
+         8. Not I don't know therapist
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=neutral
+         1. I don't know caregiver
+         2. I don't know caregiver!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know caregiver?
+         6. I don't know caregiver please
+         7. Yes, I don't know caregiver
+         8. Not I don't know caregiver
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=neutral
+         1. I don't know brother
+         2. I don't know brother!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know brother?
+         6. I don't know brother please
+         7. Yes, I don't know brother
+         8. Not I don't know brother
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=neutral
+         1. I don't know sister
+         2. I don't know sister!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know sister?
+         6. I don't know sister please
+         7. Yes, I don't know sister
+         8. Not I don't know sister
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=neutral
+         1. I don't know everyone
+         2. I don't know everyone!
+         3. not I don't know
+         4. I don't know please
+         5. I don't know everyone?
+         6. I don't know everyone please
+         7. Yes, I don't know everyone
+         8. Not I don't know everyone
+
+  L2: ⏸️  wait  (s_wait)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me wait
+       2. Let's wait!
+       3. Don't make me wait
+       4. Help me wait now!
+       5. Maybe help me wait
+       6. I want to wait
+       7. Can I wait?
+       8. Yes, let's wait
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait mom
+         2. Let's wait mom!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait mom
+         7. Can I wait mom?
+         8. Yes, let's wait
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait dad
+         2. Let's wait dad!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait dad
+         7. Can I wait dad?
+         8. Yes, let's wait
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait friend
+         2. Let's wait friend!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait friend
+         7. Can I wait friend?
+         8. Yes, let's wait
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait teacher
+         2. Let's wait teacher!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait teacher
+         7. Can I wait teacher?
+         8. Yes, let's wait
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Help me wait now!
+         2. Help me wait doctor
+         3. Let's wait doctor!
+         4. Don't make me wait
+         5. Maybe help me wait
+         6. I need to wait now!
+         7. Can I wait now?
+         8. Yes, wait now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait nurse
+         2. Let's wait nurse!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait nurse
+         7. Can I wait nurse?
+         8. Yes, let's wait
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait therapist
+         2. Let's wait therapist!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait therapist
+         7. Can I wait therapist?
+         8. Yes, let's wait
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait caregiver
+         2. Let's wait caregiver!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait caregiver
+         7. Can I wait caregiver?
+         8. Yes, let's wait
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait brother
+         2. Let's wait brother!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait brother
+         7. Can I wait brother?
+         8. Yes, let's wait
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait sister
+         2. Let's wait sister!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait sister
+         7. Can I wait sister?
+         8. Yes, let's wait
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Help me wait everyone
+         2. Let's wait everyone!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait everyone
+         7. Can I wait everyone?
+         8. Yes, let's wait
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me wait now!
+         2. Help me wait now
+         3. Let's wait now!
+         4. Don't make me wait
+         5. Maybe help me wait
+         6. I need to wait now!
+         7. Can I wait now?
+         8. Yes, wait now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait soon
+         2. Let's wait soon!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait soon
+         7. Can I wait soon?
+         8. Yes, let's wait
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait later
+         2. Let's wait later!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait later
+         7. Can I wait later?
+         8. Yes, let's wait
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait today
+         2. Let's wait today!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait today
+         7. Can I wait today?
+         8. Yes, let's wait
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait tomorrow
+         2. Let's wait tomorrow!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait tomorrow
+         7. Can I wait tomorrow?
+         8. Yes, let's wait
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait yesterday
+         2. Let's wait yesterday!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait yesterday
+         7. Can I wait yesterday?
+         8. Yes, let's wait
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait in the morning
+         2. Let's wait in the morning!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait in the morning
+         7. Can I wait in the morning?
+         8. Yes, let's wait
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait in the afternoon
+         2. Let's wait in the afternoon!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait in the afternoon
+         7. Can I wait in the afternoon?
+         8. Yes, let's wait
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait at night
+         2. Let's wait at night!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait at night
+         7. Can I wait at night?
+         8. Yes, let's wait
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait always
+         2. Let's wait always!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait always
+         7. Can I wait always?
+         8. Yes, let's wait
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait every day
+         2. Let's wait every day!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait every day
+         7. Can I wait every day?
+         8. Yes, let's wait
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Help me wait in a minute
+         2. Let's wait in a minute!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait in a minute
+         7. Can I wait in a minute?
+         8. Yes, let's wait
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me wait
+         2. Help me wait
+         3. Let's wait!
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I don't want to wait
+         7. Don't I need to wait?
+         8. No, I don't want to wait
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Let's wait!
+         2. Help me wait
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I love to wait!
+         7. Shall we wait?
+         8. Yes, I'd love to wait!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me wait
+         2. Help me wait
+         3. Let's wait!
+         4. Don't make me wait
+         5. Help me wait now!
+         6. Maybe I want to wait
+         7. Should I maybe wait?
+         8. Maybe I could wait
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me wait now!
+         2. Help me wait
+         3. Let's wait!
+         4. Don't make me wait
+         5. Maybe help me wait
+         6. I need to wait now!
+         7. Can I wait now?
+         8. Yes, wait now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Let's wait!
+         2. Help me wait
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I love to wait!
+         7. Shall we wait?
+         8. Yes, I'd love to wait!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me wait
+         2. Help me wait
+         3. Let's wait!
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I don't want to wait
+         7. Don't I need to wait?
+         8. No, I don't want to wait
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me wait
+         2. Let's wait!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait
+         7. Can I wait?
+         8. Yes, let's wait
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me wait
+         2. Help me wait
+         3. Let's wait!
+         4. Don't make me wait
+         5. Help me wait now!
+         6. Maybe I want to wait
+         7. Should I maybe wait?
+         8. Maybe I could wait
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me wait
+         2. Let's wait!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait
+         7. Can I wait?
+         8. Yes, let's wait
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me wait
+         2. Let's wait!
+         3. Don't make me wait
+         4. Help me wait now!
+         5. Maybe help me wait
+         6. I want to wait
+         7. Can I wait?
+         8. Yes, let's wait
+
+  L2: 💡  understand  (s_understand)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me understand
+       2. Let's understand!
+       3. Don't make me understand
+       4. Help me understand now!
+       5. Maybe help me understand
+       6. I want to understand
+       7. Can I understand?
+       8. Yes, let's understand
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me understand
+         2. Help me understand
+         3. Let's understand!
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I don't want to understand
+         7. Don't I need to understand?
+         8. No, I don't want to understand
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Let's understand!
+         2. Help me understand
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I love to understand!
+         7. Shall we understand?
+         8. Yes, I'd love to understand!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me understand
+         2. Help me understand
+         3. Let's understand!
+         4. Don't make me understand
+         5. Help me understand now!
+         6. Maybe I want to understand
+         7. Should I maybe understand?
+         8. Maybe I could understand
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me understand now!
+         2. Help me understand
+         3. Let's understand!
+         4. Don't make me understand
+         5. Maybe help me understand
+         6. I need to understand now!
+         7. Can I understand now?
+         8. Yes, understand now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Let's understand!
+         2. Help me understand
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I love to understand!
+         7. Shall we understand?
+         8. Yes, I'd love to understand!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me understand
+         2. Help me understand
+         3. Let's understand!
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I don't want to understand
+         7. Don't I need to understand?
+         8. No, I don't want to understand
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me understand
+         2. Let's understand!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand
+         7. Can I understand?
+         8. Yes, let's understand
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me understand
+         2. Help me understand
+         3. Let's understand!
+         4. Don't make me understand
+         5. Help me understand now!
+         6. Maybe I want to understand
+         7. Should I maybe understand?
+         8. Maybe I could understand
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me understand
+         2. Let's understand!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand
+         7. Can I understand?
+         8. Yes, let's understand
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me understand
+         2. Let's understand!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand
+         7. Can I understand?
+         8. Yes, let's understand
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand mom
+         2. Let's understand mom!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand mom
+         7. Can I understand mom?
+         8. Yes, let's understand
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand dad
+         2. Let's understand dad!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand dad
+         7. Can I understand dad?
+         8. Yes, let's understand
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand friend
+         2. Let's understand friend!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand friend
+         7. Can I understand friend?
+         8. Yes, let's understand
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand teacher
+         2. Let's understand teacher!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand teacher
+         7. Can I understand teacher?
+         8. Yes, let's understand
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Help me understand now!
+         2. Help me understand doctor
+         3. Let's understand doctor!
+         4. Don't make me understand
+         5. Maybe help me understand
+         6. I need to understand now!
+         7. Can I understand now?
+         8. Yes, understand now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand nurse
+         2. Let's understand nurse!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand nurse
+         7. Can I understand nurse?
+         8. Yes, let's understand
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand therapist
+         2. Let's understand therapist!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand therapist
+         7. Can I understand therapist?
+         8. Yes, let's understand
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand caregiver
+         2. Let's understand caregiver!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand caregiver
+         7. Can I understand caregiver?
+         8. Yes, let's understand
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand brother
+         2. Let's understand brother!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand brother
+         7. Can I understand brother?
+         8. Yes, let's understand
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand sister
+         2. Let's understand sister!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand sister
+         7. Can I understand sister?
+         8. Yes, let's understand
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Help me understand everyone
+         2. Let's understand everyone!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand everyone
+         7. Can I understand everyone?
+         8. Yes, let's understand
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand food
+         2. Let's understand food!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand food
+         7. Can I understand food?
+         8. Yes, let's understand
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand water
+         2. Let's understand water!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand water
+         7. Can I understand water?
+         8. Yes, let's understand
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand book
+         2. Let's understand book!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand book
+         7. Can I understand book?
+         8. Yes, let's understand
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand phone
+         2. Let's understand phone!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand phone
+         7. Can I understand phone?
+         8. Yes, let's understand
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand toy
+         2. Let's understand toy!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand toy
+         7. Can I understand toy?
+         8. Yes, let's understand
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand TV
+         2. Let's understand TV!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand TV
+         7. Can I understand TV?
+         8. Yes, let's understand
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand music
+         2. Let's understand music!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand music
+         7. Can I understand music?
+         8. Yes, let's understand
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand game
+         2. Let's understand game!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand game
+         7. Can I understand game?
+         8. Yes, let's understand
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand picture
+         2. Let's understand picture!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand picture
+         7. Can I understand picture?
+         8. Yes, let's understand
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand homework
+         2. Let's understand homework!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand homework
+         7. Can I understand homework?
+         8. Yes, let's understand
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand door
+         2. Let's understand door!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand door
+         7. Can I understand door?
+         8. Yes, let's understand
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand window
+         2. Let's understand window!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand window
+         7. Can I understand window?
+         8. Yes, let's understand
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand light
+         2. Let's understand light!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand light
+         7. Can I understand light?
+         8. Yes, let's understand
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand bag
+         2. Let's understand bag!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand bag
+         7. Can I understand bag?
+         8. Yes, let's understand
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand clothes
+         2. Let's understand clothes!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand clothes
+         7. Can I understand clothes?
+         8. Yes, let's understand
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand blanket
+         2. Let's understand blanket!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand blanket
+         7. Can I understand blanket?
+         8. Yes, let's understand
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Help me understand ball
+         2. Let's understand ball!
+         3. Don't make me understand
+         4. Help me understand now!
+         5. Maybe help me understand
+         6. I want to understand ball
+         7. Can I understand ball?
+         8. Yes, let's understand
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Help me understand now!
+         2. Help me understand medicine
+         3. Let's understand medicine!
+         4. Don't make me understand
+         5. Maybe help me understand
+         6. I need to understand now!
+         7. Can I understand now?
+         8. Yes, understand now!
+
+  L2: 🗣️  tell  (s_tell)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me tell
+       2. Let's tell!
+       3. Don't make me tell
+       4. Help me tell now!
+       5. Maybe help me tell
+       6. I want to tell
+       7. Can I tell?
+       8. Yes, let's tell
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell mom
+         2. Let's tell mom!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell mom
+         7. Can I tell mom?
+         8. Yes, let's tell
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell dad
+         2. Let's tell dad!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell dad
+         7. Can I tell dad?
+         8. Yes, let's tell
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell friend
+         2. Let's tell friend!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell friend
+         7. Can I tell friend?
+         8. Yes, let's tell
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell teacher
+         2. Let's tell teacher!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell teacher
+         7. Can I tell teacher?
+         8. Yes, let's tell
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Help me tell now!
+         2. Help me tell doctor
+         3. Let's tell doctor!
+         4. Don't make me tell
+         5. Maybe help me tell
+         6. I need to tell now!
+         7. Can I tell now?
+         8. Yes, tell now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell nurse
+         2. Let's tell nurse!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell nurse
+         7. Can I tell nurse?
+         8. Yes, let's tell
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell therapist
+         2. Let's tell therapist!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell therapist
+         7. Can I tell therapist?
+         8. Yes, let's tell
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell caregiver
+         2. Let's tell caregiver!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell caregiver
+         7. Can I tell caregiver?
+         8. Yes, let's tell
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell brother
+         2. Let's tell brother!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell brother
+         7. Can I tell brother?
+         8. Yes, let's tell
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell sister
+         2. Let's tell sister!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell sister
+         7. Can I tell sister?
+         8. Yes, let's tell
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Help me tell everyone
+         2. Let's tell everyone!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell everyone
+         7. Can I tell everyone?
+         8. Yes, let's tell
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell food
+         2. Let's tell food!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell food
+         7. Can I tell food?
+         8. Yes, let's tell
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell water
+         2. Let's tell water!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell water
+         7. Can I tell water?
+         8. Yes, let's tell
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell book
+         2. Let's tell book!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell book
+         7. Can I tell book?
+         8. Yes, let's tell
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell phone
+         2. Let's tell phone!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell phone
+         7. Can I tell phone?
+         8. Yes, let's tell
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell toy
+         2. Let's tell toy!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell toy
+         7. Can I tell toy?
+         8. Yes, let's tell
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell TV
+         2. Let's tell TV!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell TV
+         7. Can I tell TV?
+         8. Yes, let's tell
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell music
+         2. Let's tell music!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell music
+         7. Can I tell music?
+         8. Yes, let's tell
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell game
+         2. Let's tell game!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell game
+         7. Can I tell game?
+         8. Yes, let's tell
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell picture
+         2. Let's tell picture!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell picture
+         7. Can I tell picture?
+         8. Yes, let's tell
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell homework
+         2. Let's tell homework!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell homework
+         7. Can I tell homework?
+         8. Yes, let's tell
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell door
+         2. Let's tell door!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell door
+         7. Can I tell door?
+         8. Yes, let's tell
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell window
+         2. Let's tell window!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell window
+         7. Can I tell window?
+         8. Yes, let's tell
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell light
+         2. Let's tell light!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell light
+         7. Can I tell light?
+         8. Yes, let's tell
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell bag
+         2. Let's tell bag!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell bag
+         7. Can I tell bag?
+         8. Yes, let's tell
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell clothes
+         2. Let's tell clothes!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell clothes
+         7. Can I tell clothes?
+         8. Yes, let's tell
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell blanket
+         2. Let's tell blanket!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell blanket
+         7. Can I tell blanket?
+         8. Yes, let's tell
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Help me tell ball
+         2. Let's tell ball!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell ball
+         7. Can I tell ball?
+         8. Yes, let's tell
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Help me tell now!
+         2. Help me tell medicine
+         3. Let's tell medicine!
+         4. Don't make me tell
+         5. Maybe help me tell
+         6. I need to tell now!
+         7. Can I tell now?
+         8. Yes, tell now!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me tell now!
+         2. Help me tell now
+         3. Let's tell now!
+         4. Don't make me tell
+         5. Maybe help me tell
+         6. I need to tell now!
+         7. Can I tell now?
+         8. Yes, tell now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell soon
+         2. Let's tell soon!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell soon
+         7. Can I tell soon?
+         8. Yes, let's tell
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell later
+         2. Let's tell later!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell later
+         7. Can I tell later?
+         8. Yes, let's tell
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell today
+         2. Let's tell today!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell today
+         7. Can I tell today?
+         8. Yes, let's tell
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell tomorrow
+         2. Let's tell tomorrow!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell tomorrow
+         7. Can I tell tomorrow?
+         8. Yes, let's tell
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell yesterday
+         2. Let's tell yesterday!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell yesterday
+         7. Can I tell yesterday?
+         8. Yes, let's tell
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell in the morning
+         2. Let's tell in the morning!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell in the morning
+         7. Can I tell in the morning?
+         8. Yes, let's tell
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell in the afternoon
+         2. Let's tell in the afternoon!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell in the afternoon
+         7. Can I tell in the afternoon?
+         8. Yes, let's tell
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell at night
+         2. Let's tell at night!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell at night
+         7. Can I tell at night?
+         8. Yes, let's tell
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell always
+         2. Let's tell always!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell always
+         7. Can I tell always?
+         8. Yes, let's tell
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell every day
+         2. Let's tell every day!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell every day
+         7. Can I tell every day?
+         8. Yes, let's tell
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Help me tell in a minute
+         2. Let's tell in a minute!
+         3. Don't make me tell
+         4. Help me tell now!
+         5. Maybe help me tell
+         6. I want to tell in a minute
+         7. Can I tell in a minute?
+         8. Yes, let's tell
+
+  L2: ✋  ask  (s_ask)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me ask
+       2. Let's ask!
+       3. Don't make me ask
+       4. Help me ask now!
+       5. Maybe help me ask
+       6. I want to ask
+       7. Can I ask?
+       8. Yes, let's ask
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask mom
+         2. Let's ask mom!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask mom
+         7. Can I ask mom?
+         8. Yes, let's ask
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask dad
+         2. Let's ask dad!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask dad
+         7. Can I ask dad?
+         8. Yes, let's ask
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask friend
+         2. Let's ask friend!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask friend
+         7. Can I ask friend?
+         8. Yes, let's ask
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask teacher
+         2. Let's ask teacher!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask teacher
+         7. Can I ask teacher?
+         8. Yes, let's ask
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Help me ask now!
+         2. Help me ask doctor
+         3. Let's ask doctor!
+         4. Don't make me ask
+         5. Maybe help me ask
+         6. I need to ask now!
+         7. Can I ask now?
+         8. Yes, ask now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask nurse
+         2. Let's ask nurse!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask nurse
+         7. Can I ask nurse?
+         8. Yes, let's ask
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask therapist
+         2. Let's ask therapist!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask therapist
+         7. Can I ask therapist?
+         8. Yes, let's ask
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask caregiver
+         2. Let's ask caregiver!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask caregiver
+         7. Can I ask caregiver?
+         8. Yes, let's ask
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask brother
+         2. Let's ask brother!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask brother
+         7. Can I ask brother?
+         8. Yes, let's ask
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask sister
+         2. Let's ask sister!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask sister
+         7. Can I ask sister?
+         8. Yes, let's ask
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Help me ask everyone
+         2. Let's ask everyone!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask everyone
+         7. Can I ask everyone?
+         8. Yes, let's ask
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask food
+         2. Let's ask food!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask food
+         7. Can I ask food?
+         8. Yes, let's ask
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask water
+         2. Let's ask water!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask water
+         7. Can I ask water?
+         8. Yes, let's ask
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask book
+         2. Let's ask book!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask book
+         7. Can I ask book?
+         8. Yes, let's ask
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask phone
+         2. Let's ask phone!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask phone
+         7. Can I ask phone?
+         8. Yes, let's ask
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask toy
+         2. Let's ask toy!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask toy
+         7. Can I ask toy?
+         8. Yes, let's ask
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask TV
+         2. Let's ask TV!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask TV
+         7. Can I ask TV?
+         8. Yes, let's ask
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask music
+         2. Let's ask music!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask music
+         7. Can I ask music?
+         8. Yes, let's ask
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask game
+         2. Let's ask game!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask game
+         7. Can I ask game?
+         8. Yes, let's ask
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask picture
+         2. Let's ask picture!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask picture
+         7. Can I ask picture?
+         8. Yes, let's ask
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask homework
+         2. Let's ask homework!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask homework
+         7. Can I ask homework?
+         8. Yes, let's ask
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask door
+         2. Let's ask door!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask door
+         7. Can I ask door?
+         8. Yes, let's ask
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask window
+         2. Let's ask window!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask window
+         7. Can I ask window?
+         8. Yes, let's ask
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask light
+         2. Let's ask light!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask light
+         7. Can I ask light?
+         8. Yes, let's ask
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask bag
+         2. Let's ask bag!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask bag
+         7. Can I ask bag?
+         8. Yes, let's ask
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask clothes
+         2. Let's ask clothes!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask clothes
+         7. Can I ask clothes?
+         8. Yes, let's ask
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask blanket
+         2. Let's ask blanket!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask blanket
+         7. Can I ask blanket?
+         8. Yes, let's ask
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Help me ask ball
+         2. Let's ask ball!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask ball
+         7. Can I ask ball?
+         8. Yes, let's ask
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Help me ask now!
+         2. Help me ask medicine
+         3. Let's ask medicine!
+         4. Don't make me ask
+         5. Maybe help me ask
+         6. I need to ask now!
+         7. Can I ask now?
+         8. Yes, ask now!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me ask now!
+         2. Help me ask now
+         3. Let's ask now!
+         4. Don't make me ask
+         5. Maybe help me ask
+         6. I need to ask now!
+         7. Can I ask now?
+         8. Yes, ask now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask soon
+         2. Let's ask soon!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask soon
+         7. Can I ask soon?
+         8. Yes, let's ask
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask later
+         2. Let's ask later!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask later
+         7. Can I ask later?
+         8. Yes, let's ask
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask today
+         2. Let's ask today!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask today
+         7. Can I ask today?
+         8. Yes, let's ask
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask tomorrow
+         2. Let's ask tomorrow!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask tomorrow
+         7. Can I ask tomorrow?
+         8. Yes, let's ask
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask yesterday
+         2. Let's ask yesterday!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask yesterday
+         7. Can I ask yesterday?
+         8. Yes, let's ask
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask in the morning
+         2. Let's ask in the morning!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask in the morning
+         7. Can I ask in the morning?
+         8. Yes, let's ask
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask in the afternoon
+         2. Let's ask in the afternoon!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask in the afternoon
+         7. Can I ask in the afternoon?
+         8. Yes, let's ask
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask at night
+         2. Let's ask at night!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask at night
+         7. Can I ask at night?
+         8. Yes, let's ask
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask always
+         2. Let's ask always!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask always
+         7. Can I ask always?
+         8. Yes, let's ask
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask every day
+         2. Let's ask every day!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask every day
+         7. Can I ask every day?
+         8. Yes, let's ask
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Help me ask in a minute
+         2. Let's ask in a minute!
+         3. Don't make me ask
+         4. Help me ask now!
+         5. Maybe help me ask
+         6. I want to ask in a minute
+         7. Can I ask in a minute?
+         8. Yes, let's ask
+
+  L2: 🔄  repeat  (s_repeat)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me repeat
+       2. Let's repeat!
+       3. Don't make me repeat
+       4. Help me repeat now!
+       5. Maybe help me repeat
+       6. I want to repeat
+       7. Can I repeat?
+       8. Yes, let's repeat
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me repeat
+         2. Help me repeat
+         3. Let's repeat!
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I don't want to repeat
+         7. Don't I need to repeat?
+         8. No, I don't want to repeat
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Let's repeat!
+         2. Help me repeat
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I love to repeat!
+         7. Shall we repeat?
+         8. Yes, I'd love to repeat!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me repeat
+         2. Help me repeat
+         3. Let's repeat!
+         4. Don't make me repeat
+         5. Help me repeat now!
+         6. Maybe I want to repeat
+         7. Should I maybe repeat?
+         8. Maybe I could repeat
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me repeat now!
+         2. Help me repeat
+         3. Let's repeat!
+         4. Don't make me repeat
+         5. Maybe help me repeat
+         6. I need to repeat now!
+         7. Can I repeat now?
+         8. Yes, repeat now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Let's repeat!
+         2. Help me repeat
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I love to repeat!
+         7. Shall we repeat?
+         8. Yes, I'd love to repeat!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me repeat
+         2. Help me repeat
+         3. Let's repeat!
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I don't want to repeat
+         7. Don't I need to repeat?
+         8. No, I don't want to repeat
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me repeat
+         2. Let's repeat!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat
+         7. Can I repeat?
+         8. Yes, let's repeat
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me repeat
+         2. Help me repeat
+         3. Let's repeat!
+         4. Don't make me repeat
+         5. Help me repeat now!
+         6. Maybe I want to repeat
+         7. Should I maybe repeat?
+         8. Maybe I could repeat
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me repeat
+         2. Let's repeat!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat
+         7. Can I repeat?
+         8. Yes, let's repeat
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me repeat
+         2. Let's repeat!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat
+         7. Can I repeat?
+         8. Yes, let's repeat
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me repeat now!
+         2. Help me repeat now
+         3. Let's repeat now!
+         4. Don't make me repeat
+         5. Maybe help me repeat
+         6. I need to repeat now!
+         7. Can I repeat now?
+         8. Yes, repeat now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat soon
+         2. Let's repeat soon!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat soon
+         7. Can I repeat soon?
+         8. Yes, let's repeat
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat later
+         2. Let's repeat later!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat later
+         7. Can I repeat later?
+         8. Yes, let's repeat
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat today
+         2. Let's repeat today!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat today
+         7. Can I repeat today?
+         8. Yes, let's repeat
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat tomorrow
+         2. Let's repeat tomorrow!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat tomorrow
+         7. Can I repeat tomorrow?
+         8. Yes, let's repeat
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat yesterday
+         2. Let's repeat yesterday!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat yesterday
+         7. Can I repeat yesterday?
+         8. Yes, let's repeat
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat in the morning
+         2. Let's repeat in the morning!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat in the morning
+         7. Can I repeat in the morning?
+         8. Yes, let's repeat
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat in the afternoon
+         2. Let's repeat in the afternoon!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat in the afternoon
+         7. Can I repeat in the afternoon?
+         8. Yes, let's repeat
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat at night
+         2. Let's repeat at night!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat at night
+         7. Can I repeat at night?
+         8. Yes, let's repeat
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat always
+         2. Let's repeat always!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat always
+         7. Can I repeat always?
+         8. Yes, let's repeat
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat every day
+         2. Let's repeat every day!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat every day
+         7. Can I repeat every day?
+         8. Yes, let's repeat
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Help me repeat in a minute
+         2. Let's repeat in a minute!
+         3. Don't make me repeat
+         4. Help me repeat now!
+         5. Maybe help me repeat
+         6. I want to repeat in a minute
+         7. Can I repeat in a minute?
+         8. Yes, let's repeat
+
+────────────────────────────────────────────────────────────────────────
+  SUMMARY for TALK
+────────────────────────────────────────────────────────────────────────
+  Items (L2):              14
+  Modifiers (L3):          386
+  Total cell combinations: 400
+  Total sentences:         3113
+  Avg sentences / cell:    7.8
+────────────────────────────────────────────────────────────────────────

@@ -421,6 +421,7 @@ export function useAIPrediction(modelKey = "fast", geminiApiKey = "", aiAutoCorr
     const modifier = tapContext?.l3Label || null;
     const l2Canon  = tapContext?.l2Canon || keyword;
     const l3Canon  = tapContext?.l3Canon || null;
+    const l3Type   = tapContext?.l3Type  || null;
 
     // 2-axis detection: intent from POS/category context, emotion from word semantics
     const { pos } = getPOS(l2Canon);
@@ -432,7 +433,7 @@ export function useAIPrediction(modelKey = "fast", geminiApiKey = "", aiAutoCorr
     // (tagged __core). Grid / fringe symbol labels are never included.
     const heuristicIntents = keyword
       ? applyPrefix(
-          generateCandidates(keyword, modifier, langCode, gender, l2Canon, categoryId, intent, emotion, l3Canon)
+          generateCandidates(keyword, modifier, langCode, gender, l2Canon, categoryId, intent, emotion, l3Canon, l3Type)
             .slice(0, 13)
             .map(s => fixGender(s, langCode, gender)),
           corePrefixWords,

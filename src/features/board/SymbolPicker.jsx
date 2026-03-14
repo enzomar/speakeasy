@@ -14,7 +14,7 @@
  * Falls back to the flat SYMBOLS list for any category without hierarchy data.
  */
 
-import { memo, useMemo, useState, useCallback } from "react";
+import { memo, useMemo, useState, useCallback, useRef } from "react";
 import { ArrowLeft } from "lucide-react";
 import { SYMBOLS } from "../../data/symbols";
 import { getArasaacPictogramDescription, getArasaacPictogramUrl } from "../../data/arasaac";
@@ -89,28 +89,31 @@ function PickerHeader({ onBack, emoji, imageUrl, label, color, bg, sublabel, pic
 
 // ── Shared symbol tile ────────────────────────────────────────────────────────
 
-function SymbolTile({ emoji, imageUrl, pictogramTitle, label, color, onClick, highlight = false }) {
+function SymbolTile({ emoji, imageUrl, pictogramTitle, label, color, onClick, highlight = false, disabled = false }) {
   return (
     <button
-      onClick={onClick}
+      onClick={disabled ? undefined : onClick}
       aria-label={label}
+      disabled={disabled}
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         gap: 6,
-        padding: "16px 8px",
+        padding: "14px 8px 10px",
         borderRadius: 18,
         background: highlight ? `${color}18` : "var(--surface)",
         border: `1.5px solid ${color}${highlight ? "60" : "25"}`,
-        cursor: "pointer",
-        transition: "transform 0.08s",
+        cursor: disabled ? "default" : "pointer",
+        transition: "transform 0.08s, opacity 0.12s",
         WebkitTapHighlightColor: "transparent",
         touchAction: "manipulation",
         minHeight: 88,
+        position: "relative",
+        opacity: disabled ? 0.4 : 1,
       }}
-      onPointerDown={e  => (e.currentTarget.style.transform = "scale(0.93)")}
+      onPointerDown={e  => { if (!disabled) e.currentTarget.style.transform = "scale(0.93)"; }}
       onPointerUp={e    => (e.currentTarget.style.transform = "scale(1)")}
       onPointerLeave={e => (e.currentTarget.style.transform = "scale(1)")}
     >
@@ -131,6 +134,8 @@ function SymbolTile({ emoji, imageUrl, pictogramTitle, label, color, onClick, hi
       }}>
         {label}
       </span>
+
+
     </button>
   );
 }
@@ -142,7 +147,7 @@ function TileGrid({ children }) {
     <div style={{
       flex: 1,
       overflowY: "auto",
-      padding: "12px 10px 28px",
+      padding: "12px 10px 88px",
       background: "var(--bg)",
       WebkitOverflowScrolling: "touch",
     }}>
@@ -181,6 +186,8 @@ export default memo(function SymbolPicker({
 }) {
   const hierarchy = useMemo(() => getHierarchy(category.id), [category.id]);
   const [activeL2, setActiveL2] = useState(null); // currently selected L2 item
+  // Brief lock after an L3 tap to prevent accidental pass-through double-taps
+  const l3LockRef = useRef(false);
 
   // ── Flat-symbol data (computed unconditionally to satisfy Rules of Hooks) ──
   const hiddenSet = useMemo(() => new Set(hiddenSymbols), [hiddenSymbols]);
@@ -212,6 +219,11 @@ export default memo(function SymbolPicker({
   }, [onTap, onTapContext, category, langCode]);
 
   const handleL3Tap = useCallback((modifier) => {
+    // Guard against rapid double-taps that could fire twice before view animates away
+    if (l3LockRef.current) return;
+    l3LockRef.current = true;
+    setTimeout(() => { l3LockRef.current = false; }, 400);
+
     const label = getHierarchyLabel(modifier, langCode);
     onTap(label);             // add translated modifier to message bar
     // Report full hierarchy context: L1 + L2 + L3 + type
@@ -305,7 +317,7 @@ export default memo(function SymbolPicker({
       />
       <div style={{
         flex: 1, overflowY: "auto",
-        padding: "10px 10px 24px",
+        padding: "10px 10px 88px",
         background: "var(--bg)",
         WebkitOverflowScrolling: "touch",
       }}>

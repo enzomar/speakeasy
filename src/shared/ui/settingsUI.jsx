@@ -8,7 +8,13 @@ import {
   ChevronDown, Check, Send, CheckCircle2, AlertCircle,
 } from "lucide-react";
 
-const FORMSPREE_URL = "https://formspree.io/f/xeoqgpnv";
+const FORMSPREE_CONTACT_URL  = import.meta.env.VITE_FORMSPREE_CONTACT_ID
+  ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_CONTACT_ID}`
+  : "https://formspree.io/f/xeoqgpnv";
+
+const FORMSPREE_FEEDBACK_URL = import.meta.env.VITE_FORMSPREE_FEEDBACK_ID
+  ? `https://formspree.io/f/${import.meta.env.VITE_FORMSPREE_FEEDBACK_ID}`
+  : FORMSPREE_CONTACT_URL;
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -299,7 +305,7 @@ export function ContactForm({ t }) {
     if (!cname.trim() || !email.trim() || !message.trim()) return;
     setStatus("sending");
     try {
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(FORMSPREE_CONTACT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ name: cname, email, message }),
@@ -367,6 +373,159 @@ export function ContactForm({ t }) {
       >
         <Send size={15} strokeWidth={2} />
         {status === "sending" ? t.contactSending : t.contactSend}
+      </button>
+    </form>
+  );
+}
+
+// ── Feedback form (same as Contact but with hidden [FEEDBACK] subject) ────────
+
+/** Collect structured debug snapshot for rich feedback reports */
+function collectDebugSnapshot() {
+  // Settings from localStorage
+  const settings = {
+    language:   localStorage.getItem("speakeasy_lang_v1") ?? "unknown",
+    uiLanguage: localStorage.getItem("speakeasy_ui_lang_v1") ?? "unknown",
+    voiceName:  localStorage.getItem("speakeasy_voice_name_v1")?.replace(/^"|"$/g, "") ?? "",
+    voiceSpeed: localStorage.getItem("speakeasy_voice_speed_v1") ?? "1",
+    voicePitch: localStorage.getItem("speakeasy_voice_pitch_v1") ?? "1",
+    aiModel:    localStorage.getItem("speakeasy_ai_model_v1")?.replace(/^"|"$/g, "") ?? "none",
+    theme:      localStorage.getItem("speakeasy_theme_v1")?.replace(/^"|"$/g, "") ?? "light",
+    hand:       localStorage.getItem("speakeasy_hand_v1")?.replace(/^"|"$/g, "") ?? "right",
+    gender:     localStorage.getItem("speakeasy_gender_v1")?.replace(/^"|"$/g, "") ?? "male",
+    vocabMode:  localStorage.getItem("speakeasy_vocab_mode_v1")?.replace(/^"|"$/g, "") ?? "speak",
+  };
+
+  // Last 5 history phrases
+  let recentPhrases = [];
+  try {
+    const raw = localStorage.getItem("speakeasy_history_v1");
+    if (raw) recentPhrases = JSON.parse(raw).slice(0, 5).map(h => h.text);
+  } catch { /* ignore */ }
+
+  // PWA / install status
+  const isPWA = window.matchMedia?.("(display-mode: standalone)").matches
+    || window.navigator.standalone === true;
+
+  // Device info
+  const device = {
+    userAgent:       navigator.userAgent,
+    platform:        navigator.platform ?? "unknown",
+    language:        navigator.language,
+    languages:       navigator.languages?.join(", ") ?? "",
+    cookieEnabled:   navigator.cookieEnabled,
+    onLine:          navigator.onLine,
+    hardwareConcurrency: navigator.hardwareConcurrency ?? "unknown",
+  };
+
+  // Screen
+  const screen = {
+    width:            window.screen.width,
+    height:           window.screen.height,
+    availWidth:       window.screen.availWidth,
+    availHeight:      window.screen.availHeight,
+    colorDepth:       window.screen.colorDepth,
+    devicePixelRatio: window.devicePixelRatio,
+    orientation:      window.screen.orientation?.type ?? "unknown",
+    innerWidth:       window.innerWidth,
+    innerHeight:      window.innerHeight,
+  };
+
+  // App version (injected at build time)
+  const version = typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev";
+
+  return { version, settings, recentPhrases, isPWA, device, screen };
+}
+
+export function FeedbackForm({ t, debugWords = [] }) {
+  const [cname,   setCname]   = useState("");
+  const [email,   setEmail]   = useState("");
+  const [message, setMessage] = useState("");
+  const [status,  setStatus]  = useState("idle");
+
+  const handleSubmit = useCallback(async (e) => {
+    e.preventDefault();
+    if (!cname.trim() || !email.trim() || !message.trim()) return;
+    setStatus("sending");
+
+    const debug = collectDebugSnapshot();
+    if (debugWords.length > 0) debug.currentSentence = debugWords;
+
+    try {
+      const res = await fetch(FORMSPREE_FEEDBACK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: cname,
+          email,
+          message,
+          _subject: "[FEEDBACK] SpeakEasy",
+          debug,
+        }),
+      });
+      setStatus(res.ok ? "success" : "error");
+    } catch {
+      setStatus("error");
+    }
+  }, [cname, email, message, debugWords]);
+
+  if (status === "success") {
+    return (
+      <div style={{
+        display: "flex", flexDirection: "column", alignItems: "center", gap: 12,
+        padding: "24px 0", textAlign: "center",
+      }}>
+        <CheckCircle2 size={36} style={{ color: "var(--green)" }} strokeWidth={1.5} />
+        <p style={{ fontSize: 15, fontWeight: 600, color: "var(--text)", margin: 0 }}>
+          {t?.contactSuccess ?? "Thank you for your feedback!"}
+        </p>
+      </div>
+    );
+  }
+
+  const inputStyle = {
+    width: "100%", boxSizing: "border-box",
+    padding: "11px 14px",
+    borderRadius: "var(--radius-md)",
+    border: "0.5px solid var(--sep)",
+    background: "var(--bg)",
+    fontSize: 15, color: "var(--text)",
+    outline: "none", fontFamily: "inherit",
+  };
+  const disabled = status === "sending" || !cname.trim() || !email.trim() || !message.trim();
+
+  return (
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <input type="text"  placeholder={t?.contactName    ?? "Your name"}    value={cname}   onChange={e => setCname(e.target.value)}   required style={inputStyle} />
+      <input type="email" placeholder={t?.contactEmail   ?? "Your email"}   value={email}   onChange={e => setEmail(e.target.value)}   required style={inputStyle} />
+      <textarea           placeholder={t?.contactMessage ?? "Your feedback"} value={message} onChange={e => setMessage(e.target.value)} required rows={4}
+        style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }}
+      />
+      {status === "error" && (
+        <div style={{
+          display: "flex", alignItems: "center", gap: 8,
+          padding: "10px 14px", borderRadius: "var(--radius-md)",
+          background: "rgba(255,59,48,0.08)", color: "var(--red, #FF3B30)",
+          fontSize: 13, fontWeight: 600,
+        }}>
+          <AlertCircle size={15} strokeWidth={2} />
+          {t?.contactError ?? "Something went wrong. Please try again."}
+        </div>
+      )}
+      <button
+        type="submit" disabled={disabled}
+        style={{
+          padding: "13px", borderRadius: "var(--radius-lg)", border: "none",
+          background: disabled ? "var(--sep)" : "var(--tint)",
+          color: disabled ? "var(--text-4)" : "#fff",
+          fontSize: 15, fontWeight: 700,
+          cursor: disabled ? "default" : "pointer",
+          display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+          transition: "all 0.15s",
+        }}
+      >
+        <Send size={15} strokeWidth={2} />
+        {status === "sending" ? (t?.contactSending ?? "Sending…") : (t?.contactSend ?? "Send Feedback")}
       </button>
     </form>
   );

@@ -356,17 +356,18 @@ export default memo(function SmartKeyboard({
               onClick={() => { haptic(); handleStarter(head); }}
               aria-label={`Say "${head}"`}
               style={{
-                padding: "9px 16px", borderRadius: 20,
+                padding: "8px 16px", borderRadius: 22,
                 border: "none",
-                minHeight: 44,
+                minHeight: 40,
                 background: "var(--tint)",
                 color: "#fff",
                 fontSize: 15, fontWeight: 700,
                 cursor: "pointer", whiteSpace: "nowrap",
                 WebkitTapHighlightColor: "transparent",
                 touchAction: "manipulation",
-                boxShadow: "0 2px 6px rgba(59,155,143,0.3)",
-                transition: "transform 0.1s",
+                boxShadow: "0 2px 8px rgba(59,155,143,0.32)",
+                transition: "transform 0.08s",
+                letterSpacing: "0.01em",
               }}
             >
               {head}
@@ -385,7 +386,7 @@ export default memo(function SmartKeyboard({
         }}>
           <span style={{
             fontSize: 11, fontWeight: 700, color: "var(--text-3)",
-            alignSelf: "center", flexShrink: 0, marginRight: 4,
+            alignSelf: "center", flexShrink: 0, marginRight: 2,
           }}>▸</span>
           {activeStarter.map(cont => (
             <button
@@ -394,16 +395,16 @@ export default memo(function SmartKeyboard({
               onClick={() => { haptic(); handleAccept(cont); }}
               aria-label={`Add "${cont}"`}
               style={{
-                padding: "8px 16px", borderRadius: 18,
+                padding: "7px 16px", borderRadius: 20,
                 border: "2px solid var(--tint)",
-                minHeight: 44,
+                minHeight: 40,
                 background: "var(--tint-soft)",
                 color: "var(--tint)",
                 fontSize: 15, fontWeight: 700,
                 cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
                 WebkitTapHighlightColor: "transparent",
                 touchAction: "manipulation",
-                transition: "transform 0.1s",
+                transition: "transform 0.08s",
               }}
             >
               {cont}
@@ -418,22 +419,27 @@ export default memo(function SmartKeyboard({
         role="listbox"
         aria-label="Word suggestions"
         style={{
-          display: "flex", gap: 6, padding: "8px 10px",
+          display: "flex", gap: 6, padding: "7px 10px",
           overflowX: "auto", flexShrink: 0,
           scrollbarWidth: "none",
           WebkitOverflowScrolling: "touch",
           borderBottom: "0.5px solid var(--sep)",
-          minHeight: 44,
+          minHeight: 52,
+          alignItems: "center",
+          background: hasKeys ? "var(--tint-soft)" : "var(--bg)",
+          transition: "background 0.15s",
         }}
       >
         {hasKeys && (
           <span style={{
-            fontSize: 11, fontWeight: 800, color: "var(--text-3)",
+            fontSize: 12, fontWeight: 800, color: "var(--tint)",
             alignSelf: "center", fontFamily: "monospace",
             padding: "4px 8px", borderRadius: 8,
-            background: "var(--surface)", flexShrink: 0,
+            background: "rgba(59,155,143,0.1)",
+            flexShrink: 0,
+            letterSpacing: "0.08em",
           }}>
-            {keySeq.map(ki => layout[ki]?.[0] ?? "?").join("")}
+            {keySeq.map(ki => layout[ki]?.[0] ?? "?").join("")}▋
           </span>
         )}
         {stripItems.length === 0 && hasKeys && (
@@ -456,11 +462,13 @@ export default memo(function SmartKeyboard({
             onClick={() => { haptic(); handleAccept(word); }}
             aria-label={`${hasKeys ? "Select" : "Add"} ${word}`}
             style={{
-              padding: "8px 16px", borderRadius: 18,
-              border: hasKeys && i === 0 ? "none" : "1.5px solid var(--sep-opaque)",
-              minHeight: 44,
+              padding: "7px 16px", borderRadius: 20,
+              border: hasKeys && i === 0
+                ? "none"
+                : "1.5px solid var(--sep-opaque)",
+              minHeight: 40,
               background: hasKeys
-                ? (i === 0 ? "var(--tint)" : "var(--tint-soft)")
+                ? (i === 0 ? "var(--tint)" : "rgba(59,155,143,0.15)")
                 : "var(--surface)",
               color: hasKeys
                 ? (i === 0 ? "#fff" : "var(--tint)")
@@ -469,8 +477,10 @@ export default memo(function SmartKeyboard({
               cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
               WebkitTapHighlightColor: "transparent",
               touchAction: "manipulation",
-              boxShadow: hasKeys && i === 0 ? "0 2px 8px rgba(0,0,0,0.15)" : "none",
-              transition: "transform 0.1s",
+              boxShadow: hasKeys && i === 0
+                ? "0 2px 10px rgba(59,155,143,0.35)"
+                : "none",
+              transition: "transform 0.08s",
             }}
           >
             {word}
@@ -482,7 +492,8 @@ export default memo(function SmartKeyboard({
       <div style={{
         flex: 1, display: "flex", flexDirection: "column",
         justifyContent: "center",
-        gap: 6, padding: "6px 5px",
+        gap: 7, padding: "6px 6px 4px",
+        background: "var(--bg)",
       }}>
         {numMode ? (
           /* ── Number pad mode — accumulate digits, confirm to commit ── */
@@ -638,6 +649,7 @@ export default memo(function SmartKeyboard({
             onClick={toggleSpelling}
           />
 
+          {/* Space / accept bar */}
           <button
             className="sk-key"
             onClick={() => {
@@ -651,15 +663,24 @@ export default memo(function SmartKeyboard({
               : "Space"}
             style={{
               flex: 1, maxWidth: 240,
-              height: 52, borderRadius: 12,
-              border: "1.5px solid var(--sep-opaque)",
-              background: "var(--surface)",
-              color: hasKeys ? "var(--tint)" : "var(--text-3)",
+              height: 52, borderRadius: 14,
+              border: hasKeys
+                ? "2px solid var(--tint)"
+                : "1px solid var(--sep-opaque)",
+              background: hasKeys
+                ? "var(--tint)"
+                : "var(--elevated, var(--surface))",
+              color: hasKeys ? "#fff" : "var(--text-3)",
               fontSize: hasKeys ? 16 : 14,
-              fontWeight: hasKeys ? 700 : 600,
+              fontWeight: hasKeys ? 800 : 600,
               cursor: "pointer",
               WebkitTapHighlightColor: "transparent",
               touchAction: "manipulation",
+              boxShadow: hasKeys
+                ? "0 3px 10px rgba(59,155,143,0.35)"
+                : "0 1px 3px rgba(0,0,0,0.07)",
+              transition: "all 0.12s",
+              letterSpacing: hasKeys ? "0.01em" : "0.04em",
             }}
           >
             {hasKeys && t9Candidates.length > 0
@@ -669,8 +690,8 @@ export default memo(function SmartKeyboard({
 
           <KeyBtn
             label={words.length > 0
-              ? <Volume2 size={18} strokeWidth={2} />
-              : <CornerDownLeft size={18} strokeWidth={2} />}
+              ? <Volume2 size={20} strokeWidth={2} />
+              : <CornerDownLeft size={20} strokeWidth={2} />}
             isAccent
             small
             ariaLabel={words.length > 0 ? "Speak sentence" : "Submit"}
@@ -681,13 +702,13 @@ export default memo(function SmartKeyboard({
 
       <style>{`
         @keyframes skFadeIn {
-          from { opacity: 0; transform: scale(0.92); }
+          from { opacity: 0; transform: scale(0.88); }
           to   { opacity: 1; transform: scale(1); }
         }
         .sk-key:active {
-          transform: scale(0.90) !important;
-          filter: brightness(0.85);
-          transition: transform 0.04s, filter 0.04s !important;
+          transform: scale(0.88) !important;
+          filter: brightness(0.82);
+          transition: transform 0.05s, filter 0.05s !important;
         }
         .sk-key:focus-visible {
           outline: 3px solid var(--tint);
@@ -695,16 +716,14 @@ export default memo(function SmartKeyboard({
           z-index: 1;
         }
         .sk-pred:active {
-          transform: scale(0.93);
-          filter: brightness(0.9);
-        }
-        .sk-pred:focus-visible {
-          outline: 3px solid var(--tint);
-          outline-offset: 2px;
+          transform: scale(0.91);
+          filter: brightness(0.88);
+          transition: transform 0.05s !important;
         }
         .sk-starter:active {
-          transform: scale(0.93);
+          transform: scale(0.91);
           filter: brightness(0.88);
+          transition: transform 0.05s !important;
         }
         .sk-starter:focus-visible {
           outline: 3px solid var(--tint);
@@ -735,27 +754,32 @@ function KeyBtn({ label, isAccent, isHighlighted, small, onClick, onPointerDown,
         minWidth: small ? 52 : 64,
         flex: small ? "0 0 auto" : 1,
         height: 56,
-        borderRadius: 12,
+        borderRadius: 14,
         border: isHighlighted
           ? "2.5px solid var(--tint)"
-          : "1.5px solid var(--sep-opaque)",
+          : isAccent
+            ? "none"
+            : "1px solid var(--sep-opaque)",
         background: isAccent
           ? "var(--tint)"
           : isHighlighted
             ? "var(--tint-soft)"
-            : "var(--surface)",
-        color: isAccent ? "#fff" : "var(--text)",
-        fontSize: typeof label === "string" ? 18 : 15,
-        fontWeight: 700,
+            : "var(--elevated, var(--surface))",
+        color: isAccent ? "#fff" : isHighlighted ? "var(--tint)" : "var(--text)",
+        fontSize: typeof label === "string" ? 17 : 15,
+        fontWeight: isHighlighted ? 800 : 700,
         cursor: "pointer",
         display: "flex", alignItems: "center", justifyContent: "center",
         WebkitTapHighlightColor: "transparent",
         touchAction: "manipulation",
-        transition: "transform 0.1s, background 0.12s, box-shadow 0.12s",
+        transition: "transform 0.08s, background 0.1s, box-shadow 0.1s",
         boxShadow: isAccent
-          ? "0 2px 6px rgba(59,155,143,0.3)"
-          : "0 1px 3px rgba(0,0,0,0.06)",
-        letterSpacing: typeof label === "string" && label.includes("·") ? "0.04em" : 0,
+          ? "0 3px 10px rgba(59,155,143,0.38)"
+          : isHighlighted
+            ? "0 0 0 3px rgba(59,155,143,0.15)"
+            : "0 1px 4px rgba(0,0,0,0.08), 0 0 0 0.5px rgba(0,0,0,0.05)",
+        letterSpacing: typeof label === "string" && label.includes("·") ? "0.05em" : 0,
+        textTransform: typeof label === "string" ? "uppercase" : undefined,
       }}
     >
       {label}

@@ -19,7 +19,7 @@ export default memo(function PhraseGrid({
     <div style={{
       flex: 1,
       overflowY: "auto",
-      padding: "12px 14px 20px",
+      padding: "12px 14px 88px",
       background: "var(--bg)",
       WebkitOverflowScrolling: "touch",
     }}>

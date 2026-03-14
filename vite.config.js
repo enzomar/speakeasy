@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
+const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'))
+
 // VitePWA is optional — dev works without it; only needed for production builds.
 let VitePWA = null
 try { ({ VitePWA } = await import('vite-plugin-pwa')) } catch { /* not installed */ }
@@ -162,6 +164,11 @@ export default defineConfig({
         },
       },
     },
+  },
+
+  define: {
+    // Expose package.json version to the app as a global constant
+    __APP_VERSION__: JSON.stringify(pkg.version),
   },
 
   // WebAssembly support (required for @xenova/transformers ONNX runtime)

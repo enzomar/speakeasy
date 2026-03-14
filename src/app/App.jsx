@@ -5,7 +5,7 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import {
   Grid3X3, Clock, Settings, User,
-  Cpu, Ear, HelpCircle, ArrowLeft, Keyboard, Siren, Hand
+  Cpu, Ear, HelpCircle, ArrowLeft, Keyboard, Siren, Hand, MessageSquarePlus
 } from "lucide-react";
 
 // App-level
@@ -40,6 +40,7 @@ import HelpModal         from "../shared/ui/HelpModal";
 import SignLanguageModal from "../shared/ui/SignLanguageModal";
 import AIModelModal      from "../features/settings/AIModelModal";
 import InstallPrompt     from "../shared/ui/InstallPrompt";
+import { FeedbackForm }  from "../shared/ui/settingsUI";
 import Onboarding, { ONBOARDING_KEY } from "../features/onboarding/Onboarding";
 import SmartKeyboard     from "../features/board/SmartKeyboard";
 import VocabToolbar, { VOCAB_DATA, VOCAB_TABS } from "../features/board/VocabToolbar";
@@ -457,6 +458,13 @@ export default function App() {
     // ── Free-tier voice limit check (skipped in demo) ──────────────────────
     if (!IS_DEMO && !consumeVoice()) return; // limit reached → paywall is shown by consumeVoice
     haptic();
+    // Reset grid immediately so the user can start building the next sentence
+    // right after tapping speak — no need to wait for TTS to fire onStart.
+    setWords([]);
+    setTapContext(null);
+    setEmotion("neutral");
+    setActiveCategory(null);
+    aiClearSuggestions();
     speak(sentence, {
       lang: ttsLang.ttsLang,
       rate: voiceSpeed,
@@ -468,11 +476,6 @@ export default function App() {
         setLastSpoken(sentence);
         setSpokenToast(sentence);
         setTimeout(() => setSpokenToast(""), 2500);
-        setWords([]);
-        setTapContext(null);
-        setEmotion("neutral");
-        setActiveCategory(null);
-        aiClearSuggestions();
       },
     });
   }, [wordTexts, speaking, speak, saveUtterance, learn, ttsLang, voiceSpeed, voicePitch, voiceName, aiClearSuggestions, consumeVoice]);
@@ -528,7 +531,8 @@ export default function App() {
   const handleHistorySpeak = useCallback((text) => handleSpeak(text), [handleSpeak]);
 
   // ── AI status dot ─────────────────────────────────────────────────────────
-  const [showAIModal, setShowAIModal] = useState(false);
+  const [showAIModal,      setShowAIModal]      = useState(false);
+  const [showFeedbackModal, setShowFeedbackModal] = useState(false);
 
   const aiIsNone = aiModel === "none";
   const aiDotColor =
@@ -547,10 +551,12 @@ export default function App() {
     llmStatus === "wifi_blocked" ? "Wi-Fi only" :
     llmStatus === "unsupported"  ? "n-gram" : "n-gram";
 
-  // ── Listen glow mode ───────────────────────────────────────────
-  // "dot" = orbiting dot (passive listening / idle)
-  // "full" = full border glow (active transcript states)
-  const listenGlowMode = (() => {
+  // ── Glow mode ────────────────────────────────────────────────────
+  // "speaking" = green border glow when TTS is active
+  // "dot"      = orbiting dot (passive listening / idle)
+  // "full"     = full border glow (active listen transcript states)
+  const glowMode = (() => {
+    if (speaking) return "speaking";
     if (!listenMode.active) return null;
     const s = listenMode.state;
     if (s === "wake_detected" || s === "recording" || s === "transcribing" ||
@@ -630,10 +636,10 @@ export default function App() {
       position:      "relative",
     }}>
 
-      {/* ── Alexa-style listen glow ── */}
-      {listenGlowMode && (
+      {/* ── Border glow: TTS speaking (green) or listen mode (blue) ── */}
+      {glowMode && (
         <div
-          className={`listen-glow listen-glow--${listenGlowMode}`}
+          className={`listen-glow listen-glow--${glowMode}`}
           aria-hidden="true"
         />
       )}
@@ -646,42 +652,35 @@ export default function App() {
           borderBottom:   "var(--glass-border)",
           padding:        "var(--safe-top, 0) 8px 8px",
           display:        "flex",
+          position:       "relative",
+          overflow:       "hidden",
           alignItems:     "center",
           justifyContent: "center",
           flexShrink:     0,
           zIndex:         20,
           minHeight:      64,
         }}>
-          {/* Icons — distributed evenly across full width */}
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-evenly", width: "100%" }}>
+          {/* Icons — left-aligned with consistent gap */}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", gap: 8, width: "100%", paddingLeft: 4 }}>
+            {!IS_DEMO && (
             <button
-              onClick={() => { if (!IS_DEMO) setShowAIModal(true); }}
+              onClick={() => setShowAIModal(true)}
               style={{
                 width: 48, height: 54, borderRadius: 14,
                 background: "var(--elevated)", border: "0.5px solid var(--sep)",
                 display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
-                cursor: IS_DEMO ? "default" : "pointer",
+                cursor: "pointer",
                 WebkitTapHighlightColor: "transparent",
                 touchAction: "manipulation",
                 position: "relative",
                 overflow: "hidden",
-                opacity: IS_DEMO ? 0.65 : 1,
               }}
               aria-label={`AI model status: ${aiStatusLabel}`}
             >
-              {IS_DEMO && (
-                <div style={{
-                  position: "absolute", top: 0, left: 0,
-                  width: "100%", height: "100%",
-                  pointerEvents: "none",
-                  background: "linear-gradient(135deg, transparent 42%, rgba(220,53,69,0.55) 42%, rgba(220,53,69,0.55) 58%, transparent 58%)",
-                  borderRadius: 14,
-                  zIndex: 2,
-                }} />
-              )}
               <Cpu size={16} strokeWidth={2} style={{ color: aiDotColor, flexShrink: 0 }} />
               <span style={{ fontSize: 8, fontWeight: 700, color: aiDotColor, lineHeight: 1 }}>AI</span>
             </button>
+            )}
 
             {/* ⚠️ SOS — always-visible emergency shortcut */}
             <button
@@ -703,41 +702,31 @@ export default function App() {
             </button>
 
             {/* Listen Mode toggle — activates like Alexa */}
+            {!IS_DEMO && (
             <button
               onClick={() => {
-                if (IS_DEMO) return;
                 haptic();
                 if (listenMode.active) listenMode.deactivate();
                 else void listenMode.activate();
               }}
-              aria-label={IS_DEMO ? "Listen disabled (demo)" : listenMode.active ? (ui.listenStop ?? "Stop Listening") : (ui.listenStart ?? "Start Listening")}
+              aria-label={listenMode.active ? (ui.listenStop ?? "Stop Listening") : (ui.listenStart ?? "Start Listening")}
               style={{
                 width: 48, height: 54, borderRadius: 14,
-                background: IS_DEMO ? "var(--elevated)" : listenMode.active ? "var(--tint)" : "var(--elevated)",
-                border: `0.5px solid ${!IS_DEMO && listenMode.active ? "var(--tint)" : "var(--sep)"}`,
+                background: listenMode.active ? "var(--tint)" : "var(--elevated)",
+                border: `0.5px solid ${listenMode.active ? "var(--tint)" : "var(--sep)"}`,
                 display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
-                cursor: IS_DEMO ? "default" : "pointer", transition: "all 0.18s ease",
-                color: IS_DEMO ? "var(--text-3)" : listenMode.active ? "#fff" : "var(--text-3)",
+                cursor: "pointer", transition: "all 0.18s ease",
+                color: listenMode.active ? "#fff" : "var(--text-3)",
                 position: "relative",
                 touchAction: "manipulation",
                 overflow: "hidden",
-                opacity: IS_DEMO ? 0.65 : 1,
-                animation: !IS_DEMO && listenMode.state === "listening" ? "pulse 2s ease infinite" : "none",
+                animation: listenMode.state === "listening" ? "pulse 2s ease infinite" : "none",
               }}
             >
-              {IS_DEMO && (
-                <div style={{
-                  position: "absolute", top: 0, left: 0,
-                  width: "100%", height: "100%",
-                  pointerEvents: "none",
-                  background: "linear-gradient(135deg, transparent 42%, rgba(220,53,69,0.55) 42%, rgba(220,53,69,0.55) 58%, transparent 58%)",
-                  borderRadius: 14,
-                  zIndex: 2,
-                }} />
-              )}
               <Ear size={20} strokeWidth={1.8} />
               <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>{ui.headerListen ?? "Listen"}</span>
             </button>
+            )}
 
             {/* Sign Language Guide button */}
             <button
@@ -775,7 +764,57 @@ export default function App() {
               <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>{ui.headerHelp ?? "Help"}</span>
             </button>
 
+            {/* Feedback button */}
+            <button
+              onClick={() => { haptic(); setShowFeedbackModal(true); }}
+              aria-label="Send Feedback"
+              style={{
+                width: 48, height: 54, borderRadius: 14,
+                background: "var(--elevated)",
+                border: "0.5px solid var(--sep)",
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2,
+                cursor: "pointer", transition: "all 0.18s ease",
+                color: "var(--text-3)",
+                touchAction: "manipulation",
+              }}
+            >
+              <MessageSquarePlus size={20} strokeWidth={1.8} />
+              <span style={{ fontSize: 8, fontWeight: 700, lineHeight: 1 }}>Feedback</span>
+            </button>
+
           </div>
+
+          {/* ── DEMO mode diagonal ribbon ── */}
+          {IS_DEMO && (
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute", top: 0, right: 0,
+                width: 86, height: 86,
+                overflow: "hidden",
+                pointerEvents: "none",
+                zIndex: 30,
+              }}
+            >
+              <div style={{
+                position: "absolute",
+                top: 20, right: -26,
+                width: 110,
+                background: "#E03131",
+                color: "#fff",
+                fontSize: 9,
+                fontWeight: 900,
+                textAlign: "center",
+                padding: "4px 0",
+                transform: "rotate(45deg)",
+                letterSpacing: "0.12em",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.25)",
+                userSelect: "none",
+              }}>
+                DEMO
+              </div>
+            </div>
+          )}
         </header>
 
         {/* ─── Spoken-sentence confirmation toast ─── */}
@@ -913,7 +952,7 @@ export default function App() {
                 ) : (
                   /* ── Quick-phrase sub-category picker (2×2 grid) ── */
                   <>
-                    <SubViewHeader onBack={handleCategoryBack} title={ui?.catQuick?.replace("\n", " ") ?? "Quick Phrases"} emoji="⭐" bg="#FFF9DB" />
+                    <SubViewHeader onBack={handleCategoryBack} title={ui?.catQuick?.replace("\n", " ") ?? "Quick Phrases"} emoji="⚡" bg="#FFF9DB" />
                     <div style={{ flex: 1, overflow: "auto", WebkitOverflowScrolling: "touch", padding: 14 }}>
                       <div style={{
                         display: "grid",
@@ -1151,6 +1190,47 @@ export default function App() {
           langCode={uiLangCode}
           onResetOnboarding={resetOnboarding}
         />
+      )}
+
+      {/* Feedback modal */}
+      {showFeedbackModal && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Send Feedback"
+          onClick={e => { if (e.target === e.currentTarget) setShowFeedbackModal(false); }}
+          style={{
+            position: "fixed", inset: 0, zIndex: 9000,
+            background: "rgba(0,0,0,0.45)",
+            display: "flex", alignItems: "flex-end", justifyContent: "center",
+            backdropFilter: "blur(4px)",
+          }}
+        >
+          <div style={{
+            width: "100%", maxWidth: 520,
+            background: "var(--surface)",
+            borderRadius: "20px 20px 0 0",
+            padding: "20px 20px calc(20px + var(--safe-bottom, 0px))",
+            boxShadow: "0 -4px 32px rgba(0,0,0,0.18)",
+          }}>
+            {/* handle */}
+            <div style={{ width: 36, height: 4, borderRadius: 2, background: "var(--sep)", margin: "0 auto 16px" }} />
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
+              <span style={{ fontSize: 18, fontWeight: 700, color: "var(--text)" }}>Send Feedback</span>
+              <button
+                onClick={() => setShowFeedbackModal(false)}
+                style={{
+                  width: 32, height: 32, borderRadius: 16,
+                  background: "var(--elevated)", border: "0.5px solid var(--sep)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  cursor: "pointer", color: "var(--text-3)", fontSize: 18, lineHeight: 1,
+                }}
+                aria-label="Close"
+              >×</button>
+            </div>
+            <FeedbackForm t={ui} debugWords={wordTexts} />
+          </div>
+        </div>
       )}
 
       {/* PWA install prompt */}

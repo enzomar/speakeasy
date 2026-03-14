@@ -23,7 +23,7 @@ export const HOME_CATEGORIES = [
   { id: "place",     emoji: "📍",  label: "PLACE",          color: "#7048E8", bg: "#F3F0FF", mapTo: "places" },
   { id: "question",  emoji: "❓",  label: "QUESTION",       color: "#5C940D", bg: "#F4FCE3", mapTo: "questions" },
   { id: "describe",  emoji: "🎨",  label: "DESCRIBE",       color: "#862E9C", bg: "#F8F0FC", mapTo: "descriptors" },
-  { id: "quick",     emoji: "⭐",  label: "QUICK\nPHRASES", color: "#E67700", bg: "#FFF9DB", action: "quick" },
+  { id: "quick",     emoji: "⚡",  label: "QUICK\nPHRASES", color: "#E67700", bg: "#FFF9DB", action: "quick" },
   { id: "favorites", emoji: "💛",  label: "FAVORITES",      color: "#F59F00", bg: "#FFF9DB", action: "favorites" },
 ];
 

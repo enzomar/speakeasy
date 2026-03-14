@@ -63,25 +63,33 @@ export const POS_DICT = {
   blanket:     { pos: "noun", gs: false },
   clean:       { pos: "adjective", gs: true  },
   break:       { pos: "noun", gs: false },
+  quiet:       { pos: "noun", gs: false },  // "I need quiet" — noun sense
+  space:       { pos: "noun", gs: false },  // "I need space" — noun sense
+  change:      { pos: "noun", gs: false },  // "I need a change" — noun sense
 
-  // ── PEOPLE (L1) — L2 pronouns / nouns ────────────────────────────────────
-  I:           { pos: "noun", gs: false },
-  you:         { pos: "noun", gs: false },
-  we:          { pos: "noun", gs: false },
-  they:        { pos: "noun", gs: false },
-  mom:         { pos: "noun", gs: false },
-  dad:         { pos: "noun", gs: false },
-  brother:     { pos: "noun", gs: false },
-  sister:      { pos: "noun", gs: false },
-  grandma:     { pos: "noun", gs: false },
-  grandpa:     { pos: "noun", gs: false },
-  baby:        { pos: "noun", gs: false },
-  friend:      { pos: "noun", gs: false },
-  teacher:     { pos: "noun", gs: false },
-  family:      { pos: "noun", gs: false },
-  caregiver:   { pos: "noun", gs: false },
-  doctor:      { pos: "noun", gs: false },
-  everyone:    { pos: "noun", gs: false },
+  // ── PEOPLE (L1) — L2 pronouns / named people ─────────────────────────────
+  // All people use pos=phrase so they get social templates ("mom!", "mom please")
+  // instead of noun/request templates ("Please give me mom").
+  // "i" key is lowercase because getPOS() always lowercases before lookup.
+  i:           { pos: "phrase", gs: false },
+  you:         { pos: "phrase", gs: false },
+  we:          { pos: "phrase", gs: false },
+  they:        { pos: "phrase", gs: false },
+  mom:         { pos: "phrase", gs: false },
+  dad:         { pos: "phrase", gs: false },
+  brother:     { pos: "phrase", gs: false },
+  sister:      { pos: "phrase", gs: false },
+  grandma:     { pos: "phrase", gs: false },
+  grandpa:     { pos: "phrase", gs: false },
+  baby:        { pos: "phrase", gs: false },
+  friend:      { pos: "phrase", gs: false },
+  teacher:     { pos: "phrase", gs: false },
+  family:      { pos: "phrase", gs: false },
+  caregiver:   { pos: "phrase", gs: false },
+  doctor:      { pos: "phrase", gs: false },
+  everyone:    { pos: "phrase", gs: false },
+  nurse:       { pos: "phrase", gs: false },
+  therapist:   { pos: "phrase", gs: false },
 
   // ── DO (L1) — L2 verbs ──────────────────────────────────────────────────
   go:          { pos: "verb", gs: false },
@@ -118,7 +126,8 @@ export const POS_DICT = {
   "thank you":       { pos: "phrase", gs: false },
   sorry:             { pos: "phrase", gs: false },
   ok:                { pos: "phrase", gs: false },
-  "I don't know":    { pos: "phrase", gs: false },
+  "i don't know":    { pos: "phrase", gs: false },
+  understand:        { pos: "verb",   gs: false },
   tell:              { pos: "verb",   gs: false },
   ask:               { pos: "verb",   gs: false },
   repeat:            { pos: "verb",   gs: false },
@@ -177,6 +186,74 @@ export const POS_DICT = {
   feel:        { pos: "verb",   gs: false },
   fix:         { pos: "verb",   gs: false },
 
+  // ── QUESTION L3 v4 — richer question context labels ────────────────────
+  wrong:            { pos: "adjective", gs: false },
+  "for lunch":      { pos: "phrase",    gs: false },
+  "for dinner":     { pos: "phrase",    gs: false },
+  "your name":      { pos: "phrase",    gs: false },
+  "do this":        { pos: "phrase",    gs: false },
+  "say it":         { pos: "phrase",    gs: false },
+  "spell it":       { pos: "phrase",    gs: false },
+  "use it":         { pos: "phrase",    gs: false },
+  "get there":      { pos: "phrase",    gs: false },
+  "you feel":       { pos: "phrase",    gs: false },
+  "fix it":         { pos: "phrase",    gs: false },
+  "open it":        { pos: "phrase",    gs: false },
+  lunch:            { pos: "noun",      gs: false },
+  "go home":        { pos: "phrase",    gs: false },
+  bedtime:          { pos: "noun",      gs: false },
+  "the doctor":     { pos: "phrase",    gs: false },
+  recess:           { pos: "noun",      gs: false },
+  "is this over":   { pos: "phrase",    gs: false },
+  "does it start":  { pos: "phrase",    gs: false },
+  "did this":       { pos: "phrase",    gs: false },
+  "is talking":     { pos: "phrase",    gs: false },
+  "is coming":      { pos: "phrase",    gs: false },
+  "is that":        { pos: "phrase",    gs: false },
+  "can help":       { pos: "phrase",    gs: false },
+  "is it for":      { pos: "phrase",    gs: false },
+  "can't i":        { pos: "phrase",    gs: false },
+  crying:           { pos: "verb",      gs: false },
+  leaving:          { pos: "verb",      gs: false },
+  "help me":        { pos: "phrase",    gs: false },
+  "show me":        { pos: "phrase",    gs: false },
+  "tell me":        { pos: "phrase",    gs: false },
+  "give me":        { pos: "phrase",    gs: false },
+  "sit here":       { pos: "phrase",    gs: false },
+  "do you have":    { pos: "phrase",    gs: false },
+  "is it":          { pos: "phrase",    gs: false },
+
+  // ── PEOPLE L3 v4 — predicate labels ────────────────────────────────────
+  "is here":        { pos: "phrase",    gs: false },
+  "is gone":        { pos: "phrase",    gs: false },
+  "wants":          { pos: "verb",      gs: false },
+  "needs":          { pos: "verb",      gs: false },
+  "said":           { pos: "verb",      gs: false },
+  "helps":          { pos: "verb",      gs: false },
+  "is happy":       { pos: "phrase",    gs: false },
+  "is angry":       { pos: "phrase",    gs: false },
+  "is sick":        { pos: "phrase",    gs: false },
+  "where?":         { pos: "phrase",    gs: false },
+  call:             { pos: "verb",      gs: false },
+
+  // ── PEOPLE L3 v4 — self-state labels ───────────────────────────────────
+  "am ready":       { pos: "phrase",    gs: false },
+  "am here":        { pos: "phrase",    gs: false },
+  "am coming":      { pos: "phrase",    gs: false },
+  "am leaving":     { pos: "phrase",    gs: false },
+  "am hungry":      { pos: "phrase",    gs: false },
+  "am thirsty":     { pos: "phrase",    gs: false },
+  "am tired":       { pos: "phrase",    gs: false },
+  "am ok":          { pos: "phrase",    gs: false },
+  "am not ok":      { pos: "phrase",    gs: false },
+  "am busy":        { pos: "phrase",    gs: false },
+  "am waiting":     { pos: "phrase",    gs: false },
+  "am lost":        { pos: "phrase",    gs: false },
+
+  // ── DO v4 — new verb labels ────────────────────────────────────────────
+  make:             { pos: "verb",      gs: false },
+  nice:             { pos: "adjective", gs: true  },
+
   // ── DESCRIBE (L1) — L2 adjectives ───────────────────────────────────────
   big:         { pos: "adjective", gs: true  },
   small:       { pos: "adjective", gs: true  },
@@ -191,7 +268,7 @@ export const POS_DICT = {
   good:        { pos: "adjective", gs: true  },
   bad:         { pos: "adjective", gs: true  },
   different:   { pos: "adjective", gs: true  },
-  same:        { pos: "adjective", gs: true  },
+  "the same":  { pos: "adjective", gs: true  },
   broken:      { pos: "adjective", gs: true  },
   // Container L2s (DESCRIBE > color/number — {mod} carries the real content)
   color:       { pos: "color",     gs: false },
@@ -277,15 +354,26 @@ export const POS_DICT = {
   gym:         { pos: "noun", gs: false },
   library:     { pos: "noun", gs: false },
   cafeteria:   { pos: "noun", gs: false },
-  playground:  { pos: "noun", gs: false },
-  room:        { pos: "noun", gs: false },
-  clinic:      { pos: "noun", gs: false },
-  "waiting room": { pos: "noun", gs: false },
-  pharmacy:    { pos: "noun", gs: false },
-  street:      { pos: "noun", gs: false },
-  beach:       { pos: "noun", gs: false },
-  pool:        { pos: "noun", gs: false },
-  field:       { pos: "noun", gs: false },
+  playground:      { pos: "noun", gs: false },
+  "therapy room":  { pos: "noun", gs: false },
+  room:            { pos: "noun", gs: false },
+  clinic:          { pos: "noun", gs: false },
+  "waiting room":  { pos: "noun", gs: false },
+  pharmacy:        { pos: "noun", gs: false },
+  "x-ray":         { pos: "noun", gs: false },
+  supermarket:     { pos: "noun", gs: false },
+  bakery:          { pos: "noun", gs: false },
+  street:          { pos: "noun", gs: false },
+  beach:           { pos: "noun", gs: false },
+  pool:            { pos: "noun", gs: false },
+  field:           { pos: "noun", gs: false },
+  // Park spots
+  swing:           { pos: "noun", gs: false },
+  slide:           { pos: "noun", gs: false },
+  sandbox:         { pos: "noun", gs: false },
+  bench:           { pos: "noun", gs: false },
+  // Car spots
+  seat:            { pos: "noun", gs: false },
 
   // ── Compat extras (from old flat grid) ──────────────────────────────────
   pain:        { pos: "noun", gs: false },
@@ -535,6 +623,9 @@ export const NOUN_GRAMMAR = {
     rest:      { g: "m", def: "il riposo",   indef: "un riposo",    part: "riposo"         },
     hug:       { g: "m", def: "l'abbraccio", indef: "un abbraccio", part: "un abbraccio"   },
     "break":   { g: "f", def: "la pausa",    indef: "una pausa",    part: "una pausa"      },
+    quiet:     { g: "f", def: "la calma",    indef: "della calma",  part: "calma"          },
+    space:     { g: "m", def: "lo spazio",   indef: "dello spazio", part: "spazio"         },
+    change:    { g: "m", def: "il cambio",   indef: "un cambio",    part: "un cambio"      },
     // Food L3
     apple:     { g: "f", def: "la mela",     indef: "una mela",     part: "una mela"       },
     pasta:     { g: "f", def: "la pasta",    indef: "della pasta",  part: "della pasta"    },
@@ -631,6 +722,9 @@ export const NOUN_GRAMMAR = {
     rest:      { g: "m", def: "le repos",      indef: "du repos",      part: "du repos"       },
     hug:       { g: "m", def: "le câlin",      indef: "un câlin",      part: "un câlin"       },
     "break":   { g: "f", def: "la pause",      indef: "une pause",     part: "une pause"      },
+    quiet:     { g: "m", def: "le calme",      indef: "du calme",      part: "du calme"       },
+    space:     { g: "m", def: "l'espace",      indef: "de l'espace",   part: "de l'espace"    },
+    change:    { g: "m", def: "le changement", indef: "un changement", part: "du changement"  },
     // Food L3
     apple:     { g: "f", def: "la pomme",      indef: "une pomme",     part: "une pomme"      },
     pasta:     { g: "f", def: "les pâtes",     indef: "des pâtes",     part: "des pâtes"      },
@@ -727,6 +821,9 @@ export const NOUN_GRAMMAR = {
     rest:      { g: "m", def: "el descanso",   indef: "un descanso",   part: "un descanso"    },
     hug:       { g: "m", def: "el abrazo",     indef: "un abrazo",     part: "un abrazo"      },
     "break":   { g: "m", def: "el descanso",   indef: "un descanso",   part: "un descanso"    },
+    quiet:     { g: "f", def: "la calma",      indef: "calma",         part: "calma"           },
+    space:     { g: "m", def: "el espacio",    indef: "espacio",       part: "espacio"         },
+    change:    { g: "m", def: "el cambio",     indef: "un cambio",     part: "un cambio"       },
     // Food L3
     apple:     { g: "f", def: "la manzana",    indef: "una manzana",   part: "una manzana"    },
     pasta:     { g: "f", def: "la pasta",      indef: "pasta",         part: "pasta"          },
@@ -823,6 +920,9 @@ export const NOUN_GRAMMAR = {
     rest:      { g: "m", def: "o descanso",    indef: "um descanso",   part: "descanso"       },
     hug:       { g: "m", def: "o abraço",      indef: "um abraço",     part: "um abraço"      },
     "break":   { g: "f", def: "a pausa",       indef: "uma pausa",     part: "uma pausa"      },
+    quiet:     { g: "f", def: "a calma",       indef: "calma",         part: "calma"          },
+    space:     { g: "m", def: "o espaço",      indef: "espaço",        part: "espaço"         },
+    change:    { g: "f", def: "a mudança",     indef: "uma mudança",   part: "uma mudança"    },
     // Food L3
     apple:     { g: "f", def: "a maçã",        indef: "uma maçã",      part: "uma maçã"       },
     pasta:     { g: "f", def: "a massa",       indef: "massa",         part: "massa"          },
@@ -920,6 +1020,9 @@ export const NOUN_GRAMMAR = {
     rest:      { g: "n", def: "rest",             indef: "rest",         part: "some rest"     },
     hug:       { g: "n", def: "the hug",          indef: "a hug",        part: "a hug"         },
     "break":   { g: "n", def: "the break",        indef: "a break",      part: "a break"       },
+    quiet:     { g: "n", def: "quiet",             indef: "quiet",        part: "some quiet"    },
+    space:     { g: "n", def: "the space",        indef: "space",        part: "some space"    },
+    change:    { g: "n", def: "the change",       indef: "a change",     part: "a change"      },
     // Food L3
     apple:     { g: "n", def: "the apple",        indef: "an apple",     part: "an apple"      },
     pasta:     { g: "n", def: "the pasta",         indef: "pasta",        part: "some pasta"    },
@@ -949,14 +1052,25 @@ export const NOUN_GRAMMAR = {
     library:   { g: "n", def: "the library",       indef: "the library",  part: "the library",  loc: "to the library"       },
     cafeteria: { g: "n", def: "the cafeteria",     indef: "the cafeteria", part: "the cafeteria", loc: "to the cafeteria"   },
     playground:{ g: "n", def: "the playground",    indef: "the playground", part: "the playground", loc: "to the playground" },
-    room:      { g: "n", def: "the room",          indef: "the room",     part: "the room",     loc: "to the room"          },
+    "therapy room": { g: "n", def: "the therapy room", indef: "the therapy room", part: "the therapy room", loc: "to the therapy room" },
+    room:      { g: "n", def: "the room",          indef: "the room",     part: "the room",     loc: "to my room"           },
     clinic:    { g: "n", def: "the clinic",        indef: "a clinic",     part: "the clinic",   loc: "to the clinic"        },
     "waiting room": { g: "n", def: "the waiting room", indef: "the waiting room", part: "the waiting room", loc: "to the waiting room" },
     pharmacy:  { g: "n", def: "the pharmacy",     indef: "a pharmacy",   part: "the pharmacy",  loc: "to the pharmacy"     },
+    "x-ray":   { g: "n", def: "x-ray",            indef: "x-ray",        part: "x-ray",         loc: "to x-ray"            },
+    supermarket: { g: "n", def: "the supermarket", indef: "the supermarket", part: "the supermarket", loc: "to the supermarket" },
+    bakery:    { g: "n", def: "the bakery",        indef: "the bakery",   part: "the bakery",    loc: "to the bakery"       },
     street:    { g: "n", def: "the street",        indef: "a street",     part: "the street",   loc: "to the street"        },
     beach:     { g: "n", def: "the beach",         indef: "the beach",    part: "the beach",    loc: "to the beach"         },
     pool:      { g: "n", def: "the pool",          indef: "the pool",     part: "the pool",     loc: "to the pool"          },
     field:     { g: "n", def: "the field",         indef: "a field",      part: "the field",    loc: "to the field"         },
+    // Park spots
+    swing:     { g: "n", def: "the swing",         indef: "the swing",    part: "the swing",    loc: "to the swing"         },
+    slide:     { g: "n", def: "the slide",         indef: "the slide",    part: "the slide",    loc: "to the slide"         },
+    sandbox:   { g: "n", def: "the sandbox",       indef: "the sandbox",  part: "the sandbox",  loc: "to the sandbox"       },
+    bench:     { g: "n", def: "the bench",         indef: "the bench",    part: "the bench",    loc: "to the bench"         },
+    // Car spots
+    seat:      { g: "n", def: "the seat",          indef: "the seat",     part: "the seat",     loc: "to my seat"           },
     // PEOPLE L2
     mom:       { g: "n", def: "mom",           indef: "mom",          part: "mom"           },
     dad:       { g: "n", def: "dad",           indef: "dad",          part: "dad"           },
@@ -1016,6 +1130,11 @@ export const VERB_FORMS = {
     agree:    { "1s": "sono d'accordo", ger: "concordando" },
     disagree: { "1s": "non sono d'accordo", ger: "dissentendo" },
     worry:    { "1s": "mi preoccupo", ger: "preoccupandomi" },
+    understand: { "1s": "capisco",     ger: "capendo" },
+    show:     { "1s": "mostro",      ger: "mostrando" },
+    finish:   { "1s": "finisco",     ger: "finendo" },
+    choose:   { "1s": "scelgo",      ger: "scegliendo" },
+    turn:     { "1s": "giro",        ger: "girando" },
   },
   en: {
     eat:      { "1s": "eat",        ger: "eating"      },
@@ -1053,6 +1172,11 @@ export const VERB_FORMS = {
     agree:    { "1s": "agree",      ger: "agreeing"    },
     disagree: { "1s": "disagree",   ger: "disagreeing" },
     worry:    { "1s": "worry",      ger: "worrying"    },
+    understand: { "1s": "understand", ger: "understanding" },
+    show:     { "1s": "show",       ger: "showing" },
+    finish:   { "1s": "finish",     ger: "finishing" },
+    choose:   { "1s": "choose",     ger: "choosing" },
+    turn:     { "1s": "turn",       ger: "turning" },
   },
   fr: {
     eat:      { "1s": "mange",      ger: "mangeant"    },
@@ -1090,6 +1214,11 @@ export const VERB_FORMS = {
     agree:    { "1s": "suis d'accord", ger: "étant d'accord" },
     disagree: { "1s": "ne suis pas d'accord", ger: "n'étant pas d'accord" },
     worry:    { "1s": "m'inquiète", ger: "s'inquiétant" },
+    understand: { "1s": "comprends",  ger: "comprenant" },
+    show:     { "1s": "montre",     ger: "montrant" },
+    finish:   { "1s": "finis",      ger: "finissant" },
+    choose:   { "1s": "choisis",    ger: "choisissant" },
+    turn:     { "1s": "tourne",     ger: "tournant" },
   },
   es: {
     eat:      { "1s": "como",       ger: "comiendo"    },
@@ -1127,6 +1256,11 @@ export const VERB_FORMS = {
     agree:    { "1s": "estoy de acuerdo", ger: "estando de acuerdo" },
     disagree: { "1s": "no estoy de acuerdo", ger: "no estando de acuerdo" },
     worry:    { "1s": "me preocupo", ger: "preocupándome" },
+    understand: { "1s": "entiendo",    ger: "entendiendo" },
+    show:     { "1s": "muestro",     ger: "mostrando" },
+    finish:   { "1s": "termino",     ger: "terminando" },
+    choose:   { "1s": "elijo",       ger: "eligiendo" },
+    turn:     { "1s": "giro",        ger: "girando" },
   },
   pt: {
     eat:      { "1s": "como",       ger: "comendo"     },
@@ -1164,6 +1298,88 @@ export const VERB_FORMS = {
     agree:    { "1s": "concordo",   ger: "concordando" },
     disagree: { "1s": "discordo",   ger: "discordando" },
     worry:    { "1s": "me preocupo", ger: "preocupando" },
+    understand: { "1s": "entendo",     ger: "entendendo" },
+    show:     { "1s": "mostro",      ger: "mostrando" },
+    finish:   { "1s": "termino",     ger: "terminando" },
+    choose:   { "1s": "escolho",     ger: "escolhendo" },
+    turn:     { "1s": "viro",        ger: "virando" },
+  },
+};
+
+// ── Time Adverbial Phrase Overrides ────────────────────────────────────────────
+// Some canonical time labels are bare nouns that need a preposition when used
+// as sentence modifiers (e.g. "morning" → "in the morning").
+// Others ("now", "soon", "later", "today", "tomorrow", "yesterday", "always")
+// already work as stand-alone adverbs and are NOT listed here.
+// Keyed by canonical English label (lower-case).
+
+export const TIME_ADVERB_PHRASES = {
+  en: {
+    morning:   "in the morning",
+    afternoon: "in the afternoon",
+    night:     "at night",
+  },
+  it: {
+    morning:   "di mattina",
+    afternoon: "di pomeriggio",
+    night:     "di notte",
+  },
+  fr: {
+    morning:   "le matin",
+    afternoon: "l'après-midi",
+    night:     "la nuit",
+  },
+  es: {
+    morning:   "por la mañana",
+    afternoon: "por la tarde",
+    night:     "por la noche",
+  },
+  pt: {
+    morning:   "de manhã",
+    afternoon: "à tarde",
+    night:     "à noite",
+  },
+};
+
+// Place nouns that need a locative preposition when used as sentence modifiers.
+// Without this mapping: "I school" / "mom hospital".
+// With:                  "I at school" / "mom at the hospital".
+// "here" and "there" are already adverbs and are used as-is.
+export const PLACE_PREPOSITIONS = {
+  en: {
+    home:     "at home",
+    school:   "at school",
+    hospital: "at the hospital",
+    park:     "at the park",
+    outside:  "outside",
+  },
+  it: {
+    home:     "a casa",
+    school:   "a scuola",
+    hospital: "in ospedale",
+    park:     "al parco",
+    outside:  "fuori",
+  },
+  fr: {
+    home:     "à la maison",
+    school:   "à l'école",
+    hospital: "à l'hôpital",
+    park:     "au parc",
+    outside:  "dehors",
+  },
+  es: {
+    home:     "en casa",
+    school:   "en la escuela",
+    hospital: "en el hospital",
+    park:     "en el parque",
+    outside:  "afuera",
+  },
+  pt: {
+    home:     "em casa",
+    school:   "na escola",
+    hospital: "no hospital",
+    park:     "no parque",
+    outside:  "lá fora",
   },
 };
 
@@ -1176,7 +1392,7 @@ export const CATEGORY_TO_POS = {
   food:        "noun",
   needs:       "noun",
   actions:     "verb",
-  people:      "noun",
+  people:      "phrase",
   social:      "phrase",
   places:      "place",
   things:      "noun",
@@ -1245,10 +1461,10 @@ export const TEMPLATES = {
     },
     phrase: {
       statement: _5("{kw} {mod}", "{kw} {mod}!", "Non {kw} {mod}", "{kw} {mod}!", "Forse {kw}"),
-      question:  _5("{kw} {mod}?", "{kw}, davvero?", "Non {kw}?", "{kw}?!", "Forse {kw}?"),
+      question:  _5("{kw} {mod}?", "{kw} {mod}?!", "{kw}?", "ma {kw}?", "Forse {kw}?"),
       request:   _5("{kw} {mod} per favore", "{kw}, grazie {mod}!", "Non {kw} per favore", "{kw} subito!", "Se possibile, {kw}"),
       response:  _5("Sì, {kw} {mod}", "Sì, {kw}!", "No, non {kw}", "Sì, {kw} subito!", "Forse, {kw}"),
-      social:    _5("{kw}, {mod}", "{kw}, {mod}!", "{mod}, non {kw}", "{kw}, {mod}!", "{kw}, {mod}?"),
+      social:    _5("{kw} {mod}", "{kw} {mod}!", "non {kw}", "{kw} {mod}!", "{kw} per favore"),
     },
     place: {
       statement: _5("Voglio andare {loc} {mod}", "Mi piace andare {loc}!", "Non voglio andare {loc} {mod}", "Devo andare {loc} subito!", "Forse voglio andare {loc}"),
@@ -1305,10 +1521,11 @@ export const TEMPLATES = {
     },
     phrase: {
       statement: _5("{kw} {mod}", "{kw} {mod}!", "Not {kw} {mod}", "{kw} {mod}!", "Maybe {kw}"),
-      question:  _5("{kw} {mod}?", "Really {kw}?", "Not {kw}?", "{kw}?!", "Maybe {kw}?"),
+      question:  _5("{kw} {mod}?", "{kw} {mod}?!", "{kw}?", "but {kw}?", "Maybe {kw}?"),
       request:   _5("{kw} {mod} please", "{kw}, thanks {mod}!", "Not {kw} please", "{kw} now!", "If possible, {kw}"),
       response:  _5("Yes, {kw} {mod}", "Yes, {kw}!", "No, not {kw}", "Yes, {kw} now!", "Maybe, {kw}"),
-      social:    _5("{kw}, {mod}", "{kw}, {mod}!", "{mod}, not {kw}", "{kw}, {mod}!", "{kw}, {mod}?"),
+      // Space-separated so empty {mod} produces clean output; comma artifact cleanup in intentPrompt handles any edge cases
+      social:    _5("{kw} {mod}", "{kw} {mod}!", "not {kw}", "{kw} {mod}!", "{kw} please"),
     },
     place: {
       statement: _5("I want to go {loc} {mod}", "I love going {loc}!", "I don't want to go {loc} {mod}", "I need to go {loc} now!", "Maybe I want to go {loc}"),
@@ -1365,10 +1582,10 @@ export const TEMPLATES = {
     },
     phrase: {
       statement: _5("{kw} {mod}", "{kw} {mod} !", "Pas {kw} {mod}", "{kw} {mod} !", "Peut-être {kw}"),
-      question:  _5("{kw} {mod} ?", "{kw}, vraiment ?", "Pas {kw} ?", "{kw} ?!", "Peut-être {kw} ?"),
+      question:  _5("{kw} {mod} ?", "{kw} {mod} ?!", "{kw} ?", "mais {kw} ?", "Peut-être {kw} ?"),
       request:   _5("{kw} {mod} s'il te plaît", "{kw}, merci {mod} !", "Pas {kw} s'il te plaît", "{kw} vite !", "Si possible, {kw}"),
       response:  _5("Oui, {kw} {mod}", "Oui, {kw} !", "Non, pas {kw}", "Oui, {kw} maintenant !", "Peut-être, {kw}"),
-      social:    _5("{kw}, {mod}", "{kw}, {mod} !", "{mod}, pas {kw}", "{kw}, {mod} !", "{kw}, {mod} ?"),
+      social:    _5("{kw} {mod}", "{kw} {mod} !", "pas {kw}", "{kw} {mod} !", "{kw} s'il te plaît"),
     },
     place: {
       statement: _5("Je veux aller {loc} {mod}", "J'adore aller {loc} !", "Je ne veux pas aller {loc} {mod}", "Je dois aller {loc} maintenant !", "Peut-être aller {loc}"),
@@ -1425,10 +1642,10 @@ export const TEMPLATES = {
     },
     phrase: {
       statement: _5("{kw} {mod}", "¡{kw} {mod}!", "No {kw} {mod}", "¡{kw} {mod}!", "Quizás {kw}"),
-      question:  _5("¿{kw} {mod}?", "¿{kw} de verdad?", "¿No {kw}?", "¿{kw}?!", "¿Quizás {kw}?"),
+      question:  _5("¿{kw} {mod}?", "¿{kw} {mod}?!", "¿{kw}?", "¿pero {kw}?", "¿quizás {kw}?"),
       request:   _5("{kw} {mod} por favor", "¡{kw}, gracias {mod}!", "No {kw} por favor", "¡{kw} ya!", "Si es posible, {kw}"),
       response:  _5("Sí, {kw} {mod}", "¡Sí, {kw}!", "No, {kw} no", "¡Sí, {kw} ahora!", "Quizás, {kw}"),
-      social:    _5("{kw}, {mod}", "¡{kw}, {mod}!", "{mod}, no {kw}", "¡{kw}, {mod}!", "¿{kw}, {mod}?"),
+      social:    _5("{kw} {mod}", "¡{kw} {mod}!", "no {kw}", "¡{kw} {mod}!", "{kw} por favor"),
     },
     place: {
       statement: _5("Quiero ir {loc} {mod}", "¡Me encanta ir {loc}!", "No quiero ir {loc} {mod}", "¡Necesito ir {loc} ahora!", "Quizás quiero ir {loc}"),
@@ -1485,10 +1702,10 @@ export const TEMPLATES = {
     },
     phrase: {
       statement: _5("{kw} {mod}", "{kw} {mod}!", "Não {kw} {mod}", "{kw} {mod}!", "Talvez {kw}"),
-      question:  _5("{kw} {mod}?", "{kw}, mesmo?", "Não {kw}?", "{kw}?!", "Talvez {kw}?"),
+      question:  _5("{kw} {mod}?", "{kw} {mod}?!", "{kw}?", "mas {kw}?", "Talvez {kw}?"),
       request:   _5("{kw} {mod} por favor", "{kw}, obrigado {mod}!", "Não {kw} por favor", "{kw} agora!", "Se possível, {kw}"),
       response:  _5("Sim, {kw} {mod}", "Sim, {kw}!", "Não, {kw} não", "Sim, {kw} agora!", "Talvez, {kw}"),
-      social:    _5("{kw}, {mod}", "{kw}, {mod}!", "{mod}, não {kw}", "{kw}, {mod}!", "{kw}, {mod}?"),
+      social:    _5("{kw} {mod}", "{kw} {mod}!", "não {kw}", "{kw} {mod}!", "{kw} por favor"),
     },
     place: {
       statement: _5("Quero ir {loc} {mod}", "Adoro ir {loc}!", "Não quero ir {loc} {mod}", "Preciso ir {loc} agora!", "Talvez queira ir {loc}"),
@@ -1511,6 +1728,201 @@ export const TEMPLATES = {
       response:  _5("Sim, {mod}", "Sim, {mod}!", "Não, {mod} não", "{mod}!", "Talvez {mod}"),
       social:    _5("{mod}", "{mod}!", "Não {mod}", "{mod}!", "Talvez {mod}"),
     },
+  },
+};
+
+// ── Modifier-Type Combo Templates ─────────────────────────────────────────────
+// Used when the modifier type fundamentally changes the sentence structure
+// (e.g. body part + feeling adjective, or object + quality adjective).
+//
+// Placeholders:  {kw} = adjective keyword (already gender-inflected)
+//                {mod} = translated modifier word (body part, object name, etc.)
+//
+// These are injected by generateCandidates() when modType matches.
+// We avoid gendered articles for the modifier to stay language-agnostic.
+
+export const COMBO_TEMPLATES = {
+
+  // Body part + adjective: "My head hurts", "My stomach is upset"
+  // Triggered when modType === "body" AND pos === "adjective"
+  body_adjective: {
+    en: [
+      "My {mod} is {kw}",
+      "My {mod} hurts",
+      "I feel {kw} in my {mod}",
+      "I have a {kw} {mod}",
+      "Help, my {mod} is {kw}",
+      "My {mod} feels {kw}",
+    ],
+    it: [
+      "{mod} mi fa male",
+      "Ho dolore al {mod}",
+      "Ho il {mod} {kw}",
+      "Aiutami, ho mal di {mod}",
+      "{mod} fa male",
+      "Ho {kw} al {mod}",
+    ],
+    fr: [
+      "Mon {mod} fait mal",
+      "J'ai mal au {mod}",
+      "Mon {mod} est {kw}",
+      "Aide-moi, mon {mod} fait mal",
+      "J'ai un {mod} {kw}",
+      "Ça fait mal au {mod}",
+    ],
+    es: [
+      "Me duele el {mod}",
+      "Tengo dolor en el {mod}",
+      "Mi {mod} está {kw}",
+      "Ayúdame, me duele el {mod}",
+      "Tengo el {mod} {kw}",
+      "El {mod} me duele",
+    ],
+    pt: [
+      "Meu {mod} dói",
+      "Tenho dor no {mod}",
+      "Meu {mod} está {kw}",
+      "Me ajuda, meu {mod} dói",
+      "Tenho o {mod} {kw}",
+      "Dói no {mod}",
+    ],
+  },
+
+  // Object/thing + adjective: "The food is good", "This water is cold"
+  // Triggered when modType === "object" AND pos === "adjective"
+  object_adjective: {
+    en: [
+      "The {mod} is {kw}",
+      "This {mod} is {kw}",
+      "I find the {mod} {kw}",
+      "The {mod} is too {kw}",
+      "Is the {mod} {kw}?",
+      "The {mod} seems {kw}",
+    ],
+    it: [
+      "{mod} è {kw}",
+      "Questo {mod} è {kw}",
+      "{mod} mi sembra {kw}",
+      "{mod} è troppo {kw}",
+      "{mod} è {kw}?",
+      "Trovo {mod} {kw}",
+    ],
+    fr: [
+      "{mod} est {kw}",
+      "Ce {mod} est {kw}",
+      "Je trouve {mod} {kw}",
+      "{mod} est trop {kw}",
+      "{mod} est {kw}?",
+      "Ce {mod} semble {kw}",
+    ],
+    es: [
+      "El {mod} está {kw}",
+      "Este {mod} está {kw}",
+      "El {mod} está demasiado {kw}",
+      "El {mod} es {kw}",
+      "¿Está {kw} el {mod}?",
+      "El {mod} parece {kw}",
+    ],
+    pt: [
+      "O {mod} está {kw}",
+      "Este {mod} está {kw}",
+      "O {mod} está muito {kw}",
+      "O {mod} é {kw}",
+      "O {mod} está {kw}?",
+      "O {mod} parece {kw}",
+    ],
+  },
+
+  // Person + predicate: "Mom is here", "Dad is coming", "Where is teacher?"
+  // Triggered when modType === "predicate" AND pos === "phrase"
+  person_predicate: {
+    en: [
+      "{kw} {mod}",
+      "{kw} {mod}!",
+      "{kw} {mod}?",
+      "Is {kw} {mod}?",
+      "I think {kw} {mod}",
+      "Tell {kw}!",
+    ],
+    it: [
+      "{kw} {mod}",
+      "{kw} {mod}!",
+      "{kw} {mod}?",
+      "Dimmi, {kw} {mod}?",
+      "Penso che {kw} {mod}",
+      "Chiama {kw}!",
+    ],
+    fr: [
+      "{kw} {mod}",
+      "{kw} {mod} !",
+      "{kw} {mod} ?",
+      "Est-ce que {kw} {mod} ?",
+      "Je pense que {kw} {mod}",
+      "Appelle {kw} !",
+    ],
+    es: [
+      "{kw} {mod}",
+      "¡{kw} {mod}!",
+      "¿{kw} {mod}?",
+      "¿Está {kw} {mod}?",
+      "Creo que {kw} {mod}",
+      "¡Llama a {kw}!",
+    ],
+    pt: [
+      "{kw} {mod}",
+      "{kw} {mod}!",
+      "{kw} {mod}?",
+      "{kw} está {mod}?",
+      "Acho que {kw} {mod}",
+      "Chama {kw}!",
+    ],
+  },
+
+  // Pronoun + self-state: "I am ready", "You are here", "We are leaving"
+  // Triggered when modType === "state" AND pos === "phrase"
+  // {neg_mod} is computed by intentPrompt.js as the negated state form
+  // (e.g. "am ready" → "am not ready") to avoid "I not am ready".
+  pronoun_state: {
+    en: [
+      "{kw} {mod}",
+      "{kw} {mod}!",
+      "{kw} {neg_mod}",
+      "{kw} {mod}?",
+      "{kw} {mod} now",
+      "Yes, {kw} {mod}",
+    ],
+    it: [
+      "{kw} {mod}",
+      "{kw} {mod}!",
+      "{kw} {neg_mod}",
+      "{kw} {mod}?",
+      "{kw} {mod} adesso",
+      "Sì, {kw} {mod}",
+    ],
+    fr: [
+      "{kw} {mod}",
+      "{kw} {mod} !",
+      "{kw} {neg_mod}",
+      "{kw} {mod} ?",
+      "{kw} {mod} maintenant",
+      "Oui, {kw} {mod}",
+    ],
+    es: [
+      "{kw} {mod}",
+      "¡{kw} {mod}!",
+      "{kw} {neg_mod}",
+      "¿{kw} {mod}?",
+      "{kw} {mod} ahora",
+      "Sí, {kw} {mod}",
+    ],
+    pt: [
+      "{kw} {mod}",
+      "{kw} {mod}!",
+      "{kw} {neg_mod}",
+      "{kw} {mod}?",
+      "{kw} {mod} agora",
+      "Sim, {kw} {mod}",
+    ],
   },
 };
 

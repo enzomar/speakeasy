@@ -1,0 +1,1374 @@
+========================================================================
+  SpeakEasy — Grid Combination Report: ❓  QUESTION
+========================================================================
+  Category : question  (mapTo=questions)
+  Language : fr
+  Gender   : male
+  Top N    : 8 heuristic sentences per cell
+  Engine   : unavailable (heuristic only)
+  Generated: 2026-03-14T09:33:05.246Z
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  L1 CATEGORY: ❓  QUESTION  (question)
+  12 items, color=#5C940D
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  L2: ❓  what  (q_what)
+      pos=phrase  intent=question  emotion=neutral
+       1. quoi?
+       2. quoi ?!
+       3. mais quoi?
+       4. Peut-être quoi?
+       5. quoi
+       6. quoi s'il te plaît
+       7. Oui, quoi
+       8. quoi!
+
+    L3: 👉  this  (q3_this)  type=detail
+        intent=question  emotion=neutral
+         1. Qu'est-ce que c'est ?
+         2. C'est quoi ?
+         3. C'est quoi ça ?
+
+    L3: 👈  that  (q3_that)  type=detail
+        intent=question  emotion=neutral
+         1. Qu'est-ce que c'est ?
+         2. C'est quoi ?
+         3. C'est quoi ça ?
+
+    L3: 💥  happened  (q3_happened)  type=detail
+        intent=question  emotion=neutral
+         1. Qu'est-ce qui s'est passé ?
+         2. Que s'est-il passé ?
+         3. Il s'est passé quoi ?
+         4. Dis-moi ce qui s'est passé
+
+    L3: ⚠️  wrong  (q3_wrong)  type=detail
+        intent=question  emotion=neutral
+         1. Qu'est-ce qui ne va pas ?
+         2. Il y a un problème ?
+         3. Quelque chose ne va pas ?
+
+    L3: 🍽️  for lunch  (q3_forlunch)  type=detail
+        intent=question  emotion=neutral
+         1. Qu'est-ce qu'on mange à midi ?
+         2. C'est quoi le déjeuner ?
+         3. On mange quoi ?
+
+    L3: 🍝  for dinner  (q3_fordinner)  type=detail
+        intent=question  emotion=neutral
+         1. Qu'est-ce qu'on mange ce soir ?
+         2. C'est quoi le dîner ?
+         3. On mange quoi ce soir ?
+
+    L3: ⏭️  next  (q3_next)  type=detail
+        intent=question  emotion=neutral
+         1. C'est quoi après ?
+         2. Qu'est-ce qui vient ensuite ?
+         3. On fait quoi maintenant ?
+
+    L3: 🏷️  your name  (q3_name)  type=detail
+        intent=question  emotion=neutral
+         1. Comment tu t'appelles ?
+         2. C'est quoi ton nom ?
+         3. Tu t'appelles comment ?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi la nourriture ?
+         2. Qu'est-ce que c'est la nourriture ?
+         3. Dis-moi ce que c'est
+
+    L3: 💧  water  (o_water)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi l'eau ?
+         2. Qu'est-ce que c'est l'eau ?
+         3. Dis-moi ce que c'est
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi le téléphone ?
+         2. Qu'est-ce que c'est le téléphone ?
+         3. Dis-moi ce que c'est
+
+    L3: 📖  book  (o_book)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi le livre ?
+         2. Qu'est-ce que c'est le livre ?
+         3. Dis-moi ce que c'est
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=question  emotion=urgent
+         1. C'est quoi le médicament ?
+         2. Qu'est-ce que c'est le médicament ?
+         3. Dis-moi ce que c'est
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi la télé ?
+         2. Qu'est-ce que c'est la télé ?
+         3. Dis-moi ce que c'est
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi les devoirs ?
+         2. Qu'est-ce que c'est les devoirs ?
+         3. Dis-moi ce que c'est
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=question  emotion=neutral
+         1. C'est quoi le jouet ?
+         2. Qu'est-ce que c'est le jouet ?
+         3. Dis-moi ce que c'est
+
+  L2: 📍  where  (q_where)
+      pos=phrase  intent=question  emotion=neutral
+       1. où?
+       2. où ?!
+       3. mais où?
+       4. Peut-être où?
+       5. où
+       6. où s'il te plaît
+       7. Oui, où
+       8. où!
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=question  emotion=neutral
+         1. Où est maman ?
+         2. Où est parti maman ?
+         3. Je ne trouve pas maman
+         4. Où est maman maintenant ?
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=question  emotion=neutral
+         1. Où est papa ?
+         2. Où est parti papa ?
+         3. Je ne trouve pas papa
+         4. Où est papa maintenant ?
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=question  emotion=neutral
+         1. Où est ami ?
+         2. Où est parti ami ?
+         3. Je ne trouve pas ami
+         4. Où est ami maintenant ?
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=question  emotion=neutral
+         1. Où est professeur ?
+         2. Où est parti professeur ?
+         3. Je ne trouve pas professeur
+         4. Où est professeur maintenant ?
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=question  emotion=urgent
+         1. Où est docteur ?
+         2. Où est parti docteur ?
+         3. Je ne trouve pas docteur
+         4. Où est docteur maintenant ?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=question  emotion=neutral
+         1. Où est infirmier ?
+         2. Où est parti infirmier ?
+         3. Je ne trouve pas infirmier
+         4. Où est infirmier maintenant ?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=question  emotion=neutral
+         1. Où est la nourriture ?
+         2. Où est mon nourriture ?
+         3. Je ne trouve pas la nourriture
+
+    L3: 💧  water  (o_water)  type=object
+        intent=question  emotion=neutral
+         1. Où est l'eau ?
+         2. Où est mon eau ?
+         3. Je ne trouve pas l'eau
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=question  emotion=neutral
+         1. Où est le téléphone ?
+         2. Où est mon téléphone ?
+         3. Je ne trouve pas le téléphone
+
+    L3: 📖  book  (o_book)  type=object
+        intent=question  emotion=neutral
+         1. Où est le livre ?
+         2. Où est mon livre ?
+         3. Je ne trouve pas le livre
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=question  emotion=urgent
+         1. Où est le médicament ?
+         2. Où est mon médicament ?
+         3. Je ne trouve pas le médicament
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=question  emotion=neutral
+         1. Où est la télé ?
+         2. Où est mon télé ?
+         3. Je ne trouve pas la télé
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=question  emotion=neutral
+         1. Où est les devoirs ?
+         2. Où est mon devoirs ?
+         3. Je ne trouve pas les devoirs
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=question  emotion=neutral
+         1. Où est le jouet ?
+         2. Où est mon jouet ?
+         3. Je ne trouve pas le jouet
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=question  emotion=neutral
+         1. Où est la maison ?
+         2. Comment on va à maison ?
+         3. Où se trouve la maison ?
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=question  emotion=neutral
+         1. Où est l'école ?
+         2. Comment on va à école ?
+         3. Où se trouve l'école ?
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=question  emotion=neutral
+         1. Où est l'hôpital ?
+         2. Comment on va à hôpital ?
+         3. Où se trouve l'hôpital ?
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=question  emotion=neutral
+         1. Où est le parc ?
+         2. Comment on va à parc ?
+         3. Où se trouve le parc ?
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=question  emotion=neutral
+         1. Où est ici ?
+         2. Comment on va à ici ?
+         3. Où se trouve ici ?
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=question  emotion=neutral
+         1. Où est là-bas ?
+         2. Comment on va à là-bas ?
+         3. Où se trouve là-bas ?
+
+  L2: 🕐  when  (q_when)
+      pos=phrase  intent=question  emotion=neutral
+       1. quand?
+       2. quand ?!
+       3. mais quand?
+       4. Peut-être quand?
+       5. quand
+       6. quand s'il te plaît
+       7. Oui, quand
+       8. quand!
+
+    L3: 🍽️  lunch  (q3_lunch)  type=detail
+        intent=question  emotion=neutral
+         1. C'est quand le déjeuner ?
+         2. On mange à quelle heure ?
+         3. C'est bientôt l'heure de manger ?
+
+    L3: 🏠  go home  (q3_gohome)  type=detail
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on rentre ?
+         2. On rentre quand ?
+         3. À quelle heure on part ?
+
+    L3: 🛏️  bedtime  (q3_gobed)  type=detail
+        intent=question  emotion=neutral
+         1. C'est quand le coucher ?
+         2. C'est l'heure de dormir ?
+         3. On va au lit quand ?
+
+    L3: 🩺  the doctor  (q3_doctor2)  type=detail
+        intent=question  emotion=neutral
+         1. C'est quand le docteur ?
+         2. Le rendez-vous c'est quand ?
+         3. Quand est-ce qu'on va au docteur ?
+
+    L3: 🛝  recess  (q3_recess)  type=detail
+        intent=question  emotion=neutral
+         1. C'est quand la récréation ?
+         2. La récré c'est quand ?
+         3. C'est bientôt la récré ?
+
+    L3: 🏁  is this over  (q3_over)  type=detail
+        intent=question  emotion=neutral
+         1. Quand est-ce que c'est fini ?
+         2. C'est bientôt fini ?
+         3. C'est encore long ?
+
+    L3: ▶️  does it start  (q3_start)  type=detail
+        intent=question  emotion=neutral
+         1. Ça commence quand ?
+         2. À quelle heure ça commence ?
+         3. C'est bientôt ?
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on va à maison ?
+         2. On y va quand à maison ?
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on va à école ?
+         2. On y va quand à école ?
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on va à hôpital ?
+         2. On y va quand à hôpital ?
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on va à parc ?
+         2. On y va quand à parc ?
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on va à ici ?
+         2. On y va quand à ici ?
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=question  emotion=neutral
+         1. Quand est-ce qu'on va à là-bas ?
+         2. On y va quand à là-bas ?
+
+  L2: 👤  who  (q_who)
+      pos=phrase  intent=question  emotion=neutral
+       1. qui?
+       2. qui ?!
+       3. mais qui?
+       4. Peut-être qui?
+       5. qui
+       6. qui s'il te plaît
+       7. Oui, qui
+       8. qui!
+
+    L3: 👉  did this  (q3_didthis)  type=detail
+        intent=question  emotion=neutral
+         1. Qui a fait ça ?
+         2. Je veux savoir qui a fait ça
+         3. C'est qui qui a fait ça ?
+
+    L3: 🗣️  is talking  (q3_talking)  type=detail
+        intent=question  emotion=neutral
+         1. Qui parle ?
+         2. Qui a dit ça ?
+         3. C'est qui qui parle ?
+
+    L3: 🚶  is coming  (q3_iscoming)  type=detail
+        intent=question  emotion=neutral
+         1. Qui arrive ?
+         2. Qui vient ?
+         3. Qui va venir ?
+
+    L3: 👈  is that  (q3_isthat)  type=detail
+        intent=question  emotion=neutral
+         1. Qui est-ce ?
+         2. C'est qui ?
+         3. Qui c'est ?
+
+    L3: 🆘  can help  (q3_canhelp)  type=detail
+        intent=question  emotion=neutral
+         1. Qui peut aider ?
+         2. Qui peut m'aider ?
+         3. J'ai besoin que quelqu'un m'aide
+
+    L3: ❓  is it for  (q3_isitfor)  type=detail
+        intent=question  emotion=neutral
+         1. C'est pour qui ?
+         2. Pour qui est-ce ?
+         3. À qui c'est ?
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=question  emotion=neutral
+         1. Qui est maman ?
+         2. C'est maman ?
+         3. Tu connais maman ?
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=question  emotion=neutral
+         1. Qui est papa ?
+         2. C'est papa ?
+         3. Tu connais papa ?
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=question  emotion=neutral
+         1. Qui est ami ?
+         2. C'est ami ?
+         3. Tu connais ami ?
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=question  emotion=neutral
+         1. Qui est professeur ?
+         2. C'est professeur ?
+         3. Tu connais professeur ?
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=question  emotion=urgent
+         1. Qui est docteur ?
+         2. C'est docteur ?
+         3. Tu connais docteur ?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=question  emotion=neutral
+         1. Qui est infirmier ?
+         2. C'est infirmier ?
+         3. Tu connais infirmier ?
+
+  L2: 🤔  why  (q_why)
+      pos=phrase  intent=question  emotion=neutral
+       1. pourquoi?
+       2. pourquoi ?!
+       3. mais pourquoi?
+       4. Peut-être pourquoi?
+       5. pourquoi
+       6. pourquoi s'il te plaît
+       7. Oui, pourquoi
+       8. pourquoi!
+
+    L3: 🚫  not  (q3_whynot)  type=detail
+        intent=question  emotion=negative
+         1. Pourquoi pas ?
+         2. Pourquoi je ne peux pas ?
+         3. Dis-moi pourquoi pas
+
+    L3: ❌  can't I  (q3_cantI)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi je ne peux pas ?
+         2. Pourquoi je n'ai pas le droit ?
+         3. Je veux savoir pourquoi
+
+    L3: 😠  angry  (q3_whyangry)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi es-tu fâché ?
+         2. Qu'est-ce qui t'a mis en colère ?
+         3. Pourquoi suis-je fâché ?
+
+    L3: 😢  crying  (q3_whycrying)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi tu pleures ?
+         2. Qu'est-ce qui ne va pas ?
+         3. Ça va ?
+
+    L3: 🚪  leaving  (q3_whyleave)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi on part ?
+         2. Pourquoi tu pars ?
+         3. On doit partir ?
+
+    L3: 📍  here  (q3_whyhere)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi on est ici ?
+         2. Qu'est-ce qu'on fait ici ?
+         3. Je ne sais pas pourquoi on est ici
+
+    L3: 😢  sad  (f_sad)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi triste ?
+         2. Pourquoi es-tu triste ?
+         3. Qu'est-ce qui te rend triste ?
+
+    L3: 😠  angry  (f_angry)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi es-tu fâché ?
+         2. Qu'est-ce qui t'a mis en colère ?
+         3. Pourquoi suis-je fâché ?
+
+    L3: 🤕  hurt  (f_hurt)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi mal ?
+         2. Pourquoi es-tu mal ?
+         3. Qu'est-ce qui te rend mal ?
+
+    L3: 🤒  sick  (f_sick)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi malade ?
+         2. Pourquoi es-tu malade ?
+         3. Qu'est-ce qui te rend malade ?
+
+    L3: 😕  confused  (f_confused)  type=detail
+        intent=question  emotion=neutral
+         1. Pourquoi confus ?
+         2. Pourquoi es-tu confus ?
+         3. Qu'est-ce qui te rend confus ?
+
+  L2: 🔧  how  (q_how)
+      pos=phrase  intent=question  emotion=neutral
+       1. comment?
+       2. comment ?!
+       3. mais comment?
+       4. Peut-être comment?
+       5. comment
+       6. comment s'il te plaît
+       7. Oui, comment
+       8. comment!
+
+    L3: 👉  do this  (q3_do)  type=action
+        intent=question  emotion=neutral
+         1. Comment je fais ça ?
+         2. Tu peux me montrer comment faire ?
+         3. Je ne sais pas comment faire
+
+    L3: 🗣️  say it  (q3_say)  type=action
+        intent=question  emotion=neutral
+         1. Comment on dit ?
+         2. Comment je dis ça ?
+         3. C'est quoi le bon mot ?
+
+    L3: 🔤  spell it  (q3_spell)  type=action
+        intent=question  emotion=neutral
+         1. Comment ça s'écrit ?
+         2. Comment on épelle ?
+         3. Ça s'écrit comment ?
+
+    L3: 🛠️  use it  (q3_use)  type=action
+        intent=question  emotion=neutral
+         1. Comment on utilise ça ?
+         2. Comment ça marche ?
+         3. Tu peux me montrer ?
+
+    L3: 📍  get there  (q3_getthere)  type=action
+        intent=question  emotion=neutral
+         1. Comment on y va ?
+         2. Comment j'y vais ?
+         3. C'est par où ?
+
+    L3: ❤️  you feel  (q3_feel)  type=action
+        intent=question  emotion=neutral
+         1. Comment tu te sens ?
+         2. Ça va ?
+         3. Tu vas bien ?
+
+    L3: 🔧  fix it  (q3_fix)  type=action
+        intent=question  emotion=neutral
+         1. Comment on répare ça ?
+         2. Comment on peut arranger ça ?
+         3. Tu peux le réparer ?
+
+    L3: 🚪  open it  (q3_open)  type=action
+        intent=question  emotion=neutral
+         1. Comment on ouvre ça ?
+         2. Comment ça s'ouvre ?
+         3. Tu peux l'ouvrir ?
+
+  L2: 💰  how much  (q_howmuch)
+      pos=phrase  intent=question  emotion=neutral
+       1. combien?
+       2. combien ?!
+       3. mais combien?
+       4. Peut-être combien?
+       5. combien
+       6. combien s'il te plaît
+       7. Oui, combien
+       8. combien!
+
+    L3: 1️⃣  1  (num_1)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 1 ?
+         2. C'est 1 ?
+         3. Combien ça fait ?
+
+    L3: 2️⃣  2  (num_2)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 2 ?
+         2. C'est 2 ?
+         3. Combien ça fait ?
+
+    L3: 3️⃣  3  (num_3)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 3 ?
+         2. C'est 3 ?
+         3. Combien ça fait ?
+
+    L3: 4️⃣  4  (num_4)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 4 ?
+         2. C'est 4 ?
+         3. Combien ça fait ?
+
+    L3: 5️⃣  5  (num_5)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 5 ?
+         2. C'est 5 ?
+         3. Combien ça fait ?
+
+    L3: 6️⃣  6  (num_6)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 6 ?
+         2. C'est 6 ?
+         3. Combien ça fait ?
+
+    L3: 7️⃣  7  (num_7)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 7 ?
+         2. C'est 7 ?
+         3. Combien ça fait ?
+
+    L3: 8️⃣  8  (num_8)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 8 ?
+         2. C'est 8 ?
+         3. Combien ça fait ?
+
+    L3: 9️⃣  9  (num_9)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 9 ?
+         2. C'est 9 ?
+         3. Combien ça fait ?
+
+    L3: 🔟  10  (num_10)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? C'est 10 ?
+         2. C'est 10 ?
+         3. Combien ça fait ?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte la nourriture ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 💧  water  (o_water)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte l'eau ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte le téléphone ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 📖  book  (o_book)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte le livre ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=question  emotion=urgent
+         1. Combien coûte le médicament ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte la télé ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte les devoirs ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=question  emotion=neutral
+         1. Combien coûte le jouet ?
+         2. Quel est le prix ?
+         3. C'est combien ?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=question  emotion=negative
+         1. Combien pas ?
+         2. C'est combien ?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=question  emotion=positive
+         1. Combien plus ?
+         2. C'est combien ?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=question  emotion=negative
+         1. Combien moins ?
+         2. C'est combien ?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=question  emotion=neutral
+         1. Combien different ?
+         2. C'est combien ?
+
+  L2: 🔢  how many  (q_howmany)
+      pos=phrase  intent=question  emotion=neutral
+       1. combien?
+       2. combien ?!
+       3. mais combien?
+       4. Peut-être combien?
+       5. combien
+       6. combien s'il te plaît
+       7. Oui, combien
+       8. combien!
+
+    L3: 1️⃣  1  (num_1)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 1 ?
+         2. C'est 1 ?
+         3. Il y en a 1 ?
+
+    L3: 2️⃣  2  (num_2)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 2 ?
+         2. C'est 2 ?
+         3. Il y en a 2 ?
+
+    L3: 3️⃣  3  (num_3)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 3 ?
+         2. C'est 3 ?
+         3. Il y en a 3 ?
+
+    L3: 4️⃣  4  (num_4)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 4 ?
+         2. C'est 4 ?
+         3. Il y en a 4 ?
+
+    L3: 5️⃣  5  (num_5)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 5 ?
+         2. C'est 5 ?
+         3. Il y en a 5 ?
+
+    L3: 6️⃣  6  (num_6)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 6 ?
+         2. C'est 6 ?
+         3. Il y en a 6 ?
+
+    L3: 7️⃣  7  (num_7)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 7 ?
+         2. C'est 7 ?
+         3. Il y en a 7 ?
+
+    L3: 8️⃣  8  (num_8)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 8 ?
+         2. C'est 8 ?
+         3. Il y en a 8 ?
+
+    L3: 9️⃣  9  (num_9)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 9 ?
+         2. C'est 9 ?
+         3. Il y en a 9 ?
+
+    L3: 🔟  10  (num_10)  type=number
+        intent=question  emotion=neutral
+         1. Combien ? 10 ?
+         2. C'est 10 ?
+         3. Il y en a 10 ?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=question  emotion=neutral
+         1. Combien de nourriture il y a ?
+         2. Combien de nourriture on a ?
+         3. Combien ?
+
+    L3: 💧  water  (o_water)  type=object
+        intent=question  emotion=neutral
+         1. Combien de eau il y a ?
+         2. Combien de eau on a ?
+         3. Combien ?
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=question  emotion=neutral
+         1. Combien de téléphone il y a ?
+         2. Combien de téléphone on a ?
+         3. Combien ?
+
+    L3: 📖  book  (o_book)  type=object
+        intent=question  emotion=neutral
+         1. Combien de livre il y a ?
+         2. Combien de livre on a ?
+         3. Combien ?
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=question  emotion=urgent
+         1. Combien de médicament il y a ?
+         2. Combien de médicament on a ?
+         3. Combien ?
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=question  emotion=neutral
+         1. Combien de télé il y a ?
+         2. Combien de télé on a ?
+         3. Combien ?
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=question  emotion=neutral
+         1. Combien de devoirs il y a ?
+         2. Combien de devoirs on a ?
+         3. Combien ?
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=question  emotion=neutral
+         1. Combien de jouet il y a ?
+         2. Combien de jouet on a ?
+         3. Combien ?
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=question  emotion=neutral
+         1. Combien de maman il y a ?
+         2. Combien de maman viennent ?
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=question  emotion=neutral
+         1. Combien de papa il y a ?
+         2. Combien de papa viennent ?
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=question  emotion=neutral
+         1. Combien de ami il y a ?
+         2. Combien de ami viennent ?
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=question  emotion=neutral
+         1. Combien de professeur il y a ?
+         2. Combien de professeur viennent ?
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=question  emotion=urgent
+         1. Combien de docteur il y a ?
+         2. Combien de docteur viennent ?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=question  emotion=neutral
+         1. Combien de infirmier il y a ?
+         2. Combien de infirmier viennent ?
+
+  L2: 🙋  can I  (q_canI)
+      pos=noun  intent=question  emotion=neutral
+       1. est-ce que je peux?
+       2. est-ce que je peux ?!
+       3. mais est-ce que je peux?
+       4. Peut-être est-ce que je peux?
+       5. est-ce que je peux
+       6. est-ce que je peux s'il te plaît
+       7. Oui, est-ce que je peux
+       8. est-ce que je peux!
+
+    L3: 🚶  go  (q3_cigo)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller ?
+         2. S'il te plaît, est-ce que je peux aller ?
+         3. Je peux aller ?
+         4. J'ai le droit d'aller ?
+         5. Je voudrais aller
+
+    L3: 🤲  have  (q3_cihave)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux avoir ?
+         2. S'il te plaît, est-ce que je peux avoir ?
+         3. Je peux avoir ?
+         4. J'ai le droit d'avoir ?
+         5. Je voudrais avoir
+
+    L3: 🎮  play  (q3_ciplay)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux jouer ?
+         2. S'il te plaît, est-ce que je peux jouer ?
+         3. Je peux jouer ?
+         4. J'ai le droit de jouer ?
+         5. Je voudrais jouer
+
+    L3: 🍴  eat  (q3_cieat)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux manger ?
+         2. S'il te plaît, est-ce que je peux manger ?
+         3. Je peux manger ?
+         4. J'ai le droit de manger ?
+         5. Je voudrais manger
+
+    L3: 📺  watch  (q3_ciwatch)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux regarder ?
+         2. S'il te plaît, est-ce que je peux regarder ?
+         3. Je peux regarder ?
+         4. J'ai le droit de regarder ?
+         5. Je voudrais regarder
+
+    L3: 🆘  help  (q3_cihelp)  type=action
+        intent=question  emotion=urgent
+         1. Est-ce que je peux aider ?
+         2. S'il te plaît, est-ce que je peux aider ?
+         3. Je peux aider ?
+         4. J'ai le droit d'aider ?
+         5. Je voudrais aider
+
+    L3: 🥤  drink  (q3_cidrink)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux boire ?
+         2. S'il te plaît, est-ce que je peux boire ?
+         3. Je peux boire ?
+         4. J'ai le droit de boire ?
+         5. Je voudrais boire
+
+    L3: 💺  sit here  (q3_cisit)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que je peux m'asseoir ici ?
+         2. S'il te plaît, est-ce que je peux m'asseoir ici ?
+         3. Je peux m'asseoir ici ?
+         4. J'ai le droit de m'asseoir ici ?
+         5. Je voudrais m'asseoir ici
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller à la maison ?
+         2. Je peux aller à la maison ?
+         3. Je voudrais aller à la maison
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller à l'école ?
+         2. Je peux aller à l'école ?
+         3. Je voudrais aller à l'école
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller à l'hôpital ?
+         2. Je peux aller à l'hôpital ?
+         3. Je voudrais aller à l'hôpital
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller au parc ?
+         2. Je peux aller au parc ?
+         3. Je voudrais aller au parc
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller ici ?
+         2. Je peux aller ici ?
+         3. Je voudrais aller ici
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=question  emotion=neutral
+         1. Est-ce que je peux aller là-bas ?
+         2. Je peux aller là-bas ?
+         3. Je voudrais aller là-bas
+
+  L2: 🤝  can you  (q_canYou)
+      pos=phrase  intent=question  emotion=neutral
+       1. est-ce que tu peux?
+       2. est-ce que tu peux ?!
+       3. mais est-ce que tu peux?
+       4. Peut-être est-ce que tu peux?
+       5. est-ce que tu peux
+       6. est-ce que tu peux s'il te plaît
+       7. Oui, est-ce que tu peux
+       8. est-ce que tu peux!
+
+    L3: 🆘  help me  (q3_cyhelp)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux m'aider ?
+         2. S'il te plaît, tu peux m'aider ?
+         3. Tu pourrais m'aider ?
+         4. Tu veux bien m'aider ?
+         5. Peux-tu m'aider ?
+
+    L3: 🫴  come  (q3_cycome)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux venir ?
+         2. S'il te plaît, tu peux venir ?
+         3. Tu pourrais venir ?
+         4. Tu veux bien venir ?
+         5. Peux-tu venir ?
+
+    L3: 👁️  show me  (q3_cyshow)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux me montrer ?
+         2. S'il te plaît, tu peux me montrer ?
+         3. Tu pourrais me montrer ?
+         4. Tu veux bien me montrer ?
+         5. Peux-tu me montrer ?
+
+    L3: 🗣️  tell me  (q3_cytell)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux me dire ?
+         2. S'il te plaît, tu peux me dire ?
+         3. Tu pourrais me dire ?
+         4. Tu veux bien me dire ?
+         5. Peux-tu me dire ?
+
+    L3: 🤲  give me  (q3_cygive)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux me donner ?
+         2. S'il te plaît, tu peux me donner ?
+         3. Tu pourrais me donner ?
+         4. Tu veux bien me donner ?
+         5. Peux-tu me donner ?
+
+    L3: 🔄  repeat  (q3_cyrepeat)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux répéter ?
+         2. S'il te plaît, tu peux répéter ?
+         3. Tu pourrais répéter ?
+         4. Tu veux bien répéter ?
+         5. Peux-tu répéter ?
+
+    L3: 🚪  open  (q3_cyopen)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux ouvrir ?
+         2. S'il te plaît, tu peux ouvrir ?
+         3. Tu pourrais ouvrir ?
+         4. Tu veux bien ouvrir ?
+         5. Peux-tu ouvrir ?
+
+    L3: ⏸️  wait  (q3_cywait)  type=action
+        intent=question  emotion=neutral
+         1. Est-ce que tu peux attendre ?
+         2. S'il te plaît, tu peux attendre ?
+         3. Tu pourrais attendre ?
+         4. Tu veux bien attendre ?
+         5. Peux-tu attendre ?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner la nourriture ?
+         2. Tu peux m'apporter la nourriture ?
+         3. Tu as la nourriture ?
+
+    L3: 💧  water  (o_water)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner l'eau ?
+         2. Tu peux m'apporter l'eau ?
+         3. Tu as l'eau ?
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner le téléphone ?
+         2. Tu peux m'apporter le téléphone ?
+         3. Tu as le téléphone ?
+
+    L3: 📖  book  (o_book)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner le livre ?
+         2. Tu peux m'apporter le livre ?
+         3. Tu as le livre ?
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=question  emotion=urgent
+         1. Tu peux me donner le médicament ?
+         2. Tu peux m'apporter le médicament ?
+         3. Tu as le médicament ?
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner la télé ?
+         2. Tu peux m'apporter la télé ?
+         3. Tu as la télé ?
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner les devoirs ?
+         2. Tu peux m'apporter les devoirs ?
+         3. Tu as les devoirs ?
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=question  emotion=neutral
+         1. Tu peux me donner le jouet ?
+         2. Tu peux m'apporter le jouet ?
+         3. Tu as le jouet ?
+
+  L2: 🤲  do you have  (q_doYouHave)
+      pos=phrase  intent=question  emotion=neutral
+       1. do you have?
+       2. do you have ?!
+       3. mais do you have?
+       4. Peut-être do you have?
+       5. do you have
+       6. do you have s'il te plaît
+       7. Oui, do you have
+       8. do you have!
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=question  emotion=neutral
+         1. Tu as la nourriture ?
+         2. Est-ce qu'il y a la nourriture ?
+         3. Je cherche la nourriture
+
+    L3: 💧  water  (o_water)  type=object
+        intent=question  emotion=neutral
+         1. Tu as l'eau ?
+         2. Est-ce qu'il y a l'eau ?
+         3. Je cherche l'eau
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=question  emotion=neutral
+         1. Tu as le téléphone ?
+         2. Est-ce qu'il y a le téléphone ?
+         3. Je cherche le téléphone
+
+    L3: 📖  book  (o_book)  type=object
+        intent=question  emotion=neutral
+         1. Tu as le livre ?
+         2. Est-ce qu'il y a le livre ?
+         3. Je cherche le livre
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=question  emotion=urgent
+         1. Tu as le médicament ?
+         2. Est-ce qu'il y a le médicament ?
+         3. Je cherche le médicament
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=question  emotion=neutral
+         1. Tu as la télé ?
+         2. Est-ce qu'il y a la télé ?
+         3. Je cherche la télé
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=question  emotion=neutral
+         1. Tu as les devoirs ?
+         2. Est-ce qu'il y a les devoirs ?
+         3. Je cherche les devoirs
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=question  emotion=neutral
+         1. Tu as le jouet ?
+         2. Est-ce qu'il y a le jouet ?
+         3. Je cherche le jouet
+
+    L3: 🍎  apple  (n3_apple)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as la pomme ?
+         2. Est-ce qu'il y a la pomme ?
+         3. Je peux avoir la pomme ?
+
+    L3: 🍞  bread  (n3_bread)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le pain ?
+         2. Est-ce qu'il y a le pain ?
+         3. Je peux avoir le pain ?
+
+    L3: 🍚  rice  (n3_rice)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le riz ?
+         2. Est-ce qu'il y a le riz ?
+         3. Je peux avoir le riz ?
+
+    L3: 🍝  pasta  (n3_pasta)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as les pâtes ?
+         2. Est-ce qu'il y a les pâtes ?
+         3. Je peux avoir les pâtes ?
+
+    L3: 🥣  soup  (n3_soup)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as la soupe ?
+         2. Est-ce qu'il y a la soupe ?
+         3. Je peux avoir la soupe ?
+
+    L3: 🍪  snack  (n3_snack)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le goûter ?
+         2. Est-ce qu'il y a le goûter ?
+         3. Je peux avoir le goûter ?
+
+    L3: 🍇  fruit  (n3_fruit)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le fruit ?
+         2. Est-ce qu'il y a le fruit ?
+         3. Je peux avoir le fruit ?
+
+    L3: 🍗  meat  (n3_meat)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as du meat ?
+         2. Est-ce qu'il y a du meat ?
+         3. Je peux avoir du meat ?
+
+    L3: 🧃  juice  (n3_juice)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le jus ?
+         2. Est-ce qu'il y a le jus ?
+         3. Je peux avoir le jus ?
+
+    L3: 🥛  milk  (n3_milk)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le lait ?
+         2. Est-ce qu'il y a le lait ?
+         3. Je peux avoir le lait ?
+
+    L3: 🍵  tea  (n3_tea)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as le thé ?
+         2. Est-ce qu'il y a le thé ?
+         3. Je peux avoir le thé ?
+
+    L3: ☕  coffee  (n3_coffee)  type=specific-item
+        intent=question  emotion=neutral
+         1. Tu as du coffee ?
+         2. Est-ce qu'il y a du coffee ?
+         3. Je peux avoir du coffee ?
+
+  L2: 🔍  is it  (q_isIt)
+      pos=phrase  intent=question  emotion=neutral
+       1. is it?
+       2. is it ?!
+       3. mais is it?
+       4. Peut-être is it?
+       5. is it
+       6. is it s'il te plaît
+       7. Oui, is it
+       8. is it!
+
+    L3: 👉  this  (q3_this)  type=detail
+        intent=question  emotion=neutral
+         1. C'est ça ?
+         2. C'est celui-ci ?
+         3. C'est bien ça ?
+
+    L3: 👈  that  (q3_that)  type=detail
+        intent=question  emotion=neutral
+         1. C'est ça ?
+         2. C'est celui-là ?
+         3. C'est bien celui-là ?
+
+    L3: 💥  happened  (q3_happened)  type=detail
+        intent=question  emotion=neutral
+         1. C'est arrivé ?
+         2. Ça s'est déjà passé ?
+
+    L3: ⚠️  wrong  (q3_wrong)  type=detail
+        intent=question  emotion=neutral
+         1. Il y a un problème ?
+         2. Quelque chose ne va pas ?
+         3. C'est pas bien ?
+
+    L3: 🍽️  for lunch  (q3_forlunch)  type=detail
+        intent=question  emotion=neutral
+         1. C'est pour le déjeuner ?
+         2. C'est ça qu'on mange à midi ?
+         3. Le déjeuner est prêt ?
+
+    L3: 🍝  for dinner  (q3_fordinner)  type=detail
+        intent=question  emotion=neutral
+         1. C'est pour le dîner ?
+         2. C'est ça qu'on mange ce soir ?
+         3. Le dîner est prêt ?
+
+    L3: ⏭️  next  (q3_next)  type=detail
+        intent=question  emotion=neutral
+         1. C'est le suivant ?
+         2. C'est notre tour ?
+         3. C'est après ?
+
+    L3: 🏷️  your name  (q3_name)  type=detail
+        intent=question  emotion=neutral
+         1. C'est ton nom ?
+         2. Tu t'appelles comme ça ?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=question  emotion=negative
+         1. C'est pas ?
+         2. Est-ce que c'est pas ?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=question  emotion=positive
+         1. C'est plus ?
+         2. Est-ce que c'est plus ?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=question  emotion=negative
+         1. C'est moins ?
+         2. Est-ce que c'est moins ?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=question  emotion=neutral
+         1. C'est different ?
+         2. Est-ce que c'est different ?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=question  emotion=urgent
+         1. C'est maintenant ?
+         2. Ça se passe maintenant ?
+         3. Ce sera maintenant ?
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=question  emotion=neutral
+         1. C'est bientôt ?
+         2. Ça se passe bientôt ?
+         3. Ce sera bientôt ?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=question  emotion=neutral
+         1. C'est plus tard ?
+         2. Ça se passe plus tard ?
+         3. Ce sera plus tard ?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=question  emotion=neutral
+         1. C'est aujourd'hui ?
+         2. Ça se passe aujourd'hui ?
+         3. Ce sera aujourd'hui ?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=question  emotion=neutral
+         1. C'est demain ?
+         2. Ça se passe demain ?
+         3. Ce sera demain ?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=question  emotion=neutral
+         1. C'est hier ?
+         2. Ça se passe hier ?
+         3. Ce sera hier ?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=question  emotion=neutral
+         1. C'est matin ?
+         2. Ça se passe matin ?
+         3. Ce sera matin ?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=question  emotion=neutral
+         1. C'est après-midi ?
+         2. Ça se passe après-midi ?
+         3. Ce sera après-midi ?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=question  emotion=neutral
+         1. C'est nuit ?
+         2. Ça se passe nuit ?
+         3. Ce sera nuit ?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=question  emotion=neutral
+         1. C'est toujours ?
+         2. Ça se passe toujours ?
+         3. Ce sera toujours ?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=question  emotion=neutral
+         1. C'est tous les jours ?
+         2. Ça se passe tous les jours ?
+         3. Ce sera tous les jours ?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=question  emotion=neutral
+         1. C'est dans une minute ?
+         2. Ça se passe dans une minute ?
+         3. Ce sera dans une minute ?
+
+────────────────────────────────────────────────────────────────────────
+  SUMMARY for QUESTION
+────────────────────────────────────────────────────────────────────────
+  Items (L2):              12
+  Modifiers (L3):          200
+  Total cell combinations: 212
+  Total sentences:         713
+  Avg sentences / cell:    3.4
+────────────────────────────────────────────────────────────────────────

@@ -12,6 +12,7 @@
  */
 
 import { memo, useCallback } from "react";
+import { Volume2 } from "lucide-react";
 import { getVocabLabel } from "./VocabToolbar";
 
 function VocabCell({ item, langCode, color, onSpeak }) {
@@ -42,6 +43,7 @@ function VocabCell({ item, langCode, color, onSpeak }) {
         transition: "transform 0.1s ease, box-shadow 0.15s ease",
         WebkitTapHighlightColor: "transparent",
         touchAction: "manipulation",
+        position: "relative",
         minHeight: 72,
       }}
       onPointerDown={e => { e.currentTarget.style.transform = "scale(0.93)"; }}
@@ -72,6 +74,17 @@ function VocabCell({ item, langCode, color, onSpeak }) {
       }}>
         {label}
       </span>
+      {/* Speak indicator — matches PhraseGrid style */}
+      <Volume2
+        size={11}
+        strokeWidth={2}
+        style={{
+          position: "absolute",
+          top: 6, right: 6,
+          color: "var(--text-4)",
+          pointerEvents: "none",
+        }}
+      />
     </button>
   );
 }
@@ -92,7 +105,7 @@ export default memo(function VocabGrid({
         gridTemplateColumns: "repeat(4, 1fr)",
         gridAutoRows: "min-content",
         gap: 8,
-        padding: "10px 12px 16px",
+        padding: "10px 12px 88px",
         overflow: "auto",
         WebkitOverflowScrolling: "touch",
         alignContent: "start",

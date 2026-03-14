@@ -166,6 +166,38 @@ const NUMBERS = typed("number", [
   { id: "num_10", emoji: "🔟",  label: "10" },
 ]);
 
+// ── Predicate / state palettes (for PEOPLE category) ────────────────────────
+
+const PREDICATES = typed("predicate", [
+  { id: "pr_here",    emoji: "📍", label: "is here" },
+  { id: "pr_coming",  emoji: "🚶", label: "is coming" },
+  { id: "pr_gone",    emoji: "👋", label: "is gone" },
+  { id: "pr_wants",   emoji: "🙋", label: "wants" },
+  { id: "pr_needs",   emoji: "🆘", label: "needs" },
+  { id: "pr_said",    emoji: "🗣️", label: "said" },
+  { id: "pr_helps",   emoji: "🤝", label: "helps" },
+  { id: "pr_happy",   emoji: "😊", label: "is happy" },
+  { id: "pr_angry",   emoji: "😠", label: "is angry" },
+  { id: "pr_sick",    emoji: "🤒", label: "is sick" },
+  { id: "pr_where",   emoji: "❓", label: "where?" },
+  { id: "pr_call",    emoji: "📞", label: "call" },
+]);
+
+const SELF_STATES = typed("state", [
+  { id: "st_ready",   emoji: "✅", label: "am ready" },
+  { id: "st_here",    emoji: "📍", label: "am here" },
+  { id: "st_coming",  emoji: "🚶", label: "am coming" },
+  { id: "st_leaving", emoji: "🚪", label: "am leaving" },
+  { id: "st_hungry",  emoji: "🍽️", label: "am hungry" },
+  { id: "st_thirsty", emoji: "💧", label: "am thirsty" },
+  { id: "st_tired",   emoji: "😴", label: "am tired" },
+  { id: "st_ok",      emoji: "👌", label: "am OK" },
+  { id: "st_notok",   emoji: "❌", label: "am not OK" },
+  { id: "st_busy",    emoji: "📵", label: "am busy" },
+  { id: "st_waiting", emoji: "⏳", label: "am waiting" },
+  { id: "st_lost",    emoji: "😰", label: "am lost" },
+]);
+
 // ── Category-specific L3 sets (named so L2 definitions stay readable) ───────
 
 const FOOD_CHOICES = typed("specific-item", [
@@ -277,19 +309,22 @@ const QUESTION_WHAT_TOPICS = typed("detail", [
   { id: "q3_this",      emoji: "👉", label: "this" },
   { id: "q3_that",      emoji: "👈", label: "that" },
   { id: "q3_happened",  emoji: "💥", label: "happened" },
-  { id: "q3_name",      emoji: "🏷️", label: "name" },
-  { id: "q3_problem",   emoji: "⚠️", label: "problem" },
+  { id: "q3_wrong",     emoji: "⚠️", label: "wrong" },
+  { id: "q3_forlunch",  emoji: "🍽️", label: "for lunch" },
+  { id: "q3_fordinner", emoji: "🍝", label: "for dinner" },
   { id: "q3_next",      emoji: "⏭️", label: "next" },
+  { id: "q3_name",      emoji: "🏷️", label: "your name" },
 ]);
 
 const QUESTION_HOW_TOPICS = typed("action", [
-  { id: "q3_do",     emoji: "👉", label: "do" },
-  { id: "q3_say",    emoji: "🗣️", label: "say" },
-  { id: "q3_spell",  emoji: "🔤", label: "spell" },
-  { id: "q3_use",    emoji: "🛠️", label: "use" },
-  { id: "q3_get",    emoji: "📥", label: "get" },
-  { id: "q3_feel",   emoji: "❤️", label: "feel" },
-  { id: "q3_fix",    emoji: "🔧", label: "fix" },
+  { id: "q3_do",       emoji: "👉", label: "do this" },
+  { id: "q3_say",      emoji: "🗣️", label: "say it" },
+  { id: "q3_spell",    emoji: "🔤", label: "spell it" },
+  { id: "q3_use",      emoji: "🛠️", label: "use it" },
+  { id: "q3_getthere", emoji: "📍", label: "get there" },
+  { id: "q3_feel",     emoji: "❤️", label: "you feel" },
+  { id: "q3_fix",      emoji: "🔧", label: "fix it" },
+  { id: "q3_open",     emoji: "🚪", label: "open it" },
 ]);
 
 const QUESTION_ACTIONS = typed("action", [
@@ -301,6 +336,56 @@ const QUESTION_ACTIONS = typed("action", [
   { id: "s_wait",    emoji: "⏸️", label: "wait" },
   { id: "s_tell",    emoji: "🗣️", label: "tell" },
   { id: "d_stop",    emoji: "✋", label: "stop" },
+]);
+
+const WHEN_CONTEXT = typed("detail", [
+  { id: "q3_lunch",    emoji: "🍽️", label: "lunch" },
+  { id: "q3_gohome",   emoji: "🏠", label: "go home" },
+  { id: "q3_gobed",    emoji: "🛏️", label: "bedtime" },
+  { id: "q3_doctor2",  emoji: "🩺", label: "the doctor" },
+  { id: "q3_recess",   emoji: "🛝", label: "recess" },
+  { id: "q3_over",     emoji: "🏁", label: "is this over" },
+  { id: "q3_start",    emoji: "▶️", label: "does it start" },
+]);
+
+const WHO_CONTEXT = typed("detail", [
+  { id: "q3_didthis",  emoji: "👉", label: "did this" },
+  { id: "q3_talking",  emoji: "🗣️", label: "is talking" },
+  { id: "q3_iscoming", emoji: "🚶", label: "is coming" },
+  { id: "q3_isthat",   emoji: "👈", label: "is that" },
+  { id: "q3_canhelp",  emoji: "🆘", label: "can help" },
+  { id: "q3_isitfor",  emoji: "❓", label: "is it for" },
+]);
+
+const WHY_CONTEXT = typed("detail", [
+  { id: "q3_whynot",    emoji: "🚫", label: "not" },
+  { id: "q3_cantI",     emoji: "❌", label: "can't I" },
+  { id: "q3_whyangry",  emoji: "😠", label: "angry" },
+  { id: "q3_whycrying", emoji: "😢", label: "crying" },
+  { id: "q3_whyleave",  emoji: "🚪", label: "leaving" },
+  { id: "q3_whyhere",   emoji: "📍", label: "here" },
+]);
+
+const CAN_I_ACTIONS = typed("action", [
+  { id: "q3_cigo",     emoji: "🚶", label: "go" },
+  { id: "q3_cihave",   emoji: "🤲", label: "have" },
+  { id: "q3_ciplay",   emoji: "🎮", label: "play" },
+  { id: "q3_cieat",    emoji: "🍴", label: "eat" },
+  { id: "q3_ciwatch",  emoji: "📺", label: "watch" },
+  { id: "q3_cihelp",   emoji: "🆘", label: "help" },
+  { id: "q3_cidrink",  emoji: "🥤", label: "drink" },
+  { id: "q3_cisit",    emoji: "💺", label: "sit here" },
+]);
+
+const CAN_YOU_ACTIONS = typed("action", [
+  { id: "q3_cyhelp",   emoji: "🆘", label: "help me" },
+  { id: "q3_cycome",   emoji: "🫴", label: "come" },
+  { id: "q3_cyshow",   emoji: "👁️", label: "show me" },
+  { id: "q3_cytell",   emoji: "🗣️", label: "tell me" },
+  { id: "q3_cygive",   emoji: "🤲", label: "give me" },
+  { id: "q3_cyrepeat", emoji: "🔄", label: "repeat" },
+  { id: "q3_cyopen",   emoji: "🚪", label: "open" },
+  { id: "q3_cywait",   emoji: "⏸️", label: "wait" },
 ]);
 
 const QUESTION_FEELINGS = typed("detail", [
@@ -393,41 +478,45 @@ export const HIERARCHY = {
 
   // ━━ PEOPLE (14 items) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   //
-  // Changes:
-  //  - Pronouns (I/you/we/they) promoted to the top for sentence-building speed
-  //  - Family, peers, and care-team roles share one page to reduce navigation cost
-  //  - Added "nurse" and "therapist" for medical / school support contexts
+  // Restructured (v4) for sentence completion:
+  //  - Pronouns (I/you/we/they) get SELF_STATES so every tap produces a real
+  //    sentence: "I am ready", "I am here", "You are hungry", "We are leaving"
+  //  - Named people get PREDICATES — actions/states about them:
+  //    "Mom is here", "Dad wants", "Where friend?", "Call nurse"
+  //  - This eliminates the old broken output ("I now!", "mom later")
   // ─────────────────────────────────────────────────────────────────────────
   people: {
     id: "people", emoji: "👥", label: "PEOPLE", color: "#1971C2", bg: "#E7F5FF",
     mapTo: "people",
     items: [
-      { id: "pe_i",          emoji: "👤",   label: "I",          l3: l3(TIME, POLARITY, PLACES) },
-      { id: "pe_you",        emoji: "👆",   label: "you",        l3: l3(TIME, POLARITY, PLACES) },
-      { id: "pe_we",         emoji: "👫",   label: "we",         l3: l3(TIME, POLARITY, PLACES) },
-      { id: "pe_they",       emoji: "👥",   label: "they",       l3: l3(TIME, POLARITY, PLACES) },
-      { id: "pe_mom",        emoji: "👩",   label: "mom",        l3: l3(PLACES, TIME, POLARITY) },
-      { id: "pe_dad",        emoji: "👨",   label: "dad",        l3: l3(PLACES, TIME, POLARITY) },
-      { id: "pe_brother",    emoji: "👦",   label: "brother",    l3: l3(PLACES, TIME) },
-      { id: "pe_sister",     emoji: "👧",   label: "sister",     l3: l3(PLACES, TIME) },
-      { id: "pe_grandma",    emoji: "👵",   label: "grandma",    l3: l3(PLACES, TIME) },
-      { id: "pe_grandpa",    emoji: "👴",   label: "grandpa",    l3: l3(PLACES, TIME) },
-      { id: "pe_friend",     emoji: "🤝",   label: "friend",     l3: l3(PLACES, TIME) },
-      { id: "pe_teacher",    emoji: "🧑‍🏫",  label: "teacher",    l3: l3(PLACES, TIME) },
-      { id: "pe_nurse",      emoji: "💉",   label: "nurse",      l3: l3(PLACES, TIME) },       // ★ new
-      { id: "pe_therapist",  emoji: "🩺",   label: "therapist",  l3: l3(PLACES, TIME) },       // ★ new
+      // ── Pronouns (self-states — "I am ready", "You are tired") ──
+      { id: "pe_i",          emoji: "👤",   label: "I",          l3: l3(SELF_STATES) },
+      { id: "pe_you",        emoji: "👆",   label: "you",        l3: l3(SELF_STATES) },
+      { id: "pe_we",         emoji: "👫",   label: "we",         l3: l3(SELF_STATES) },
+      { id: "pe_they",       emoji: "👥",   label: "they",       l3: l3(SELF_STATES) },
+      // ── Named people (predicates — "Mom is here", "Dad wants") ──
+      { id: "pe_mom",        emoji: "👩",   label: "mom",        l3: l3(PREDICATES, TIME) },
+      { id: "pe_dad",        emoji: "👨",   label: "dad",        l3: l3(PREDICATES, TIME) },
+      { id: "pe_brother",    emoji: "👦",   label: "brother",    l3: l3(PREDICATES, TIME) },
+      { id: "pe_sister",     emoji: "👧",   label: "sister",     l3: l3(PREDICATES, TIME) },
+      { id: "pe_grandma",    emoji: "👵",   label: "grandma",    l3: l3(PREDICATES, TIME) },
+      { id: "pe_grandpa",    emoji: "👴",   label: "grandpa",    l3: l3(PREDICATES, TIME) },
+      { id: "pe_friend",     emoji: "🤝",   label: "friend",     l3: l3(PREDICATES, TIME) },
+      { id: "pe_teacher",    emoji: "🧑‍🏫",  label: "teacher",    l3: l3(PREDICATES, TIME) },
+      { id: "pe_nurse",      emoji: "💉",   label: "nurse",      l3: l3(PREDICATES, TIME) },
+      { id: "pe_therapist",  emoji: "🩺",   label: "therapist",  l3: l3(PREDICATES, TIME) },
     ],
   },
 
-  // ━━ DO (14 items) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // ━━ DO (15 items) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   //
-  // Empathy-driven changes (v3):
-  //  - "read" → "turn": "my turn!", "your turn" is THE critical social
-  //    participation verb for AAC users in classroom/play/therapy.
-  //    "Read" is coverable via OBJECTS > book or DESCRIBE context.
-  //  - Reordered: stop/help/give promoted (agency & safety verbs first),
-  //    then daily activity verbs, then social/preference verbs
-  //  - "choose" kept — autonomy verb, fundamental to dignity
+  // Restructured (v4):
+  //  - Added "open", "make", "read" — high-frequency daily verbs
+  //  - "open" covers door/window/bag/light contexts
+  //  - "make" covers crafts, requests ("make it stop", "make food")
+  //  - "read" restored — "read book", "read to me" is a core school/therapy verb
+  //  - Reordered: agency & safety verbs first (stop/help), then daily
+  //    activity verbs, then social/preference verbs
   //  - L3 for "go" puts PLACES first (most natural: "go home", "go school")
   // ─────────────────────────────────────────────────────────────────────────
   do: {
@@ -435,22 +524,23 @@ export const HIERARCHY = {
     mapTo: "actions",
     items: [
       // ── Agency & safety verbs (most urgent) ──
-      { id: "d_stop",     emoji: "✋", label: "stop",     l3: l3(TIME, POLARITY) },
+      { id: "d_stop",     emoji: "✋", label: "stop",     l3: l3(PEOPLE, TIME, POLARITY) },
       { id: "d_help",     emoji: "🆘", label: "help",     l3: l3(PEOPLE, TIME, POLARITY) },
-      { id: "d_go",       emoji: "🚶", label: "go",       l3: l3(PLACES, TIME, POLARITY) },
+      { id: "d_go",       emoji: "🚶", label: "go",       l3: l3(PLACES, PEOPLE, TIME) },
       { id: "d_come",     emoji: "🫴", label: "come",     l3: l3(PLACES, PEOPLE, TIME) },
-      { id: "d_give",     emoji: "🤲", label: "give",     l3: l3(OBJECTS, PEOPLE, NUMBERS, COLOURS, TIME) },
-      { id: "d_turn",     emoji: "🔄", label: "turn",     l3: l3(PEOPLE, TIME, POLARITY) },   // ★ replaces "read" — social participation
+      { id: "d_give",     emoji: "🤲", label: "give",     l3: l3(OBJECTS, PEOPLE, POLARITY) },
+      { id: "d_turn",     emoji: "🔄", label: "turn",     l3: l3(PEOPLE, TIME, POLARITY) },
       // ── Daily activity verbs ──
-      { id: "d_eat",      emoji: "🍴", label: "eat",      l3: l3(OBJECTS, NUMBERS, TIME, POLARITY) },
-      { id: "d_drink",    emoji: "🥤", label: "drink",    l3: l3(OBJECTS, NUMBERS, TIME, POLARITY) },
+      { id: "d_eat",      emoji: "🍴", label: "eat",      l3: l3(FOOD_CHOICES, POLARITY, TIME) },
+      { id: "d_drink",    emoji: "🥤", label: "drink",    l3: l3(DRINK_CHOICES, POLARITY, TIME) },
       { id: "d_play",     emoji: "🎮", label: "play",     l3: l3(OBJECTS, PEOPLE, PLACES) },
-      { id: "d_watch",    emoji: "📺", label: "watch",    l3: l3(OBJECTS, TIME, POLARITY) },
-      { id: "d_finish",   emoji: "🏁", label: "finish",   l3: l3(OBJECTS, TIME, POLARITY) },
+      { id: "d_watch",    emoji: "📺", label: "watch",    l3: l3(OBJECTS, POLARITY, TIME) },
+      { id: "d_open",     emoji: "🚪", label: "open",     l3: l3(OBJECTS, POLARITY, TIME) },
+      { id: "d_make",     emoji: "🛠️", label: "make",     l3: l3(OBJECTS, FOOD_CHOICES, POLARITY) },
+      { id: "d_read",     emoji: "📖", label: "read",     l3: l3(OBJECTS, PEOPLE, TIME) },
       // ── Social / preference verbs ──
-      { id: "d_like",     emoji: "👍", label: "like",     l3: l3(OBJECTS, PEOPLE, COLOURS, POLARITY) },
-      { id: "d_show",     emoji: "👁️",  label: "show",     l3: l3(OBJECTS, PEOPLE, COLOURS, TIME) },
-      { id: "d_choose",   emoji: "🫵", label: "choose",   l3: l3(OBJECTS, PEOPLE, COLOURS, PLACES) },
+      { id: "d_like",     emoji: "👍", label: "like",     l3: l3(OBJECTS, FOOD_CHOICES, PEOPLE, POLARITY) },
+      { id: "d_finish",   emoji: "🏁", label: "finish",   l3: l3(OBJECTS, TIME, POLARITY) },
     ],
   },
 
@@ -468,8 +558,8 @@ export const HIERARCHY = {
     id: "talk", emoji: "💬", label: "TALK", color: "#0C8599", bg: "#E6FCF5",
     mapTo: "social",
     items: [
-      { id: "s_hello",      emoji: "👋", label: "hello",       l3: l3(PEOPLE, TIME) },
-      { id: "s_bye",        emoji: "🫡", label: "goodbye",     l3: l3(PEOPLE, TIME) },
+      { id: "s_hello",      emoji: "👋", label: "hello",       l3: l3(PEOPLE) },
+      { id: "s_bye",        emoji: "🫡", label: "goodbye",     l3: l3(PEOPLE) },
       { id: "s_yes",        emoji: "✅", label: "yes",         l3: l3(POLARITY, TIME) },
       { id: "s_no",         emoji: "❌", label: "no",          l3: l3(POLARITY, TIME) },
       { id: "s_please",     emoji: "🙏", label: "please",      l3: l3(OBJECTS, PEOPLE, TIME) },
@@ -516,43 +606,49 @@ export const HIERARCHY = {
 
   // ━━ QUESTION (12 items) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   //
-  // Changes:
-  //  - Rebalanced around three AAC jobs: gather information, ask about quantity/time,
-  //    and request permission/help from a partner
-  //  - Restored "how much" and "what time" — amount and schedule are more concrete
-  //    daily needs than the previous abstract stems
-  //  - Replaced awkward yes/no stems with "can you" so partner-directed requests are easier
-  //  - Each L2 now uses a smaller, question-specific L3 palette instead of huge generic lists
+  // Restructured (v4) for real question completion:
+  //  - Each L2 question word now has context-specific L3s that form
+  //    complete, natural questions in 2-3 taps
+  //  - "what" → "What is this?", "What happened?", "What's for lunch?"
+  //  - "where" → "Where is mom?", "Where is the bathroom?"
+  //  - "when" → "When is lunch?", "When do we go home?"
+  //  - "who" → "Who did this?", "Who is coming?", "Who can help?"
+  //  - "why" → "Why not?", "Why can't I?", "Why are you angry?"
+  //  - "can I" → "Can I go?", "Can I have?", "Can I play?"
+  //  - "can you" → "Can you help me?", "Can you show me?"
+  //  - "do you have" NEW → "Do you have water?", "Do you have my phone?"
+  //  - "is it" NEW → "Is it ready?", "Is it time?"
   // ─────────────────────────────────────────────────────────────────────────
   question: {
     id: "question", emoji: "❓", label: "QUESTION", color: "#5C940D", bg: "#F4FCE3",
     mapTo: "questions",
     items: [
       { id: "q_what",      emoji: "❓", label: "what",        l3: l3(QUESTION_WHAT_TOPICS, QUESTION_OBJECTS) },
-      { id: "q_where",     emoji: "📍", label: "where",       l3: l3(QUESTION_PEOPLE, QUESTION_OBJECTS) },
-      { id: "q_when",      emoji: "🕐", label: "when",        l3: l3(QUESTION_PLACES, QUESTION_OBJECTS) },
-      { id: "q_who",       emoji: "👤", label: "who",         l3: l3(QUESTION_PLACES, QUESTION_ACTIONS) },
-      { id: "q_why",       emoji: "🤔", label: "why",         l3: l3(QUESTION_FEELINGS, QUESTION_PLACES, QUESTION_POLARITY) },
+      { id: "q_where",     emoji: "📍", label: "where",       l3: l3(QUESTION_PEOPLE, QUESTION_OBJECTS, QUESTION_PLACES) },
+      { id: "q_when",      emoji: "🕐", label: "when",        l3: l3(WHEN_CONTEXT, QUESTION_PLACES) },
+      { id: "q_who",       emoji: "👤", label: "who",         l3: l3(WHO_CONTEXT, QUESTION_PEOPLE) },
+      { id: "q_why",       emoji: "🤔", label: "why",         l3: l3(WHY_CONTEXT, QUESTION_FEELINGS) },
       { id: "q_how",       emoji: "🔧", label: "how",         l3: l3(QUESTION_HOW_TOPICS) },
       { id: "q_howmuch",   emoji: "💰", label: "how much",    l3: l3(NUMBERS, QUESTION_OBJECTS, QUESTION_POLARITY) },
       { id: "q_howmany",   emoji: "🔢", label: "how many",    l3: l3(NUMBERS, QUESTION_OBJECTS, QUESTION_PEOPLE) },
-      { id: "q_which",     emoji: "👈", label: "which",       l3: l3(QUESTION_OBJECTS, QUESTION_PEOPLE) },
-      { id: "q_whatTime",  emoji: "🕒", label: "what time",   l3: l3(QUESTION_PLACES, QUESTION_PEOPLE) },
-      { id: "q_canI",      emoji: "🙋", label: "can I",       l3: l3(QUESTION_ACTIONS, QUESTION_PLACES) },
-      { id: "q_canYou",    emoji: "🤝", label: "can you",     l3: l3(QUESTION_ACTIONS, QUESTION_OBJECTS) },
+      { id: "q_canI",      emoji: "🙋", label: "can I",       l3: l3(CAN_I_ACTIONS, QUESTION_PLACES) },
+      { id: "q_canYou",    emoji: "🤝", label: "can you",     l3: l3(CAN_YOU_ACTIONS, QUESTION_OBJECTS) },
+      { id: "q_doYouHave", emoji: "🤲", label: "do you have", l3: l3(QUESTION_OBJECTS, FOOD_CHOICES, DRINK_CHOICES) },
+      { id: "q_isIt",      emoji: "🔍", label: "is it",       l3: l3(QUESTION_WHAT_TOPICS, QUESTION_POLARITY, TIME) },
     ],
   },
 
-  // ━━ DESCRIBE (15 items) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  // ━━ DESCRIBE (14 items) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   //
-  // Empathy-driven changes (v3):
-  //  - Added "ready" — one of the highest-frequency AAC descriptors:
-  //    "I'm ready", "I'm not ready", "are you ready?" drives transitions
-  //    in school, therapy, meals, outings. For a non-verbal user, signaling
-  //    readiness is autonomy.
-  //  - Reordered: good/bad + ready at top (most frequent daily descriptors),
-  //    then physical properties, then sensory, then comparison
-  //  - 15 items fits 3-col × 5-row grid perfectly
+  // Restructured (v4):
+  //  - Removed "color" and "number" meta-categories (just redirected to
+  //    palette sub-grids with no sentence value; colors/numbers appear
+  //    as L3 under objects where they actually modify something)
+  //  - Added "new" and "old" — very common daily descriptors
+  //    ("new shoes", "old phone", "that's new")
+  //  - Added "nice" — positive evaluator used constantly in AAC
+  //    ("nice job", "that's nice", "nice person")
+  //  - Optimal 14 items = 2 rows × 7 or 3-col layout
   // ─────────────────────────────────────────────────────────────────────────
   describe: {
     id: "describe", emoji: "🎨", label: "DESCRIBE", color: "#862E9C", bg: "#F8F0FC",
@@ -561,25 +657,21 @@ export const HIERARCHY = {
       // ── Most frequent daily judgments ──
       { id: "dc_good",      emoji: "👍", label: "good",      l3: l3(OBJECTS, POLARITY, TIME) },
       { id: "dc_bad",       emoji: "👎", label: "bad",       l3: l3(OBJECTS, POLARITY, TIME) },
-      { id: "dc_ready",     emoji: "✅", label: "ready",     l3: l3(POLARITY, TIME, PEOPLE) },  // ★ new — transition signaling
+      { id: "dc_ready",     emoji: "✅", label: "ready",     l3: l3(POLARITY, TIME, PEOPLE) },
+      { id: "dc_nice",      emoji: "😊", label: "nice",      l3: l3(OBJECTS, PEOPLE, POLARITY) },
       // ── Physical properties ──
-      { id: "dc_big",       emoji: "🐘", label: "big",       l3: l3(OBJECTS, POLARITY, COLOURS) },
-      { id: "dc_small",     emoji: "🐜", label: "small",     l3: l3(OBJECTS, POLARITY, COLOURS) },
+      { id: "dc_big",       emoji: "🐘", label: "big",       l3: l3(OBJECTS, POLARITY) },
+      { id: "dc_small",     emoji: "🐜", label: "small",     l3: l3(OBJECTS, POLARITY) },
       { id: "dc_hot",       emoji: "🔥", label: "hot",       l3: l3(OBJECTS, BODY, POLARITY) },
       { id: "dc_cold",      emoji: "❄️", label: "cold",      l3: l3(OBJECTS, BODY, POLARITY) },
-      { id: "dc_clean",     emoji: "✨", label: "clean",     l3: l3(OBJECTS, PLACES, POLARITY) },
-      { id: "dc_dirty",     emoji: "🦠", label: "dirty",     l3: l3(OBJECTS, PLACES, POLARITY) },
+      { id: "dc_new",       emoji: "✨", label: "new",       l3: l3(OBJECTS, POLARITY) },
+      { id: "dc_old",       emoji: "📦", label: "old",       l3: l3(OBJECTS, POLARITY) },
       // ── Sensory ──
       { id: "dc_loud",      emoji: "🔊", label: "loud",      l3: l3(POLARITY, TIME, PLACES) },
       { id: "dc_quiet",     emoji: "🤫", label: "quiet",     l3: l3(POLARITY, TIME, PLACES) },
-      { id: "dc_fast",      emoji: "⚡", label: "fast",      l3: l3(POLARITY, TIME) },
-      { id: "dc_slow",      emoji: "🐢", label: "slow",      l3: l3(POLARITY, TIME) },
-      // ── Properties ──
-      { id: "dc_color",     emoji: "🎨", label: "color",     l3: l3(COLOURS, POLARITY) },
-      { id: "dc_number",    emoji: "🔢", label: "number",    l3: l3(NUMBERS, POLARITY) },
-      // ── Comparison ──
-      { id: "dc_same",      emoji: "🔁", label: "same",      l3: l3(OBJECTS, POLARITY) },
+      // ── State ──
       { id: "dc_broken",    emoji: "🔧", label: "broken",    l3: l3(OBJECTS, PLACES, POLARITY) },
+      { id: "dc_same",      emoji: "🔁", label: "the same",  l3: l3(OBJECTS, POLARITY) },
     ],
   },
 };
@@ -595,6 +687,9 @@ const MODIFIER_TYPE_BY_PREFIX = [
   ["num_", "number"],
   ["n3_", "specific-item"],
   ["lc3_", "sub-place"],
+  ["pr_", "predicate"],
+  ["st_", "state"],
+  ["q3_", "detail"],
 ];
 
 /**

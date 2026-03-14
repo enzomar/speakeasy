@@ -1,0 +1,4850 @@
+========================================================================
+  SpeakEasy — Grid Combination Report: 🎨  DESCRIBE
+========================================================================
+  Category : describe  (mapTo=descriptors)
+  Language : en
+  Gender   : male
+  Top N    : 8 heuristic sentences per cell
+  Engine   : unavailable (heuristic only)
+  Generated: 2026-03-14T09:35:09.977Z
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  L1 CATEGORY: 🎨  DESCRIBE  (describe)
+  14 items, color=#862E9C
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  L2: 👍  good  (dc_good)
+      pos=adjective  intent=statement  emotion=positive
+       1. I am so good!
+       2. I am good
+       3. I am not good
+       4. I am good right now!
+       5. I think I am good
+       6. Are you good too?
+       7. I really want to feel good!
+       8. Yes, I am very good!
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=positive
+         1. The food is good
+         2. This food is good
+         3. I find the food good
+         4. The food is too good
+         5. Is the food good?
+         6. The food seems good
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=positive
+         1. The water is good
+         2. This water is good
+         3. I find the water good
+         4. The water is too good
+         5. Is the water good?
+         6. The water seems good
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=positive
+         1. The book is good
+         2. This book is good
+         3. I find the book good
+         4. The book is too good
+         5. Is the book good?
+         6. The book seems good
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=positive
+         1. The phone is good
+         2. This phone is good
+         3. I find the phone good
+         4. The phone is too good
+         5. Is the phone good?
+         6. The phone seems good
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=positive
+         1. The toy is good
+         2. This toy is good
+         3. I find the toy good
+         4. The toy is too good
+         5. Is the toy good?
+         6. The toy seems good
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=positive
+         1. The TV is good
+         2. This TV is good
+         3. I find the TV good
+         4. The TV is too good
+         5. Is the TV good?
+         6. The TV seems good
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=positive
+         1. The music is good
+         2. This music is good
+         3. I find the music good
+         4. The music is too good
+         5. Is the music good?
+         6. The music seems good
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=positive
+         1. The game is good
+         2. This game is good
+         3. I find the game good
+         4. The game is too good
+         5. Is the game good?
+         6. The game seems good
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=positive
+         1. The picture is good
+         2. This picture is good
+         3. I find the picture good
+         4. The picture is too good
+         5. Is the picture good?
+         6. The picture seems good
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=positive
+         1. The homework is good
+         2. This homework is good
+         3. I find the homework good
+         4. The homework is too good
+         5. Is the homework good?
+         6. The homework seems good
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=positive
+         1. The door is good
+         2. This door is good
+         3. I find the door good
+         4. The door is too good
+         5. Is the door good?
+         6. The door seems good
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=positive
+         1. The window is good
+         2. This window is good
+         3. I find the window good
+         4. The window is too good
+         5. Is the window good?
+         6. The window seems good
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=positive
+         1. The light is good
+         2. This light is good
+         3. I find the light good
+         4. The light is too good
+         5. Is the light good?
+         6. The light seems good
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=positive
+         1. The bag is good
+         2. This bag is good
+         3. I find the bag good
+         4. The bag is too good
+         5. Is the bag good?
+         6. The bag seems good
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=positive
+         1. The clothes are good
+         2. These clothes are good
+         3. I find the clothes good
+         4. The clothes are too good
+         5. Are the clothes good?
+         6. The clothes seem good
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=positive
+         1. The blanket is good
+         2. This blanket is good
+         3. I find the blanket good
+         4. The blanket is too good
+         5. Is the blanket good?
+         6. The blanket seems good
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=positive
+         1. The ball is good
+         2. This ball is good
+         3. I find the ball good
+         4. The ball is too good
+         5. Is the ball good?
+         6. The ball seems good
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is good
+         2. This medicine is good
+         3. I find the medicine good
+         4. The medicine is too good
+         5. Is the medicine good?
+         6. The medicine seems good
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not good
+         2. I am good
+         3. I am so good!
+         4. I am good right now!
+         5. I think I am good
+         6. You are not good?
+         7. I don't want to feel good
+         8. No, I am not good
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good
+         3. I am not good
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am good
+         2. I am good
+         3. I am so good!
+         4. I am not good
+         5. I am good right now!
+         6. Are you maybe good?
+         7. Maybe I want to feel good
+         8. Maybe a little good
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am good right now!
+         2. I am good
+         3. I am so good!
+         4. I am not good
+         5. I think I am good
+         6. Are you good right now?
+         7. Help me feel good!
+         8. Yes, I am good now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good
+         3. I am not good
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not good
+         2. I am good
+         3. I am so good!
+         4. I am good right now!
+         5. I think I am good
+         6. You are not good?
+         7. I don't want to feel good
+         8. No, I am not good
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good
+         3. I am not good
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am good
+         2. I am good
+         3. I am so good!
+         4. I am not good
+         5. I am good right now!
+         6. Are you maybe good?
+         7. Maybe I want to feel good
+         8. Maybe a little good
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good
+         3. I am not good
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good
+         3. I am not good
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=statement  emotion=urgent
+         1. I am good right now!
+         2. I am good now
+         3. I am so good!
+         4. I am not good now
+         5. I think I am good
+         6. Are you good right now?
+         7. Help me feel good!
+         8. Yes, I am good now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good soon
+         3. I am not good soon
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good later
+         3. I am not good later
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good today
+         3. I am not good today
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good tomorrow
+         3. I am not good tomorrow
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good yesterday
+         3. I am not good yesterday
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good in the morning
+         3. I am not good in the morning
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good in the afternoon
+         3. I am not good in the afternoon
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good at night
+         3. I am not good at night
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good always
+         3. I am not good always
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good every day
+         3. I am not good every day
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=statement  emotion=positive
+         1. I am so good!
+         2. I am good in a minute
+         3. I am not good in a minute
+         4. I am good right now!
+         5. I think I am good
+         6. Are you good too?
+         7. I really want to feel good!
+         8. Yes, I am very good!
+
+  L2: 👎  bad  (dc_bad)
+      pos=adjective  intent=statement  emotion=negative
+       1. I am not bad
+       2. I am bad
+       3. I am so bad!
+       4. I am bad right now!
+       5. I think I am bad
+       6. You are not bad?
+       7. I don't want to feel bad
+       8. No, I am not bad
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=negative
+         1. The food is bad
+         2. This food is bad
+         3. I find the food bad
+         4. The food is too bad
+         5. Is the food bad?
+         6. The food seems bad
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=negative
+         1. The water is bad
+         2. This water is bad
+         3. I find the water bad
+         4. The water is too bad
+         5. Is the water bad?
+         6. The water seems bad
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=negative
+         1. The book is bad
+         2. This book is bad
+         3. I find the book bad
+         4. The book is too bad
+         5. Is the book bad?
+         6. The book seems bad
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=negative
+         1. The phone is bad
+         2. This phone is bad
+         3. I find the phone bad
+         4. The phone is too bad
+         5. Is the phone bad?
+         6. The phone seems bad
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=negative
+         1. The toy is bad
+         2. This toy is bad
+         3. I find the toy bad
+         4. The toy is too bad
+         5. Is the toy bad?
+         6. The toy seems bad
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=negative
+         1. The TV is bad
+         2. This TV is bad
+         3. I find the TV bad
+         4. The TV is too bad
+         5. Is the TV bad?
+         6. The TV seems bad
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=negative
+         1. The music is bad
+         2. This music is bad
+         3. I find the music bad
+         4. The music is too bad
+         5. Is the music bad?
+         6. The music seems bad
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=negative
+         1. The game is bad
+         2. This game is bad
+         3. I find the game bad
+         4. The game is too bad
+         5. Is the game bad?
+         6. The game seems bad
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=negative
+         1. The picture is bad
+         2. This picture is bad
+         3. I find the picture bad
+         4. The picture is too bad
+         5. Is the picture bad?
+         6. The picture seems bad
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=negative
+         1. The homework is bad
+         2. This homework is bad
+         3. I find the homework bad
+         4. The homework is too bad
+         5. Is the homework bad?
+         6. The homework seems bad
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=negative
+         1. The door is bad
+         2. This door is bad
+         3. I find the door bad
+         4. The door is too bad
+         5. Is the door bad?
+         6. The door seems bad
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=negative
+         1. The window is bad
+         2. This window is bad
+         3. I find the window bad
+         4. The window is too bad
+         5. Is the window bad?
+         6. The window seems bad
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=negative
+         1. The light is bad
+         2. This light is bad
+         3. I find the light bad
+         4. The light is too bad
+         5. Is the light bad?
+         6. The light seems bad
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=negative
+         1. The bag is bad
+         2. This bag is bad
+         3. I find the bag bad
+         4. The bag is too bad
+         5. Is the bag bad?
+         6. The bag seems bad
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=negative
+         1. The clothes are bad
+         2. These clothes are bad
+         3. I find the clothes bad
+         4. The clothes are too bad
+         5. Are the clothes bad?
+         6. The clothes seem bad
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=negative
+         1. The blanket is bad
+         2. This blanket is bad
+         3. I find the blanket bad
+         4. The blanket is too bad
+         5. Is the blanket bad?
+         6. The blanket seems bad
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=negative
+         1. The ball is bad
+         2. This ball is bad
+         3. I find the ball bad
+         4. The ball is too bad
+         5. Is the ball bad?
+         6. The ball seems bad
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is bad
+         2. This medicine is bad
+         3. I find the medicine bad
+         4. The medicine is too bad
+         5. Is the medicine bad?
+         6. The medicine seems bad
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not bad
+         2. I am bad
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so bad!
+         2. I am bad
+         3. I am not bad
+         4. I am bad right now!
+         5. I think I am bad
+         6. Are you bad too?
+         7. I really want to feel bad!
+         8. Yes, I am very bad!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am bad
+         2. I am bad
+         3. I am so bad!
+         4. I am not bad
+         5. I am bad right now!
+         6. Are you maybe bad?
+         7. Maybe I want to feel bad
+         8. Maybe a little bad
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am bad right now!
+         2. I am bad
+         3. I am so bad!
+         4. I am not bad
+         5. I think I am bad
+         6. Are you bad right now?
+         7. Help me feel bad!
+         8. Yes, I am bad now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so bad!
+         2. I am bad
+         3. I am not bad
+         4. I am bad right now!
+         5. I think I am bad
+         6. Are you bad too?
+         7. I really want to feel bad!
+         8. Yes, I am very bad!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not bad
+         2. I am bad
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not bad
+         2. I am bad
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am bad
+         2. I am bad
+         3. I am so bad!
+         4. I am not bad
+         5. I am bad right now!
+         6. Are you maybe bad?
+         7. Maybe I want to feel bad
+         8. Maybe a little bad
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not bad
+         2. I am bad
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not bad
+         2. I am bad
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=statement  emotion=urgent
+         1. I am bad right now!
+         2. I am bad now
+         3. I am so bad!
+         4. I am not bad now
+         5. I think I am bad
+         6. Are you bad right now?
+         7. Help me feel bad!
+         8. Yes, I am bad now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad soon
+         2. I am bad soon
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad later
+         2. I am bad later
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 📅  today  (t_today)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad today
+         2. I am bad today
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad tomorrow
+         2. I am bad tomorrow
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad yesterday
+         2. I am bad yesterday
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad in the morning
+         2. I am bad in the morning
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad in the afternoon
+         2. I am bad in the afternoon
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad at night
+         2. I am bad at night
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad always
+         2. I am bad always
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad every day
+         2. I am bad every day
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=statement  emotion=negative
+         1. I am not bad in a minute
+         2. I am bad in a minute
+         3. I am so bad!
+         4. I am bad right now!
+         5. I think I am bad
+         6. You are not bad?
+         7. I don't want to feel bad
+         8. No, I am not bad
+
+  L2: ✅  ready  (dc_ready)
+      pos=adjective  intent=statement  emotion=positive
+       1. I am so ready!
+       2. I am ready
+       3. I am not ready
+       4. I am ready right now!
+       5. I think I am ready
+       6. Are you ready too?
+       7. I really want to feel ready!
+       8. Yes, I am very ready!
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not ready
+         2. I am ready
+         3. I am so ready!
+         4. I am ready right now!
+         5. I think I am ready
+         6. You are not ready?
+         7. I don't want to feel ready
+         8. No, I am not ready
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready
+         3. I am not ready
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am ready
+         2. I am ready
+         3. I am so ready!
+         4. I am not ready
+         5. I am ready right now!
+         6. Are you maybe ready?
+         7. Maybe I want to feel ready
+         8. Maybe a little ready
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am ready right now!
+         2. I am ready
+         3. I am so ready!
+         4. I am not ready
+         5. I think I am ready
+         6. Are you ready right now?
+         7. Help me feel ready!
+         8. Yes, I am ready now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready
+         3. I am not ready
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not ready
+         2. I am ready
+         3. I am so ready!
+         4. I am ready right now!
+         5. I think I am ready
+         6. You are not ready?
+         7. I don't want to feel ready
+         8. No, I am not ready
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready
+         3. I am not ready
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am ready
+         2. I am ready
+         3. I am so ready!
+         4. I am not ready
+         5. I am ready right now!
+         6. Are you maybe ready?
+         7. Maybe I want to feel ready
+         8. Maybe a little ready
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready
+         3. I am not ready
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready
+         3. I am not ready
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=statement  emotion=urgent
+         1. I am ready right now!
+         2. I am ready now
+         3. I am so ready!
+         4. I am not ready now
+         5. I think I am ready
+         6. Are you ready right now?
+         7. Help me feel ready!
+         8. Yes, I am ready now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready soon
+         3. I am not ready soon
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready later
+         3. I am not ready later
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready today
+         3. I am not ready today
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready tomorrow
+         3. I am not ready tomorrow
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready yesterday
+         3. I am not ready yesterday
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready in the morning
+         3. I am not ready in the morning
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready in the afternoon
+         3. I am not ready in the afternoon
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready at night
+         3. I am not ready at night
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready always
+         3. I am not ready always
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready every day
+         3. I am not ready every day
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready in a minute
+         3. I am not ready in a minute
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready mom
+         3. I am not ready mom
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready dad
+         3. I am not ready dad
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready friend
+         3. I am not ready friend
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready teacher
+         3. I am not ready teacher
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=statement  emotion=urgent
+         1. I am ready right now!
+         2. I am ready doctor
+         3. I am so ready!
+         4. I am not ready doctor
+         5. I think I am ready
+         6. Are you ready right now?
+         7. Help me feel ready!
+         8. Yes, I am ready now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready nurse
+         3. I am not ready nurse
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready therapist
+         3. I am not ready therapist
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready caregiver
+         3. I am not ready caregiver
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready brother
+         3. I am not ready brother
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready sister
+         3. I am not ready sister
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=statement  emotion=positive
+         1. I am so ready!
+         2. I am ready everyone
+         3. I am not ready everyone
+         4. I am ready right now!
+         5. I think I am ready
+         6. Are you ready too?
+         7. I really want to feel ready!
+         8. Yes, I am very ready!
+
+  L2: 😊  nice  (dc_nice)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am nice
+       2. I am so nice!
+       3. I am not nice
+       4. I am nice right now!
+       5. I think I am nice
+       6. Are you nice?
+       7. I want to feel nice
+       8. Yes, I am nice
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is nice
+         2. This food is nice
+         3. I find the food nice
+         4. The food is too nice
+         5. Is the food nice?
+         6. The food seems nice
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is nice
+         2. This water is nice
+         3. I find the water nice
+         4. The water is too nice
+         5. Is the water nice?
+         6. The water seems nice
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is nice
+         2. This book is nice
+         3. I find the book nice
+         4. The book is too nice
+         5. Is the book nice?
+         6. The book seems nice
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is nice
+         2. This phone is nice
+         3. I find the phone nice
+         4. The phone is too nice
+         5. Is the phone nice?
+         6. The phone seems nice
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is nice
+         2. This toy is nice
+         3. I find the toy nice
+         4. The toy is too nice
+         5. Is the toy nice?
+         6. The toy seems nice
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is nice
+         2. This TV is nice
+         3. I find the TV nice
+         4. The TV is too nice
+         5. Is the TV nice?
+         6. The TV seems nice
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is nice
+         2. This music is nice
+         3. I find the music nice
+         4. The music is too nice
+         5. Is the music nice?
+         6. The music seems nice
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is nice
+         2. This game is nice
+         3. I find the game nice
+         4. The game is too nice
+         5. Is the game nice?
+         6. The game seems nice
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is nice
+         2. This picture is nice
+         3. I find the picture nice
+         4. The picture is too nice
+         5. Is the picture nice?
+         6. The picture seems nice
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is nice
+         2. This homework is nice
+         3. I find the homework nice
+         4. The homework is too nice
+         5. Is the homework nice?
+         6. The homework seems nice
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is nice
+         2. This door is nice
+         3. I find the door nice
+         4. The door is too nice
+         5. Is the door nice?
+         6. The door seems nice
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is nice
+         2. This window is nice
+         3. I find the window nice
+         4. The window is too nice
+         5. Is the window nice?
+         6. The window seems nice
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is nice
+         2. This light is nice
+         3. I find the light nice
+         4. The light is too nice
+         5. Is the light nice?
+         6. The light seems nice
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is nice
+         2. This bag is nice
+         3. I find the bag nice
+         4. The bag is too nice
+         5. Is the bag nice?
+         6. The bag seems nice
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are nice
+         2. These clothes are nice
+         3. I find the clothes nice
+         4. The clothes are too nice
+         5. Are the clothes nice?
+         6. The clothes seem nice
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is nice
+         2. This blanket is nice
+         3. I find the blanket nice
+         4. The blanket is too nice
+         5. Is the blanket nice?
+         6. The blanket seems nice
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is nice
+         2. This ball is nice
+         3. I find the ball nice
+         4. The ball is too nice
+         5. Is the ball nice?
+         6. The ball seems nice
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is nice
+         2. This medicine is nice
+         3. I find the medicine nice
+         4. The medicine is too nice
+         5. Is the medicine nice?
+         6. The medicine seems nice
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice mom
+         2. I am so nice!
+         3. I am not nice mom
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice mom?
+         7. I want to feel nice mom
+         8. Yes, I am nice
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice dad
+         2. I am so nice!
+         3. I am not nice dad
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice dad?
+         7. I want to feel nice dad
+         8. Yes, I am nice
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice friend
+         2. I am so nice!
+         3. I am not nice friend
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice friend?
+         7. I want to feel nice friend
+         8. Yes, I am nice
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice teacher
+         2. I am so nice!
+         3. I am not nice teacher
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice teacher?
+         7. I want to feel nice teacher
+         8. Yes, I am nice
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=statement  emotion=urgent
+         1. I am nice right now!
+         2. I am nice doctor
+         3. I am so nice!
+         4. I am not nice doctor
+         5. I think I am nice
+         6. Are you nice right now?
+         7. Help me feel nice!
+         8. Yes, I am nice now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice nurse
+         2. I am so nice!
+         3. I am not nice nurse
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice nurse?
+         7. I want to feel nice nurse
+         8. Yes, I am nice
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice therapist
+         2. I am so nice!
+         3. I am not nice therapist
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice therapist?
+         7. I want to feel nice therapist
+         8. Yes, I am nice
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice caregiver
+         2. I am so nice!
+         3. I am not nice caregiver
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice caregiver?
+         7. I want to feel nice caregiver
+         8. Yes, I am nice
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice brother
+         2. I am so nice!
+         3. I am not nice brother
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice brother?
+         7. I want to feel nice brother
+         8. Yes, I am nice
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice sister
+         2. I am so nice!
+         3. I am not nice sister
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice sister?
+         7. I want to feel nice sister
+         8. Yes, I am nice
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=statement  emotion=neutral
+         1. I am nice everyone
+         2. I am so nice!
+         3. I am not nice everyone
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice everyone?
+         7. I want to feel nice everyone
+         8. Yes, I am nice
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not nice
+         2. I am nice
+         3. I am so nice!
+         4. I am nice right now!
+         5. I think I am nice
+         6. You are not nice?
+         7. I don't want to feel nice
+         8. No, I am not nice
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so nice!
+         2. I am nice
+         3. I am not nice
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice too?
+         7. I really want to feel nice!
+         8. Yes, I am very nice!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am nice
+         2. I am nice
+         3. I am so nice!
+         4. I am not nice
+         5. I am nice right now!
+         6. Are you maybe nice?
+         7. Maybe I want to feel nice
+         8. Maybe a little nice
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am nice right now!
+         2. I am nice
+         3. I am so nice!
+         4. I am not nice
+         5. I think I am nice
+         6. Are you nice right now?
+         7. Help me feel nice!
+         8. Yes, I am nice now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so nice!
+         2. I am nice
+         3. I am not nice
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice too?
+         7. I really want to feel nice!
+         8. Yes, I am very nice!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not nice
+         2. I am nice
+         3. I am so nice!
+         4. I am nice right now!
+         5. I think I am nice
+         6. You are not nice?
+         7. I don't want to feel nice
+         8. No, I am not nice
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am nice
+         2. I am so nice!
+         3. I am not nice
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice?
+         7. I want to feel nice
+         8. Yes, I am nice
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am nice
+         2. I am nice
+         3. I am so nice!
+         4. I am not nice
+         5. I am nice right now!
+         6. Are you maybe nice?
+         7. Maybe I want to feel nice
+         8. Maybe a little nice
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am nice
+         2. I am so nice!
+         3. I am not nice
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice?
+         7. I want to feel nice
+         8. Yes, I am nice
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am nice
+         2. I am so nice!
+         3. I am not nice
+         4. I am nice right now!
+         5. I think I am nice
+         6. Are you nice?
+         7. I want to feel nice
+         8. Yes, I am nice
+
+  L2: 🐘  big  (dc_big)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am big
+       2. I am so big!
+       3. I am not big
+       4. I am big right now!
+       5. I think I am big
+       6. Are you big?
+       7. I want to feel big
+       8. Yes, I am big
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is big
+         2. This food is big
+         3. I find the food big
+         4. The food is too big
+         5. Is the food big?
+         6. The food seems big
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is big
+         2. This water is big
+         3. I find the water big
+         4. The water is too big
+         5. Is the water big?
+         6. The water seems big
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is big
+         2. This book is big
+         3. I find the book big
+         4. The book is too big
+         5. Is the book big?
+         6. The book seems big
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is big
+         2. This phone is big
+         3. I find the phone big
+         4. The phone is too big
+         5. Is the phone big?
+         6. The phone seems big
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is big
+         2. This toy is big
+         3. I find the toy big
+         4. The toy is too big
+         5. Is the toy big?
+         6. The toy seems big
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is big
+         2. This TV is big
+         3. I find the TV big
+         4. The TV is too big
+         5. Is the TV big?
+         6. The TV seems big
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is big
+         2. This music is big
+         3. I find the music big
+         4. The music is too big
+         5. Is the music big?
+         6. The music seems big
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is big
+         2. This game is big
+         3. I find the game big
+         4. The game is too big
+         5. Is the game big?
+         6. The game seems big
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is big
+         2. This picture is big
+         3. I find the picture big
+         4. The picture is too big
+         5. Is the picture big?
+         6. The picture seems big
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is big
+         2. This homework is big
+         3. I find the homework big
+         4. The homework is too big
+         5. Is the homework big?
+         6. The homework seems big
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is big
+         2. This door is big
+         3. I find the door big
+         4. The door is too big
+         5. Is the door big?
+         6. The door seems big
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is big
+         2. This window is big
+         3. I find the window big
+         4. The window is too big
+         5. Is the window big?
+         6. The window seems big
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is big
+         2. This light is big
+         3. I find the light big
+         4. The light is too big
+         5. Is the light big?
+         6. The light seems big
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is big
+         2. This bag is big
+         3. I find the bag big
+         4. The bag is too big
+         5. Is the bag big?
+         6. The bag seems big
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are big
+         2. These clothes are big
+         3. I find the clothes big
+         4. The clothes are too big
+         5. Are the clothes big?
+         6. The clothes seem big
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is big
+         2. This blanket is big
+         3. I find the blanket big
+         4. The blanket is too big
+         5. Is the blanket big?
+         6. The blanket seems big
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is big
+         2. This ball is big
+         3. I find the ball big
+         4. The ball is too big
+         5. Is the ball big?
+         6. The ball seems big
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is big
+         2. This medicine is big
+         3. I find the medicine big
+         4. The medicine is too big
+         5. Is the medicine big?
+         6. The medicine seems big
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not big
+         2. I am big
+         3. I am so big!
+         4. I am big right now!
+         5. I think I am big
+         6. You are not big?
+         7. I don't want to feel big
+         8. No, I am not big
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so big!
+         2. I am big
+         3. I am not big
+         4. I am big right now!
+         5. I think I am big
+         6. Are you big too?
+         7. I really want to feel big!
+         8. Yes, I am very big!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am big
+         2. I am big
+         3. I am so big!
+         4. I am not big
+         5. I am big right now!
+         6. Are you maybe big?
+         7. Maybe I want to feel big
+         8. Maybe a little big
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am big right now!
+         2. I am big
+         3. I am so big!
+         4. I am not big
+         5. I think I am big
+         6. Are you big right now?
+         7. Help me feel big!
+         8. Yes, I am big now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so big!
+         2. I am big
+         3. I am not big
+         4. I am big right now!
+         5. I think I am big
+         6. Are you big too?
+         7. I really want to feel big!
+         8. Yes, I am very big!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not big
+         2. I am big
+         3. I am so big!
+         4. I am big right now!
+         5. I think I am big
+         6. You are not big?
+         7. I don't want to feel big
+         8. No, I am not big
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am big
+         2. I am so big!
+         3. I am not big
+         4. I am big right now!
+         5. I think I am big
+         6. Are you big?
+         7. I want to feel big
+         8. Yes, I am big
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am big
+         2. I am big
+         3. I am so big!
+         4. I am not big
+         5. I am big right now!
+         6. Are you maybe big?
+         7. Maybe I want to feel big
+         8. Maybe a little big
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am big
+         2. I am so big!
+         3. I am not big
+         4. I am big right now!
+         5. I think I am big
+         6. Are you big?
+         7. I want to feel big
+         8. Yes, I am big
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am big
+         2. I am so big!
+         3. I am not big
+         4. I am big right now!
+         5. I think I am big
+         6. Are you big?
+         7. I want to feel big
+         8. Yes, I am big
+
+  L2: 🐜  small  (dc_small)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am small
+       2. I am so small!
+       3. I am not small
+       4. I am small right now!
+       5. I think I am small
+       6. Are you small?
+       7. I want to feel small
+       8. Yes, I am small
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is small
+         2. This food is small
+         3. I find the food small
+         4. The food is too small
+         5. Is the food small?
+         6. The food seems small
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is small
+         2. This water is small
+         3. I find the water small
+         4. The water is too small
+         5. Is the water small?
+         6. The water seems small
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is small
+         2. This book is small
+         3. I find the book small
+         4. The book is too small
+         5. Is the book small?
+         6. The book seems small
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is small
+         2. This phone is small
+         3. I find the phone small
+         4. The phone is too small
+         5. Is the phone small?
+         6. The phone seems small
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is small
+         2. This toy is small
+         3. I find the toy small
+         4. The toy is too small
+         5. Is the toy small?
+         6. The toy seems small
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is small
+         2. This TV is small
+         3. I find the TV small
+         4. The TV is too small
+         5. Is the TV small?
+         6. The TV seems small
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is small
+         2. This music is small
+         3. I find the music small
+         4. The music is too small
+         5. Is the music small?
+         6. The music seems small
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is small
+         2. This game is small
+         3. I find the game small
+         4. The game is too small
+         5. Is the game small?
+         6. The game seems small
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is small
+         2. This picture is small
+         3. I find the picture small
+         4. The picture is too small
+         5. Is the picture small?
+         6. The picture seems small
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is small
+         2. This homework is small
+         3. I find the homework small
+         4. The homework is too small
+         5. Is the homework small?
+         6. The homework seems small
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is small
+         2. This door is small
+         3. I find the door small
+         4. The door is too small
+         5. Is the door small?
+         6. The door seems small
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is small
+         2. This window is small
+         3. I find the window small
+         4. The window is too small
+         5. Is the window small?
+         6. The window seems small
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is small
+         2. This light is small
+         3. I find the light small
+         4. The light is too small
+         5. Is the light small?
+         6. The light seems small
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is small
+         2. This bag is small
+         3. I find the bag small
+         4. The bag is too small
+         5. Is the bag small?
+         6. The bag seems small
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are small
+         2. These clothes are small
+         3. I find the clothes small
+         4. The clothes are too small
+         5. Are the clothes small?
+         6. The clothes seem small
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is small
+         2. This blanket is small
+         3. I find the blanket small
+         4. The blanket is too small
+         5. Is the blanket small?
+         6. The blanket seems small
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is small
+         2. This ball is small
+         3. I find the ball small
+         4. The ball is too small
+         5. Is the ball small?
+         6. The ball seems small
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is small
+         2. This medicine is small
+         3. I find the medicine small
+         4. The medicine is too small
+         5. Is the medicine small?
+         6. The medicine seems small
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not small
+         2. I am small
+         3. I am so small!
+         4. I am small right now!
+         5. I think I am small
+         6. You are not small?
+         7. I don't want to feel small
+         8. No, I am not small
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so small!
+         2. I am small
+         3. I am not small
+         4. I am small right now!
+         5. I think I am small
+         6. Are you small too?
+         7. I really want to feel small!
+         8. Yes, I am very small!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am small
+         2. I am small
+         3. I am so small!
+         4. I am not small
+         5. I am small right now!
+         6. Are you maybe small?
+         7. Maybe I want to feel small
+         8. Maybe a little small
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am small right now!
+         2. I am small
+         3. I am so small!
+         4. I am not small
+         5. I think I am small
+         6. Are you small right now?
+         7. Help me feel small!
+         8. Yes, I am small now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so small!
+         2. I am small
+         3. I am not small
+         4. I am small right now!
+         5. I think I am small
+         6. Are you small too?
+         7. I really want to feel small!
+         8. Yes, I am very small!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not small
+         2. I am small
+         3. I am so small!
+         4. I am small right now!
+         5. I think I am small
+         6. You are not small?
+         7. I don't want to feel small
+         8. No, I am not small
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am small
+         2. I am so small!
+         3. I am not small
+         4. I am small right now!
+         5. I think I am small
+         6. Are you small?
+         7. I want to feel small
+         8. Yes, I am small
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am small
+         2. I am small
+         3. I am so small!
+         4. I am not small
+         5. I am small right now!
+         6. Are you maybe small?
+         7. Maybe I want to feel small
+         8. Maybe a little small
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am small
+         2. I am so small!
+         3. I am not small
+         4. I am small right now!
+         5. I think I am small
+         6. Are you small?
+         7. I want to feel small
+         8. Yes, I am small
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am small
+         2. I am so small!
+         3. I am not small
+         4. I am small right now!
+         5. I think I am small
+         6. Are you small?
+         7. I want to feel small
+         8. Yes, I am small
+
+  L2: 🔥  hot  (dc_hot)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am hot
+       2. I am so hot!
+       3. I am not hot
+       4. I am hot right now!
+       5. I think I am hot
+       6. Are you hot?
+       7. I want to feel hot
+       8. Yes, I am hot
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is hot
+         2. This food is hot
+         3. I find the food hot
+         4. The food is too hot
+         5. Is the food hot?
+         6. The food seems hot
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is hot
+         2. This water is hot
+         3. I find the water hot
+         4. The water is too hot
+         5. Is the water hot?
+         6. The water seems hot
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is hot
+         2. This book is hot
+         3. I find the book hot
+         4. The book is too hot
+         5. Is the book hot?
+         6. The book seems hot
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is hot
+         2. This phone is hot
+         3. I find the phone hot
+         4. The phone is too hot
+         5. Is the phone hot?
+         6. The phone seems hot
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is hot
+         2. This toy is hot
+         3. I find the toy hot
+         4. The toy is too hot
+         5. Is the toy hot?
+         6. The toy seems hot
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is hot
+         2. This TV is hot
+         3. I find the TV hot
+         4. The TV is too hot
+         5. Is the TV hot?
+         6. The TV seems hot
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is hot
+         2. This music is hot
+         3. I find the music hot
+         4. The music is too hot
+         5. Is the music hot?
+         6. The music seems hot
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is hot
+         2. This game is hot
+         3. I find the game hot
+         4. The game is too hot
+         5. Is the game hot?
+         6. The game seems hot
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is hot
+         2. This picture is hot
+         3. I find the picture hot
+         4. The picture is too hot
+         5. Is the picture hot?
+         6. The picture seems hot
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is hot
+         2. This homework is hot
+         3. I find the homework hot
+         4. The homework is too hot
+         5. Is the homework hot?
+         6. The homework seems hot
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is hot
+         2. This door is hot
+         3. I find the door hot
+         4. The door is too hot
+         5. Is the door hot?
+         6. The door seems hot
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is hot
+         2. This window is hot
+         3. I find the window hot
+         4. The window is too hot
+         5. Is the window hot?
+         6. The window seems hot
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is hot
+         2. This light is hot
+         3. I find the light hot
+         4. The light is too hot
+         5. Is the light hot?
+         6. The light seems hot
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is hot
+         2. This bag is hot
+         3. I find the bag hot
+         4. The bag is too hot
+         5. Is the bag hot?
+         6. The bag seems hot
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are hot
+         2. These clothes are hot
+         3. I find the clothes hot
+         4. The clothes are too hot
+         5. Are the clothes hot?
+         6. The clothes seem hot
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is hot
+         2. This blanket is hot
+         3. I find the blanket hot
+         4. The blanket is too hot
+         5. Is the blanket hot?
+         6. The blanket seems hot
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is hot
+         2. This ball is hot
+         3. I find the ball hot
+         4. The ball is too hot
+         5. Is the ball hot?
+         6. The ball seems hot
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is hot
+         2. This medicine is hot
+         3. I find the medicine hot
+         4. The medicine is too hot
+         5. Is the medicine hot?
+         6. The medicine seems hot
+
+    L3: 🤕  head  (b_head)  type=body
+        intent=statement  emotion=neutral
+         1. My head is hot
+         2. My head hurts
+         3. I feel hot in my head
+         4. I have a hot head
+         5. Help, my head is hot
+         6. My head feels hot
+
+    L3: 🤢  stomach  (b_stomach)  type=body
+        intent=statement  emotion=neutral
+         1. My stomach is hot
+         2. My stomach hurts
+         3. I feel hot in my stomach
+         4. I have a hot stomach
+         5. Help, my stomach is hot
+         6. My stomach feels hot
+
+    L3: 😮‍💨  throat  (b_throat)  type=body
+        intent=statement  emotion=neutral
+         1. My throat is hot
+         2. My throat hurts
+         3. I feel hot in my throat
+         4. I have a hot throat
+         5. Help, my throat is hot
+         6. My throat feels hot
+
+    L3: 🫁  chest  (b_chest)  type=body
+        intent=statement  emotion=neutral
+         1. My chest is hot
+         2. My chest hurts
+         3. I feel hot in my chest
+         4. I have a hot chest
+         5. Help, my chest is hot
+         6. My chest feels hot
+
+    L3: 🔙  back  (b_back)  type=body
+        intent=statement  emotion=neutral
+         1. My back is hot
+         2. My back hurts
+         3. I feel hot in my back
+         4. I have a hot back
+         5. Help, my back is hot
+         6. My back feels hot
+
+    L3: 🦵  leg  (b_leg)  type=body
+        intent=statement  emotion=neutral
+         1. My leg is hot
+         2. My leg hurts
+         3. I feel hot in my leg
+         4. I have a hot leg
+         5. Help, my leg is hot
+         6. My leg feels hot
+
+    L3: 💪  arm  (b_arm)  type=body
+        intent=statement  emotion=neutral
+         1. My arm is hot
+         2. My arm hurts
+         3. I feel hot in my arm
+         4. I have a hot arm
+         5. Help, my arm is hot
+         6. My arm feels hot
+
+    L3: 🦷  tooth  (b_tooth)  type=body
+        intent=statement  emotion=neutral
+         1. My tooth is hot
+         2. My tooth hurts
+         3. I feel hot in my tooth
+         4. I have a hot tooth
+         5. Help, my tooth is hot
+         6. My tooth feels hot
+
+    L3: 👂  ear  (b_ear)  type=body
+        intent=statement  emotion=neutral
+         1. My ear is hot
+         2. My ear hurts
+         3. I feel hot in my ear
+         4. I have a hot ear
+         5. Help, my ear is hot
+         6. My ear feels hot
+
+    L3: 👃  nose  (b_nose)  type=body
+        intent=statement  emotion=neutral
+         1. My nose is hot
+         2. My nose hurts
+         3. I feel hot in my nose
+         4. I have a hot nose
+         5. Help, my nose is hot
+         6. My nose feels hot
+
+    L3: 👀  eyes  (b_eyes)  type=body
+        intent=statement  emotion=neutral
+         1. My eyes are hot
+         2. My eyes hurt
+         3. I feel hot in my eyes
+         4. I have hot eyes
+         5. Help, my eyes are hot
+         6. My eyes feel hot
+
+    L3: 🩹  skin  (b_skin)  type=body
+        intent=statement  emotion=neutral
+         1. My skin is hot
+         2. My skin hurts
+         3. I feel hot in my skin
+         4. I have a hot skin
+         5. Help, my skin is hot
+         6. My skin feels hot
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not hot
+         2. I am hot
+         3. I am so hot!
+         4. I am hot right now!
+         5. I think I am hot
+         6. You are not hot?
+         7. I don't want to feel hot
+         8. No, I am not hot
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so hot!
+         2. I am hot
+         3. I am not hot
+         4. I am hot right now!
+         5. I think I am hot
+         6. Are you hot too?
+         7. I really want to feel hot!
+         8. Yes, I am very hot!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am hot
+         2. I am hot
+         3. I am so hot!
+         4. I am not hot
+         5. I am hot right now!
+         6. Are you maybe hot?
+         7. Maybe I want to feel hot
+         8. Maybe a little hot
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am hot right now!
+         2. I am hot
+         3. I am so hot!
+         4. I am not hot
+         5. I think I am hot
+         6. Are you hot right now?
+         7. Help me feel hot!
+         8. Yes, I am hot now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so hot!
+         2. I am hot
+         3. I am not hot
+         4. I am hot right now!
+         5. I think I am hot
+         6. Are you hot too?
+         7. I really want to feel hot!
+         8. Yes, I am very hot!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not hot
+         2. I am hot
+         3. I am so hot!
+         4. I am hot right now!
+         5. I think I am hot
+         6. You are not hot?
+         7. I don't want to feel hot
+         8. No, I am not hot
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am hot
+         2. I am so hot!
+         3. I am not hot
+         4. I am hot right now!
+         5. I think I am hot
+         6. Are you hot?
+         7. I want to feel hot
+         8. Yes, I am hot
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am hot
+         2. I am hot
+         3. I am so hot!
+         4. I am not hot
+         5. I am hot right now!
+         6. Are you maybe hot?
+         7. Maybe I want to feel hot
+         8. Maybe a little hot
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am hot
+         2. I am so hot!
+         3. I am not hot
+         4. I am hot right now!
+         5. I think I am hot
+         6. Are you hot?
+         7. I want to feel hot
+         8. Yes, I am hot
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am hot
+         2. I am so hot!
+         3. I am not hot
+         4. I am hot right now!
+         5. I think I am hot
+         6. Are you hot?
+         7. I want to feel hot
+         8. Yes, I am hot
+
+  L2: ❄️  cold  (dc_cold)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am cold
+       2. I am so cold!
+       3. I am not cold
+       4. I am cold right now!
+       5. I think I am cold
+       6. Are you cold?
+       7. I want to feel cold
+       8. Yes, I am cold
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is cold
+         2. This food is cold
+         3. I find the food cold
+         4. The food is too cold
+         5. Is the food cold?
+         6. The food seems cold
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is cold
+         2. This water is cold
+         3. I find the water cold
+         4. The water is too cold
+         5. Is the water cold?
+         6. The water seems cold
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is cold
+         2. This book is cold
+         3. I find the book cold
+         4. The book is too cold
+         5. Is the book cold?
+         6. The book seems cold
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is cold
+         2. This phone is cold
+         3. I find the phone cold
+         4. The phone is too cold
+         5. Is the phone cold?
+         6. The phone seems cold
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is cold
+         2. This toy is cold
+         3. I find the toy cold
+         4. The toy is too cold
+         5. Is the toy cold?
+         6. The toy seems cold
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is cold
+         2. This TV is cold
+         3. I find the TV cold
+         4. The TV is too cold
+         5. Is the TV cold?
+         6. The TV seems cold
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is cold
+         2. This music is cold
+         3. I find the music cold
+         4. The music is too cold
+         5. Is the music cold?
+         6. The music seems cold
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is cold
+         2. This game is cold
+         3. I find the game cold
+         4. The game is too cold
+         5. Is the game cold?
+         6. The game seems cold
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is cold
+         2. This picture is cold
+         3. I find the picture cold
+         4. The picture is too cold
+         5. Is the picture cold?
+         6. The picture seems cold
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is cold
+         2. This homework is cold
+         3. I find the homework cold
+         4. The homework is too cold
+         5. Is the homework cold?
+         6. The homework seems cold
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is cold
+         2. This door is cold
+         3. I find the door cold
+         4. The door is too cold
+         5. Is the door cold?
+         6. The door seems cold
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is cold
+         2. This window is cold
+         3. I find the window cold
+         4. The window is too cold
+         5. Is the window cold?
+         6. The window seems cold
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is cold
+         2. This light is cold
+         3. I find the light cold
+         4. The light is too cold
+         5. Is the light cold?
+         6. The light seems cold
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is cold
+         2. This bag is cold
+         3. I find the bag cold
+         4. The bag is too cold
+         5. Is the bag cold?
+         6. The bag seems cold
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are cold
+         2. These clothes are cold
+         3. I find the clothes cold
+         4. The clothes are too cold
+         5. Are the clothes cold?
+         6. The clothes seem cold
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is cold
+         2. This blanket is cold
+         3. I find the blanket cold
+         4. The blanket is too cold
+         5. Is the blanket cold?
+         6. The blanket seems cold
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is cold
+         2. This ball is cold
+         3. I find the ball cold
+         4. The ball is too cold
+         5. Is the ball cold?
+         6. The ball seems cold
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is cold
+         2. This medicine is cold
+         3. I find the medicine cold
+         4. The medicine is too cold
+         5. Is the medicine cold?
+         6. The medicine seems cold
+
+    L3: 🤕  head  (b_head)  type=body
+        intent=statement  emotion=neutral
+         1. My head is cold
+         2. My head hurts
+         3. I feel cold in my head
+         4. I have a cold head
+         5. Help, my head is cold
+         6. My head feels cold
+
+    L3: 🤢  stomach  (b_stomach)  type=body
+        intent=statement  emotion=neutral
+         1. My stomach is cold
+         2. My stomach hurts
+         3. I feel cold in my stomach
+         4. I have a cold stomach
+         5. Help, my stomach is cold
+         6. My stomach feels cold
+
+    L3: 😮‍💨  throat  (b_throat)  type=body
+        intent=statement  emotion=neutral
+         1. My throat is cold
+         2. My throat hurts
+         3. I feel cold in my throat
+         4. I have a cold throat
+         5. Help, my throat is cold
+         6. My throat feels cold
+
+    L3: 🫁  chest  (b_chest)  type=body
+        intent=statement  emotion=neutral
+         1. My chest is cold
+         2. My chest hurts
+         3. I feel cold in my chest
+         4. I have a cold chest
+         5. Help, my chest is cold
+         6. My chest feels cold
+
+    L3: 🔙  back  (b_back)  type=body
+        intent=statement  emotion=neutral
+         1. My back is cold
+         2. My back hurts
+         3. I feel cold in my back
+         4. I have a cold back
+         5. Help, my back is cold
+         6. My back feels cold
+
+    L3: 🦵  leg  (b_leg)  type=body
+        intent=statement  emotion=neutral
+         1. My leg is cold
+         2. My leg hurts
+         3. I feel cold in my leg
+         4. I have a cold leg
+         5. Help, my leg is cold
+         6. My leg feels cold
+
+    L3: 💪  arm  (b_arm)  type=body
+        intent=statement  emotion=neutral
+         1. My arm is cold
+         2. My arm hurts
+         3. I feel cold in my arm
+         4. I have a cold arm
+         5. Help, my arm is cold
+         6. My arm feels cold
+
+    L3: 🦷  tooth  (b_tooth)  type=body
+        intent=statement  emotion=neutral
+         1. My tooth is cold
+         2. My tooth hurts
+         3. I feel cold in my tooth
+         4. I have a cold tooth
+         5. Help, my tooth is cold
+         6. My tooth feels cold
+
+    L3: 👂  ear  (b_ear)  type=body
+        intent=statement  emotion=neutral
+         1. My ear is cold
+         2. My ear hurts
+         3. I feel cold in my ear
+         4. I have a cold ear
+         5. Help, my ear is cold
+         6. My ear feels cold
+
+    L3: 👃  nose  (b_nose)  type=body
+        intent=statement  emotion=neutral
+         1. My nose is cold
+         2. My nose hurts
+         3. I feel cold in my nose
+         4. I have a cold nose
+         5. Help, my nose is cold
+         6. My nose feels cold
+
+    L3: 👀  eyes  (b_eyes)  type=body
+        intent=statement  emotion=neutral
+         1. My eyes are cold
+         2. My eyes hurt
+         3. I feel cold in my eyes
+         4. I have cold eyes
+         5. Help, my eyes are cold
+         6. My eyes feel cold
+
+    L3: 🩹  skin  (b_skin)  type=body
+        intent=statement  emotion=neutral
+         1. My skin is cold
+         2. My skin hurts
+         3. I feel cold in my skin
+         4. I have a cold skin
+         5. Help, my skin is cold
+         6. My skin feels cold
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not cold
+         2. I am cold
+         3. I am so cold!
+         4. I am cold right now!
+         5. I think I am cold
+         6. You are not cold?
+         7. I don't want to feel cold
+         8. No, I am not cold
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so cold!
+         2. I am cold
+         3. I am not cold
+         4. I am cold right now!
+         5. I think I am cold
+         6. Are you cold too?
+         7. I really want to feel cold!
+         8. Yes, I am very cold!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am cold
+         2. I am cold
+         3. I am so cold!
+         4. I am not cold
+         5. I am cold right now!
+         6. Are you maybe cold?
+         7. Maybe I want to feel cold
+         8. Maybe a little cold
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am cold right now!
+         2. I am cold
+         3. I am so cold!
+         4. I am not cold
+         5. I think I am cold
+         6. Are you cold right now?
+         7. Help me feel cold!
+         8. Yes, I am cold now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so cold!
+         2. I am cold
+         3. I am not cold
+         4. I am cold right now!
+         5. I think I am cold
+         6. Are you cold too?
+         7. I really want to feel cold!
+         8. Yes, I am very cold!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not cold
+         2. I am cold
+         3. I am so cold!
+         4. I am cold right now!
+         5. I think I am cold
+         6. You are not cold?
+         7. I don't want to feel cold
+         8. No, I am not cold
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am cold
+         2. I am so cold!
+         3. I am not cold
+         4. I am cold right now!
+         5. I think I am cold
+         6. Are you cold?
+         7. I want to feel cold
+         8. Yes, I am cold
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am cold
+         2. I am cold
+         3. I am so cold!
+         4. I am not cold
+         5. I am cold right now!
+         6. Are you maybe cold?
+         7. Maybe I want to feel cold
+         8. Maybe a little cold
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am cold
+         2. I am so cold!
+         3. I am not cold
+         4. I am cold right now!
+         5. I think I am cold
+         6. Are you cold?
+         7. I want to feel cold
+         8. Yes, I am cold
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am cold
+         2. I am so cold!
+         3. I am not cold
+         4. I am cold right now!
+         5. I think I am cold
+         6. Are you cold?
+         7. I want to feel cold
+         8. Yes, I am cold
+
+  L2: ✨  new  (dc_new)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am new
+       2. I am so new!
+       3. I am not new
+       4. I am new right now!
+       5. I think I am new
+       6. Are you new?
+       7. I want to feel new
+       8. Yes, I am new
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is new
+         2. This food is new
+         3. I find the food new
+         4. The food is too new
+         5. Is the food new?
+         6. The food seems new
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is new
+         2. This water is new
+         3. I find the water new
+         4. The water is too new
+         5. Is the water new?
+         6. The water seems new
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is new
+         2. This book is new
+         3. I find the book new
+         4. The book is too new
+         5. Is the book new?
+         6. The book seems new
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is new
+         2. This phone is new
+         3. I find the phone new
+         4. The phone is too new
+         5. Is the phone new?
+         6. The phone seems new
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is new
+         2. This toy is new
+         3. I find the toy new
+         4. The toy is too new
+         5. Is the toy new?
+         6. The toy seems new
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is new
+         2. This TV is new
+         3. I find the TV new
+         4. The TV is too new
+         5. Is the TV new?
+         6. The TV seems new
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is new
+         2. This music is new
+         3. I find the music new
+         4. The music is too new
+         5. Is the music new?
+         6. The music seems new
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is new
+         2. This game is new
+         3. I find the game new
+         4. The game is too new
+         5. Is the game new?
+         6. The game seems new
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is new
+         2. This picture is new
+         3. I find the picture new
+         4. The picture is too new
+         5. Is the picture new?
+         6. The picture seems new
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is new
+         2. This homework is new
+         3. I find the homework new
+         4. The homework is too new
+         5. Is the homework new?
+         6. The homework seems new
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is new
+         2. This door is new
+         3. I find the door new
+         4. The door is too new
+         5. Is the door new?
+         6. The door seems new
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is new
+         2. This window is new
+         3. I find the window new
+         4. The window is too new
+         5. Is the window new?
+         6. The window seems new
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is new
+         2. This light is new
+         3. I find the light new
+         4. The light is too new
+         5. Is the light new?
+         6. The light seems new
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is new
+         2. This bag is new
+         3. I find the bag new
+         4. The bag is too new
+         5. Is the bag new?
+         6. The bag seems new
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are new
+         2. These clothes are new
+         3. I find the clothes new
+         4. The clothes are too new
+         5. Are the clothes new?
+         6. The clothes seem new
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is new
+         2. This blanket is new
+         3. I find the blanket new
+         4. The blanket is too new
+         5. Is the blanket new?
+         6. The blanket seems new
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is new
+         2. This ball is new
+         3. I find the ball new
+         4. The ball is too new
+         5. Is the ball new?
+         6. The ball seems new
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is new
+         2. This medicine is new
+         3. I find the medicine new
+         4. The medicine is too new
+         5. Is the medicine new?
+         6. The medicine seems new
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not new
+         2. I am new
+         3. I am so new!
+         4. I am new right now!
+         5. I think I am new
+         6. You are not new?
+         7. I don't want to feel new
+         8. No, I am not new
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so new!
+         2. I am new
+         3. I am not new
+         4. I am new right now!
+         5. I think I am new
+         6. Are you new too?
+         7. I really want to feel new!
+         8. Yes, I am very new!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am new
+         2. I am new
+         3. I am so new!
+         4. I am not new
+         5. I am new right now!
+         6. Are you maybe new?
+         7. Maybe I want to feel new
+         8. Maybe a little new
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am new right now!
+         2. I am new
+         3. I am so new!
+         4. I am not new
+         5. I think I am new
+         6. Are you new right now?
+         7. Help me feel new!
+         8. Yes, I am new now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so new!
+         2. I am new
+         3. I am not new
+         4. I am new right now!
+         5. I think I am new
+         6. Are you new too?
+         7. I really want to feel new!
+         8. Yes, I am very new!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not new
+         2. I am new
+         3. I am so new!
+         4. I am new right now!
+         5. I think I am new
+         6. You are not new?
+         7. I don't want to feel new
+         8. No, I am not new
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am new
+         2. I am so new!
+         3. I am not new
+         4. I am new right now!
+         5. I think I am new
+         6. Are you new?
+         7. I want to feel new
+         8. Yes, I am new
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am new
+         2. I am new
+         3. I am so new!
+         4. I am not new
+         5. I am new right now!
+         6. Are you maybe new?
+         7. Maybe I want to feel new
+         8. Maybe a little new
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am new
+         2. I am so new!
+         3. I am not new
+         4. I am new right now!
+         5. I think I am new
+         6. Are you new?
+         7. I want to feel new
+         8. Yes, I am new
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am new
+         2. I am so new!
+         3. I am not new
+         4. I am new right now!
+         5. I think I am new
+         6. Are you new?
+         7. I want to feel new
+         8. Yes, I am new
+
+  L2: 📦  old  (dc_old)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am old
+       2. I am so old!
+       3. I am not old
+       4. I am old right now!
+       5. I think I am old
+       6. Are you old?
+       7. I want to feel old
+       8. Yes, I am old
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is old
+         2. This food is old
+         3. I find the food old
+         4. The food is too old
+         5. Is the food old?
+         6. The food seems old
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is old
+         2. This water is old
+         3. I find the water old
+         4. The water is too old
+         5. Is the water old?
+         6. The water seems old
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is old
+         2. This book is old
+         3. I find the book old
+         4. The book is too old
+         5. Is the book old?
+         6. The book seems old
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is old
+         2. This phone is old
+         3. I find the phone old
+         4. The phone is too old
+         5. Is the phone old?
+         6. The phone seems old
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is old
+         2. This toy is old
+         3. I find the toy old
+         4. The toy is too old
+         5. Is the toy old?
+         6. The toy seems old
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is old
+         2. This TV is old
+         3. I find the TV old
+         4. The TV is too old
+         5. Is the TV old?
+         6. The TV seems old
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is old
+         2. This music is old
+         3. I find the music old
+         4. The music is too old
+         5. Is the music old?
+         6. The music seems old
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is old
+         2. This game is old
+         3. I find the game old
+         4. The game is too old
+         5. Is the game old?
+         6. The game seems old
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is old
+         2. This picture is old
+         3. I find the picture old
+         4. The picture is too old
+         5. Is the picture old?
+         6. The picture seems old
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is old
+         2. This homework is old
+         3. I find the homework old
+         4. The homework is too old
+         5. Is the homework old?
+         6. The homework seems old
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is old
+         2. This door is old
+         3. I find the door old
+         4. The door is too old
+         5. Is the door old?
+         6. The door seems old
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is old
+         2. This window is old
+         3. I find the window old
+         4. The window is too old
+         5. Is the window old?
+         6. The window seems old
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is old
+         2. This light is old
+         3. I find the light old
+         4. The light is too old
+         5. Is the light old?
+         6. The light seems old
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is old
+         2. This bag is old
+         3. I find the bag old
+         4. The bag is too old
+         5. Is the bag old?
+         6. The bag seems old
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are old
+         2. These clothes are old
+         3. I find the clothes old
+         4. The clothes are too old
+         5. Are the clothes old?
+         6. The clothes seem old
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is old
+         2. This blanket is old
+         3. I find the blanket old
+         4. The blanket is too old
+         5. Is the blanket old?
+         6. The blanket seems old
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is old
+         2. This ball is old
+         3. I find the ball old
+         4. The ball is too old
+         5. Is the ball old?
+         6. The ball seems old
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is old
+         2. This medicine is old
+         3. I find the medicine old
+         4. The medicine is too old
+         5. Is the medicine old?
+         6. The medicine seems old
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not old
+         2. I am old
+         3. I am so old!
+         4. I am old right now!
+         5. I think I am old
+         6. You are not old?
+         7. I don't want to feel old
+         8. No, I am not old
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so old!
+         2. I am old
+         3. I am not old
+         4. I am old right now!
+         5. I think I am old
+         6. Are you old too?
+         7. I really want to feel old!
+         8. Yes, I am very old!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am old
+         2. I am old
+         3. I am so old!
+         4. I am not old
+         5. I am old right now!
+         6. Are you maybe old?
+         7. Maybe I want to feel old
+         8. Maybe a little old
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am old right now!
+         2. I am old
+         3. I am so old!
+         4. I am not old
+         5. I think I am old
+         6. Are you old right now?
+         7. Help me feel old!
+         8. Yes, I am old now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so old!
+         2. I am old
+         3. I am not old
+         4. I am old right now!
+         5. I think I am old
+         6. Are you old too?
+         7. I really want to feel old!
+         8. Yes, I am very old!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not old
+         2. I am old
+         3. I am so old!
+         4. I am old right now!
+         5. I think I am old
+         6. You are not old?
+         7. I don't want to feel old
+         8. No, I am not old
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am old
+         2. I am so old!
+         3. I am not old
+         4. I am old right now!
+         5. I think I am old
+         6. Are you old?
+         7. I want to feel old
+         8. Yes, I am old
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am old
+         2. I am old
+         3. I am so old!
+         4. I am not old
+         5. I am old right now!
+         6. Are you maybe old?
+         7. Maybe I want to feel old
+         8. Maybe a little old
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am old
+         2. I am so old!
+         3. I am not old
+         4. I am old right now!
+         5. I think I am old
+         6. Are you old?
+         7. I want to feel old
+         8. Yes, I am old
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am old
+         2. I am so old!
+         3. I am not old
+         4. I am old right now!
+         5. I think I am old
+         6. Are you old?
+         7. I want to feel old
+         8. Yes, I am old
+
+  L2: 🔊  loud  (dc_loud)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am loud
+       2. I am so loud!
+       3. I am not loud
+       4. I am loud right now!
+       5. I think I am loud
+       6. Are you loud?
+       7. I want to feel loud
+       8. Yes, I am loud
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not loud
+         2. I am loud
+         3. I am so loud!
+         4. I am loud right now!
+         5. I think I am loud
+         6. You are not loud?
+         7. I don't want to feel loud
+         8. No, I am not loud
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so loud!
+         2. I am loud
+         3. I am not loud
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud too?
+         7. I really want to feel loud!
+         8. Yes, I am very loud!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am loud
+         2. I am loud
+         3. I am so loud!
+         4. I am not loud
+         5. I am loud right now!
+         6. Are you maybe loud?
+         7. Maybe I want to feel loud
+         8. Maybe a little loud
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am loud right now!
+         2. I am loud
+         3. I am so loud!
+         4. I am not loud
+         5. I think I am loud
+         6. Are you loud right now?
+         7. Help me feel loud!
+         8. Yes, I am loud now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so loud!
+         2. I am loud
+         3. I am not loud
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud too?
+         7. I really want to feel loud!
+         8. Yes, I am very loud!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not loud
+         2. I am loud
+         3. I am so loud!
+         4. I am loud right now!
+         5. I think I am loud
+         6. You are not loud?
+         7. I don't want to feel loud
+         8. No, I am not loud
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am loud
+         2. I am so loud!
+         3. I am not loud
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud?
+         7. I want to feel loud
+         8. Yes, I am loud
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am loud
+         2. I am loud
+         3. I am so loud!
+         4. I am not loud
+         5. I am loud right now!
+         6. Are you maybe loud?
+         7. Maybe I want to feel loud
+         8. Maybe a little loud
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am loud
+         2. I am so loud!
+         3. I am not loud
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud?
+         7. I want to feel loud
+         8. Yes, I am loud
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am loud
+         2. I am so loud!
+         3. I am not loud
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud?
+         7. I want to feel loud
+         8. Yes, I am loud
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=statement  emotion=urgent
+         1. I am loud right now!
+         2. I am loud now
+         3. I am so loud!
+         4. I am not loud now
+         5. I think I am loud
+         6. Are you loud right now?
+         7. Help me feel loud!
+         8. Yes, I am loud now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud soon
+         2. I am so loud!
+         3. I am not loud soon
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud soon?
+         7. I want to feel loud soon
+         8. Yes, I am loud
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud later
+         2. I am so loud!
+         3. I am not loud later
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud later?
+         7. I want to feel loud later
+         8. Yes, I am loud
+
+    L3: 📅  today  (t_today)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud today
+         2. I am so loud!
+         3. I am not loud today
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud today?
+         7. I want to feel loud today
+         8. Yes, I am loud
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud tomorrow
+         2. I am so loud!
+         3. I am not loud tomorrow
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud tomorrow?
+         7. I want to feel loud tomorrow
+         8. Yes, I am loud
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud yesterday
+         2. I am so loud!
+         3. I am not loud yesterday
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud yesterday?
+         7. I want to feel loud yesterday
+         8. Yes, I am loud
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud in the morning
+         2. I am so loud!
+         3. I am not loud in the morning
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud in the morning?
+         7. I want to feel loud in the morning
+         8. Yes, I am loud
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud in the afternoon
+         2. I am so loud!
+         3. I am not loud in the afternoon
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud in the afternoon?
+         7. I want to feel loud in the afternoon
+         8. Yes, I am loud
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud at night
+         2. I am so loud!
+         3. I am not loud at night
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud at night?
+         7. I want to feel loud at night
+         8. Yes, I am loud
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud always
+         2. I am so loud!
+         3. I am not loud always
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud always?
+         7. I want to feel loud always
+         8. Yes, I am loud
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud every day
+         2. I am so loud!
+         3. I am not loud every day
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud every day?
+         7. I want to feel loud every day
+         8. Yes, I am loud
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=statement  emotion=neutral
+         1. I am loud in a minute
+         2. I am so loud!
+         3. I am not loud in a minute
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud in a minute?
+         7. I want to feel loud in a minute
+         8. Yes, I am loud
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud at home
+         2. I am so loud!
+         3. I am not loud at home
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud at home?
+         7. I want to feel loud at home
+         8. Yes, I am loud
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud at school
+         2. I am so loud!
+         3. I am not loud at school
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud at school?
+         7. I want to feel loud at school
+         8. Yes, I am loud
+
+    L3: 🌳  outside  (pl_outside)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud outside
+         2. I am so loud!
+         3. I am not loud outside
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud outside?
+         7. I want to feel loud outside
+         8. Yes, I am loud
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud at the hospital
+         2. I am so loud!
+         3. I am not loud at the hospital
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud at the hospital?
+         7. I want to feel loud at the hospital
+         8. Yes, I am loud
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud at the park
+         2. I am so loud!
+         3. I am not loud at the park
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud at the park?
+         7. I want to feel loud at the park
+         8. Yes, I am loud
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud here
+         2. I am so loud!
+         3. I am not loud here
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud here?
+         7. I want to feel loud here
+         8. Yes, I am loud
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=statement  emotion=neutral
+         1. I am loud there
+         2. I am so loud!
+         3. I am not loud there
+         4. I am loud right now!
+         5. I think I am loud
+         6. Are you loud there?
+         7. I want to feel loud there
+         8. Yes, I am loud
+
+  L2: 🤫  quiet  (dc_quiet)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am quiet
+       2. I am so quiet!
+       3. I am not quiet
+       4. I am quiet right now!
+       5. I think I am quiet
+       6. Are you quiet?
+       7. I want to feel quiet
+       8. Yes, I am quiet
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not quiet
+         2. I am quiet
+         3. I am so quiet!
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. You are not quiet?
+         7. I don't want to feel quiet
+         8. No, I am not quiet
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so quiet!
+         2. I am quiet
+         3. I am not quiet
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet too?
+         7. I really want to feel quiet!
+         8. Yes, I am very quiet!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am quiet
+         2. I am quiet
+         3. I am so quiet!
+         4. I am not quiet
+         5. I am quiet right now!
+         6. Are you maybe quiet?
+         7. Maybe I want to feel quiet
+         8. Maybe a little quiet
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am quiet right now!
+         2. I am quiet
+         3. I am so quiet!
+         4. I am not quiet
+         5. I think I am quiet
+         6. Are you quiet right now?
+         7. Help me feel quiet!
+         8. Yes, I am quiet now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so quiet!
+         2. I am quiet
+         3. I am not quiet
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet too?
+         7. I really want to feel quiet!
+         8. Yes, I am very quiet!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not quiet
+         2. I am quiet
+         3. I am so quiet!
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. You are not quiet?
+         7. I don't want to feel quiet
+         8. No, I am not quiet
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am quiet
+         2. I am so quiet!
+         3. I am not quiet
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet?
+         7. I want to feel quiet
+         8. Yes, I am quiet
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am quiet
+         2. I am quiet
+         3. I am so quiet!
+         4. I am not quiet
+         5. I am quiet right now!
+         6. Are you maybe quiet?
+         7. Maybe I want to feel quiet
+         8. Maybe a little quiet
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am quiet
+         2. I am so quiet!
+         3. I am not quiet
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet?
+         7. I want to feel quiet
+         8. Yes, I am quiet
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am quiet
+         2. I am so quiet!
+         3. I am not quiet
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet?
+         7. I want to feel quiet
+         8. Yes, I am quiet
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=statement  emotion=urgent
+         1. I am quiet right now!
+         2. I am quiet now
+         3. I am so quiet!
+         4. I am not quiet now
+         5. I think I am quiet
+         6. Are you quiet right now?
+         7. Help me feel quiet!
+         8. Yes, I am quiet now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet soon
+         2. I am so quiet!
+         3. I am not quiet soon
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet soon?
+         7. I want to feel quiet soon
+         8. Yes, I am quiet
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet later
+         2. I am so quiet!
+         3. I am not quiet later
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet later?
+         7. I want to feel quiet later
+         8. Yes, I am quiet
+
+    L3: 📅  today  (t_today)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet today
+         2. I am so quiet!
+         3. I am not quiet today
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet today?
+         7. I want to feel quiet today
+         8. Yes, I am quiet
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet tomorrow
+         2. I am so quiet!
+         3. I am not quiet tomorrow
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet tomorrow?
+         7. I want to feel quiet tomorrow
+         8. Yes, I am quiet
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet yesterday
+         2. I am so quiet!
+         3. I am not quiet yesterday
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet yesterday?
+         7. I want to feel quiet yesterday
+         8. Yes, I am quiet
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet in the morning
+         2. I am so quiet!
+         3. I am not quiet in the morning
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet in the morning?
+         7. I want to feel quiet in the morning
+         8. Yes, I am quiet
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet in the afternoon
+         2. I am so quiet!
+         3. I am not quiet in the afternoon
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet in the afternoon?
+         7. I want to feel quiet in the afternoon
+         8. Yes, I am quiet
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet at night
+         2. I am so quiet!
+         3. I am not quiet at night
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet at night?
+         7. I want to feel quiet at night
+         8. Yes, I am quiet
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet always
+         2. I am so quiet!
+         3. I am not quiet always
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet always?
+         7. I want to feel quiet always
+         8. Yes, I am quiet
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet every day
+         2. I am so quiet!
+         3. I am not quiet every day
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet every day?
+         7. I want to feel quiet every day
+         8. Yes, I am quiet
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=statement  emotion=neutral
+         1. I am quiet in a minute
+         2. I am so quiet!
+         3. I am not quiet in a minute
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet in a minute?
+         7. I want to feel quiet in a minute
+         8. Yes, I am quiet
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet at home
+         2. I am so quiet!
+         3. I am not quiet at home
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet at home?
+         7. I want to feel quiet at home
+         8. Yes, I am quiet
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet at school
+         2. I am so quiet!
+         3. I am not quiet at school
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet at school?
+         7. I want to feel quiet at school
+         8. Yes, I am quiet
+
+    L3: 🌳  outside  (pl_outside)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet outside
+         2. I am so quiet!
+         3. I am not quiet outside
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet outside?
+         7. I want to feel quiet outside
+         8. Yes, I am quiet
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet at the hospital
+         2. I am so quiet!
+         3. I am not quiet at the hospital
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet at the hospital?
+         7. I want to feel quiet at the hospital
+         8. Yes, I am quiet
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet at the park
+         2. I am so quiet!
+         3. I am not quiet at the park
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet at the park?
+         7. I want to feel quiet at the park
+         8. Yes, I am quiet
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet here
+         2. I am so quiet!
+         3. I am not quiet here
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet here?
+         7. I want to feel quiet here
+         8. Yes, I am quiet
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=statement  emotion=neutral
+         1. I am quiet there
+         2. I am so quiet!
+         3. I am not quiet there
+         4. I am quiet right now!
+         5. I think I am quiet
+         6. Are you quiet there?
+         7. I want to feel quiet there
+         8. Yes, I am quiet
+
+  L2: 🔧  broken  (dc_broken)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am broken
+       2. I am so broken!
+       3. I am not broken
+       4. I am broken right now!
+       5. I think I am broken
+       6. Are you broken?
+       7. I want to feel broken
+       8. Yes, I am broken
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is broken
+         2. This food is broken
+         3. I find the food broken
+         4. The food is too broken
+         5. Is the food broken?
+         6. The food seems broken
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is broken
+         2. This water is broken
+         3. I find the water broken
+         4. The water is too broken
+         5. Is the water broken?
+         6. The water seems broken
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is broken
+         2. This book is broken
+         3. I find the book broken
+         4. The book is too broken
+         5. Is the book broken?
+         6. The book seems broken
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is broken
+         2. This phone is broken
+         3. I find the phone broken
+         4. The phone is too broken
+         5. Is the phone broken?
+         6. The phone seems broken
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is broken
+         2. This toy is broken
+         3. I find the toy broken
+         4. The toy is too broken
+         5. Is the toy broken?
+         6. The toy seems broken
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is broken
+         2. This TV is broken
+         3. I find the TV broken
+         4. The TV is too broken
+         5. Is the TV broken?
+         6. The TV seems broken
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is broken
+         2. This music is broken
+         3. I find the music broken
+         4. The music is too broken
+         5. Is the music broken?
+         6. The music seems broken
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is broken
+         2. This game is broken
+         3. I find the game broken
+         4. The game is too broken
+         5. Is the game broken?
+         6. The game seems broken
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is broken
+         2. This picture is broken
+         3. I find the picture broken
+         4. The picture is too broken
+         5. Is the picture broken?
+         6. The picture seems broken
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is broken
+         2. This homework is broken
+         3. I find the homework broken
+         4. The homework is too broken
+         5. Is the homework broken?
+         6. The homework seems broken
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is broken
+         2. This door is broken
+         3. I find the door broken
+         4. The door is too broken
+         5. Is the door broken?
+         6. The door seems broken
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is broken
+         2. This window is broken
+         3. I find the window broken
+         4. The window is too broken
+         5. Is the window broken?
+         6. The window seems broken
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is broken
+         2. This light is broken
+         3. I find the light broken
+         4. The light is too broken
+         5. Is the light broken?
+         6. The light seems broken
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is broken
+         2. This bag is broken
+         3. I find the bag broken
+         4. The bag is too broken
+         5. Is the bag broken?
+         6. The bag seems broken
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are broken
+         2. These clothes are broken
+         3. I find the clothes broken
+         4. The clothes are too broken
+         5. Are the clothes broken?
+         6. The clothes seem broken
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is broken
+         2. This blanket is broken
+         3. I find the blanket broken
+         4. The blanket is too broken
+         5. Is the blanket broken?
+         6. The blanket seems broken
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is broken
+         2. This ball is broken
+         3. I find the ball broken
+         4. The ball is too broken
+         5. Is the ball broken?
+         6. The ball seems broken
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is broken
+         2. This medicine is broken
+         3. I find the medicine broken
+         4. The medicine is too broken
+         5. Is the medicine broken?
+         6. The medicine seems broken
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken at home
+         2. I am so broken!
+         3. I am not broken at home
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken at home?
+         7. I want to feel broken at home
+         8. Yes, I am broken
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken at school
+         2. I am so broken!
+         3. I am not broken at school
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken at school?
+         7. I want to feel broken at school
+         8. Yes, I am broken
+
+    L3: 🌳  outside  (pl_outside)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken outside
+         2. I am so broken!
+         3. I am not broken outside
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken outside?
+         7. I want to feel broken outside
+         8. Yes, I am broken
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken at the hospital
+         2. I am so broken!
+         3. I am not broken at the hospital
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken at the hospital?
+         7. I want to feel broken at the hospital
+         8. Yes, I am broken
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken at the park
+         2. I am so broken!
+         3. I am not broken at the park
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken at the park?
+         7. I want to feel broken at the park
+         8. Yes, I am broken
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken here
+         2. I am so broken!
+         3. I am not broken here
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken here?
+         7. I want to feel broken here
+         8. Yes, I am broken
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=statement  emotion=neutral
+         1. I am broken there
+         2. I am so broken!
+         3. I am not broken there
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken there?
+         7. I want to feel broken there
+         8. Yes, I am broken
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not broken
+         2. I am broken
+         3. I am so broken!
+         4. I am broken right now!
+         5. I think I am broken
+         6. You are not broken?
+         7. I don't want to feel broken
+         8. No, I am not broken
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so broken!
+         2. I am broken
+         3. I am not broken
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken too?
+         7. I really want to feel broken!
+         8. Yes, I am very broken!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am broken
+         2. I am broken
+         3. I am so broken!
+         4. I am not broken
+         5. I am broken right now!
+         6. Are you maybe broken?
+         7. Maybe I want to feel broken
+         8. Maybe a little broken
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am broken right now!
+         2. I am broken
+         3. I am so broken!
+         4. I am not broken
+         5. I think I am broken
+         6. Are you broken right now?
+         7. Help me feel broken!
+         8. Yes, I am broken now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so broken!
+         2. I am broken
+         3. I am not broken
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken too?
+         7. I really want to feel broken!
+         8. Yes, I am very broken!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not broken
+         2. I am broken
+         3. I am so broken!
+         4. I am broken right now!
+         5. I think I am broken
+         6. You are not broken?
+         7. I don't want to feel broken
+         8. No, I am not broken
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am broken
+         2. I am so broken!
+         3. I am not broken
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken?
+         7. I want to feel broken
+         8. Yes, I am broken
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am broken
+         2. I am broken
+         3. I am so broken!
+         4. I am not broken
+         5. I am broken right now!
+         6. Are you maybe broken?
+         7. Maybe I want to feel broken
+         8. Maybe a little broken
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am broken
+         2. I am so broken!
+         3. I am not broken
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken?
+         7. I want to feel broken
+         8. Yes, I am broken
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am broken
+         2. I am so broken!
+         3. I am not broken
+         4. I am broken right now!
+         5. I think I am broken
+         6. Are you broken?
+         7. I want to feel broken
+         8. Yes, I am broken
+
+  L2: 🔁  the same  (dc_same)
+      pos=adjective  intent=statement  emotion=neutral
+       1. I am the same
+       2. I am so the same!
+       3. I am not the same
+       4. I am the same right now!
+       5. I think I am the same
+       6. Are you the same?
+       7. I want to feel the same
+       8. Yes, I am the same
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=statement  emotion=neutral
+         1. The food is the same
+         2. This food is the same
+         3. I find the food the same
+         4. The food is too the same
+         5. Is the food the same?
+         6. The food seems the same
+
+    L3: 💧  water  (o_water)  type=object
+        intent=statement  emotion=neutral
+         1. The water is the same
+         2. This water is the same
+         3. I find the water the same
+         4. The water is too the same
+         5. Is the water the same?
+         6. The water seems the same
+
+    L3: 📖  book  (o_book)  type=object
+        intent=statement  emotion=neutral
+         1. The book is the same
+         2. This book is the same
+         3. I find the book the same
+         4. The book is too the same
+         5. Is the book the same?
+         6. The book seems the same
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=statement  emotion=neutral
+         1. The phone is the same
+         2. This phone is the same
+         3. I find the phone the same
+         4. The phone is too the same
+         5. Is the phone the same?
+         6. The phone seems the same
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=statement  emotion=neutral
+         1. The toy is the same
+         2. This toy is the same
+         3. I find the toy the same
+         4. The toy is too the same
+         5. Is the toy the same?
+         6. The toy seems the same
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=statement  emotion=neutral
+         1. The TV is the same
+         2. This TV is the same
+         3. I find the TV the same
+         4. The TV is too the same
+         5. Is the TV the same?
+         6. The TV seems the same
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=statement  emotion=neutral
+         1. The music is the same
+         2. This music is the same
+         3. I find the music the same
+         4. The music is too the same
+         5. Is the music the same?
+         6. The music seems the same
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=statement  emotion=neutral
+         1. The game is the same
+         2. This game is the same
+         3. I find the game the same
+         4. The game is too the same
+         5. Is the game the same?
+         6. The game seems the same
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=statement  emotion=neutral
+         1. The picture is the same
+         2. This picture is the same
+         3. I find the picture the same
+         4. The picture is too the same
+         5. Is the picture the same?
+         6. The picture seems the same
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=statement  emotion=neutral
+         1. The homework is the same
+         2. This homework is the same
+         3. I find the homework the same
+         4. The homework is too the same
+         5. Is the homework the same?
+         6. The homework seems the same
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=statement  emotion=neutral
+         1. The door is the same
+         2. This door is the same
+         3. I find the door the same
+         4. The door is too the same
+         5. Is the door the same?
+         6. The door seems the same
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=statement  emotion=neutral
+         1. The window is the same
+         2. This window is the same
+         3. I find the window the same
+         4. The window is too the same
+         5. Is the window the same?
+         6. The window seems the same
+
+    L3: 💡  light  (o_light)  type=object
+        intent=statement  emotion=neutral
+         1. The light is the same
+         2. This light is the same
+         3. I find the light the same
+         4. The light is too the same
+         5. Is the light the same?
+         6. The light seems the same
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=statement  emotion=neutral
+         1. The bag is the same
+         2. This bag is the same
+         3. I find the bag the same
+         4. The bag is too the same
+         5. Is the bag the same?
+         6. The bag seems the same
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=statement  emotion=neutral
+         1. The clothes are the same
+         2. These clothes are the same
+         3. I find the clothes the same
+         4. The clothes are too the same
+         5. Are the clothes the same?
+         6. The clothes seem the same
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=statement  emotion=neutral
+         1. The blanket is the same
+         2. This blanket is the same
+         3. I find the blanket the same
+         4. The blanket is too the same
+         5. Is the blanket the same?
+         6. The blanket seems the same
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=statement  emotion=neutral
+         1. The ball is the same
+         2. This ball is the same
+         3. I find the ball the same
+         4. The ball is too the same
+         5. Is the ball the same?
+         6. The ball seems the same
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=statement  emotion=urgent
+         1. The medicine is the same
+         2. This medicine is the same
+         3. I find the medicine the same
+         4. The medicine is too the same
+         5. Is the medicine the same?
+         6. The medicine seems the same
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not the same
+         2. I am the same
+         3. I am so the same!
+         4. I am the same right now!
+         5. I think I am the same
+         6. You are not the same?
+         7. I don't want to feel the same
+         8. No, I am not the same
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so the same!
+         2. I am the same
+         3. I am not the same
+         4. I am the same right now!
+         5. I think I am the same
+         6. Are you the same too?
+         7. I really want to feel the same!
+         8. Yes, I am very the same!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am the same
+         2. I am the same
+         3. I am so the same!
+         4. I am not the same
+         5. I am the same right now!
+         6. Are you maybe the same?
+         7. Maybe I want to feel the same
+         8. Maybe a little the same
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=statement  emotion=urgent
+         1. I am the same right now!
+         2. I am the same
+         3. I am so the same!
+         4. I am not the same
+         5. I think I am the same
+         6. Are you the same right now?
+         7. Help me feel the same!
+         8. Yes, I am the same now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=statement  emotion=positive
+         1. I am so the same!
+         2. I am the same
+         3. I am not the same
+         4. I am the same right now!
+         5. I think I am the same
+         6. Are you the same too?
+         7. I really want to feel the same!
+         8. Yes, I am very the same!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=statement  emotion=negative
+         1. I am not the same
+         2. I am the same
+         3. I am so the same!
+         4. I am the same right now!
+         5. I think I am the same
+         6. You are not the same?
+         7. I don't want to feel the same
+         8. No, I am not the same
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am the same
+         2. I am so the same!
+         3. I am not the same
+         4. I am the same right now!
+         5. I think I am the same
+         6. Are you the same?
+         7. I want to feel the same
+         8. Yes, I am the same
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=statement  emotion=uncertain
+         1. I think I am the same
+         2. I am the same
+         3. I am so the same!
+         4. I am not the same
+         5. I am the same right now!
+         6. Are you maybe the same?
+         7. Maybe I want to feel the same
+         8. Maybe a little the same
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am the same
+         2. I am so the same!
+         3. I am not the same
+         4. I am the same right now!
+         5. I think I am the same
+         6. Are you the same?
+         7. I want to feel the same
+         8. Yes, I am the same
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=statement  emotion=neutral
+         1. I am the same
+         2. I am so the same!
+         3. I am not the same
+         4. I am the same right now!
+         5. I think I am the same
+         6. Are you the same?
+         7. I want to feel the same
+         8. Yes, I am the same
+
+────────────────────────────────────────────────────────────────────────
+  SUMMARY for DESCRIBE
+────────────────────────────────────────────────────────────────────────
+  Items (L2):              14
+  Modifiers (L3):          465
+  Total cell combinations: 479
+  Total sentences:         3388
+  Avg sentences / cell:    7.1
+────────────────────────────────────────────────────────────────────────

@@ -374,34 +374,6 @@ export default memo(function SettingsPanel({
         </Section>
         )}
 
-        {/* ── AI Engine ── */}
-        {show("ai", "model", "brain", "smart", "engine", ui?.sectionAI ?? "ai engine") && (
-        <Section title={ui?.sectionAI ?? "AI Engine"}>
-          <Row
-            Icon={Brain}
-            iconBg="var(--purple)"
-            label={ui?.rowModel ?? "Model"}
-            sublabel={ui?.subModel ?? "Higher quality needs more RAM"}
-            action={<NativeSelect value={aiModel} options={aiOptions} onChange={onChangeAiModel} />}
-          />
-          <Row
-            Icon={Zap}
-            iconBg="var(--orange)"
-            label={ui?.rowStatus ?? "Status"}
-            action={
-              <span style={{
-                padding: "4px 10px", borderRadius: "var(--radius-sm)",
-                background: "var(--bg)",
-                color: llmBadgeColor, fontSize: 13, fontWeight: 600,
-              }}>
-                {llmBadgeLabel}
-              </span>
-            }
-            border={false}
-          />
-        </Section>
-        )}
-
         {/* ── Data & Privacy ── */}
         {show("data", "privacy", "export", "history", "clear", "reset", ui?.sectionData ?? "data privacy") && (
         <Section title={ui?.sectionData ?? "Data & Privacy"}>

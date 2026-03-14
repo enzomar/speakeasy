@@ -99,6 +99,79 @@ const LABEL_OVERRIDES = {
   'different':   null,
   'maybe':       null,
 
+  // ── Predicate labels (PEOPLE L3) ── map to engine concept when possible
+  'is here':     null,     // situational — heuristic handles
+  'is coming':   null,
+  'is gone':     null,
+  'wants':       'WANT',
+  'needs':       'NEED',
+  'said':        null,     // past-tense social — heuristic handles
+  'helps':       'HELP',
+  'is happy':    'HAPPY',
+  'is angry':    'ANGRY',
+  'is sick':     'SICK',
+  'where?':      null,     // question frame — heuristic handles
+  'call':        null,     // imperative — heuristic handles
+
+  // ── Self-state labels (PEOPLE pronoun L3) ──
+  'am ready':    'READY',
+  'am here':     null,
+  'am coming':   null,
+  'am leaving':  null,
+  'am hungry':   'HUNGRY',
+  'am thirsty':  null,
+  'am tired':    'TIRED',
+  'am ok':       'OK',
+  'am not ok':   null,
+  'am busy':     null,
+  'am waiting':  null,
+  'am lost':     null,
+
+  // ── Question context labels (new QUESTION L3s) ──
+  'wrong':       null,
+  'for lunch':   null,
+  'for dinner':  null,
+  'your name':   null,
+  'do this':     null,
+  'say it':      null,
+  'spell it':    null,
+  'use it':      null,
+  'get there':   null,
+  'you feel':    null,
+  'fix it':      null,
+  'open it':     null,
+  'lunch':       null,
+  'go home':     null,
+  'bedtime':     null,
+  'the doctor':  null,
+  'recess':      null,
+  'is this over': null,
+  'does it start': null,
+  'did this':    null,
+  'is talking':  null,
+  'is coming':   null,
+  'is that':     null,
+  'can help':    null,
+  'is it for':   null,
+  'can\'t i':    null,
+  'crying':      null,
+  'leaving':     null,
+  'help me':     null,
+  'show me':     null,
+  'tell me':     null,
+  'give me':     null,
+  'sit here':    null,
+  'do you have': null,
+  'is it':       null,
+
+  // ── New L2 labels ──
+  'open':        'OPEN',
+  'make':        null,
+  'read':        null,
+  'nice':        null,
+  'new':         null,
+  'old':         null,
+
   // Sub-place labels (L3) — no direct concept equivalent
   // Note: 'bathroom' now maps to BATHROOM concept (L2 place)
   'kitchen':     null,

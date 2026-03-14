@@ -39,6 +39,7 @@ import {
   detectIntent,
   detectEmotion,
 } from "../src/prompts/intentEmotionEngine.js";
+import { getHierarchyLabel } from "../src/i18n/translations.js";
 
 // Engine imports — may fail if JSON assertions aren't supported; we degrade gracefully
 let tapContextToConceptIds = null;
@@ -89,8 +90,9 @@ function generateForTap(category, item, mod = null) {
   const emotion = detectEmotion(item.label, mod?.label ?? null, category.mapTo);
 
   const heuristic = generateCandidates(
-    item.label, mod?.label ?? null, langCode, gender, item.label,
-    category.mapTo, intent, emotion, mod?.label ?? null,
+    getHierarchyLabel(item, langCode), mod ? getHierarchyLabel(mod, langCode) : null,
+    langCode, gender, item.label,
+    category.mapTo, intent, emotion, mod?.label ?? null, mod?.type ?? null,
   )
     .slice(0, topN)
     .map((s) => fixGender(s, langCode, gender));

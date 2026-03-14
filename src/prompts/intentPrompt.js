@@ -12,6 +12,8 @@
  * All pure data tables live in ./heuristicData.js — this file contains only logic.
  */
 
+import { generateQuestionSentences } from "./categoryEngines.js";
+
 import {
   SUPPORTED_LANGUAGES,
   POS_DICT,
@@ -20,12 +22,15 @@ import {
   VERB_FORMS,
   CATEGORY_TO_POS,
   TEMPLATES,
+  COMBO_TEMPLATES,
   GENDER_RULES,
   GENDER_INSTRUCTIONS,
   QUESTION_PATTERNS,
   REWRITE_EXAMPLES,
   INTENTS,
   EMOTIONS,
+  TIME_ADVERB_PHRASES,
+  PLACE_PREPOSITIONS,
 } from "./heuristicData.js";
 
 // Re-export data that consumers import from this module
@@ -110,7 +115,8 @@ function resolveVerbForms(canonicalLabel, langCode) {
  */
 export function generateCandidates(
   symbol, modSymbol, langCode = "it", gender = "male", canonicalLabel,
-  categoryId, intent = "statement", emotion = "neutral", modCanonicalLabel = null
+  categoryId, intent = "statement", emotion = "neutral", modCanonicalLabel = null,
+  modType = null
 ) {
   const rawKw = resolveKeyword(symbol, langCode);
   const mod   = modSymbol ? resolveKeyword(modSymbol, langCode) : "";
@@ -121,25 +127,57 @@ export function generateCandidates(
       ? (typeof modSymbol === "string" ? modSymbol : modSymbol?.labels?.en ?? "")
       : "");
 
+  // ── Question Category Engine ───────────────────────────────────────────
+  // When the L1 category is "questions" and an L3 modifier is provided,
+  // use the dedicated question engine which produces proper grammatical
+  // questions ("What is this?") instead of bare templates ("what this?").
+  if (categoryId === "questions" && mod) {
+    const qSentences = generateQuestionSentences(canon, mod, modType, langCode, modCanon);
+    if (qSentences.length > 0) return qSentences;
+    // Fall through to generic phrase templates if no engine matched
+  }
+
+  // ── Double-negative suppression ────────────────────────────────────────
+  // When the keyword itself is already a negation word ("no", "I don't know")
+  // and the modifier triggers negative emotion, using the negative template
+  // produces nonsense like "not no", "not I don't know". Fall back to neutral
+  // so we get the clean standalone form instead.
+  const NEGATION_WORDS = new Set(["no", "i don't know"]);
+  const effectiveEmotion = (emotion === "negative" && NEGATION_WORDS.has(canon?.toLowerCase()))
+    ? "neutral"
+    : emotion;
+
   // ── Specific-item promotion ────────────────────────────────────────────
-  // When the modifier is a specific noun (e.g. "bread" under "food"), promote
+  // When the modifier is a specific sub-item (e.g. "bread" under "food"), promote
   // it to the primary keyword so templates say "I want bread", not "I want food bread".
-  // Polarity words (yes/no/more/less), numbers, and colors stay as {mod}.
+  //
+  // IMPORTANT: promotion only happens for "specific-item" and "sub-place" types.
+  // Body parts, persons, objects, and time nouns must NOT be promoted — they
+  // belong in {mod} position and are handled by combo templates or standard {mod}.
+  //
+  // When modType is null (legacy callers without hierarchy metadata), fall back
+  // to the old heuristic: promote any noun not in MODIFIER_KEEP_POS.
   const MODIFIER_KEEP_POS = new Set(["polarity", "color", "number", "adverb"]);
   const modPosEntry = modCanon ? POS_DICT[modCanon.toLowerCase()] : null;
-  const modIsSpecificNoun = mod
-    && !MODIFIER_KEEP_POS.has(modPosEntry?.pos)
-    && !/^\d+$/.test(modCanon);  // pure digits stay as modifier
+  const modIsSpecificNoun = mod && (
+    modType === "specific-item" || modType === "sub-place"
+    || (!modType && !MODIFIER_KEEP_POS.has(modPosEntry?.pos) && !/^\d+$/.test(modCanon))
+  );
 
-  // Word-level POS overrides category POS for specialized template types
-  // (e.g. "color" and "number" have their own template sets where {mod} is primary)
-  const SPECIALIZED_POS = new Set(["color", "number"]);
+  // Word-level POS resolution:
+  // 1. If the word has its own POS in POS_DICT, use it — it's the most accurate
+  //    (e.g. "water"→noun, "drink"→verb, "mom"→phrase).
+  // 2. If no word-level entry, use CATEGORY_TO_POS directly (not getPOS, which
+  //    could hit a POS_DICT collision — e.g. predicate "needs"→verb vs category "needs").
+  // 3. Final fallback: getPOS(canon) → default "noun".
   const wordEntry = POS_DICT[canon?.toLowerCase()];
-  const { pos } = (wordEntry && SPECIALIZED_POS.has(wordEntry.pos))
+  const { pos } = wordEntry
     ? wordEntry
-    : getPOS(categoryId || canon);
+    : categoryId && CATEGORY_TO_POS[categoryId]
+    ? { pos: CATEGORY_TO_POS[categoryId], gs: false }
+    : getPOS(canon);
   const langTemplates = TEMPLATES[langCode] ?? TEMPLATES.en;
-  const posTemplates  = langTemplates[pos]  ?? langTemplates.noun;
+  let   posTemplates  = langTemplates[pos]  ?? langTemplates.noun;
 
   // Resolve gender-correct adjective form from dictionary
   const adjForm = (pos === "adjective")
@@ -149,12 +187,148 @@ export function generateCandidates(
   // If modifier is a specific noun, use it as the primary keyword
   const effectiveKw    = modIsSpecificNoun ? mod : (adjForm ?? rawKw);
   const effectiveCanon = modIsSpecificNoun ? modCanon : canon;
-  const effectiveMod   = modIsSpecificNoun ? "" : mod;  // avoid duplication
+
+  // When a sub-item is promoted to primary keyword (e.g. drink→juice),
+  // re-resolve POS for the promoted word so noun sub-items get noun templates
+  // even when their parent is a verb.
+  const effectivePos = modIsSpecificNoun && effectiveCanon
+    ? (POS_DICT[effectiveCanon.toLowerCase()]?.pos ?? pos)
+    : pos;
+  if (effectivePos !== pos) posTemplates = langTemplates[effectivePos] ?? posTemplates;
+
+  // ── Modifier text resolution ─────────────────────────────────────────────
+  // Intensity modifiers ("not", "very", "a little", "more", "less", "please",
+  // "again", "maybe") influence template selection via emotion/intent detection
+  // but must NOT appear as raw text — that produces "I am hurt not", "I am hurt very".
+  // The chosen emotion template already encodes their semantic meaning.
+  const modIsIntensity = modType === "intensity";
+
+  // Certain time nouns require a prepositional phrase when used as sentence
+  // modifiers ("morning" → "in the morning", "at night", etc.).
+  const timePhraseOverride = (!modIsSpecificNoun && modType === "time" && modCanon)
+    ? (TIME_ADVERB_PHRASES[langCode]?.[modCanon.toLowerCase()] ?? null)
+    : null;
+
+  // Place nouns also need prepositions ("school" → "at school", "hospital" → "at the hospital")
+  const placePhraseOverride = (!modIsSpecificNoun && modType === "place" && modCanon)
+    ? (PLACE_PREPOSITIONS[langCode]?.[modCanon.toLowerCase()] ?? null)
+    : null;
+
+  const effectiveMod = modIsSpecificNoun
+    ? ""
+    : modIsIntensity
+    ? ""   // suppress — emotion template already handles this
+    : (timePhraseOverride ?? placePhraseOverride ?? mod);
 
   const kw = effectiveKw;
 
+  // ── Modifier-type combo dispatch ─────────────────────────────────────────
+  // Certain modifier+pos combinations need entirely different sentence structures.
+  // These override the standard template expansion and return immediately.
+  if (mod && modType) {
+    const kwDisplay = adjForm ?? rawKw;
+
+    // "please" + object → "food please", "I want food please" (not "please food")
+    if (canon?.toLowerCase() === "please" && (modType === "object" || modType === "person")) {
+      const tpls = langCode === "it"
+        ? ["{mod} per favore", "{mod} per favore!", "Non {mod}", "{mod} subito per favore!", "Forse {mod}"]
+        : langCode === "fr"
+        ? ["{mod} s'il vous plaît", "{mod} s'il vous plaît !", "Pas de {mod}", "{mod} tout de suite !", "Peut-être {mod}"]
+        : langCode === "es"
+        ? ["{mod} por favor", "¡{mod} por favor!", "No {mod}", "¡{mod} ya por favor!", "Quizás {mod}"]
+        : langCode === "pt"
+        ? ["{mod} por favor", "{mod} por favor!", "Não {mod}", "{mod} já por favor!", "Talvez {mod}"]
+        : ["{mod} please", "{mod} please!", "No {mod}", "{mod} now please!", "Maybe {mod}"];
+      return tpls
+        .map(t => t.replace("{mod}", mod).replace(/\s{2,}/g, " ").trim())
+        .filter(s => s.length > 0)
+        .filter((s, i, arr) => arr.indexOf(s) === i);
+    }
+
+    // Body part + adjective: "My head hurts", "My stomach is hurt"
+    if (modType === "body" && pos === "adjective") {
+      const tpls = COMBO_TEMPLATES?.body_adjective?.[langCode]
+                ?? COMBO_TEMPLATES?.body_adjective?.en ?? [];
+      if (tpls.length > 0) {
+        // Certain body parts are grammatically plural and need "are"/"hurt"/"feel"
+        const PLURAL_BODY_PARTS = new Set(["eyes", "ears", "legs", "arms", "hands", "feet", "teeth"]);
+        const isPlural = PLURAL_BODY_PARTS.has(modCanon?.toLowerCase());
+        return tpls
+          .map(t => t.replace("{kw}", kwDisplay).replace("{mod}", mod).replace(/\s{2,}/g, " ").trim())
+          .map(s => isPlural
+            ? s.replace(/\bis\b/g, "are").replace(/\bhurts\b/g, "hurt").replace(/\bfeels\b/g, "feel").replace(/\ba (\w+)\b/g, "$1")
+            : s
+          );
+      }
+    }
+
+    // Object + adjective: "The food is good", "This water is cold"
+    if (modType === "object" && pos === "adjective") {
+      const tpls = COMBO_TEMPLATES?.object_adjective?.[langCode]
+                ?? COMBO_TEMPLATES?.object_adjective?.en ?? [];
+      if (tpls.length > 0) {
+        // Certain object nouns are grammatically plural: "The clothes are good"
+        const PLURAL_OBJECTS = new Set(["clothes", "glasses"]);
+        const objIsPlural = PLURAL_OBJECTS.has(modCanon?.toLowerCase());
+        return tpls
+          .map(t => t.replace("{kw}", kwDisplay).replace("{mod}", mod).replace(/\s{2,}/g, " ").trim())
+          .map(s => objIsPlural
+            ? s.replace(/\bThis\b/g, "These").replace(/\bIs\b/g, "Are").replace(/\bis\b/g, "are").replace(/\bseems\b/g, "seem")
+            : s
+          );
+      }
+    }
+
+    // Person + predicate: "Mom is here", "Dad is coming", "Where teacher?"
+    if (modType === "predicate" && pos === "phrase") {
+      const tpls = COMBO_TEMPLATES?.person_predicate?.[langCode]
+                ?? COMBO_TEMPLATES?.person_predicate?.en ?? [];
+      if (tpls.length > 0) {
+        return tpls
+          .map(t => t.replace("{kw}", kwDisplay).replace("{mod}", mod).replace(/\s{2,}/g, " ").trim())
+          .filter(s => s.length > 0)
+          .filter((s, i, arr) => arr.indexOf(s) === i);
+      }
+    }
+
+    // Pronoun + self-state: "I am ready", "You are here", "We are leaving"
+    if (modType === "state" && pos === "phrase") {
+      const tpls = COMBO_TEMPLATES?.pronoun_state?.[langCode]
+                ?? COMBO_TEMPLATES?.pronoun_state?.en ?? [];
+      if (tpls.length > 0) {
+        // Compute a grammar-aware negated form of the state phrase so that
+        // "{kw} {neg_mod}" yields "I am not ready" instead of "I not am ready".
+        // • "am ready"   → "am not ready"
+        // • "am not OK"  → "am OK"  (avoid double-negative)
+        // • Other forms  → "not {mod}" (safe fallback)
+        const negatedMod = (() => {
+          if (langCode !== "en") return "not " + mod;
+          const parts = mod.split(" ");
+          const AUX = ["am", "is", "are", "was", "were"];
+          if (AUX.includes(parts[0])) {
+            // Already negated (e.g. "am not OK") → strip the negation
+            if (parts[1] === "not") return [parts[0], ...parts.slice(2)].join(" ");
+            return [parts[0], "not", ...parts.slice(1)].join(" ");
+          }
+          return "not " + mod;
+        })();
+        return tpls
+          .map(t =>
+            t
+              .replace("{kw}", kwDisplay)
+              .replace("{neg_mod}", negatedMod)
+              .replace("{mod}", mod)
+              .replace(/\s{2,}/g, " ")
+              .trim()
+          )
+          .filter(s => s.length > 0)
+          .filter((s, i, arr) => arr.indexOf(s) === i);
+      }
+    }
+  }
+
   // Resolve article-prefixed noun phrases from grammar dictionary
-  const nounData = (pos === "noun" || pos === "place")
+  const nounData = (effectivePos === "noun" || effectivePos === "place")
     ? resolveNounArticle(effectiveCanon, langCode) ?? resolveNounArticle(canon, langCode)
     : null;
   const art  = nounData?.indef ?? effectiveKw;
@@ -163,7 +337,7 @@ export function generateCandidates(
   const loc  = nounData?.loc ?? nounData?.part ?? effectiveKw;
 
   // Resolve conjugated verb forms from dictionary
-  const verbData = (pos === "verb")
+  const verbData = (effectivePos === "verb")
     ? resolveVerbForms(canon, langCode)
     : null;
   const v1s = verbData?.["1s"] ?? rawKw;     // 1st person singular present: "mangio"
@@ -177,19 +351,19 @@ export function generateCandidates(
   };
 
   // 1. Primary: exact intent + emotion
-  add(intent, emotion);
+  add(intent, effectiveEmotion);
   // 2. Same intent, neutral fallback (if not already added)
-  if (emotion !== "neutral") add(intent, "neutral");
+  if (effectiveEmotion !== "neutral") add(intent, "neutral");
   // 3. Same intent, remaining emotions
   for (const e of EMOTIONS) {
     if (e !== emotion && e !== "neutral") add(intent, e);
   }
   // 4. Other intents, detected emotion
   for (const i of INTENTS) {
-    if (i !== intent) add(i, emotion);
+    if (i !== intent) add(i, effectiveEmotion);
   }
   // 5. Other intents, neutral
-  if (emotion !== "neutral") {
+  if (effectiveEmotion !== "neutral") {
     for (const i of INTENTS) {
       if (i !== intent) add(i, "neutral");
     }
@@ -204,19 +378,35 @@ export function generateCandidates(
   }
 
   // ── Fill placeholders ──────────────────────────────────────────────────
-  return ranked.map(t =>
-    t
-      .replace("{kw}", kw)
-      .replace("{art}", art)
-      .replace("{part}", part)
-      .replace("{def}", def)
-      .replace("{loc}", loc)
-      .replace("{v1s}", v1s)
-      .replace("{ger}", ger)
-      .replace("{mod}", effectiveMod)
-      .replace(/\s{2,}/g, " ")
-      .trim()
-  );
+  return ranked
+    .map(t =>
+      t
+        .replace("{kw}", kw)
+        .replace("{art}", art)
+        .replace("{part}", part)
+        .replace("{def}", def)
+        .replace("{loc}", loc)
+        .replace("{v1s}", v1s)
+        .replace("{ger}", ger)
+        .replace("{mod}", effectiveMod)
+        .replace(/\s{2,}/g, " ")
+        .trim()
+    )
+    // Clean up artifacts that appear when {mod} is empty:
+    //   "hello, !" → "hello!"   |  ", not hello" → "not hello"
+    //   "hello,"   → "hello"    |  "hello !"     → "hello!"
+    .map(s =>
+      s
+        .replace(/,\s*([!?¡¿])/g, "$1")  // comma + punctuation → just punctuation
+        .replace(/^[,;]\s*/,       "")   // leading comma/semicolon
+        .replace(/[,;]\s*$/,       "")   // trailing comma/semicolon
+        .replace(/\s+([!?¡¿])$/g,  "$1") // trailing "word !" → "word!"
+        .replace(/\s{2,}/g, " ")
+        .trim()
+    )
+    .filter(s => s.length > 0)
+    // Remove duplicates while preserving ranking order
+    .filter((s, i, arr) => arr.indexOf(s) === i);
 }
 
 // ── Rule-Based Grammar Fixer ───────────────────────────────────────────────────

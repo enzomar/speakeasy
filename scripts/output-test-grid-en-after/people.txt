@@ -1,0 +1,3011 @@
+========================================================================
+  SpeakEasy — Grid Combination Report: 👥  PEOPLE
+========================================================================
+  Category : people  (mapTo=people)
+  Language : en
+  Gender   : male
+  Top N    : 8 heuristic sentences per cell
+  Engine   : unavailable (heuristic only)
+  Generated: 2026-03-14T09:35:09.977Z
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  L1 CATEGORY: 👥  PEOPLE  (people)
+  14 items, color=#1971C2
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  L2: 👤  I  (pe_i)
+      pos=phrase  intent=social  emotion=neutral
+       1. I
+       2. I!
+       3. not I
+       4. I please
+       5. I?
+       6. Yes, I
+       7. Not I
+       8. Maybe I
+
+    L3: ✅  am ready  (st_ready)  type=state
+        intent=social  emotion=neutral
+         1. I am ready
+         2. I am ready!
+         3. I am not ready
+         4. I am ready?
+         5. I am ready now
+         6. Yes, I am ready
+
+    L3: 📍  am here  (st_here)  type=state
+        intent=social  emotion=neutral
+         1. I am here
+         2. I am here!
+         3. I am not here
+         4. I am here?
+         5. I am here now
+         6. Yes, I am here
+
+    L3: 🚶  am coming  (st_coming)  type=state
+        intent=social  emotion=neutral
+         1. I am coming
+         2. I am coming!
+         3. I am not coming
+         4. I am coming?
+         5. I am coming now
+         6. Yes, I am coming
+
+    L3: 🚪  am leaving  (st_leaving)  type=state
+        intent=social  emotion=neutral
+         1. I am leaving
+         2. I am leaving!
+         3. I am not leaving
+         4. I am leaving?
+         5. I am leaving now
+         6. Yes, I am leaving
+
+    L3: 🍽️  am hungry  (st_hungry)  type=state
+        intent=social  emotion=neutral
+         1. I am hungry
+         2. I am hungry!
+         3. I am not hungry
+         4. I am hungry?
+         5. I am hungry now
+         6. Yes, I am hungry
+
+    L3: 💧  am thirsty  (st_thirsty)  type=state
+        intent=social  emotion=neutral
+         1. I am thirsty
+         2. I am thirsty!
+         3. I am not thirsty
+         4. I am thirsty?
+         5. I am thirsty now
+         6. Yes, I am thirsty
+
+    L3: 😴  am tired  (st_tired)  type=state
+        intent=social  emotion=neutral
+         1. I am tired
+         2. I am tired!
+         3. I am not tired
+         4. I am tired?
+         5. I am tired now
+         6. Yes, I am tired
+
+    L3: 👌  am OK  (st_ok)  type=state
+        intent=social  emotion=neutral
+         1. I am OK
+         2. I am OK!
+         3. I am not OK
+         4. I am OK?
+         5. I am OK now
+         6. Yes, I am OK
+
+    L3: ❌  am not OK  (st_notok)  type=state
+        intent=social  emotion=neutral
+         1. I am not OK
+         2. I am not OK!
+         3. I am OK
+         4. I am not OK?
+         5. I am not OK now
+         6. Yes, I am not OK
+
+    L3: 📵  am busy  (st_busy)  type=state
+        intent=social  emotion=neutral
+         1. I am busy
+         2. I am busy!
+         3. I am not busy
+         4. I am busy?
+         5. I am busy now
+         6. Yes, I am busy
+
+    L3: ⏳  am waiting  (st_waiting)  type=state
+        intent=social  emotion=neutral
+         1. I am waiting
+         2. I am waiting!
+         3. I am not waiting
+         4. I am waiting?
+         5. I am waiting now
+         6. Yes, I am waiting
+
+    L3: 😰  am lost  (st_lost)  type=state
+        intent=social  emotion=neutral
+         1. I am lost
+         2. I am lost!
+         3. I am not lost
+         4. I am lost?
+         5. I am lost now
+         6. Yes, I am lost
+
+  L2: 👆  you  (pe_you)
+      pos=phrase  intent=social  emotion=neutral
+       1. you
+       2. you!
+       3. not you
+       4. you please
+       5. you?
+       6. Yes, you
+       7. Not you
+       8. Maybe you
+
+    L3: ✅  am ready  (st_ready)  type=state
+        intent=social  emotion=neutral
+         1. you am ready
+         2. you am ready!
+         3. you am not ready
+         4. you am ready?
+         5. you am ready now
+         6. Yes, you am ready
+
+    L3: 📍  am here  (st_here)  type=state
+        intent=social  emotion=neutral
+         1. you am here
+         2. you am here!
+         3. you am not here
+         4. you am here?
+         5. you am here now
+         6. Yes, you am here
+
+    L3: 🚶  am coming  (st_coming)  type=state
+        intent=social  emotion=neutral
+         1. you am coming
+         2. you am coming!
+         3. you am not coming
+         4. you am coming?
+         5. you am coming now
+         6. Yes, you am coming
+
+    L3: 🚪  am leaving  (st_leaving)  type=state
+        intent=social  emotion=neutral
+         1. you am leaving
+         2. you am leaving!
+         3. you am not leaving
+         4. you am leaving?
+         5. you am leaving now
+         6. Yes, you am leaving
+
+    L3: 🍽️  am hungry  (st_hungry)  type=state
+        intent=social  emotion=neutral
+         1. you am hungry
+         2. you am hungry!
+         3. you am not hungry
+         4. you am hungry?
+         5. you am hungry now
+         6. Yes, you am hungry
+
+    L3: 💧  am thirsty  (st_thirsty)  type=state
+        intent=social  emotion=neutral
+         1. you am thirsty
+         2. you am thirsty!
+         3. you am not thirsty
+         4. you am thirsty?
+         5. you am thirsty now
+         6. Yes, you am thirsty
+
+    L3: 😴  am tired  (st_tired)  type=state
+        intent=social  emotion=neutral
+         1. you am tired
+         2. you am tired!
+         3. you am not tired
+         4. you am tired?
+         5. you am tired now
+         6. Yes, you am tired
+
+    L3: 👌  am OK  (st_ok)  type=state
+        intent=social  emotion=neutral
+         1. you am OK
+         2. you am OK!
+         3. you am not OK
+         4. you am OK?
+         5. you am OK now
+         6. Yes, you am OK
+
+    L3: ❌  am not OK  (st_notok)  type=state
+        intent=social  emotion=neutral
+         1. you am not OK
+         2. you am not OK!
+         3. you am OK
+         4. you am not OK?
+         5. you am not OK now
+         6. Yes, you am not OK
+
+    L3: 📵  am busy  (st_busy)  type=state
+        intent=social  emotion=neutral
+         1. you am busy
+         2. you am busy!
+         3. you am not busy
+         4. you am busy?
+         5. you am busy now
+         6. Yes, you am busy
+
+    L3: ⏳  am waiting  (st_waiting)  type=state
+        intent=social  emotion=neutral
+         1. you am waiting
+         2. you am waiting!
+         3. you am not waiting
+         4. you am waiting?
+         5. you am waiting now
+         6. Yes, you am waiting
+
+    L3: 😰  am lost  (st_lost)  type=state
+        intent=social  emotion=neutral
+         1. you am lost
+         2. you am lost!
+         3. you am not lost
+         4. you am lost?
+         5. you am lost now
+         6. Yes, you am lost
+
+  L2: 👫  we  (pe_we)
+      pos=phrase  intent=social  emotion=neutral
+       1. we
+       2. we!
+       3. not we
+       4. we please
+       5. we?
+       6. Yes, we
+       7. Not we
+       8. Maybe we
+
+    L3: ✅  am ready  (st_ready)  type=state
+        intent=social  emotion=neutral
+         1. we am ready
+         2. we am ready!
+         3. we am not ready
+         4. we am ready?
+         5. we am ready now
+         6. Yes, we am ready
+
+    L3: 📍  am here  (st_here)  type=state
+        intent=social  emotion=neutral
+         1. we am here
+         2. we am here!
+         3. we am not here
+         4. we am here?
+         5. we am here now
+         6. Yes, we am here
+
+    L3: 🚶  am coming  (st_coming)  type=state
+        intent=social  emotion=neutral
+         1. we am coming
+         2. we am coming!
+         3. we am not coming
+         4. we am coming?
+         5. we am coming now
+         6. Yes, we am coming
+
+    L3: 🚪  am leaving  (st_leaving)  type=state
+        intent=social  emotion=neutral
+         1. we am leaving
+         2. we am leaving!
+         3. we am not leaving
+         4. we am leaving?
+         5. we am leaving now
+         6. Yes, we am leaving
+
+    L3: 🍽️  am hungry  (st_hungry)  type=state
+        intent=social  emotion=neutral
+         1. we am hungry
+         2. we am hungry!
+         3. we am not hungry
+         4. we am hungry?
+         5. we am hungry now
+         6. Yes, we am hungry
+
+    L3: 💧  am thirsty  (st_thirsty)  type=state
+        intent=social  emotion=neutral
+         1. we am thirsty
+         2. we am thirsty!
+         3. we am not thirsty
+         4. we am thirsty?
+         5. we am thirsty now
+         6. Yes, we am thirsty
+
+    L3: 😴  am tired  (st_tired)  type=state
+        intent=social  emotion=neutral
+         1. we am tired
+         2. we am tired!
+         3. we am not tired
+         4. we am tired?
+         5. we am tired now
+         6. Yes, we am tired
+
+    L3: 👌  am OK  (st_ok)  type=state
+        intent=social  emotion=neutral
+         1. we am OK
+         2. we am OK!
+         3. we am not OK
+         4. we am OK?
+         5. we am OK now
+         6. Yes, we am OK
+
+    L3: ❌  am not OK  (st_notok)  type=state
+        intent=social  emotion=neutral
+         1. we am not OK
+         2. we am not OK!
+         3. we am OK
+         4. we am not OK?
+         5. we am not OK now
+         6. Yes, we am not OK
+
+    L3: 📵  am busy  (st_busy)  type=state
+        intent=social  emotion=neutral
+         1. we am busy
+         2. we am busy!
+         3. we am not busy
+         4. we am busy?
+         5. we am busy now
+         6. Yes, we am busy
+
+    L3: ⏳  am waiting  (st_waiting)  type=state
+        intent=social  emotion=neutral
+         1. we am waiting
+         2. we am waiting!
+         3. we am not waiting
+         4. we am waiting?
+         5. we am waiting now
+         6. Yes, we am waiting
+
+    L3: 😰  am lost  (st_lost)  type=state
+        intent=social  emotion=neutral
+         1. we am lost
+         2. we am lost!
+         3. we am not lost
+         4. we am lost?
+         5. we am lost now
+         6. Yes, we am lost
+
+  L2: 👥  they  (pe_they)
+      pos=phrase  intent=social  emotion=neutral
+       1. they
+       2. they!
+       3. not they
+       4. they please
+       5. they?
+       6. Yes, they
+       7. Not they
+       8. Maybe they
+
+    L3: ✅  am ready  (st_ready)  type=state
+        intent=social  emotion=neutral
+         1. they am ready
+         2. they am ready!
+         3. they am not ready
+         4. they am ready?
+         5. they am ready now
+         6. Yes, they am ready
+
+    L3: 📍  am here  (st_here)  type=state
+        intent=social  emotion=neutral
+         1. they am here
+         2. they am here!
+         3. they am not here
+         4. they am here?
+         5. they am here now
+         6. Yes, they am here
+
+    L3: 🚶  am coming  (st_coming)  type=state
+        intent=social  emotion=neutral
+         1. they am coming
+         2. they am coming!
+         3. they am not coming
+         4. they am coming?
+         5. they am coming now
+         6. Yes, they am coming
+
+    L3: 🚪  am leaving  (st_leaving)  type=state
+        intent=social  emotion=neutral
+         1. they am leaving
+         2. they am leaving!
+         3. they am not leaving
+         4. they am leaving?
+         5. they am leaving now
+         6. Yes, they am leaving
+
+    L3: 🍽️  am hungry  (st_hungry)  type=state
+        intent=social  emotion=neutral
+         1. they am hungry
+         2. they am hungry!
+         3. they am not hungry
+         4. they am hungry?
+         5. they am hungry now
+         6. Yes, they am hungry
+
+    L3: 💧  am thirsty  (st_thirsty)  type=state
+        intent=social  emotion=neutral
+         1. they am thirsty
+         2. they am thirsty!
+         3. they am not thirsty
+         4. they am thirsty?
+         5. they am thirsty now
+         6. Yes, they am thirsty
+
+    L3: 😴  am tired  (st_tired)  type=state
+        intent=social  emotion=neutral
+         1. they am tired
+         2. they am tired!
+         3. they am not tired
+         4. they am tired?
+         5. they am tired now
+         6. Yes, they am tired
+
+    L3: 👌  am OK  (st_ok)  type=state
+        intent=social  emotion=neutral
+         1. they am OK
+         2. they am OK!
+         3. they am not OK
+         4. they am OK?
+         5. they am OK now
+         6. Yes, they am OK
+
+    L3: ❌  am not OK  (st_notok)  type=state
+        intent=social  emotion=neutral
+         1. they am not OK
+         2. they am not OK!
+         3. they am OK
+         4. they am not OK?
+         5. they am not OK now
+         6. Yes, they am not OK
+
+    L3: 📵  am busy  (st_busy)  type=state
+        intent=social  emotion=neutral
+         1. they am busy
+         2. they am busy!
+         3. they am not busy
+         4. they am busy?
+         5. they am busy now
+         6. Yes, they am busy
+
+    L3: ⏳  am waiting  (st_waiting)  type=state
+        intent=social  emotion=neutral
+         1. they am waiting
+         2. they am waiting!
+         3. they am not waiting
+         4. they am waiting?
+         5. they am waiting now
+         6. Yes, they am waiting
+
+    L3: 😰  am lost  (st_lost)  type=state
+        intent=social  emotion=neutral
+         1. they am lost
+         2. they am lost!
+         3. they am not lost
+         4. they am lost?
+         5. they am lost now
+         6. Yes, they am lost
+
+  L2: 👩  mom  (pe_mom)
+      pos=phrase  intent=social  emotion=neutral
+       1. mom
+       2. mom!
+       3. not mom
+       4. mom please
+       5. mom?
+       6. Yes, mom
+       7. Not mom
+       8. Maybe mom
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. mom is here
+         2. mom is here!
+         3. mom is here?
+         4. Is mom is here?
+         5. I think mom is here
+         6. Tell mom!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. mom is coming
+         2. mom is coming!
+         3. mom is coming?
+         4. Is mom is coming?
+         5. I think mom is coming
+         6. Tell mom!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. mom is gone
+         2. mom is gone!
+         3. mom is gone?
+         4. Is mom is gone?
+         5. I think mom is gone
+         6. Tell mom!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. mom wants
+         2. mom wants!
+         3. mom wants?
+         4. Is mom wants?
+         5. I think mom wants
+         6. Tell mom!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. mom needs
+         2. mom needs!
+         3. mom needs?
+         4. Is mom needs?
+         5. I think mom needs
+         6. Tell mom!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. mom said
+         2. mom said!
+         3. mom said?
+         4. Is mom said?
+         5. I think mom said
+         6. Tell mom!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. mom helps
+         2. mom helps!
+         3. mom helps?
+         4. Is mom helps?
+         5. I think mom helps
+         6. Tell mom!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. mom is happy
+         2. mom is happy!
+         3. mom is happy?
+         4. Is mom is happy?
+         5. I think mom is happy
+         6. Tell mom!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. mom is angry
+         2. mom is angry!
+         3. mom is angry?
+         4. Is mom is angry?
+         5. I think mom is angry
+         6. Tell mom!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. mom is sick
+         2. mom is sick!
+         3. mom is sick?
+         4. Is mom is sick?
+         5. I think mom is sick
+         6. Tell mom!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. mom where?
+         2. mom where?!
+         3. mom where??
+         4. Is mom where??
+         5. I think mom where?
+         6. Tell mom!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. mom call
+         2. mom call!
+         3. mom call?
+         4. Is mom call?
+         5. I think mom call
+         6. Tell mom!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. mom now!
+         2. mom now
+         3. not mom
+         4. mom please
+         5. but mom?
+         6. Yes, mom now!
+         7. mom now?
+         8. mom now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. mom soon
+         2. mom soon!
+         3. not mom
+         4. mom please
+         5. mom soon?
+         6. mom soon please
+         7. Yes, mom soon
+         8. Not mom soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. mom later
+         2. mom later!
+         3. not mom
+         4. mom please
+         5. mom later?
+         6. mom later please
+         7. Yes, mom later
+         8. Not mom later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. mom today
+         2. mom today!
+         3. not mom
+         4. mom please
+         5. mom today?
+         6. mom today please
+         7. Yes, mom today
+         8. Not mom today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. mom tomorrow
+         2. mom tomorrow!
+         3. not mom
+         4. mom please
+         5. mom tomorrow?
+         6. mom tomorrow please
+         7. Yes, mom tomorrow
+         8. Not mom tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. mom yesterday
+         2. mom yesterday!
+         3. not mom
+         4. mom please
+         5. mom yesterday?
+         6. mom yesterday please
+         7. Yes, mom yesterday
+         8. Not mom yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. mom in the morning
+         2. mom in the morning!
+         3. not mom
+         4. mom please
+         5. mom in the morning?
+         6. mom in the morning please
+         7. Yes, mom in the morning
+         8. Not mom in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. mom in the afternoon
+         2. mom in the afternoon!
+         3. not mom
+         4. mom please
+         5. mom in the afternoon?
+         6. mom in the afternoon please
+         7. Yes, mom in the afternoon
+         8. Not mom in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. mom at night
+         2. mom at night!
+         3. not mom
+         4. mom please
+         5. mom at night?
+         6. mom at night please
+         7. Yes, mom at night
+         8. Not mom at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. mom always
+         2. mom always!
+         3. not mom
+         4. mom please
+         5. mom always?
+         6. mom always please
+         7. Yes, mom always
+         8. Not mom always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. mom every day
+         2. mom every day!
+         3. not mom
+         4. mom please
+         5. mom every day?
+         6. mom every day please
+         7. Yes, mom every day
+         8. Not mom every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. mom in a minute
+         2. mom in a minute!
+         3. not mom
+         4. mom please
+         5. mom in a minute?
+         6. mom in a minute please
+         7. Yes, mom in a minute
+         8. Not mom in a minute
+
+  L2: 👨  dad  (pe_dad)
+      pos=phrase  intent=social  emotion=neutral
+       1. dad
+       2. dad!
+       3. not dad
+       4. dad please
+       5. dad?
+       6. Yes, dad
+       7. Not dad
+       8. Maybe dad
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. dad is here
+         2. dad is here!
+         3. dad is here?
+         4. Is dad is here?
+         5. I think dad is here
+         6. Tell dad!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. dad is coming
+         2. dad is coming!
+         3. dad is coming?
+         4. Is dad is coming?
+         5. I think dad is coming
+         6. Tell dad!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. dad is gone
+         2. dad is gone!
+         3. dad is gone?
+         4. Is dad is gone?
+         5. I think dad is gone
+         6. Tell dad!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. dad wants
+         2. dad wants!
+         3. dad wants?
+         4. Is dad wants?
+         5. I think dad wants
+         6. Tell dad!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. dad needs
+         2. dad needs!
+         3. dad needs?
+         4. Is dad needs?
+         5. I think dad needs
+         6. Tell dad!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. dad said
+         2. dad said!
+         3. dad said?
+         4. Is dad said?
+         5. I think dad said
+         6. Tell dad!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. dad helps
+         2. dad helps!
+         3. dad helps?
+         4. Is dad helps?
+         5. I think dad helps
+         6. Tell dad!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. dad is happy
+         2. dad is happy!
+         3. dad is happy?
+         4. Is dad is happy?
+         5. I think dad is happy
+         6. Tell dad!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. dad is angry
+         2. dad is angry!
+         3. dad is angry?
+         4. Is dad is angry?
+         5. I think dad is angry
+         6. Tell dad!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. dad is sick
+         2. dad is sick!
+         3. dad is sick?
+         4. Is dad is sick?
+         5. I think dad is sick
+         6. Tell dad!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. dad where?
+         2. dad where?!
+         3. dad where??
+         4. Is dad where??
+         5. I think dad where?
+         6. Tell dad!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. dad call
+         2. dad call!
+         3. dad call?
+         4. Is dad call?
+         5. I think dad call
+         6. Tell dad!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. dad now!
+         2. dad now
+         3. not dad
+         4. dad please
+         5. but dad?
+         6. Yes, dad now!
+         7. dad now?
+         8. dad now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. dad soon
+         2. dad soon!
+         3. not dad
+         4. dad please
+         5. dad soon?
+         6. dad soon please
+         7. Yes, dad soon
+         8. Not dad soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. dad later
+         2. dad later!
+         3. not dad
+         4. dad please
+         5. dad later?
+         6. dad later please
+         7. Yes, dad later
+         8. Not dad later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. dad today
+         2. dad today!
+         3. not dad
+         4. dad please
+         5. dad today?
+         6. dad today please
+         7. Yes, dad today
+         8. Not dad today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. dad tomorrow
+         2. dad tomorrow!
+         3. not dad
+         4. dad please
+         5. dad tomorrow?
+         6. dad tomorrow please
+         7. Yes, dad tomorrow
+         8. Not dad tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. dad yesterday
+         2. dad yesterday!
+         3. not dad
+         4. dad please
+         5. dad yesterday?
+         6. dad yesterday please
+         7. Yes, dad yesterday
+         8. Not dad yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. dad in the morning
+         2. dad in the morning!
+         3. not dad
+         4. dad please
+         5. dad in the morning?
+         6. dad in the morning please
+         7. Yes, dad in the morning
+         8. Not dad in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. dad in the afternoon
+         2. dad in the afternoon!
+         3. not dad
+         4. dad please
+         5. dad in the afternoon?
+         6. dad in the afternoon please
+         7. Yes, dad in the afternoon
+         8. Not dad in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. dad at night
+         2. dad at night!
+         3. not dad
+         4. dad please
+         5. dad at night?
+         6. dad at night please
+         7. Yes, dad at night
+         8. Not dad at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. dad always
+         2. dad always!
+         3. not dad
+         4. dad please
+         5. dad always?
+         6. dad always please
+         7. Yes, dad always
+         8. Not dad always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. dad every day
+         2. dad every day!
+         3. not dad
+         4. dad please
+         5. dad every day?
+         6. dad every day please
+         7. Yes, dad every day
+         8. Not dad every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. dad in a minute
+         2. dad in a minute!
+         3. not dad
+         4. dad please
+         5. dad in a minute?
+         6. dad in a minute please
+         7. Yes, dad in a minute
+         8. Not dad in a minute
+
+  L2: 👦  brother  (pe_brother)
+      pos=phrase  intent=social  emotion=neutral
+       1. brother
+       2. brother!
+       3. not brother
+       4. brother please
+       5. brother?
+       6. Yes, brother
+       7. Not brother
+       8. Maybe brother
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. brother is here
+         2. brother is here!
+         3. brother is here?
+         4. Is brother is here?
+         5. I think brother is here
+         6. Tell brother!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. brother is coming
+         2. brother is coming!
+         3. brother is coming?
+         4. Is brother is coming?
+         5. I think brother is coming
+         6. Tell brother!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. brother is gone
+         2. brother is gone!
+         3. brother is gone?
+         4. Is brother is gone?
+         5. I think brother is gone
+         6. Tell brother!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. brother wants
+         2. brother wants!
+         3. brother wants?
+         4. Is brother wants?
+         5. I think brother wants
+         6. Tell brother!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. brother needs
+         2. brother needs!
+         3. brother needs?
+         4. Is brother needs?
+         5. I think brother needs
+         6. Tell brother!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. brother said
+         2. brother said!
+         3. brother said?
+         4. Is brother said?
+         5. I think brother said
+         6. Tell brother!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. brother helps
+         2. brother helps!
+         3. brother helps?
+         4. Is brother helps?
+         5. I think brother helps
+         6. Tell brother!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. brother is happy
+         2. brother is happy!
+         3. brother is happy?
+         4. Is brother is happy?
+         5. I think brother is happy
+         6. Tell brother!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. brother is angry
+         2. brother is angry!
+         3. brother is angry?
+         4. Is brother is angry?
+         5. I think brother is angry
+         6. Tell brother!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. brother is sick
+         2. brother is sick!
+         3. brother is sick?
+         4. Is brother is sick?
+         5. I think brother is sick
+         6. Tell brother!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. brother where?
+         2. brother where?!
+         3. brother where??
+         4. Is brother where??
+         5. I think brother where?
+         6. Tell brother!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. brother call
+         2. brother call!
+         3. brother call?
+         4. Is brother call?
+         5. I think brother call
+         6. Tell brother!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. brother now!
+         2. brother now
+         3. not brother
+         4. brother please
+         5. but brother?
+         6. Yes, brother now!
+         7. brother now?
+         8. brother now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. brother soon
+         2. brother soon!
+         3. not brother
+         4. brother please
+         5. brother soon?
+         6. brother soon please
+         7. Yes, brother soon
+         8. Not brother soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. brother later
+         2. brother later!
+         3. not brother
+         4. brother please
+         5. brother later?
+         6. brother later please
+         7. Yes, brother later
+         8. Not brother later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. brother today
+         2. brother today!
+         3. not brother
+         4. brother please
+         5. brother today?
+         6. brother today please
+         7. Yes, brother today
+         8. Not brother today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. brother tomorrow
+         2. brother tomorrow!
+         3. not brother
+         4. brother please
+         5. brother tomorrow?
+         6. brother tomorrow please
+         7. Yes, brother tomorrow
+         8. Not brother tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. brother yesterday
+         2. brother yesterday!
+         3. not brother
+         4. brother please
+         5. brother yesterday?
+         6. brother yesterday please
+         7. Yes, brother yesterday
+         8. Not brother yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. brother in the morning
+         2. brother in the morning!
+         3. not brother
+         4. brother please
+         5. brother in the morning?
+         6. brother in the morning please
+         7. Yes, brother in the morning
+         8. Not brother in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. brother in the afternoon
+         2. brother in the afternoon!
+         3. not brother
+         4. brother please
+         5. brother in the afternoon?
+         6. brother in the afternoon please
+         7. Yes, brother in the afternoon
+         8. Not brother in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. brother at night
+         2. brother at night!
+         3. not brother
+         4. brother please
+         5. brother at night?
+         6. brother at night please
+         7. Yes, brother at night
+         8. Not brother at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. brother always
+         2. brother always!
+         3. not brother
+         4. brother please
+         5. brother always?
+         6. brother always please
+         7. Yes, brother always
+         8. Not brother always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. brother every day
+         2. brother every day!
+         3. not brother
+         4. brother please
+         5. brother every day?
+         6. brother every day please
+         7. Yes, brother every day
+         8. Not brother every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. brother in a minute
+         2. brother in a minute!
+         3. not brother
+         4. brother please
+         5. brother in a minute?
+         6. brother in a minute please
+         7. Yes, brother in a minute
+         8. Not brother in a minute
+
+  L2: 👧  sister  (pe_sister)
+      pos=phrase  intent=social  emotion=neutral
+       1. sister
+       2. sister!
+       3. not sister
+       4. sister please
+       5. sister?
+       6. Yes, sister
+       7. Not sister
+       8. Maybe sister
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. sister is here
+         2. sister is here!
+         3. sister is here?
+         4. Is sister is here?
+         5. I think sister is here
+         6. Tell sister!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. sister is coming
+         2. sister is coming!
+         3. sister is coming?
+         4. Is sister is coming?
+         5. I think sister is coming
+         6. Tell sister!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. sister is gone
+         2. sister is gone!
+         3. sister is gone?
+         4. Is sister is gone?
+         5. I think sister is gone
+         6. Tell sister!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. sister wants
+         2. sister wants!
+         3. sister wants?
+         4. Is sister wants?
+         5. I think sister wants
+         6. Tell sister!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. sister needs
+         2. sister needs!
+         3. sister needs?
+         4. Is sister needs?
+         5. I think sister needs
+         6. Tell sister!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. sister said
+         2. sister said!
+         3. sister said?
+         4. Is sister said?
+         5. I think sister said
+         6. Tell sister!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. sister helps
+         2. sister helps!
+         3. sister helps?
+         4. Is sister helps?
+         5. I think sister helps
+         6. Tell sister!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. sister is happy
+         2. sister is happy!
+         3. sister is happy?
+         4. Is sister is happy?
+         5. I think sister is happy
+         6. Tell sister!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. sister is angry
+         2. sister is angry!
+         3. sister is angry?
+         4. Is sister is angry?
+         5. I think sister is angry
+         6. Tell sister!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. sister is sick
+         2. sister is sick!
+         3. sister is sick?
+         4. Is sister is sick?
+         5. I think sister is sick
+         6. Tell sister!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. sister where?
+         2. sister where?!
+         3. sister where??
+         4. Is sister where??
+         5. I think sister where?
+         6. Tell sister!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. sister call
+         2. sister call!
+         3. sister call?
+         4. Is sister call?
+         5. I think sister call
+         6. Tell sister!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. sister now!
+         2. sister now
+         3. not sister
+         4. sister please
+         5. but sister?
+         6. Yes, sister now!
+         7. sister now?
+         8. sister now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. sister soon
+         2. sister soon!
+         3. not sister
+         4. sister please
+         5. sister soon?
+         6. sister soon please
+         7. Yes, sister soon
+         8. Not sister soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. sister later
+         2. sister later!
+         3. not sister
+         4. sister please
+         5. sister later?
+         6. sister later please
+         7. Yes, sister later
+         8. Not sister later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. sister today
+         2. sister today!
+         3. not sister
+         4. sister please
+         5. sister today?
+         6. sister today please
+         7. Yes, sister today
+         8. Not sister today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. sister tomorrow
+         2. sister tomorrow!
+         3. not sister
+         4. sister please
+         5. sister tomorrow?
+         6. sister tomorrow please
+         7. Yes, sister tomorrow
+         8. Not sister tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. sister yesterday
+         2. sister yesterday!
+         3. not sister
+         4. sister please
+         5. sister yesterday?
+         6. sister yesterday please
+         7. Yes, sister yesterday
+         8. Not sister yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. sister in the morning
+         2. sister in the morning!
+         3. not sister
+         4. sister please
+         5. sister in the morning?
+         6. sister in the morning please
+         7. Yes, sister in the morning
+         8. Not sister in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. sister in the afternoon
+         2. sister in the afternoon!
+         3. not sister
+         4. sister please
+         5. sister in the afternoon?
+         6. sister in the afternoon please
+         7. Yes, sister in the afternoon
+         8. Not sister in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. sister at night
+         2. sister at night!
+         3. not sister
+         4. sister please
+         5. sister at night?
+         6. sister at night please
+         7. Yes, sister at night
+         8. Not sister at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. sister always
+         2. sister always!
+         3. not sister
+         4. sister please
+         5. sister always?
+         6. sister always please
+         7. Yes, sister always
+         8. Not sister always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. sister every day
+         2. sister every day!
+         3. not sister
+         4. sister please
+         5. sister every day?
+         6. sister every day please
+         7. Yes, sister every day
+         8. Not sister every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. sister in a minute
+         2. sister in a minute!
+         3. not sister
+         4. sister please
+         5. sister in a minute?
+         6. sister in a minute please
+         7. Yes, sister in a minute
+         8. Not sister in a minute
+
+  L2: 👵  grandma  (pe_grandma)
+      pos=phrase  intent=social  emotion=neutral
+       1. grandma
+       2. grandma!
+       3. not grandma
+       4. grandma please
+       5. grandma?
+       6. Yes, grandma
+       7. Not grandma
+       8. Maybe grandma
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma is here
+         2. grandma is here!
+         3. grandma is here?
+         4. Is grandma is here?
+         5. I think grandma is here
+         6. Tell grandma!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma is coming
+         2. grandma is coming!
+         3. grandma is coming?
+         4. Is grandma is coming?
+         5. I think grandma is coming
+         6. Tell grandma!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma is gone
+         2. grandma is gone!
+         3. grandma is gone?
+         4. Is grandma is gone?
+         5. I think grandma is gone
+         6. Tell grandma!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma wants
+         2. grandma wants!
+         3. grandma wants?
+         4. Is grandma wants?
+         5. I think grandma wants
+         6. Tell grandma!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma needs
+         2. grandma needs!
+         3. grandma needs?
+         4. Is grandma needs?
+         5. I think grandma needs
+         6. Tell grandma!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma said
+         2. grandma said!
+         3. grandma said?
+         4. Is grandma said?
+         5. I think grandma said
+         6. Tell grandma!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma helps
+         2. grandma helps!
+         3. grandma helps?
+         4. Is grandma helps?
+         5. I think grandma helps
+         6. Tell grandma!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma is happy
+         2. grandma is happy!
+         3. grandma is happy?
+         4. Is grandma is happy?
+         5. I think grandma is happy
+         6. Tell grandma!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma is angry
+         2. grandma is angry!
+         3. grandma is angry?
+         4. Is grandma is angry?
+         5. I think grandma is angry
+         6. Tell grandma!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma is sick
+         2. grandma is sick!
+         3. grandma is sick?
+         4. Is grandma is sick?
+         5. I think grandma is sick
+         6. Tell grandma!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma where?
+         2. grandma where?!
+         3. grandma where??
+         4. Is grandma where??
+         5. I think grandma where?
+         6. Tell grandma!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. grandma call
+         2. grandma call!
+         3. grandma call?
+         4. Is grandma call?
+         5. I think grandma call
+         6. Tell grandma!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. grandma now!
+         2. grandma now
+         3. not grandma
+         4. grandma please
+         5. but grandma?
+         6. Yes, grandma now!
+         7. grandma now?
+         8. grandma now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. grandma soon
+         2. grandma soon!
+         3. not grandma
+         4. grandma please
+         5. grandma soon?
+         6. grandma soon please
+         7. Yes, grandma soon
+         8. Not grandma soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. grandma later
+         2. grandma later!
+         3. not grandma
+         4. grandma please
+         5. grandma later?
+         6. grandma later please
+         7. Yes, grandma later
+         8. Not grandma later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. grandma today
+         2. grandma today!
+         3. not grandma
+         4. grandma please
+         5. grandma today?
+         6. grandma today please
+         7. Yes, grandma today
+         8. Not grandma today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. grandma tomorrow
+         2. grandma tomorrow!
+         3. not grandma
+         4. grandma please
+         5. grandma tomorrow?
+         6. grandma tomorrow please
+         7. Yes, grandma tomorrow
+         8. Not grandma tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. grandma yesterday
+         2. grandma yesterday!
+         3. not grandma
+         4. grandma please
+         5. grandma yesterday?
+         6. grandma yesterday please
+         7. Yes, grandma yesterday
+         8. Not grandma yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. grandma in the morning
+         2. grandma in the morning!
+         3. not grandma
+         4. grandma please
+         5. grandma in the morning?
+         6. grandma in the morning please
+         7. Yes, grandma in the morning
+         8. Not grandma in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. grandma in the afternoon
+         2. grandma in the afternoon!
+         3. not grandma
+         4. grandma please
+         5. grandma in the afternoon?
+         6. grandma in the afternoon please
+         7. Yes, grandma in the afternoon
+         8. Not grandma in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. grandma at night
+         2. grandma at night!
+         3. not grandma
+         4. grandma please
+         5. grandma at night?
+         6. grandma at night please
+         7. Yes, grandma at night
+         8. Not grandma at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. grandma always
+         2. grandma always!
+         3. not grandma
+         4. grandma please
+         5. grandma always?
+         6. grandma always please
+         7. Yes, grandma always
+         8. Not grandma always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. grandma every day
+         2. grandma every day!
+         3. not grandma
+         4. grandma please
+         5. grandma every day?
+         6. grandma every day please
+         7. Yes, grandma every day
+         8. Not grandma every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. grandma in a minute
+         2. grandma in a minute!
+         3. not grandma
+         4. grandma please
+         5. grandma in a minute?
+         6. grandma in a minute please
+         7. Yes, grandma in a minute
+         8. Not grandma in a minute
+
+  L2: 👴  grandpa  (pe_grandpa)
+      pos=phrase  intent=social  emotion=neutral
+       1. grandpa
+       2. grandpa!
+       3. not grandpa
+       4. grandpa please
+       5. grandpa?
+       6. Yes, grandpa
+       7. Not grandpa
+       8. Maybe grandpa
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa is here
+         2. grandpa is here!
+         3. grandpa is here?
+         4. Is grandpa is here?
+         5. I think grandpa is here
+         6. Tell grandpa!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa is coming
+         2. grandpa is coming!
+         3. grandpa is coming?
+         4. Is grandpa is coming?
+         5. I think grandpa is coming
+         6. Tell grandpa!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa is gone
+         2. grandpa is gone!
+         3. grandpa is gone?
+         4. Is grandpa is gone?
+         5. I think grandpa is gone
+         6. Tell grandpa!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa wants
+         2. grandpa wants!
+         3. grandpa wants?
+         4. Is grandpa wants?
+         5. I think grandpa wants
+         6. Tell grandpa!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa needs
+         2. grandpa needs!
+         3. grandpa needs?
+         4. Is grandpa needs?
+         5. I think grandpa needs
+         6. Tell grandpa!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa said
+         2. grandpa said!
+         3. grandpa said?
+         4. Is grandpa said?
+         5. I think grandpa said
+         6. Tell grandpa!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa helps
+         2. grandpa helps!
+         3. grandpa helps?
+         4. Is grandpa helps?
+         5. I think grandpa helps
+         6. Tell grandpa!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa is happy
+         2. grandpa is happy!
+         3. grandpa is happy?
+         4. Is grandpa is happy?
+         5. I think grandpa is happy
+         6. Tell grandpa!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa is angry
+         2. grandpa is angry!
+         3. grandpa is angry?
+         4. Is grandpa is angry?
+         5. I think grandpa is angry
+         6. Tell grandpa!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa is sick
+         2. grandpa is sick!
+         3. grandpa is sick?
+         4. Is grandpa is sick?
+         5. I think grandpa is sick
+         6. Tell grandpa!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa where?
+         2. grandpa where?!
+         3. grandpa where??
+         4. Is grandpa where??
+         5. I think grandpa where?
+         6. Tell grandpa!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. grandpa call
+         2. grandpa call!
+         3. grandpa call?
+         4. Is grandpa call?
+         5. I think grandpa call
+         6. Tell grandpa!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. grandpa now!
+         2. grandpa now
+         3. not grandpa
+         4. grandpa please
+         5. but grandpa?
+         6. Yes, grandpa now!
+         7. grandpa now?
+         8. grandpa now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. grandpa soon
+         2. grandpa soon!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa soon?
+         6. grandpa soon please
+         7. Yes, grandpa soon
+         8. Not grandpa soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. grandpa later
+         2. grandpa later!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa later?
+         6. grandpa later please
+         7. Yes, grandpa later
+         8. Not grandpa later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. grandpa today
+         2. grandpa today!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa today?
+         6. grandpa today please
+         7. Yes, grandpa today
+         8. Not grandpa today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. grandpa tomorrow
+         2. grandpa tomorrow!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa tomorrow?
+         6. grandpa tomorrow please
+         7. Yes, grandpa tomorrow
+         8. Not grandpa tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. grandpa yesterday
+         2. grandpa yesterday!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa yesterday?
+         6. grandpa yesterday please
+         7. Yes, grandpa yesterday
+         8. Not grandpa yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. grandpa in the morning
+         2. grandpa in the morning!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa in the morning?
+         6. grandpa in the morning please
+         7. Yes, grandpa in the morning
+         8. Not grandpa in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. grandpa in the afternoon
+         2. grandpa in the afternoon!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa in the afternoon?
+         6. grandpa in the afternoon please
+         7. Yes, grandpa in the afternoon
+         8. Not grandpa in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. grandpa at night
+         2. grandpa at night!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa at night?
+         6. grandpa at night please
+         7. Yes, grandpa at night
+         8. Not grandpa at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. grandpa always
+         2. grandpa always!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa always?
+         6. grandpa always please
+         7. Yes, grandpa always
+         8. Not grandpa always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. grandpa every day
+         2. grandpa every day!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa every day?
+         6. grandpa every day please
+         7. Yes, grandpa every day
+         8. Not grandpa every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. grandpa in a minute
+         2. grandpa in a minute!
+         3. not grandpa
+         4. grandpa please
+         5. grandpa in a minute?
+         6. grandpa in a minute please
+         7. Yes, grandpa in a minute
+         8. Not grandpa in a minute
+
+  L2: 🤝  friend  (pe_friend)
+      pos=phrase  intent=social  emotion=positive
+       1. friend!
+       2. friend
+       3. not friend
+       4. friend please
+       5. friend ?!
+       6. friend, thanks!
+       7. Yes, friend!
+       8. friend?
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=positive
+         1. friend is here
+         2. friend is here!
+         3. friend is here?
+         4. Is friend is here?
+         5. I think friend is here
+         6. Tell friend!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=positive
+         1. friend is coming
+         2. friend is coming!
+         3. friend is coming?
+         4. Is friend is coming?
+         5. I think friend is coming
+         6. Tell friend!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=positive
+         1. friend is gone
+         2. friend is gone!
+         3. friend is gone?
+         4. Is friend is gone?
+         5. I think friend is gone
+         6. Tell friend!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=positive
+         1. friend wants
+         2. friend wants!
+         3. friend wants?
+         4. Is friend wants?
+         5. I think friend wants
+         6. Tell friend!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=positive
+         1. friend needs
+         2. friend needs!
+         3. friend needs?
+         4. Is friend needs?
+         5. I think friend needs
+         6. Tell friend!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=positive
+         1. friend said
+         2. friend said!
+         3. friend said?
+         4. Is friend said?
+         5. I think friend said
+         6. Tell friend!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=positive
+         1. friend helps
+         2. friend helps!
+         3. friend helps?
+         4. Is friend helps?
+         5. I think friend helps
+         6. Tell friend!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=positive
+         1. friend is happy
+         2. friend is happy!
+         3. friend is happy?
+         4. Is friend is happy?
+         5. I think friend is happy
+         6. Tell friend!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=positive
+         1. friend is angry
+         2. friend is angry!
+         3. friend is angry?
+         4. Is friend is angry?
+         5. I think friend is angry
+         6. Tell friend!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=positive
+         1. friend is sick
+         2. friend is sick!
+         3. friend is sick?
+         4. Is friend is sick?
+         5. I think friend is sick
+         6. Tell friend!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=positive
+         1. friend where?
+         2. friend where?!
+         3. friend where??
+         4. Is friend where??
+         5. I think friend where?
+         6. Tell friend!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=positive
+         1. friend call
+         2. friend call!
+         3. friend call?
+         4. Is friend call?
+         5. I think friend call
+         6. Tell friend!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. friend now!
+         2. friend now
+         3. not friend
+         4. friend please
+         5. but friend?
+         6. Yes, friend now!
+         7. friend now?
+         8. friend now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=positive
+         1. friend soon!
+         2. friend soon
+         3. not friend
+         4. friend please
+         5. friend soon?!
+         6. friend, thanks soon!
+         7. Yes, friend!
+         8. friend soon?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=positive
+         1. friend later!
+         2. friend later
+         3. not friend
+         4. friend please
+         5. friend later?!
+         6. friend, thanks later!
+         7. Yes, friend!
+         8. friend later?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=positive
+         1. friend today!
+         2. friend today
+         3. not friend
+         4. friend please
+         5. friend today?!
+         6. friend, thanks today!
+         7. Yes, friend!
+         8. friend today?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=positive
+         1. friend tomorrow!
+         2. friend tomorrow
+         3. not friend
+         4. friend please
+         5. friend tomorrow?!
+         6. friend, thanks tomorrow!
+         7. Yes, friend!
+         8. friend tomorrow?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=positive
+         1. friend yesterday!
+         2. friend yesterday
+         3. not friend
+         4. friend please
+         5. friend yesterday?!
+         6. friend, thanks yesterday!
+         7. Yes, friend!
+         8. friend yesterday?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=positive
+         1. friend in the morning!
+         2. friend in the morning
+         3. not friend
+         4. friend please
+         5. friend in the morning?!
+         6. friend, thanks in the morning!
+         7. Yes, friend!
+         8. friend in the morning?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=positive
+         1. friend in the afternoon!
+         2. friend in the afternoon
+         3. not friend
+         4. friend please
+         5. friend in the afternoon?!
+         6. friend, thanks in the afternoon!
+         7. Yes, friend!
+         8. friend in the afternoon?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=positive
+         1. friend at night!
+         2. friend at night
+         3. not friend
+         4. friend please
+         5. friend at night?!
+         6. friend, thanks at night!
+         7. Yes, friend!
+         8. friend at night?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=positive
+         1. friend always!
+         2. friend always
+         3. not friend
+         4. friend please
+         5. friend always?!
+         6. friend, thanks always!
+         7. Yes, friend!
+         8. friend always?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=positive
+         1. friend every day!
+         2. friend every day
+         3. not friend
+         4. friend please
+         5. friend every day?!
+         6. friend, thanks every day!
+         7. Yes, friend!
+         8. friend every day?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=positive
+         1. friend in a minute!
+         2. friend in a minute
+         3. not friend
+         4. friend please
+         5. friend in a minute?!
+         6. friend, thanks in a minute!
+         7. Yes, friend!
+         8. friend in a minute?
+
+  L2: 🧑‍🏫  teacher  (pe_teacher)
+      pos=phrase  intent=social  emotion=neutral
+       1. teacher
+       2. teacher!
+       3. not teacher
+       4. teacher please
+       5. teacher?
+       6. Yes, teacher
+       7. Not teacher
+       8. Maybe teacher
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher is here
+         2. teacher is here!
+         3. teacher is here?
+         4. Is teacher is here?
+         5. I think teacher is here
+         6. Tell teacher!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher is coming
+         2. teacher is coming!
+         3. teacher is coming?
+         4. Is teacher is coming?
+         5. I think teacher is coming
+         6. Tell teacher!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher is gone
+         2. teacher is gone!
+         3. teacher is gone?
+         4. Is teacher is gone?
+         5. I think teacher is gone
+         6. Tell teacher!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher wants
+         2. teacher wants!
+         3. teacher wants?
+         4. Is teacher wants?
+         5. I think teacher wants
+         6. Tell teacher!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher needs
+         2. teacher needs!
+         3. teacher needs?
+         4. Is teacher needs?
+         5. I think teacher needs
+         6. Tell teacher!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher said
+         2. teacher said!
+         3. teacher said?
+         4. Is teacher said?
+         5. I think teacher said
+         6. Tell teacher!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher helps
+         2. teacher helps!
+         3. teacher helps?
+         4. Is teacher helps?
+         5. I think teacher helps
+         6. Tell teacher!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher is happy
+         2. teacher is happy!
+         3. teacher is happy?
+         4. Is teacher is happy?
+         5. I think teacher is happy
+         6. Tell teacher!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher is angry
+         2. teacher is angry!
+         3. teacher is angry?
+         4. Is teacher is angry?
+         5. I think teacher is angry
+         6. Tell teacher!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher is sick
+         2. teacher is sick!
+         3. teacher is sick?
+         4. Is teacher is sick?
+         5. I think teacher is sick
+         6. Tell teacher!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher where?
+         2. teacher where?!
+         3. teacher where??
+         4. Is teacher where??
+         5. I think teacher where?
+         6. Tell teacher!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. teacher call
+         2. teacher call!
+         3. teacher call?
+         4. Is teacher call?
+         5. I think teacher call
+         6. Tell teacher!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. teacher now!
+         2. teacher now
+         3. not teacher
+         4. teacher please
+         5. but teacher?
+         6. Yes, teacher now!
+         7. teacher now?
+         8. teacher now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. teacher soon
+         2. teacher soon!
+         3. not teacher
+         4. teacher please
+         5. teacher soon?
+         6. teacher soon please
+         7. Yes, teacher soon
+         8. Not teacher soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. teacher later
+         2. teacher later!
+         3. not teacher
+         4. teacher please
+         5. teacher later?
+         6. teacher later please
+         7. Yes, teacher later
+         8. Not teacher later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. teacher today
+         2. teacher today!
+         3. not teacher
+         4. teacher please
+         5. teacher today?
+         6. teacher today please
+         7. Yes, teacher today
+         8. Not teacher today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. teacher tomorrow
+         2. teacher tomorrow!
+         3. not teacher
+         4. teacher please
+         5. teacher tomorrow?
+         6. teacher tomorrow please
+         7. Yes, teacher tomorrow
+         8. Not teacher tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. teacher yesterday
+         2. teacher yesterday!
+         3. not teacher
+         4. teacher please
+         5. teacher yesterday?
+         6. teacher yesterday please
+         7. Yes, teacher yesterday
+         8. Not teacher yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. teacher in the morning
+         2. teacher in the morning!
+         3. not teacher
+         4. teacher please
+         5. teacher in the morning?
+         6. teacher in the morning please
+         7. Yes, teacher in the morning
+         8. Not teacher in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. teacher in the afternoon
+         2. teacher in the afternoon!
+         3. not teacher
+         4. teacher please
+         5. teacher in the afternoon?
+         6. teacher in the afternoon please
+         7. Yes, teacher in the afternoon
+         8. Not teacher in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. teacher at night
+         2. teacher at night!
+         3. not teacher
+         4. teacher please
+         5. teacher at night?
+         6. teacher at night please
+         7. Yes, teacher at night
+         8. Not teacher at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. teacher always
+         2. teacher always!
+         3. not teacher
+         4. teacher please
+         5. teacher always?
+         6. teacher always please
+         7. Yes, teacher always
+         8. Not teacher always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. teacher every day
+         2. teacher every day!
+         3. not teacher
+         4. teacher please
+         5. teacher every day?
+         6. teacher every day please
+         7. Yes, teacher every day
+         8. Not teacher every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. teacher in a minute
+         2. teacher in a minute!
+         3. not teacher
+         4. teacher please
+         5. teacher in a minute?
+         6. teacher in a minute please
+         7. Yes, teacher in a minute
+         8. Not teacher in a minute
+
+  L2: 💉  nurse  (pe_nurse)
+      pos=phrase  intent=social  emotion=neutral
+       1. nurse
+       2. nurse!
+       3. not nurse
+       4. nurse please
+       5. nurse?
+       6. Yes, nurse
+       7. Not nurse
+       8. Maybe nurse
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse is here
+         2. nurse is here!
+         3. nurse is here?
+         4. Is nurse is here?
+         5. I think nurse is here
+         6. Tell nurse!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse is coming
+         2. nurse is coming!
+         3. nurse is coming?
+         4. Is nurse is coming?
+         5. I think nurse is coming
+         6. Tell nurse!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse is gone
+         2. nurse is gone!
+         3. nurse is gone?
+         4. Is nurse is gone?
+         5. I think nurse is gone
+         6. Tell nurse!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse wants
+         2. nurse wants!
+         3. nurse wants?
+         4. Is nurse wants?
+         5. I think nurse wants
+         6. Tell nurse!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse needs
+         2. nurse needs!
+         3. nurse needs?
+         4. Is nurse needs?
+         5. I think nurse needs
+         6. Tell nurse!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse said
+         2. nurse said!
+         3. nurse said?
+         4. Is nurse said?
+         5. I think nurse said
+         6. Tell nurse!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse helps
+         2. nurse helps!
+         3. nurse helps?
+         4. Is nurse helps?
+         5. I think nurse helps
+         6. Tell nurse!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse is happy
+         2. nurse is happy!
+         3. nurse is happy?
+         4. Is nurse is happy?
+         5. I think nurse is happy
+         6. Tell nurse!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse is angry
+         2. nurse is angry!
+         3. nurse is angry?
+         4. Is nurse is angry?
+         5. I think nurse is angry
+         6. Tell nurse!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse is sick
+         2. nurse is sick!
+         3. nurse is sick?
+         4. Is nurse is sick?
+         5. I think nurse is sick
+         6. Tell nurse!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse where?
+         2. nurse where?!
+         3. nurse where??
+         4. Is nurse where??
+         5. I think nurse where?
+         6. Tell nurse!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. nurse call
+         2. nurse call!
+         3. nurse call?
+         4. Is nurse call?
+         5. I think nurse call
+         6. Tell nurse!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. nurse now!
+         2. nurse now
+         3. not nurse
+         4. nurse please
+         5. but nurse?
+         6. Yes, nurse now!
+         7. nurse now?
+         8. nurse now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. nurse soon
+         2. nurse soon!
+         3. not nurse
+         4. nurse please
+         5. nurse soon?
+         6. nurse soon please
+         7. Yes, nurse soon
+         8. Not nurse soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. nurse later
+         2. nurse later!
+         3. not nurse
+         4. nurse please
+         5. nurse later?
+         6. nurse later please
+         7. Yes, nurse later
+         8. Not nurse later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. nurse today
+         2. nurse today!
+         3. not nurse
+         4. nurse please
+         5. nurse today?
+         6. nurse today please
+         7. Yes, nurse today
+         8. Not nurse today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. nurse tomorrow
+         2. nurse tomorrow!
+         3. not nurse
+         4. nurse please
+         5. nurse tomorrow?
+         6. nurse tomorrow please
+         7. Yes, nurse tomorrow
+         8. Not nurse tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. nurse yesterday
+         2. nurse yesterday!
+         3. not nurse
+         4. nurse please
+         5. nurse yesterday?
+         6. nurse yesterday please
+         7. Yes, nurse yesterday
+         8. Not nurse yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. nurse in the morning
+         2. nurse in the morning!
+         3. not nurse
+         4. nurse please
+         5. nurse in the morning?
+         6. nurse in the morning please
+         7. Yes, nurse in the morning
+         8. Not nurse in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. nurse in the afternoon
+         2. nurse in the afternoon!
+         3. not nurse
+         4. nurse please
+         5. nurse in the afternoon?
+         6. nurse in the afternoon please
+         7. Yes, nurse in the afternoon
+         8. Not nurse in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. nurse at night
+         2. nurse at night!
+         3. not nurse
+         4. nurse please
+         5. nurse at night?
+         6. nurse at night please
+         7. Yes, nurse at night
+         8. Not nurse at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. nurse always
+         2. nurse always!
+         3. not nurse
+         4. nurse please
+         5. nurse always?
+         6. nurse always please
+         7. Yes, nurse always
+         8. Not nurse always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. nurse every day
+         2. nurse every day!
+         3. not nurse
+         4. nurse please
+         5. nurse every day?
+         6. nurse every day please
+         7. Yes, nurse every day
+         8. Not nurse every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. nurse in a minute
+         2. nurse in a minute!
+         3. not nurse
+         4. nurse please
+         5. nurse in a minute?
+         6. nurse in a minute please
+         7. Yes, nurse in a minute
+         8. Not nurse in a minute
+
+  L2: 🩺  therapist  (pe_therapist)
+      pos=phrase  intent=social  emotion=neutral
+       1. therapist
+       2. therapist!
+       3. not therapist
+       4. therapist please
+       5. therapist?
+       6. Yes, therapist
+       7. Not therapist
+       8. Maybe therapist
+
+    L3: 📍  is here  (pr_here)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist is here
+         2. therapist is here!
+         3. therapist is here?
+         4. Is therapist is here?
+         5. I think therapist is here
+         6. Tell therapist!
+
+    L3: 🚶  is coming  (pr_coming)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist is coming
+         2. therapist is coming!
+         3. therapist is coming?
+         4. Is therapist is coming?
+         5. I think therapist is coming
+         6. Tell therapist!
+
+    L3: 👋  is gone  (pr_gone)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist is gone
+         2. therapist is gone!
+         3. therapist is gone?
+         4. Is therapist is gone?
+         5. I think therapist is gone
+         6. Tell therapist!
+
+    L3: 🙋  wants  (pr_wants)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist wants
+         2. therapist wants!
+         3. therapist wants?
+         4. Is therapist wants?
+         5. I think therapist wants
+         6. Tell therapist!
+
+    L3: 🆘  needs  (pr_needs)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist needs
+         2. therapist needs!
+         3. therapist needs?
+         4. Is therapist needs?
+         5. I think therapist needs
+         6. Tell therapist!
+
+    L3: 🗣️  said  (pr_said)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist said
+         2. therapist said!
+         3. therapist said?
+         4. Is therapist said?
+         5. I think therapist said
+         6. Tell therapist!
+
+    L3: 🤝  helps  (pr_helps)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist helps
+         2. therapist helps!
+         3. therapist helps?
+         4. Is therapist helps?
+         5. I think therapist helps
+         6. Tell therapist!
+
+    L3: 😊  is happy  (pr_happy)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist is happy
+         2. therapist is happy!
+         3. therapist is happy?
+         4. Is therapist is happy?
+         5. I think therapist is happy
+         6. Tell therapist!
+
+    L3: 😠  is angry  (pr_angry)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist is angry
+         2. therapist is angry!
+         3. therapist is angry?
+         4. Is therapist is angry?
+         5. I think therapist is angry
+         6. Tell therapist!
+
+    L3: 🤒  is sick  (pr_sick)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist is sick
+         2. therapist is sick!
+         3. therapist is sick?
+         4. Is therapist is sick?
+         5. I think therapist is sick
+         6. Tell therapist!
+
+    L3: ❓  where?  (pr_where)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist where?
+         2. therapist where?!
+         3. therapist where??
+         4. Is therapist where??
+         5. I think therapist where?
+         6. Tell therapist!
+
+    L3: 📞  call  (pr_call)  type=predicate
+        intent=social  emotion=neutral
+         1. therapist call
+         2. therapist call!
+         3. therapist call?
+         4. Is therapist call?
+         5. I think therapist call
+         6. Tell therapist!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. therapist now!
+         2. therapist now
+         3. not therapist
+         4. therapist please
+         5. but therapist?
+         6. Yes, therapist now!
+         7. therapist now?
+         8. therapist now please
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=neutral
+         1. therapist soon
+         2. therapist soon!
+         3. not therapist
+         4. therapist please
+         5. therapist soon?
+         6. therapist soon please
+         7. Yes, therapist soon
+         8. Not therapist soon
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=neutral
+         1. therapist later
+         2. therapist later!
+         3. not therapist
+         4. therapist please
+         5. therapist later?
+         6. therapist later please
+         7. Yes, therapist later
+         8. Not therapist later
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=neutral
+         1. therapist today
+         2. therapist today!
+         3. not therapist
+         4. therapist please
+         5. therapist today?
+         6. therapist today please
+         7. Yes, therapist today
+         8. Not therapist today
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=neutral
+         1. therapist tomorrow
+         2. therapist tomorrow!
+         3. not therapist
+         4. therapist please
+         5. therapist tomorrow?
+         6. therapist tomorrow please
+         7. Yes, therapist tomorrow
+         8. Not therapist tomorrow
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=neutral
+         1. therapist yesterday
+         2. therapist yesterday!
+         3. not therapist
+         4. therapist please
+         5. therapist yesterday?
+         6. therapist yesterday please
+         7. Yes, therapist yesterday
+         8. Not therapist yesterday
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=neutral
+         1. therapist in the morning
+         2. therapist in the morning!
+         3. not therapist
+         4. therapist please
+         5. therapist in the morning?
+         6. therapist in the morning please
+         7. Yes, therapist in the morning
+         8. Not therapist in the morning
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=neutral
+         1. therapist in the afternoon
+         2. therapist in the afternoon!
+         3. not therapist
+         4. therapist please
+         5. therapist in the afternoon?
+         6. therapist in the afternoon please
+         7. Yes, therapist in the afternoon
+         8. Not therapist in the afternoon
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=neutral
+         1. therapist at night
+         2. therapist at night!
+         3. not therapist
+         4. therapist please
+         5. therapist at night?
+         6. therapist at night please
+         7. Yes, therapist at night
+         8. Not therapist at night
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=neutral
+         1. therapist always
+         2. therapist always!
+         3. not therapist
+         4. therapist please
+         5. therapist always?
+         6. therapist always please
+         7. Yes, therapist always
+         8. Not therapist always
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=neutral
+         1. therapist every day
+         2. therapist every day!
+         3. not therapist
+         4. therapist please
+         5. therapist every day?
+         6. therapist every day please
+         7. Yes, therapist every day
+         8. Not therapist every day
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=neutral
+         1. therapist in a minute
+         2. therapist in a minute!
+         3. not therapist
+         4. therapist please
+         5. therapist in a minute?
+         6. therapist in a minute please
+         7. Yes, therapist in a minute
+         8. Not therapist in a minute
+
+────────────────────────────────────────────────────────────────────────
+  SUMMARY for PEOPLE
+────────────────────────────────────────────────────────────────────────
+  Items (L2):              14
+  Modifiers (L3):          288
+  Total cell combinations: 302
+  Total sentences:         2080
+  Avg sentences / cell:    6.9
+────────────────────────────────────────────────────────────────────────

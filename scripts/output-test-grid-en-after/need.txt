@@ -1,0 +1,4555 @@
+========================================================================
+  SpeakEasy — Grid Combination Report: 🍎  NEED
+========================================================================
+  Category : need  (mapTo=needs)
+  Language : en
+  Gender   : male
+  Top N    : 8 heuristic sentences per cell
+  Engine   : unavailable (heuristic only)
+  Generated: 2026-03-14T09:35:09.977Z
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  L1 CATEGORY: 🍎  NEED  (need)
+  14 items, color=#2F9E44
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  L2: 💧  water  (n_water)
+      pos=noun  intent=request  emotion=neutral
+       1. Please give me water
+       2. I'd love water!
+       3. Don't give me water
+       4. Give me water now!
+       5. Maybe some water
+       6. I want water
+       7. Do you have water?
+       8. Yes, water please
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me water now!
+         2. Please give me water
+         3. I'd love water!
+         4. Don't give me water
+         5. Maybe some water
+         6. I need water now!
+         7. Do you have water? Urgent!
+         8. Yes, water right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water soon
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water later
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water today
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water tomorrow
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water yesterday
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water in the morning
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water in the afternoon
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water at night
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water always
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water every day
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water in a minute
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me water
+         2. Please give me water
+         3. I'd love water!
+         4. Give me water now!
+         5. Maybe some water
+         6. I don't want water
+         7. Don't you have water?
+         8. No, not water
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love water!
+         2. Please give me water
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I really want water!
+         7. Can I have water?
+         8. Yes, I want water!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some water
+         2. Please give me water
+         3. I'd love water!
+         4. Don't give me water
+         5. Give me water now!
+         6. Maybe I want water
+         7. Do you maybe have water?
+         8. Maybe water
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me water now!
+         2. Please give me water
+         3. I'd love water!
+         4. Don't give me water
+         5. Maybe some water
+         6. I need water now!
+         7. Do you have water? Urgent!
+         8. Yes, water right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love water!
+         2. Please give me water
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I really want water!
+         7. Can I have water?
+         8. Yes, I want water!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me water
+         2. Please give me water
+         3. I'd love water!
+         4. Give me water now!
+         5. Maybe some water
+         6. I don't want water
+         7. Don't you have water?
+         8. No, not water
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some water
+         2. Please give me water
+         3. I'd love water!
+         4. Don't give me water
+         5. Give me water now!
+         6. Maybe I want water
+         7. Do you maybe have water?
+         8. Maybe water
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water
+         7. Do you have water?
+         8. Yes, water please
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me water
+         2. I'd love water!
+         3. Don't give me water
+         4. Give me water now!
+         5. Maybe some water
+         6. I want water
+         7. Do you have water?
+         8. Yes, water please
+
+  L2: 🍎  food  (n_food)
+      pos=noun  intent=request  emotion=neutral
+       1. Please give me food
+       2. I'd love food!
+       3. Don't give me food
+       4. Give me food now!
+       5. Maybe some food
+       6. I want food
+       7. Do you have food?
+       8. Yes, food please
+
+    L3: 🍎  apple  (n3_apple)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me an apple
+         2. I'd love an apple!
+         3. Don't give me an apple
+         4. Give me an apple now!
+         5. Maybe an apple
+         6. I want an apple
+         7. Do you have an apple?
+         8. Yes, an apple please
+
+    L3: 🍞  bread  (n3_bread)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me bread
+         2. I'd love bread!
+         3. Don't give me bread
+         4. Give me bread now!
+         5. Maybe some bread
+         6. I want bread
+         7. Do you have bread?
+         8. Yes, bread please
+
+    L3: 🍚  rice  (n3_rice)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me rice
+         2. I'd love rice!
+         3. Don't give me rice
+         4. Give me rice now!
+         5. Maybe some rice
+         6. I want rice
+         7. Do you have rice?
+         8. Yes, rice please
+
+    L3: 🍝  pasta  (n3_pasta)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me pasta
+         2. I'd love pasta!
+         3. Don't give me pasta
+         4. Give me pasta now!
+         5. Maybe some pasta
+         6. I want pasta
+         7. Do you have pasta?
+         8. Yes, pasta please
+
+    L3: 🥣  soup  (n3_soup)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me soup
+         2. I'd love soup!
+         3. Don't give me soup
+         4. Give me soup now!
+         5. Maybe some soup
+         6. I want soup
+         7. Do you have soup?
+         8. Yes, soup please
+
+    L3: 🍪  snack  (n3_snack)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me a snack
+         2. I'd love a snack!
+         3. Don't give me a snack
+         4. Give me a snack now!
+         5. Maybe a snack
+         6. I want a snack
+         7. Do you have a snack?
+         8. Yes, a snack please
+
+    L3: 🍇  fruit  (n3_fruit)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me fruit
+         2. I'd love fruit!
+         3. Don't give me fruit
+         4. Give me fruit now!
+         5. Maybe some fruit
+         6. I want fruit
+         7. Do you have fruit?
+         8. Yes, fruit please
+
+    L3: 🍗  meat  (n3_meat)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 1️⃣  1  (num_1)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 1
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 2️⃣  2  (num_2)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 2
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 3️⃣  3  (num_3)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 3
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 4️⃣  4  (num_4)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 4
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 5️⃣  5  (num_5)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 5
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 6️⃣  6  (num_6)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 6
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 7️⃣  7  (num_7)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 7
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 8️⃣  8  (num_8)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 8
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 9️⃣  9  (num_9)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 9
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 🔟  10  (num_10)  type=number
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food 10
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me food
+         2. Please give me food
+         3. I'd love food!
+         4. Give me food now!
+         5. Maybe some food
+         6. I don't want food
+         7. Don't you have food?
+         8. No, not food
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love food!
+         2. Please give me food
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I really want food!
+         7. Can I have food?
+         8. Yes, I want food!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some food
+         2. Please give me food
+         3. I'd love food!
+         4. Don't give me food
+         5. Give me food now!
+         6. Maybe I want food
+         7. Do you maybe have food?
+         8. Maybe food
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me food now!
+         2. Please give me food
+         3. I'd love food!
+         4. Don't give me food
+         5. Maybe some food
+         6. I need food now!
+         7. Do you have food? Urgent!
+         8. Yes, food right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love food!
+         2. Please give me food
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I really want food!
+         7. Can I have food?
+         8. Yes, I want food!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me food
+         2. Please give me food
+         3. I'd love food!
+         4. Give me food now!
+         5. Maybe some food
+         6. I don't want food
+         7. Don't you have food?
+         8. No, not food
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some food
+         2. Please give me food
+         3. I'd love food!
+         4. Don't give me food
+         5. Give me food now!
+         6. Maybe I want food
+         7. Do you maybe have food?
+         8. Maybe food
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food
+         7. Do you have food?
+         8. Yes, food please
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me food
+         2. I'd love food!
+         3. Don't give me food
+         4. Give me food now!
+         5. Maybe some food
+         6. I want food
+         7. Do you have food?
+         8. Yes, food please
+
+  L2: 🚻  toilet  (n_toilet)
+      pos=noun  intent=request  emotion=urgent
+       1. Give me the toilet now!
+       2. Please give me the toilet
+       3. I'd love the toilet!
+       4. Don't give me the toilet
+       5. Maybe the toilet
+       6. I need the toilet now!
+       7. Do you have the toilet? Urgent!
+       8. Yes, the toilet right now!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me the toilet
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Give me the toilet now!
+         5. Maybe the toilet
+         6. I don't want the toilet
+         7. Don't you have the toilet?
+         8. No, not the toilet
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love the toilet!
+         2. Please give me the toilet
+         3. Don't give me the toilet
+         4. Give me the toilet now!
+         5. Maybe the toilet
+         6. I really want the toilet!
+         7. Can I have the toilet?
+         8. Yes, I want the toilet!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe the toilet
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Give me the toilet now!
+         6. Maybe I want the toilet
+         7. Do you maybe have the toilet?
+         8. Some toilet
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love the toilet!
+         2. Please give me the toilet
+         3. Don't give me the toilet
+         4. Give me the toilet now!
+         5. Maybe the toilet
+         6. I really want the toilet!
+         7. Can I have the toilet?
+         8. Yes, I want the toilet!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me the toilet
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Give me the toilet now!
+         5. Maybe the toilet
+         6. I don't want the toilet
+         7. Don't you have the toilet?
+         8. No, not the toilet
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe the toilet
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Give me the toilet now!
+         6. Maybe I want the toilet
+         7. Do you maybe have the toilet?
+         8. Some toilet
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me the toilet now!
+         2. Please give me the toilet
+         3. I'd love the toilet!
+         4. Don't give me the toilet
+         5. Maybe the toilet
+         6. I need the toilet now!
+         7. Do you have the toilet? Urgent!
+         8. Yes, the toilet right now!
+
+  L2: 🆘  help  (n_help)
+      pos=noun  intent=request  emotion=urgent
+       1. Give me help now!
+       2. Please give me help
+       3. I'd love help!
+       4. Don't give me help
+       5. Maybe help
+       6. I need help now!
+       7. Do you have help? Urgent!
+       8. Yes, help right now!
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me help
+         2. Please give me help
+         3. I'd love help!
+         4. Give me help now!
+         5. Maybe help
+         6. I don't want help
+         7. Don't you have help?
+         8. No, not help
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love help!
+         2. Please give me help
+         3. Don't give me help
+         4. Give me help now!
+         5. Maybe help
+         6. I really want help!
+         7. Can I have help?
+         8. Yes, I want help!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Give me help now!
+         6. Maybe I want help
+         7. Do you maybe have help?
+         8. Some help
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love help!
+         2. Please give me help
+         3. Don't give me help
+         4. Give me help now!
+         5. Maybe help
+         6. I really want help!
+         7. Can I have help?
+         8. Yes, I want help!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me help
+         2. Please give me help
+         3. I'd love help!
+         4. Give me help now!
+         5. Maybe help
+         6. I don't want help
+         7. Don't you have help?
+         8. No, not help
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Give me help now!
+         6. Maybe I want help
+         7. Do you maybe have help?
+         8. Some help
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me help now!
+         2. Please give me help
+         3. I'd love help!
+         4. Don't give me help
+         5. Maybe help
+         6. I need help now!
+         7. Do you have help? Urgent!
+         8. Yes, help right now!
+
+  L2: 🥤  drink  (n_drink)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me drink
+       2. Let's drink!
+       3. Don't make me drink
+       4. Help me drink now!
+       5. Maybe help me drink
+       6. I want to drink
+       7. Can I drink?
+       8. Yes, let's drink
+
+    L3: 🧃  juice  (n3_juice)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me juice
+         2. I'd love juice!
+         3. Don't give me juice
+         4. Give me juice now!
+         5. Maybe some juice
+         6. I want juice
+         7. Do you have juice?
+         8. Yes, juice please
+
+    L3: 🥛  milk  (n3_milk)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me milk
+         2. I'd love milk!
+         3. Don't give me milk
+         4. Give me milk now!
+         5. Maybe some milk
+         6. I want milk
+         7. Do you have milk?
+         8. Yes, milk please
+
+    L3: 🍵  tea  (n3_tea)  type=specific-item
+        intent=request  emotion=neutral
+         1. Please give me tea
+         2. I'd love tea!
+         3. Don't give me tea
+         4. Give me tea now!
+         5. Maybe some tea
+         6. I want tea
+         7. Do you have tea?
+         8. Yes, tea please
+
+    L3: ☕  coffee  (n3_coffee)  type=specific-item
+        intent=request  emotion=neutral
+         1. Help me coffee
+         2. Let's coffee!
+         3. Don't make me coffee
+         4. Help me coffee now!
+         5. Maybe help me coffee
+         6. I want to coffee
+         7. Can I coffee?
+         8. Yes, let's coffee
+
+    L3: 1️⃣  1  (num_1)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 1
+         2. Let's drink 1!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 1
+         7. Can I drink 1?
+         8. Yes, let's drink
+
+    L3: 2️⃣  2  (num_2)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 2
+         2. Let's drink 2!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 2
+         7. Can I drink 2?
+         8. Yes, let's drink
+
+    L3: 3️⃣  3  (num_3)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 3
+         2. Let's drink 3!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 3
+         7. Can I drink 3?
+         8. Yes, let's drink
+
+    L3: 4️⃣  4  (num_4)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 4
+         2. Let's drink 4!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 4
+         7. Can I drink 4?
+         8. Yes, let's drink
+
+    L3: 5️⃣  5  (num_5)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 5
+         2. Let's drink 5!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 5
+         7. Can I drink 5?
+         8. Yes, let's drink
+
+    L3: 6️⃣  6  (num_6)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 6
+         2. Let's drink 6!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 6
+         7. Can I drink 6?
+         8. Yes, let's drink
+
+    L3: 7️⃣  7  (num_7)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 7
+         2. Let's drink 7!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 7
+         7. Can I drink 7?
+         8. Yes, let's drink
+
+    L3: 8️⃣  8  (num_8)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 8
+         2. Let's drink 8!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 8
+         7. Can I drink 8?
+         8. Yes, let's drink
+
+    L3: 9️⃣  9  (num_9)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 9
+         2. Let's drink 9!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 9
+         7. Can I drink 9?
+         8. Yes, let's drink
+
+    L3: 🔟  10  (num_10)  type=number
+        intent=request  emotion=neutral
+         1. Help me drink 10
+         2. Let's drink 10!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink 10
+         7. Can I drink 10?
+         8. Yes, let's drink
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me drink
+         2. Help me drink
+         3. Let's drink!
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I don't want to drink
+         7. Don't I need to drink?
+         8. No, I don't want to drink
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Let's drink!
+         2. Help me drink
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I love to drink!
+         7. Shall we drink?
+         8. Yes, I'd love to drink!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me drink
+         2. Help me drink
+         3. Let's drink!
+         4. Don't make me drink
+         5. Help me drink now!
+         6. Maybe I want to drink
+         7. Should I maybe drink?
+         8. Maybe I could drink
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me drink now!
+         2. Help me drink
+         3. Let's drink!
+         4. Don't make me drink
+         5. Maybe help me drink
+         6. I need to drink now!
+         7. Can I drink now?
+         8. Yes, drink now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Let's drink!
+         2. Help me drink
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I love to drink!
+         7. Shall we drink?
+         8. Yes, I'd love to drink!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me drink
+         2. Help me drink
+         3. Let's drink!
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I don't want to drink
+         7. Don't I need to drink?
+         8. No, I don't want to drink
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me drink
+         2. Let's drink!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink
+         7. Can I drink?
+         8. Yes, let's drink
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me drink
+         2. Help me drink
+         3. Let's drink!
+         4. Don't make me drink
+         5. Help me drink now!
+         6. Maybe I want to drink
+         7. Should I maybe drink?
+         8. Maybe I could drink
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me drink
+         2. Let's drink!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink
+         7. Can I drink?
+         8. Yes, let's drink
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me drink
+         2. Let's drink!
+         3. Don't make me drink
+         4. Help me drink now!
+         5. Maybe help me drink
+         6. I want to drink
+         7. Can I drink?
+         8. Yes, let's drink
+
+  L2: 💊  medicine  (n_medicine)
+      pos=noun  intent=request  emotion=urgent
+       1. Give me medicine now!
+       2. Please give me medicine
+       3. I'd love medicine!
+       4. Don't give me medicine
+       5. Maybe some medicine
+       6. I need medicine now!
+       7. Do you have medicine? Urgent!
+       8. Yes, medicine right now!
+
+    L3: 🤕  head  (b_head)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🤢  stomach  (b_stomach)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 😮‍💨  throat  (b_throat)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🫁  chest  (b_chest)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🔙  back  (b_back)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🦵  leg  (b_leg)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 💪  arm  (b_arm)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🦷  tooth  (b_tooth)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 👂  ear  (b_ear)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 👃  nose  (b_nose)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 👀  eyes  (b_eyes)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🩹  skin  (b_skin)  type=body
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me medicine
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Give me medicine now!
+         5. Maybe some medicine
+         6. I don't want medicine
+         7. Don't you have medicine?
+         8. No, not medicine
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love medicine!
+         2. Please give me medicine
+         3. Don't give me medicine
+         4. Give me medicine now!
+         5. Maybe some medicine
+         6. I really want medicine!
+         7. Can I have medicine?
+         8. Yes, I want medicine!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some medicine
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Give me medicine now!
+         6. Maybe I want medicine
+         7. Do you maybe have medicine?
+         8. Maybe medicine
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love medicine!
+         2. Please give me medicine
+         3. Don't give me medicine
+         4. Give me medicine now!
+         5. Maybe some medicine
+         6. I really want medicine!
+         7. Can I have medicine?
+         8. Yes, I want medicine!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me medicine
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Give me medicine now!
+         5. Maybe some medicine
+         6. I don't want medicine
+         7. Don't you have medicine?
+         8. No, not medicine
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some medicine
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Give me medicine now!
+         6. Maybe I want medicine
+         7. Do you maybe have medicine?
+         8. Maybe medicine
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me medicine now!
+         2. Please give me medicine
+         3. I'd love medicine!
+         4. Don't give me medicine
+         5. Maybe some medicine
+         6. I need medicine now!
+         7. Do you have medicine? Urgent!
+         8. Yes, medicine right now!
+
+  L2: 💤  sleep  (n_sleep)
+      pos=verb  intent=request  emotion=neutral
+       1. Help me sleep
+       2. Let's sleep!
+       3. Don't make me sleep
+       4. Help me sleep now!
+       5. Maybe help me sleep
+       6. I want to sleep
+       7. Can I sleep?
+       8. Yes, let's sleep
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me sleep now!
+         2. Help me sleep now
+         3. Let's sleep now!
+         4. Don't make me sleep
+         5. Maybe help me sleep
+         6. I need to sleep now!
+         7. Can I sleep now?
+         8. Yes, sleep now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep soon
+         2. Let's sleep soon!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep soon
+         7. Can I sleep soon?
+         8. Yes, let's sleep
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep later
+         2. Let's sleep later!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep later
+         7. Can I sleep later?
+         8. Yes, let's sleep
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep today
+         2. Let's sleep today!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep today
+         7. Can I sleep today?
+         8. Yes, let's sleep
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep tomorrow
+         2. Let's sleep tomorrow!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep tomorrow
+         7. Can I sleep tomorrow?
+         8. Yes, let's sleep
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep yesterday
+         2. Let's sleep yesterday!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep yesterday
+         7. Can I sleep yesterday?
+         8. Yes, let's sleep
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep in the morning
+         2. Let's sleep in the morning!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep in the morning
+         7. Can I sleep in the morning?
+         8. Yes, let's sleep
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep in the afternoon
+         2. Let's sleep in the afternoon!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep in the afternoon
+         7. Can I sleep in the afternoon?
+         8. Yes, let's sleep
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep at night
+         2. Let's sleep at night!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep at night
+         7. Can I sleep at night?
+         8. Yes, let's sleep
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep always
+         2. Let's sleep always!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep always
+         7. Can I sleep always?
+         8. Yes, let's sleep
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep every day
+         2. Let's sleep every day!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep every day
+         7. Can I sleep every day?
+         8. Yes, let's sleep
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Help me sleep in a minute
+         2. Let's sleep in a minute!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep in a minute
+         7. Can I sleep in a minute?
+         8. Yes, let's sleep
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me sleep
+         2. Help me sleep
+         3. Let's sleep!
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I don't want to sleep
+         7. Don't I need to sleep?
+         8. No, I don't want to sleep
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Let's sleep!
+         2. Help me sleep
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I love to sleep!
+         7. Shall we sleep?
+         8. Yes, I'd love to sleep!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me sleep
+         2. Help me sleep
+         3. Let's sleep!
+         4. Don't make me sleep
+         5. Help me sleep now!
+         6. Maybe I want to sleep
+         7. Should I maybe sleep?
+         8. Maybe I could sleep
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me sleep now!
+         2. Help me sleep
+         3. Let's sleep!
+         4. Don't make me sleep
+         5. Maybe help me sleep
+         6. I need to sleep now!
+         7. Can I sleep now?
+         8. Yes, sleep now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Let's sleep!
+         2. Help me sleep
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I love to sleep!
+         7. Shall we sleep?
+         8. Yes, I'd love to sleep!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't make me sleep
+         2. Help me sleep
+         3. Let's sleep!
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I don't want to sleep
+         7. Don't I need to sleep?
+         8. No, I don't want to sleep
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me sleep
+         2. Let's sleep!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep
+         7. Can I sleep?
+         8. Yes, let's sleep
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe help me sleep
+         2. Help me sleep
+         3. Let's sleep!
+         4. Don't make me sleep
+         5. Help me sleep now!
+         6. Maybe I want to sleep
+         7. Should I maybe sleep?
+         8. Maybe I could sleep
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me sleep
+         2. Let's sleep!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep
+         7. Can I sleep?
+         8. Yes, let's sleep
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Help me sleep
+         2. Let's sleep!
+         3. Don't make me sleep
+         4. Help me sleep now!
+         5. Maybe help me sleep
+         6. I want to sleep
+         7. Can I sleep?
+         8. Yes, let's sleep
+
+  L2: 🛋️  rest  (n_rest)
+      pos=noun  intent=request  emotion=neutral
+       1. Please give me rest
+       2. I'd love rest!
+       3. Don't give me rest
+       4. Give me rest now!
+       5. Maybe some rest
+       6. I want rest
+       7. Do you have rest?
+       8. Yes, rest please
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me rest now!
+         2. Please give me rest
+         3. I'd love rest!
+         4. Don't give me rest
+         5. Maybe some rest
+         6. I need rest now!
+         7. Do you have rest? Urgent!
+         8. Yes, rest right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest soon
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest later
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest today
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest tomorrow
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest yesterday
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest in the morning
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest in the afternoon
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest at night
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest always
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest every day
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest in a minute
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me rest
+         2. Please give me rest
+         3. I'd love rest!
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I don't want rest
+         7. Don't you have rest?
+         8. No, not rest
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love rest!
+         2. Please give me rest
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I really want rest!
+         7. Can I have rest?
+         8. Yes, I want rest!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some rest
+         2. Please give me rest
+         3. I'd love rest!
+         4. Don't give me rest
+         5. Give me rest now!
+         6. Maybe I want rest
+         7. Do you maybe have rest?
+         8. Maybe rest
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me rest now!
+         2. Please give me rest
+         3. I'd love rest!
+         4. Don't give me rest
+         5. Maybe some rest
+         6. I need rest now!
+         7. Do you have rest? Urgent!
+         8. Yes, rest right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love rest!
+         2. Please give me rest
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I really want rest!
+         7. Can I have rest?
+         8. Yes, I want rest!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me rest
+         2. Please give me rest
+         3. I'd love rest!
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I don't want rest
+         7. Don't you have rest?
+         8. No, not rest
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some rest
+         2. Please give me rest
+         3. I'd love rest!
+         4. Don't give me rest
+         5. Give me rest now!
+         6. Maybe I want rest
+         7. Do you maybe have rest?
+         8. Maybe rest
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest
+         7. Do you have rest?
+         8. Yes, rest please
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me rest
+         2. I'd love rest!
+         3. Don't give me rest
+         4. Give me rest now!
+         5. Maybe some rest
+         6. I want rest
+         7. Do you have rest?
+         8. Yes, rest please
+
+  L2: 🤗  hug  (n_hug)
+      pos=noun  intent=request  emotion=positive
+       1. I'd love a hug!
+       2. Please give me a hug
+       3. Don't give me a hug
+       4. Give me a hug now!
+       5. Maybe a hug
+       6. I really want a hug!
+       7. Can I have a hug?
+       8. Yes, I want a hug!
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Give me a hug now!
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Don't give me a hug
+         5. Maybe a hug
+         6. I need a hug now!
+         7. Do you have a hug? Urgent!
+         8. Yes, a hug right now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me a hug now!
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Don't give me a hug
+         5. Maybe a hug
+         6. I need a hug now!
+         7. Do you have a hug? Urgent!
+         8. Yes, a hug right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me a hug
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I don't want a hug
+         7. Don't you have a hug?
+         8. No, not a hug
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe a hug
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Don't give me a hug
+         5. Give me a hug now!
+         6. Maybe I want a hug
+         7. Do you maybe have a hug?
+         8. Some hug
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me a hug now!
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Don't give me a hug
+         5. Maybe a hug
+         6. I need a hug now!
+         7. Do you have a hug? Urgent!
+         8. Yes, a hug right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me a hug
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I don't want a hug
+         7. Don't you have a hug?
+         8. No, not a hug
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe a hug
+         2. Please give me a hug
+         3. I'd love a hug!
+         4. Don't give me a hug
+         5. Give me a hug now!
+         6. Maybe I want a hug
+         7. Do you maybe have a hug?
+         8. Some hug
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a hug!
+         2. Please give me a hug
+         3. Don't give me a hug
+         4. Give me a hug now!
+         5. Maybe a hug
+         6. I really want a hug!
+         7. Can I have a hug?
+         8. Yes, I want a hug!
+
+  L2: 🔄  change  (n_change)
+      pos=noun  intent=request  emotion=neutral
+       1. Please give me a change
+       2. I'd love a change!
+       3. Don't give me a change
+       4. Give me a change now!
+       5. Maybe a change
+       6. I want a change
+       7. Do you have a change?
+       8. Yes, a change please
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change food
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change water
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change book
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change phone
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change toy
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change TV
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change music
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change game
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change picture
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change homework
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change door
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change window
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change light
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change bag
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change clothes
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change blanket
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change ball
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Give me a change now!
+         2. Please give me a change
+         3. I'd love a change!
+         4. Don't give me a change
+         5. Maybe a change
+         6. I need a change now!
+         7. Do you have a change? Urgent!
+         8. Yes, a change right now!
+
+    L3: 🤕  head  (b_head)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change head
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🤢  stomach  (b_stomach)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change stomach
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 😮‍💨  throat  (b_throat)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change throat
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🫁  chest  (b_chest)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change chest
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🔙  back  (b_back)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change back
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🦵  leg  (b_leg)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change leg
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 💪  arm  (b_arm)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change arm
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🦷  tooth  (b_tooth)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change tooth
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 👂  ear  (b_ear)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change ear
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 👃  nose  (b_nose)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change nose
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 👀  eyes  (b_eyes)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change eyes
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🩹  skin  (b_skin)  type=body
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change skin
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me a change now!
+         2. Please give me a change
+         3. I'd love a change!
+         4. Don't give me a change
+         5. Maybe a change
+         6. I need a change now!
+         7. Do you have a change? Urgent!
+         8. Yes, a change right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change soon
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change later
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change today
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change tomorrow
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change yesterday
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change in the morning
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change in the afternoon
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change at night
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change always
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change every day
+         7. Do you have a change?
+         8. Yes, a change please
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a change
+         2. I'd love a change!
+         3. Don't give me a change
+         4. Give me a change now!
+         5. Maybe a change
+         6. I want a change in a minute
+         7. Do you have a change?
+         8. Yes, a change please
+
+  L2: 🤫  quiet  (n_quiet)
+      pos=adjective  intent=request  emotion=neutral
+       1. I want to feel quiet
+       2. I really want to feel quiet!
+       3. I don't want to feel quiet
+       4. Help me feel quiet!
+       5. Maybe I want to feel quiet
+       6. I am quiet
+       7. Are you quiet?
+       8. Yes, I am quiet
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me feel quiet!
+         2. I want to feel quiet now
+         3. I really want to feel quiet!
+         4. I don't want to feel quiet
+         5. Maybe I want to feel quiet
+         6. I am quiet right now!
+         7. Are you quiet right now?
+         8. Yes, I am quiet now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet soon
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet soon
+         7. Are you quiet soon?
+         8. Yes, I am quiet
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet later
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet later
+         7. Are you quiet later?
+         8. Yes, I am quiet
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet today
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet today
+         7. Are you quiet today?
+         8. Yes, I am quiet
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet tomorrow
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet tomorrow
+         7. Are you quiet tomorrow?
+         8. Yes, I am quiet
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet yesterday
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet yesterday
+         7. Are you quiet yesterday?
+         8. Yes, I am quiet
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet in the morning
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet in the morning
+         7. Are you quiet in the morning?
+         8. Yes, I am quiet
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet in the afternoon
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet in the afternoon
+         7. Are you quiet in the afternoon?
+         8. Yes, I am quiet
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet at night
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet at night
+         7. Are you quiet at night?
+         8. Yes, I am quiet
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet always
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet always
+         7. Are you quiet always?
+         8. Yes, I am quiet
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet every day
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet every day
+         7. Are you quiet every day?
+         8. Yes, I am quiet
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel quiet in a minute
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet in a minute
+         7. Are you quiet in a minute?
+         8. Yes, I am quiet
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. I don't want to feel quiet
+         2. I want to feel quiet
+         3. I really want to feel quiet!
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am not quiet
+         7. You are not quiet?
+         8. No, I am not quiet
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I really want to feel quiet!
+         2. I want to feel quiet
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am so quiet!
+         7. Are you quiet too?
+         8. Yes, I am very quiet!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe I want to feel quiet
+         2. I want to feel quiet
+         3. I really want to feel quiet!
+         4. I don't want to feel quiet
+         5. Help me feel quiet!
+         6. I think I am quiet
+         7. Are you maybe quiet?
+         8. Maybe a little quiet
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me feel quiet!
+         2. I want to feel quiet
+         3. I really want to feel quiet!
+         4. I don't want to feel quiet
+         5. Maybe I want to feel quiet
+         6. I am quiet right now!
+         7. Are you quiet right now?
+         8. Yes, I am quiet now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I really want to feel quiet!
+         2. I want to feel quiet
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am so quiet!
+         7. Are you quiet too?
+         8. Yes, I am very quiet!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. I don't want to feel quiet
+         2. I want to feel quiet
+         3. I really want to feel quiet!
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am not quiet
+         7. You are not quiet?
+         8. No, I am not quiet
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. I want to feel quiet
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet
+         7. Are you quiet?
+         8. Yes, I am quiet
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe I want to feel quiet
+         2. I want to feel quiet
+         3. I really want to feel quiet!
+         4. I don't want to feel quiet
+         5. Help me feel quiet!
+         6. I think I am quiet
+         7. Are you maybe quiet?
+         8. Maybe a little quiet
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. I want to feel quiet
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet
+         7. Are you quiet?
+         8. Yes, I am quiet
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. I want to feel quiet
+         2. I really want to feel quiet!
+         3. I don't want to feel quiet
+         4. Help me feel quiet!
+         5. Maybe I want to feel quiet
+         6. I am quiet
+         7. Are you quiet?
+         8. Yes, I am quiet
+
+  L2: 🫧  space  (n_space)
+      pos=noun  intent=request  emotion=neutral
+       1. Please give me space
+       2. I'd love space!
+       3. Don't give me space
+       4. Give me space now!
+       5. Maybe some space
+       6. I want space
+       7. Do you have space?
+       8. Yes, space please
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me space now!
+         2. Please give me space
+         3. I'd love space!
+         4. Don't give me space
+         5. Maybe some space
+         6. I need space now!
+         7. Do you have space? Urgent!
+         8. Yes, space right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space soon
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space later
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space today
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space tomorrow
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space yesterday
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space in the morning
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space in the afternoon
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space at night
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space always
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space every day
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space in a minute
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me space
+         2. Please give me space
+         3. I'd love space!
+         4. Give me space now!
+         5. Maybe some space
+         6. I don't want space
+         7. Don't you have space?
+         8. No, not space
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love space!
+         2. Please give me space
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I really want space!
+         7. Can I have space?
+         8. Yes, I want space!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some space
+         2. Please give me space
+         3. I'd love space!
+         4. Don't give me space
+         5. Give me space now!
+         6. Maybe I want space
+         7. Do you maybe have space?
+         8. Maybe space
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me space now!
+         2. Please give me space
+         3. I'd love space!
+         4. Don't give me space
+         5. Maybe some space
+         6. I need space now!
+         7. Do you have space? Urgent!
+         8. Yes, space right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love space!
+         2. Please give me space
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I really want space!
+         7. Can I have space?
+         8. Yes, I want space!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me space
+         2. Please give me space
+         3. I'd love space!
+         4. Give me space now!
+         5. Maybe some space
+         6. I don't want space
+         7. Don't you have space?
+         8. No, not space
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe some space
+         2. Please give me space
+         3. I'd love space!
+         4. Don't give me space
+         5. Give me space now!
+         6. Maybe I want space
+         7. Do you maybe have space?
+         8. Maybe space
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space mom
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space dad
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space friend
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space teacher
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Give me space now!
+         2. Please give me space
+         3. I'd love space!
+         4. Don't give me space
+         5. Maybe some space
+         6. I need space now!
+         7. Do you have space? Urgent!
+         8. Yes, space right now!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space nurse
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space therapist
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space caregiver
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space brother
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space sister
+         7. Do you have space?
+         8. Yes, space please
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Please give me space
+         2. I'd love space!
+         3. Don't give me space
+         4. Give me space now!
+         5. Maybe some space
+         6. I want space everyone
+         7. Do you have space?
+         8. Yes, space please
+
+  L2: 🧼  clean  (n_clean)
+      pos=adjective  intent=request  emotion=neutral
+       1. I want to feel clean
+       2. I really want to feel clean!
+       3. I don't want to feel clean
+       4. Help me feel clean!
+       5. Maybe I want to feel clean
+       6. I am clean
+       7. Are you clean?
+       8. Yes, I am clean
+
+    L3: 🤕  head  (b_head)  type=body
+        intent=request  emotion=neutral
+         1. My head is clean
+         2. My head hurts
+         3. I feel clean in my head
+         4. I have a clean head
+         5. Help, my head is clean
+         6. My head feels clean
+
+    L3: 🤢  stomach  (b_stomach)  type=body
+        intent=request  emotion=neutral
+         1. My stomach is clean
+         2. My stomach hurts
+         3. I feel clean in my stomach
+         4. I have a clean stomach
+         5. Help, my stomach is clean
+         6. My stomach feels clean
+
+    L3: 😮‍💨  throat  (b_throat)  type=body
+        intent=request  emotion=neutral
+         1. My throat is clean
+         2. My throat hurts
+         3. I feel clean in my throat
+         4. I have a clean throat
+         5. Help, my throat is clean
+         6. My throat feels clean
+
+    L3: 🫁  chest  (b_chest)  type=body
+        intent=request  emotion=neutral
+         1. My chest is clean
+         2. My chest hurts
+         3. I feel clean in my chest
+         4. I have a clean chest
+         5. Help, my chest is clean
+         6. My chest feels clean
+
+    L3: 🔙  back  (b_back)  type=body
+        intent=request  emotion=neutral
+         1. My back is clean
+         2. My back hurts
+         3. I feel clean in my back
+         4. I have a clean back
+         5. Help, my back is clean
+         6. My back feels clean
+
+    L3: 🦵  leg  (b_leg)  type=body
+        intent=request  emotion=neutral
+         1. My leg is clean
+         2. My leg hurts
+         3. I feel clean in my leg
+         4. I have a clean leg
+         5. Help, my leg is clean
+         6. My leg feels clean
+
+    L3: 💪  arm  (b_arm)  type=body
+        intent=request  emotion=neutral
+         1. My arm is clean
+         2. My arm hurts
+         3. I feel clean in my arm
+         4. I have a clean arm
+         5. Help, my arm is clean
+         6. My arm feels clean
+
+    L3: 🦷  tooth  (b_tooth)  type=body
+        intent=request  emotion=neutral
+         1. My tooth is clean
+         2. My tooth hurts
+         3. I feel clean in my tooth
+         4. I have a clean tooth
+         5. Help, my tooth is clean
+         6. My tooth feels clean
+
+    L3: 👂  ear  (b_ear)  type=body
+        intent=request  emotion=neutral
+         1. My ear is clean
+         2. My ear hurts
+         3. I feel clean in my ear
+         4. I have a clean ear
+         5. Help, my ear is clean
+         6. My ear feels clean
+
+    L3: 👃  nose  (b_nose)  type=body
+        intent=request  emotion=neutral
+         1. My nose is clean
+         2. My nose hurts
+         3. I feel clean in my nose
+         4. I have a clean nose
+         5. Help, my nose is clean
+         6. My nose feels clean
+
+    L3: 👀  eyes  (b_eyes)  type=body
+        intent=request  emotion=neutral
+         1. My eyes are clean
+         2. My eyes hurt
+         3. I feel clean in my eyes
+         4. I have clean eyes
+         5. Help, my eyes are clean
+         6. My eyes feel clean
+
+    L3: 🩹  skin  (b_skin)  type=body
+        intent=request  emotion=neutral
+         1. My skin is clean
+         2. My skin hurts
+         3. I feel clean in my skin
+         4. I have a clean skin
+         5. Help, my skin is clean
+         6. My skin feels clean
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Help me feel clean!
+         2. I want to feel clean now
+         3. I really want to feel clean!
+         4. I don't want to feel clean
+         5. Maybe I want to feel clean
+         6. I am clean right now!
+         7. Are you clean right now?
+         8. Yes, I am clean now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean soon
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean soon
+         7. Are you clean soon?
+         8. Yes, I am clean
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean later
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean later
+         7. Are you clean later?
+         8. Yes, I am clean
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean today
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean today
+         7. Are you clean today?
+         8. Yes, I am clean
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean tomorrow
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean tomorrow
+         7. Are you clean tomorrow?
+         8. Yes, I am clean
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean yesterday
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean yesterday
+         7. Are you clean yesterday?
+         8. Yes, I am clean
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean in the morning
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean in the morning
+         7. Are you clean in the morning?
+         8. Yes, I am clean
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean in the afternoon
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean in the afternoon
+         7. Are you clean in the afternoon?
+         8. Yes, I am clean
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean at night
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean at night
+         7. Are you clean at night?
+         8. Yes, I am clean
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean always
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean always
+         7. Are you clean always?
+         8. Yes, I am clean
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean every day
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean every day
+         7. Are you clean every day?
+         8. Yes, I am clean
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. I want to feel clean in a minute
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean in a minute
+         7. Are you clean in a minute?
+         8. Yes, I am clean
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. I don't want to feel clean
+         2. I want to feel clean
+         3. I really want to feel clean!
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am not clean
+         7. You are not clean?
+         8. No, I am not clean
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I really want to feel clean!
+         2. I want to feel clean
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am so clean!
+         7. Are you clean too?
+         8. Yes, I am very clean!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe I want to feel clean
+         2. I want to feel clean
+         3. I really want to feel clean!
+         4. I don't want to feel clean
+         5. Help me feel clean!
+         6. I think I am clean
+         7. Are you maybe clean?
+         8. Maybe a little clean
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Help me feel clean!
+         2. I want to feel clean
+         3. I really want to feel clean!
+         4. I don't want to feel clean
+         5. Maybe I want to feel clean
+         6. I am clean right now!
+         7. Are you clean right now?
+         8. Yes, I am clean now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I really want to feel clean!
+         2. I want to feel clean
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am so clean!
+         7. Are you clean too?
+         8. Yes, I am very clean!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. I don't want to feel clean
+         2. I want to feel clean
+         3. I really want to feel clean!
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am not clean
+         7. You are not clean?
+         8. No, I am not clean
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. I want to feel clean
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean
+         7. Are you clean?
+         8. Yes, I am clean
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe I want to feel clean
+         2. I want to feel clean
+         3. I really want to feel clean!
+         4. I don't want to feel clean
+         5. Help me feel clean!
+         6. I think I am clean
+         7. Are you maybe clean?
+         8. Maybe a little clean
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. I want to feel clean
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean
+         7. Are you clean?
+         8. Yes, I am clean
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. I want to feel clean
+         2. I really want to feel clean!
+         3. I don't want to feel clean
+         4. Help me feel clean!
+         5. Maybe I want to feel clean
+         6. I am clean
+         7. Are you clean?
+         8. Yes, I am clean
+
+  L2: ⏸️  break  (n_break)
+      pos=noun  intent=request  emotion=neutral
+       1. Please give me a break
+       2. I'd love a break!
+       3. Don't give me a break
+       4. Give me a break now!
+       5. Maybe a break
+       6. I want a break
+       7. Do you have a break?
+       8. Yes, a break please
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Give me a break now!
+         2. Please give me a break
+         3. I'd love a break!
+         4. Don't give me a break
+         5. Maybe a break
+         6. I need a break now!
+         7. Do you have a break? Urgent!
+         8. Yes, a break right now!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break soon
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break later
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break today
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break tomorrow
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break yesterday
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break in the morning
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break in the afternoon
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break at night
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break always
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break every day
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break in a minute
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me a break
+         2. Please give me a break
+         3. I'd love a break!
+         4. Give me a break now!
+         5. Maybe a break
+         6. I don't want a break
+         7. Don't you have a break?
+         8. No, not a break
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a break!
+         2. Please give me a break
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I really want a break!
+         7. Can I have a break?
+         8. Yes, I want a break!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe a break
+         2. Please give me a break
+         3. I'd love a break!
+         4. Don't give me a break
+         5. Give me a break now!
+         6. Maybe I want a break
+         7. Do you maybe have a break?
+         8. Some break
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Give me a break now!
+         2. Please give me a break
+         3. I'd love a break!
+         4. Don't give me a break
+         5. Maybe a break
+         6. I need a break now!
+         7. Do you have a break? Urgent!
+         8. Yes, a break right now!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. I'd love a break!
+         2. Please give me a break
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I really want a break!
+         7. Can I have a break?
+         8. Yes, I want a break!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Don't give me a break
+         2. Please give me a break
+         3. I'd love a break!
+         4. Give me a break now!
+         5. Maybe a break
+         6. I don't want a break
+         7. Don't you have a break?
+         8. No, not a break
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Maybe a break
+         2. Please give me a break
+         3. I'd love a break!
+         4. Don't give me a break
+         5. Give me a break now!
+         6. Maybe I want a break
+         7. Do you maybe have a break?
+         8. Some break
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🏠  home  (pl_home)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break at home
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🏫  school  (pl_school)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break at school
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🌳  outside  (pl_outside)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break outside
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🏥  hospital  (pl_hospital)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break at the hospital
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 🏞️  park  (pl_park)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break at the park
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 📍  here  (pl_here)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break here
+         7. Do you have a break?
+         8. Yes, a break please
+
+    L3: 👉  there  (pl_there)  type=place
+        intent=request  emotion=neutral
+         1. Please give me a break
+         2. I'd love a break!
+         3. Don't give me a break
+         4. Give me a break now!
+         5. Maybe a break
+         6. I want a break there
+         7. Do you have a break?
+         8. Yes, a break please
+
+────────────────────────────────────────────────────────────────────────
+  SUMMARY for NEED
+────────────────────────────────────────────────────────────────────────
+  Items (L2):              14
+  Modifiers (L3):          400
+  Total cell combinations: 414
+  Total sentences:         3288
+  Avg sentences / cell:    7.9
+────────────────────────────────────────────────────────────────────────

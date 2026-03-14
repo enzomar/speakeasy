@@ -1,0 +1,4338 @@
+========================================================================
+  SpeakEasy — Grid Combination Report: 💬  TALK
+========================================================================
+  Category : talk  (mapTo=social)
+  Language : fr
+  Gender   : male
+  Top N    : 8 heuristic sentences per cell
+  Engine   : unavailable (heuristic only)
+  Generated: 2026-03-14T09:33:05.246Z
+========================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  L1 CATEGORY: 💬  TALK  (talk)
+  14 items, color=#0C8599
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  L2: 👋  hello  (s_hello)
+      pos=phrase  intent=social  emotion=neutral
+       1. bonjour
+       2. bonjour!
+       3. pas bonjour
+       4. bonjour s'il te plaît
+       5. bonjour?
+       6. Oui, bonjour
+       7. Pas bonjour
+       8. Peut-être bonjour
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=neutral
+         1. bonjour maman
+         2. bonjour maman!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour maman?
+         6. bonjour maman s'il te plaît
+         7. Oui, bonjour maman
+         8. Pas bonjour maman
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=neutral
+         1. bonjour papa
+         2. bonjour papa!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour papa?
+         6. bonjour papa s'il te plaît
+         7. Oui, bonjour papa
+         8. Pas bonjour papa
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=neutral
+         1. bonjour ami
+         2. bonjour ami!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour ami?
+         6. bonjour ami s'il te plaît
+         7. Oui, bonjour ami
+         8. Pas bonjour ami
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=neutral
+         1. bonjour professeur
+         2. bonjour professeur!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour professeur?
+         6. bonjour professeur s'il te plaît
+         7. Oui, bonjour professeur
+         8. Pas bonjour professeur
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. bonjour docteur!
+         2. bonjour docteur
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. mais bonjour?
+         6. bonjour vite!
+         7. Oui, bonjour maintenant!
+         8. bonjour docteur?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=neutral
+         1. bonjour infirmier
+         2. bonjour infirmier!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour infirmier?
+         6. bonjour infirmier s'il te plaît
+         7. Oui, bonjour infirmier
+         8. Pas bonjour infirmier
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=neutral
+         1. bonjour thérapeute
+         2. bonjour thérapeute!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour thérapeute?
+         6. bonjour thérapeute s'il te plaît
+         7. Oui, bonjour thérapeute
+         8. Pas bonjour thérapeute
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=neutral
+         1. bonjour aidant
+         2. bonjour aidant!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour aidant?
+         6. bonjour aidant s'il te plaît
+         7. Oui, bonjour aidant
+         8. Pas bonjour aidant
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=neutral
+         1. bonjour frère
+         2. bonjour frère!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour frère?
+         6. bonjour frère s'il te plaît
+         7. Oui, bonjour frère
+         8. Pas bonjour frère
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=neutral
+         1. bonjour sœur
+         2. bonjour sœur!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour sœur?
+         6. bonjour sœur s'il te plaît
+         7. Oui, bonjour sœur
+         8. Pas bonjour sœur
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=neutral
+         1. bonjour tout le monde
+         2. bonjour tout le monde!
+         3. pas bonjour
+         4. bonjour s'il te plaît
+         5. bonjour tout le monde?
+         6. bonjour tout le monde s'il te plaît
+         7. Oui, bonjour tout le monde
+         8. Pas bonjour tout le monde
+
+  L2: 🫡  goodbye  (s_bye)
+      pos=phrase  intent=social  emotion=neutral
+       1. au revoir
+       2. au revoir!
+       3. pas au revoir
+       4. au revoir s'il te plaît
+       5. au revoir?
+       6. Oui, au revoir
+       7. Pas au revoir
+       8. Peut-être au revoir
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=neutral
+         1. au revoir maman
+         2. au revoir maman!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir maman?
+         6. au revoir maman s'il te plaît
+         7. Oui, au revoir maman
+         8. Pas au revoir maman
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=neutral
+         1. au revoir papa
+         2. au revoir papa!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir papa?
+         6. au revoir papa s'il te plaît
+         7. Oui, au revoir papa
+         8. Pas au revoir papa
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=neutral
+         1. au revoir ami
+         2. au revoir ami!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir ami?
+         6. au revoir ami s'il te plaît
+         7. Oui, au revoir ami
+         8. Pas au revoir ami
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=neutral
+         1. au revoir professeur
+         2. au revoir professeur!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir professeur?
+         6. au revoir professeur s'il te plaît
+         7. Oui, au revoir professeur
+         8. Pas au revoir professeur
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. au revoir docteur!
+         2. au revoir docteur
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. mais au revoir?
+         6. au revoir vite!
+         7. Oui, au revoir maintenant!
+         8. au revoir docteur?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=neutral
+         1. au revoir infirmier
+         2. au revoir infirmier!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir infirmier?
+         6. au revoir infirmier s'il te plaît
+         7. Oui, au revoir infirmier
+         8. Pas au revoir infirmier
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=neutral
+         1. au revoir thérapeute
+         2. au revoir thérapeute!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir thérapeute?
+         6. au revoir thérapeute s'il te plaît
+         7. Oui, au revoir thérapeute
+         8. Pas au revoir thérapeute
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=neutral
+         1. au revoir aidant
+         2. au revoir aidant!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir aidant?
+         6. au revoir aidant s'il te plaît
+         7. Oui, au revoir aidant
+         8. Pas au revoir aidant
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=neutral
+         1. au revoir frère
+         2. au revoir frère!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir frère?
+         6. au revoir frère s'il te plaît
+         7. Oui, au revoir frère
+         8. Pas au revoir frère
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=neutral
+         1. au revoir sœur
+         2. au revoir sœur!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir sœur?
+         6. au revoir sœur s'il te plaît
+         7. Oui, au revoir sœur
+         8. Pas au revoir sœur
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=neutral
+         1. au revoir tout le monde
+         2. au revoir tout le monde!
+         3. pas au revoir
+         4. au revoir s'il te plaît
+         5. au revoir tout le monde?
+         6. au revoir tout le monde s'il te plaît
+         7. Oui, au revoir tout le monde
+         8. Pas au revoir tout le monde
+
+  L2: ✅  yes  (s_yes)
+      pos=phrase  intent=social  emotion=positive
+       1. oui!
+       2. oui
+       3. pas oui
+       4. oui s'il te plaît
+       5. oui ?!
+       6. oui, merci!
+       7. Oui, oui!
+       8. oui?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. pas oui
+         2. oui
+         3. oui!
+         4. oui s'il te plaît
+         5. Pas oui
+         6. oui?
+         7. Pas oui s'il te plaît
+         8. Non, pas oui
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. oui!
+         2. oui
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui ?!
+         6. oui, merci!
+         7. Oui, oui!
+         8. oui?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. oui s'il te plaît
+         2. oui
+         3. oui!
+         4. pas oui
+         5. Peut-être oui
+         6. Peut-être oui?
+         7. Si possible, oui
+         8. Peut-être, oui
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. oui!
+         2. oui
+         3. pas oui
+         4. oui s'il te plaît
+         5. mais oui?
+         6. oui vite!
+         7. Oui, oui maintenant!
+         8. oui?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. oui!
+         2. oui
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui ?!
+         6. oui, merci!
+         7. Oui, oui!
+         8. oui?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. pas oui
+         2. oui
+         3. oui!
+         4. oui s'il te plaît
+         5. Pas oui
+         6. oui?
+         7. Pas oui s'il te plaît
+         8. Non, pas oui
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=positive
+         1. oui!
+         2. oui
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui ?!
+         6. oui, merci!
+         7. Oui, oui!
+         8. oui?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. oui s'il te plaît
+         2. oui
+         3. oui!
+         4. pas oui
+         5. Peut-être oui
+         6. Peut-être oui?
+         7. Si possible, oui
+         8. Peut-être, oui
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=positive
+         1. oui!
+         2. oui
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui ?!
+         6. oui, merci!
+         7. Oui, oui!
+         8. oui?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=positive
+         1. oui!
+         2. oui
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui ?!
+         6. oui, merci!
+         7. Oui, oui!
+         8. oui?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. oui maintenant!
+         2. oui maintenant
+         3. pas oui
+         4. oui s'il te plaît
+         5. mais oui?
+         6. oui vite!
+         7. Oui, oui maintenant!
+         8. oui maintenant?
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=positive
+         1. oui bientôt!
+         2. oui bientôt
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui bientôt ?!
+         6. oui, merci bientôt!
+         7. Oui, oui!
+         8. oui bientôt?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=positive
+         1. oui plus tard!
+         2. oui plus tard
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui plus tard ?!
+         6. oui, merci plus tard!
+         7. Oui, oui!
+         8. oui plus tard?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=positive
+         1. oui aujourd'hui!
+         2. oui aujourd'hui
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui aujourd'hui ?!
+         6. oui, merci aujourd'hui!
+         7. Oui, oui!
+         8. oui aujourd'hui?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=positive
+         1. oui demain!
+         2. oui demain
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui demain ?!
+         6. oui, merci demain!
+         7. Oui, oui!
+         8. oui demain?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=positive
+         1. oui hier!
+         2. oui hier
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui hier ?!
+         6. oui, merci hier!
+         7. Oui, oui!
+         8. oui hier?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=positive
+         1. oui le matin!
+         2. oui le matin
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui le matin ?!
+         6. oui, merci le matin!
+         7. Oui, oui!
+         8. oui le matin?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=positive
+         1. oui l'après-midi!
+         2. oui l'après-midi
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui l'après-midi ?!
+         6. oui, merci l'après-midi!
+         7. Oui, oui!
+         8. oui l'après-midi?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=positive
+         1. oui la nuit!
+         2. oui la nuit
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui la nuit ?!
+         6. oui, merci la nuit!
+         7. Oui, oui!
+         8. oui la nuit?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=positive
+         1. oui toujours!
+         2. oui toujours
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui toujours ?!
+         6. oui, merci toujours!
+         7. Oui, oui!
+         8. oui toujours?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=positive
+         1. oui tous les jours!
+         2. oui tous les jours
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui tous les jours ?!
+         6. oui, merci tous les jours!
+         7. Oui, oui!
+         8. oui tous les jours?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=positive
+         1. oui dans une minute!
+         2. oui dans une minute
+         3. pas oui
+         4. oui s'il te plaît
+         5. oui dans une minute ?!
+         6. oui, merci dans une minute!
+         7. Oui, oui!
+         8. oui dans une minute?
+
+  L2: ❌  no  (s_no)
+      pos=phrase  intent=social  emotion=negative
+       1. non
+       2. non!
+       3. non s'il te plaît
+       4. non?
+       5. Oui, non
+       6. Peut-être non
+       7. non ?!
+       8. mais non?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. non
+         2. non!
+         3. non s'il te plaît
+         4. non?
+         5. Oui, non
+         6. Peut-être non
+         7. non ?!
+         8. mais non?
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. non!
+         2. non
+         3. pas non
+         4. non s'il te plaît
+         5. non ?!
+         6. non, merci!
+         7. Oui, non!
+         8. non?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. non s'il te plaît
+         2. non
+         3. non!
+         4. pas non
+         5. Peut-être non
+         6. Peut-être non?
+         7. Si possible, non
+         8. Peut-être, non
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. non!
+         2. non
+         3. pas non
+         4. non s'il te plaît
+         5. mais non?
+         6. non vite!
+         7. Oui, non maintenant!
+         8. non?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. non!
+         2. non
+         3. pas non
+         4. non s'il te plaît
+         5. non ?!
+         6. non, merci!
+         7. Oui, non!
+         8. non?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. non
+         2. non!
+         3. non s'il te plaît
+         4. non?
+         5. Oui, non
+         6. Peut-être non
+         7. non ?!
+         8. mais non?
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=negative
+         1. non
+         2. non!
+         3. non s'il te plaît
+         4. non?
+         5. Oui, non
+         6. Peut-être non
+         7. non ?!
+         8. mais non?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. non s'il te plaît
+         2. non
+         3. non!
+         4. pas non
+         5. Peut-être non
+         6. Peut-être non?
+         7. Si possible, non
+         8. Peut-être, non
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=negative
+         1. non
+         2. non!
+         3. non s'il te plaît
+         4. non?
+         5. Oui, non
+         6. Peut-être non
+         7. non ?!
+         8. mais non?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=negative
+         1. non
+         2. non!
+         3. non s'il te plaît
+         4. non?
+         5. Oui, non
+         6. Peut-être non
+         7. non ?!
+         8. mais non?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. non maintenant!
+         2. non maintenant
+         3. pas non
+         4. non s'il te plaît
+         5. mais non?
+         6. non vite!
+         7. Oui, non maintenant!
+         8. non maintenant?
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=negative
+         1. non bientôt
+         2. non bientôt!
+         3. non s'il te plaît
+         4. non bientôt?
+         5. non bientôt s'il te plaît
+         6. Oui, non bientôt
+         7. Peut-être non
+         8. non bientôt ?!
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=negative
+         1. non plus tard
+         2. non plus tard!
+         3. non s'il te plaît
+         4. non plus tard?
+         5. non plus tard s'il te plaît
+         6. Oui, non plus tard
+         7. Peut-être non
+         8. non plus tard ?!
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=negative
+         1. non aujourd'hui
+         2. non aujourd'hui!
+         3. non s'il te plaît
+         4. non aujourd'hui?
+         5. non aujourd'hui s'il te plaît
+         6. Oui, non aujourd'hui
+         7. Peut-être non
+         8. non aujourd'hui ?!
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=negative
+         1. non demain
+         2. non demain!
+         3. non s'il te plaît
+         4. non demain?
+         5. non demain s'il te plaît
+         6. Oui, non demain
+         7. Peut-être non
+         8. non demain ?!
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=negative
+         1. non hier
+         2. non hier!
+         3. non s'il te plaît
+         4. non hier?
+         5. non hier s'il te plaît
+         6. Oui, non hier
+         7. Peut-être non
+         8. non hier ?!
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=negative
+         1. non le matin
+         2. non le matin!
+         3. non s'il te plaît
+         4. non le matin?
+         5. non le matin s'il te plaît
+         6. Oui, non le matin
+         7. Peut-être non
+         8. non le matin ?!
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=negative
+         1. non l'après-midi
+         2. non l'après-midi!
+         3. non s'il te plaît
+         4. non l'après-midi?
+         5. non l'après-midi s'il te plaît
+         6. Oui, non l'après-midi
+         7. Peut-être non
+         8. non l'après-midi ?!
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=negative
+         1. non la nuit
+         2. non la nuit!
+         3. non s'il te plaît
+         4. non la nuit?
+         5. non la nuit s'il te plaît
+         6. Oui, non la nuit
+         7. Peut-être non
+         8. non la nuit ?!
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=negative
+         1. non toujours
+         2. non toujours!
+         3. non s'il te plaît
+         4. non toujours?
+         5. non toujours s'il te plaît
+         6. Oui, non toujours
+         7. Peut-être non
+         8. non toujours ?!
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=negative
+         1. non tous les jours
+         2. non tous les jours!
+         3. non s'il te plaît
+         4. non tous les jours?
+         5. non tous les jours s'il te plaît
+         6. Oui, non tous les jours
+         7. Peut-être non
+         8. non tous les jours ?!
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=negative
+         1. non dans une minute
+         2. non dans une minute!
+         3. non s'il te plaît
+         4. non dans une minute?
+         5. non dans une minute s'il te plaît
+         6. Oui, non dans une minute
+         7. Peut-être non
+         8. non dans une minute ?!
+
+  L2: 🙏  please  (s_please)
+      pos=phrase  intent=social  emotion=urgent
+       1. s'il te plaît!
+       2. s'il te plaît
+       3. pas s'il te plaît
+       4. s'il te plaît s'il te plaît
+       5. mais s'il te plaît?
+       6. s'il te plaît vite!
+       7. Oui, s'il te plaît maintenant!
+       8. s'il te plaît?
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=social  emotion=urgent
+         1. nourriture s'il vous plaît
+         2. nourriture s'il vous plaît !
+         3. Pas de nourriture
+         4. nourriture tout de suite !
+         5. Peut-être nourriture
+
+    L3: 💧  water  (o_water)  type=object
+        intent=social  emotion=urgent
+         1. eau s'il vous plaît
+         2. eau s'il vous plaît !
+         3. Pas de eau
+         4. eau tout de suite !
+         5. Peut-être eau
+
+    L3: 📖  book  (o_book)  type=object
+        intent=social  emotion=urgent
+         1. livre s'il vous plaît
+         2. livre s'il vous plaît !
+         3. Pas de livre
+         4. livre tout de suite !
+         5. Peut-être livre
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=social  emotion=urgent
+         1. téléphone s'il vous plaît
+         2. téléphone s'il vous plaît !
+         3. Pas de téléphone
+         4. téléphone tout de suite !
+         5. Peut-être téléphone
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=social  emotion=urgent
+         1. jouet s'il vous plaît
+         2. jouet s'il vous plaît !
+         3. Pas de jouet
+         4. jouet tout de suite !
+         5. Peut-être jouet
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=social  emotion=urgent
+         1. télé s'il vous plaît
+         2. télé s'il vous plaît !
+         3. Pas de télé
+         4. télé tout de suite !
+         5. Peut-être télé
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=social  emotion=urgent
+         1. musique s'il vous plaît
+         2. musique s'il vous plaît !
+         3. Pas de musique
+         4. musique tout de suite !
+         5. Peut-être musique
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=social  emotion=urgent
+         1. jeu s'il vous plaît
+         2. jeu s'il vous plaît !
+         3. Pas de jeu
+         4. jeu tout de suite !
+         5. Peut-être jeu
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=social  emotion=urgent
+         1. image s'il vous plaît
+         2. image s'il vous plaît !
+         3. Pas de image
+         4. image tout de suite !
+         5. Peut-être image
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=social  emotion=urgent
+         1. devoirs s'il vous plaît
+         2. devoirs s'il vous plaît !
+         3. Pas de devoirs
+         4. devoirs tout de suite !
+         5. Peut-être devoirs
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=social  emotion=urgent
+         1. porte s'il vous plaît
+         2. porte s'il vous plaît !
+         3. Pas de porte
+         4. porte tout de suite !
+         5. Peut-être porte
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=social  emotion=urgent
+         1. fenêtre s'il vous plaît
+         2. fenêtre s'il vous plaît !
+         3. Pas de fenêtre
+         4. fenêtre tout de suite !
+         5. Peut-être fenêtre
+
+    L3: 💡  light  (o_light)  type=object
+        intent=social  emotion=urgent
+         1. lumière s'il vous plaît
+         2. lumière s'il vous plaît !
+         3. Pas de lumière
+         4. lumière tout de suite !
+         5. Peut-être lumière
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=social  emotion=urgent
+         1. sac s'il vous plaît
+         2. sac s'il vous plaît !
+         3. Pas de sac
+         4. sac tout de suite !
+         5. Peut-être sac
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=social  emotion=urgent
+         1. vêtements s'il vous plaît
+         2. vêtements s'il vous plaît !
+         3. Pas de vêtements
+         4. vêtements tout de suite !
+         5. Peut-être vêtements
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=social  emotion=urgent
+         1. couverture s'il vous plaît
+         2. couverture s'il vous plaît !
+         3. Pas de couverture
+         4. couverture tout de suite !
+         5. Peut-être couverture
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=social  emotion=urgent
+         1. ballon s'il vous plaît
+         2. ballon s'il vous plaît !
+         3. Pas de ballon
+         4. ballon tout de suite !
+         5. Peut-être ballon
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=social  emotion=urgent
+         1. médicament s'il vous plaît
+         2. médicament s'il vous plaît !
+         3. Pas de médicament
+         4. médicament tout de suite !
+         5. Peut-être médicament
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=urgent
+         1. maman s'il vous plaît
+         2. maman s'il vous plaît !
+         3. Pas de maman
+         4. maman tout de suite !
+         5. Peut-être maman
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=urgent
+         1. papa s'il vous plaît
+         2. papa s'il vous plaît !
+         3. Pas de papa
+         4. papa tout de suite !
+         5. Peut-être papa
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=urgent
+         1. ami s'il vous plaît
+         2. ami s'il vous plaît !
+         3. Pas de ami
+         4. ami tout de suite !
+         5. Peut-être ami
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=urgent
+         1. professeur s'il vous plaît
+         2. professeur s'il vous plaît !
+         3. Pas de professeur
+         4. professeur tout de suite !
+         5. Peut-être professeur
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. docteur s'il vous plaît
+         2. docteur s'il vous plaît !
+         3. Pas de docteur
+         4. docteur tout de suite !
+         5. Peut-être docteur
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=urgent
+         1. infirmier s'il vous plaît
+         2. infirmier s'il vous plaît !
+         3. Pas de infirmier
+         4. infirmier tout de suite !
+         5. Peut-être infirmier
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=urgent
+         1. thérapeute s'il vous plaît
+         2. thérapeute s'il vous plaît !
+         3. Pas de thérapeute
+         4. thérapeute tout de suite !
+         5. Peut-être thérapeute
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=urgent
+         1. aidant s'il vous plaît
+         2. aidant s'il vous plaît !
+         3. Pas de aidant
+         4. aidant tout de suite !
+         5. Peut-être aidant
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=urgent
+         1. frère s'il vous plaît
+         2. frère s'il vous plaît !
+         3. Pas de frère
+         4. frère tout de suite !
+         5. Peut-être frère
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=urgent
+         1. sœur s'il vous plaît
+         2. sœur s'il vous plaît !
+         3. Pas de sœur
+         4. sœur tout de suite !
+         5. Peut-être sœur
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=urgent
+         1. tout le monde s'il vous plaît
+         2. tout le monde s'il vous plaît !
+         3. Pas de tout le monde
+         4. tout le monde tout de suite !
+         5. Peut-être tout le monde
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît maintenant!
+         2. s'il te plaît maintenant
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît maintenant?
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît bientôt!
+         2. s'il te plaît bientôt
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît bientôt?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît plus tard!
+         2. s'il te plaît plus tard
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît plus tard?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît aujourd'hui!
+         2. s'il te plaît aujourd'hui
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît aujourd'hui?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît demain!
+         2. s'il te plaît demain
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît demain?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît hier!
+         2. s'il te plaît hier
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît hier?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît le matin!
+         2. s'il te plaît le matin
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît le matin?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît l'après-midi!
+         2. s'il te plaît l'après-midi
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît l'après-midi?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît la nuit!
+         2. s'il te plaît la nuit
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît la nuit?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît toujours!
+         2. s'il te plaît toujours
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît toujours?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît tous les jours!
+         2. s'il te plaît tous les jours
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît tous les jours?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=urgent
+         1. s'il te plaît dans une minute!
+         2. s'il te plaît dans une minute
+         3. pas s'il te plaît
+         4. s'il te plaît s'il te plaît
+         5. mais s'il te plaît?
+         6. s'il te plaît vite!
+         7. Oui, s'il te plaît maintenant!
+         8. s'il te plaît dans une minute?
+
+  L2: 💛  thank you  (s_thanks)
+      pos=phrase  intent=social  emotion=positive
+       1. merci!
+       2. merci
+       3. pas merci
+       4. merci s'il te plaît
+       5. merci ?!
+       6. merci, merci!
+       7. Oui, merci!
+       8. merci?
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=positive
+         1. merci maman!
+         2. merci maman
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci maman ?!
+         6. merci, merci maman!
+         7. Oui, merci!
+         8. merci maman?
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=positive
+         1. merci papa!
+         2. merci papa
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci papa ?!
+         6. merci, merci papa!
+         7. Oui, merci!
+         8. merci papa?
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=positive
+         1. merci ami!
+         2. merci ami
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci ami ?!
+         6. merci, merci ami!
+         7. Oui, merci!
+         8. merci ami?
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=positive
+         1. merci professeur!
+         2. merci professeur
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci professeur ?!
+         6. merci, merci professeur!
+         7. Oui, merci!
+         8. merci professeur?
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. merci docteur!
+         2. merci docteur
+         3. pas merci
+         4. merci s'il te plaît
+         5. mais merci?
+         6. merci vite!
+         7. Oui, merci maintenant!
+         8. merci docteur?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=positive
+         1. merci infirmier!
+         2. merci infirmier
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci infirmier ?!
+         6. merci, merci infirmier!
+         7. Oui, merci!
+         8. merci infirmier?
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=positive
+         1. merci thérapeute!
+         2. merci thérapeute
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci thérapeute ?!
+         6. merci, merci thérapeute!
+         7. Oui, merci!
+         8. merci thérapeute?
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=positive
+         1. merci aidant!
+         2. merci aidant
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci aidant ?!
+         6. merci, merci aidant!
+         7. Oui, merci!
+         8. merci aidant?
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=positive
+         1. merci frère!
+         2. merci frère
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci frère ?!
+         6. merci, merci frère!
+         7. Oui, merci!
+         8. merci frère?
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=positive
+         1. merci sœur!
+         2. merci sœur
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci sœur ?!
+         6. merci, merci sœur!
+         7. Oui, merci!
+         8. merci sœur?
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=positive
+         1. merci tout le monde!
+         2. merci tout le monde
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci tout le monde ?!
+         6. merci, merci tout le monde!
+         7. Oui, merci!
+         8. merci tout le monde?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. pas merci
+         2. merci
+         3. merci!
+         4. merci s'il te plaît
+         5. Pas merci
+         6. merci?
+         7. Pas merci s'il te plaît
+         8. Non, pas merci
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. merci!
+         2. merci
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci ?!
+         6. merci, merci!
+         7. Oui, merci!
+         8. merci?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. merci s'il te plaît
+         2. merci
+         3. merci!
+         4. pas merci
+         5. Peut-être merci
+         6. Peut-être merci?
+         7. Si possible, merci
+         8. Peut-être, merci
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. merci!
+         2. merci
+         3. pas merci
+         4. merci s'il te plaît
+         5. mais merci?
+         6. merci vite!
+         7. Oui, merci maintenant!
+         8. merci?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. merci!
+         2. merci
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci ?!
+         6. merci, merci!
+         7. Oui, merci!
+         8. merci?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. pas merci
+         2. merci
+         3. merci!
+         4. merci s'il te plaît
+         5. Pas merci
+         6. merci?
+         7. Pas merci s'il te plaît
+         8. Non, pas merci
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=positive
+         1. merci!
+         2. merci
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci ?!
+         6. merci, merci!
+         7. Oui, merci!
+         8. merci?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. merci s'il te plaît
+         2. merci
+         3. merci!
+         4. pas merci
+         5. Peut-être merci
+         6. Peut-être merci?
+         7. Si possible, merci
+         8. Peut-être, merci
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=positive
+         1. merci!
+         2. merci
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci ?!
+         6. merci, merci!
+         7. Oui, merci!
+         8. merci?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=positive
+         1. merci!
+         2. merci
+         3. pas merci
+         4. merci s'il te plaît
+         5. merci ?!
+         6. merci, merci!
+         7. Oui, merci!
+         8. merci?
+
+  L2: 😔  sorry  (s_sorry)
+      pos=phrase  intent=social  emotion=negative
+       1. pas désolé
+       2. désolé
+       3. désolé!
+       4. désolé s'il te plaît
+       5. Pas désolé
+       6. désolé?
+       7. Pas désolé s'il te plaît
+       8. Non, pas désolé
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé maman
+         3. désolé maman!
+         4. désolé s'il te plaît
+         5. Pas désolé maman
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé papa
+         3. désolé papa!
+         4. désolé s'il te plaît
+         5. Pas désolé papa
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé ami
+         3. désolé ami!
+         4. désolé s'il te plaît
+         5. Pas désolé ami
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé professeur
+         3. désolé professeur!
+         4. désolé s'il te plaît
+         5. Pas désolé professeur
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. désolé docteur!
+         2. désolé docteur
+         3. pas désolé
+         4. désolé s'il te plaît
+         5. mais désolé?
+         6. désolé vite!
+         7. Oui, désolé maintenant!
+         8. désolé docteur?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé infirmier
+         3. désolé infirmier!
+         4. désolé s'il te plaît
+         5. Pas désolé infirmier
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé thérapeute
+         3. désolé thérapeute!
+         4. désolé s'il te plaît
+         5. Pas désolé thérapeute
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé aidant
+         3. désolé aidant!
+         4. désolé s'il te plaît
+         5. Pas désolé aidant
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé frère
+         3. désolé frère!
+         4. désolé s'il te plaît
+         5. Pas désolé frère
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé sœur
+         3. désolé sœur!
+         4. désolé s'il te plaît
+         5. Pas désolé sœur
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé tout le monde
+         3. désolé tout le monde!
+         4. désolé s'il te plaît
+         5. Pas désolé tout le monde
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé
+         3. désolé!
+         4. désolé s'il te plaît
+         5. Pas désolé
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. désolé!
+         2. désolé
+         3. pas désolé
+         4. désolé s'il te plaît
+         5. désolé ?!
+         6. désolé, merci!
+         7. Oui, désolé!
+         8. désolé?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. désolé s'il te plaît
+         2. désolé
+         3. désolé!
+         4. pas désolé
+         5. Peut-être désolé
+         6. Peut-être désolé?
+         7. Si possible, désolé
+         8. Peut-être, désolé
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. désolé!
+         2. désolé
+         3. pas désolé
+         4. désolé s'il te plaît
+         5. mais désolé?
+         6. désolé vite!
+         7. Oui, désolé maintenant!
+         8. désolé?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. désolé!
+         2. désolé
+         3. pas désolé
+         4. désolé s'il te plaît
+         5. désolé ?!
+         6. désolé, merci!
+         7. Oui, désolé!
+         8. désolé?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé
+         3. désolé!
+         4. désolé s'il te plaît
+         5. Pas désolé
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé
+         3. désolé!
+         4. désolé s'il te plaît
+         5. Pas désolé
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. désolé s'il te plaît
+         2. désolé
+         3. désolé!
+         4. pas désolé
+         5. Peut-être désolé
+         6. Peut-être désolé?
+         7. Si possible, désolé
+         8. Peut-être, désolé
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé
+         3. désolé!
+         4. désolé s'il te plaît
+         5. Pas désolé
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=negative
+         1. pas désolé
+         2. désolé
+         3. désolé!
+         4. désolé s'il te plaît
+         5. Pas désolé
+         6. désolé?
+         7. Pas désolé s'il te plaît
+         8. Non, pas désolé
+
+  L2: 👌  ok  (s_ok)
+      pos=phrase  intent=social  emotion=positive
+       1. d'accord!
+       2. d'accord
+       3. pas d'accord
+       4. d'accord s'il te plaît
+       5. d'accord ?!
+       6. d'accord, merci!
+       7. Oui, d'accord!
+       8. d'accord?
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=social  emotion=urgent
+         1. d'accord maintenant!
+         2. d'accord maintenant
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. mais d'accord?
+         6. d'accord vite!
+         7. Oui, d'accord maintenant!
+         8. d'accord maintenant?
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=social  emotion=positive
+         1. d'accord bientôt!
+         2. d'accord bientôt
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord bientôt ?!
+         6. d'accord, merci bientôt!
+         7. Oui, d'accord!
+         8. d'accord bientôt?
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=social  emotion=positive
+         1. d'accord plus tard!
+         2. d'accord plus tard
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord plus tard ?!
+         6. d'accord, merci plus tard!
+         7. Oui, d'accord!
+         8. d'accord plus tard?
+
+    L3: 📅  today  (t_today)  type=time
+        intent=social  emotion=positive
+         1. d'accord aujourd'hui!
+         2. d'accord aujourd'hui
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord aujourd'hui ?!
+         6. d'accord, merci aujourd'hui!
+         7. Oui, d'accord!
+         8. d'accord aujourd'hui?
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=social  emotion=positive
+         1. d'accord demain!
+         2. d'accord demain
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord demain ?!
+         6. d'accord, merci demain!
+         7. Oui, d'accord!
+         8. d'accord demain?
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=social  emotion=positive
+         1. d'accord hier!
+         2. d'accord hier
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord hier ?!
+         6. d'accord, merci hier!
+         7. Oui, d'accord!
+         8. d'accord hier?
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=social  emotion=positive
+         1. d'accord le matin!
+         2. d'accord le matin
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord le matin ?!
+         6. d'accord, merci le matin!
+         7. Oui, d'accord!
+         8. d'accord le matin?
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=social  emotion=positive
+         1. d'accord l'après-midi!
+         2. d'accord l'après-midi
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord l'après-midi ?!
+         6. d'accord, merci l'après-midi!
+         7. Oui, d'accord!
+         8. d'accord l'après-midi?
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=social  emotion=positive
+         1. d'accord la nuit!
+         2. d'accord la nuit
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord la nuit ?!
+         6. d'accord, merci la nuit!
+         7. Oui, d'accord!
+         8. d'accord la nuit?
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=social  emotion=positive
+         1. d'accord toujours!
+         2. d'accord toujours
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord toujours ?!
+         6. d'accord, merci toujours!
+         7. Oui, d'accord!
+         8. d'accord toujours?
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=social  emotion=positive
+         1. d'accord tous les jours!
+         2. d'accord tous les jours
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord tous les jours ?!
+         6. d'accord, merci tous les jours!
+         7. Oui, d'accord!
+         8. d'accord tous les jours?
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=social  emotion=positive
+         1. d'accord dans une minute!
+         2. d'accord dans une minute
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord dans une minute ?!
+         6. d'accord, merci dans une minute!
+         7. Oui, d'accord!
+         8. d'accord dans une minute?
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. pas d'accord
+         2. d'accord
+         3. d'accord!
+         4. d'accord s'il te plaît
+         5. Pas d'accord
+         6. d'accord?
+         7. Pas d'accord s'il te plaît
+         8. Non, pas d'accord
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. d'accord!
+         2. d'accord
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord ?!
+         6. d'accord, merci!
+         7. Oui, d'accord!
+         8. d'accord?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. d'accord s'il te plaît
+         2. d'accord
+         3. d'accord!
+         4. pas d'accord
+         5. Peut-être d'accord
+         6. Peut-être d'accord?
+         7. Si possible, d'accord
+         8. Peut-être, d'accord
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. d'accord!
+         2. d'accord
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. mais d'accord?
+         6. d'accord vite!
+         7. Oui, d'accord maintenant!
+         8. d'accord?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. d'accord!
+         2. d'accord
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord ?!
+         6. d'accord, merci!
+         7. Oui, d'accord!
+         8. d'accord?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. pas d'accord
+         2. d'accord
+         3. d'accord!
+         4. d'accord s'il te plaît
+         5. Pas d'accord
+         6. d'accord?
+         7. Pas d'accord s'il te plaît
+         8. Non, pas d'accord
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=positive
+         1. d'accord!
+         2. d'accord
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord ?!
+         6. d'accord, merci!
+         7. Oui, d'accord!
+         8. d'accord?
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. d'accord s'il te plaît
+         2. d'accord
+         3. d'accord!
+         4. pas d'accord
+         5. Peut-être d'accord
+         6. Peut-être d'accord?
+         7. Si possible, d'accord
+         8. Peut-être, d'accord
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=positive
+         1. d'accord!
+         2. d'accord
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord ?!
+         6. d'accord, merci!
+         7. Oui, d'accord!
+         8. d'accord?
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=positive
+         1. d'accord!
+         2. d'accord
+         3. pas d'accord
+         4. d'accord s'il te plaît
+         5. d'accord ?!
+         6. d'accord, merci!
+         7. Oui, d'accord!
+         8. d'accord?
+
+  L2: 🤷  I don't know  (s_idk)
+      pos=phrase  intent=social  emotion=neutral
+       1. je ne sais pas
+       2. je ne sais pas!
+       3. pas je ne sais pas
+       4. je ne sais pas s'il te plaît
+       5. je ne sais pas?
+       6. Oui, je ne sais pas
+       7. Pas je ne sais pas
+       8. Peut-être je ne sais pas
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=social  emotion=negative
+         1. je ne sais pas
+         2. je ne sais pas!
+         3. je ne sais pas s'il te plaît
+         4. je ne sais pas?
+         5. Oui, je ne sais pas
+         6. Peut-être je ne sais pas
+         7. je ne sais pas ?!
+         8. mais je ne sais pas?
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=social  emotion=positive
+         1. je ne sais pas!
+         2. je ne sais pas
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas ?!
+         6. je ne sais pas, merci!
+         7. Oui, je ne sais pas!
+         8. je ne sais pas?
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=social  emotion=uncertain
+         1. je ne sais pas s'il te plaît
+         2. je ne sais pas
+         3. je ne sais pas!
+         4. pas je ne sais pas
+         5. Peut-être je ne sais pas
+         6. Peut-être je ne sais pas?
+         7. Si possible, je ne sais pas
+         8. Peut-être, je ne sais pas
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=social  emotion=urgent
+         1. je ne sais pas!
+         2. je ne sais pas
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. mais je ne sais pas?
+         6. je ne sais pas vite!
+         7. Oui, je ne sais pas maintenant!
+         8. je ne sais pas?
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=social  emotion=positive
+         1. je ne sais pas!
+         2. je ne sais pas
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas ?!
+         6. je ne sais pas, merci!
+         7. Oui, je ne sais pas!
+         8. je ne sais pas?
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=social  emotion=negative
+         1. je ne sais pas
+         2. je ne sais pas!
+         3. je ne sais pas s'il te plaît
+         4. je ne sais pas?
+         5. Oui, je ne sais pas
+         6. Peut-être je ne sais pas
+         7. je ne sais pas ?!
+         8. mais je ne sais pas?
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=social  emotion=neutral
+         1. je ne sais pas
+         2. je ne sais pas!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas?
+         6. Oui, je ne sais pas
+         7. Pas je ne sais pas
+         8. Peut-être je ne sais pas
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=social  emotion=uncertain
+         1. je ne sais pas s'il te plaît
+         2. je ne sais pas
+         3. je ne sais pas!
+         4. pas je ne sais pas
+         5. Peut-être je ne sais pas
+         6. Peut-être je ne sais pas?
+         7. Si possible, je ne sais pas
+         8. Peut-être, je ne sais pas
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=social  emotion=neutral
+         1. je ne sais pas
+         2. je ne sais pas!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas?
+         6. Oui, je ne sais pas
+         7. Pas je ne sais pas
+         8. Peut-être je ne sais pas
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=social  emotion=neutral
+         1. je ne sais pas
+         2. je ne sais pas!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas?
+         6. Oui, je ne sais pas
+         7. Pas je ne sais pas
+         8. Peut-être je ne sais pas
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas nourriture
+         2. je ne sais pas nourriture!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas nourriture?
+         6. je ne sais pas nourriture s'il te plaît
+         7. Oui, je ne sais pas nourriture
+         8. Pas je ne sais pas nourriture
+
+    L3: 💧  water  (o_water)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas eau
+         2. je ne sais pas eau!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas eau?
+         6. je ne sais pas eau s'il te plaît
+         7. Oui, je ne sais pas eau
+         8. Pas je ne sais pas eau
+
+    L3: 📖  book  (o_book)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas livre
+         2. je ne sais pas livre!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas livre?
+         6. je ne sais pas livre s'il te plaît
+         7. Oui, je ne sais pas livre
+         8. Pas je ne sais pas livre
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas téléphone
+         2. je ne sais pas téléphone!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas téléphone?
+         6. je ne sais pas téléphone s'il te plaît
+         7. Oui, je ne sais pas téléphone
+         8. Pas je ne sais pas téléphone
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas jouet
+         2. je ne sais pas jouet!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas jouet?
+         6. je ne sais pas jouet s'il te plaît
+         7. Oui, je ne sais pas jouet
+         8. Pas je ne sais pas jouet
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas télé
+         2. je ne sais pas télé!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas télé?
+         6. je ne sais pas télé s'il te plaît
+         7. Oui, je ne sais pas télé
+         8. Pas je ne sais pas télé
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas musique
+         2. je ne sais pas musique!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas musique?
+         6. je ne sais pas musique s'il te plaît
+         7. Oui, je ne sais pas musique
+         8. Pas je ne sais pas musique
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas jeu
+         2. je ne sais pas jeu!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas jeu?
+         6. je ne sais pas jeu s'il te plaît
+         7. Oui, je ne sais pas jeu
+         8. Pas je ne sais pas jeu
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas image
+         2. je ne sais pas image!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas image?
+         6. je ne sais pas image s'il te plaît
+         7. Oui, je ne sais pas image
+         8. Pas je ne sais pas image
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas devoirs
+         2. je ne sais pas devoirs!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas devoirs?
+         6. je ne sais pas devoirs s'il te plaît
+         7. Oui, je ne sais pas devoirs
+         8. Pas je ne sais pas devoirs
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas porte
+         2. je ne sais pas porte!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas porte?
+         6. je ne sais pas porte s'il te plaît
+         7. Oui, je ne sais pas porte
+         8. Pas je ne sais pas porte
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas fenêtre
+         2. je ne sais pas fenêtre!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas fenêtre?
+         6. je ne sais pas fenêtre s'il te plaît
+         7. Oui, je ne sais pas fenêtre
+         8. Pas je ne sais pas fenêtre
+
+    L3: 💡  light  (o_light)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas lumière
+         2. je ne sais pas lumière!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas lumière?
+         6. je ne sais pas lumière s'il te plaît
+         7. Oui, je ne sais pas lumière
+         8. Pas je ne sais pas lumière
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas sac
+         2. je ne sais pas sac!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas sac?
+         6. je ne sais pas sac s'il te plaît
+         7. Oui, je ne sais pas sac
+         8. Pas je ne sais pas sac
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas vêtements
+         2. je ne sais pas vêtements!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas vêtements?
+         6. je ne sais pas vêtements s'il te plaît
+         7. Oui, je ne sais pas vêtements
+         8. Pas je ne sais pas vêtements
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas couverture
+         2. je ne sais pas couverture!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas couverture?
+         6. je ne sais pas couverture s'il te plaît
+         7. Oui, je ne sais pas couverture
+         8. Pas je ne sais pas couverture
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=social  emotion=neutral
+         1. je ne sais pas ballon
+         2. je ne sais pas ballon!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas ballon?
+         6. je ne sais pas ballon s'il te plaît
+         7. Oui, je ne sais pas ballon
+         8. Pas je ne sais pas ballon
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=social  emotion=urgent
+         1. je ne sais pas médicament!
+         2. je ne sais pas médicament
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. mais je ne sais pas?
+         6. je ne sais pas vite!
+         7. Oui, je ne sais pas maintenant!
+         8. je ne sais pas médicament?
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas maman
+         2. je ne sais pas maman!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas maman?
+         6. je ne sais pas maman s'il te plaît
+         7. Oui, je ne sais pas maman
+         8. Pas je ne sais pas maman
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas papa
+         2. je ne sais pas papa!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas papa?
+         6. je ne sais pas papa s'il te plaît
+         7. Oui, je ne sais pas papa
+         8. Pas je ne sais pas papa
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas ami
+         2. je ne sais pas ami!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas ami?
+         6. je ne sais pas ami s'il te plaît
+         7. Oui, je ne sais pas ami
+         8. Pas je ne sais pas ami
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas professeur
+         2. je ne sais pas professeur!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas professeur?
+         6. je ne sais pas professeur s'il te plaît
+         7. Oui, je ne sais pas professeur
+         8. Pas je ne sais pas professeur
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=social  emotion=urgent
+         1. je ne sais pas docteur!
+         2. je ne sais pas docteur
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. mais je ne sais pas?
+         6. je ne sais pas vite!
+         7. Oui, je ne sais pas maintenant!
+         8. je ne sais pas docteur?
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas infirmier
+         2. je ne sais pas infirmier!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas infirmier?
+         6. je ne sais pas infirmier s'il te plaît
+         7. Oui, je ne sais pas infirmier
+         8. Pas je ne sais pas infirmier
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas thérapeute
+         2. je ne sais pas thérapeute!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas thérapeute?
+         6. je ne sais pas thérapeute s'il te plaît
+         7. Oui, je ne sais pas thérapeute
+         8. Pas je ne sais pas thérapeute
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas aidant
+         2. je ne sais pas aidant!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas aidant?
+         6. je ne sais pas aidant s'il te plaît
+         7. Oui, je ne sais pas aidant
+         8. Pas je ne sais pas aidant
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas frère
+         2. je ne sais pas frère!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas frère?
+         6. je ne sais pas frère s'il te plaît
+         7. Oui, je ne sais pas frère
+         8. Pas je ne sais pas frère
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas sœur
+         2. je ne sais pas sœur!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas sœur?
+         6. je ne sais pas sœur s'il te plaît
+         7. Oui, je ne sais pas sœur
+         8. Pas je ne sais pas sœur
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=social  emotion=neutral
+         1. je ne sais pas tout le monde
+         2. je ne sais pas tout le monde!
+         3. pas je ne sais pas
+         4. je ne sais pas s'il te plaît
+         5. je ne sais pas tout le monde?
+         6. je ne sais pas tout le monde s'il te plaît
+         7. Oui, je ne sais pas tout le monde
+         8. Pas je ne sais pas tout le monde
+
+  L2: ⏸️  wait  (s_wait)
+      pos=verb  intent=request  emotion=neutral
+       1. Aide-moi à wait
+       2. Allons wait!
+       3. Ne me fais pas wait
+       4. Aide-moi à wait vite!
+       5. Peut-être m'aider à wait
+       6. Je veux wait
+       7. Puis-je wait?
+       8. Oui, je attends
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait maman
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait maman
+         7. Puis-je wait maman?
+         8. Oui, je attends
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait papa
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait papa
+         7. Puis-je wait papa?
+         8. Oui, je attends
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait ami
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait ami
+         7. Puis-je wait ami?
+         8. Oui, je attends
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait professeur
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait professeur
+         7. Puis-je wait professeur?
+         8. Oui, je attends
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Aide-moi à wait vite!
+         2. Aide-moi à wait docteur
+         3. Allons wait!
+         4. Ne me fais pas wait
+         5. Peut-être m'aider à wait
+         6. Je dois wait maintenant!
+         7. Puis-je wait maintenant?
+         8. Oui, wait maintenant!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait infirmier
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait infirmier
+         7. Puis-je wait infirmier?
+         8. Oui, je attends
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait thérapeute
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait thérapeute
+         7. Puis-je wait thérapeute?
+         8. Oui, je attends
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait aidant
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait aidant
+         7. Puis-je wait aidant?
+         8. Oui, je attends
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait frère
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait frère
+         7. Puis-je wait frère?
+         8. Oui, je attends
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait sœur
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait sœur
+         7. Puis-je wait sœur?
+         8. Oui, je attends
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à wait tout le monde
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait tout le monde
+         7. Puis-je wait tout le monde?
+         8. Oui, je attends
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Aide-moi à wait vite!
+         2. Aide-moi à wait maintenant
+         3. Allons wait!
+         4. Ne me fais pas wait
+         5. Peut-être m'aider à wait
+         6. Je dois wait maintenant!
+         7. Puis-je wait maintenant?
+         8. Oui, wait maintenant!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait bientôt
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait bientôt
+         7. Puis-je wait bientôt?
+         8. Oui, je attends
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait plus tard
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait plus tard
+         7. Puis-je wait plus tard?
+         8. Oui, je attends
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait aujourd'hui
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait aujourd'hui
+         7. Puis-je wait aujourd'hui?
+         8. Oui, je attends
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait demain
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait demain
+         7. Puis-je wait demain?
+         8. Oui, je attends
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait hier
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait hier
+         7. Puis-je wait hier?
+         8. Oui, je attends
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait le matin
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait le matin
+         7. Puis-je wait le matin?
+         8. Oui, je attends
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait l'après-midi
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait l'après-midi
+         7. Puis-je wait l'après-midi?
+         8. Oui, je attends
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait la nuit
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait la nuit
+         7. Puis-je wait la nuit?
+         8. Oui, je attends
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait toujours
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait toujours
+         7. Puis-je wait toujours?
+         8. Oui, je attends
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait tous les jours
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait tous les jours
+         7. Puis-je wait tous les jours?
+         8. Oui, je attends
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à wait dans une minute
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait dans une minute
+         7. Puis-je wait dans une minute?
+         8. Oui, je attends
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Ne me fais pas wait
+         2. Aide-moi à wait
+         3. Allons wait!
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je ne veux pas wait
+         7. Je ne dois pas wait?
+         8. Non, je ne veux pas wait
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Allons wait!
+         2. Aide-moi à wait
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. J'adore wait!
+         7. On va wait?
+         8. Oui, wait!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Peut-être m'aider à wait
+         2. Aide-moi à wait
+         3. Allons wait!
+         4. Ne me fais pas wait
+         5. Aide-moi à wait vite!
+         6. Peut-être wait
+         7. Peut-être wait?
+         8. Je veux wait
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Aide-moi à wait vite!
+         2. Aide-moi à wait
+         3. Allons wait!
+         4. Ne me fais pas wait
+         5. Peut-être m'aider à wait
+         6. Je dois wait maintenant!
+         7. Puis-je wait maintenant?
+         8. Oui, wait maintenant!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Allons wait!
+         2. Aide-moi à wait
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. J'adore wait!
+         7. On va wait?
+         8. Oui, wait!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Ne me fais pas wait
+         2. Aide-moi à wait
+         3. Allons wait!
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je ne veux pas wait
+         7. Je ne dois pas wait?
+         8. Non, je ne veux pas wait
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à wait
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait
+         7. Puis-je wait?
+         8. Oui, je attends
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Peut-être m'aider à wait
+         2. Aide-moi à wait
+         3. Allons wait!
+         4. Ne me fais pas wait
+         5. Aide-moi à wait vite!
+         6. Peut-être wait
+         7. Peut-être wait?
+         8. Je veux wait
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à wait
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait
+         7. Puis-je wait?
+         8. Oui, je attends
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à wait
+         2. Allons wait!
+         3. Ne me fais pas wait
+         4. Aide-moi à wait vite!
+         5. Peut-être m'aider à wait
+         6. Je veux wait
+         7. Puis-je wait?
+         8. Oui, je attends
+
+  L2: 💡  understand  (s_understand)
+      pos=verb  intent=request  emotion=neutral
+       1. Aide-moi à understand
+       2. Allons understand!
+       3. Ne me fais pas understand
+       4. Aide-moi à understand vite!
+       5. Peut-être m'aider à understand
+       6. Je veux understand
+       7. Puis-je understand?
+       8. Oui, je comprends
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Ne me fais pas understand
+         2. Aide-moi à understand
+         3. Allons understand!
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je ne veux pas understand
+         7. Je ne dois pas understand?
+         8. Non, je ne veux pas understand
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Allons understand!
+         2. Aide-moi à understand
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. J'adore understand!
+         7. On va understand?
+         8. Oui, understand!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Peut-être m'aider à understand
+         2. Aide-moi à understand
+         3. Allons understand!
+         4. Ne me fais pas understand
+         5. Aide-moi à understand vite!
+         6. Peut-être understand
+         7. Peut-être understand?
+         8. Je veux understand
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Aide-moi à understand vite!
+         2. Aide-moi à understand
+         3. Allons understand!
+         4. Ne me fais pas understand
+         5. Peut-être m'aider à understand
+         6. Je dois understand maintenant!
+         7. Puis-je understand maintenant?
+         8. Oui, understand maintenant!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Allons understand!
+         2. Aide-moi à understand
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. J'adore understand!
+         7. On va understand?
+         8. Oui, understand!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Ne me fais pas understand
+         2. Aide-moi à understand
+         3. Allons understand!
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je ne veux pas understand
+         7. Je ne dois pas understand?
+         8. Non, je ne veux pas understand
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à understand
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand
+         7. Puis-je understand?
+         8. Oui, je comprends
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Peut-être m'aider à understand
+         2. Aide-moi à understand
+         3. Allons understand!
+         4. Ne me fais pas understand
+         5. Aide-moi à understand vite!
+         6. Peut-être understand
+         7. Peut-être understand?
+         8. Je veux understand
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à understand
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand
+         7. Puis-je understand?
+         8. Oui, je comprends
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à understand
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand
+         7. Puis-je understand?
+         8. Oui, je comprends
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand maman
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand maman
+         7. Puis-je understand maman?
+         8. Oui, je comprends
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand papa
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand papa
+         7. Puis-je understand papa?
+         8. Oui, je comprends
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand ami
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand ami
+         7. Puis-je understand ami?
+         8. Oui, je comprends
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand professeur
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand professeur
+         7. Puis-je understand professeur?
+         8. Oui, je comprends
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Aide-moi à understand vite!
+         2. Aide-moi à understand docteur
+         3. Allons understand!
+         4. Ne me fais pas understand
+         5. Peut-être m'aider à understand
+         6. Je dois understand maintenant!
+         7. Puis-je understand maintenant?
+         8. Oui, understand maintenant!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand infirmier
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand infirmier
+         7. Puis-je understand infirmier?
+         8. Oui, je comprends
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand thérapeute
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand thérapeute
+         7. Puis-je understand thérapeute?
+         8. Oui, je comprends
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand aidant
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand aidant
+         7. Puis-je understand aidant?
+         8. Oui, je comprends
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand frère
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand frère
+         7. Puis-je understand frère?
+         8. Oui, je comprends
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand sœur
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand sœur
+         7. Puis-je understand sœur?
+         8. Oui, je comprends
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à understand tout le monde
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand tout le monde
+         7. Puis-je understand tout le monde?
+         8. Oui, je comprends
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand nourriture
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand nourriture
+         7. Puis-je understand nourriture?
+         8. Oui, je comprends
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand eau
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand eau
+         7. Puis-je understand eau?
+         8. Oui, je comprends
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand livre
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand livre
+         7. Puis-je understand livre?
+         8. Oui, je comprends
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand téléphone
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand téléphone
+         7. Puis-je understand téléphone?
+         8. Oui, je comprends
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand jouet
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand jouet
+         7. Puis-je understand jouet?
+         8. Oui, je comprends
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand télé
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand télé
+         7. Puis-je understand télé?
+         8. Oui, je comprends
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand musique
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand musique
+         7. Puis-je understand musique?
+         8. Oui, je comprends
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand jeu
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand jeu
+         7. Puis-je understand jeu?
+         8. Oui, je comprends
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand image
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand image
+         7. Puis-je understand image?
+         8. Oui, je comprends
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand devoirs
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand devoirs
+         7. Puis-je understand devoirs?
+         8. Oui, je comprends
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand porte
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand porte
+         7. Puis-je understand porte?
+         8. Oui, je comprends
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand fenêtre
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand fenêtre
+         7. Puis-je understand fenêtre?
+         8. Oui, je comprends
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand lumière
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand lumière
+         7. Puis-je understand lumière?
+         8. Oui, je comprends
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand sac
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand sac
+         7. Puis-je understand sac?
+         8. Oui, je comprends
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand vêtements
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand vêtements
+         7. Puis-je understand vêtements?
+         8. Oui, je comprends
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand couverture
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand couverture
+         7. Puis-je understand couverture?
+         8. Oui, je comprends
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à understand ballon
+         2. Allons understand!
+         3. Ne me fais pas understand
+         4. Aide-moi à understand vite!
+         5. Peut-être m'aider à understand
+         6. Je veux understand ballon
+         7. Puis-je understand ballon?
+         8. Oui, je comprends
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Aide-moi à understand vite!
+         2. Aide-moi à understand médicament
+         3. Allons understand!
+         4. Ne me fais pas understand
+         5. Peut-être m'aider à understand
+         6. Je dois understand maintenant!
+         7. Puis-je understand maintenant?
+         8. Oui, understand maintenant!
+
+  L2: 🗣️  tell  (s_tell)
+      pos=verb  intent=request  emotion=neutral
+       1. Aide-moi à dire
+       2. Allons dire!
+       3. Ne me fais pas dire
+       4. Aide-moi à dire vite!
+       5. Peut-être m'aider à dire
+       6. Je veux dire
+       7. Puis-je dire?
+       8. Oui, je raconte
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire maman
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire maman
+         7. Puis-je dire maman?
+         8. Oui, je raconte
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire papa
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire papa
+         7. Puis-je dire papa?
+         8. Oui, je raconte
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire ami
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire ami
+         7. Puis-je dire ami?
+         8. Oui, je raconte
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire professeur
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire professeur
+         7. Puis-je dire professeur?
+         8. Oui, je raconte
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Aide-moi à dire vite!
+         2. Aide-moi à dire docteur
+         3. Allons dire!
+         4. Ne me fais pas dire
+         5. Peut-être m'aider à dire
+         6. Je dois dire maintenant!
+         7. Puis-je dire maintenant?
+         8. Oui, dire maintenant!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire infirmier
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire infirmier
+         7. Puis-je dire infirmier?
+         8. Oui, je raconte
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire thérapeute
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire thérapeute
+         7. Puis-je dire thérapeute?
+         8. Oui, je raconte
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire aidant
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire aidant
+         7. Puis-je dire aidant?
+         8. Oui, je raconte
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire frère
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire frère
+         7. Puis-je dire frère?
+         8. Oui, je raconte
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire sœur
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire sœur
+         7. Puis-je dire sœur?
+         8. Oui, je raconte
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à dire tout le monde
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire tout le monde
+         7. Puis-je dire tout le monde?
+         8. Oui, je raconte
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire nourriture
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire nourriture
+         7. Puis-je dire nourriture?
+         8. Oui, je raconte
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire eau
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire eau
+         7. Puis-je dire eau?
+         8. Oui, je raconte
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire livre
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire livre
+         7. Puis-je dire livre?
+         8. Oui, je raconte
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire téléphone
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire téléphone
+         7. Puis-je dire téléphone?
+         8. Oui, je raconte
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire jouet
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire jouet
+         7. Puis-je dire jouet?
+         8. Oui, je raconte
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire télé
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire télé
+         7. Puis-je dire télé?
+         8. Oui, je raconte
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire musique
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire musique
+         7. Puis-je dire musique?
+         8. Oui, je raconte
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire jeu
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire jeu
+         7. Puis-je dire jeu?
+         8. Oui, je raconte
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire image
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire image
+         7. Puis-je dire image?
+         8. Oui, je raconte
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire devoirs
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire devoirs
+         7. Puis-je dire devoirs?
+         8. Oui, je raconte
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire porte
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire porte
+         7. Puis-je dire porte?
+         8. Oui, je raconte
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire fenêtre
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire fenêtre
+         7. Puis-je dire fenêtre?
+         8. Oui, je raconte
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire lumière
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire lumière
+         7. Puis-je dire lumière?
+         8. Oui, je raconte
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire sac
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire sac
+         7. Puis-je dire sac?
+         8. Oui, je raconte
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire vêtements
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire vêtements
+         7. Puis-je dire vêtements?
+         8. Oui, je raconte
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire couverture
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire couverture
+         7. Puis-je dire couverture?
+         8. Oui, je raconte
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à dire ballon
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire ballon
+         7. Puis-je dire ballon?
+         8. Oui, je raconte
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Aide-moi à dire vite!
+         2. Aide-moi à dire médicament
+         3. Allons dire!
+         4. Ne me fais pas dire
+         5. Peut-être m'aider à dire
+         6. Je dois dire maintenant!
+         7. Puis-je dire maintenant?
+         8. Oui, dire maintenant!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Aide-moi à dire vite!
+         2. Aide-moi à dire maintenant
+         3. Allons dire!
+         4. Ne me fais pas dire
+         5. Peut-être m'aider à dire
+         6. Je dois dire maintenant!
+         7. Puis-je dire maintenant?
+         8. Oui, dire maintenant!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire bientôt
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire bientôt
+         7. Puis-je dire bientôt?
+         8. Oui, je raconte
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire plus tard
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire plus tard
+         7. Puis-je dire plus tard?
+         8. Oui, je raconte
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire aujourd'hui
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire aujourd'hui
+         7. Puis-je dire aujourd'hui?
+         8. Oui, je raconte
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire demain
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire demain
+         7. Puis-je dire demain?
+         8. Oui, je raconte
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire hier
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire hier
+         7. Puis-je dire hier?
+         8. Oui, je raconte
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire le matin
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire le matin
+         7. Puis-je dire le matin?
+         8. Oui, je raconte
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire l'après-midi
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire l'après-midi
+         7. Puis-je dire l'après-midi?
+         8. Oui, je raconte
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire la nuit
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire la nuit
+         7. Puis-je dire la nuit?
+         8. Oui, je raconte
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire toujours
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire toujours
+         7. Puis-je dire toujours?
+         8. Oui, je raconte
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire tous les jours
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire tous les jours
+         7. Puis-je dire tous les jours?
+         8. Oui, je raconte
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à dire dans une minute
+         2. Allons dire!
+         3. Ne me fais pas dire
+         4. Aide-moi à dire vite!
+         5. Peut-être m'aider à dire
+         6. Je veux dire dans une minute
+         7. Puis-je dire dans une minute?
+         8. Oui, je raconte
+
+  L2: ✋  ask  (s_ask)
+      pos=verb  intent=request  emotion=neutral
+       1. Aide-moi à demander
+       2. Allons demander!
+       3. Ne me fais pas demander
+       4. Aide-moi à demander vite!
+       5. Peut-être m'aider à demander
+       6. Je veux demander
+       7. Puis-je demander?
+       8. Oui, je demande
+
+    L3: 👩  mom  (p_mom)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander maman
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander maman
+         7. Puis-je demander maman?
+         8. Oui, je demande
+
+    L3: 👨  dad  (p_dad)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander papa
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander papa
+         7. Puis-je demander papa?
+         8. Oui, je demande
+
+    L3: 🤝  friend  (p_friend)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander ami
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander ami
+         7. Puis-je demander ami?
+         8. Oui, je demande
+
+    L3: 🧑‍🏫  teacher  (p_teacher)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander professeur
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander professeur
+         7. Puis-je demander professeur?
+         8. Oui, je demande
+
+    L3: 🧑‍⚕️  doctor  (p_doctor)  type=person
+        intent=request  emotion=urgent
+         1. Aide-moi à demander vite!
+         2. Aide-moi à demander docteur
+         3. Allons demander!
+         4. Ne me fais pas demander
+         5. Peut-être m'aider à demander
+         6. Je dois demander maintenant!
+         7. Puis-je demander maintenant?
+         8. Oui, demander maintenant!
+
+    L3: 💉  nurse  (p_nurse)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander infirmier
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander infirmier
+         7. Puis-je demander infirmier?
+         8. Oui, je demande
+
+    L3: 🩺  therapist  (p_therapist)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander thérapeute
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander thérapeute
+         7. Puis-je demander thérapeute?
+         8. Oui, je demande
+
+    L3: 💜  caregiver  (p_caregiver)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander aidant
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander aidant
+         7. Puis-je demander aidant?
+         8. Oui, je demande
+
+    L3: 👦  brother  (p_brother)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander frère
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander frère
+         7. Puis-je demander frère?
+         8. Oui, je demande
+
+    L3: 👧  sister  (p_sister)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander sœur
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander sœur
+         7. Puis-je demander sœur?
+         8. Oui, je demande
+
+    L3: 🌍  everyone  (p_everyone)  type=person
+        intent=request  emotion=neutral
+         1. Aide-moi à demander tout le monde
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander tout le monde
+         7. Puis-je demander tout le monde?
+         8. Oui, je demande
+
+    L3: 🍎  food  (o_food)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander nourriture
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander nourriture
+         7. Puis-je demander nourriture?
+         8. Oui, je demande
+
+    L3: 💧  water  (o_water)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander eau
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander eau
+         7. Puis-je demander eau?
+         8. Oui, je demande
+
+    L3: 📖  book  (o_book)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander livre
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander livre
+         7. Puis-je demander livre?
+         8. Oui, je demande
+
+    L3: 📱  phone  (o_phone)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander téléphone
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander téléphone
+         7. Puis-je demander téléphone?
+         8. Oui, je demande
+
+    L3: 🧸  toy  (o_toy)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander jouet
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander jouet
+         7. Puis-je demander jouet?
+         8. Oui, je demande
+
+    L3: 📺  TV  (o_tv)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander télé
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander télé
+         7. Puis-je demander télé?
+         8. Oui, je demande
+
+    L3: 🎵  music  (o_music)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander musique
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander musique
+         7. Puis-je demander musique?
+         8. Oui, je demande
+
+    L3: 🎮  game  (o_game)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander jeu
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander jeu
+         7. Puis-je demander jeu?
+         8. Oui, je demande
+
+    L3: 🖼️  picture  (o_picture)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander image
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander image
+         7. Puis-je demander image?
+         8. Oui, je demande
+
+    L3: 📚  homework  (o_homework)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander devoirs
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander devoirs
+         7. Puis-je demander devoirs?
+         8. Oui, je demande
+
+    L3: 🚪  door  (o_door)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander porte
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander porte
+         7. Puis-je demander porte?
+         8. Oui, je demande
+
+    L3: 🪟  window  (o_window)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander fenêtre
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander fenêtre
+         7. Puis-je demander fenêtre?
+         8. Oui, je demande
+
+    L3: 💡  light  (o_light)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander lumière
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander lumière
+         7. Puis-je demander lumière?
+         8. Oui, je demande
+
+    L3: 🎒  bag  (o_bag)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander sac
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander sac
+         7. Puis-je demander sac?
+         8. Oui, je demande
+
+    L3: 👕  clothes  (o_clothes)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander vêtements
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander vêtements
+         7. Puis-je demander vêtements?
+         8. Oui, je demande
+
+    L3: 🛏️  blanket  (o_blanket)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander couverture
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander couverture
+         7. Puis-je demander couverture?
+         8. Oui, je demande
+
+    L3: ⚽  ball  (o_ball)  type=object
+        intent=request  emotion=neutral
+         1. Aide-moi à demander ballon
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander ballon
+         7. Puis-je demander ballon?
+         8. Oui, je demande
+
+    L3: 💊  medicine  (o_medicine)  type=object
+        intent=request  emotion=urgent
+         1. Aide-moi à demander vite!
+         2. Aide-moi à demander médicament
+         3. Allons demander!
+         4. Ne me fais pas demander
+         5. Peut-être m'aider à demander
+         6. Je dois demander maintenant!
+         7. Puis-je demander maintenant?
+         8. Oui, demander maintenant!
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Aide-moi à demander vite!
+         2. Aide-moi à demander maintenant
+         3. Allons demander!
+         4. Ne me fais pas demander
+         5. Peut-être m'aider à demander
+         6. Je dois demander maintenant!
+         7. Puis-je demander maintenant?
+         8. Oui, demander maintenant!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander bientôt
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander bientôt
+         7. Puis-je demander bientôt?
+         8. Oui, je demande
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander plus tard
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander plus tard
+         7. Puis-je demander plus tard?
+         8. Oui, je demande
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander aujourd'hui
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander aujourd'hui
+         7. Puis-je demander aujourd'hui?
+         8. Oui, je demande
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander demain
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander demain
+         7. Puis-je demander demain?
+         8. Oui, je demande
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander hier
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander hier
+         7. Puis-je demander hier?
+         8. Oui, je demande
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander le matin
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander le matin
+         7. Puis-je demander le matin?
+         8. Oui, je demande
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander l'après-midi
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander l'après-midi
+         7. Puis-je demander l'après-midi?
+         8. Oui, je demande
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander la nuit
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander la nuit
+         7. Puis-je demander la nuit?
+         8. Oui, je demande
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander toujours
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander toujours
+         7. Puis-je demander toujours?
+         8. Oui, je demande
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander tous les jours
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander tous les jours
+         7. Puis-je demander tous les jours?
+         8. Oui, je demande
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à demander dans une minute
+         2. Allons demander!
+         3. Ne me fais pas demander
+         4. Aide-moi à demander vite!
+         5. Peut-être m'aider à demander
+         6. Je veux demander dans une minute
+         7. Puis-je demander dans une minute?
+         8. Oui, je demande
+
+  L2: 🔄  repeat  (s_repeat)
+      pos=verb  intent=request  emotion=neutral
+       1. Aide-moi à répéter
+       2. Allons répéter!
+       3. Ne me fais pas répéter
+       4. Aide-moi à répéter vite!
+       5. Peut-être m'aider à répéter
+       6. Je veux répéter
+       7. Puis-je répéter?
+       8. Oui, je répète
+
+    L3: 🚫  not  (x_not)  type=intensity
+        intent=request  emotion=negative
+         1. Ne me fais pas répéter
+         2. Aide-moi à répéter
+         3. Allons répéter!
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je ne veux pas répéter
+         7. Je ne dois pas répéter?
+         8. Non, je ne veux pas répéter
+
+    L3: 💯  very  (x_very)  type=intensity
+        intent=request  emotion=positive
+         1. Allons répéter!
+         2. Aide-moi à répéter
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. J'adore répéter!
+         7. On va répéter?
+         8. Oui, répéter!
+
+    L3: 🤏  a little  (x_little)  type=intensity
+        intent=request  emotion=uncertain
+         1. Peut-être m'aider à répéter
+         2. Aide-moi à répéter
+         3. Allons répéter!
+         4. Ne me fais pas répéter
+         5. Aide-moi à répéter vite!
+         6. Peut-être répéter
+         7. Peut-être répéter?
+         8. Je veux répéter
+
+    L3: 🙏  please  (x_please)  type=intensity
+        intent=request  emotion=urgent
+         1. Aide-moi à répéter vite!
+         2. Aide-moi à répéter
+         3. Allons répéter!
+         4. Ne me fais pas répéter
+         5. Peut-être m'aider à répéter
+         6. Je dois répéter maintenant!
+         7. Puis-je répéter maintenant?
+         8. Oui, répéter maintenant!
+
+    L3: ➕  more  (x_more)  type=intensity
+        intent=request  emotion=positive
+         1. Allons répéter!
+         2. Aide-moi à répéter
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. J'adore répéter!
+         7. On va répéter?
+         8. Oui, répéter!
+
+    L3: ➖  less  (x_less)  type=intensity
+        intent=request  emotion=negative
+         1. Ne me fais pas répéter
+         2. Aide-moi à répéter
+         3. Allons répéter!
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je ne veux pas répéter
+         7. Je ne dois pas répéter?
+         8. Non, je ne veux pas répéter
+
+    L3: 🔄  again  (x_again)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter
+         7. Puis-je répéter?
+         8. Oui, je répète
+
+    L3: 🤔  maybe  (x_maybe)  type=intensity
+        intent=request  emotion=uncertain
+         1. Peut-être m'aider à répéter
+         2. Aide-moi à répéter
+         3. Allons répéter!
+         4. Ne me fais pas répéter
+         5. Aide-moi à répéter vite!
+         6. Peut-être répéter
+         7. Peut-être répéter?
+         8. Je veux répéter
+
+    L3: ✅  done  (x_done)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter
+         7. Puis-je répéter?
+         8. Oui, je répète
+
+    L3: 🔀  different  (x_diff)  type=intensity
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter
+         7. Puis-je répéter?
+         8. Oui, je répète
+
+    L3: ⚡  now  (t_now)  type=time
+        intent=request  emotion=urgent
+         1. Aide-moi à répéter vite!
+         2. Aide-moi à répéter maintenant
+         3. Allons répéter!
+         4. Ne me fais pas répéter
+         5. Peut-être m'aider à répéter
+         6. Je dois répéter maintenant!
+         7. Puis-je répéter maintenant?
+         8. Oui, répéter maintenant!
+
+    L3: 🔜  soon  (t_soon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter bientôt
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter bientôt
+         7. Puis-je répéter bientôt?
+         8. Oui, je répète
+
+    L3: 🕐  later  (t_later)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter plus tard
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter plus tard
+         7. Puis-je répéter plus tard?
+         8. Oui, je répète
+
+    L3: 📅  today  (t_today)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter aujourd'hui
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter aujourd'hui
+         7. Puis-je répéter aujourd'hui?
+         8. Oui, je répète
+
+    L3: 🌅  tomorrow  (t_tomorrow)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter demain
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter demain
+         7. Puis-je répéter demain?
+         8. Oui, je répète
+
+    L3: ⏪  yesterday  (t_yesterday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter hier
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter hier
+         7. Puis-je répéter hier?
+         8. Oui, je répète
+
+    L3: 🌄  morning  (t_morning)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter le matin
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter le matin
+         7. Puis-je répéter le matin?
+         8. Oui, je répète
+
+    L3: 🌤️  afternoon  (t_afternoon)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter l'après-midi
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter l'après-midi
+         7. Puis-je répéter l'après-midi?
+         8. Oui, je répète
+
+    L3: 🌙  night  (t_night)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter la nuit
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter la nuit
+         7. Puis-je répéter la nuit?
+         8. Oui, je répète
+
+    L3: ♾️  always  (t_always)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter toujours
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter toujours
+         7. Puis-je répéter toujours?
+         8. Oui, je répète
+
+    L3: 🗓️  every day  (t_everyday)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter tous les jours
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter tous les jours
+         7. Puis-je répéter tous les jours?
+         8. Oui, je répète
+
+    L3: ⏱️  in a minute  (t_minute)  type=time
+        intent=request  emotion=neutral
+         1. Aide-moi à répéter dans une minute
+         2. Allons répéter!
+         3. Ne me fais pas répéter
+         4. Aide-moi à répéter vite!
+         5. Peut-être m'aider à répéter
+         6. Je veux répéter dans une minute
+         7. Puis-je répéter dans une minute?
+         8. Oui, je répète
+
+────────────────────────────────────────────────────────────────────────
+  SUMMARY for TALK
+────────────────────────────────────────────────────────────────────────
+  Items (L2):              14
+  Modifiers (L3):          386
+  Total cell combinations: 400
+  Total sentences:         3113
+  Avg sentences / cell:    7.8
+────────────────────────────────────────────────────────────────────────

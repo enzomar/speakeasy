@@ -59,17 +59,23 @@ export function detectIntent(pos, categoryId, hasTranscript, modifierCanon) {
   // Transcript → always reply mode
   if (hasTranscript) return "response";
 
+  // Questions category → question intent (must check BEFORE phrase check because
+  // question words like "what"/"where" have pos=phrase in POS_DICT)
+  if (categoryId === "questions") return "question";
+
+  // Verbs always use request intent (imperative), even in the TALK category.
+  // This ensures "tell", "ask", "wait", "repeat", "understand" get proper verb
+  // templates ("Help me understand") instead of bare phrase concatenation.
+  if (pos === "verb") return "request";
+
   // Social expressions: greetings, responses, courtesy
   if (pos === "phrase" || categoryId === "social") return "social";
-
-  // Questions category → question intent
-  if (categoryId === "questions") return "question";
 
   // Objects, needs, places, people → user wants something
   if (pos === "noun" || categoryId === "needs" || categoryId === "people" || categoryId === "places") return "request";
 
   // Actions → user wants to do something
-  if (pos === "verb" || categoryId === "actions") return "request";
+  if (categoryId === "actions") return "request";
 
   // Feelings / descriptors → describing state
   if (pos === "adjective" || categoryId === "feelings" || categoryId === "descriptors") return "statement";

@@ -84,6 +84,14 @@ clean:
 	@echo "$(C_YELLOW)▸ Cleaning build artefacts…$(C_RESET)"
 	rm -rf dist android/app/build android/app/src/main/assets/public
 
+## Install git hooks (run once after cloning)
+## Installs a pre-commit hook that auto-increments the patch version on every commit.
+setup-hooks:
+	@echo "$(C_CYAN)▸ Installing git hooks…$(C_RESET)"
+	@cp scripts/pre-commit.sh .git/hooks/pre-commit
+	@chmod +x .git/hooks/pre-commit
+	@echo "$(C_GREEN)✔ pre-commit hook installed (auto patch-bump on commit)$(C_RESET)"
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  Capacitor — sync
 # ─────────────────────────────────────────────────────────────────────────────
