@@ -294,27 +294,32 @@ export function ActionButton({ children, onClick, variant = "default" }) {
 
 // ── Contact form (Formspree) ────────────────────────────────────────────────
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 export function ContactForm({ t }) {
   const [cname,   setCname]   = useState("");
   const [email,   setEmail]   = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [status,  setStatus]  = useState("idle");
 
+  const emailValid = EMAIL_RE.test(email.trim());
+
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-    if (!cname.trim() || !email.trim() || !message.trim()) return;
+    if (!cname.trim() || !emailValid || !subject.trim() || !message.trim()) return;
     setStatus("sending");
     try {
       const res = await fetch(FORMSPREE_CONTACT_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ name: cname, email, message }),
+        body: JSON.stringify({ name: cname, email, _subject: subject.trim(), message }),
       });
       setStatus(res.ok ? "success" : "error");
     } catch {
       setStatus("error");
     }
-  }, [cname, email, message]);
+  }, [cname, email, emailValid, subject, message]);
 
   if (status === "success") {
     return (
@@ -339,13 +344,20 @@ export function ContactForm({ t }) {
     fontSize: 15, color: "var(--text)",
     outline: "none", fontFamily: "inherit",
   };
-  const disabled = status === "sending" || !cname.trim() || !email.trim() || !message.trim();
+  const disabled = status === "sending" || !cname.trim() || !emailValid || !subject.trim() || !message.trim();
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-      <input type="text"  placeholder={t.contactName}    value={cname}   onChange={e => setCname(e.target.value)}   required style={inputStyle} />
-      <input type="email" placeholder={t.contactEmail}   value={email}   onChange={e => setEmail(e.target.value)}   required style={inputStyle} />
-      <textarea           placeholder={t.contactMessage} value={message} onChange={e => setMessage(e.target.value)} required rows={4}
+      <input type="text"  placeholder={t.contactName    ?? "Your name"}    value={cname}   onChange={e => setCname(e.target.value)}   required style={inputStyle} />
+      <input type="email" placeholder={t.contactEmail   ?? "Your email"}   value={email}   onChange={e => setEmail(e.target.value)}   required
+        style={{ ...inputStyle, borderColor: email && !emailValid ? "var(--red, #FF3B30)" : undefined }} />
+      {email && !emailValid && (
+        <div style={{ fontSize: 12, color: "var(--red, #FF3B30)", marginTop: -6, paddingLeft: 4 }}>
+          {t.contactEmailInvalid ?? "Please enter a valid email address."}
+        </div>
+      )}
+      <input type="text"  placeholder={t.contactSubject ?? "Subject"}      value={subject} onChange={e => setSubject(e.target.value)} required style={inputStyle} />
+      <textarea           placeholder={t.contactMessage ?? "Your message"} value={message} onChange={e => setMessage(e.target.value)} required rows={4}
         style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }}
       />
       {status === "error" && (
@@ -440,12 +452,15 @@ function collectDebugSnapshot() {
 export function FeedbackForm({ t, debugWords = [] }) {
   const [cname,   setCname]   = useState("");
   const [email,   setEmail]   = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [status,  setStatus]  = useState("idle");
 
+  const emailValid = EMAIL_RE.test(email.trim());
+
   const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-    if (!cname.trim() || !email.trim() || !message.trim()) return;
+    if (!cname.trim() || !emailValid || !subject.trim() || !message.trim()) return;
     setStatus("sending");
 
     const debug = collectDebugSnapshot();
@@ -459,7 +474,7 @@ export function FeedbackForm({ t, debugWords = [] }) {
           name: cname,
           email,
           message,
-          _subject: "[FEEDBACK] SpeakEasy",
+          _subject: `[FEEDBACK] ${subject.trim()}`,
           debug,
         }),
       });
@@ -467,7 +482,7 @@ export function FeedbackForm({ t, debugWords = [] }) {
     } catch {
       setStatus("error");
     }
-  }, [cname, email, message, debugWords]);
+  }, [cname, email, emailValid, subject, message, debugWords]);
 
   if (status === "success") {
     return (
@@ -492,12 +507,19 @@ export function FeedbackForm({ t, debugWords = [] }) {
     fontSize: 15, color: "var(--text)",
     outline: "none", fontFamily: "inherit",
   };
-  const disabled = status === "sending" || !cname.trim() || !email.trim() || !message.trim();
+  const disabled = status === "sending" || !cname.trim() || !emailValid || !subject.trim() || !message.trim();
 
   return (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
       <input type="text"  placeholder={t?.contactName    ?? "Your name"}    value={cname}   onChange={e => setCname(e.target.value)}   required style={inputStyle} />
-      <input type="email" placeholder={t?.contactEmail   ?? "Your email"}   value={email}   onChange={e => setEmail(e.target.value)}   required style={inputStyle} />
+      <input type="email" placeholder={t?.contactEmail   ?? "Your email"}   value={email}   onChange={e => setEmail(e.target.value)}   required
+        style={{ ...inputStyle, borderColor: email && !emailValid ? "var(--red, #FF3B30)" : undefined }} />
+      {email && !emailValid && (
+        <div style={{ fontSize: 12, color: "var(--red, #FF3B30)", marginTop: -6, paddingLeft: 4 }}>
+          {t?.contactEmailInvalid ?? "Please enter a valid email address."}
+        </div>
+      )}
+      <input type="text"  placeholder={t?.contactSubject ?? "Subject"}       value={subject} onChange={e => setSubject(e.target.value)} required style={inputStyle} />
       <textarea           placeholder={t?.contactMessage ?? "Your feedback"} value={message} onChange={e => setMessage(e.target.value)} required rows={4}
         style={{ ...inputStyle, resize: "vertical", lineHeight: 1.5 }}
       />

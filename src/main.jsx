@@ -29,6 +29,12 @@ function _setAppHeight() {
 }
 _setAppHeight();
 window.addEventListener('resize', _setAppHeight);
+// On mobile, resuming from background fires visibilitychange / pageshow but
+// NOT resize, so --app-height stays stale and the layout collapses.
+window.addEventListener('pageshow', _setAppHeight);
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) _setAppHeight();
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

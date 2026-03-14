@@ -8,7 +8,7 @@ import {
   Languages, Volume2, Gauge, Music, Mic, Play,
   Brain, Zap, Download, Trash2, RotateCcw,
   Hand, Ear, Search, Globe, Headphones,
-  Sun, Moon, MousePointerClick, Wand2,
+  Sun, Moon, MousePointerClick, Wand2, Info,
 } from "lucide-react";
 import { LANGUAGES, ACTIVATION_KEYWORDS } from "../../i18n/languages";
 import ConfirmSheet from "../../shared/ui/ConfirmSheet";
@@ -206,7 +206,7 @@ export default memo(function SettingsPanel({
         )}
 
         {/* ── Listen Mode ── */}
-        {show("listen", "wake", "keyword", "activation", "ear", ui?.sectionListen ?? "listen mode") && (
+        {import.meta.env.VITE_DEMO !== "true" && show("listen", "wake", "keyword", "activation", "ear", ui?.sectionListen ?? "listen mode") && (
         <Section title={ui?.sectionListen ?? "Listen Mode"}>
           <Row
             Icon={Ear}
@@ -422,6 +422,23 @@ export default memo(function SettingsPanel({
                 {ui?.resetAction ?? "Reset"}
               </ActionButton>
             }
+            border={false}
+          />
+        </Section>
+        )}
+
+        {/* ── About ── */}
+        {show("about", "version", "app", "info", ui?.sectionAbout ?? "about") && (
+        <Section title={ui?.sectionAbout ?? "About"}>
+          <Row
+            Icon={Info}
+            iconBg="var(--tint)"
+            label={ui?.rowAppName ?? "SpeakEasy AAC"}
+            sublabel={`v${typeof __APP_VERSION__ !== "undefined" ? __APP_VERSION__ : "dev"}${
+              import.meta.env.VITE_DEMO === "true" ? " · Demo" : ""
+            }${
+              import.meta.env.DEV ? " · Development" : ""
+            }`}
             border={false}
           />
         </Section>
