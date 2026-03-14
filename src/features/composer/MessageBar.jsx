@@ -5,7 +5,7 @@
  */
 
 import { memo, useRef, useEffect, useState, useCallback } from "react";
-import { Volume2, Delete, X, Star, Square, RotateCcw } from "lucide-react";
+import { Volume2, Delete, X, Heart, Square, RotateCcw } from "lucide-react";
 
 // ── WordChip ─────────────────────────────────────────────────────────────────
 
@@ -130,6 +130,7 @@ function MessageBar({
   const [clearHint, setClearHint]     = useState(false);  // brief "hold" hint
   const [clearActive, setClearActive]   = useState(false); // long-press achieved
   const [clearPressing, setClearPressing] = useState(false); // fill animation active
+  const [savedFav, setSavedFav] = useState(false); // heart confirmation flash
 
   const handleClearDown = useCallback(() => {
     setClearActive(false);
@@ -341,13 +342,17 @@ function MessageBar({
             onClick={() => {
               const full = [...wordTexts, draft.trim()]
                 .filter(Boolean).join(" ");
-              if (full) onSaveFavorite(full);
+              if (full) {
+                onSaveFavorite(full);
+                setSavedFav(true);
+                setTimeout(() => setSavedFav(false), 1400);
+              }
             }}
             style={iconBtn(!hasSomething)}
           >
-            <Star size={18} strokeWidth={1.8}
-              fill={hasSomething ? "var(--orange, #FF9500)" : "none"}
-              style={{ color: hasSomething ? "var(--orange, #FF9500)" : undefined }}
+            <Heart size={18} strokeWidth={1.8}
+              fill={savedFav ? "var(--red, #FF3B30)" : (hasSomething ? "none" : "none")}
+              style={{ color: savedFav ? "var(--red, #FF3B30)" : (hasSomething ? "var(--text-2)" : undefined), transition: "color 0.2s, fill 0.2s" }}
             />
           </button>
         )}
