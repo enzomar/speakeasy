@@ -372,16 +372,90 @@ export default {
   "describe:dc_broken":  ["C'est cassé"],
   "describe:dc_same":    ["C'est pareil", "Comme avant"],
 
+  // ── bon L3
   "describe:dc_good:x_very":     ["C'est très bien", "C'est vraiment bien"],
   "describe:dc_good:x_not":      ["Ce n'est pas bien"],
-  "describe:dc_bad:x_very":      ["C'est très mal"],
+  "describe:dc_good:x_little":   ["C'est un peu bien", "C'est correct"],
+  "describe:dc_good:x_more":     ["C'est encore mieux", "C'est mieux maintenant"],
+  "describe:dc_good:x_less":     ["C'est moins bien", "Pas aussi bien"],
+  "describe:dc_good:x_maybe":    ["C'est peut-être bien", "Je pense que c'est bien"],
+  "describe:dc_good:x_done":     ["Tout va bien maintenant", "C'est bon, c'est fini"],
+  "describe:dc_good:x_diff":     ["Celui-ci est mieux", "L'autre est bien"],
+  "describe:dc_good:x_again":    ["C'est bien à nouveau", "Encore bien"],
+  "describe:dc_good:x_please":   ["Bien, s'il te plaît"],
+  "describe:dc_good:t_now":      ["C'est bien maintenant"],
+  "describe:dc_good:t_today":    ["C'est bien aujourd'hui"],
+
+  // ── mauvais L3
+  "describe:dc_bad:x_very":      ["C'est très mal", "C'est vraiment mauvais"],
+  "describe:dc_bad:x_not":       ["Ce n'est pas mal", "Pas mal"],
+  "describe:dc_bad:x_little":    ["C'est un peu mauvais"],
+  "describe:dc_bad:x_maybe":     ["C'est peut-être mauvais"],
+  "describe:dc_bad:x_done":      ["C'est mauvais, j'arrête"],
+  "describe:dc_bad:t_now":       ["C'est mauvais maintenant"],
+  "describe:dc_bad:t_today":     ["C'est mauvais aujourd'hui"],
+
+  // ── prêt L3
+  "describe:dc_ready:x_not":     ["Je ne suis pas prêt", "Ce n'est pas prêt"],
+  "describe:dc_ready:x_maybe":   ["Je suis peut-être prêt", "Je crois que c'est prêt"],
+  "describe:dc_ready:t_now":     ["Je suis prêt maintenant"],
+  "describe:dc_ready:t_soon":    ["Je serai prêt bientôt"],
+  "describe:dc_ready:t_later":   ["Je serai prêt plus tard"],
+
+  // ── chaud L3
   "describe:dc_hot:x_very":      ["C'est très chaud"],
   "describe:dc_hot:x_not":       ["Ce n'est pas chaud"],
+  "describe:dc_hot:x_little":    ["C'est un peu chaud"],
+  "describe:dc_hot:o_food":      ["La nourriture est chaude"],
+  "describe:dc_hot:o_water":     ["L'eau est chaude"],
+  "describe:dc_hot:t_now":       ["C'est chaud maintenant"],
+
+  // ── froid L3
   "describe:dc_cold:x_very":     ["C'est très froid"],
   "describe:dc_cold:x_not":      ["Ce n'est pas froid"],
+  "describe:dc_cold:x_little":   ["C'est un peu froid"],
+  "describe:dc_cold:o_food":     ["La nourriture est froide"],
+  "describe:dc_cold:o_water":    ["L'eau est froide"],
+  "describe:dc_cold:t_now":      ["C'est froid maintenant"],
+
+  // ── bruyant / calme L3
   "describe:dc_loud:x_very":     ["C'est très fort", "Beaucoup trop fort"],
-  "describe:dc_ready:x_not":     ["Je ne suis pas prêt", "Ce n'est pas prêt"],
-  "describe:dc_ready:t_now":     ["Je suis prêt maintenant"],
+  "describe:dc_loud:x_not":      ["Ce n'est pas fort"],
+  "describe:dc_loud:x_little":   ["C'est un peu fort"],
+  "describe:dc_loud:x_please":   ["Moins fort s'il te plaît", "Trop fort s'il te plaît"],
+  "describe:dc_loud:pl_here":    ["C'est bruyant ici"],
+  "describe:dc_quiet:x_very":    ["C'est très calme"],
+  "describe:dc_quiet:x_not":     ["Ce n'est pas calme"],
+  "describe:dc_quiet:pl_here":   ["C'est calme ici"],
+
+  // ── grand / petit L3
+  "describe:dc_big:x_very":      ["C'est très grand", "Beaucoup trop grand"],
+  "describe:dc_big:x_not":       ["Ce n'est pas grand"],
+  "describe:dc_big:x_little":    ["C'est un peu grand"],
+  "describe:dc_small:x_very":    ["C'est très petit", "Trop petit"],
+  "describe:dc_small:x_not":     ["Ce n'est pas petit"],
+  "describe:dc_small:x_little":  ["C'est un peu petit"],
+
+  // ── joli L3
+  "describe:dc_nice:x_very":     ["C'est très joli", "C'est vraiment beau"],
+  "describe:dc_nice:x_not":      ["Ce n'est pas joli"],
+
+  // ── nouveau / vieux L3
+  "describe:dc_new:x_very":      ["C'est tout neuf"],
+  "describe:dc_new:x_not":       ["Ce n'est pas nouveau"],
+  "describe:dc_old:x_very":      ["C'est très vieux"],
+  "describe:dc_old:x_not":       ["Ce n'est pas vieux"],
+
+  // ── cassé L3
   "describe:dc_broken:o_phone":  ["Le téléphone est cassé"],
   "describe:dc_broken:o_toy":    ["Le jouet est cassé"],
+  "describe:dc_broken:o_door":   ["La porte est cassée"],
+  "describe:dc_broken:o_light":  ["La lumière est cassée"],
+  "describe:dc_broken:o_tv":     ["La télé est cassée"],
+  "describe:dc_broken:x_not":    ["Ce n'est pas cassé"],
+  "describe:dc_broken:x_very":   ["C'est complètement cassé"],
+
+  // ── pareil L3
+  "describe:dc_same:x_not":      ["Ce n'est pas pareil", "C'est différent"],
+  "describe:dc_same:x_again":    ["Encore pareil", "Comme avant"],
 };

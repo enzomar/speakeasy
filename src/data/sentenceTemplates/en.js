@@ -371,16 +371,90 @@ export default {
   "describe:dc_broken":  ["It is broken", "This is broken"],
   "describe:dc_same":    ["It is the same", "Same as before"],
 
+  // ── good L3
   "describe:dc_good:x_very":     ["It is very good", "That's really good"],
   "describe:dc_good:x_not":      ["It is not good"],
-  "describe:dc_bad:x_very":      ["It is very bad"],
+  "describe:dc_good:x_little":   ["It is a little good", "It is okay"],
+  "describe:dc_good:x_more":     ["It is even better", "It is better now"],
+  "describe:dc_good:x_less":     ["It is less good", "Not as good"],
+  "describe:dc_good:x_maybe":    ["Maybe it is good", "I think it is good"],
+  "describe:dc_good:x_done":     ["All good now", "It is good, we are done"],
+  "describe:dc_good:x_diff":     ["This one is better", "The other one is good"],
+  "describe:dc_good:x_again":    ["It is good again", "Good again"],
+  "describe:dc_good:x_please":   ["Good, please", "That would be good please"],
+  "describe:dc_good:t_now":      ["It is good now"],
+  "describe:dc_good:t_today":    ["It is good today"],
+
+  // ── bad L3
+  "describe:dc_bad:x_very":      ["It is very bad", "That's really bad"],
+  "describe:dc_bad:x_not":       ["It is not bad", "Not bad"],
+  "describe:dc_bad:x_little":    ["It is a little bad"],
+  "describe:dc_bad:x_maybe":     ["Maybe it is bad"],
+  "describe:dc_bad:x_done":      ["Bad, I am done"],
+  "describe:dc_bad:t_now":       ["It is bad now"],
+  "describe:dc_bad:t_today":     ["It is bad today"],
+
+  // ── ready L3
+  "describe:dc_ready:x_not":     ["I am not ready", "It is not ready"],
+  "describe:dc_ready:x_maybe":   ["Maybe I am ready", "I think I am ready"],
+  "describe:dc_ready:t_now":     ["I am ready now"],
+  "describe:dc_ready:t_soon":    ["I will be ready soon"],
+  "describe:dc_ready:t_later":   ["I will be ready later"],
+
+  // ── hot L3
   "describe:dc_hot:x_very":      ["It is very hot"],
   "describe:dc_hot:x_not":       ["It is not hot"],
+  "describe:dc_hot:x_little":    ["It is a little hot"],
+  "describe:dc_hot:o_food":      ["The food is hot"],
+  "describe:dc_hot:o_water":     ["The water is hot"],
+  "describe:dc_hot:t_now":       ["It is hot now"],
+
+  // ── cold L3
   "describe:dc_cold:x_very":     ["It is very cold"],
   "describe:dc_cold:x_not":      ["It is not cold"],
+  "describe:dc_cold:x_little":   ["It is a little cold"],
+  "describe:dc_cold:o_food":     ["The food is cold"],
+  "describe:dc_cold:o_water":    ["The water is cold"],
+  "describe:dc_cold:t_now":      ["It is cold now"],
+
+  // ── loud / quiet L3
   "describe:dc_loud:x_very":     ["It is very loud", "Way too loud"],
-  "describe:dc_ready:x_not":     ["I am not ready", "It is not ready"],
-  "describe:dc_ready:t_now":     ["I am ready now"],
+  "describe:dc_loud:x_not":      ["It is not loud"],
+  "describe:dc_loud:x_little":   ["It is a little loud"],
+  "describe:dc_loud:x_please":   ["Quieter please", "Too loud please"],
+  "describe:dc_loud:pl_here":    ["It is loud here"],
+  "describe:dc_quiet:x_very":    ["It is very quiet"],
+  "describe:dc_quiet:x_not":     ["It is not quiet"],
+  "describe:dc_quiet:pl_here":   ["It is quiet here"],
+
+  // ── big / small L3
+  "describe:dc_big:x_very":      ["It is very big", "Way too big"],
+  "describe:dc_big:x_not":       ["It is not big"],
+  "describe:dc_big:x_little":    ["It is a little big"],
+  "describe:dc_small:x_very":    ["It is very small", "Too small"],
+  "describe:dc_small:x_not":     ["It is not small"],
+  "describe:dc_small:x_little":  ["It is a little small"],
+
+  // ── nice L3
+  "describe:dc_nice:x_very":     ["It is very nice", "That's really nice"],
+  "describe:dc_nice:x_not":      ["It is not nice"],
+
+  // ── new / old L3
+  "describe:dc_new:x_very":      ["It is brand new"],
+  "describe:dc_new:x_not":       ["It is not new"],
+  "describe:dc_old:x_very":      ["It is very old"],
+  "describe:dc_old:x_not":       ["It is not old"],
+
+  // ── broken L3
   "describe:dc_broken:o_phone":  ["The phone is broken"],
   "describe:dc_broken:o_toy":    ["The toy is broken"],
+  "describe:dc_broken:o_door":   ["The door is broken"],
+  "describe:dc_broken:o_light":  ["The light is broken"],
+  "describe:dc_broken:o_tv":     ["The TV is broken"],
+  "describe:dc_broken:x_not":    ["It is not broken"],
+  "describe:dc_broken:x_very":   ["It is completely broken"],
+
+  // ── same L3
+  "describe:dc_same:x_not":      ["It is not the same", "It is different"],
+  "describe:dc_same:x_again":    ["Same again", "The same as before"],
 };

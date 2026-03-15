@@ -28,7 +28,7 @@
  */
 
 import { memo, useState, useCallback, useRef, useEffect, useMemo } from "react";
-import { Delete, CornerDownLeft, Volume2, Type, Check } from "lucide-react";
+import { Delete, Check } from "lucide-react";
 import { haptic } from "../../app/native";
 import { getWordList, getStarters } from "../../data/wordFrequency";
 
@@ -63,6 +63,43 @@ const KEY_LAYOUTS = {
 };
 
 function getLayout(lang) { return KEY_LAYOUTS[lang] ?? KEY_LAYOUTS.en; }
+
+// ── Standard QWERTY / AZERTY layouts ─────────────────────────────────────────
+
+const ALPHA_LAYOUTS = {
+  en: [
+    ["Q","W","E","R","T","Y","U","I","O","P"],
+    ["A","S","D","F","G","H","J","K","L"],
+    ["Z","X","C","V","B","N","M"],
+  ],
+  fr: [
+    ["A","Z","E","R","T","Y","U","I","O","P"],
+    ["Q","S","D","F","G","H","J","K","L","M"],
+    ["W","X","C","V","B","N"],
+  ],
+  es: [
+    ["Q","W","E","R","T","Y","U","I","O","P"],
+    ["A","S","D","F","G","H","J","K","L","Ñ"],
+    ["Z","X","C","V","B","N","M"],
+  ],
+  it: [
+    ["Q","W","E","R","T","Y","U","I","O","P"],
+    ["A","S","D","F","G","H","J","K","L"],
+    ["Z","X","C","V","B","N","M"],
+  ],
+  pt: [
+    ["Q","W","E","R","T","Y","U","I","O","P"],
+    ["A","S","D","F","G","H","J","K","L","Ç"],
+    ["Z","X","C","V","B","N","M"],
+  ],
+  de: [
+    ["Q","W","E","R","T","Z","U","I","O","P"],
+    ["A","S","D","F","G","H","J","K","L","Ö"],
+    ["Y","X","C","V","B","N","M","Ü","Ä"],
+  ],
+};
+
+function getAlphaLayout(lang) { return ALPHA_LAYOUTS[lang] ?? ALPHA_LAYOUTS.en; }
 
 // ── T9 Engine ─────────────────────────────────────────────────────────────────
 
@@ -140,11 +177,10 @@ export default memo(function SmartKeyboard({
   onSubmit,
 }) {
   const [keySeq, setKeySeq]             = useState([]);
-  const [spellingMode, setSpellingMode]  = useState(false);
-  const [spellingIdx, setSpellingIdx]    = useState(null);
+  const [kbType, setKbType]             = useState("t9");   // "t9" | "alpha"
+  const [alphaBuffer, setAlphaBuffer]   = useState("");
   const [numMode, setNumMode]            = useState(false);  // numbers + punctuation
   const [numBuffer, setNumBuffer]        = useState("");      // accumulates digits
-  const longPressTimerRef                = useRef(null);
   const predictScrollRef                 = useRef(null);
 
   // Standard phone numpad layout: 3 cols × 4 rows
@@ -156,54 +192,54 @@ export default memo(function SmartKeyboard({
     [".","0",","],
   ];
 
-  const layout   = useMemo(() => getLayout(langCode), [langCode]);
-  const charMap  = useMemo(() => buildCharMap(layout), [layout]);
-  const wordList = useMemo(() => getWordList(langCode), [langCode]);
-  const starters = useMemo(() => getStarters(langCode), [langCode]);
-  const t9Lookup = useMemo(() => buildT9Index(wordList, charMap), [wordList, charMap]);
+  const layout      = useMemo(() => getLayout(langCode), [langCode]);
+  const alphaLayout = useMemo(() => getAlphaLayout(langCode), [langCode]);
+  const charMap     = useMemo(() => buildCharMap(layout), [layout]);
+  const wordList    = useMemo(() => getWordList(langCode), [langCode]);
+  const starters    = useMemo(() => getStarters(langCode), [langCode]);
+  const t9Lookup    = useMemo(() => buildT9Index(wordList, charMap), [wordList, charMap]);
 
   // T9 candidates
   const t9Candidates = useMemo(() => t9Lookup(keySeq), [t9Lookup, keySeq]);
 
-  const hasKeys = keySeq.length > 0;
-  const showStarters = words.length === 0 && !hasKeys && !spellingMode && !numMode;
+  // Alpha (QWERTY/AZERTY) prefix matches
+  const alphaMatches = useMemo(() => {
+    if (!alphaBuffer) return [];
+    const lower = alphaBuffer.toLowerCase();
+    const exact = [];
+    const prefix = [];
+    for (const w of wordList) {
+      const wl = w.toLowerCase();
+      if (wl === lower) exact.push(w);
+      else if (wl.startsWith(lower)) prefix.push(w);
+    }
+    return [...exact, ...prefix].slice(0, 12);
+  }, [alphaBuffer, wordList]);
+
+  const hasKeys  = keySeq.length > 0;
+  const hasAlpha = alphaBuffer.length > 0;
+  const showStarters = words.length === 0 && !hasKeys && !hasAlpha && !numMode;
 
   // Auto-scroll prediction bar
   useEffect(() => {
     if (predictScrollRef.current) predictScrollRef.current.scrollLeft = 0;
-  }, [t9Candidates, predictions]);
+  }, [t9Candidates, alphaMatches, predictions]);
 
   // ── Key press (T9 mode) ──────────────────────────────────────────────────
   const handleKeyTap = useCallback((clusterIdx) => {
-    if (spellingMode) {
-      setSpellingIdx(prev => prev === clusterIdx ? null : clusterIdx);
-      return;
-    }
     setKeySeq(prev => [...prev, clusterIdx]);
-  }, [spellingMode]);
-
-  // ── Long-press → enter spelling mode ─────────────────────────────────────
-  const handleKeyDown = useCallback((clusterIdx) => {
-    longPressTimerRef.current = setTimeout(() => {
-      setSpellingMode(true);
-      setSpellingIdx(clusterIdx);
-      setKeySeq([]);
-    }, 500);
   }, []);
 
-  const handleKeyUp = useCallback(() => {
-    if (longPressTimerRef.current) {
-      clearTimeout(longPressTimerRef.current);
-      longPressTimerRef.current = null;
-    }
+  // ── Alpha mode key tap ───────────────────────────────────────────────────
+  const handleAlphaKey = useCallback((ch) => {
+    setAlphaBuffer(prev => prev + ch.toLowerCase());
   }, []);
 
   // ── Accept a word ────────────────────────────────────────────────────────
   const handleAccept = useCallback((word) => {
     onAcceptWord?.(word);
     setKeySeq([]);
-    setSpellingMode(false);
-    setSpellingIdx(null);
+    setAlphaBuffer("");
   }, [onAcceptWord]);
 
   // ── Accept a sentence starter (multi-word) ───────────────────────────────
@@ -211,12 +247,6 @@ export default memo(function SmartKeyboard({
     const parts = starter.trim().split(/\s+/).filter(Boolean);
     parts.forEach(w => onAcceptWord?.(w));
     setKeySeq([]);
-  }, [onAcceptWord]);
-
-  // ── Spelling mode letter tap ─────────────────────────────────────────────
-  const handleSpellChar = useCallback((ch) => {
-    onAcceptWord?.(ch.toLowerCase());
-    setSpellingIdx(null);
   }, [onAcceptWord]);
 
   // ── Number pad digit tap — append to buffer ───────────────────────────────
@@ -253,15 +283,14 @@ export default memo(function SmartKeyboard({
       handleNumBackspace();
       return;
     }
-    if (keySeq.length > 0) {
+    if (alphaBuffer.length > 0) {
+      setAlphaBuffer(prev => prev.slice(0, -1));
+    } else if (keySeq.length > 0) {
       setKeySeq(prev => prev.slice(0, -1));
-    } else if (spellingMode) {
-      setSpellingMode(false);
-      setSpellingIdx(null);
     } else {
       onBackspace?.();
     }
-  }, [numMode, handleNumBackspace, keySeq, spellingMode, onBackspace]);
+  }, [numMode, handleNumBackspace, alphaBuffer, keySeq, onBackspace]);
 
   // ── Submit ───────────────────────────────────────────────────────────────
   const handleSubmit = useCallback(() => {
@@ -270,20 +299,24 @@ export default memo(function SmartKeyboard({
       onAcceptWord?.(numBuffer.trim());
       setNumBuffer("");
     }
+    if (alphaBuffer) {
+      handleAccept(alphaMatches.length > 0 ? alphaMatches[0] : alphaBuffer);
+    }
     if (keySeq.length > 0 && t9Candidates.length > 0) {
       handleAccept(t9Candidates[0]);
     }
     onSubmit?.();
     setKeySeq([]);
+    setAlphaBuffer("");
     setNumMode(false);
     setNumBuffer("");
-  }, [numMode, numBuffer, onAcceptWord, keySeq, t9Candidates, handleAccept, onSubmit]);
+  }, [numMode, numBuffer, onAcceptWord, alphaBuffer, alphaMatches, keySeq, t9Candidates, handleAccept, onSubmit]);
 
-  // ── Toggle spelling mode ─────────────────────────────────────────────────
-  const toggleSpelling = useCallback(() => {
-    setSpellingMode(prev => !prev);
-    setSpellingIdx(null);
+  // ── Toggle keyboard type (T9 ↔ QWERTY/AZERTY) ───────────────────────────
+  const toggleKbType = useCallback(() => {
+    setKbType(prev => prev === "t9" ? "alpha" : "t9");
     setKeySeq([]);
+    setAlphaBuffer("");
   }, []);
 
   // ── Backspace long-press repeat ──────────────────────────────────────────
@@ -307,16 +340,18 @@ export default memo(function SmartKeyboard({
     };
   }, []);
 
-  // Split layout into rows of 4
+  // Split T9 layout into rows of 4
   const rows = [];
   for (let i = 0; i < layout.length; i += 4) rows.push(layout.slice(i, i + 4));
 
   // Items in the prediction/candidate strip
   const stripItems = hasKeys
     ? t9Candidates
-    : predictions.length > 0
-      ? predictions
-      : wordList.slice(0, 10);
+    : hasAlpha
+      ? alphaMatches
+      : predictions.length > 0
+        ? predictions
+        : wordList.slice(0, 10);
 
   // Active starter continuations (e.g. after tapping "I want" → show "water", "food", …)
   const activeStarter = useMemo(() => {
@@ -341,6 +376,12 @@ export default memo(function SmartKeyboard({
         background: "var(--bg)",
       }}
     >
+
+      {/* ── Top zone: absorbs height changes so keyboard stays fixed ── */}
+      <div style={{
+        flex: 1, display: "flex", flexDirection: "column",
+        justifyContent: "flex-start", overflow: "hidden",
+      }}>
 
       {/* ── Sentence starters (empty sentence) ──────────────────────────── */}
       {showStarters && (
@@ -413,6 +454,8 @@ export default memo(function SmartKeyboard({
         </div>
       )}
 
+      </div>{/* end top zone */}
+
       {/* ── Prediction / T9 candidate strip ─────────────────────────── */}
       <div
         ref={predictScrollRef}
@@ -426,7 +469,7 @@ export default memo(function SmartKeyboard({
           borderBottom: "0.5px solid var(--sep)",
           minHeight: 52,
           alignItems: "center",
-          background: hasKeys ? "var(--tint-soft)" : "var(--bg)",
+          background: (hasKeys || hasAlpha) ? "var(--tint-soft)" : "var(--bg)",
           transition: "background 0.15s",
         }}
       >
@@ -442,7 +485,19 @@ export default memo(function SmartKeyboard({
             {keySeq.map(ki => layout[ki]?.[0] ?? "?").join("")}▋
           </span>
         )}
-        {stripItems.length === 0 && hasKeys && (
+        {hasAlpha && (
+          <span style={{
+            fontSize: 14, fontWeight: 800, color: "var(--tint)",
+            alignSelf: "center",
+            padding: "4px 8px", borderRadius: 8,
+            background: "rgba(59,155,143,0.1)",
+            flexShrink: 0,
+            letterSpacing: "0.02em",
+          }}>
+            {alphaBuffer}▋
+          </span>
+        )}
+        {stripItems.length === 0 && (hasKeys || hasAlpha) && (
           <span
             role="status"
             aria-live="polite"
@@ -451,7 +506,7 @@ export default memo(function SmartKeyboard({
               fontStyle: "italic",
             }}
           >
-            No matches — try ABC mode
+            No matches
           </span>
         )}
         {stripItems.map((word, i) => (
@@ -460,24 +515,24 @@ export default memo(function SmartKeyboard({
             className="sk-pred"
             role="option"
             onClick={() => { haptic(); handleAccept(word); }}
-            aria-label={`${hasKeys ? "Select" : "Add"} ${word}`}
+            aria-label={`${(hasKeys || hasAlpha) ? "Select" : "Add"} ${word}`}
             style={{
               padding: "7px 16px", borderRadius: 20,
-              border: hasKeys && i === 0
+              border: (hasKeys || hasAlpha) && i === 0
                 ? "none"
                 : "1.5px solid var(--sep-opaque)",
               minHeight: 40,
-              background: hasKeys
+              background: (hasKeys || hasAlpha)
                 ? (i === 0 ? "var(--tint)" : "rgba(59,155,143,0.15)")
                 : "var(--surface)",
-              color: hasKeys
+              color: (hasKeys || hasAlpha)
                 ? (i === 0 ? "#fff" : "var(--tint)")
                 : "var(--tint)",
-              fontSize: 15, fontWeight: hasKeys && i === 0 ? 800 : 600,
+              fontSize: 15, fontWeight: (hasKeys || hasAlpha) && i === 0 ? 800 : 600,
               cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0,
               WebkitTapHighlightColor: "transparent",
               touchAction: "manipulation",
-              boxShadow: hasKeys && i === 0
+              boxShadow: (hasKeys || hasAlpha) && i === 0
                 ? "0 2px 10px rgba(59,155,143,0.35)"
                 : "none",
               transition: "transform 0.08s",
@@ -488,10 +543,9 @@ export default memo(function SmartKeyboard({
         ))}
       </div>
 
-      {/* ── Keyboard grid ─────────────────────────────────────────────── */}
+      {/* ── Keyboard grid (fixed at bottom — never shifts) ─────────── */}
       <div style={{
-        flex: 1, display: "flex", flexDirection: "column",
-        justifyContent: "center",
+        flexShrink: 0, display: "flex", flexDirection: "column",
         gap: 7, padding: "6px 6px 4px",
         background: "var(--bg)",
       }}>
@@ -569,44 +623,75 @@ export default memo(function SmartKeyboard({
               </div>
             ))}
           </>
+        ) : kbType === "alpha" ? (
+          /* ── QWERTY / AZERTY mode ── */
+          alphaLayout.map((row, ri) => (
+            <div key={ri} style={{ display: "flex", gap: 3, justifyContent: "center", padding: "0 2px" }}>
+
+              {ri === alphaLayout.length - 1 && (
+                <KeyBtn
+                  label="123"
+                  small
+                  ariaLabel="Number pad"
+                  onClick={() => { setNumMode(true); setNumBuffer(""); }}
+                />
+              )}
+
+              {row.map(ch => (
+                <button
+                  key={ch}
+                  className="sk-key"
+                  onClick={() => { haptic(); handleAlphaKey(ch); }}
+                  aria-label={ch}
+                  style={{
+                    flex: 1, minWidth: 0,
+                    height: 48, borderRadius: 8,
+                    border: "1px solid var(--sep-opaque)",
+                    background: "var(--elevated, var(--surface))",
+                    color: "var(--text)",
+                    fontSize: 17, fontWeight: 600,
+                    cursor: "pointer",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    WebkitTapHighlightColor: "transparent",
+                    touchAction: "manipulation",
+                    boxShadow: "0 1px 3px rgba(0,0,0,0.06)",
+                    textTransform: "uppercase",
+                    padding: 0,
+                  }}
+                >
+                  {ch.toLowerCase()}
+                </button>
+              ))}
+
+              {ri === alphaLayout.length - 1 && (
+                <KeyBtn
+                  label={<Delete size={18} strokeWidth={2} />}
+                  small
+                  ariaLabel="Backspace"
+                  onClick={handleBackspace}
+                  onPointerDown={handleBsDown}
+                  onPointerUpCapture={handleBsUp}
+                />
+              )}
+            </div>
+          ))
         ) : (
-          /* ── Letter T9 / spelling mode ── */
+          /* ── T9 cluster mode ── */
           rows.map((row, ri) => (
             <div key={ri} style={{ display: "flex", gap: 6, justifyContent: "center" }}>
 
               {ri === 0 && (
                 <KeyBtn
-                  label={spellingMode ? <Type size={17} /> : "123"}
-                  isAccent={spellingMode}
+                  label="123"
                   small
-                  ariaLabel={spellingMode ? "Exit spelling mode" : "Number pad"}
-                  onClick={spellingMode ? toggleSpelling : () => { setNumMode(true); setNumBuffer(""); }}
+                  ariaLabel="Number pad"
+                  onClick={() => { setNumMode(true); setNumBuffer(""); }}
                 />
               )}
 
               {row.map((cluster, ci) => {
                 const clusterIdx = ri * 4 + ci;
                 const isActive = keySeq[keySeq.length - 1] === clusterIdx;
-                const isSpellingOpen = spellingMode && spellingIdx === clusterIdx;
-
-                if (isSpellingOpen) {
-                  return (
-                    <div key={clusterIdx} style={{
-                      display: "flex", gap: 3,
-                      animation: "skFadeIn 0.12s ease",
-                    }}>
-                      {cluster.map(ch => (
-                        <KeyBtn
-                          key={ch}
-                          label={ch.toLowerCase()}
-                          isAccent
-                          ariaLabel={`Letter ${ch}`}
-                          onClick={() => handleSpellChar(ch)}
-                        />
-                      ))}
-                    </div>
-                  );
-                }
 
                 const label = cluster.slice(0, 2)
                   .map(c => c.toLowerCase())
@@ -619,8 +704,6 @@ export default memo(function SmartKeyboard({
                     isHighlighted={isActive}
                     ariaLabel={cluster.join(" ")}
                     onClick={() => handleKeyTap(clusterIdx)}
-                    onPointerDown={() => handleKeyDown(clusterIdx)}
-                    onPointerUpCapture={handleKeyUp}
                   />
                 );
               })}
@@ -639,14 +722,15 @@ export default memo(function SmartKeyboard({
           ))
         )}
 
-        {/* ── Bottom row ─────────────────────────────────────────────── */}
+        {/* ── Bottom row (hidden in numMode) ─────────────────────── */}
+        {!numMode && (
         <div style={{ display: "flex", gap: 6, justifyContent: "center", padding: "0 4px" }}>
           <KeyBtn
-            label={spellingMode ? "T9" : "ABC"}
+            label={kbType === "alpha" ? "T9" : "ABC"}
             small
-            isAccent={spellingMode}
-            ariaLabel={spellingMode ? "Switch to T9 mode" : "Switch to spelling mode"}
-            onClick={toggleSpelling}
+            isAccent={kbType === "alpha"}
+            ariaLabel={kbType === "alpha" ? "Switch to T9 mode" : "Switch to QWERTY keyboard"}
+            onClick={toggleKbType}
           />
 
           {/* Space / accept bar */}
@@ -656,48 +740,46 @@ export default memo(function SmartKeyboard({
               haptic();
               if (hasKeys && t9Candidates.length > 0) {
                 handleAccept(t9Candidates[0]);
+              } else if (hasAlpha) {
+                handleAccept(alphaMatches.length > 0 ? alphaMatches[0] : alphaBuffer);
               }
             }}
-            aria-label={hasKeys && t9Candidates.length > 0
-              ? `Accept ${t9Candidates[0]}`
-              : "Space"}
+            aria-label={
+              hasKeys && t9Candidates.length > 0
+                ? `Accept ${t9Candidates[0]}`
+                : hasAlpha && alphaMatches.length > 0
+                  ? `Accept ${alphaMatches[0]}`
+                  : "Space"}
             style={{
               flex: 1, maxWidth: 240,
               height: 52, borderRadius: 14,
-              border: hasKeys
+              border: (hasKeys || hasAlpha)
                 ? "2px solid var(--tint)"
                 : "1px solid var(--sep-opaque)",
-              background: hasKeys
+              background: (hasKeys || hasAlpha)
                 ? "var(--tint)"
                 : "var(--elevated, var(--surface))",
-              color: hasKeys ? "#fff" : "var(--text-3)",
-              fontSize: hasKeys ? 16 : 14,
-              fontWeight: hasKeys ? 800 : 600,
+              color: (hasKeys || hasAlpha) ? "#fff" : "var(--text-3)",
+              fontSize: (hasKeys || hasAlpha) ? 16 : 14,
+              fontWeight: (hasKeys || hasAlpha) ? 800 : 600,
               cursor: "pointer",
               WebkitTapHighlightColor: "transparent",
               touchAction: "manipulation",
-              boxShadow: hasKeys
+              boxShadow: (hasKeys || hasAlpha)
                 ? "0 3px 10px rgba(59,155,143,0.35)"
                 : "0 1px 3px rgba(0,0,0,0.07)",
               transition: "all 0.12s",
-              letterSpacing: hasKeys ? "0.01em" : "0.04em",
+              letterSpacing: (hasKeys || hasAlpha) ? "0.01em" : "0.04em",
             }}
           >
             {hasKeys && t9Candidates.length > 0
               ? t9Candidates[0]
-              : "space"}
+              : hasAlpha && alphaMatches.length > 0
+                ? alphaMatches[0]
+                : "space"}
           </button>
-
-          <KeyBtn
-            label={words.length > 0
-              ? <Volume2 size={20} strokeWidth={2} />
-              : <CornerDownLeft size={20} strokeWidth={2} />}
-            isAccent
-            small
-            ariaLabel={words.length > 0 ? "Speak sentence" : "Submit"}
-            onClick={handleSubmit}
-          />
         </div>
+        )}
       </div>
 
       <style>{`

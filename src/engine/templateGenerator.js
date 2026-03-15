@@ -661,15 +661,30 @@ const RECIPE_MAP = {
   "describe:dc_good:x_very":    { type: "build", concepts: ["GOOD", "VERY"] },
   "describe:dc_good:x_not":     { type: "build", concepts: ["NOT", "GOOD"] },
   "describe:dc_bad:x_very":     { type: "build", concepts: ["BAD", "VERY"] },
+  "describe:dc_bad:x_not":      { type: "build", concepts: ["NOT", "BAD"] },
   "describe:dc_hot:x_very":     { type: "build", concepts: ["HOT", "VERY"] },
   "describe:dc_hot:x_not":      { type: "build", concepts: ["NOT", "HOT"] },
   "describe:dc_cold:x_very":    { type: "build", concepts: ["COLD", "VERY"] },
   "describe:dc_cold:x_not":     { type: "build", concepts: ["NOT", "COLD"] },
   "describe:dc_loud:x_very":    { type: "build", concepts: ["LOUD", "VERY"] },
+  "describe:dc_loud:x_not":     { type: "build", concepts: ["NOT", "LOUD"] },
+  "describe:dc_quiet:x_very":   { type: "build", concepts: ["QUIET", "VERY"] },
+  "describe:dc_quiet:x_not":    { type: "build", concepts: ["NOT", "QUIET"] },
+  "describe:dc_big:x_very":     { type: "build", concepts: ["BIG", "VERY"] },
+  "describe:dc_big:x_not":      { type: "build", concepts: ["NOT", "BIG"] },
+  "describe:dc_small:x_very":   { type: "build", concepts: ["SMALL", "VERY"] },
+  "describe:dc_small:x_not":    { type: "build", concepts: ["NOT", "SMALL"] },
+  "describe:dc_nice:x_very":    { type: "build", concepts: ["GOOD", "VERY"] },
+  "describe:dc_nice:x_not":     { type: "build", concepts: ["NOT", "GOOD"] },
+  "describe:dc_new:x_not":      { type: "build", concepts: ["NOT", "NEW"] },
+  "describe:dc_old:x_not":      { type: "build", concepts: ["NOT", "OLD"] },
   "describe:dc_ready:x_not":    { type: "build", concepts: ["I", "NOT", "READY"] },
   "describe:dc_ready:t_now":    { type: "append_time", base: { type: "build", concepts: ["I", "READY"] }, time: "t_now" },
+  "describe:dc_ready:t_soon":   { type: "append_time", base: { type: "build", concepts: ["I", "READY"] }, time: "t_soon" },
   "describe:dc_broken:o_phone": { type: "build", concepts: ["PHONE", "BROKEN"] },
   "describe:dc_broken:o_toy":   { type: "build", concepts: ["TOY", "BROKEN"] },
+  "describe:dc_broken:o_door":  { type: "build", concepts: ["DOOR", "BROKEN"] },
+  "describe:dc_broken:o_light": { type: "build", concepts: ["LIGHT", "BROKEN"] },
 };
 
 // ── Public API ──────────────────────────────────────────────────────────────
@@ -742,23 +757,36 @@ function detectModifierType(l3Id) {
  * Compose intensity (very/a little/not) onto a base recipe.
  */
 function composeIntensity(baseRecipe, l3Id) {
-  const intensityMap = { x_very: "VERY", x_little: "A_LITTLE", x_not: "NOT", x_more: "VERY" };
-  const op = intensityMap[l3Id];
-  if (!op || !baseRecipe) return null;
-  if (baseRecipe.type === "build") {
-    const concepts = [...asArray(baseRecipe.concepts)];
-    // Insert operator before the predicate (after subject)
-    if (op === "NOT") {
-      // NOT goes after subject: [I, NOT, HAPPY]
-      if (concepts.length >= 2) concepts.splice(1, 0, op);
-      else concepts.unshift(op);
-    } else {
-      // VERY/A_LITTLE goes at the end: [I, HAPPY, VERY]
-      concepts.push(op);
-    }
-    return { type: "build", concepts };
+  if (!baseRecipe || baseRecipe.type !== "build") return null;
+  const concepts = [...asArray(baseRecipe.concepts)];
+
+  switch (l3Id) {
+    case "x_very":
+    case "x_more":
+      concepts.push("VERY");
+      return { type: "build", concepts };
+    case "x_little":
+      concepts.push("A_LITTLE");
+      return { type: "build", concepts };
+    case "x_not":
+      if (concepts.length >= 2) concepts.splice(1, 0, "NOT");
+      else concepts.unshift("NOT");
+      return { type: "build", concepts };
+    case "x_less":
+      // "less X" — reuse A_LITTLE as closest semantic equivalent
+      concepts.push("A_LITTLE");
+      return { type: "build", concepts };
+    case "x_again":
+      concepts.push("AGAIN");
+      return { type: "build", concepts };
+    case "x_please":
+      concepts.push("PLEASE");
+      return { type: "build", concepts };
+    // x_maybe, x_done, x_diff — no matching concept in lexicon;
+    // let curated templates handle these
+    default:
+      return null;
   }
-  return null;
 }
 
 /**
