@@ -109,6 +109,11 @@ export default defineConfig({
           },
         ],
 
+        // Ensure /app navigations always serve the SPA shell (index.html),
+        // even when offline or before the network responds.
+        navigateFallback: '/index.html',
+        navigateFallbackAllowlist: [/^\/app/],
+
         // Skip waiting so updates activate immediately
         skipWaiting: true,
         clientsClaim: true,

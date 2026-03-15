@@ -260,6 +260,10 @@ input, select, textarea {
   to   { transform: scaleX(1); }
 }
 
+@keyframes clearFillReverse {
+  to { transform: scaleX(0); }
+}
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   25%      { transform: translateX(-4px); }

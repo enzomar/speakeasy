@@ -649,7 +649,6 @@ export default function App() {
   // ── Render ────────────────────────────────────────────────────────────────
   return (
     <div style={{
-      minHeight:     "100vh",
       height:        "var(--app-height, 100svh)",
       display:       "flex",
       flexDirection: "column",

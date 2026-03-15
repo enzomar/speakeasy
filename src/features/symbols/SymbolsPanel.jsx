@@ -17,7 +17,7 @@ import SymbolGlyph from "../../shared/ui/SymbolGlyph";
 // Vocab category tabs (everything except "grid")
 const VOCAB_CATEGORY_IDS = VOCAB_TABS.filter(t => t.id !== "grid");
 
-const LONG_PRESS_MS = 400;
+const LONG_PRESS_MS = 600;
 
 // ── Fullscreen overlay ────────────────────────────────────────────────────────
 
@@ -91,24 +91,33 @@ function FullscreenView({ item, langCode, onSpeak, onClose }) {
 function SymbolCell({ item, color, onSpeak, onFullscreen }) {
   const timerRef = useRef(null);
   const firedRef = useRef(false);
-  const [pressing, setPressing] = useState(false);
+  const [pressState, setPressState] = useState(null); // null | "pressing" | "releasing"
+  const startRef = useRef(0);  // timestamp when press began
 
   const handleDown = useCallback(() => {
     firedRef.current = false;
-    setPressing(true);
+    startRef.current = performance.now();
+    setPressState("pressing");
     // Defer the timer so it starts in sync with the CSS fill animation
     requestAnimationFrame(() => {
       timerRef.current = setTimeout(() => {
         firedRef.current = true;
-        setPressing(false);
+        setPressState(null);
         onFullscreen?.(item);
       }, LONG_PRESS_MS);
     });
   }, [item, onFullscreen]);
 
   const handleUp = useCallback(() => {
-    setPressing(false);
     if (timerRef.current) { clearTimeout(timerRef.current); timerRef.current = null; }
+    if (firedRef.current) { setPressState(null); return; }
+    // Reverse‐fill: animate back proportional to how far the fill got
+    const elapsed = performance.now() - startRef.current;
+    const pct = Math.min(elapsed / LONG_PRESS_MS, 1);
+    if (pct < 0.05) { setPressState(null); return; }           // barely started — just remove
+    const reverseDur = Math.round(pct * LONG_PRESS_MS * 0.5);  // shrink back at 2× speed
+    setPressState({ mode: "releasing", pct, duration: reverseDur });
+    setTimeout(() => setPressState(null), reverseDur + 10);
   }, []);
 
   const handleClick = useCallback((e) => {
@@ -156,7 +165,7 @@ function SymbolCell({ item, color, onSpeak, onFullscreen }) {
       onPointerDown2={e => { e.currentTarget.style.transform = "scale(0.93)"; }}
     >
       {/* Long-press fill indicator */}
-      {pressing && (
+      {pressState && (
         <span
           aria-hidden="true"
           style={{
@@ -166,8 +175,13 @@ function SymbolCell({ item, color, onSpeak, onFullscreen }) {
             opacity: 0.15,
             borderRadius: "inherit",
             transformOrigin: "left center",
-            animation: `clearFill ${LONG_PRESS_MS}ms linear forwards`,
             pointerEvents: "none",
+            ...(pressState === "pressing"
+              ? { animation: `clearFill ${LONG_PRESS_MS}ms linear forwards` }
+              : {
+                  transform: `scaleX(${pressState.pct})`,
+                  animation: `clearFillReverse ${pressState.duration}ms linear forwards`,
+                }),
           }}
         />
       )}
