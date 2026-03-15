@@ -250,4 +250,16 @@ export default {
   historyAll:         "전체",
   historyFavs:        "★ 즐겨찾기",
   globalSearch:       "기호, 단어, 문구 검색…",
+
+  // Board names
+  board_generic:    "일반",
+  board_home:       "집",
+  board_school:     "학교",
+  board_doctor:     "병원",
+  board_restaurant: "식당",
+  board_shopping:   "쇼핑",
+  board_transport:  "교통",
+  board_emergency:  "긴급",
+  board_work:       "직장",
+  board_social:     "소셜",
 };

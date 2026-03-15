@@ -12,11 +12,18 @@
  */
 
 import LEXICON from './lexicon.json' assert { type: 'json' };
+import { lookupConcept, hierarchyToConcept } from './conceptRegistry.js';
 
 // Helper: look up a concept from either concepts or operators section of lexicon
 // Operators take precedence so WANT/CAN/MUST are treated as modals, not verbs
 function _lookup(id) {
-  return LEXICON.operators[id] ?? LEXICON.concepts[id] ?? null;
+  // Try direct lexicon lookup first (most common)
+  const direct = LEXICON.operators[id] ?? LEXICON.concepts[id];
+  if (direct) return direct;
+  // Fall back to hierarchy→concept bridge
+  const conceptId = hierarchyToConcept(id);
+  if (conceptId) return LEXICON.operators[conceptId] ?? LEXICON.concepts[conceptId] ?? null;
+  return null;
 }
 import {
   inflectVerb,
@@ -279,39 +286,69 @@ function _render(parsed, lang) {
 function _naturalize(parts, lang, parsed) {
   let joined = parts.join(' ');
 
-  // French: je + vowel → j'
+  // French: elision (je + vowel → j', ne + vowel → n', de + vowel → d')
   if (lang === 'fr') {
-    joined = joined.replace(/^je ([aeéèêiouàâ])/i, "j'$1");
+    joined = joined.replace(/\bje ([aeéèêiouàâ])/gi, "j'$1");
     joined = joined.replace(/\bne ([aeéèêiouàâ])/gi, "n'$1");
+    joined = joined.replace(/\bde ([aeéèêiouàâ])/gi, "d'$1");
+    joined = joined.replace(/\ble ([aeéèêiouàâ])/gi, "l'$1");
+    joined = joined.replace(/\bla ([aeéèêiouàâ])/gi, "l'$1");
   }
 
-  // Italian: reflexive handling
+  // Italian: article contraction (di + il → del, a + il → al, etc.)
   if (lang === 'it') {
-    joined = joined.replace(/non mi /, 'non mi ');
+    joined = joined.replace(/\bdi il\b/g, 'del');
+    joined = joined.replace(/\bdi la\b/g, 'della');
+    joined = joined.replace(/\ba il\b/g, 'al');
+    joined = joined.replace(/\ba la\b/g, 'alla');
+    joined = joined.replace(/\bin il\b/g, 'nel');
+    joined = joined.replace(/\bin la\b/g, 'nella');
+  }
+
+  // Spanish: a + el → al, de + el → del
+  if (lang === 'es') {
+    joined = joined.replace(/\ba el\b/g, 'al');
+    joined = joined.replace(/\bde el\b/g, 'del');
+  }
+
+  // Portuguese: de + o → do, de + a → da, em + o → no, em + a → na
+  if (lang === 'pt') {
+    joined = joined.replace(/\bde o\b/g, 'do');
+    joined = joined.replace(/\bde a\b/g, 'da');
+    joined = joined.replace(/\bem o\b/g, 'no');
+    joined = joined.replace(/\bem a\b/g, 'na');
+    joined = joined.replace(/\ba o\b/g, 'ao');
+    joined = joined.replace(/\ba a\b/g, 'à');
   }
 
   // German: verb-second (V2) — in simple declarative main clauses
   // The verb should be in second position. If subject is present,
   // the order is already S-V which satisfies V2.
-  // For future tense with "werde", it's already handled in verb forms.
 
-  // Chinese: remove spaces between characters for more natural output
+  // Arabic: basic right-to-left concerns handled by CSS; clean up double spaces
+  if (lang === 'ar') {
+    joined = joined.replace(/\s{2,}/g, ' ');
+  }
+
+  // Chinese: remove spaces between CJK characters
   if (lang === 'zh') {
-    // Keep spaces around Latin characters but remove between CJK
     joined = joined.replace(/([\u4e00-\u9fff\u3000-\u303f])\s+([\u4e00-\u9fff\u3000-\u303f])/g, '$1$2');
-    // Apply again for consecutive CJK groups
     joined = joined.replace(/([\u4e00-\u9fff\u3000-\u303f])\s+([\u4e00-\u9fff\u3000-\u303f])/g, '$1$2');
   }
 
-  // Japanese: remove spaces for natural output (Japanese doesn't use spaces)
+  // Japanese: remove spaces (Japanese doesn't use word spaces)
   if (lang === 'ja') {
     joined = joined.replace(/\s+/g, '');
   }
 
   // Korean: keep spaces (Korean uses spaces between words)
-  // No special naturalization needed.
+  // Clean up double spaces only
+  if (lang === 'ko') {
+    joined = joined.replace(/\s{2,}/g, ' ');
+  }
 
-  // Arabic: no special naturalization needed for basic sentences
+  // Universal: collapse multiple spaces
+  joined = joined.replace(/\s{2,}/g, ' ').trim();
 
   return joined;
 }

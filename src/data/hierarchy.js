@@ -67,6 +67,10 @@ const TIME = typed("time", [
   { id: "t_always",    emoji: "♾️",  label: "always" },
   { id: "t_everyday",  emoji: "🗓️",  label: "every day" },     // ★ new — routine context
   { id: "t_minute",    emoji: "⏱️",  label: "in a minute" },   // ★ new — delay/wait
+  { id: "t_before",    emoji: "⏮️",  label: "before" },       // ★ new — sequencing
+  { id: "t_after",     emoji: "⏭️",  label: "after" },        // ★ new — sequencing
+  { id: "t_already",   emoji: "✅",  label: "already" },      // ★ new — completion
+  { id: "t_still",     emoji: "🔄",  label: "still" },        // ★ new — continuation
 ]);
 
 const PEOPLE = typed("person", [
@@ -278,6 +282,8 @@ const QUESTION_OBJECTS = pickOptions(OBJECTS, [
   "o_tv",
   "o_homework",
   "o_toy",
+  "o_clothes",
+  "o_bag",
 ]);
 
 const QUESTION_PEOPLE = pickOptions(PEOPLE, [
@@ -503,6 +509,7 @@ export const HIERARCHY = {
       { id: "pe_grandpa",    emoji: "👴",   label: "grandpa",    l3: l3(PREDICATES, TIME) },
       { id: "pe_friend",     emoji: "🤝",   label: "friend",     l3: l3(PREDICATES, TIME) },
       { id: "pe_teacher",    emoji: "🧑‍🏫",  label: "teacher",    l3: l3(PREDICATES, TIME) },
+      { id: "pe_doctor",     emoji: "🧑‍⚕️",  label: "doctor",     l3: l3(PREDICATES, TIME) },
       { id: "pe_nurse",      emoji: "💉",   label: "nurse",      l3: l3(PREDICATES, TIME) },
       { id: "pe_therapist",  emoji: "🩺",   label: "therapist",  l3: l3(PREDICATES, TIME) },
     ],
@@ -527,7 +534,7 @@ export const HIERARCHY = {
       { id: "d_stop",     emoji: "✋", label: "stop",     l3: l3(PEOPLE, TIME, POLARITY) },
       { id: "d_help",     emoji: "🆘", label: "help",     l3: l3(PEOPLE, TIME, POLARITY) },
       { id: "d_go",       emoji: "🚶", label: "go",       l3: l3(PLACES, PEOPLE, TIME) },
-      { id: "d_come",     emoji: "🫴", label: "come",     l3: l3(PLACES, PEOPLE, TIME) },
+      { id: "d_come",     emoji: "🫴", label: "come",     l3: l3(PLACES, PEOPLE, TIME, POLARITY) },
       { id: "d_give",     emoji: "🤲", label: "give",     l3: l3(OBJECTS, PEOPLE, POLARITY) },
       { id: "d_turn",     emoji: "🔄", label: "turn",     l3: l3(PEOPLE, TIME, POLARITY) },
       // ── Daily activity verbs ──
@@ -537,7 +544,7 @@ export const HIERARCHY = {
       { id: "d_watch",    emoji: "📺", label: "watch",    l3: l3(OBJECTS, POLARITY, TIME) },
       { id: "d_open",     emoji: "🚪", label: "open",     l3: l3(OBJECTS, POLARITY, TIME) },
       { id: "d_make",     emoji: "🛠️", label: "make",     l3: l3(OBJECTS, FOOD_CHOICES, POLARITY) },
-      { id: "d_read",     emoji: "📖", label: "read",     l3: l3(OBJECTS, PEOPLE, TIME) },
+      { id: "d_read",     emoji: "📖", label: "read",     l3: l3(OBJECTS, PEOPLE, TIME, POLARITY) },
       // ── Social / preference verbs ──
       { id: "d_like",     emoji: "👍", label: "like",     l3: l3(OBJECTS, FOOD_CHOICES, PEOPLE, POLARITY) },
       { id: "d_finish",   emoji: "🏁", label: "finish",   l3: l3(OBJECTS, TIME, POLARITY) },
@@ -569,8 +576,8 @@ export const HIERARCHY = {
       { id: "s_idk",        emoji: "🤷", label: "I don't know", l3: l3(POLARITY, OBJECTS, PEOPLE) },  // what/who you don't know about
       { id: "s_wait",       emoji: "⏸️", label: "wait",        l3: l3(PEOPLE, TIME, POLARITY) }, // ★ new
       { id: "s_understand", emoji: "💡", label: "understand",  l3: l3(POLARITY, PEOPLE, OBJECTS) }, // OBJECTS lets user specify WHAT: "don't understand the homework"
-      { id: "s_tell",       emoji: "🗣️", label: "tell",        l3: l3(PEOPLE, OBJECTS, TIME) },
-      { id: "s_ask",        emoji: "✋", label: "ask",          l3: l3(PEOPLE, OBJECTS, TIME) },
+      { id: "s_tell",       emoji: "🗣️", label: "tell",        l3: l3(PEOPLE, OBJECTS, TIME, POLARITY) },
+      { id: "s_ask",        emoji: "✋", label: "ask",          l3: l3(PEOPLE, OBJECTS, TIME, POLARITY) },
       { id: "s_repeat",     emoji: "🔄", label: "repeat",      l3: l3(POLARITY, TIME) },
     ],
   },

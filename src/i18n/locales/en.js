@@ -277,4 +277,16 @@ export default {
 
   // ── Audit: global search ──
   globalSearch:       "Search symbols, words, phrases…",
+
+  // Board names
+  board_generic:    "Generic",
+  board_home:       "Home",
+  board_school:     "School",
+  board_doctor:     "Doctor",
+  board_restaurant: "Restaurant",
+  board_shopping:   "Shopping",
+  board_transport:  "Transport",
+  board_emergency:  "Emergency",
+  board_work:       "Work",
+  board_social:     "Social",
 };

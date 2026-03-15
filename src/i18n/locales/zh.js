@@ -250,4 +250,16 @@ export default {
   historyAll:         "全部",
   historyFavs:        "★ 收藏",
   globalSearch:       "搜索符号、词语、短语…",
+
+  // Board names
+  board_generic:    "通用",
+  board_home:       "家",
+  board_school:     "学校",
+  board_doctor:     "医生",
+  board_restaurant: "餐厅",
+  board_shopping:   "购物",
+  board_transport:  "交通",
+  board_emergency:  "紧急",
+  board_work:       "工作",
+  board_social:     "社交",
 };

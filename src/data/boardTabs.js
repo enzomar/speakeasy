@@ -40,7 +40,7 @@ export const DEFAULT_PHRASES = {
     { id: "r11", emoji: "😢", label: "sorry",         translations: { en: "I'm sorry", es: "Lo siento", fr: "Désolé", it: "Mi dispiace", pt: "Desculpe" } },
     { id: "r12", emoji: "💬", label: "tellMore",      translations: { en: "Tell me more", es: "Cuéntame más", fr: "Dis-moi plus", it: "Dimmi di più", pt: "Conte-me mais" } },
     { id: "r13", emoji: "📝", label: "writeIt",       translations: { en: "Can you write it down?", es: "¿Puedes escribirlo?", fr: "Tu peux l'écrire?", it: "Puoi scriverlo?", pt: "Pode escrever?" } },
-    { id: "r14", emoji: "🐢", label: "slower",        translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus doucement", it: "Parla più lentamente", pt: "Fale mais devagar" } },
+    { id: "r14", emoji: "🐢", label: "slower",        translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus lentement", it: "Parla più lentamente", pt: "Fale mais devagar" } },
   ],
 
   // ── Doctor / Medical ────────────────────────────────────────────────────
@@ -97,7 +97,7 @@ export const DEFAULT_PHRASES = {
 
   // ── Conversation / Social ───────────────────────────────────────────────
   conversation: [
-    { id: "cv1",  emoji: "👋", label: "howAreYou",    translations: { en: "How are you?", es: "¿Cómo estás?", fr: "Comment allez-vous?", it: "Come stai?", pt: "Como vai?" } },
+    { id: "cv1",  emoji: "👋", label: "howAreYou",    translations: { en: "How are you?", es: "¿Cómo estás?", fr: "Comment tu vas ?", it: "Come stai?", pt: "Como vai?" } },
     { id: "cv2",  emoji: "😊", label: "imFine",       translations: { en: "I'm fine, thank you", es: "Estoy bien, gracias", fr: "Je vais bien, merci", it: "Sto bene, grazie", pt: "Estou bem, obrigado" } },
     { id: "cv3",  emoji: "🤝", label: "niceToMeet",   translations: { en: "Nice to meet you", es: "Mucho gusto", fr: "Enchanté", it: "Piacere di conoscerti", pt: "Prazer em conhecer" } },
     { id: "cv4",  emoji: "👤", label: "yourName",     translations: { en: "What's your name?", es: "¿Cómo te llamas?", fr: "Comment tu t'appelles?", it: "Come ti chiami?", pt: "Qual é o seu nome?" } },
@@ -105,7 +105,7 @@ export const DEFAULT_PHRASES = {
     { id: "cv6",  emoji: "😂", label: "thatsFunny",   translations: { en: "That's funny!", es: "¡Eso es gracioso!", fr: "C'est drôle!", it: "È divertente!", pt: "Isso é engraçado!" } },
     { id: "cv7",  emoji: "😊", label: "agree",        translations: { en: "I agree", es: "Estoy de acuerdo", fr: "Je suis d'accord", it: "Sono d'accordo", pt: "Concordo" } },
     { id: "cv8",  emoji: "🙅", label: "disagree",     translations: { en: "I don't agree", es: "No estoy de acuerdo", fr: "Je ne suis pas d'accord", it: "Non sono d'accordo", pt: "Não concordo" } },
-    { id: "cv9",  emoji: "🐢", label: "speakSlower",  translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus doucement", it: "Parla più lentamente", pt: "Fale mais devagar" } },
+    { id: "cv9",  emoji: "🐢", label: "speakSlower",  translations: { en: "Please speak slower", es: "Habla más despacio", fr: "Parle plus lentement", it: "Parla più lentamente", pt: "Fale mais devagar" } },
     { id: "cv10", emoji: "🤔", label: "dontUnderstand",translations: { en: "I don't understand", es: "No entiendo", fr: "Je ne comprends pas", it: "Non capisco", pt: "Não entendo" } },
     { id: "cv11", emoji: "🔄", label: "repeat",       translations: { en: "Can you repeat?", es: "¿Puedes repetir?", fr: "Tu peux répéter?", it: "Puoi ripetere?", pt: "Pode repetir?" } },
     { id: "cv12", emoji: "🕐", label: "talkLater",    translations: { en: "Let's talk later", es: "Hablemos luego", fr: "Parlons plus tard", it: "Parliamo dopo", pt: "Vamos conversar depois" } },

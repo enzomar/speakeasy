@@ -43,6 +43,9 @@ document.addEventListener('visibilitychange', () => {
   if (!document.hidden) _setAppHeight();
 });
 
+// Disable right-click / long-press context menu across the entire app
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>

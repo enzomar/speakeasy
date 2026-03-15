@@ -239,4 +239,16 @@ export default {
   historyAll:         "Tudo",
   historyFavs:        "★ Favoritos",
   globalSearch:       "Pesquisar símbolos, palavras, frases…",
+
+  // Board names
+  board_generic:    "Geral",
+  board_home:       "Casa",
+  board_school:     "Escola",
+  board_doctor:     "Médico",
+  board_restaurant: "Restaurante",
+  board_shopping:   "Compras",
+  board_transport:  "Transporte",
+  board_emergency:  "Emergência",
+  board_work:       "Trabalho",
+  board_social:     "Social",
 };

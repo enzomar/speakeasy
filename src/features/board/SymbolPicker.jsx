@@ -207,9 +207,12 @@ export default memo(function SymbolPicker({
     onTap(label);             // add translated L2 word to message bar
     // Report hierarchy context: L1 + L2, no L3 yet
     onTapContext?.({
+      l1Id:    category.id,
       l1Label: getHierarchyLabel(category, langCode),
+      l2Id:    item.id,
       l2Label: label,
       l2Canon: item.label,
+      l3Id:    null,
       l3Label: null,
       l3Canon: null,
       l3Type:  null,
@@ -230,9 +233,12 @@ export default memo(function SymbolPicker({
     onTap(label);             // add translated modifier to message bar
     // Report full hierarchy context: L1 + L2 + L3 + type
     onTapContext?.({
+      l1Id:    category.id,
       l1Label: getHierarchyLabel(category, langCode),
+      l2Id:    activeL2?.id || null,
       l2Label: activeL2 ? getHierarchyLabel(activeL2, langCode) : null,
       l2Canon: activeL2?.label || null,
+      l3Id:    modifier.id,
       l3Label: label,
       l3Canon: modifier.label,
       l3Type:  classifyL3(modifier),

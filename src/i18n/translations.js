@@ -50,7 +50,7 @@ export const SYMBOL_TRANSLATIONS = {
     doctor:"Docteur", teacher:"Professeur", everyone:"Tout le monde",
     nurse:"Infirmier", therapist:"Thérapeute",
     happy:"Heureux", sad:"Triste", angry:"Fâché", scared:"Effrayé",
-    tired:"Fatigué", sick:"Malade", hurt:"Mal", excited:"Excité",
+    tired:"Fatigué", sick:"Malade", hurt:"Mal", excited:"Enthousiaste",
     love:"Amour", bored:"Ennuyé", confused:"Confus", fine:"Bien",
     want:"Je veux", need:"J'ai besoin", go:"Aller", eat:"Manger", drink:"Boire",
     sleep:"Dormir", play:"Jouer", come:"Viens", give:"Donne", like:"J'aime",
@@ -353,6 +353,7 @@ export const HIERARCHY_TRANSLATIONS = {
     // ── Missing items ──
     p_nurse:"enfermero", p_therapist:"terapeuta",
     t_soon:"pronto", t_everyday:"todos los días", t_minute:"en un minuto",
+    t_before:"antes", t_after:"después", t_already:"ya", t_still:"todavía",
     q3_wrong:"lo que está mal", q3_forlunch:"para el almuerzo", q3_fordinner:"para la cena",
     q3_getthere:"llegar allí", q3_open:"abrir",
     q3_lunch:"el almuerzo", q3_gohome:"ir a casa", q3_gobed:"hora de dormir",
@@ -392,7 +393,7 @@ export const HIERARCHY_TRANSLATIONS = {
     o_ball:"ballon", o_medicine:"médicament",
     b_head:"tête", b_stomach:"ventre", b_throat:"gorge", b_back:"dos",
     b_leg:"jambe", b_arm:"bras", b_tooth:"dent", b_eyes:"yeux",
-    f_happy:"heureux", f_excited:"excité", f_calm:"calme", f_proud:"fier",
+    f_happy:"heureux", f_excited:"enthousiaste", f_calm:"calme", f_proud:"fier",
     f_grateful:"reconnaissant", f_safe:"en sécurité", f_sad:"triste", f_angry:"fâché",
     f_scared:"effrayé", f_tired:"fatigué", f_sick:"malade", f_hurt:"mal",
     f_bored:"ennuyé", f_lonely:"seul", f_confused:"confus", f_nervous:"nerveux",
@@ -460,6 +461,7 @@ export const HIERARCHY_TRANSLATIONS = {
     // ── Missing shared items ──
     p_nurse:"infirmier", p_therapist:"thérapeute",
     t_soon:"bientôt", t_everyday:"tous les jours", t_minute:"dans une minute",
+    t_before:"avant", t_after:"après", t_already:"déjà", t_still:"encore",
     // ── QUESTION_WHAT extra ──
     q3_wrong:"ce qui ne va pas", q3_forlunch:"pour le déjeuner", q3_fordinner:"pour le dîner",
     // ── QUESTION_HOW extra ──
@@ -479,6 +481,37 @@ export const HIERARCHY_TRANSLATIONS = {
     // ── CAN_YOU_ACTIONS ──
     q3_cyhelp:"m'aider", q3_cycome:"venir", q3_cyshow:"me montrer", q3_cytell:"me dire",
     q3_cygive:"me donner", q3_cyrepeat:"répéter", q3_cyopen:"ouvrir", q3_cywait:"attendre",
+    // ── Body (shared L3 additions) ──
+    b_chest:"poitrine", b_ear:"oreille", b_nose:"nez", b_skin:"peau",
+    // ── Polarity additions ──
+    x_done:"terminé", x_diff:"différent",
+    // ── Food L3 additions ──
+    n3_coffee:"café", n3_fruit:"fruit", n3_meat:"viande",
+    // ── Need L2 addition ──
+    n_change:"se changer",
+    // ── People L2 additions ──
+    pe_nurse:"infirmière", pe_therapist:"thérapeute",
+    // ── Place additions ──
+    lc_bedroom:"chambre",
+    lc3_therapy:"salle de thérapie", lc3_xray:"radiographie",
+    lc3_supermarket:"supermarché", lc3_pharmacy2:"pharmacie", lc3_bakery:"boulangerie",
+    lc3_seat:"siège", lc3_window2:"fenêtre",
+    // ── Talk additions ──
+    s_understand:"comprendre", s_wait:"attends",
+    // ── Do additions ──
+    d_make:"faire", d_like:"aimer", d_finish:"finir", d_turn:"tourner",
+    // ── Describe additions ──
+    dc_ready:"prêt", dc_nice:"gentil", dc_broken:"cassé", dc_same:"pareil",
+    // ── Status predicates (about self: "I am ...") ──
+    st_ready:"suis prêt", st_here:"suis ici", st_coming:"arrive", st_leaving:"m'en vais",
+    st_hungry:"ai faim", st_thirsty:"ai soif", st_tired:"suis fatigué",
+    st_ok:"vais bien", st_notok:"ne vais pas bien", st_busy:"suis occupé",
+    st_waiting:"attends", st_lost:"suis perdu",
+    // ── Person relation predicates (about others: "mom is ...") ──
+    pr_here:"est là", pr_coming:"arrive", pr_gone:"est parti",
+    pr_wants:"veut", pr_needs:"a besoin", pr_said:"a dit", pr_helps:"aide",
+    pr_happy:"est content", pr_angry:"est fâché", pr_sick:"est malade",
+    pr_where:"où ?", pr_call:"appeler",
   },
   it: {
     feel:"SENTIRE", need:"BISOGNO", people:"PERSONE", do:"FARE", talk:"PARLARE", place:"LUOGO",
@@ -556,6 +589,7 @@ export const HIERARCHY_TRANSLATIONS = {
     // ── Missing items ──
     p_nurse:"infermiere", p_therapist:"terapista",
     t_soon:"presto", t_everyday:"ogni giorno", t_minute:"tra un minuto",
+    t_before:"prima", t_after:"dopo", t_already:"già", t_still:"ancora",
     q3_wrong:"cosa c'è che non va", q3_forlunch:"per pranzo", q3_fordinner:"per cena",
     q3_getthere:"arrivarci", q3_open:"aprire",
     q3_lunch:"il pranzo", q3_gohome:"andare a casa", q3_gobed:"l'ora di dormire",
@@ -654,6 +688,7 @@ export const HIERARCHY_TRANSLATIONS = {
     // ── Missing items ──
     p_nurse:"enfermeiro", p_therapist:"terapeuta",
     t_soon:"em breve", t_everyday:"todo dia", t_minute:"em um minuto",
+    t_before:"antes", t_after:"depois", t_already:"já", t_still:"ainda",
     q3_wrong:"o que está errado", q3_forlunch:"para o almoço", q3_fordinner:"para o jantar",
     q3_getthere:"chegar lá", q3_open:"abrir",
     q3_lunch:"o almoço", q3_gohome:"ir para casa", q3_gobed:"hora de dormir",
@@ -751,6 +786,7 @@ export const HIERARCHY_TRANSLATIONS = {
     // ── Missing items ──
     p_nurse:"Krankenpfleger", p_therapist:"Therapeut",
     t_soon:"bald", t_everyday:"jeden Tag", t_minute:"in einer Minute",
+    t_before:"vorher", t_after:"danach", t_already:"schon", t_still:"noch",
     q3_wrong:"was nicht stimmt", q3_forlunch:"zum Mittagessen", q3_fordinner:"zum Abendessen",
     q3_getthere:"hinkommen", q3_open:"öffnen",
     q3_lunch:"Mittagessen", q3_gohome:"nach Hause", q3_gobed:"Schlafenszeit",
@@ -845,6 +881,7 @@ export const HIERARCHY_TRANSLATIONS = {
     q3_do:"فعل", q3_say:"قل", q3_spell:"تهجئة", q3_use:"استخدم", q3_get:"احصل", q3_feel:"اشعر", q3_fix:"أصلح",
     p_nurse:"ممرض", p_therapist:"معالج",
     t_soon:"قريباً", t_everyday:"كل يوم", t_minute:"بعد دقيقة",
+    t_before:"قبل", t_after:"بعد", t_already:"بالفعل", t_still:"لا يزال",
     describe:"وصف",
     dc_big:"كبير", dc_small:"صغير", dc_fast:"سريع", dc_slow:"بطيء",
     dc_hot:"حار", dc_cold:"بارد", dc_clean:"نظيف", dc_dirty:"وسخ",
@@ -927,6 +964,7 @@ export const HIERARCHY_TRANSLATIONS = {
     q3_do:"做", q3_say:"说", q3_spell:"拼写", q3_use:"用", q3_get:"得到", q3_feel:"感觉", q3_fix:"修理",
     p_nurse:"护士", p_therapist:"治疗师",
     t_soon:"很快", t_everyday:"每天", t_minute:"一会儿",
+    t_before:"之前", t_after:"之后", t_already:"已经", t_still:"还",
     describe:"描述",
     dc_big:"大", dc_small:"小", dc_fast:"快", dc_slow:"慢",
     dc_hot:"热", dc_cold:"冷", dc_clean:"干净", dc_dirty:"脏",
@@ -1009,6 +1047,7 @@ export const HIERARCHY_TRANSLATIONS = {
     q3_do:"する", q3_say:"言う", q3_spell:"書く", q3_use:"使う", q3_get:"もらう", q3_feel:"感じる", q3_fix:"直す",
     p_nurse:"看護師", p_therapist:"セラピスト",
     t_soon:"もうすぐ", t_everyday:"毎日", t_minute:"あとで",
+    t_before:"前に", t_after:"後に", t_already:"もう", t_still:"まだ",
     describe:"説明",
     dc_big:"大きい", dc_small:"小さい", dc_fast:"速い", dc_slow:"遅い",
     dc_hot:"暑い", dc_cold:"寒い", dc_clean:"きれい", dc_dirty:"汚い",
@@ -1091,6 +1130,7 @@ export const HIERARCHY_TRANSLATIONS = {
     q3_do:"해", q3_say:"말해", q3_spell:"철자", q3_use:"써", q3_get:"가져", q3_feel:"느껴", q3_fix:"고쳐",
     p_nurse:"간호사", p_therapist:"치료사",
     t_soon:"곷", t_everyday:"매일", t_minute:"잠깐만",
+    t_before:"전에", t_after:"후에", t_already:"이미", t_still:"아직",
     describe:"설명",
     dc_big:"커", dc_small:"작아", dc_fast:"빨라", dc_slow:"느려",
     dc_hot:"뜨거워", dc_cold:"차가워", dc_clean:"깨끗해", dc_dirty:"더러워",

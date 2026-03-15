@@ -1094,6 +1094,81 @@
       "core vocabulary"
     ]
   },
+  "d_make": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Manufacture, composition: made several comedies.",
+    "emoji": "🛠️",
+    "id": "d_make",
+    "keywordMeanings": [
+      "tr. Manufacture, composition: made several comedies."
+    ],
+    "keywords": [
+      "make",
+      "do"
+    ],
+    "label": "make",
+    "localPath": "/pictograms/arasaac/32751_500.png",
+    "pictogramId": 32751,
+    "schematic": true,
+    "searchText": "make",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32751"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "d_open": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Separate frame leaf or leaves a door or window, making them turn on their hinges, or separate or remove anything which is enclosed with an opening, to cease to apply.",
+    "emoji": "🚪",
+    "id": "d_open",
+    "keywordMeanings": [
+      "tr. Separate frame leaf or leaves a door or window, making them turn on their hinges, or separate or remove anything which is enclosed with an opening, to cease to apply."
+    ],
+    "keywords": [
+      "open",
+      "open up",
+      "unfold"
+    ],
+    "label": "open",
+    "localPath": "/pictograms/arasaac/24825_500.png",
+    "pictogramId": 24825,
+    "schematic": true,
+    "searchText": "open",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/24825"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
   "d_play": {
     "aac": true,
     "categories": [
@@ -1258,6 +1333,46 @@
       "leisure",
       "sport",
       "physical exercise"
+    ]
+  },
+  "d_turn": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "Directing, directing something else, material or immaterial. | f. Movement from one thing about a point, or turning on itself, to reverse its original position, or to take it again.",
+    "emoji": "🔄",
+    "id": "d_turn",
+    "keywordMeanings": [
+      "Directing, directing something else, material or immaterial.",
+      "f. Movement from one thing about a point, or turning on itself, to reverse its original position, or to take it again."
+    ],
+    "keywords": [
+      "return",
+      "turn",
+      "turn around",
+      "turn"
+    ],
+    "label": "turn",
+    "localPath": "/pictograms/arasaac/6630_500.png",
+    "pictogramId": 6630,
+    "schematic": true,
+    "searchText": "turn around",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6630"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
     ]
   },
   "d_watch": {
@@ -1670,6 +1785,160 @@
       "cookery"
     ]
   },
+  "dc_loud": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "disruptive behavior",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Raise your voice more than normal to express anger or disapproval. | Give voice to someone or make gestures to come or to warn you something.",
+    "emoji": "🔊",
+    "id": "dc_loud",
+    "keywordMeanings": [
+      "intr. Raise your voice more than normal to express anger or disapproval.",
+      "Give voice to someone or make gestures to come or to warn you something."
+    ],
+    "keywords": [
+      "shout",
+      "call",
+      "vociferate"
+    ],
+    "label": "loud",
+    "localPath": "/pictograms/arasaac/6552_500.png",
+    "pictogramId": 6552,
+    "schematic": true,
+    "searchText": "shout",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6552"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "psychology",
+      "disruptive behavior",
+      "core vocabulary"
+    ]
+  },
+  "dc_new": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "core vocabulary-communication"
+    ],
+    "description": "adj. Newly created or manufactured.",
+    "emoji": "✨",
+    "id": "dc_new",
+    "keywordMeanings": [
+      "adj. Newly created or manufactured."
+    ],
+    "keywords": [
+      "new"
+    ],
+    "label": "new",
+    "localPath": "/pictograms/arasaac/11316_500.png",
+    "pictogramId": 11316,
+    "schematic": true,
+    "searchText": "new",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/11316"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "core vocabulary"
+    ]
+  },
+  "dc_nice": {
+    "aac": false,
+    "categories": [
+      "qualifying adjective",
+      "feeling"
+    ],
+    "description": "adj. It says the nice and friendly person: it was a very nice girl. | adj. What pleases produces satisfaction.",
+    "emoji": "😊",
+    "id": "dc_nice",
+    "keywordMeanings": [
+      "adj. It says the nice and friendly person: it was a very nice girl.",
+      "adj. What pleases produces satisfaction."
+    ],
+    "keywords": [
+      "pleasant",
+      "nice"
+    ],
+    "label": "nice",
+    "localPath": "/pictograms/arasaac/10212_500.png",
+    "pictogramId": 10212,
+    "schematic": false,
+    "searchText": "nice",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/10212"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "psychology",
+      "feeling",
+      "emotion"
+    ]
+  },
+  "dc_old": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "core vocabulary-communication"
+    ],
+    "description": "Adj. Se dice de lo que tiene muchos aÃÂ±os: un olmo viejo; una persona vieja. TambiÃÂ©n s.",
+    "emoji": "📦",
+    "id": "dc_old",
+    "keywordMeanings": [
+      "Adj. Se dice de lo que tiene muchos aÃÂ±os: un olmo viejo; una persona vieja. TambiÃÂ©n s."
+    ],
+    "keywords": [
+      "old"
+    ],
+    "label": "old",
+    "localPath": "/pictograms/arasaac/11394_500.png",
+    "pictogramId": 11394,
+    "schematic": true,
+    "searchText": "old",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/11394"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "core vocabulary"
+    ]
+  },
   "dc_quiet": {
     "aac": false,
     "categories": [
@@ -1708,6 +1977,47 @@
       "emotion"
     ]
   },
+  "dc_ready": {
+    "aac": false,
+    "categories": [
+      "olympic games",
+      "sport modality",
+      "athletics"
+    ],
+    "description": "adj. Summoned, ready, willing to do anything .. | prnl. Available, prevention and rigged to run something or some other purpose.",
+    "emoji": "✅",
+    "id": "dc_ready",
+    "keywordMeanings": [
+      "adj. Summoned, ready, willing to do anything ..",
+      "prnl. Available, prevention and rigged to run something or some other purpose."
+    ],
+    "keywords": [
+      "ready",
+      "get ready"
+    ],
+    "label": "ready",
+    "localPath": "/pictograms/arasaac/17000_500.png",
+    "pictogramId": 17000,
+    "schematic": false,
+    "searchText": "ready",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/17000"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "leisure",
+      "sport",
+      "event",
+      "sport event",
+      "olympic games",
+      "sport modality",
+      "athletics"
+    ]
+  },
   "dc_same": {
     "aac": true,
     "categories": [
@@ -1733,11 +2043,11 @@
       "equals",
       "the same as"
     ],
-    "label": "same",
+    "label": "the same",
     "localPath": "/pictograms/arasaac/4667_500.png",
     "pictogramId": 4667,
     "schematic": false,
-    "searchText": "same",
+    "searchText": "the same",
     "source": {
       "author": "Sergio Palao",
       "license": "CC BY-NC-SA 4.0",
@@ -1840,6 +2150,38 @@
       "size",
       "core vocabulary",
       "object"
+    ]
+  },
+  "describe": {
+    "aac": false,
+    "categories": [
+      "educational task"
+    ],
+    "description": "f. explanation, a detailed and organized, how are certain people, places, objects, among others.",
+    "emoji": "🎨",
+    "id": "describe",
+    "keywordMeanings": [
+      "f. explanation, a detailed and organized, how are certain people, places, objects, among others."
+    ],
+    "keywords": [
+      "description"
+    ],
+    "label": "DESCRIBE",
+    "localPath": "/pictograms/arasaac/11713_500.png",
+    "pictogramId": 11713,
+    "schematic": true,
+    "searchText": "description",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/11713"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "education",
+      "educational task"
     ]
   },
   "do": {
@@ -2109,6 +2451,49 @@
       "psychology",
       "feeling",
       "emotion"
+    ]
+  },
+  "f_frustrated": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "feeling",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "adj. Be upset, angry.",
+    "emoji": "😤",
+    "id": "f_frustrated",
+    "keywordMeanings": [
+      "adj. Be upset, angry."
+    ],
+    "keywords": [
+      "angry",
+      "annoyed",
+      "irritated"
+    ],
+    "label": "frustrated",
+    "localPath": "/pictograms/arasaac/35539_500.png",
+    "pictogramId": 35539,
+    "schematic": true,
+    "searchText": "annoyed",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35539"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "psychology",
+      "feeling",
+      "emotion",
+      "core vocabulary"
     ]
   },
   "f_happy": {
@@ -3543,6 +3928,38 @@
       "urban area",
       "street furniture",
       "core vocabulary"
+    ]
+  },
+  "lc3_therapy": {
+    "aac": false,
+    "categories": [
+      "physiotherapy"
+    ],
+    "description": "f. Action and effect of rehabilitation.",
+    "emoji": "🩺",
+    "id": "lc3_therapy",
+    "keywordMeanings": [
+      "f. Action and effect of rehabilitation."
+    ],
+    "keywords": [
+      "rehabilitation"
+    ],
+    "label": "therapy room",
+    "localPath": "/pictograms/arasaac/14672_500.png",
+    "pictogramId": 14672,
+    "schematic": false,
+    "searchText": "rehabilitation",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/14672"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "health",
+      "physiotherapy"
     ]
   },
   "lc3_waiting": {
@@ -5239,6 +5656,420 @@
       "core vocabulary"
     ]
   },
+  "num_1": {
+    "aac": false,
+    "categories": [
+      "number",
+      "mathematics",
+      "core vocabulary-knowledge",
+      "adjective",
+      "numeral adjective"
+    ],
+    "description": "m. Sign used to represent this issue: 1. | Sign that represents the number one.",
+    "emoji": "1️⃣",
+    "id": "num_1",
+    "keywordMeanings": [
+      "m. Sign used to represent this issue: 1.",
+      "Sign that represents the number one."
+    ],
+    "keywords": [
+      "one",
+      "1"
+    ],
+    "label": "1",
+    "localPath": "/pictograms/arasaac/2627_500.png",
+    "pictogramId": 2627,
+    "schematic": false,
+    "searchText": "one",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2627"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective"
+    ]
+  },
+  "num_10": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "mathematics",
+      "core vocabulary-knowledge"
+    ],
+    "description": "Set of signs that represents the number ten. | m. Set of signs used to represent this number: 10.",
+    "emoji": "🔟",
+    "id": "num_10",
+    "keywordMeanings": [
+      "Set of signs that represents the number ten.",
+      "m. Set of signs used to represent this number: 10."
+    ],
+    "keywords": [
+      "10",
+      "ten"
+    ],
+    "label": "10",
+    "localPath": "/pictograms/arasaac/29254_500.png",
+    "pictogramId": 29254,
+    "schematic": false,
+    "searchText": "ten",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/29254"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective"
+    ]
+  },
+  "num_2": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "adjective",
+      "mathematics"
+    ],
+    "description": "Sign or set of signs that represents the number two. | m. Set of signs used to represent this number: 2.",
+    "emoji": "2️⃣",
+    "id": "num_2",
+    "keywordMeanings": [
+      "Sign or set of signs that represents the number two.",
+      "m. Set of signs used to represent this number: 2."
+    ],
+    "keywords": [
+      "2",
+      "two"
+    ],
+    "label": "2",
+    "localPath": "/pictograms/arasaac/2628_500.png",
+    "pictogramId": 2628,
+    "schematic": false,
+    "searchText": "two",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2628"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective"
+    ]
+  },
+  "num_3": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "mathematics",
+      "core vocabulary-knowledge"
+    ],
+    "description": "Sign or set of signs that represents the number three. | Set of signs used to represent this number: 3.",
+    "emoji": "3️⃣",
+    "id": "num_3",
+    "keywordMeanings": [
+      "Sign or set of signs that represents the number three.",
+      "Set of signs used to represent this number: 3."
+    ],
+    "keywords": [
+      "3",
+      "three"
+    ],
+    "label": "3",
+    "localPath": "/pictograms/arasaac/2629_500.png",
+    "pictogramId": 2629,
+    "schematic": false,
+    "searchText": "three",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2629"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective",
+      "core vocabulary"
+    ]
+  },
+  "num_4": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "mathematics",
+      "core vocabulary-knowledge"
+    ],
+    "description": "Sign or figure that represents the number four. | m. Set of signs used to represent this number: 4.",
+    "emoji": "4️⃣",
+    "id": "num_4",
+    "keywordMeanings": [
+      "Sign or figure that represents the number four.",
+      "m. Set of signs used to represent this number: 4."
+    ],
+    "keywords": [
+      "4",
+      "four"
+    ],
+    "label": "4",
+    "localPath": "/pictograms/arasaac/2630_500.png",
+    "pictogramId": 2630,
+    "schematic": false,
+    "searchText": "four",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2630"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective",
+      "core vocabulary"
+    ]
+  },
+  "num_5": {
+    "aac": false,
+    "categories": [
+      "day hours"
+    ],
+    "description": "",
+    "emoji": "5️⃣",
+    "id": "num_5",
+    "keywordMeanings": [],
+    "keywords": [
+      "five o'clock",
+      "17:00h",
+      "five",
+      "5"
+    ],
+    "label": "5",
+    "localPath": "/pictograms/arasaac/39311_500.png",
+    "pictogramId": 39311,
+    "schematic": true,
+    "searchText": "five",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/39311"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "time",
+      "unit of time",
+      "day hours"
+    ]
+  },
+  "num_6": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "mathematics",
+      "core vocabulary-knowledge"
+    ],
+    "description": "Sign or figure that represents the number six. | m. Sign that represents the number six: 6.",
+    "emoji": "6️⃣",
+    "id": "num_6",
+    "keywordMeanings": [
+      "Sign or figure that represents the number six.",
+      "m. Sign that represents the number six: 6."
+    ],
+    "keywords": [
+      "6",
+      "six"
+    ],
+    "label": "6",
+    "localPath": "/pictograms/arasaac/2632_500.png",
+    "pictogramId": 2632,
+    "schematic": false,
+    "searchText": "six",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2632"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective",
+      "core vocabulary"
+    ]
+  },
+  "num_7": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "mathematics",
+      "core vocabulary-knowledge"
+    ],
+    "description": "Sign or figure that represents the number seven. | m. Sign used to represent this number: 7.",
+    "emoji": "7️⃣",
+    "id": "num_7",
+    "keywordMeanings": [
+      "Sign or figure that represents the number seven.",
+      "m. Sign used to represent this number: 7."
+    ],
+    "keywords": [
+      "7",
+      "seven"
+    ],
+    "label": "7",
+    "localPath": "/pictograms/arasaac/2633_500.png",
+    "pictogramId": 2633,
+    "schematic": false,
+    "searchText": "seven",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2633"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective",
+      "core vocabulary"
+    ]
+  },
+  "num_8": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective",
+      "mathematics",
+      "core vocabulary-knowledge"
+    ],
+    "description": "Sign or figure that represents the number eight. | m. Sign used to represent this number: 8.",
+    "emoji": "8️⃣",
+    "id": "num_8",
+    "keywordMeanings": [
+      "Sign or figure that represents the number eight.",
+      "m. Sign used to represent this number: 8."
+    ],
+    "keywords": [
+      "8",
+      "eight"
+    ],
+    "label": "8",
+    "localPath": "/pictograms/arasaac/2634_500.png",
+    "pictogramId": 2634,
+    "schematic": false,
+    "searchText": "eight",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2634"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective",
+      "core vocabulary"
+    ]
+  },
+  "num_9": {
+    "aac": false,
+    "categories": [
+      "number",
+      "numeral adjective"
+    ],
+    "description": "Sign or figure that represents the number nine. | m. Sign used to represent this number: 9.",
+    "emoji": "9️⃣",
+    "id": "num_9",
+    "keywordMeanings": [
+      "Sign or figure that represents the number nine.",
+      "m. Sign used to represent this number: 9."
+    ],
+    "keywords": [
+      "9",
+      "nine"
+    ],
+    "label": "9",
+    "localPath": "/pictograms/arasaac/2635_500.png",
+    "pictogramId": 2635,
+    "schematic": false,
+    "searchText": "nine",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2635"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "number",
+      "mathematics",
+      "adjective",
+      "numeral adjective"
+    ]
+  },
   "o_bag": {
     "aac": false,
     "categories": [
@@ -6331,6 +7162,40 @@
       "core vocabulary"
     ]
   },
+  "p_therapist": {
+    "aac": false,
+    "categories": [
+      "professional",
+      "speech therapy"
+    ],
+    "description": "Expert on methods of speech therapy.",
+    "emoji": "🩺",
+    "id": "p_therapist",
+    "keywordMeanings": [
+      "Expert on methods of speech therapy."
+    ],
+    "keywords": [
+      "speech therapist"
+    ],
+    "label": "therapist",
+    "localPath": "/pictograms/arasaac/23396_500.png",
+    "pictogramId": 23396,
+    "schematic": true,
+    "searchText": "speech therapist",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/23396"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "work",
+      "professional",
+      "speech therapy"
+    ]
+  },
   "pe_brother": {
     "aac": false,
     "categories": [
@@ -6697,6 +7562,40 @@
       "professional",
       "work",
       "core vocabulary"
+    ]
+  },
+  "pe_therapist": {
+    "aac": false,
+    "categories": [
+      "professional",
+      "speech therapy"
+    ],
+    "description": "Expert on methods of speech therapy.",
+    "emoji": "🩺",
+    "id": "pe_therapist",
+    "keywordMeanings": [
+      "Expert on methods of speech therapy."
+    ],
+    "keywords": [
+      "speech therapist"
+    ],
+    "label": "therapist",
+    "localPath": "/pictograms/arasaac/23396_500.png",
+    "pictogramId": 23396,
+    "schematic": true,
+    "searchText": "speech therapist",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/23396"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "work",
+      "professional",
+      "speech therapy"
     ]
   },
   "pe_they": {
@@ -7171,6 +8070,1298 @@
       "object"
     ]
   },
+  "pr_angry": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "feeling",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "adj. Be upset, angry.",
+    "emoji": "😠",
+    "id": "pr_angry",
+    "keywordMeanings": [
+      "adj. Be upset, angry."
+    ],
+    "keywords": [
+      "angry",
+      "annoyed",
+      "irritated"
+    ],
+    "label": "is angry",
+    "localPath": "/pictograms/arasaac/35539_500.png",
+    "pictogramId": 35539,
+    "schematic": true,
+    "searchText": "angry",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35539"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "psychology",
+      "feeling",
+      "emotion",
+      "core vocabulary"
+    ]
+  },
+  "pr_call": {
+    "aac": true,
+    "categories": [
+      "mass media device",
+      "mass media",
+      "core vocabulary-object",
+      "core vocabulary-communication"
+    ],
+    "description": "m. Media, through a set of equipment and conveyor systems, transmit sound as remote electromagnetic signal.",
+    "emoji": "📞",
+    "id": "pr_call",
+    "keywordMeanings": [
+      "m. Media, through a set of equipment and conveyor systems, transmit sound as remote electromagnetic signal."
+    ],
+    "keywords": [
+      "telephone",
+      "phone"
+    ],
+    "label": "call",
+    "localPath": "/pictograms/arasaac/26479_500.png",
+    "pictogramId": 26479,
+    "schematic": true,
+    "searchText": "telephone",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/26479"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "object",
+      "appliance",
+      "mass media device",
+      "mass media",
+      "communication",
+      "core vocabulary"
+    ]
+  },
+  "pr_coming": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Reaching the end or the end of a shift.",
+    "emoji": "🚶",
+    "id": "pr_coming",
+    "keywordMeanings": [
+      "intr. Reaching the end or the end of a shift."
+    ],
+    "keywords": [
+      "arrive"
+    ],
+    "label": "is coming",
+    "localPath": "/pictograms/arasaac/16807_500.png",
+    "pictogramId": 16807,
+    "schematic": true,
+    "searchText": "arrive",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/16807"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "pr_gone": {
+    "aac": false,
+    "categories": [
+      "verb",
+      "architectural element",
+      "building facility"
+    ],
+    "description": "tr. Moving from the inside out.",
+    "emoji": "👋",
+    "id": "pr_gone",
+    "keywordMeanings": [
+      "tr. Moving from the inside out."
+    ],
+    "keywords": [
+      "exit",
+      "go out",
+      "get out",
+      "leave"
+    ],
+    "label": "is gone",
+    "localPath": "/pictograms/arasaac/6606_500.png",
+    "pictogramId": 6606,
+    "schematic": true,
+    "searchText": "leave",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6606"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "architecture",
+      "building",
+      "architectural element",
+      "place",
+      "building facility"
+    ]
+  },
+  "pr_happy": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "feeling",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "adj. Owned or full of joy. John is happy",
+    "emoji": "😊",
+    "id": "pr_happy",
+    "keywordMeanings": [
+      "adj. Owned or full of joy. John is happy"
+    ],
+    "keywords": [
+      "happy",
+      "cheerful"
+    ],
+    "label": "is happy",
+    "localPath": "/pictograms/arasaac/35533_500.png",
+    "pictogramId": 35533,
+    "schematic": true,
+    "searchText": "happy",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35533"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "psychology",
+      "feeling",
+      "emotion",
+      "core vocabulary"
+    ]
+  },
+  "pr_helps": {
+    "aac": false,
+    "categories": [
+      "human response",
+      "core vocabulary-knowledge",
+      "special education",
+      "basic needs"
+    ],
+    "description": "f. Action and effect of help. | f. Action and effect of collaboration. | f. Action and effect of cooperation.",
+    "emoji": "🤝",
+    "id": "pr_helps",
+    "keywordMeanings": [
+      "f. Action and effect of help.",
+      "f. Action and effect of collaboration.",
+      "f. Action and effect of cooperation."
+    ],
+    "keywords": [
+      "help",
+      "colaboration",
+      "cooperation"
+    ],
+    "label": "helps",
+    "localPath": "/pictograms/arasaac/19524_500.png",
+    "pictogramId": 19524,
+    "schematic": true,
+    "searchText": "help",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/19524"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "psychology",
+      "human response",
+      "core vocabulary",
+      "education",
+      "special education",
+      "person",
+      "basic needs"
+    ]
+  },
+  "pr_here": {
+    "aac": false,
+    "categories": [
+      "adverb of place",
+      "basic concepts"
+    ],
+    "description": "Adv. l. Indicates the place where is the speaker or a place near him. With verbs of state, meaning in this place I live here. With verbs of motion, meaning this place: see here. May be preceded by the preps. of, from, to, up to and, from here you can see",
+    "emoji": "📍",
+    "id": "pr_here",
+    "keywordMeanings": [
+      "Adv. l. Indicates the place where is the speaker or a place near him. With verbs of state, meaning in this place I live here. With verbs of motion, meaning this place: see here. May be preceded by the preps. of, from, to, up to and, from here you can see "
+    ],
+    "keywords": [
+      "here"
+    ],
+    "label": "is here",
+    "localPath": "/pictograms/arasaac/5382_500.png",
+    "pictogramId": 5382,
+    "schematic": true,
+    "searchText": "here",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5382"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adverb",
+      "adverb of place",
+      "mathematics",
+      "basic concepts"
+    ]
+  },
+  "pr_needs": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "human response",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "",
+    "emoji": "🆘",
+    "id": "pr_needs",
+    "keywordMeanings": [],
+    "keywords": [
+      "need"
+    ],
+    "label": "needs",
+    "localPath": "/pictograms/arasaac/37160_500.png",
+    "pictogramId": 37160,
+    "schematic": false,
+    "searchText": "need",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/37160"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "psychology",
+      "human response",
+      "core vocabulary"
+    ]
+  },
+  "pr_said": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "human response",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "intr. Articulate, uttering words to understand. | intr. Said one or more persons: Talking with another or others. | intr. Said one or more persons: Talking with another or others. | intr. coloq. Talking a lot without substance or irrelevant.",
+    "emoji": "🗣️",
+    "id": "pr_said",
+    "keywordMeanings": [
+      "intr. Articulate, uttering words to understand.",
+      "intr. Said one or more persons: Talking with another or others.",
+      "intr. Said one or more persons: Talking with another or others.",
+      "intr. coloq. Talking a lot without substance or irrelevant."
+    ],
+    "keywords": [
+      "speak",
+      "talk",
+      "converse",
+      "chat",
+      "gab"
+    ],
+    "label": "said",
+    "localPath": "/pictograms/arasaac/6517_500.png",
+    "pictogramId": 6517,
+    "schematic": true,
+    "searchText": "speak",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6517"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "psychology",
+      "human response",
+      "core vocabulary"
+    ]
+  },
+  "pr_sick": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "disease",
+      "core vocabulary-communication"
+    ],
+    "description": "Contracting disease. U. prnl tc.",
+    "emoji": "🤒",
+    "id": "pr_sick",
+    "keywordMeanings": [
+      "Contracting disease. U. prnl tc."
+    ],
+    "keywords": [
+      "get sick",
+      "come down",
+      "sicken",
+      "fall ill",
+      "get ill",
+      "ill",
+      "sick"
+    ],
+    "label": "is sick",
+    "localPath": "/pictograms/arasaac/7040_500.png",
+    "pictogramId": 7040,
+    "schematic": true,
+    "searchText": "sick",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/7040"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "health",
+      "medicine",
+      "disease",
+      "core vocabulary"
+    ]
+  },
+  "pr_wants": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication",
+      "human response",
+      "feeding",
+      "mode of transport",
+      "educational material",
+      "sport material",
+      "toy"
+    ],
+    "description": "tr. Want, wish for. | tr. Want or aspire to something with eagerness and desire: he wanted a convertible, always wanted to buy a house for his parents. | tr. Want, wish for | Ese Apetece Me | tr. Want, desear the like. | tr. Have won something, or wanting. U. prnl tc.",
+    "emoji": "🙋",
+    "id": "pr_wants",
+    "keywordMeanings": [
+      "tr. Want, wish for.",
+      "tr. Want or aspire to something with eagerness and desire: he wanted a convertible, always wanted to buy a house for his parents.",
+      "tr. Want, wish for",
+      "Ese Apetece Me",
+      "tr. Want, desear the like.",
+      "tr. Have won something, or wanting. U. prnl tc."
+    ],
+    "keywords": [
+      "want",
+      "wish for",
+      "I want",
+      "I want that one",
+      "wish",
+      "feel like"
+    ],
+    "label": "wants",
+    "localPath": "/pictograms/arasaac/5441_500.png",
+    "pictogramId": 5441,
+    "schematic": false,
+    "searchText": "want",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5441"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary",
+      "psychology",
+      "human response",
+      "feeding",
+      "movement",
+      "traffic",
+      "mode of transport",
+      "education",
+      "educational material",
+      "leisure",
+      "sport",
+      "sport material",
+      "toy"
+    ]
+  },
+  "pr_where": {
+    "aac": true,
+    "categories": [
+      "interrogative pronoun",
+      "core vocabulary-communication",
+      "adverb",
+      "adverb of place"
+    ],
+    "description": "adv. questioned. Amounts to asking for the place in which action takes place, or is something or someone: Where you left your jacket? | adv. questioned. Amounts to asking for the place in which action takes place, or is something or someone: Where you left your jacket?",
+    "emoji": "❓",
+    "id": "pr_where",
+    "keywordMeanings": [
+      "adv. questioned. Amounts to asking for the place in which action takes place, or is something or someone: Where you left your jacket?",
+      "adv. questioned. Amounts to asking for the place in which action takes place, or is something or someone: Where you left your jacket?"
+    ],
+    "keywords": [
+      "where",
+      "where?"
+    ],
+    "label": "where?",
+    "localPath": "/pictograms/arasaac/7764_500.png",
+    "pictogramId": 7764,
+    "schematic": true,
+    "searchText": "where",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/7764"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "pronoun",
+      "interrogative pronoun",
+      "core vocabulary",
+      "adverb",
+      "adverb of place"
+    ]
+  },
+  "q3_canhelp": {
+    "aac": false,
+    "categories": [
+      "human response",
+      "core vocabulary-knowledge",
+      "special education",
+      "basic needs"
+    ],
+    "description": "f. Action and effect of help. | f. Action and effect of collaboration. | f. Action and effect of cooperation.",
+    "emoji": "🆘",
+    "id": "q3_canhelp",
+    "keywordMeanings": [
+      "f. Action and effect of help.",
+      "f. Action and effect of collaboration.",
+      "f. Action and effect of cooperation."
+    ],
+    "keywords": [
+      "help",
+      "colaboration",
+      "cooperation"
+    ],
+    "label": "can help",
+    "localPath": "/pictograms/arasaac/19524_500.png",
+    "pictogramId": 19524,
+    "schematic": true,
+    "searchText": "help",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/19524"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "psychology",
+      "human response",
+      "core vocabulary",
+      "education",
+      "special education",
+      "person",
+      "basic needs"
+    ]
+  },
+  "q3_cantI": {
+    "aac": false,
+    "categories": [
+      "traffic signal"
+    ],
+    "description": "Participial adjective Ban",
+    "emoji": "❌",
+    "id": "q3_cantI",
+    "keywordMeanings": [
+      "Participial adjective Ban"
+    ],
+    "keywords": [
+      "forbid",
+      "forbidden"
+    ],
+    "label": "can't I",
+    "localPath": "/pictograms/arasaac/32366_500.png",
+    "pictogramId": 32366,
+    "schematic": true,
+    "searchText": "forbidden",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32366"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "movement",
+      "traffic",
+      "road safety",
+      "traffic signal"
+    ]
+  },
+  "q3_cidrink": {
+    "aac": true,
+    "categories": [
+      "beverage",
+      "core vocabulary-feeding"
+    ],
+    "description": "f. Any liquid you drink. | Any liquid you drink.",
+    "emoji": "🥤",
+    "id": "q3_cidrink",
+    "keywordMeanings": [
+      "f. Any liquid you drink.",
+      "Any liquid you drink."
+    ],
+    "keywords": [
+      "drink",
+      "drinks",
+      "beverage",
+      "beverages"
+    ],
+    "label": "drink",
+    "localPath": "/pictograms/arasaac/4575_500.png",
+    "pictogramId": 4575,
+    "schematic": false,
+    "searchText": "drink",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/4575"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "feeding",
+      "food",
+      "beverage",
+      "core vocabulary"
+    ]
+  },
+  "q3_cieat": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "food",
+      "basic needs",
+      "core vocabulary-communication",
+      "gastronomy"
+    ],
+    "description": "intr. Chew and shred the food into the mouth and pass into the stomach.",
+    "emoji": "🍴",
+    "id": "q3_cieat",
+    "keywordMeanings": [
+      "intr. Chew and shred the food into the mouth and pass into the stomach."
+    ],
+    "keywords": [
+      "eat"
+    ],
+    "label": "eat",
+    "localPath": "/pictograms/arasaac/6456_500.png",
+    "pictogramId": 6456,
+    "schematic": true,
+    "searchText": "eat",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6456"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "feeding",
+      "food",
+      "person",
+      "basic needs",
+      "core vocabulary",
+      "gastronomy"
+    ]
+  },
+  "q3_cigo": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Moving from one place to another.",
+    "emoji": "🚶",
+    "id": "q3_cigo",
+    "keywordMeanings": [
+      "intr. Moving from one place to another."
+    ],
+    "keywords": [
+      "go"
+    ],
+    "label": "go",
+    "localPath": "/pictograms/arasaac/8142_500.png",
+    "pictogramId": 8142,
+    "schematic": true,
+    "searchText": "go",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/8142"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cihave": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Owning something or enjoy it | tr. Holding steady or something",
+    "emoji": "🤲",
+    "id": "q3_cihave",
+    "keywordMeanings": [
+      "tr. Owning something or enjoy it",
+      "tr. Holding steady or something"
+    ],
+    "keywords": [
+      "have",
+      "hold",
+      "keep hold",
+      "own",
+      "possess",
+      "have got"
+    ],
+    "label": "have",
+    "localPath": "/pictograms/arasaac/32761_500.png",
+    "pictogramId": 32761,
+    "schematic": true,
+    "searchText": "have",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32761"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cihelp": {
+    "aac": false,
+    "categories": [
+      "human response",
+      "core vocabulary-knowledge",
+      "special education",
+      "basic needs"
+    ],
+    "description": "f. Action and effect of help. | f. Action and effect of collaboration. | f. Action and effect of cooperation.",
+    "emoji": "🆘",
+    "id": "q3_cihelp",
+    "keywordMeanings": [
+      "f. Action and effect of help.",
+      "f. Action and effect of collaboration.",
+      "f. Action and effect of cooperation."
+    ],
+    "keywords": [
+      "help",
+      "colaboration",
+      "cooperation"
+    ],
+    "label": "help",
+    "localPath": "/pictograms/arasaac/19524_500.png",
+    "pictogramId": 19524,
+    "schematic": true,
+    "searchText": "help",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/19524"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "psychology",
+      "human response",
+      "core vocabulary",
+      "education",
+      "special education",
+      "person",
+      "basic needs"
+    ]
+  },
+  "q3_ciplay": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "traditional game",
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Entertainment, fun taking part in one of the games subject to rules, mediate or no interest in him.",
+    "emoji": "🎮",
+    "id": "q3_ciplay",
+    "keywordMeanings": [
+      "intr. Entertainment, fun taking part in one of the games subject to rules, mediate or no interest in him."
+    ],
+    "keywords": [
+      "play"
+    ],
+    "label": "play",
+    "localPath": "/pictograms/arasaac/6537_500.png",
+    "pictogramId": 6537,
+    "schematic": true,
+    "searchText": "play",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6537"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "leisure",
+      "sport",
+      "traditional game",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cisit": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "usual verbs",
+      "core vocabulary-work"
+    ],
+    "description": "tr. Put or place one so that it is supported and resting on the buttocks.",
+    "emoji": "💺",
+    "id": "q3_cisit",
+    "keywordMeanings": [
+      "tr. Put or place one so that it is supported and resting on the buttocks."
+    ],
+    "keywords": [
+      "sit",
+      "sit down"
+    ],
+    "label": "sit here",
+    "localPath": "/pictograms/arasaac/6611_500.png",
+    "pictogramId": 6611,
+    "schematic": true,
+    "searchText": "sit",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6611"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "object",
+      "furniture",
+      "core vocabulary",
+      "work"
+    ]
+  },
+  "q3_ciwatch": {
+    "aac": true,
+    "categories": [
+      "accessories",
+      "chronological device",
+      "chronological instrument",
+      "core vocabulary-object",
+      "core vocabulary-time",
+      "trade"
+    ],
+    "description": "",
+    "emoji": "📺",
+    "id": "q3_ciwatch",
+    "keywordMeanings": [],
+    "keywords": [
+      "watch",
+      "wristwatch"
+    ],
+    "label": "watch",
+    "localPath": "/pictograms/arasaac/2549_500.png",
+    "pictogramId": 2549,
+    "schematic": false,
+    "searchText": "watch",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2549"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "object",
+      "fashion",
+      "accessories",
+      "appliance",
+      "time",
+      "chronological device",
+      "core vocabulary",
+      "work",
+      "tertiary sector",
+      "trade"
+    ]
+  },
+  "q3_cycome": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Move or get where he is the speaker: he came to Cadiz yesterday. | Give voice to someone or make gestures to come or to warn you something.",
+    "emoji": "🫴",
+    "id": "q3_cycome",
+    "keywordMeanings": [
+      "intr. Move or get where he is the speaker: he came to Cadiz yesterday.",
+      "Give voice to someone or make gestures to come or to warn you something."
+    ],
+    "keywords": [
+      "come",
+      "call",
+      "send for"
+    ],
+    "label": "come",
+    "localPath": "/pictograms/arasaac/32669_500.png",
+    "pictogramId": 32669,
+    "schematic": true,
+    "searchText": "come",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32669"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cygive": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "Verb. Offer. | Voluntarily submit and give something to someone to have it",
+    "emoji": "🤲",
+    "id": "q3_cygive",
+    "keywordMeanings": [
+      "Verb. Offer.",
+      "Voluntarily submit and give something to someone to have it"
+    ],
+    "keywords": [
+      "give",
+      "offer",
+      "hand"
+    ],
+    "label": "give me",
+    "localPath": "/pictograms/arasaac/28431_500.png",
+    "pictogramId": 28431,
+    "schematic": false,
+    "searchText": "give",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/28431"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cyhelp": {
+    "aac": false,
+    "categories": [
+      "human response",
+      "core vocabulary-knowledge",
+      "special education",
+      "basic needs"
+    ],
+    "description": "f. Action and effect of help. | f. Action and effect of collaboration. | f. Action and effect of cooperation.",
+    "emoji": "🆘",
+    "id": "q3_cyhelp",
+    "keywordMeanings": [
+      "f. Action and effect of help.",
+      "f. Action and effect of collaboration.",
+      "f. Action and effect of cooperation."
+    ],
+    "keywords": [
+      "help",
+      "colaboration",
+      "cooperation"
+    ],
+    "label": "help me",
+    "localPath": "/pictograms/arasaac/19524_500.png",
+    "pictogramId": 19524,
+    "schematic": true,
+    "searchText": "help",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/19524"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "psychology",
+      "human response",
+      "core vocabulary",
+      "education",
+      "special education",
+      "person",
+      "basic needs"
+    ]
+  },
+  "q3_cyopen": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Separate frame leaf or leaves a door or window, making them turn on their hinges, or separate or remove anything which is enclosed with an opening, to cease to apply.",
+    "emoji": "🚪",
+    "id": "q3_cyopen",
+    "keywordMeanings": [
+      "tr. Separate frame leaf or leaves a door or window, making them turn on their hinges, or separate or remove anything which is enclosed with an opening, to cease to apply."
+    ],
+    "keywords": [
+      "open",
+      "open up",
+      "unfold"
+    ],
+    "label": "open",
+    "localPath": "/pictograms/arasaac/24825_500.png",
+    "pictogramId": 24825,
+    "schematic": true,
+    "searchText": "open",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/24825"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cyrepeat": {
+    "aac": false,
+    "categories": [
+      "verb"
+    ],
+    "description": "tr. Back to what had been done, or say what was said.",
+    "emoji": "🔄",
+    "id": "q3_cyrepeat",
+    "keywordMeanings": [
+      "tr. Back to what had been done, or say what was said."
+    ],
+    "keywords": [
+      "repeat",
+      "duplicate",
+      "replicate"
+    ],
+    "label": "repeat",
+    "localPath": "/pictograms/arasaac/11752_500.png",
+    "pictogramId": 11752,
+    "schematic": false,
+    "searchText": "repeat",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/11752"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb"
+    ]
+  },
+  "q3_cyshow": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "r. Exposing something to the hearing scheduled for display | tr. To inform the public of someone or something. | tr. To inform the public of someone or something.",
+    "emoji": "👁️",
+    "id": "q3_cyshow",
+    "keywordMeanings": [
+      "r. Exposing something to the hearing scheduled for display",
+      "tr. To inform the public of someone or something.",
+      "tr. To inform the public of someone or something."
+    ],
+    "keywords": [
+      "show",
+      "present",
+      "exhibit"
+    ],
+    "label": "show me",
+    "localPath": "/pictograms/arasaac/16823_500.png",
+    "pictogramId": 16823,
+    "schematic": true,
+    "searchText": "show",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/16823"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_cytell": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "human response",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "tr. Verbalize thought | tr. Express with words, looks or gestures that are meant.",
+    "emoji": "🗣️",
+    "id": "q3_cytell",
+    "keywordMeanings": [
+      "tr. Verbalize thought",
+      "tr. Express with words, looks or gestures that are meant."
+    ],
+    "keywords": [
+      "say",
+      "express",
+      "tell",
+      "verbalize"
+    ],
+    "label": "tell me",
+    "localPath": "/pictograms/arasaac/9693_500.png",
+    "pictogramId": 9693,
+    "schematic": true,
+    "searchText": "tell",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/9693"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "psychology",
+      "human response",
+      "core vocabulary"
+    ]
+  },
+  "q3_cywait": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Remain in place where it is believed that someone has to go or where it is assumed that something has to happen",
+    "emoji": "⏸️",
+    "id": "q3_cywait",
+    "keywordMeanings": [
+      "tr. Remain in place where it is believed that someone has to go or where it is assumed that something has to happen"
+    ],
+    "keywords": [
+      "wait"
+    ],
+    "label": "wait",
+    "localPath": "/pictograms/arasaac/16697_500.png",
+    "pictogramId": 16697,
+    "schematic": true,
+    "searchText": "wait",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/16697"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_didthis": {
+    "aac": true,
+    "categories": [
+      "interrogative pronoun",
+      "core vocabulary-communication",
+      "pronoun"
+    ],
+    "description": "adj. and s. Said of people who are not known, my mom told me not to talk to strangers. | Ask what makes a person to know the identity of another | Ask what makes a person to know the identity of another",
+    "emoji": "👉",
+    "id": "q3_didthis",
+    "keywordMeanings": [
+      "adj. and s. Said of people who are not known, my mom told me not to talk to strangers.",
+      "Ask what makes a person to know the identity of another",
+      "Ask what makes a person to know the identity of another"
+    ],
+    "keywords": [
+      "who",
+      "unknown",
+      "Who's he?",
+      "who is he?",
+      "strange",
+      "anonymous",
+      "unidentified",
+      "nameless",
+      "whom"
+    ],
+    "label": "did this",
+    "localPath": "/pictograms/arasaac/9853_500.png",
+    "pictogramId": 9853,
+    "schematic": true,
+    "searchText": "who",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/9853"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "pronoun",
+      "interrogative pronoun",
+      "core vocabulary"
+    ]
+  },
   "q3_do": {
     "aac": true,
     "categories": [
@@ -7187,7 +9378,7 @@
       "make",
       "do"
     ],
-    "label": "do",
+    "label": "do this",
     "localPath": "/pictograms/arasaac/32751_500.png",
     "pictogramId": 32751,
     "schematic": true,
@@ -7205,6 +9396,44 @@
       "language",
       "verb",
       "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_doctor2": {
+    "aac": true,
+    "categories": [
+      "health personnel",
+      "sanitary professional",
+      "core vocabulary-knowledge"
+    ],
+    "description": "n. Person who has the official title for curing diseases.",
+    "emoji": "🩺",
+    "id": "q3_doctor2",
+    "keywordMeanings": [
+      "n. Person who has the official title for curing diseases."
+    ],
+    "keywords": [
+      "medical",
+      "doctor"
+    ],
+    "label": "the doctor",
+    "localPath": "/pictograms/arasaac/6561_500.png",
+    "pictogramId": 6561,
+    "schematic": true,
+    "searchText": "doctor",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6561"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "health",
+      "medicine",
+      "professional",
+      "work",
       "core vocabulary"
     ]
   },
@@ -7226,7 +9455,7 @@
       "touch",
       "feel"
     ],
-    "label": "feel",
+    "label": "you feel",
     "localPath": "/pictograms/arasaac/3293_500.png",
     "pictogramId": 3293,
     "schematic": false,
@@ -7269,7 +9498,7 @@
       "fix",
       "mend"
     ],
-    "label": "fix",
+    "label": "fix it",
     "localPath": "/pictograms/arasaac/6910_500.png",
     "pictogramId": 6910,
     "schematic": false,
@@ -7286,6 +9515,78 @@
       "communication",
       "language",
       "verb"
+    ]
+  },
+  "q3_fordinner": {
+    "aac": true,
+    "categories": [
+      "event",
+      "feeding",
+      "core vocabulary-time",
+      "core vocabulary-feeding"
+    ],
+    "description": "f. Last meal of the day is done at dusk or at night.",
+    "emoji": "🍝",
+    "id": "q3_fordinner",
+    "keywordMeanings": [
+      "f. Last meal of the day is done at dusk or at night."
+    ],
+    "keywords": [
+      "dinner",
+      "supper"
+    ],
+    "label": "for dinner",
+    "localPath": "/pictograms/arasaac/4592_500.png",
+    "pictogramId": 4592,
+    "schematic": false,
+    "searchText": "dinner",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/4592"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "event",
+      "feeding",
+      "core vocabulary"
+    ]
+  },
+  "q3_forlunch": {
+    "aac": true,
+    "categories": [
+      "event",
+      "food",
+      "core vocabulary-time"
+    ],
+    "description": "",
+    "emoji": "🍽️",
+    "id": "q3_forlunch",
+    "keywordMeanings": [],
+    "keywords": [
+      "lunch",
+      "dinner"
+    ],
+    "label": "for lunch",
+    "localPath": "/pictograms/arasaac/4611_500.png",
+    "pictogramId": 4611,
+    "schematic": false,
+    "searchText": "lunch",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/4611"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "event",
+      "feeding",
+      "food",
+      "core vocabulary"
     ]
   },
   "q3_get": {
@@ -7328,6 +9629,314 @@
       "core vocabulary"
     ]
   },
+  "q3_getthere": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Reaching the end or the end of a shift.",
+    "emoji": "📍",
+    "id": "q3_getthere",
+    "keywordMeanings": [
+      "intr. Reaching the end or the end of a shift."
+    ],
+    "keywords": [
+      "arrive"
+    ],
+    "label": "get there",
+    "localPath": "/pictograms/arasaac/16807_500.png",
+    "pictogramId": 16807,
+    "schematic": true,
+    "searchText": "arrive",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/16807"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_gobed": {
+    "aac": true,
+    "categories": [
+      "furniture",
+      "core vocabulary-object"
+    ],
+    "description": "f. Furniture to sleep or rest, equipped with mattress, sheets, blankets, pillows, etc.., Or all of it.",
+    "emoji": "🛏️",
+    "id": "q3_gobed",
+    "keywordMeanings": [
+      "f. Furniture to sleep or rest, equipped with mattress, sheets, blankets, pillows, etc.., Or all of it."
+    ],
+    "keywords": [
+      "bed"
+    ],
+    "label": "bedtime",
+    "localPath": "/pictograms/arasaac/25900_500.png",
+    "pictogramId": 25900,
+    "schematic": true,
+    "searchText": "bed",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/25900"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "object",
+      "furniture",
+      "core vocabulary"
+    ]
+  },
+  "q3_gohome": {
+    "aac": true,
+    "categories": [
+      "residential building",
+      "core vocabulary-place",
+      "document",
+      "person according to their age",
+      "domestic animal"
+    ],
+    "description": "f. Building or part of it to live.",
+    "emoji": "🏠",
+    "id": "q3_gohome",
+    "keywordMeanings": [
+      "f. Building or part of it to live."
+    ],
+    "keywords": [
+      "house",
+      "household",
+      "home"
+    ],
+    "label": "go home",
+    "localPath": "/pictograms/arasaac/6964_500.png",
+    "pictogramId": 6964,
+    "schematic": true,
+    "searchText": "house",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6964"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "place",
+      "building",
+      "home",
+      "core vocabulary",
+      "document",
+      "person",
+      "animal",
+      "domestic"
+    ]
+  },
+  "q3_happened": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "traffic accident",
+      "road safety",
+      "core vocabulary-communication"
+    ],
+    "description": "m. Any event or action that is unintentionally harmful to people or things. | intr. Said two things: to meet each other violently, like a bullet against the wall, a vessel with another, and so on.",
+    "emoji": "💥",
+    "id": "q3_happened",
+    "keywordMeanings": [
+      "m. Any event or action that is unintentionally harmful to people or things.",
+      "intr. Said two things: to meet each other violently, like a bullet against the wall, a vessel with another, and so on."
+    ],
+    "keywords": [
+      "accident",
+      "crash"
+    ],
+    "label": "happened",
+    "localPath": "/pictograms/arasaac/4551_500.png",
+    "pictogramId": 4551,
+    "schematic": false,
+    "searchText": "accident",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/4551"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "movement",
+      "traffic",
+      "traffic accident",
+      "road safety",
+      "core vocabulary"
+    ]
+  },
+  "q3_iscoming": {
+    "aac": false,
+    "categories": [
+      "qualifying adjective",
+      "verb",
+      "unit of time"
+    ],
+    "description": "m. Time is coming.",
+    "emoji": "🚶",
+    "id": "q3_iscoming",
+    "keywordMeanings": [
+      "m. Time is coming."
+    ],
+    "keywords": [
+      "future",
+      "future"
+    ],
+    "label": "is coming",
+    "localPath": "/pictograms/arasaac/9829_500.png",
+    "pictogramId": 9829,
+    "schematic": true,
+    "searchText": "future",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/9829"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "verb",
+      "time",
+      "unit of time"
+    ]
+  },
+  "q3_isitfor": {
+    "aac": false,
+    "categories": [
+      "preposition"
+    ],
+    "description": "prep. Indicates purpose or use: I give it to you to shut up, these candies are for tea.",
+    "emoji": "❓",
+    "id": "q3_isitfor",
+    "keywordMeanings": [
+      "prep. Indicates purpose or use: I give it to you to shut up, these candies are for tea."
+    ],
+    "keywords": [
+      "for",
+      "in order to"
+    ],
+    "label": "is it for",
+    "localPath": "/pictograms/arasaac/7194_500.png",
+    "pictogramId": 7194,
+    "schematic": true,
+    "searchText": "for",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/7194"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "preposition"
+    ]
+  },
+  "q3_isthat": {
+    "aac": false,
+    "categories": [
+      "demonstrative adjective",
+      "demonstrative pronoun",
+      "feeding"
+    ],
+    "description": "adj. and pron. dem. Serves to point out one thing that is far from both the speaker and the person who is speaking | pron. dem. Designates what is physically or mentally away from the speaker and the person speaking. U. m. Forms and fc adj. and cs",
+    "emoji": "👈",
+    "id": "q3_isthat",
+    "keywordMeanings": [
+      "adj. and pron. dem. Serves to point out one thing that is far from both the speaker and the person who is speaking",
+      "pron. dem. Designates what is physically or mentally away from the speaker and the person speaking. U. m. Forms and fc adj. and cs"
+    ],
+    "keywords": [
+      "that one",
+      "that",
+      "that one over there"
+    ],
+    "label": "is that",
+    "localPath": "/pictograms/arasaac/6906_500.png",
+    "pictogramId": 6906,
+    "schematic": true,
+    "searchText": "that",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6906"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "demonstrative adjective",
+      "pronoun",
+      "demonstrative pronoun",
+      "feeding"
+    ]
+  },
+  "q3_lunch": {
+    "aac": true,
+    "categories": [
+      "event",
+      "food",
+      "core vocabulary-time"
+    ],
+    "description": "",
+    "emoji": "🍽️",
+    "id": "q3_lunch",
+    "keywordMeanings": [],
+    "keywords": [
+      "lunch",
+      "dinner"
+    ],
+    "label": "lunch",
+    "localPath": "/pictograms/arasaac/4611_500.png",
+    "pictogramId": 4611,
+    "schematic": false,
+    "searchText": "lunch",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/4611"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "event",
+      "feeding",
+      "food",
+      "core vocabulary"
+    ]
+  },
   "q3_name": {
     "aac": false,
     "categories": [
@@ -7344,7 +9953,7 @@
       "first name",
       "name"
     ],
-    "label": "name",
+    "label": "your name",
     "localPath": "/pictograms/arasaac/27357_500.png",
     "pictogramId": 27357,
     "schematic": true,
@@ -7399,6 +10008,82 @@
       "basic concepts"
     ]
   },
+  "q3_open": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Separate frame leaf or leaves a door or window, making them turn on their hinges, or separate or remove anything which is enclosed with an opening, to cease to apply.",
+    "emoji": "🚪",
+    "id": "q3_open",
+    "keywordMeanings": [
+      "tr. Separate frame leaf or leaves a door or window, making them turn on their hinges, or separate or remove anything which is enclosed with an opening, to cease to apply."
+    ],
+    "keywords": [
+      "open",
+      "open up",
+      "unfold"
+    ],
+    "label": "open it",
+    "localPath": "/pictograms/arasaac/24825_500.png",
+    "pictogramId": 24825,
+    "schematic": true,
+    "searchText": "open",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/24825"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_over": {
+    "aac": true,
+    "categories": [
+      "preposition",
+      "basic concepts"
+    ],
+    "description": "prep. Above.",
+    "emoji": "🏁",
+    "id": "q3_over",
+    "keywordMeanings": [
+      "prep. Above."
+    ],
+    "keywords": [
+      "over",
+      "on"
+    ],
+    "label": "is this over",
+    "localPath": "/pictograms/arasaac/7814_500.png",
+    "pictogramId": 7814,
+    "schematic": true,
+    "searchText": "over",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/7814"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "preposition",
+      "mathematics",
+      "basic concepts",
+      "core vocabulary"
+    ]
+  },
   "q3_problem": {
     "aac": false,
     "categories": [
@@ -7430,6 +10115,43 @@
       "mathematics"
     ]
   },
+  "q3_recess": {
+    "aac": false,
+    "categories": [
+      "teaching activity",
+      "routine"
+    ],
+    "description": "Period of rest and play between hours.",
+    "emoji": "🛝",
+    "id": "q3_recess",
+    "keywordMeanings": [
+      "Period of rest and play between hours."
+    ],
+    "keywords": [
+      "playtime",
+      "recess",
+      "break"
+    ],
+    "label": "recess",
+    "localPath": "/pictograms/arasaac/27339_500.png",
+    "pictogramId": 27339,
+    "schematic": false,
+    "searchText": "recess",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/27339"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "education",
+      "teaching activity",
+      "person",
+      "routine"
+    ]
+  },
   "q3_say": {
     "aac": true,
     "categories": [
@@ -7451,7 +10173,7 @@
       "tell",
       "verbalize"
     ],
-    "label": "say",
+    "label": "say it",
     "localPath": "/pictograms/arasaac/9693_500.png",
     "pictogramId": 9693,
     "schematic": true,
@@ -7462,6 +10184,136 @@
       "name": "ARASAAC",
       "owner": "Government of Aragón",
       "url": "https://beta.arasaac.org/pictograms/9693"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "psychology",
+      "human response",
+      "core vocabulary"
+    ]
+  },
+  "q3_spell": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "educational task",
+      "core vocabulary-communication",
+      "core vocabulary-education"
+    ],
+    "description": "tr. and intr. Represent concepts or ideasbyletters or conventional signs. | f. Action and effect of writing.",
+    "emoji": "🔤",
+    "id": "q3_spell",
+    "keywordMeanings": [
+      "tr. and intr. Represent concepts or ideasbyletters or conventional signs.",
+      "f. Action and effect of writing."
+    ],
+    "keywords": [
+      "write",
+      "writing"
+    ],
+    "label": "spell it",
+    "localPath": "/pictograms/arasaac/2380_500.png",
+    "pictogramId": 2380,
+    "schematic": false,
+    "searchText": "write",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/2380"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "education",
+      "educational task",
+      "core vocabulary"
+    ]
+  },
+  "q3_start": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. and intr. Start something, start: function has begun. Irreg. It conj. like stumbling. | tr. start (ÃÂ¢ÃÂÃÂ to start to something.) | m. Starting point or first stage of something large: the beginning of the story is amazing.",
+    "emoji": "▶️",
+    "id": "q3_start",
+    "keywordMeanings": [
+      "tr. and intr. Start something, start: function has begun. Irreg. It conj. like stumbling.",
+      "tr. start (ÃÂ¢ÃÂÃÂ to start to something.)",
+      "m. Starting point or first stage of something large: the beginning of the story is amazing."
+    ],
+    "keywords": [
+      "begin",
+      "start",
+      "start",
+      "beginning"
+    ],
+    "label": "does it start",
+    "localPath": "/pictograms/arasaac/5431_500.png",
+    "pictogramId": 5431,
+    "schematic": true,
+    "searchText": "start",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5431"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_talking": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "human response",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "intr. Articulate, uttering words to understand. | intr. Said one or more persons: Talking with another or others. | intr. Said one or more persons: Talking with another or others. | intr. coloq. Talking a lot without substance or irrelevant.",
+    "emoji": "🗣️",
+    "id": "q3_talking",
+    "keywordMeanings": [
+      "intr. Articulate, uttering words to understand.",
+      "intr. Said one or more persons: Talking with another or others.",
+      "intr. Said one or more persons: Talking with another or others.",
+      "intr. coloq. Talking a lot without substance or irrelevant."
+    ],
+    "keywords": [
+      "speak",
+      "talk",
+      "converse",
+      "chat",
+      "gab"
+    ],
+    "label": "is talking",
+    "localPath": "/pictograms/arasaac/6517_500.png",
+    "pictogramId": 6517,
+    "schematic": true,
+    "searchText": "talk",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6517"
     },
     "sourceFile": "src/data/hierarchy.js",
     "tags": [
@@ -7568,7 +10420,7 @@
     "keywords": [
       "use"
     ],
-    "label": "use",
+    "label": "use it",
     "localPath": "/pictograms/arasaac/15485_500.png",
     "pictogramId": 15485,
     "schematic": true,
@@ -7579,6 +10431,353 @@
       "name": "ARASAAC",
       "owner": "Government of Aragón",
       "url": "https://beta.arasaac.org/pictograms/15485"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "q3_whyangry": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "feeling",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "adj. Be upset, angry.",
+    "emoji": "😠",
+    "id": "q3_whyangry",
+    "keywordMeanings": [
+      "adj. Be upset, angry."
+    ],
+    "keywords": [
+      "angry",
+      "annoyed",
+      "irritated"
+    ],
+    "label": "angry",
+    "localPath": "/pictograms/arasaac/35539_500.png",
+    "pictogramId": 35539,
+    "schematic": true,
+    "searchText": "angry",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35539"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "psychology",
+      "feeling",
+      "emotion",
+      "core vocabulary"
+    ]
+  },
+  "q3_whycrying": {
+    "aac": false,
+    "categories": [
+      "human response"
+    ],
+    "description": "",
+    "emoji": "😢",
+    "id": "q3_whycrying",
+    "keywordMeanings": [],
+    "keywords": [
+      "crying",
+      "weeping",
+      "cry"
+    ],
+    "label": "crying",
+    "localPath": "/pictograms/arasaac/35881_500.png",
+    "pictogramId": 35881,
+    "schematic": true,
+    "searchText": "crying",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35881"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "psychology",
+      "human response"
+    ]
+  },
+  "q3_whyhere": {
+    "aac": false,
+    "categories": [
+      "adverb of place",
+      "basic concepts"
+    ],
+    "description": "Adv. l. Indicates the place where is the speaker or a place near him. With verbs of state, meaning in this place I live here. With verbs of motion, meaning this place: see here. May be preceded by the preps. of, from, to, up to and, from here you can see",
+    "emoji": "📍",
+    "id": "q3_whyhere",
+    "keywordMeanings": [
+      "Adv. l. Indicates the place where is the speaker or a place near him. With verbs of state, meaning in this place I live here. With verbs of motion, meaning this place: see here. May be preceded by the preps. of, from, to, up to and, from here you can see "
+    ],
+    "keywords": [
+      "here"
+    ],
+    "label": "here",
+    "localPath": "/pictograms/arasaac/5382_500.png",
+    "pictogramId": 5382,
+    "schematic": true,
+    "searchText": "here",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5382"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adverb",
+      "adverb of place",
+      "mathematics",
+      "basic concepts"
+    ]
+  },
+  "q3_whyleave": {
+    "aac": false,
+    "categories": [
+      "verb",
+      "architectural element",
+      "building facility"
+    ],
+    "description": "tr. Moving from the inside out.",
+    "emoji": "🚪",
+    "id": "q3_whyleave",
+    "keywordMeanings": [
+      "tr. Moving from the inside out."
+    ],
+    "keywords": [
+      "exit",
+      "go out",
+      "get out",
+      "leave"
+    ],
+    "label": "leaving",
+    "localPath": "/pictograms/arasaac/6606_500.png",
+    "pictogramId": 6606,
+    "schematic": true,
+    "searchText": "leave",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6606"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "architecture",
+      "building",
+      "architectural element",
+      "place",
+      "building facility"
+    ]
+  },
+  "q3_whynot": {
+    "aac": true,
+    "categories": [
+      "interrogative pronoun",
+      "core vocabulary-communication",
+      "pronoun"
+    ],
+    "description": "",
+    "emoji": "🚫",
+    "id": "q3_whynot",
+    "keywordMeanings": [],
+    "keywords": [
+      "why"
+    ],
+    "label": "not",
+    "localPath": "/pictograms/arasaac/36719_500.png",
+    "pictogramId": 36719,
+    "schematic": true,
+    "searchText": "why",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/36719"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "pronoun",
+      "interrogative pronoun",
+      "core vocabulary"
+    ]
+  },
+  "q3_wrong": {
+    "aac": false,
+    "categories": [
+      "qualifying adjective",
+      "educational task"
+    ],
+    "description": "adj. Wrong, wrong.",
+    "emoji": "⚠️",
+    "id": "q3_wrong",
+    "keywordMeanings": [
+      "adj. Wrong, wrong."
+    ],
+    "keywords": [
+      "incorrect",
+      "wrong"
+    ],
+    "label": "wrong",
+    "localPath": "/pictograms/arasaac/22198_500.png",
+    "pictogramId": 22198,
+    "schematic": false,
+    "searchText": "wrong",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/22198"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "education",
+      "educational task"
+    ]
+  },
+  "q_canI": {
+    "aac": false,
+    "categories": [
+      "official document",
+      "construction"
+    ],
+    "description": "",
+    "emoji": "🙋",
+    "id": "q_canI",
+    "keywordMeanings": [],
+    "keywords": [
+      "permission",
+      "license",
+      "planning permission"
+    ],
+    "label": "can I",
+    "localPath": "/pictograms/arasaac/27865_500.png",
+    "pictogramId": 27865,
+    "schematic": false,
+    "searchText": "permission",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/27865"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "document",
+      "public administration",
+      "work",
+      "secondary sector",
+      "construction"
+    ]
+  },
+  "q_canYou": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Ask to bring or send something else. | tr. Ask to bring or send something else. | tr. Send to someone or send something.",
+    "emoji": "🤝",
+    "id": "q_canYou",
+    "keywordMeanings": [
+      "tr. Ask to bring or send something else.",
+      "tr. Ask to bring or send something else.",
+      "tr. Send to someone or send something."
+    ],
+    "keywords": [
+      "order",
+      "ask",
+      "task",
+      "request",
+      "order"
+    ],
+    "label": "can you",
+    "localPath": "/pictograms/arasaac/25062_500.png",
+    "pictogramId": 25062,
+    "schematic": true,
+    "searchText": "request",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/25062"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "core vocabulary"
+    ]
+  },
+  "q_doYouHave": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Owning something or enjoy it | tr. Holding steady or something",
+    "emoji": "🤲",
+    "id": "q_doYouHave",
+    "keywordMeanings": [
+      "tr. Owning something or enjoy it",
+      "tr. Holding steady or something"
+    ],
+    "keywords": [
+      "have",
+      "hold",
+      "keep hold",
+      "own",
+      "possess",
+      "have got"
+    ],
+    "label": "do you have",
+    "localPath": "/pictograms/arasaac/32761_500.png",
+    "pictogramId": 32761,
+    "schematic": true,
+    "searchText": "have",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32761"
     },
     "sourceFile": "src/data/hierarchy.js",
     "tags": [
@@ -7714,6 +10913,41 @@
       "language",
       "expression",
       "mathematics"
+    ]
+  },
+  "q_isIt": {
+    "aac": false,
+    "categories": [
+      "orthographic sign"
+    ],
+    "description": "Sign checker that is used to initiate an inquiry.",
+    "emoji": "🔍",
+    "id": "q_isIt",
+    "keywordMeanings": [
+      "Sign checker that is used to initiate an inquiry."
+    ],
+    "keywords": [
+      "¿",
+      "question mark"
+    ],
+    "label": "is it",
+    "localPath": "/pictograms/arasaac/3415_500.png",
+    "pictogramId": 3415,
+    "schematic": true,
+    "searchText": "question mark",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/3415"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "alphabet",
+      "orthographic sign"
     ]
   },
   "q_what": {
@@ -8533,6 +11767,492 @@
       "core vocabulary"
     ]
   },
+  "st_busy": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "professional",
+      "educational task",
+      "core vocabulary-communication",
+      "core vocabulary-work",
+      "core vocabulary-education"
+    ],
+    "description": "intr. Any activity, physical or intellectual.",
+    "emoji": "📵",
+    "id": "st_busy",
+    "keywordMeanings": [
+      "intr. Any activity, physical or intellectual."
+    ],
+    "keywords": [
+      "work"
+    ],
+    "label": "am busy",
+    "localPath": "/pictograms/arasaac/6624_500.png",
+    "pictogramId": 6624,
+    "schematic": true,
+    "searchText": "work",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6624"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "work",
+      "professional",
+      "education",
+      "educational task",
+      "core vocabulary"
+    ]
+  },
+  "st_coming": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "intr. Reaching the end or the end of a shift.",
+    "emoji": "🚶",
+    "id": "st_coming",
+    "keywordMeanings": [
+      "intr. Reaching the end or the end of a shift."
+    ],
+    "keywords": [
+      "arrive"
+    ],
+    "label": "am coming",
+    "localPath": "/pictograms/arasaac/16807_500.png",
+    "pictogramId": 16807,
+    "schematic": true,
+    "searchText": "arrive",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/16807"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
+  "st_here": {
+    "aac": false,
+    "categories": [
+      "adverb of place",
+      "basic concepts"
+    ],
+    "description": "Adv. l. Indicates the place where is the speaker or a place near him. With verbs of state, meaning in this place I live here. With verbs of motion, meaning this place: see here. May be preceded by the preps. of, from, to, up to and, from here you can see",
+    "emoji": "📍",
+    "id": "st_here",
+    "keywordMeanings": [
+      "Adv. l. Indicates the place where is the speaker or a place near him. With verbs of state, meaning in this place I live here. With verbs of motion, meaning this place: see here. May be preceded by the preps. of, from, to, up to and, from here you can see "
+    ],
+    "keywords": [
+      "here"
+    ],
+    "label": "am here",
+    "localPath": "/pictograms/arasaac/5382_500.png",
+    "pictogramId": 5382,
+    "schematic": true,
+    "searchText": "here",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5382"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adverb",
+      "adverb of place",
+      "mathematics",
+      "basic concepts"
+    ]
+  },
+  "st_hungry": {
+    "aac": false,
+    "categories": [
+      "qualifying adjective",
+      "basic needs"
+    ],
+    "description": "adj. y s. Que tiene mucha hambre o necesidad de comer.",
+    "emoji": "🍽️",
+    "id": "st_hungry",
+    "keywordMeanings": [
+      "adj. y s. Que tiene mucha hambre o necesidad de comer."
+    ],
+    "keywords": [
+      "hungry"
+    ],
+    "label": "am hungry",
+    "localPath": "/pictograms/arasaac/35579_500.png",
+    "pictogramId": 35579,
+    "schematic": true,
+    "searchText": "hungry",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35579"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "person",
+      "basic needs"
+    ]
+  },
+  "st_leaving": {
+    "aac": false,
+    "categories": [
+      "verb",
+      "architectural element",
+      "building facility"
+    ],
+    "description": "tr. Moving from the inside out.",
+    "emoji": "🚪",
+    "id": "st_leaving",
+    "keywordMeanings": [
+      "tr. Moving from the inside out."
+    ],
+    "keywords": [
+      "exit",
+      "go out",
+      "get out",
+      "leave"
+    ],
+    "label": "am leaving",
+    "localPath": "/pictograms/arasaac/6606_500.png",
+    "pictogramId": 6606,
+    "schematic": true,
+    "searchText": "leave",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/6606"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "architecture",
+      "building",
+      "architectural element",
+      "place",
+      "building facility"
+    ]
+  },
+  "st_lost": {
+    "aac": false,
+    "categories": [
+      "qualifying adjective",
+      "road safety"
+    ],
+    "description": "",
+    "emoji": "😰",
+    "id": "st_lost",
+    "keywordMeanings": [],
+    "keywords": [
+      "lost",
+      "disoriented"
+    ],
+    "label": "am lost",
+    "localPath": "/pictograms/arasaac/36295_500.png",
+    "pictogramId": 36295,
+    "schematic": true,
+    "searchText": "lost",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/36295"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "movement",
+      "traffic",
+      "road safety"
+    ]
+  },
+  "st_notok": {
+    "aac": true,
+    "categories": [
+      "verb",
+      "disease",
+      "core vocabulary-communication"
+    ],
+    "description": "Contracting disease. U. prnl tc.",
+    "emoji": "❌",
+    "id": "st_notok",
+    "keywordMeanings": [
+      "Contracting disease. U. prnl tc."
+    ],
+    "keywords": [
+      "get sick",
+      "come down",
+      "sicken",
+      "fall ill",
+      "get ill",
+      "ill",
+      "sick"
+    ],
+    "label": "am not OK",
+    "localPath": "/pictograms/arasaac/7040_500.png",
+    "pictogramId": 7040,
+    "schematic": true,
+    "searchText": "sick",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/7040"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "health",
+      "medicine",
+      "disease",
+      "core vocabulary"
+    ]
+  },
+  "st_ok": {
+    "aac": true,
+    "categories": [
+      "adverb of manner",
+      "core vocabulary-communication"
+    ],
+    "description": "As it should, with reason, perfect or correct, the right way.",
+    "emoji": "👌",
+    "id": "st_ok",
+    "keywordMeanings": [
+      "As it should, with reason, perfect or correct, the right way."
+    ],
+    "keywords": [
+      "well",
+      "ok",
+      "okay",
+      "fine",
+      "all right",
+      "right"
+    ],
+    "label": "am OK",
+    "localPath": "/pictograms/arasaac/5397_500.png",
+    "pictogramId": 5397,
+    "schematic": false,
+    "searchText": "ok",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5397"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adverb",
+      "adverb of manner",
+      "core vocabulary"
+    ]
+  },
+  "st_ready": {
+    "aac": false,
+    "categories": [
+      "olympic games",
+      "sport modality",
+      "athletics"
+    ],
+    "description": "adj. Summoned, ready, willing to do anything .. | prnl. Available, prevention and rigged to run something or some other purpose.",
+    "emoji": "✅",
+    "id": "st_ready",
+    "keywordMeanings": [
+      "adj. Summoned, ready, willing to do anything ..",
+      "prnl. Available, prevention and rigged to run something or some other purpose."
+    ],
+    "keywords": [
+      "ready",
+      "get ready"
+    ],
+    "label": "am ready",
+    "localPath": "/pictograms/arasaac/17000_500.png",
+    "pictogramId": 17000,
+    "schematic": false,
+    "searchText": "ready",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/17000"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "leisure",
+      "sport",
+      "event",
+      "sport event",
+      "olympic games",
+      "sport modality",
+      "athletics"
+    ]
+  },
+  "st_thirsty": {
+    "aac": false,
+    "categories": [
+      "verb",
+      "basic needs",
+      "body sensation"
+    ],
+    "description": "adj. Who thirsts. | Win and need to drink. | f. Win and need to drink.",
+    "emoji": "💧",
+    "id": "st_thirsty",
+    "keywordMeanings": [
+      "adj. Who thirsts.",
+      "Win and need to drink.",
+      "f. Win and need to drink."
+    ],
+    "keywords": [
+      "thirsty",
+      "be thirsty",
+      "thirst",
+      "thirst"
+    ],
+    "label": "am thirsty",
+    "localPath": "/pictograms/arasaac/7273_500.png",
+    "pictogramId": 7273,
+    "schematic": true,
+    "searchText": "thirsty",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/7273"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "person",
+      "basic needs",
+      "human body",
+      "body sensation"
+    ]
+  },
+  "st_tired": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "feeling",
+      "body sensation",
+      "covid-19",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge",
+      "core vocabulary-living being",
+      "core vocabulary-miscellaneous"
+    ],
+    "description": "adj. Fatigue, lack of power",
+    "emoji": "😴",
+    "id": "st_tired",
+    "keywordMeanings": [
+      "adj. Fatigue, lack of power"
+    ],
+    "keywords": [
+      "tired",
+      "exhausted",
+      "fatigued"
+    ],
+    "label": "am tired",
+    "localPath": "/pictograms/arasaac/35537_500.png",
+    "pictogramId": 35537,
+    "schematic": true,
+    "searchText": "tired",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/35537"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "psychology",
+      "feeling",
+      "emotion",
+      "human body",
+      "body sensation",
+      "covid-19",
+      "core vocabulary"
+    ]
+  },
+  "st_waiting": {
+    "aac": false,
+    "categories": [
+      "event"
+    ],
+    "description": "f. Action and expected result: tense wait.",
+    "emoji": "⏳",
+    "id": "st_waiting",
+    "keywordMeanings": [
+      "f. Action and expected result: tense wait."
+    ],
+    "keywords": [
+      "waiting"
+    ],
+    "label": "am waiting",
+    "localPath": "/pictograms/arasaac/16091_500.png",
+    "pictogramId": 16091,
+    "schematic": false,
+    "searchText": "waiting",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/16091"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "event"
+    ]
+  },
   "t_afternoon": {
     "aac": true,
     "categories": [
@@ -8604,6 +12324,40 @@
       "basic concepts"
     ]
   },
+  "t_everyday": {
+    "aac": true,
+    "categories": [
+      "calendar",
+      "core vocabulary-time"
+    ],
+    "description": "Systematic account of the time for the organization of human activities.",
+    "emoji": "🗓️",
+    "id": "t_everyday",
+    "keywordMeanings": [
+      "Systematic account of the time for the organization of human activities."
+    ],
+    "keywords": [
+      "calendar"
+    ],
+    "label": "every day",
+    "localPath": "/pictograms/arasaac/32488_500.png",
+    "pictogramId": 32488,
+    "schematic": true,
+    "searchText": "calendar",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32488"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "time",
+      "calendar",
+      "core vocabulary"
+    ]
+  },
   "t_later": {
     "aac": true,
     "categories": [
@@ -8646,6 +12400,38 @@
       "adverb of time",
       "mathematics",
       "basic concepts",
+      "core vocabulary"
+    ]
+  },
+  "t_minute": {
+    "aac": true,
+    "categories": [
+      "unit of time",
+      "core vocabulary-time"
+    ],
+    "description": "",
+    "emoji": "⏱️",
+    "id": "t_minute",
+    "keywordMeanings": [],
+    "keywords": [
+      "minute"
+    ],
+    "label": "in a minute",
+    "localPath": "/pictograms/arasaac/37374_500.png",
+    "pictogramId": 37374,
+    "schematic": true,
+    "searchText": "minute",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/37374"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "time",
+      "unit of time",
       "core vocabulary"
     ]
   },
@@ -8753,6 +12539,51 @@
       "name": "ARASAAC",
       "owner": "Government of Aragón",
       "url": "https://beta.arasaac.org/pictograms/32747"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adverb",
+      "adverb of time",
+      "mathematics",
+      "basic concepts",
+      "core vocabulary"
+    ]
+  },
+  "t_soon": {
+    "aac": true,
+    "categories": [
+      "adverb of time",
+      "basic concepts",
+      "core vocabulary-communication",
+      "core vocabulary-knowledge"
+    ],
+    "description": "adv. t. Then later. Last night we went to the theater, and then to a nightclub. He studied law, then medicine. | adv. t. Then later. Last night we went to the theater, and then to a nightclub. He studied law, then medicine.",
+    "emoji": "🔜",
+    "id": "t_soon",
+    "keywordMeanings": [
+      "adv. t. Then later. Last night we went to the theater, and then to a nightclub. He studied law, then medicine.",
+      "adv. t. Then later. Last night we went to the theater, and then to a nightclub. He studied law, then medicine."
+    ],
+    "keywords": [
+      "after",
+      "then",
+      "later on",
+      "afterwards",
+      "later"
+    ],
+    "label": "soon",
+    "localPath": "/pictograms/arasaac/32749_500.png",
+    "pictogramId": 32749,
+    "schematic": true,
+    "searchText": "later",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/32749"
     },
     "sourceFile": "src/data/hierarchy.js",
     "tags": [
@@ -9009,6 +12840,44 @@
       "core vocabulary"
     ]
   },
+  "x_done": {
+    "aac": true,
+    "categories": [
+      "usual verbs",
+      "core vocabulary-communication"
+    ],
+    "description": "tr. Put an end to one thing, finish: finally finished the job. | adj. That tops, close or perfect anything.",
+    "emoji": "✅",
+    "id": "x_done",
+    "keywordMeanings": [
+      "tr. Put an end to one thing, finish: finally finished the job.",
+      "adj. That tops, close or perfect anything."
+    ],
+    "keywords": [
+      "finish",
+      "end"
+    ],
+    "label": "done",
+    "localPath": "/pictograms/arasaac/5358_500.png",
+    "pictogramId": 5358,
+    "schematic": true,
+    "searchText": "finish",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5358"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "verb",
+      "usual verbs",
+      "core vocabulary"
+    ]
+  },
   "x_less": {
     "aac": false,
     "categories": [
@@ -9039,6 +12908,94 @@
       "language",
       "adverb",
       "adverb of degree"
+    ]
+  },
+  "x_little": {
+    "aac": true,
+    "categories": [
+      "qualifying adjective",
+      "size",
+      "core vocabulary-communication",
+      "core vocabulary-object"
+    ],
+    "description": "adj. Little size or height with respect to its class or kind: small car, small head. | adj. comp. small. Which is lower than otherwise in amount, intensity or quality. | adj. Little size or height with respect to its class or kind: small hand",
+    "emoji": "🤏",
+    "id": "x_little",
+    "keywordMeanings": [
+      "adj. Little size or height with respect to its class or kind: small car, small head.",
+      "adj. comp. small. Which is lower than otherwise in amount, intensity or quality.",
+      "adj. Little size or height with respect to its class or kind: small hand"
+    ],
+    "keywords": [
+      "small",
+      "smaller",
+      "tiny",
+      "little",
+      "littler"
+    ],
+    "label": "a little",
+    "localPath": "/pictograms/arasaac/4716_500.png",
+    "pictogramId": 4716,
+    "schematic": true,
+    "searchText": "little",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/4716"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adjective",
+      "qualifying adjective",
+      "size",
+      "core vocabulary",
+      "object"
+    ]
+  },
+  "x_maybe": {
+    "aac": false,
+    "categories": [
+      "human response",
+      "verb"
+    ],
+    "description": "f. Hesitation and indecision before several possibilities: you are uncertain about whether to go to stay. | intr. Have perplexed mood and suspense between resolutions and conflicting judgments, without deciding for one or the other. | intr. Have perplexed mood and suspense between resolutions and conflicting judgments, without deciding for one or the other.",
+    "emoji": "🤔",
+    "id": "x_maybe",
+    "keywordMeanings": [
+      "f. Hesitation and indecision before several possibilities: you are uncertain about whether to go to stay.",
+      "intr. Have perplexed mood and suspense between resolutions and conflicting judgments, without deciding for one or the other.",
+      "intr. Have perplexed mood and suspense between resolutions and conflicting judgments, without deciding for one or the other."
+    ],
+    "keywords": [
+      "doubt",
+      "doubt",
+      "hesitate",
+      "dither",
+      "waver"
+    ],
+    "label": "maybe",
+    "localPath": "/pictograms/arasaac/11696_500.png",
+    "pictogramId": 11696,
+    "schematic": false,
+    "searchText": "doubt",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/11696"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "psychology",
+      "human response",
+      "communication",
+      "language",
+      "verb"
     ]
   },
   "x_more": {
@@ -9072,6 +13029,48 @@
       "adverb",
       "adverb of degree",
       "feeding"
+    ]
+  },
+  "x_not": {
+    "aac": true,
+    "categories": [
+      "adverb",
+      "adverb of denial",
+      "core vocabulary-communication",
+      "adjective",
+      "indefinite adjective"
+    ],
+    "description": "adv. neg. It is used as a negative response to a question, as an expression of refusal or non-compliance, to indicate the failure to undertake an action, etc.",
+    "emoji": "🚫",
+    "id": "x_not",
+    "keywordMeanings": [
+      "adv. neg. It is used as a negative response to a question, as an expression of refusal or non-compliance, to indicate the failure to undertake an action, etc."
+    ],
+    "keywords": [
+      "no"
+    ],
+    "label": "not",
+    "localPath": "/pictograms/arasaac/5526_500.png",
+    "pictogramId": 5526,
+    "schematic": true,
+    "searchText": "no",
+    "source": {
+      "author": "Sergio Palao",
+      "license": "CC BY-NC-SA 4.0",
+      "name": "ARASAAC",
+      "owner": "Government of Aragón",
+      "url": "https://beta.arasaac.org/pictograms/5526"
+    },
+    "sourceFile": "src/data/hierarchy.js",
+    "tags": [
+      "communication",
+      "language",
+      "adverb",
+      "adverb of denial",
+      "education",
+      "core vocabulary",
+      "adjective",
+      "indefinite adjective"
     ]
   },
   "x_please": {

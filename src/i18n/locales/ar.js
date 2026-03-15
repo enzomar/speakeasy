@@ -250,4 +250,16 @@ export default {
   historyAll:         "الكل",
   historyFavs:        "★ المفضلة",
   globalSearch:       "ابحث عن رموز، كلمات، عبارات…",
+
+  // Board names
+  board_generic:    "عام",
+  board_home:       "المنزل",
+  board_school:     "المدرسة",
+  board_doctor:     "الطبيب",
+  board_restaurant: "المطعم",
+  board_shopping:   "التسوق",
+  board_transport:  "النقل",
+  board_emergency:  "طوارئ",
+  board_work:       "العمل",
+  board_social:     "اجتماعي",
 };

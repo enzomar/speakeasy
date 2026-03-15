@@ -78,6 +78,51 @@ export {
   l1CategoryToConceptId,
 } from './hierarchyBridge.js';
 
+// Concept Registry — single semantic source of truth
+export {
+  lookupConcept,
+  resolveHierarchyId,
+  hierarchyToConcept,
+  conceptToHierarchyIds,
+  getSemanticRole,
+  getConceptsByRole,
+  getConceptsByType,
+  getLabel,
+  isKnown,
+  allConcepts,
+  getL2SemanticType,
+  getL2sBySemanticType,
+  getRelationsFrom,
+  getRelationsTo,
+  getRelated,
+  getInverseRelated,
+  getSemanticNeighbors,
+} from './conceptRegistry.js';
+
+// Usage analytics — local tap/suggestion tracking
+export {
+  recordTap,
+  recordSuggestionsShown,
+  recordSuggestionPicked,
+  recordCorrection,
+  getTopL2,
+  getTopTapPaths,
+  getSuggestionPickRate,
+  getCorrectionRate,
+  getRecentHistory,
+  getTapCount,
+  persistStats,
+  loadStats,
+  resetStats,
+} from './usageTracker.js';
+
+// Grammar patterns — compositional sentence generation from semantic types
+export {
+  generateFromGrammar,
+  generateFromGrammarL3,
+  hasGrammarPattern,
+} from './grammarPatterns.js';
+
 // Re-export the raw data for external inspection if needed
 export { default as LEXICON }       from './lexicon.json'       assert { type: 'json' };
 export { default as GRAMMAR_GRAPH } from './grammarGraph.json'  assert { type: 'json' };

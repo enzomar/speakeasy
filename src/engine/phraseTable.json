@@ -1,0 +1,529 @@
+{
+  "_meta": {
+    "version": 1,
+    "description": "Per-language AAC phrase patterns that the morphology engine cannot produce via buildSentence(). Each pattern has placeholders like {body}, {person}, {object} that are resolved at runtime from the lexicon."
+  },
+
+  "body_pain": {
+    "_doc": "'{body} hurts' — each language has its own idiom for body pain",
+    "en": { "tpl": "My {body} hurts", "alt": "I have a {body}ache" },
+    "es": { "tpl": "Me duele {body_def}", "alt": "Tengo dolor de {body}" },
+    "fr": { "tpl": "J'ai mal {body_loc}", "alt": null },
+    "de": { "tpl": "Mein {body} tut weh", "alt": "{body_def} tut mir weh" },
+    "it": { "tpl": "Mi fa male {body_def}", "alt": "Ho mal di {body}" },
+    "pt": { "tpl": "Meu {body} dói", "alt": "Estou com dor de {body}" },
+    "ar": { "tpl": "يؤلمني {body_def}", "alt": "عندي ألم في {body_def}" },
+    "zh": { "tpl": "我{body}疼", "alt": "我{body}不舒服" },
+    "ja": { "tpl": "{body}が痛いです", "alt": null },
+    "ko": { "tpl": "{body}가 아파요", "alt": null }
+  },
+
+  "body_pain_intensity": {
+    "_doc": "Body pain + intensity (very / a little / not anymore)",
+    "very": {
+      "en": "It hurts a lot", "es": "Me duele mucho", "fr": "J'ai très mal",
+      "de": "Es tut sehr weh", "it": "Mi fa molto male", "pt": "Dói muito",
+      "ar": "يؤلمني كثيراً", "zh": "很疼", "ja": "とても痛いです", "ko": "많이 아파요"
+    },
+    "little": {
+      "en": "It hurts a little", "es": "Me duele un poco", "fr": "J'ai un peu mal",
+      "de": "Es tut ein bisschen weh", "it": "Mi fa un po' male", "pt": "Dói um pouco",
+      "ar": "يؤلمني قليلاً", "zh": "有点疼", "ja": "少し痛いです", "ko": "조금 아파요"
+    },
+    "not": {
+      "en": "It doesn't hurt anymore", "es": "Ya no me duele", "fr": "Je n'ai plus mal",
+      "de": "Es tut nicht mehr weh", "it": "Non mi fa più male", "pt": "Não dói mais",
+      "ar": "لم يعد يؤلمني", "zh": "不疼了", "ja": "もう痛くないです", "ko": "더 이상 안 아파요"
+    },
+    "now": {
+      "en": "It hurts right now", "es": "Me duele ahora", "fr": "J'ai mal maintenant",
+      "de": "Es tut jetzt weh", "it": "Mi fa male adesso", "pt": "Está doendo agora",
+      "ar": "يؤلمني الآن", "zh": "现在很疼", "ja": "今痛いです", "ko": "지금 아파요"
+    }
+  },
+
+  "body_parts": {
+    "_doc": "Localized body-part names for phrase substitution",
+    "b_head":    { "en": "head",    "es": "cabeza",     "fr": "tête",     "de": "Kopf",      "it": "testa",     "pt": "cabeça",    "ar": "رأس",     "zh": "头",   "ja": "頭",   "ko": "머리" },
+    "b_stomach": { "en": "stomach", "es": "estómago",   "fr": "ventre",   "de": "Bauch",     "it": "stomaco",   "pt": "estômago",  "ar": "معدة",    "zh": "肚子",  "ja": "お腹", "ko": "배"   },
+    "b_throat":  { "en": "throat",  "es": "garganta",   "fr": "gorge",    "de": "Hals",      "it": "gola",      "pt": "garganta",  "ar": "حلق",     "zh": "喉咙",  "ja": "喉",   "ko": "목"   },
+    "b_chest":   { "en": "chest",   "es": "pecho",      "fr": "poitrine", "de": "Brust",     "it": "petto",     "pt": "peito",     "ar": "صدر",     "zh": "胸口",  "ja": "胸",   "ko": "가슴"  },
+    "b_back":    { "en": "back",    "es": "espalda",    "fr": "dos",      "de": "Rücken",    "it": "schiena",   "pt": "costas",    "ar": "ظهر",     "zh": "背",   "ja": "背中",  "ko": "등"   },
+    "b_leg":     { "en": "leg",     "es": "pierna",     "fr": "jambe",    "de": "Bein",      "it": "gamba",     "pt": "perna",     "ar": "ساق",     "zh": "腿",   "ja": "脚",   "ko": "다리"  },
+    "b_arm":     { "en": "arm",     "es": "brazo",      "fr": "bras",     "de": "Arm",       "it": "braccio",   "pt": "braço",     "ar": "ذراع",    "zh": "胳膊",  "ja": "腕",   "ko": "팔"   },
+    "b_tooth":   { "en": "tooth",   "es": "diente",     "fr": "dent",     "de": "Zahn",      "it": "dente",     "pt": "dente",     "ar": "سن",      "zh": "牙",   "ja": "歯",   "ko": "이"   },
+    "b_ear":     { "en": "ear",     "es": "oído",       "fr": "oreille",  "de": "Ohr",       "it": "orecchio",  "pt": "ouvido",    "ar": "أذن",     "zh": "耳朵",  "ja": "耳",   "ko": "귀"   },
+    "b_nose":    { "en": "nose",    "es": "nariz",      "fr": "nez",      "de": "Nase",      "it": "naso",      "pt": "nariz",     "ar": "أنف",     "zh": "鼻子",  "ja": "鼻",   "ko": "코"   },
+    "b_eyes":    { "en": "eyes",    "es": "ojos",       "fr": "yeux",     "de": "Augen",     "it": "occhi",     "pt": "olhos",     "ar": "عيون",    "zh": "眼睛",  "ja": "目",   "ko": "눈"   },
+    "b_skin":    { "en": "skin",    "es": "piel",       "fr": "peau",     "de": "Haut",      "it": "pelle",     "pt": "pele",      "ar": "جلد",     "zh": "皮肤",  "ja": "肌",   "ko": "피부"  }
+  },
+
+  "body_parts_locative": {
+    "_doc": "Locative forms for French 'à la/au/aux' and Spanish 'el/la' etc.",
+    "b_head":    { "fr": "à la tête",     "es": "la cabeza",   "it": "la testa",   "de": "der Kopf",    "ar": "الرأس" },
+    "b_stomach": { "fr": "au ventre",     "es": "el estómago", "it": "lo stomaco",  "de": "der Bauch",   "ar": "المعدة" },
+    "b_throat":  { "fr": "à la gorge",    "es": "la garganta", "it": "la gola",    "de": "der Hals",    "ar": "الحلق" },
+    "b_chest":   { "fr": "à la poitrine", "es": "el pecho",    "it": "il petto",   "de": "die Brust",   "ar": "الصدر" },
+    "b_back":    { "fr": "au dos",        "es": "la espalda",  "it": "la schiena", "de": "der Rücken",  "ar": "الظهر" },
+    "b_leg":     { "fr": "à la jambe",    "es": "la pierna",   "it": "la gamba",   "de": "das Bein",    "ar": "الساق" },
+    "b_arm":     { "fr": "au bras",       "es": "el brazo",    "it": "il braccio", "de": "der Arm",     "ar": "الذراع" },
+    "b_tooth":   { "fr": "aux dents",     "es": "el diente",   "it": "il dente",   "de": "der Zahn",    "ar": "السن" },
+    "b_ear":     { "fr": "à l'oreille",   "es": "el oído",     "it": "l'orecchio", "de": "das Ohr",     "ar": "الأذن" },
+    "b_nose":    { "fr": "au nez",        "es": "la nariz",    "it": "il naso",    "de": "die Nase",    "ar": "الأنف" },
+    "b_eyes":    { "fr": "aux yeux",      "es": "los ojos",    "it": "gli occhi",  "de": "die Augen",   "ar": "العيون" },
+    "b_skin":    { "fr": "à la peau",     "es": "la piel",     "it": "la pelle",   "de": "die Haut",    "ar": "الجلد" }
+  },
+
+  "question_where_person": {
+    "_doc": "'Where is {person}?' pattern",
+    "en": "Where is {person}?",
+    "es": "¿Dónde está {person}?",
+    "fr": "Où est {person} ?",
+    "de": "Wo ist {person}?",
+    "it": "Dov'è {person}?",
+    "pt": "Onde está {person}?",
+    "ar": "أين {person}؟",
+    "zh": "{person}在哪里？",
+    "ja": "{person}はどこですか？",
+    "ko": "{person} 어디 있어요?"
+  },
+
+  "question_where_object": {
+    "en": "Where is my {object}?",
+    "es": "¿Dónde está mi {object}?",
+    "fr": "Où est mon {object} ?",
+    "de": "Wo ist mein {object}?",
+    "it": "Dov'è il mio {object}?",
+    "pt": "Onde está meu {object}?",
+    "ar": "أين {object_poss}؟",
+    "zh": "我的{object}在哪里？",
+    "ja": "私の{object}はどこですか？",
+    "ko": "내 {object} 어디 있어요?"
+  },
+
+  "question_when": {
+    "en": "When {event}?",
+    "es": "¿Cuándo {event}?",
+    "fr": "Quand {event} ?",
+    "de": "Wann {event}?",
+    "it": "Quando {event}?",
+    "pt": "Quando {event}?",
+    "ar": "متى {event}؟",
+    "zh": "{event}什么时候？",
+    "ja": "{event}はいつですか？",
+    "ko": "{event} 언제예요?"
+  },
+
+  "question_canI": {
+    "en": "Can I {action}?",
+    "es": "¿Puedo {action}?",
+    "fr": "Je peux {action} ?",
+    "de": "Darf ich {action}?",
+    "it": "Posso {action}?",
+    "pt": "Posso {action}?",
+    "ar": "هل يمكنني {action}؟",
+    "zh": "我可以{action}吗？",
+    "ja": "{action}してもいいですか？",
+    "ko": "{action}해도 돼요?"
+  },
+
+  "question_canYou": {
+    "en": "Can you {action}?",
+    "es": "¿Puedes {action}?",
+    "fr": "Tu peux {action} ?",
+    "de": "Kannst du {action}?",
+    "it": "Puoi {action}?",
+    "pt": "Você pode {action}?",
+    "ar": "هل يمكنك {action}؟",
+    "zh": "你可以{action}吗？",
+    "ja": "{action}してくれますか？",
+    "ko": "{action}해 줄 수 있어요?"
+  },
+
+  "imperative": {
+    "_doc": "Imperative (command) forms",
+    "stop":   { "en": "Stop",     "es": "Para",     "fr": "Arrête",     "de": "Stopp",     "it": "Smetti",    "pt": "Para",     "ar": "توقف",   "zh": "停",    "ja": "止めて",   "ko": "그만" },
+    "help":   { "en": "Help me",  "es": "Ayúdame",  "fr": "Aide-moi",   "de": "Hilf mir",  "it": "Aiutami",   "pt": "Me ajuda", "ar": "ساعدني", "zh": "帮帮我",  "ja": "助けて",   "ko": "도와줘" },
+    "come":   { "en": "Come here","es": "Ven aquí", "fr": "Viens ici",  "de": "Komm her",  "it": "Vieni qui", "pt": "Vem cá",   "ar": "تعال هنا","zh": "过来",   "ja": "こっちに来て","ko": "이리 와" },
+    "give":   { "en": "Give me",  "es": "Dame",     "fr": "Donne-moi",  "de": "Gib mir",   "it": "Dammi",     "pt": "Me dá",    "ar": "أعطني",  "zh": "给我",   "ja": "ちょうだい", "ko": "줘" },
+    "open":   { "en": "Open",     "es": "Abre",     "fr": "Ouvre",      "de": "Öffne",     "it": "Apri",      "pt": "Abre",     "ar": "افتح",   "zh": "打开",   "ja": "開けて",   "ko": "열어" },
+    "wait":   { "en": "Wait",     "es": "Espera",   "fr": "Attends",    "de": "Warte",     "it": "Aspetta",   "pt": "Espera",   "ar": "انتظر",  "zh": "等一下",  "ja": "待って",   "ko": "기다려" },
+    "repeat": { "en": "Repeat",   "es": "Repite",   "fr": "Répète",     "de": "Wiederhole", "it": "Ripeti",   "pt": "Repete",   "ar": "كرر",    "zh": "再说一遍","ja": "もう一度",  "ko": "다시 말해" },
+    "read":   { "en": "Read to me","es":"Léeme",     "fr": "Lis-moi",    "de": "Lies mir vor","it":"Leggimi",  "pt": "Lê pra mim","ar":"اقرأ لي", "zh": "读给我听","ja": "読んで",   "ko": "읽어줘" },
+    "tell":   { "en": "Tell me",  "es": "Dime",     "fr": "Dis-moi",    "de": "Sag mir",   "it": "Dimmi",     "pt": "Me diga",  "ar": "قل لي",  "zh": "告诉我",  "ja": "教えて",   "ko": "말해줘" },
+    "call":   { "en": "Call",     "es": "Llama a",  "fr": "Appelle",    "de": "Ruf an",    "it": "Chiama",    "pt": "Liga para","ar": "اتصل بـ","zh": "打电话给","ja": "電話して",  "ko": "전화해" },
+    "turn":   { "en": "Turn it",  "es": "Gíralo",   "fr": "Tourne-le",  "de": "Dreh es",   "it": "Giralo",    "pt": "Vira",     "ar": "أدره",   "zh": "转一下",  "ja": "回して",   "ko": "돌려" }
+  },
+
+  "social": {
+    "_doc": "Social/greeting phrases — fixed translations",
+    "hello":        { "en": ["Hello", "Hi there"],      "es": ["Hola", "Hola a todos"],   "fr": ["Bonjour", "Salut"],          "de": ["Hallo", "Hi"],             "it": ["Ciao", "Salve"],          "pt": ["Olá", "Oi"],           "ar": ["مرحبا", "أهلا"],       "zh": ["你好", "嗨"],        "ja": ["こんにちは", "やあ"],    "ko": ["안녕", "안녕하세요"] },
+    "bye":          { "en": ["Goodbye", "See you later"],"es": ["Adiós", "Hasta luego"],   "fr": ["Au revoir", "À bientôt"],    "de": ["Tschüss", "Bis später"],   "it": ["Arrivederci", "A presto"],"pt": ["Tchau", "Até logo"],   "ar": ["مع السلامة", "إلى اللقاء"],"zh": ["再见", "下次见"],   "ja": ["さようなら", "また"],   "ko": ["안녕히", "다음에 봐요"] },
+    "yes":          { "en": ["Yes", "Yes, I do"],        "es": ["Sí", "Sí, quiero"],       "fr": ["Oui", "Oui, je veux"],       "de": ["Ja", "Ja, bitte"],         "it": ["Sì", "Sì, voglio"],       "pt": ["Sim", "Sim, eu quero"],"ar": ["نعم", "أجل"],          "zh": ["是", "是的"],        "ja": ["はい", "ええ"],         "ko": ["네", "네, 맞아요"] },
+    "no":           { "en": ["No", "No, thank you"],     "es": ["No", "No, gracias"],      "fr": ["Non", "Non, merci"],         "de": ["Nein", "Nein, danke"],     "it": ["No", "No, grazie"],       "pt": ["Não", "Não, obrigado"],"ar": ["لا", "لا، شكراً"],     "zh": ["不", "不，谢谢"],    "ja": ["いいえ", "結構です"],    "ko": ["아니요", "괜찮아요"] },
+    "please":       { "en": ["Please"],                   "es": ["Por favor"],              "fr": ["S'il te plaît"],             "de": ["Bitte"],                   "it": ["Per favore"],             "pt": ["Por favor"],           "ar": ["من فضلك"],             "zh": ["请"],               "ja": ["お願い"],              "ko": ["제발"] },
+    "thanks":       { "en": ["Thank you", "Thanks"],     "es": ["Gracias"],                "fr": ["Merci"],                     "de": ["Danke", "Dankeschön"],     "it": ["Grazie"],                 "pt": ["Obrigado"],            "ar": ["شكراً"],               "zh": ["谢谢"],              "ja": ["ありがとう"],           "ko": ["감사합니다"] },
+    "sorry":        { "en": ["I am sorry", "Sorry"],     "es": ["Lo siento", "Perdón"],    "fr": ["Je suis désolé", "Pardon"],  "de": ["Entschuldigung", "Tut mir leid"],"it": ["Mi dispiace", "Scusa"],"pt": ["Desculpa", "Sinto muito"],"ar": ["آسف", "عذراً"],    "zh": ["对不起", "抱歉"],    "ja": ["ごめんなさい", "すみません"],"ko": ["미안해요", "죄송해요"] },
+    "ok":           { "en": ["OK", "That's fine"],       "es": ["De acuerdo", "Está bien"],"fr": ["D'accord", "C'est bon"],     "de": ["OK", "In Ordnung"],        "it": ["OK", "Va bene"],          "pt": ["Tudo bem", "OK"],      "ar": ["حسناً", "موافق"],      "zh": ["好的", "没问题"],    "ja": ["わかった", "大丈夫"],    "ko": ["알겠어요", "괜찮아요"] },
+    "idk":          { "en": ["I don't know"],             "es": ["No sé"],                  "fr": ["Je ne sais pas"],            "de": ["Ich weiß nicht"],          "it": ["Non lo so"],              "pt": ["Não sei"],             "ar": ["لا أعرف"],             "zh": ["我不知道"],          "ja": ["わかりません"],         "ko": ["몰라요"] },
+    "understand":   { "en": ["I understand"],             "es": ["Entiendo"],               "fr": ["Je comprends"],              "de": ["Ich verstehe"],            "it": ["Capisco"],                "pt": ["Entendo"],             "ar": ["أفهم"],                "zh": ["我明白"],            "ja": ["わかります"],           "ko": ["이해해요"] },
+    "not_understand":{"en": ["I don't understand"],       "es": ["No entiendo"],            "fr": ["Je ne comprends pas"],       "de": ["Ich verstehe nicht"],      "it": ["Non capisco"],            "pt": ["Não entendo"],         "ar": ["لا أفهم"],             "zh": ["我不明白"],          "ja": ["わかりません"],         "ko": ["이해 못 해요"] }
+  },
+
+  "person_state": {
+    "_doc": "'{person} is {state}' — for 3rd-person predicates about people",
+    "here":   { "en": "{person} is here",   "es": "{person} está aquí",    "fr": "{person} est là",       "de": "{person} ist hier",   "it": "{person} è qui",       "pt": "{person} está aqui",   "ar": "{person} هنا",      "zh": "{person}在这里",     "ja": "{person}はここにいます",  "ko": "{person} 여기 있어요" },
+    "coming": { "en": "{person} is coming", "es": "{person} viene",        "fr": "{person} arrive",       "de": "{person} kommt",      "it": "{person} sta arrivando","pt": "{person} está vindo",  "ar": "{person} قادم",     "zh": "{person}来了",       "ja": "{person}が来ます",       "ko": "{person} 와요" },
+    "gone":   { "en": "{person} is gone",   "es": "{person} se fue",       "fr": "{person} est parti",    "de": "{person} ist weg",    "it": "{person} è andato",    "pt": "{person} foi embora",  "ar": "{person} ذهب",      "zh": "{person}走了",       "ja": "{person}は行きました",    "ko": "{person} 갔어요" }
+  },
+
+  "miss_person": {
+    "_doc": "'I miss {person}' — idiomatic per language",
+    "en": "I miss {person}",
+    "es": "Extraño a {person}",
+    "fr": "{person} me manque",
+    "de": "Ich vermisse {person}",
+    "it": "Mi manca {person}",
+    "pt": "Sinto falta de {person}",
+    "ar": "أفتقد {person}",
+    "zh": "我想{person}",
+    "ja": "{person}に会いたい",
+    "ko": "{person} 보고 싶어요"
+  },
+
+  "angry_at": {
+    "en": "I am angry at {person}",
+    "es": "Estoy enojado con {person}",
+    "fr": "Je suis fâché contre {person}",
+    "de": "Ich bin wütend auf {person}",
+    "it": "Sono arrabbiato con {person}",
+    "pt": "Estou bravo com {person}",
+    "ar": "أنا غاضب من {person}",
+    "zh": "我生{person}的气",
+    "ja": "{person}に怒っています",
+    "ko": "{person}한테 화났어요"
+  },
+
+  "want_go_place": {
+    "en": "I want to go {place}",
+    "es": "Quiero ir {place}",
+    "fr": "Je veux aller {place}",
+    "de": "Ich will {place} gehen",
+    "it": "Voglio andare {place}",
+    "pt": "Quero ir {place}",
+    "ar": "أريد الذهاب {place}",
+    "zh": "我想{place}",
+    "ja": "{place}行きたいです",
+    "ko": "{place} 가고 싶어요"
+  },
+
+  "need_object": {
+    "en": "I need {object}",
+    "es": "Necesito {object}",
+    "fr": "J'ai besoin de {object}",
+    "de": "Ich brauche {object}",
+    "it": "Ho bisogno di {object}",
+    "pt": "Preciso de {object}",
+    "ar": "أحتاج {object}",
+    "zh": "我需要{object}",
+    "ja": "{object}が必要です",
+    "ko": "{object} 필요해요"
+  },
+
+  "want_verb_object": {
+    "_doc": "'I want to {verb} {object}' — delegates verb inflection to morphology engine",
+    "en": "I want to {verb} {object}",
+    "es": "Quiero {verb} {object}",
+    "fr": "Je veux {verb} {object}",
+    "de": "Ich will {object} {verb}",
+    "it": "Voglio {verb} {object}",
+    "pt": "Quero {verb} {object}",
+    "ar": "أريد {verb} {object}",
+    "zh": "我想{verb}{object}",
+    "ja": "{object}を{verb}たいです",
+    "ko": "{object} {verb}고 싶어요"
+  },
+
+  "give_me_object": {
+    "en": "Give me {object}",
+    "es": "Dame {object}",
+    "fr": "Donne-moi {object}",
+    "de": "Gib mir {object}",
+    "it": "Dammi {object}",
+    "pt": "Me dá {object}",
+    "ar": "أعطني {object}",
+    "zh": "给我{object}",
+    "ja": "{object}をちょうだい",
+    "ko": "{object} 줘"
+  },
+
+  "open_object": {
+    "en": "Open {object}",
+    "es": "Abre {object}",
+    "fr": "Ouvre {object}",
+    "de": "Öffne {object}",
+    "it": "Apri {object}",
+    "pt": "Abre {object}",
+    "ar": "افتح {object}",
+    "zh": "打开{object}",
+    "ja": "{object}を開けて",
+    "ko": "{object} 열어"
+  },
+
+  "play_with_person": {
+    "en": "I want to play with {person}",
+    "es": "Quiero jugar con {person}",
+    "fr": "Je veux jouer avec {person}",
+    "de": "Ich will mit {person} spielen",
+    "it": "Voglio giocare con {person}",
+    "pt": "Quero brincar com {person}",
+    "ar": "أريد اللعب مع {person}",
+    "zh": "我想和{person}玩",
+    "ja": "{person}と遊びたい",
+    "ko": "{person}이랑 놀고 싶어요"
+  },
+
+  "person_help_me": {
+    "_doc": "'{person}, help me'",
+    "en": "{person}, help me",
+    "es": "{person}, ayúdame",
+    "fr": "{person}, aide-moi",
+    "de": "{person}, hilf mir",
+    "it": "{person}, aiutami",
+    "pt": "{person}, me ajuda",
+    "ar": "{person}، ساعدني",
+    "zh": "{person}，帮帮我",
+    "ja": "{person}、助けて",
+    "ko": "{person}, 도와줘"
+  },
+
+  "hug_from": {
+    "en": "I want a hug from {person}",
+    "es": "Quiero un abrazo de {person}",
+    "fr": "Je veux un câlin de {person}",
+    "de": "Ich will eine Umarmung von {person}",
+    "it": "Voglio un abbraccio da {person}",
+    "pt": "Quero um abraço de {person}",
+    "ar": "أريد حضناً من {person}",
+    "zh": "我想要{person}的拥抱",
+    "ja": "{person}にハグしてほしい",
+    "ko": "{person} 안아줘"
+  },
+
+  "sorry_person": {
+    "en": "Sorry, {person}",
+    "es": "Perdón, {person}",
+    "fr": "Pardon, {person}",
+    "de": "Entschuldigung, {person}",
+    "it": "Scusa, {person}",
+    "pt": "Desculpa, {person}",
+    "ar": "آسف يا {person}",
+    "zh": "对不起，{person}",
+    "ja": "ごめんね、{person}",
+    "ko": "미안해, {person}"
+  },
+
+  "thanks_person": {
+    "en": "Thank you, {person}",
+    "es": "Gracias, {person}",
+    "fr": "Merci, {person}",
+    "de": "Danke, {person}",
+    "it": "Grazie, {person}",
+    "pt": "Obrigado, {person}",
+    "ar": "شكراً يا {person}",
+    "zh": "谢谢{person}",
+    "ja": "ありがとう、{person}",
+    "ko": "고마워, {person}"
+  },
+
+  "hello_person": {
+    "en": "Hello {person}",
+    "es": "Hola {person}",
+    "fr": "Salut {person}",
+    "de": "Hallo {person}",
+    "it": "Ciao {person}",
+    "pt": "Olá {person}",
+    "ar": "مرحبا {person}",
+    "zh": "{person}你好",
+    "ja": "{person}、こんにちは",
+    "ko": "{person}, 안녕"
+  },
+
+  "bye_person": {
+    "en": "Goodbye {person}",
+    "es": "Adiós {person}",
+    "fr": "Au revoir {person}",
+    "de": "Tschüss {person}",
+    "it": "Arrivederci {person}",
+    "pt": "Tchau {person}",
+    "ar": "مع السلامة {person}",
+    "zh": "再见{person}",
+    "ja": "{person}、さようなら",
+    "ko": "{person}, 잘 가"
+  },
+
+  "person_names": {
+    "_doc": "Localized person names for substitution into templates",
+    "p_mom":       { "en": "mom",          "es": "mamá",       "fr": "maman",       "de": "Mama",        "it": "mamma",       "pt": "mãe",        "ar": "أمي",        "zh": "妈妈",    "ja": "お母さん",   "ko": "엄마" },
+    "p_dad":       { "en": "dad",          "es": "papá",       "fr": "papa",        "de": "Papa",        "it": "papà",        "pt": "pai",        "ar": "أبي",        "zh": "爸爸",    "ja": "お父さん",   "ko": "아빠" },
+    "p_friend":    { "en": "my friend",    "es": "mi amigo",   "fr": "mon ami",     "de": "mein Freund", "it": "il mio amico","pt": "meu amigo",  "ar": "صديقي",      "zh": "朋友",    "ja": "友達",       "ko": "친구" },
+    "p_brother":   { "en": "my brother",   "es": "mi hermano", "fr": "mon frère",   "de": "mein Bruder", "it": "mio fratello","pt": "meu irmão",  "ar": "أخي",        "zh": "哥哥",    "ja": "兄",         "ko": "형" },
+    "p_sister":    { "en": "my sister",    "es": "mi hermana", "fr": "ma sœur",     "de": "meine Schwester","it":"mia sorella","pt": "minha irmã", "ar": "أختي",       "zh": "姐姐",    "ja": "姉",         "ko": "언니" },
+    "p_teacher":   { "en": "the teacher",  "es": "el profesor","fr": "le professeur","de": "der Lehrer",  "it": "il maestro", "pt": "o professor","ar": "المعلم",      "zh": "老师",    "ja": "先生",       "ko": "선생님" },
+    "p_doctor":    { "en": "the doctor",   "es": "el doctor",  "fr": "le docteur",  "de": "der Arzt",    "it": "il dottore", "pt": "o médico",   "ar": "الطبيب",      "zh": "医生",    "ja": "医者",       "ko": "의사" },
+    "p_nurse":     { "en": "the nurse",    "es": "el enfermero","fr": "l'infirmier", "de": "der Pfleger", "it": "l'infermiere","pt": "o enfermeiro","ar": "الممرض",     "zh": "护士",    "ja": "看護師",     "ko": "간호사" },
+    "p_everyone":  { "en": "everyone",     "es": "todos",      "fr": "tout le monde","de": "alle",       "it": "tutti",      "pt": "todos",      "ar": "الجميع",      "zh": "大家",    "ja": "みなさん",   "ko": "여러분" },
+    "p_therapist": { "en": "my therapist", "es": "mi terapeuta","fr": "mon thérapeute","de":"mein Therapeut","it":"il terapista","pt":"meu terapeuta","ar":"معالجي",     "zh": "治疗师",  "ja": "セラピスト", "ko": "치료사" },
+    "p_grandma":   { "en": "grandma",      "es": "abuela",     "fr": "mamie",       "de": "Oma",         "it": "nonna",      "pt": "avó",        "ar": "جدة",        "zh": "奶奶",    "ja": "おばあさん", "ko": "할머니" },
+    "p_grandpa":   { "en": "grandpa",      "es": "abuelo",     "fr": "papi",        "de": "Opa",         "it": "nonno",      "pt": "avô",        "ar": "جد",         "zh": "爷爷",    "ja": "おじいさん", "ko": "할아버지" },
+    "p_caregiver": { "en": "my caregiver", "es": "mi cuidador","fr": "mon soignant","de": "mein Betreuer","it":"il mio assistente","pt":"meu cuidador","ar":"مقدم رعايتي","zh":"护理员",  "ja": "介護者",     "ko": "돌보미" }
+  },
+
+  "food_drink_items": {
+    "_doc": "Localized food/drink names for template substitution",
+    "n3_apple":  { "en": "an apple",    "es": "una manzana",  "fr": "une pomme",   "de": "einen Apfel",  "it": "una mela",     "pt": "uma maçã",    "ar": "تفاحة",    "zh": "苹果",   "ja": "りんご",   "ko": "사과" },
+    "n3_bread":  { "en": "bread",       "es": "pan",          "fr": "du pain",     "de": "Brot",         "it": "pane",         "pt": "pão",         "ar": "خبز",      "zh": "面包",   "ja": "パン",     "ko": "빵" },
+    "n3_rice":   { "en": "rice",        "es": "arroz",        "fr": "du riz",      "de": "Reis",         "it": "riso",         "pt": "arroz",       "ar": "أرز",      "zh": "米饭",   "ja": "ご飯",     "ko": "밥" },
+    "n3_pasta":  { "en": "pasta",       "es": "pasta",        "fr": "des pâtes",   "de": "Nudeln",       "it": "pasta",        "pt": "macarrão",    "ar": "معكرونة",  "zh": "面条",   "ja": "パスタ",   "ko": "파스타" },
+    "n3_soup":   { "en": "soup",        "es": "sopa",         "fr": "de la soupe", "de": "Suppe",        "it": "zuppa",        "pt": "sopa",        "ar": "شوربة",    "zh": "汤",     "ja": "スープ",   "ko": "수프" },
+    "n3_snack":  { "en": "a snack",     "es": "un snack",     "fr": "un goûter",   "de": "einen Snack",  "it": "uno spuntino", "pt": "um lanche",   "ar": "وجبة خفيفة","zh": "零食",   "ja": "おやつ",   "ko": "간식" },
+    "n3_fruit":  { "en": "fruit",       "es": "fruta",        "fr": "un fruit",    "de": "Obst",         "it": "frutta",       "pt": "fruta",       "ar": "فاكهة",    "zh": "水果",   "ja": "果物",     "ko": "과일" },
+    "n3_meat":   { "en": "meat",        "es": "carne",        "fr": "de la viande","de": "Fleisch",      "it": "carne",        "pt": "carne",       "ar": "لحم",      "zh": "肉",     "ja": "肉",       "ko": "고기" },
+    "n3_juice":  { "en": "juice",       "es": "jugo",         "fr": "du jus",      "de": "Saft",         "it": "succo",        "pt": "suco",        "ar": "عصير",     "zh": "果汁",   "ja": "ジュース", "ko": "주스" },
+    "n3_milk":   { "en": "milk",        "es": "leche",        "fr": "du lait",     "de": "Milch",        "it": "latte",        "pt": "leite",       "ar": "حليب",     "zh": "牛奶",   "ja": "牛乳",     "ko": "우유" },
+    "n3_tea":    { "en": "tea",         "es": "té",           "fr": "du thé",      "de": "Tee",          "it": "tè",           "pt": "chá",         "ar": "شاي",      "zh": "茶",     "ja": "お茶",     "ko": "차" },
+    "n3_coffee": { "en": "coffee",      "es": "café",         "fr": "du café",     "de": "Kaffee",       "it": "caffè",        "pt": "café",        "ar": "قهوة",     "zh": "咖啡",   "ja": "コーヒー", "ko": "커피" }
+  },
+
+  "objects": {
+    "_doc": "Common object names (with article as appropriate)",
+    "o_door":    { "en": "the door",    "es": "la puerta",    "fr": "la porte",     "de": "die Tür",      "it": "la porta",     "pt": "a porta",    "ar": "الباب",    "zh": "门",     "ja": "ドア",     "ko": "문" },
+    "o_window":  { "en": "the window",  "es": "la ventana",   "fr": "la fenêtre",   "de": "das Fenster",  "it": "la finestra",  "pt": "a janela",   "ar": "النافذة",  "zh": "窗户",   "ja": "窓",       "ko": "창문" },
+    "o_bag":     { "en": "my bag",      "es": "mi bolsa",     "fr": "mon sac",      "de": "meine Tasche", "it": "la mia borsa", "pt": "minha bolsa","ar": "حقيبتي",   "zh": "我的包",  "ja": "かばん",   "ko": "내 가방" },
+    "o_book":    { "en": "a book",      "es": "un libro",     "fr": "un livre",     "de": "ein Buch",     "it": "un libro",     "pt": "um livro",   "ar": "كتاب",     "zh": "书",     "ja": "本",       "ko": "책" },
+    "o_tv":      { "en": "TV",          "es": "la tele",      "fr": "la télé",      "de": "Fernsehen",    "it": "la TV",        "pt": "a TV",       "ar": "التلفاز",  "zh": "电视",   "ja": "テレビ",   "ko": "TV" },
+    "o_game":    { "en": "a game",      "es": "un juego",     "fr": "un jeu",       "de": "ein Spiel",    "it": "un gioco",     "pt": "um jogo",    "ar": "لعبة",     "zh": "游戏",   "ja": "ゲーム",   "ko": "게임" },
+    "o_ball":    { "en": "the ball",    "es": "la pelota",    "fr": "le ballon",    "de": "den Ball",     "it": "la palla",     "pt": "a bola",     "ar": "الكرة",    "zh": "球",     "ja": "ボール",   "ko": "공" },
+    "o_toy":     { "en": "a toy",       "es": "un juguete",   "fr": "un jouet",     "de": "ein Spielzeug","it": "un giocattolo","pt": "um brinquedo","ar": "لعبة",     "zh": "玩具",   "ja": "おもちゃ", "ko": "장난감" },
+    "o_music":   { "en": "music",       "es": "música",       "fr": "de la musique","de": "Musik",        "it": "musica",       "pt": "música",     "ar": "موسيقى",   "zh": "音乐",   "ja": "音楽",     "ko": "음악" },
+    "o_water":   { "en": "water",       "es": "agua",         "fr": "de l'eau",     "de": "Wasser",       "it": "acqua",        "pt": "água",       "ar": "ماء",      "zh": "水",     "ja": "水",       "ko": "물" },
+    "o_food":    { "en": "food",        "es": "comida",       "fr": "à manger",     "de": "Essen",        "it": "cibo",         "pt": "comida",     "ar": "طعام",     "zh": "吃的",   "ja": "食べ物",   "ko": "먹을 것" },
+    "o_phone":   { "en": "the phone",   "es": "el teléfono",  "fr": "le téléphone", "de": "das Telefon",  "it": "il telefono",  "pt": "o telefone", "ar": "الهاتف",   "zh": "手机",   "ja": "電話",     "ko": "전화기" },
+    "o_medicine":{ "en": "medicine",     "es": "medicina",     "fr": "un médicament","de": "Medikament",   "it": "medicina",     "pt": "remédio",    "ar": "دواء",     "zh": "药",     "ja": "薬",       "ko": "약" }
+  },
+
+  "time_adverbs": {
+    "t_now":       { "en": "now",         "es": "ahora",       "fr": "maintenant",  "de": "jetzt",       "it": "adesso",      "pt": "agora",      "ar": "الآن",     "zh": "现在",   "ja": "今",       "ko": "지금" },
+    "t_soon":      { "en": "soon",        "es": "pronto",      "fr": "bientôt",     "de": "bald",        "it": "presto",      "pt": "em breve",   "ar": "قريباً",   "zh": "很快",   "ja": "もうすぐ", "ko": "곧" },
+    "t_later":     { "en": "later",       "es": "luego",       "fr": "plus tard",   "de": "später",      "it": "più tardi",   "pt": "mais tarde", "ar": "لاحقاً",    "zh": "稍后",   "ja": "後で",     "ko": "나중에" },
+    "t_today":     { "en": "today",       "es": "hoy",         "fr": "aujourd'hui", "de": "heute",       "it": "oggi",        "pt": "hoje",       "ar": "اليوم",    "zh": "今天",   "ja": "今日",     "ko": "오늘" },
+    "t_tomorrow":  { "en": "tomorrow",    "es": "mañana",      "fr": "demain",      "de": "morgen",      "it": "domani",      "pt": "amanhã",     "ar": "غداً",      "zh": "明天",   "ja": "明日",     "ko": "내일" },
+    "t_morning":   { "en": "this morning","es": "esta mañana", "fr": "ce matin",    "de": "heute Morgen","it": "stamattina",  "pt": "esta manhã", "ar": "هذا الصباح","zh": "今天早上","ja": "今朝",     "ko": "오늘 아침" },
+    "t_afternoon": { "en": "this afternoon","es": "esta tarde", "fr": "cet après-midi","de": "heute Nachmittag","it": "questo pomeriggio","pt": "esta tarde", "ar": "بعد الظهر",  "zh": "今天下午","ja": "今日の午後", "ko": "오늘 오후" },
+    "t_night":     { "en": "last night",  "es": "anoche",      "fr": "cette nuit",  "de": "letzte Nacht","it": "ieri notte",  "pt": "ontem à noite","ar":"البارحة",   "zh": "昨晚",   "ja": "昨夜",     "ko": "어젯밤" },
+    "t_yesterday": { "en": "yesterday",   "es": "ayer",        "fr": "hier",        "de": "gestern",     "it": "ieri",        "pt": "ontem",      "ar": "أمس",      "zh": "昨天",   "ja": "昨日",     "ko": "어제" },
+    "t_always":    { "en": "always",      "es": "siempre",     "fr": "toujours",    "de": "immer",       "it": "sempre",      "pt": "sempre",     "ar": "دائماً",   "zh": "总是",   "ja": "いつも",   "ko": "항상" },
+    "t_everyday":  { "en": "every day",   "es": "todos los días", "fr": "tous les jours", "de": "jeden Tag", "it": "ogni giorno", "pt": "todos os dias", "ar": "كل يوم",   "zh": "每天",   "ja": "毎日",     "ko": "매일" },
+    "t_minute":    { "en": "a minute",    "es": "un momento",  "fr": "une minute",  "de": "eine Minute", "it": "un minuto",   "pt": "um momento", "ar": "دقيقة",    "zh": "一会儿", "ja": "ちょっと", "ko": "잠깐" },
+    "t_before":    { "en": "before",     "es": "antes",       "fr": "avant",       "de": "vorher",      "it": "prima",       "pt": "antes",      "ar": "قبل",       "zh": "之前",   "ja": "前に",     "ko": "전에" },
+    "t_after":     { "en": "after",      "es": "después",     "fr": "après",       "de": "danach",      "it": "dopo",        "pt": "depois",     "ar": "بعد",       "zh": "之后",   "ja": "後に",     "ko": "후에" },
+    "t_already":   { "en": "already",    "es": "ya",          "fr": "déjà",        "de": "schon",       "it": "già",         "pt": "já",         "ar": "بالفعل",    "zh": "已经",   "ja": "もう",     "ko": "이미" },
+    "t_still":     { "en": "still",      "es": "todavía",     "fr": "encore",      "de": "noch",        "it": "ancora",      "pt": "ainda",      "ar": "لا يزال",   "zh": "还",     "ja": "まだ",     "ko": "아직" }
+  },
+
+  "sub_places": {
+    "_doc": "Localized sub-place names + locative forms for navigation templates",
+    "lc3_kitchen":    { "en": "the kitchen",    "es": "la cocina",       "fr": "la cuisine",      "de": "die Küche",       "it": "la cucina",      "pt": "a cozinha",     "ar": "المطبخ",     "zh": "厨房",   "ja": "台所",     "ko": "부엌" },
+    "lc3_bedroom":    { "en": "the bedroom",    "es": "el dormitorio",   "fr": "la chambre",      "de": "das Schlafzimmer","it": "la camera",      "pt": "o quarto",      "ar": "غرفة النوم", "zh": "卧室",   "ja": "寝室",     "ko": "침실" },
+    "lc3_bathroom":   { "en": "the bathroom",   "es": "el baño",         "fr": "les toilettes",   "de": "das Badezimmer",  "it": "il bagno",       "pt": "o banheiro",    "ar": "الحمام",     "zh": "卫生间", "ja": "トイレ",   "ko": "화장실" },
+    "lc3_living":     { "en": "the living room", "es": "la sala",        "fr": "le salon",        "de": "das Wohnzimmer",  "it": "il salotto",     "pt": "a sala",        "ar": "غرفة المعيشة","zh": "客厅",  "ja": "リビング", "ko": "거실" },
+    "lc3_garden":     { "en": "the garden",     "es": "el jardín",       "fr": "le jardin",       "de": "den Garten",      "it": "il giardino",    "pt": "o jardim",      "ar": "الحديقة",    "zh": "花园",   "ja": "庭",       "ko": "정원" },
+    "lc3_class":      { "en": "class",          "es": "la clase",        "fr": "la classe",       "de": "die Klasse",      "it": "la classe",      "pt": "a aula",        "ar": "الفصل",      "zh": "教室",   "ja": "教室",     "ko": "교실" },
+    "lc3_gym":        { "en": "the gym",        "es": "el gimnasio",     "fr": "le gymnase",      "de": "die Turnhalle",   "it": "la palestra",    "pt": "a academia",    "ar": "الصالة الرياضية","zh": "体育馆","ja": "体育館",  "ko": "체육관" },
+    "lc3_library":    { "en": "the library",    "es": "la biblioteca",   "fr": "la bibliothèque", "de": "die Bibliothek",  "it": "la biblioteca",  "pt": "a biblioteca",  "ar": "المكتبة",    "zh": "图书馆", "ja": "図書館",   "ko": "도서관" },
+    "lc3_cafet":      { "en": "the cafeteria",  "es": "la cafetería",    "fr": "la cantine",      "de": "die Mensa",       "it": "la mensa",       "pt": "a cantina",     "ar": "الكافيتيريا","zh": "食堂",   "ja": "食堂",     "ko": "식당" },
+    "lc3_playground": { "en": "the playground",  "es": "el patio",       "fr": "la cour",         "de": "den Spielplatz",  "it": "il cortile",     "pt": "o pátio",       "ar": "ساحة اللعب", "zh": "操场",   "ja": "遊び場",   "ko": "운동장" },
+    "lc3_room":       { "en": "my room",         "es": "mi cuarto",      "fr": "ma chambre",      "de": "mein Zimmer",     "it": "la mia stanza",  "pt": "meu quarto",    "ar": "غرفتي",      "zh": "我的房间","ja": "自分の部屋","ko": "내 방" },
+    "lc3_waiting":    { "en": "the waiting room","es": "la sala de espera","fr": "la salle d'attente","de":"das Wartezimmer","it":"la sala d'attesa","pt":"a sala de espera","ar":"غرفة الانتظار","zh":"候诊室","ja":"待合室",    "ko": "대기실" },
+    "lc3_pharmacy":   { "en": "the pharmacy",   "es": "la farmacia",    "fr": "la pharmacie",    "de": "die Apotheke",    "it": "la farmacia",    "pt": "a farmácia",    "ar": "الصيدلية",   "zh": "药房",   "ja": "薬局",     "ko": "약국" },
+    "lc3_swing":      { "en": "the swing",      "es": "el columpio",    "fr": "la balançoire",   "de": "die Schaukel",    "it": "l'altalena",     "pt": "o balanço",     "ar": "الأرجوحة",   "zh": "秋千",   "ja": "ブランコ", "ko": "그네" },
+    "lc3_slide":      { "en": "the slide",      "es": "el tobogán",     "fr": "le toboggan",     "de": "die Rutsche",     "it": "lo scivolo",     "pt": "o escorregador","ar": "الزحليقة",   "zh": "滑梯",   "ja": "すべり台", "ko": "미끄럼틀" }
+  },
+
+  "question_what": {
+    "_doc": "Various 'what' question forms",
+    "generic":    { "en": ["What is it?", "What is this?"],          "es": ["¿Qué es?", "¿Qué es esto?"],           "fr": ["Qu'est-ce que c'est ?", "C'est quoi ?"],  "de": ["Was ist das?"],            "it": ["Cos'è?", "Che cos'è?"],           "pt": ["O que é?", "O que é isso?"],     "ar": ["ما هذا؟"],               "zh": ["这是什么？"],          "ja": ["これは何ですか？"],         "ko": ["이게 뭐예요?"] },
+    "this":       { "en": ["What is this?"],                         "es": ["¿Qué es esto?"],                       "fr": ["C'est quoi ça ?"],                        "de": ["Was ist das?"],            "it": ["Cos'è questo?"],                  "pt": ["O que é isso?"],                "ar": ["ما هذا؟"],               "zh": ["这是什么？"],          "ja": ["これは何ですか？"],         "ko": ["이게 뭐예요?"] },
+    "that":       { "en": ["What is that?"],                         "es": ["¿Qué es eso?"],                        "fr": ["C'est quoi ça, là-bas ?"],                "de": ["Was ist das dort?"],       "it": ["Cos'è quello?"],                  "pt": ["O que é aquilo?"],              "ar": ["ما ذلك؟"],               "zh": ["那是什么？"],          "ja": ["あれは何ですか？"],         "ko": ["저게 뭐예요?"] },
+    "happened":   { "en": ["What happened?"],                        "es": ["¿Qué pasó?"],                          "fr": ["Qu'est-ce qui s'est passé ?"],            "de": ["Was ist passiert?"],       "it": ["Cos'è successo?"],                "pt": ["O que aconteceu?"],             "ar": ["ماذا حدث؟"],             "zh": ["发生了什么？"],        "ja": ["何がありましたか？"],       "ko": ["무슨 일이에요?"] },
+    "wrong":      { "en": ["What is wrong?", "What's the matter?"], "es": ["¿Qué pasa?", "¿Qué ocurre?"],          "fr": ["Qu'est-ce qui ne va pas ?"],              "de": ["Was ist los?"],            "it": ["Cosa c'è che non va?"],           "pt": ["O que há de errado?"],          "ar": ["ما الخطب؟"],             "zh": ["怎么了？"],            "ja": ["どうしましたか？"],         "ko": ["무슨 일이에요?"] },
+    "forlunch":   { "en": ["What is for lunch?"],                    "es": ["¿Qué hay de almuerzo?"],               "fr": ["Qu'est-ce qu'on mange à midi ?"],         "de": ["Was gibt es zum Mittagessen?"],"it": ["Cosa c'è per pranzo?"],        "pt": ["O que tem de almoço?"],         "ar": ["ماذا على الغداء؟"],      "zh": ["午饭吃什么？"],        "ja": ["お昼ご飯は何ですか？"],     "ko": ["점심 뭐예요?"] },
+    "fordinner":  { "en": ["What is for dinner?"],                   "es": ["¿Qué hay de cena?"],                   "fr": ["Qu'est-ce qu'on mange ce soir ?"],        "de": ["Was gibt es zum Abendessen?"],"it": ["Cosa c'è per cena?"],          "pt": ["O que tem de jantar?"],         "ar": ["ماذا على العشاء؟"],      "zh": ["晚饭吃什么？"],        "ja": ["晩ご飯は何ですか？"],       "ko": ["저녁 뭐예요?"] },
+    "next":       { "en": ["What is next?", "What do we do next?"], "es": ["¿Qué sigue?", "¿Qué hacemos ahora?"],  "fr": ["C'est quoi la suite ?"],                  "de": ["Was kommt als nächstes?"], "it": ["Cosa facciamo dopo?"],             "pt": ["O que vem agora?"],             "ar": ["ما التالي؟"],            "zh": ["接下来做什么？"],      "ja": ["次は何ですか？"],           "ko": ["다음에 뭐예요?"] }
+  },
+
+  "question_when_events": {
+    "gohome":  { "en": "When do we go home?",   "es": "¿Cuándo nos vamos?",       "fr": "Quand est-ce qu'on rentre ?",  "de": "Wann gehen wir nach Hause?","it": "Quando andiamo a casa?",  "pt": "Quando vamos para casa?","ar": "متى نعود للبيت؟",    "zh": "什么时候回家？",    "ja": "いつ帰りますか？",       "ko": "언제 집에 가요?" },
+    "lunch":   { "en": "When is lunch?",         "es": "¿Cuándo es el almuerzo?",  "fr": "C'est quand le déjeuner ?",    "de": "Wann gibt es Mittagessen?", "it": "Quando si mangia?",       "pt": "Quando é o almoço?",    "ar": "متى الغداء؟",        "zh": "什么时候吃午饭？",  "ja": "お昼はいつですか？",     "ko": "점심 언제예요?" },
+    "over":    { "en": "When is this over?",     "es": "¿Cuándo termina esto?",    "fr": "C'est bientôt fini ?",         "de": "Wann ist es vorbei?",       "it": "Quando finisce?",         "pt": "Quando acaba?",         "ar": "متى ينتهي هذا؟",     "zh": "什么时候结束？",    "ja": "いつ終わりますか？",     "ko": "언제 끝나요?" },
+    "start":   { "en": "When does it start?",    "es": "¿Cuándo empieza?",         "fr": "Ça commence quand ?",          "de": "Wann fängt es an?",         "it": "Quando inizia?",          "pt": "Quando começa?",        "ar": "متى يبدأ؟",          "zh": "什么时候开始？",    "ja": "いつ始まりますか？",     "ko": "언제 시작해요?" },
+    "recess":  { "en": "When is recess?",        "es": "¿Cuándo es el recreo?",    "fr": "C'est quand la récréation ?",  "de": "Wann ist Pause?",           "it": "Quando c'è la ricreazione?","pt":"Quando é o recreio?",  "ar": "متى الاستراحة؟",     "zh": "什么时候下课？",    "ja": "休み時間はいつですか？", "ko": "쉬는 시간 언제예요?" }
+  },
+
+  "question_who": {
+    "generic":   { "en": ["Who?", "Who is it?"],        "es": ["¿Quién?", "¿Quién es?"],     "fr": ["Qui ?", "C'est qui ?"],       "de": ["Wer?", "Wer ist das?"],      "it": ["Chi?", "Chi è?"],          "pt": ["Quem?", "Quem é?"],       "ar": ["من؟", "من هذا؟"],     "zh": ["谁？"],          "ja": ["誰ですか？"],           "ko": ["누구예요?"] },
+    "didthis":   { "en": ["Who did this?"],              "es": ["¿Quién hizo esto?"],          "fr": ["Qui a fait ça ?"],            "de": ["Wer hat das gemacht?"],      "it": ["Chi l'ha fatto?"],         "pt": ["Quem fez isso?"],         "ar": ["من فعل هذا؟"],        "zh": ["谁干的？"],      "ja": ["誰がやったの？"],       "ko": ["누가 했어요?"] },
+    "talking":   { "en": ["Who is talking?"],             "es": ["¿Quién habla?"],              "fr": ["Qui parle ?"],                "de": ["Wer spricht?"],              "it": ["Chi sta parlando?"],       "pt": ["Quem está falando?"],     "ar": ["من يتكلم؟"],          "zh": ["谁在说话？"],    "ja": ["誰が話していますか？"], "ko": ["누가 말해요?"] },
+    "iscoming":  { "en": ["Who is coming?"],              "es": ["¿Quién viene?"],              "fr": ["Qui arrive ?"],               "de": ["Wer kommt?"],                "it": ["Chi viene?"],              "pt": ["Quem está vindo?"],       "ar": ["من القادم؟"],         "zh": ["谁来了？"],      "ja": ["誰が来ますか？"],       "ko": ["누가 와요?"] },
+    "canhelp":   { "en": ["Who can help?", "Who can help me?"],"es":["¿Quién puede ayudar?"],  "fr": ["Qui peut m'aider ?"],         "de": ["Wer kann mir helfen?"],      "it": ["Chi può aiutarmi?"],       "pt": ["Quem pode me ajudar?"],   "ar": ["من يمكنه المساعدة؟"], "zh": ["谁能帮我？"],    "ja": ["誰か助けてくれますか？"],"ko": ["누가 도와줄 수 있어요?"] }
+  },
+
+  "question_why": {
+    "generic":  { "en": ["Why?", "Why is that?"],   "es": ["¿Por qué?"],             "fr": ["Pourquoi ?"],              "de": ["Warum?"],             "it": ["Perché?"],              "pt": ["Por quê?"],              "ar": ["لماذا؟"],         "zh": ["为什么？"],       "ja": ["なぜですか？"],       "ko": ["왜요?"] },
+    "whynot":   { "en": ["Why not?"],                "es": ["¿Por qué no?"],          "fr": ["Pourquoi pas ?"],          "de": ["Warum nicht?"],       "it": ["Perché no?"],           "pt": ["Por que não?"],          "ar": ["لم لا؟"],         "zh": ["为什么不？"],     "ja": ["なぜだめですか？"],   "ko": ["왜 안 돼요?"] },
+    "cantI":    { "en": ["Why can't I?"],             "es": ["¿Por qué no puedo?"],    "fr": ["Pourquoi je ne peux pas ?"],"de": ["Warum darf ich nicht?"],"it": ["Perché non posso?"],  "pt": ["Por que não posso?"],    "ar": ["لماذا لا أستطيع؟"],"zh": ["为什么我不能？"], "ja": ["なぜだめですか？"],   "ko": ["왜 안 돼요?"] },
+    "whyangry": { "en": ["Why are you angry?"],      "es": ["¿Por qué estás enojado?"],"fr": ["Pourquoi tu es fâché ?"], "de": ["Warum bist du wütend?"],"it":["Perché sei arrabbiato?"],"pt":["Por que está bravo?"],  "ar": ["لماذا أنت غاضب؟"],"zh": ["你为什么生气？"], "ja": ["なぜ怒っているの？"], "ko": ["왜 화났어요?"] },
+    "whycrying":{ "en": ["Why are you crying?"],     "es": ["¿Por qué lloras?"],       "fr": ["Pourquoi tu pleures ?"],   "de": ["Warum weinst du?"],    "it": ["Perché piangi?"],       "pt": ["Por que está chorando?"],"ar": ["لماذا تبكي؟"],    "zh": ["你为什么哭？"],   "ja": ["なぜ泣いているの？"], "ko": ["왜 울어요?"] }
+  },
+
+  "question_how": {
+    "generic":  { "en": ["How?", "How do I do it?"],      "es": ["¿Cómo?", "¿Cómo lo hago?"],  "fr": ["Comment ?", "Comment je fais ?"],"de": ["Wie?", "Wie mache ich das?"],"it": ["Come?", "Come si fa?"],    "pt": ["Como?", "Como eu faço?"], "ar": ["كيف؟"],           "zh": ["怎么做？"],       "ja": ["どうやりますか？"],     "ko": ["어떻게 해요?"] },
+    "do":       { "en": ["How do I do this?"],             "es": ["¿Cómo hago esto?"],           "fr": ["Comment je fais ?"],            "de": ["Wie mache ich das?"],       "it": ["Come si fa?"],             "pt": ["Como eu faço?"],          "ar": ["كيف أفعل هذا؟"],  "zh": ["怎么做？"],       "ja": ["どうやるの？"],         "ko": ["어떻게 해요?"] },
+    "say":      { "en": ["How do I say it?"],              "es": ["¿Cómo se dice?"],             "fr": ["Comment on dit ?"],             "de": ["Wie sagt man das?"],        "it": ["Come si dice?"],           "pt": ["Como se diz?"],           "ar": ["كيف أقول ذلك؟"],  "zh": ["怎么说？"],       "ja": ["なんて言いますか？"],   "ko": ["어떻게 말해요?"] },
+    "spell":    { "en": ["How do I spell it?"],            "es": ["¿Cómo se escribe?"],          "fr": ["Comment ça s'écrit ?"],         "de": ["Wie schreibt man das?"],    "it": ["Come si scrive?"],         "pt": ["Como se escreve?"],       "ar": ["كيف تهجئتها؟"],   "zh": ["怎么拼写？"],     "ja": ["どう書きますか？"],     "ko": ["어떻게 써요?"] },
+    "getthere": { "en": ["How do I get there?"],           "es": ["¿Cómo llego?"],               "fr": ["Comment on y va ?"],            "de": ["Wie komme ich dahin?"],     "it": ["Come ci arrivo?"],         "pt": ["Como chego lá?"],         "ar": ["كيف أصل هناك؟"],  "zh": ["怎么去？"],       "ja": ["どうやって行きますか？"],"ko": ["어떻게 가요?"] },
+    "howmuch":  { "en": ["How much?", "How much is it?"],  "es": ["¿Cuánto cuesta?", "¿Cuánto?"],"fr": ["Combien ça coûte ?", "C'est combien ?"],"de": ["Wie viel kostet es?"],"it": ["Quanto costa?", "Quanto?"],"pt": ["Quanto custa?", "Quanto?"],"ar": ["كم الثمن؟"],"zh": ["多少钱？"],   "ja": ["いくらですか？"],       "ko": ["얼마예요?"] },
+    "howmany":  { "en": ["How many?"],                     "es": ["¿Cuántos?"],                  "fr": ["Combien ?"],                    "de": ["Wie viele?"],               "it": ["Quanti?"],                 "pt": ["Quantos?"],               "ar": ["كم عدد؟"],        "zh": ["多少？"],         "ja": ["いくつですか？"],       "ko": ["몇 개예요?"] }
+  },
+
+  "question_canI_actions": {
+    "go":    { "en": "Can I go?",              "es": "¿Puedo ir?",             "fr": "Je peux y aller ?",        "de": "Darf ich gehen?",        "it": "Posso andare?",         "pt": "Posso ir?",            "ar": "هل يمكنني الذهاب؟",  "zh": "我可以走吗？",       "ja": "行ってもいいですか？",     "ko": "가도 돼요?" },
+    "have":  { "en": ["Can I have it?", "Can I have one?"],"es": ["¿Me lo das?", "¿Puedo tenerlo?"],"fr": ["Je peux l'avoir ?"],"de":["Kann ich das haben?"],"it":["Posso averlo?"],"pt": ["Posso ter?"],"ar": ["هل يمكنني الحصول عليه؟"],"zh": ["我可以要吗？"],"ja": ["もらってもいいですか？"],"ko": ["가져도 돼요?"] },
+    "play":  { "en": "Can I play?",            "es": "¿Puedo jugar?",          "fr": "Je peux jouer ?",          "de": "Darf ich spielen?",      "it": "Posso giocare?",        "pt": "Posso brincar?",       "ar": "هل يمكنني اللعب؟",   "zh": "我可以玩吗？",       "ja": "遊んでもいいですか？",     "ko": "놀아도 돼요?" },
+    "eat":   { "en": ["Can I eat?", "Can I eat now?"],"es": ["¿Puedo comer?", "¿Puedo comer ahora?"],"fr": ["Je peux manger ?"],"de": ["Darf ich essen?"],"it": ["Posso mangiare?"],"pt": ["Posso comer?"],"ar": ["هل يمكنني الأكل؟"],"zh": ["我可以吃吗？"],"ja": ["食べてもいいですか？"],"ko": ["먹어도 돼요?"] },
+    "drink": { "en": "Can I have a drink?",    "es": "¿Puedo tomar algo?",     "fr": "Je peux boire ?",          "de": "Darf ich etwas trinken?","it": "Posso bere qualcosa?",  "pt": "Posso beber?",         "ar": "هل يمكنني الشرب؟",   "zh": "我可以喝吗？",       "ja": "飲んでもいいですか？",     "ko": "마셔도 돼요?" },
+    "watch": { "en": ["Can I watch?", "Can I watch TV?"],"es": ["¿Puedo ver?", "¿Puedo ver la tele?"],"fr": ["Je peux regarder ?"],"de": ["Darf ich gucken?"],"it": ["Posso guardare?"],"pt": ["Posso assistir?"],"ar": ["هل يمكنني المشاهدة؟"],"zh": ["我可以看吗？"],"ja": ["見てもいいですか？"],"ko": ["봐도 돼요?"] }
+  },
+
+  "question_canYou_actions": {
+    "help":   { "en": "Can you help me?",    "es": "¿Puedes ayudarme?",    "fr": "Tu peux m'aider ?",       "de": "Kannst du mir helfen?",   "it": "Puoi aiutarmi?",       "pt": "Pode me ajudar?",     "ar": "هل يمكنك مساعدتي؟",  "zh": "你能帮我吗？",     "ja": "手伝ってくれますか？",   "ko": "도와줄 수 있어요?" },
+    "show":   { "en": "Can you show me?",    "es": "¿Puedes mostrarme?",   "fr": "Tu peux me montrer ?",    "de": "Kannst du es mir zeigen?","it": "Puoi farmi vedere?",   "pt": "Pode me mostrar?",    "ar": "هل يمكنك أن تريني؟", "zh": "你能给我看吗？",   "ja": "見せてくれますか？",     "ko": "보여줄 수 있어요?" },
+    "tell":   { "en": "Can you tell me?",    "es": "¿Puedes decirme?",     "fr": "Tu peux me dire ?",       "de": "Kannst du es mir sagen?", "it": "Puoi dirmi?",          "pt": "Pode me dizer?",      "ar": "هل يمكنك إخباري؟",   "zh": "你能告诉我吗？",   "ja": "教えてくれますか？",     "ko": "말해줄 수 있어요?" },
+    "repeat": { "en": ["Can you repeat?", "Can you say it again?"],"es": ["¿Puedes repetir?"],"fr": ["Tu peux répéter ?"],"de": ["Kannst du das wiederholen?"],"it": ["Puoi ripetere?"],"pt": ["Pode repetir?"],"ar": ["هل يمكنك التكرار؟"],"zh": ["你能再说一遍吗？"],"ja": ["もう一度言ってくれますか？"],"ko": ["다시 말해줄 수 있어요?"] },
+    "give":   { "en": "Can you give me?",    "es": "¿Puedes darme?",       "fr": "Tu peux me donner ?",     "de": "Kannst du mir geben?",    "it": "Puoi darmi?",          "pt": "Pode me dar?",        "ar": "هل يمكنك إعطائي؟",   "zh": "你能给我吗？",     "ja": "くれますか？",           "ko": "줄 수 있어요?" },
+    "open":   { "en": "Can you open it?",    "es": "¿Puedes abrirlo?",     "fr": "Tu peux ouvrir ?",        "de": "Kannst du es öffnen?",    "it": "Puoi aprirlo?",        "pt": "Pode abrir?",         "ar": "هل يمكنك فتحه؟",     "zh": "你能打开吗？",     "ja": "開けてくれますか？",     "ko": "열어줄 수 있어요?" }
+  },
+
+  "question_doYouHave": {
+    "generic": { "en": ["Do you have?"],         "es": ["¿Tienes?"],            "fr": ["Tu as ?"],               "de": ["Hast du?"],              "it": ["Hai?"],               "pt": ["Você tem?"],          "ar": ["هل لديك؟"],          "zh": ["你有吗？"],       "ja": ["持っていますか？"],     "ko": ["있어요?"] },
+    "water":   { "en": "Do you have water?",     "es": "¿Tienes agua?",         "fr": "Tu as de l'eau ?",        "de": "Hast du Wasser?",         "it": "Hai dell'acqua?",      "pt": "Você tem água?",       "ar": "هل لديك ماء؟",        "zh": "你有水吗？",       "ja": "水はありますか？",       "ko": "물 있어요?" },
+    "food":    { "en": "Do you have food?",      "es": "¿Tienes comida?",       "fr": "Tu as à manger ?",        "de": "Hast du Essen?",          "it": "Hai del cibo?",        "pt": "Você tem comida?",     "ar": "هل لديك طعام؟",       "zh": "你有吃的吗？",     "ja": "食べ物はありますか？",   "ko": "먹을 것 있어요?" },
+    "medicine":{ "en": "Do you have medicine?",  "es": "¿Tienes medicina?",     "fr": "Tu as des médicaments ?", "de": "Hast du Medikamente?",    "it": "Hai della medicina?",  "pt": "Você tem remédio?",    "ar": "هل لديك دواء؟",       "zh": "你有药吗？",       "ja": "薬はありますか？",       "ko": "약 있어요?" }
+  },
+
+  "question_isIt": {
+    "generic": { "en": ["Is it?"],               "es": ["¿Es?"],                "fr": ["Est-ce que c'est ?"],    "de": ["Ist es?"],               "it": ["È?"],                 "pt": ["É?"],                 "ar": ["هل هو؟"],            "zh": ["是吗？"],         "ja": ["そうですか？"],         "ko": ["맞아요?"] },
+    "next":    { "en": ["Is it next?", "Is it my turn?"],"es": ["¿Es mi turno?"],"fr": ["C'est mon tour ?"],      "de": ["Bin ich dran?"],         "it": ["È il mio turno?"],    "pt": ["É minha vez?"],       "ar": ["هل حان دوري؟"],      "zh": ["轮到我了吗？"],   "ja": ["私の番ですか？"],       "ko": ["제 차례예요?"] },
+    "wrong":   { "en": ["Is something wrong?"],  "es": ["¿Algo está mal?"],     "fr": ["Quelque chose ne va pas ?"],"de":["Stimmt etwas nicht?"], "it": ["C'è qualcosa che non va?"],"pt": ["Algo está errado?"],"ar": ["هل هناك مشكلة؟"],"zh": ["怎么了？"],       "ja": ["何か問題ですか？"],     "ko": ["뭐가 잘못됐어요?"] }
+  }
+}

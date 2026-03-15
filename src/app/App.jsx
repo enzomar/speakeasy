@@ -12,6 +12,8 @@ import {
 import { haptic }           from "./native";
 import { detectEmotion }    from "../prompts/intentEmotionEngine";
 import { IS_DEMO }          from "../shared/demoMode";
+import { getSentenceSuggestions } from "../engine/sentenceSuggestions.js";
+import { getSentenceOverrides }  from "../data/boards/index.js";
 
 // Hooks
 import { useTTS }          from "../shared/hooks/useTTS";
@@ -403,6 +405,24 @@ export default function App() {
     [tapContext, activeCategory],
   );
 
+  // ── Sentence suggestions for the current tap path (board context) ──────
+  const boardOverrides = useMemo(
+    () => getSentenceOverrides(currentBoard.id, typeLangCode),
+    [currentBoard.id, typeLangCode],
+  );
+  const sentenceSuggestions = useMemo(() => {
+    if (!tapContext?.l1Id || !tapContext?.l2Id) return [];
+    return getSentenceSuggestions({
+      l1Id: tapContext.l1Id,
+      l2Id: tapContext.l2Id,
+      l3Id: tapContext.l3Id || undefined,
+      langCode: typeLangCode,
+      allowL3ToL2Fallback: false,
+      emotion: emotion || detectedEmotion || undefined,
+      boardOverrides,
+    });
+  }, [tapContext, boardOverrides, typeLangCode, emotion, detectedEmotion]);
+
   // Update ref after wordTexts is available
   listenTranscriptRef.current = (transcript) => {
     if (IS_DEMO) return; // demo: listen mode disabled
@@ -471,7 +491,6 @@ export default function App() {
     setTapContext(null);
     setEmotion("neutral");
     setActiveCategory(null);
-    aiClearSuggestions();
     speak(sentence, {
       lang: ttsLang.ttsLang,
       rate: voiceSpeed,
@@ -485,7 +504,7 @@ export default function App() {
         setTimeout(() => setSpokenToast(""), 2500);
       },
     });
-  }, [wordTexts, speaking, speak, saveUtterance, learn, ttsLang, voiceSpeed, voicePitch, voiceName, aiClearSuggestions, consumeVoice]);
+  }, [wordTexts, speaking, speak, saveUtterance, learn, ttsLang, voiceSpeed, voicePitch, voiceName, consumeVoice]);
 
   /** Repeat last spoken sentence */
   const handleRepeat = useCallback(() => {
@@ -506,9 +525,6 @@ export default function App() {
   const handleStopSpeaking = useCallback(() => cancel(), [cancel]);
 
   const handleIntentSpeak  = useCallback((text) => handleSpeak(text), [handleSpeak]);
-  const handleRefreshIntent = useCallback(() => {
-    aiPredict(wordTexts, typeLangCode, activeCategory?.mapTo, tapContext, undefined, recentMessages, gender, emotion, corePrefixWords);
-  }, [aiPredict, wordTexts, typeLangCode, activeCategory, tapContext, recentMessages, gender, emotion, corePrefixWords]);
   const handleResetAI      = useCallback(() => { resetModel(); }, [resetModel]);
 
   // ── Category navigation ──────────────────────────────────────────────────
@@ -867,11 +883,10 @@ export default function App() {
           {boardMode === "symbols" && (
             <>
             <IntentBar
-              suggestions={aiSuggestions}
+              suggestions={sentenceSuggestions}
               onSelect={handleSuggestionSelect}
               onSpeak={handleIntentSpeak}
-              onRefresh={handleRefreshIntent}
-              source={aiSource}
+              source="template"
               ui={ui}
               emotion={emotion}
               onEmotionChange={setEmotion}

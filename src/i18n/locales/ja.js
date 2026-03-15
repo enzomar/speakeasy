@@ -250,4 +250,16 @@ export default {
   historyAll:         "すべて",
   historyFavs:        "★ お気に入り",
   globalSearch:       "シンボル、単語、フレーズを検索…",
+
+  // Board names
+  board_generic:    "一般",
+  board_home:       "家",
+  board_school:     "学校",
+  board_doctor:     "病院",
+  board_restaurant: "レストラン",
+  board_shopping:   "買い物",
+  board_transport:  "交通",
+  board_emergency:  "緊急",
+  board_work:       "仕事",
+  board_social:     "交流",
 };
